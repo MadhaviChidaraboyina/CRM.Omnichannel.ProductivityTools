@@ -45,6 +45,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
     export class LocalizedStrings {
         public static KnowledgeArticleTitle = "KnowledgeArticleSuggestionTitle";
         public static NoKnowledgeArticleText = "NoKMSuggestionText";
+        public static NoSettingsText = "NoSettingsText";
         public static SimilarCaseTitle = "SimilarCasesSuggestionTitle";
         public static NoSimilarCaseText = "NoSimilarCaseSuggestionText";
         public static LoadingText = "LoadingText";
@@ -80,5 +81,24 @@ module MscrmControls.SmartAssistAnyEntityControl {
         KnowledgeArticleSuggestion = 192360000,
         SimilarCaseSuggestion = 192360001,
         BotSuggestion = 192360002
+    }
+
+    /**Empty status enum*/
+    export enum AnyEntityContainerState {
+        /**Just show that section which is enabled:s
+         * 1. Suggestions turned ON,
+         * 2. Supported Source entity
+         * 3. Valid SAConfig - SAConfig is present or not
+         * */
+        Enabled = 0,
+        /** No Suggestions Screen:
+         * 1. Unsupported Source entity
+         * 2. Source Entity ID is empty - opening a new session with create screen
+         * */
+        NoSuggestions = 1,
+        /**AI suggestions not turned ON:
+         * 1. Both are disabled and TPB not configured
+         * */
+        Disabled = 2
     }
 }

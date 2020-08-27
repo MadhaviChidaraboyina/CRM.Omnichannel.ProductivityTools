@@ -28,7 +28,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * Gets html template for no suggestions
          * @param suggestionType: SA config type
          */
-        public static getNoSuggestionsTemplate(saConfig: SAConfig) {
+        public static getSuggestionTemplate(saConfig: SAConfig, anyEntityContainerState: AnyEntityContainerState) {
             var iconTemp = "";
             var text = ""
             if (!Utility.isNullOrEmptyString(StringConstants.NoRecordDivIconPath))
@@ -36,15 +36,14 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
             switch (saConfig.SuggestionType) {
                 case SuggestionType.KnowledgeArticleSuggestion:
-                    text = Utility.getString(LocalizedStrings.NoKnowledgeArticleText);
+                    text = anyEntityContainerState == AnyEntityContainerState.Disabled ? Utility.getString(LocalizedStrings.NoSettingsText) : Utility.getString(LocalizedStrings.NoKnowledgeArticleText);
                     break;
                 case SuggestionType.SimilarCaseSuggestion:
-                    text = Utility.getString(LocalizedStrings.NoSimilarCaseText);
+                    text = anyEntityContainerState == AnyEntityContainerState.Disabled ? Utility.getString(LocalizedStrings.NoSettingsText) : Utility.getString(LocalizedStrings.NoSimilarCaseText);                    
                     break;
                 default:
             }
             return this.NoSugegstionsTextTemplate.Format(StringConstants.NoSugegstionsDivId + saConfig.SmartassistConfigurationId, iconTemp, text);
         }
-
     }
 }

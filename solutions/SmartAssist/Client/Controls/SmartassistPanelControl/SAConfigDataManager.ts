@@ -8,10 +8,10 @@ module MscrmControls.SmartassistPanelControl {
         private static instance: SAConfigDataManager = null;
         private saConfigSchema: SAConfigSchema = new SAConfigSchema();
         private acConfigSchema: ACConfigSchema = new ACConfigSchema();
-        private saConfig: SAConfig[] = [];        
+        private saConfig: SAConfig[] = [];
         private suggestionsSetting: { [key: string]: any } = {};
         private suggestionsSettingSchema: SuggestionsSettingSchema = new SuggestionsSettingSchema();
-
+        private _isSmartbotAvailable: boolean = null;
 
         constructor() {
         }
@@ -36,22 +36,44 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         /**
-         * Get Filtered SA config from admin suggestions setting
-         * @param saConfig: All active SA config
-         */
+        * Get Filtered SA config from admin suggestions setting
+        * @param saConfig: All active SA config
+        */
         public async getFilteredSAConfig(sourceEntity: string) {
             var sessionId = Utility.getCurrentSessionId();
             await this.getSuggestionsSetting(sessionId);
             var configs = await this.getSAConfigurations();
+
+            var isSmartbotAvailable = false;
+            var botConfig = configs.find(i => i.SuggestionType == SuggestionType.BotSuggestion)
+            if (botConfig) {
+                isSmartbotAvailable = await this.isSmartbotAvailable() as any;
+            }
+
             var result = configs.filter((data) => {
+                if (data.SuggestionType == SuggestionType.BotSuggestion) return isSmartbotAvailable;
+
                 //Source entity filter
-                if (sourceEntity !== data.SourceEntityName) return false;
-                //Filter admin setting
+                if (Utility.isValidSourceEntityName(sourceEntity)) {
+                    if (sourceEntity != data.SourceEntityName) {
+                        return false;
+                    }
+                }
+                else {
+                    // TODO: Instead of using following filter take default configs
+                    if (data.CurrentAppConfigName == Constants.ocAppName && data.SourceEntityName != Constants.LWIEntityName) {
+                        return false;
+                    }
+                }
                 switch (data.SuggestionType) {
                     case SuggestionType.SimilarCaseSuggestion:
-                        return this.suggestionsSetting[sessionId].CaseIsEnabled;
+                        data.IsEnabled = this.suggestionsSetting[sessionId].CaseIsEnabled;
+                        return true
                     case SuggestionType.KnowledgeArticleSuggestion:
-                        return this.suggestionsSetting[sessionId].KbIsEnable;
+                        data.IsEnabled = this.suggestionsSetting[sessionId].KbIsEnable;
+                        return true;
+                    case SuggestionType.BotSuggestion:
+                        return isSmartbotAvailable;
                     default:
                         return true;
                 }
@@ -149,6 +171,72 @@ module MscrmControls.SmartassistPanelControl {
                 eventParameters.addParameter("Exception Details", error.message);
                 SmartassistPanelControl._telemetryReporter.logError(TelemetryComponents.MainComponent, "getSuggestionsSetting", "Error occurred while fetching suggestions admin settings", eventParameters);
             }
+        }
+
+        /**Check if Smart assist is added in OC WS */
+        public async isSmartbotAvailable() {
+            var liveworkStreamItem = Utility.getLiveWorkStreamId();
+            if (Utility.isNullOrEmptyString(liveworkStreamItem)) {
+                return false;
+            }
+            var sessionId = Utility.getCurrentSessionId();
+            let isSmartAssistBotAvailable: any = sessionStorage.getItem(sessionId + liveworkStreamItem + Constants.isSmartAssistFoundName);
+            if (isSmartAssistBotAvailable == null) {
+                await this.FetchSmartAssistBotRecordAndSetCriteria(liveworkStreamItem, sessionId);
+                return this._isSmartbotAvailable;
+            }
+            return (isSmartAssistBotAvailable == "true");
+        }
+
+        /**
+         * Fet sa bots set SA rendering criteria
+         * @param liveWorkStreamId: Work Stream Unique identifier
+         */
+        private async FetchSmartAssistBotRecordAndSetCriteria(liveWorkStreamId: string, sessionId: string) {
+            let eventParameters = new TelemetryLogger.EventParameters();
+            try {
+                //fetch smart assist bots
+                let fetchXml = this.getSmartAssistFetchXml(liveWorkStreamId);
+                let fetchXmlQuery = Constants.FetchOperator + encodeURIComponent(fetchXml);
+                let dataResponse = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(Constants.UserEntityName, fetchXmlQuery) as any;
+                let entityRecords: WebApi.Entity[] = dataResponse.entities;
+                this._isSmartbotAvailable = entityRecords.length > 0;
+                sessionStorage.setItem(sessionId + liveWorkStreamId + Constants.isSmartAssistFoundName, this._isSmartbotAvailable as any)
+
+                eventParameters.addParameter("total SmartAssistBotRecordFetch", entityRecords.length.toString());
+                SmartassistPanelControl._telemetryReporter.logSuccess("Main Component", "SmartAssistBotRecordFetch", eventParameters);
+            }
+            catch (error) {
+                this._isSmartbotAvailable = null;
+                sessionStorage.removeItem(sessionId + liveWorkStreamId + Constants.isSmartAssistFoundName);
+                eventParameters.addParameter("Exception Details", error.message);
+                SmartassistPanelControl._telemetryReporter.logError("Main Component", "SmartAssistBotRecordFetch", "Error occurred while fetching smart assist bot", eventParameters);
+            }
+
+        }
+
+        /**
+         * Get XML for SA binding with LWS
+         * @param workStreamId: Word Stream Unique ID
+         */
+        private getSmartAssistFetchXml(workStreamId: string): string {
+            //todo: Resolve- Can we have fetch xml in XML ?
+            let fetchXrml = "<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='true'>" +
+                "<entity name='systemuser'>" +
+                "<attribute name='fullname' />" +
+                "<attribute name='businessunitid' />" +
+                "<attribute name='systemuserid' />" +
+                "<order attribute='fullname' descending='false' />" +
+                "<link-entity name='msdyn_msdyn_liveworkstream_systemuser' from='systemuserid' to='systemuserid' visible='false' intersect='true'>" +
+                "<link-entity name='msdyn_liveworkstream' from='msdyn_liveworkstreamid' to='msdyn_liveworkstreamid' alias='aa'>" +
+                "<filter type='and'>" +
+                "<condition attribute='msdyn_liveworkstreamid' operator='eq' uitype='msdyn_liveworkstream' value='{" + workStreamId + "}' />" +
+                "</filter>" +
+                "</link-entity>" +
+                "</link-entity>" +
+                "</entity>" +
+                "</fetch>";
+            return fetchXrml;
         }
     }
 }

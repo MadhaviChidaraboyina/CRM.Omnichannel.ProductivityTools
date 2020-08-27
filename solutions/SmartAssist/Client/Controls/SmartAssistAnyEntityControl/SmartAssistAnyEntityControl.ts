@@ -14,6 +14,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private anyEntityContainer: HTMLDivElement = null;
         private initCompleted: boolean;
         private saConfig: SAConfig = null;
+        private AnyEntityContainerState: AnyEntityContainerState = AnyEntityContainerState.Enabled;
         private recordId: string;
         private anyEntityDataManager: AnyEntityDataManager = null;
         private parentDivId: string = "";
@@ -55,6 +56,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     this.validateParameters(context);
                     this.recordId = context.parameters.RecordId.raw;
                     this.saConfig = context.parameters.SAConfig.raw as any;
+                    this.AnyEntityContainerState = context.parameters.AnyEntityContainerState.raw as any;
 
                     // Anyentity Main Container
                     this.parentDivId = StringConstants.AnyEntityContainer + this.saConfig.SmartassistConfigurationId;
@@ -130,61 +132,70 @@ module MscrmControls.SmartAssistAnyEntityControl {
             //Get Current context
             await this.getCurrentContext();
             this.showLoader();
-            if (this.saConfig.UniqueName == StringConstants.TPBotUniqueName) {
-                var isSAAvailable = await this.anyEntityDataManager.isSmartassistAvailable() as any;
-                if (isSAAvailable == true) {
-                    this.appendTitle();
-                    const componentId = "TPBot";
-                    let properties: any =
-                    {
-                        parameters: {},
-                        key: componentId,
-                        id: componentId,
-                    };
-                    var divElement = document.createElement("div");
-                    divElement.id = "Component_TPBot";
+            if (this.saConfig.SuggestionType == SuggestionType.BotSuggestion && this.AnyEntityContainerState == AnyEntityContainerState.Enabled) {
+                //TODO: add telemetry for all the scenarios
+                this.appendTitle();
+                const componentId = "TPBot";
+                let properties: any =
+                {
+                    parameters: {},
+                    key: componentId,
+                    id: componentId,
+                };
+                var divElement = document.createElement("div");
+                divElement.id = "Component_TPBot";
 
-                    //Initiate Suggestion Control
-                    let suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.ProductivityPanel.TPBotControl", componentId, properties);
-                    SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
-                    $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
-                }
+                //Initiate Suggestion Control
+                let suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.ProductivityPanel.TPBotControl", componentId, properties);
+                SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
+                $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
             }
             else {
-                this.appendTitle();
+                //TODO: add telemetry for all the scenarios
                 var data;
-
-                // Get Suggestions data records for provide saConfig
-                if (isFPBot == true) {
-                    data = await this.anyEntityDataManager.getSuggestionsDataFromAPI(this.saConfig, this.recordId) as { [key: string]: any };
-                }
-                else {
-                    data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
-                }
-
-                var dataLength = 0;
-                if (data && data[this.saConfig.SmartassistConfigurationId]) {
-                    dataLength = data[this.saConfig.SmartassistConfigurationId].length;
-                }
-
-                if (dataLength < 1) {
+                if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled) {
+                    this.appendTitle();
                     var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                     if (!noSuggestionElm) {
-                        var emptyRecordElm = ViewTemplates.getNoSuggestionsTemplate(this.saConfig);
+                        var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
                         $("#" + this.parentDivId).append(emptyRecordElm);
                     }
                 }
-                for (let i = 0; i <= (dataLength - 1); i++) {
-                    var record = data[this.saConfig.SmartassistConfigurationId][i];
-                    //Initiate Suggestion Control
-                    const suggestionControl = this.createAndBindRecommendationControl(record);
-                   
-                }
-            }
+                else if (this.saConfig.IsEnabled) {
+                    this.appendTitle();
 
-            setTimeout(() => {
-                this.hideLoader();
-            }, StringConstants.LoaderTimeout);
+                    // Get Suggestions data records for provide saConfig
+                    if (isFPBot == true) {
+                        data = await this.anyEntityDataManager.getSuggestionsDataFromAPI(this.saConfig, this.recordId) as { [key: string]: any };
+                    }
+                    else {
+                        data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
+                    }
+
+                    var dataLength = 0;
+                    if (data && data[this.saConfig.SmartassistConfigurationId]) {
+                        dataLength = data[this.saConfig.SmartassistConfigurationId].length;
+                    }
+
+                    if (dataLength < 1) {
+                        var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
+                        if (!noSuggestionElm) {
+                            var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
+                            $("#" + this.parentDivId).append(emptyRecordElm);
+                        }
+                    }
+                    for (let i = 0; i <= (dataLength - 1); i++) {
+                        var record = data[this.saConfig.SmartassistConfigurationId][i];
+                        //Initiate Suggestion Control
+                        const suggestionControl = this.createAndBindRecommendationControl(record);
+
+                    }
+                }
+
+                setTimeout(() => {
+                    this.hideLoader();
+                }, StringConstants.LoaderTimeout);
+            }
         }
 
         private createAndBindRecommendationControl(record: any, display: string = "block"): string {
@@ -268,8 +279,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * @param context: The "Input Bag" containing the parameters and other control metadata.
          */
         private validateParameters(context: Mscrm.ControlData<IInputBag>) {
-            if (context.utils.isNullOrUndefined(context.parameters.SAConfig.raw) ||
-                context.utils.isNullOrUndefined(context.parameters.RecordId.raw)) {
+            if (context.utils.isNullOrUndefined(context.parameters.SAConfig.raw)) {
                 // one or more required parameters are null or undefined
                 let errorMessage = "In-correct parameters are passed.";
 

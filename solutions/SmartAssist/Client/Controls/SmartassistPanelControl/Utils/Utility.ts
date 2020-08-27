@@ -35,6 +35,7 @@ module MscrmControls.SmartassistPanelControl {
          * @param value: guid to format
          */
         public static FormatGuid(value: string): string {
+            if (!value) return value;
             return value.replace(/[{}]/g, "").toLowerCase();
         }
 
@@ -101,6 +102,22 @@ module MscrmControls.SmartassistPanelControl {
         /** Get App runtime envirnonment data */
         public static async getAppRuntimeEnvironment() {
             return await Microsoft.AppRuntime.Utility.getEnvironment();
+        }
+
+        /**Get live work stream id */
+        public static getLiveWorkStreamId(): string {
+            let eventParameters = new TelemetryLogger.EventParameters();
+            let workStreamId: string = null;
+            try {
+                let cifUtil = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
+                let templateParams = cifUtil.getSessionTemplateParams();
+                let data = templateParams.data;
+                workStreamId = data.ocContext.config.sessionParams.LiveWorkStreamId;
+            } catch (error) {
+                eventParameters.addParameter("Exception Details", error.message);
+                SmartassistPanelControl._telemetryReporter.logError("Main Component", "GetLiveWorkStreamId", "Failed to retrieve Live WorkStream id from form param", eventParameters);
+            }
+            return workStreamId;
         }
     }
 }

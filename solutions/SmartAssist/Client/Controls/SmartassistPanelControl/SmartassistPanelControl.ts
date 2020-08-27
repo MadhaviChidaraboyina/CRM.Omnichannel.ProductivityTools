@@ -95,16 +95,8 @@ module MscrmControls.SmartassistPanelControl {
             }
             if (this.newInstance) {
                 let recordId = this.getEntityRecordId(this.AnchorTabContext);
-                if (Utility.isValidSourceEntityName(this.AnchorTabContext.entityName)
-                    && !Utility.isNullOrEmptyString(recordId)) {
-                    this.renderSuggestions(false, this.AnchorTabContext.entityName, Utility.FormatGuid(recordId));
-                }
-                else {
-                    // No data to PP
-                    this.DispatchNoDataEvent();
-                }
+                this.renderSuggestions(false, this.AnchorTabContext.entityName, Utility.FormatGuid(recordId));
             }
-
             this.newInstance = false;
         }
 
@@ -135,7 +127,7 @@ module MscrmControls.SmartassistPanelControl {
          * @param saConfig saConfig
          * @param callback callback to create SmartassistAnyEntityControl
          */
-        public loadWebresourceAndRenderSmartassistAnyEntity(saConfig: SAConfig, callback: (config: SAConfig, recordId: string, update: boolean) => void, recordId: string, update: boolean): void {
+        public loadWebresourceAndRenderSmartassistAnyEntity(saConfig: SAConfig, callback: (config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean) => void, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean): void {
             let src = SmartassistPanelControl._context.page.getClientUrl() + "/" + saConfig.SuggestionWebResourceUrl;
             //SuggestionWebResourceUrl is empty for TPBot
             if (!document.getElementById(src) && !Utility.isNullOrEmptyString(saConfig.SuggestionWebResourceUrl)) {
@@ -147,7 +139,7 @@ module MscrmControls.SmartassistPanelControl {
                     SmartassistPanelControl._telemetryReporter.logError(TelemetryComponents.MainComponent, "loadWebresourceAndRenderSmartassistAnyEntity", message, eventParameters);
                 };
                 script.onload = function () {
-                    callback(saConfig, recordId, update);
+                    callback(saConfig, emptyStatus, recordId, update);
                 };
 
                 script.src = src;
@@ -155,11 +147,11 @@ module MscrmControls.SmartassistPanelControl {
                 script.type = "text/javascript";
                 document.getElementsByTagName("head")[0].appendChild(script);
             } else {
-                callback(saConfig, recordId, update);
+                callback(saConfig, emptyStatus, recordId, update);
             }
         }
 
-        public renderSmartassistAnyEntityControl(config: SAConfig, recordId: string, update: boolean): void {
+        public renderSmartassistAnyEntityControl(config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean): void {
             const componentId = Constants.SAAnyEntityControlContainerId + config.SmartassistConfigurationId;
             let properties: any =
             {
@@ -184,6 +176,13 @@ module MscrmControls.SmartassistPanelControl {
                         Static: true,
                         Usage: 1, // input
                         Value: this.ppSessionContext
+                    },
+                    AnyEntityContainerState: {
+                        type: "Multiple",
+                        Primary: false,
+                        Static: true,
+                        Usage: 1, // input
+                        Value: emptyStatus
                     }
                 },
                 key: componentId,
@@ -207,23 +206,18 @@ module MscrmControls.SmartassistPanelControl {
         public async renderSuggestions(update: boolean, entityName: string, recordId: string = null): Promise<void> {
             this.showLoader();
 
-            // validate current context
-            if (recordId) {
-                if (Utility.isNullOrEmptyString(recordId)) {
-                    recordId = this.tabSwitchEntityId;
-                }
-                var configs = await SAConfigDataManager.Instance.getFilteredSAConfig(entityName) as SmartassistPanelControl.SAConfig[];
+            // Get Configs to display suggestions
+            var configs: SAConfig[] = await SAConfigDataManager.Instance.getFilteredSAConfig(entityName);
 
-                if (configs.length < 1) {
-
-                    // No Data to PP
-                    this.DispatchNoDataEvent();
-                }
-                configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
-                for (let i = 0; i <= (configs.length - 1); i++) {
-                    this.addDivForSmartAssistConfig(configs[i]);
-                    this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), recordId, update);
-                }
+            var emptyStatus: AnyEntityContainerState = await this.checkEmptyStatus(entityName, recordId, configs);
+            if (configs.length < 1 || emptyStatus != AnyEntityContainerState.Enabled) {
+                // No Data to PP
+                this.DispatchNoDataEvent();
+            }
+            configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
+            for (let i = 0; i <= (configs.length - 1); i++) {
+                this.addDivForSmartAssistConfig(configs[i]);
+                this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), emptyStatus, recordId, update);
             }
             this.hideLoader();
         }
@@ -258,17 +252,9 @@ module MscrmControls.SmartassistPanelControl {
 
                     // to handle the ordering when settings updated
                     $("#" + Constants.SuggestionOuterContainer).empty();
-
                     let entityId = this.getEntityRecordId(anchorContext);
-                    if (!Utility.isValidSourceEntityName(anchorContext.entityName)
-                        || Utility.isNullOrEmptyString(entityId)) {
-                        // No Data to PP
-                        this.DispatchNoDataEvent();
-                    }
-                    else {
-                        this.anchorTabEntityId = Utility.FormatGuid(entityId);
-                        this.renderSuggestions(true, anchorContext.entityName, this.anchorTabEntityId);
-                    }
+                    this.anchorTabEntityId = Utility.FormatGuid(entityId);
+                    this.renderSuggestions(true, anchorContext.entityName, this.anchorTabEntityId);
                 }
             }
             this.tabSwitchEntityId = recordId;
@@ -330,5 +316,22 @@ module MscrmControls.SmartassistPanelControl {
             }
         }
 
+        /**
+         * Check suggestions empty status.
+         * @param entityName
+         * @param entityId
+         */
+        private async checkEmptyStatus(entityName: string, entityId: string, configs: SAConfig[]) {
+            if (!Utility.isValidSourceEntityName(entityName) || Utility.isNullOrEmptyString(entityId)) {
+                return AnyEntityContainerState.NoSuggestions;
+            }
+            var currentSession = Utility.getCurrentSessionId();
+            var settings = await SAConfigDataManager.Instance.getSuggestionsSetting(currentSession);
+            var botConfig = configs.find(i => i.SuggestionType == SuggestionType.BotSuggestion)
+            if (!settings.CaseIsEnabled && !settings.KbIsEnable && !botConfig) {
+                return AnyEntityContainerState.Disabled;
+            }
+            return AnyEntityContainerState.Enabled;
+        }
     }
 }
