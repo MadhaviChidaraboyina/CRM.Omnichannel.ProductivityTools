@@ -2,6 +2,11 @@ export class Constants {
     public static LogicAppDesignerRelativeUrl = "/flowcontrol/DesignerBlob/iframeLogicappDesigner.html";
     public static BrandColor = '#2266E3';
     public static GetRequestType = "GET";
+
+    //fallback URL for blob endpoint
+    public static publicFallbackURL = "https://oc-cdn-ocprod.azureedge.net/";
+    public static fairfaxFallbackURL = "https://ocprodocprodnamgs.blob.core.usgovcloudapi.net/";
+    public static gccDataCenter: string[] = ["crm9"];
 }
 
 let globalContext: XrmClientApi.GlobalContext = (window.top as any).Xrm.Utility.getGlobalContext();

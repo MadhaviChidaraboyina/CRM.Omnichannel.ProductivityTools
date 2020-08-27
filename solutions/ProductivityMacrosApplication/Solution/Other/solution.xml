@@ -1,4 +1,4 @@
-<ImportExportXml version="9.1.0.18311" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.0.0000.0330" SolutionPackageVersion="9.0" languagecode="1033" generatedBy="OnPremise" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>msdyn_MacrosDataForExperienceDesigner</UniqueName>
     <LocalizedNames>

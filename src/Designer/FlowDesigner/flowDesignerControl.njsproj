@@ -114,7 +114,9 @@
   <ItemGroup>
     <Folder Include="external\" />
     <Folder Include="src\" />
+    <Folder Include="src\constants\" />
     <Folder Include="src\Html\" />
+    <Content Include="src\constants\**" />
     <Content Include="src\scripts\**" />
     <Content Include="src\scripts\LogicAppDesigner\**" />
     <Folder Include="src\scripts\" />

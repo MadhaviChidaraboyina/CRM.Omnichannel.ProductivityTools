@@ -4,6 +4,7 @@ import * as FPIHelper from "./FPIHelper";
 import * as Workflow from "./workflowDefinitions";
 import { MouseEvent } from "react";
 import { isNullOrUndefined } from "util";
+import { Constants } from "../constants/DesignerConstants";
 
 let cancelButton = document.getElementById("cancelButton") as HTMLElement;
 async function closeDesigner(event?: Event) {
@@ -95,8 +96,30 @@ async function getDesignerBlobConfig(): Promise<SharedDefines.MacroDesignerConfi
 					}
 				}
 			}
-			if (!baseUrl) {
-				baseUrl = config.msdyn_designerfallbackurl;
+            if (!baseUrl) {
+                if (!isNullOrUndefined(config.msdyn_designerfallbackurl)) {
+                    baseUrl = config.msdyn_designerfallbackurl;
+                } else {
+                    try {
+                        //falling back to NAM endpoint
+                        let crmDataCenter = window.top.Xrm.Utility.getGlobalContext().getClientUrl().split(".")[1];
+                        if (Constants.gccDataCenter.indexOf(crmDataCenter) != -1) {
+                            baseUrl = Constants.fairfaxFallbackURL;
+                        } else {
+                            baseUrl = Constants.publicFallbackURL;
+                        }
+                    } catch (error) {
+                        let obj: SharedDefines.LogObject = {
+                            level: SharedDefines.LogLevel.Warning,
+                            eventName: WrapperEvents.WrapperConfigErrorEvent,
+                            message: Utils.Utils.genMsgForTelemetry("Error in setting fallback designer URL", error),
+                            eventTimeStamp: new Date(),
+                            eventType: SharedDefines.TelemetryEventType.Trace,
+                            exception: error.stack
+                        };
+                        doTelemetry(obj);
+                    }
+                }
 			}
 		}
 		if (!baseUrl || !path) {

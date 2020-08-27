@@ -5,6 +5,7 @@ import * as DesignerConstants from "./../../constants/DesignerConstants";
 
 import * as Workflow from "./workflowDefinitions";
 import { MouseEvent } from "react";
+import { isNullOrUndefined } from "util";
 
 let cancelButton = document.getElementById("cancelButton") as HTMLElement;
 cancelButton.innerHTML = AgentScriptUtils.AgentScriptUtils.getResourceString(SharedDefines.Constants.MACRO_ACTION_CANCEL);
@@ -82,7 +83,29 @@ async function getLogicAppDesignerBlobConfig(): Promise<SharedDefines.MacroDesig
                 }
             }
             if (!baseUrl) {
-                baseUrl = config.msdyn_designerfallbackurl;
+                if (!isNullOrUndefined(config.msdyn_designerfallbackurl)) {
+                    baseUrl = config.msdyn_designerfallbackurl;
+                } else {
+                    try {
+                        //falling back to NAM endpoint
+                        let crmDataCenter = window.top.Xrm.Utility.getGlobalContext().getClientUrl().split(".")[1];
+                        if (DesignerConstants.Constants.gccDataCenter.indexOf(crmDataCenter) != -1) {
+                            baseUrl = DesignerConstants.Constants.fairfaxFallbackURL;
+                        } else {
+                            baseUrl = DesignerConstants.Constants.publicFallbackURL;
+                        }
+                    } catch (error) {
+                        let obj: SharedDefines.LogObject = {
+                            level: SharedDefines.LogLevel.Warning,
+                            eventName: SharedDefines.WrapperEvents.WrapperConfigErrorEvent,
+                            message: Utils.Utils.genMsgForTelemetry("Error in setting fallback designer URL", error),
+                            eventTimeStamp: new Date(),
+                            eventType: SharedDefines.TelemetryEventType.Trace,
+                            exception: error.stack
+                        };
+                        doTelemetry(obj);
+                    }
+                }
             }
         }
         if (!baseUrl || !path) {

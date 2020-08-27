@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.1.0.19405" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.0.0000.0330" SolutionPackageVersion="9.0" languagecode="1033" generatedBy="OnPremise" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>msdyn_Agentscripts</UniqueName>
     <LocalizedNames>
@@ -169,51 +169,47 @@
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
-        <Required key="0" type="1" schemaName="msdyn_applicationtabtemplate" displayName="Application Tab Template" solution="Active" />
+        <Required key="0" type="1" schemaName="msdyn_applicationtabtemplate" displayName="Application Tab Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="2" type="2" schemaName="msdyn_name" displayName="Name" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="Active" />
+        <Required key="2" type="2" schemaName="msdyn_name" displayName="Name" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="3" type="2" schemaName="ownerid" displayName="Owner" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="Active" />
+        <Required key="3" type="2" schemaName="ownerid" displayName="Owner" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="4" type="2" schemaName="msdyn_description" displayName="Description" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="Active" />
+        <Required key="4" type="2" schemaName="msdyn_description" displayName="Description" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="5" type="2" schemaName="msdyn_title" displayName="Title" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="Active" />
+        <Required key="5" type="2" schemaName="msdyn_title" displayName="Title" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="6" type="2" schemaName="msdyn_uniquename" displayName="Unique Name" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="Active" />
+        <Required key="6" type="2" schemaName="msdyn_uniquename" displayName="Unique Name" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="7" type="2" schemaName="msdyn_anchortab" displayName="Anchor Tab" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="Active" />
+        <Required key="7" type="2" schemaName="msdyn_anchortab" displayName="Anchor Tab" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="8" type="10" schemaName="msdyn_sessiontemplate_applicationtab" displayName="msdyn_sessiontemplate_applicationtab" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="Active" />
+        <Required key="8" type="10" schemaName="msdyn_sessiontemplate_applicationtab" displayName="msdyn_sessiontemplate_applicationtab" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="9" type="10" schemaName="msdyn_applicationtabtemplate_sessiontemplate_anchortab" displayName="msdyn_applicationtabtemplate_sessiontemplate_anchortab" parentSchemaName="msdyn_applicationtabtemplate" parentDisplayName="Application Tab Template" solution="Active" />
+        <Required key="9" type="10" schemaName="msdyn_applicationtabtemplate_sessiontemplate_anchortab" displayName="msdyn_applicationtabtemplate_sessiontemplate_anchortab" parentSchemaName="msdyn_applicationtabtemplate" parentDisplayName="Application Tab Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="10" type="26" schemaName="Active Application Tab Templates" displayName="Active Application Tab Templates" parentSchemaName="msdyn_applicationtabtemplate" parentDisplayName="Application Tab Template" solution="Active" id="{bde86e2f-6bd1-48a9-baf9-dae720aa9f45}" />
+        <Required key="10" type="26" schemaName="Active Application Tab Templates" displayName="Active Application Tab Templates" parentSchemaName="msdyn_applicationtabtemplate" parentDisplayName="Application Tab Template" solution="msdyn_AppProfileManager" id="{bde86e2f-6bd1-48a9-baf9-dae720aa9f45}" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="11" type="1" schemaName="msdyn_solutionhealthrule" displayName="Solution Health Rule" solution="msdyn_PowerAppsChecker (1.2.0.22)" />
-        <Dependent key="12" type="1" schemaName="workflow" displayName="Process" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required key="13" type="1" schemaName="msdyn_sessiontemplate" displayName="Session Template" solution="Active" />
+        <Required key="13" type="1" schemaName="msdyn_sessiontemplate" displayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="13" type="1" schemaName="msdyn_sessiontemplate" displayName="Session Template" />
       </MissingDependency>
     </MissingDependencies>
