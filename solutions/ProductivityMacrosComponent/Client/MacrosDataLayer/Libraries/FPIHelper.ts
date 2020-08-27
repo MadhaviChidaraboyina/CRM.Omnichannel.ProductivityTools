@@ -261,7 +261,6 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 		 */
 		private static processIframeData(event: IFPISuccessResponseMessage): void
         {
-            console.log("Processing Response received from FPI : " + event.data.responseData);
 			if (!Utils.isNullUndefinedorEmpty(event.data))
 			{
 				if (!Utils.isNullUndefinedorEmpty(event.data.staticData))
@@ -336,9 +335,7 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 		 * @param event Message sent by FPI Iframe
 		 */
 		private static fpiCallBack(event: any): void
-        {
-            console.log("Response from FPI" + event.data);
-           
+        {  
 			if (Utils.isNullUndefinedorEmpty(event.data) || !Utils.isOmniChannelFPIApp(event))
 			{
 				return;

@@ -10,10 +10,10 @@ let globalContext: XrmClientApi.GlobalContext = (window.top as any).Xrm.Utility.
 export const operationManifestMetadata: Designer.Metadata[] = [
     {
         conditions: {
-            operationType: 'ListFlows'
+            operationType: 'List_Flows'
         },
-        connectorId: 'ListFlows',
-        operationId: 'ListFlows',
+        connectorId: 'List_Flows',
+        operationId: 'List_Flows',
         manifest: flowScript
     }
 ];

@@ -38,8 +38,10 @@
     <Folder Include="msdyn_productivityactionoutputparameters\" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Link_record_to_conversation\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Send_KB\msdyn_productivitymacroactiontemplate.xml" />
+    <Content Include="msdyn_productivitymacroactiontemplates\msdyn_List_Flows\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Unlink_record_from_conversation\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroconnectors\msdyn_OmnichannelConnector\msdyn_productivitymacroconnector.xml" />
+    <Content Include="msdyn_productivitymacroconnectors\msdyn_FlowConnector\msdyn_productivitymacroconnector.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_EntityId\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_EntityName\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_PrimaryNameAttributeValue\msdyn_productivityparameterdefinition.xml" />

@@ -92,7 +92,7 @@ export class ConnectorV2Service implements DesignerConnectorV2Service {
             case "setcallscript" : let crmData = await this._rpc.call(SharedDefines.WrapperMessages.GetCrmData);
                                         response = (JSON.parse(crmData).value);
                                         break;
-            case "ListFlows":
+            case "List_Flows":
                 try {
                     let data;
                     if (parameterAlias == "entityLogicalName") {
