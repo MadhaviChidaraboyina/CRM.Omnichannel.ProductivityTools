@@ -60,17 +60,17 @@ module MscrmControls.SmartassistPanelControl {
                     }
                 }
                 else {
-                    data.IsValid = false;
+                    // TODO: Instead of using following filter take default configs
                     if (data.CurrentAppConfigName == Constants.ocAppName && data.SourceEntityName != Constants.LWIEntityName) {
                         return false;
                     }
                 }
                 switch (data.SuggestionType) {
                     case SuggestionType.SimilarCaseSuggestion:
-                        data.IsValid = this.suggestionsSetting[sessionId].CaseIsEnabled;
+                        data.IsEnabled = this.suggestionsSetting[sessionId].CaseIsEnabled;
                         return true
                     case SuggestionType.KnowledgeArticleSuggestion:
-                        data.IsValid = this.suggestionsSetting[sessionId].KbIsEnable;
+                        data.IsEnabled = this.suggestionsSetting[sessionId].KbIsEnable;
                         return true;
                     case SuggestionType.BotSuggestion:
                         return isSmartbotAvailable;

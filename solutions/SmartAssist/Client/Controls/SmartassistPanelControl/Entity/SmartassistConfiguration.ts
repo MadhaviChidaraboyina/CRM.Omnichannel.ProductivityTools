@@ -60,7 +60,7 @@ module MscrmControls.SmartassistPanelControl {
         public SuggestionControlConfigUniquename = "";
         public CurrentAppConfigName = "";
         public SourceEntityName = "";
-        public IsValid: boolean = true;;
+        public IsEnabled: boolean = true;;
 
         /**
          * Sets SAConfig Model Values.

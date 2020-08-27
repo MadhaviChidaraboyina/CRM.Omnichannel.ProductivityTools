@@ -161,7 +161,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                         $("#" + this.parentDivId).append(emptyRecordElm);
                     }
                 }
-                else if (this.saConfig.IsValid) {
+                else if (this.saConfig.IsEnabled) {
                     this.appendTitle();
 
                     // Get Suggestions data records for provide saConfig
