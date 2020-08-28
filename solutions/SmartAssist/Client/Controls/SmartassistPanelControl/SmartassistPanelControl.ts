@@ -16,7 +16,6 @@ module MscrmControls.SmartassistPanelControl {
         private AnchorTabContext: any = null;
         private ppSessionContext: any = null;
         private previousSessionId: any = null;
-        private tabSwitchEntityId: string = null;
         private anchorTabEntityId: string = null;
         private tabSwitchHandlerId: string = null;
 
@@ -239,11 +238,7 @@ module MscrmControls.SmartassistPanelControl {
             var sessionId = Utility.getCurrentSessionId()
             var context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
             //Get anchor context
-            var anchorContext = context.getTabContext("anchor") as any;
-            var recordId = null;
-            if (event && event.context && event.context.entityId) {
-                recordId = Utility.FormatGuid(event.context.entityId);
-            }
+            var anchorContext = context.getTabContext("anchor") as any;        
             if (!this.isSameSession(sessionId)) {
                 if (anchorContext && anchorContext.entityName) {
                     var configs = await SAConfigDataManager.Instance.getSAConfigurations() as SmartassistPanelControl.SAConfig[];
@@ -257,7 +252,6 @@ module MscrmControls.SmartassistPanelControl {
                     this.renderSuggestions(true, anchorContext.entityName, this.anchorTabEntityId);
                 }
             }
-            this.tabSwitchEntityId = recordId;
             this.previousSessionId = sessionId;
         }
 

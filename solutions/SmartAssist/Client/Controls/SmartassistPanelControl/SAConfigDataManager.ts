@@ -40,30 +40,45 @@ module MscrmControls.SmartassistPanelControl {
         * @param saConfig: All active SA config
         */
         public async getFilteredSAConfig(sourceEntity: string) {
-            var sessionId = Utility.getCurrentSessionId();
+            let sessionId = Utility.getCurrentSessionId();
             await this.getSuggestionsSetting(sessionId);
-            var configs = await this.getSAConfigurations();
+            let configs = await this.getSAConfigurations();
 
-            var isSmartbotAvailable = false;
-            var botConfig = configs.find(i => i.SuggestionType == SuggestionType.BotSuggestion)
+            let isSmartbotAvailable = false;
+            let botConfig = configs.find(i => i.SuggestionType == SuggestionType.BotSuggestion);
             if (botConfig) {
                 isSmartbotAvailable = await this.isSmartbotAvailable() as any;
             }
 
-            var result = configs.filter((data) => {
+            let isDefaultCaseAdded = false;
+            let isDefaultKMAdded = false;
+
+            let result = configs.filter((data) => {
                 if (data.SuggestionType == SuggestionType.BotSuggestion) return isSmartbotAvailable;
 
-                //Source entity filter
+                //Source entity filter for valid source entity
                 if (Utility.isValidSourceEntityName(sourceEntity)) {
                     if (sourceEntity != data.SourceEntityName) {
                         return false;
                     }
                 }
                 else {
-                    // TODO: Instead of using following filter take default configs
-                    if (data.CurrentAppConfigName == Constants.ocAppName && data.SourceEntityName != Constants.LWIEntityName) {
-                        return false;
+                    //for invalid session or invalid source entity - select a Case and km config to show no suggestions
+                    if (data.IsDefault == true) {
+                        let result = false;
+                        switch (data.SuggestionType) {
+                            case SuggestionType.KnowledgeArticleSuggestion:
+                                result = !isDefaultKMAdded;
+                                isDefaultCaseAdded = true;
+                                break;
+                            case SuggestionType.SimilarCaseSuggestion:
+                                result = !isDefaultCaseAdded;
+                                isDefaultKMAdded = true;
+                                break;
+                        }
+                        return result;
                     }
+                    else return false;
                 }
                 switch (data.SuggestionType) {
                     case SuggestionType.SimilarCaseSuggestion:
@@ -104,6 +119,10 @@ module MscrmControls.SmartassistPanelControl {
             try {
                 let fetchXml = this.getXmlQueryForSAConfig(appConfigName)
                 var result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.saConfigSchema.EntityName, fetchXml) as any;
+                if (result.entities.length < 1) {
+                    let defaultConfigFetchXml = this.getFetchXmlForDefaultSAConfig();
+                    result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.saConfigSchema.EntityName, defaultConfigFetchXml) as any;
+                }
                 this.saConfig = [];
                 for (var i = 0; i < result.entities.length; i++) {
                     this.saConfig.push(new SAConfig(result.entities[i], this.acConfigSchema.AdaptiveCardTemplateAlias, appConfigName))
@@ -140,6 +159,20 @@ module MscrmControls.SmartassistPanelControl {
                                 </fetch>`;
             query = query.Format(filter, appConfigfilter);
             return query
+        }
+
+        /**Fetches all default SA Configs */
+        private getFetchXmlForDefaultSAConfig(): string {
+            let query: string = `fetchXml=<fetch version="1.0"><entity name="${this.saConfigSchema.EntityName}">
+                                    <all-attributes>
+                                    <filter type='and'><condition attribute='${this.saConfigSchema.StatusCode}' operator='eq' value='${SAConfigStatus.Active}' /></filter>
+                                    <filter type='and'><condition attribute='${this.saConfigSchema.IsDefault}' operator='eq' value='1' /></filter>
+                                    <link-entity name="${this.acConfigSchema.EntityName}" to="${this.saConfigSchema.SuggestionControlConfigUniquename}" from="${this.acConfigSchema.UniqueName}" link-type="outer">
+                                      <attribute name="${this.acConfigSchema.AdaptiveCardTemplate}" alias="${this.acConfigSchema.AdaptiveCardTemplateAlias}"/>
+                                    </link-entity>
+                                </entity>
+                                </fetch>`
+            return query;
         }
 
         /**Get Session Sttings */
@@ -217,7 +250,7 @@ module MscrmControls.SmartassistPanelControl {
 
         /**
          * Get XML for SA binding with LWS
-         * @param workStreamId: Word Stream Unique ID
+         * @param workStreamId: Work Stream Unique ID
          */
         private getSmartAssistFetchXml(workStreamId: string): string {
             //todo: Resolve- Can we have fetch xml in XML ?
