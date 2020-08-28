@@ -6,8 +6,6 @@ import flowScript from "./flowScript";
 import { doTelemetry } from "./macroDesigner";
 import * as SharedDefines from "./sharedDefines";
 
-
-
 let globalContext: XrmClientApi.GlobalContext = (window.top as any).Xrm.Utility.getGlobalContext();
 
 
@@ -110,7 +108,7 @@ export class Macros {
                 let obj: SharedDefines.LogObject = {
                     level: SharedDefines.LogLevel.Error,
                     eventName: SharedDefines.WrapperEvents.UserPermissionErrorEvent,
-                    message: Utils.genMsgForTelemetry("Config entity id configured but unable to read designer URL", err),
+                    message: Utils.genMsgForTelemetry("Insufficient admin permissions to view macros", err),
                     eventTimeStamp: new Date(),
                     eventType: SharedDefines.TelemetryEventType.Trace
                 };
