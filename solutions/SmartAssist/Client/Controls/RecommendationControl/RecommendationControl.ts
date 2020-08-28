@@ -75,6 +75,9 @@ module MscrmControls.Smartassist
 			const cardHtml = suggestionCardElement.cardHTMLElement;
 			if (cardHtml) {
 				$("#" + cardId).append(cardHtml);
+				if (!this._data.IsInteracted) {
+					$("#" + cardId).addClass(Suggestion.Constants.CardNewClass);
+                }
 			}
 		}
 
@@ -131,7 +134,7 @@ module MscrmControls.Smartassist
 					else if (args.type == Suggestion.Action.Dismiss) {
 						let dismissEvent = new CustomEvent(Suggestion.Constants.DissmissCardAction, { detail: { id: this._suggestionId, data: dataToOverride } });
 						window.top.dispatchEvent(dismissEvent);
-                    }
+					}
 				}
 			} catch (error) {
 				let eventParameters = new TelemetryLogger.EventParameters();
