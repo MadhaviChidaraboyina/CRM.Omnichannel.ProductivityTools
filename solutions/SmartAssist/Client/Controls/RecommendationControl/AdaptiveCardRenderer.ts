@@ -107,7 +107,7 @@ module MscrmControls.Smartassist.Suggestion {
 				if (action instanceof AdaptiveCards.SubmitAction) {
 					const submitAction = <AdaptiveCards.SubmitAction>action;
 					if (Suggestion.CustomActionHelper.validateCustomAction(submitAction.data, this._context)) {
-						let customActionArgs: Suggestion.CustomActionArgs = { customActionParams: submitAction.data[Constants.CustomActionParams], refreshCallback: this._refreshCardCallback };
+						let customActionArgs: Suggestion.CustomActionArgs = { customActionParams: submitAction.data[Constants.CustomActionParams], refreshCallback: this._refreshCardCallback, controlContext: this._context };
 						let customAction = {
 							customActionName: submitAction.data[Constants.CustomActionName], customActionArgs: customActionArgs
 						};
