@@ -9,6 +9,134 @@
     <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
     <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
       <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to read macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makrodefinitionen kan ikke læses]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.0007075Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when the macro definition to be edited could not be read]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to read action templates]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Handlingsskabeloner kan ikke læses]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.000725Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when templates entity read fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to find designer configuration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Konfigurationen af designer blev ikke fundet]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.000725Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when config entity read fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_CDS_WRITE_ERROR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to save macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makrodefinitionen kan ikke gemmes]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.000725Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when write to CDS fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_INIT_FAILURE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Designer control initialization failed]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Det lykkedes ikke at initialisere designerkontrolelementet]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.000725Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when designer control initialization fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_JSON_GENERATION_ERROR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to create macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makrodefinitionen kan ikke oprettes]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.000725Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when designer control cannot generate a valid JSON]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_LOAD_FAILURE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to load macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Makrodefinitionen kan ikke indlæses]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.000725Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when the control cannot load the macro definition]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_RENDER_FAILURE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to render macro designer control]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kontrolelementet til makrodesigner kan ikke gengives]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.000725Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when the control cannot be rendered]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
       <Item ItemId=";LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Agent script connector]]></Val>

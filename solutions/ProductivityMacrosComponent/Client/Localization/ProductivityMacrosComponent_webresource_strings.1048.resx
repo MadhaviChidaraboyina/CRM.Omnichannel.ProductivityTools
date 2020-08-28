@@ -277,4 +277,32 @@
     <value>Condiție</value>
     <comment>Summary for expression builder for expression evaluation</comment>
   </data>
+  <data name="ENTITY_NAME_DESCRIPTION" xml:space="preserve">
+    <value>Select entity logical name</value>
+    <comment>Select entity logical name</comment>
+  </data>
+  <data name="ENTITY_NAME_TITLE" xml:space="preserve">
+    <value>Entity logical name</value>
+    <comment>Select entity logical name</comment>
+  </data>
+  <data name="ENTITY_RECORD_ID_DESCRIPTION" xml:space="preserve">
+    <value>Enter entity record id</value>
+    <comment>Enter entity record id</comment>
+  </data>
+  <data name="ENTITY_RECORD_ID_TITLE" xml:space="preserve">
+    <value>Entity record id</value>
+    <comment>Enter entity record id</comment>
+  </data>
+  <data name="FLOW_ACTION_DESCRIPTION" xml:space="preserve">
+    <value>Select flow</value>
+    <comment>Action to select flow</comment>
+  </data>
+  <data name="FLOW_ID_DESCRIPTION" xml:space="preserve">
+    <value>Select flow</value>
+    <comment>Select flow</comment>
+  </data>
+  <data name="FLOW_ID_TITLE" xml:space="preserve">
+    <value>Select flow</value>
+    <comment>Select flow</comment>
+  </data>
 </root>

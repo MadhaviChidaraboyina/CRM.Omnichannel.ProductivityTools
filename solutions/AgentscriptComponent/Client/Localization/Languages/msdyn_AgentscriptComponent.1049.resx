@@ -183,4 +183,36 @@
     <value>Отмена</value>
     <comment>Action to cancel</comment>
   </data>
+  <data name="DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION" xml:space="preserve">
+    <value>Не удалось прочитать определение макроса</value>
+    <comment>Error message when the macro definition to be edited could not be read</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" xml:space="preserve">
+    <value>Не удалось прочитать шаблоны действий</value>
+    <comment>Error message when templates entity read fails</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" xml:space="preserve">
+    <value>Не удалось найти конфигурацию конструктора</value>
+    <comment>Error message when config entity read fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_CDS_WRITE_ERROR" xml:space="preserve">
+    <value>Не удалось сохранить определение макроса</value>
+    <comment>Error message when write to CDS fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_INIT_FAILURE" xml:space="preserve">
+    <value>Ошибка инициализации элемента управления конструктора</value>
+    <comment>Error message when designer control initialization fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_JSON_GENERATION_ERROR" xml:space="preserve">
+    <value>Не удалось создать определение макроса</value>
+    <comment>Error message when designer control cannot generate a valid JSON</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_LOAD_FAILURE" xml:space="preserve">
+    <value>Не удалось загрузить определение макроса</value>
+    <comment>Error message when the control cannot load the macro definition</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_RENDER_FAILURE" xml:space="preserve">
+    <value>Не удалось отрисовать элемент управления конструктора макросов</value>
+    <comment>Error message when the control cannot be rendered</comment>
+  </data>
 </root>

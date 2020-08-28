@@ -183,4 +183,36 @@
     <value>Άκυρο</value>
     <comment>Action to cancel</comment>
   </data>
+  <data name="DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION" xml:space="preserve">
+    <value>Δεν είναι δυνατή η ανάγνωση του ορισμού μακροεντολών</value>
+    <comment>Error message when the macro definition to be edited could not be read</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" xml:space="preserve">
+    <value>Δεν είναι δυνατή η ανάγνωση των προτύπων ενεργειών</value>
+    <comment>Error message when templates entity read fails</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" xml:space="preserve">
+    <value>Δεν είναι δυνατή η εύρεση της ρύθμισης παραμέτρων σχεδίασης</value>
+    <comment>Error message when config entity read fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_CDS_WRITE_ERROR" xml:space="preserve">
+    <value>Δεν είναι δυνατή η αποθήκευση του ορισμού μακροεντολών</value>
+    <comment>Error message when write to CDS fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_INIT_FAILURE" xml:space="preserve">
+    <value>Η προετοιμασία του στοιχείου ελέγχου σχεδίασης απέτυχε</value>
+    <comment>Error message when designer control initialization fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_JSON_GENERATION_ERROR" xml:space="preserve">
+    <value>Δεν είναι δυνατή η δημιουργία του ορισμού μακροεντολών</value>
+    <comment>Error message when designer control cannot generate a valid JSON</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_LOAD_FAILURE" xml:space="preserve">
+    <value>Δεν είναι δυνατή η φόρτωση του ορισμού μακροεντολών</value>
+    <comment>Error message when the control cannot load the macro definition</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_RENDER_FAILURE" xml:space="preserve">
+    <value>Δεν είναι δυνατή η απόδοση του στοιχείου ελέγχου σχεδίασης μακροεντολών</value>
+    <comment>Error message when the control cannot be rendered</comment>
+  </data>
 </root>
