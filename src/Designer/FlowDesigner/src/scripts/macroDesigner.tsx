@@ -471,7 +471,7 @@ async function startDesigner(rpc) {
 	}
 }
 
-function doTelemetry(msg: SharedDefines.LogObject, userVisibleError?: string, toClose?: boolean, showExceptionMsg: boolean = false) {
+export function doTelemetry(msg: SharedDefines.LogObject, userVisibleError?: string, toClose?: boolean, showExceptionMsg: boolean = false) {
     Utils.Utils.logAdminTelemetry(msg);
     console.log(msg.eventTimeStamp + " " + msg.eventType + " " + msg.level + " " + msg.eventName + " " + msg.message);
     if (userVisibleError) {

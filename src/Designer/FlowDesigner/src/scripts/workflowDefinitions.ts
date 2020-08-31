@@ -3,6 +3,8 @@ import { Constants, Action, Parameter, Connector, Kind, Category, DesignerTempla
 import { isNullOrUndefined } from "util";
 import * as Designer from "./DesignerDefinitions";
 import flowScript from "./flowScript";
+import { doTelemetry } from "./macroDesigner";
+import * as SharedDefines from "./sharedDefines";
 
 let globalContext: XrmClientApi.GlobalContext = (window.top as any).Xrm.Utility.getGlobalContext();
 
@@ -102,7 +104,18 @@ export class Macros {
         let res1 = await Promise.all([
             window.top.Xrm.WebApi.retrieveMultipleRecords("msdyn_productivitymacroconnector", "?$filter=statecode eq 0&$select=msdyn_productivitymacroconnectorid,msdyn_name,msdyn_title,msdyn_displayname,msdyn_brandcolor,msdyn_description,msdyn_icon,msdyn_categorykey,msdyn_categorylabel,msdyn_type,msdyn_webresourcename"),
             window.top.Xrm.WebApi.retrieveMultipleRecords("msdyn_productivitymacroactiontemplate", "?$filter=statecode eq 0&$select=msdyn_name,msdyn_title,msdyn_subtitle,msdyn_displayname,msdyn_brandcolor,msdyn_actiondescription,msdyn_icon,msdyn_summary,msdyn_visibility,msdyn_kind&$expand=msdyn_msdyn_prod_macroactiontemplate_msdyn_actioninput($select=msdyn_name,msdyn_visibility),msdyn_msdyn_prod_macroactiontemplate_msdyn_actionout($select=msdyn_name),msdyn_macroconnector($select=msdyn_name)")
-        ]);
+        ]).catch(function (err) {
+                let obj: SharedDefines.LogObject = {
+                    level: SharedDefines.LogLevel.Error,
+                    eventName: SharedDefines.WrapperEvents.UserPermissionErrorEvent,
+                    message: Utils.genMsgForTelemetry("Insufficient admin permissions to view macros", err),
+                    eventTimeStamp: new Date(),
+                    eventType: SharedDefines.TelemetryEventType.Trace
+                };
+                doTelemetry(obj, "MACRO_DESIGNER_CONTROL_PERMISSION_ERROR", true);
+                return { actions: actions, connectors: connectors, categories: categories, operationManifestData: operationManifestData };
+            });
+
         let connectorData = await res1[0];
         let templates = await res1[1];
 

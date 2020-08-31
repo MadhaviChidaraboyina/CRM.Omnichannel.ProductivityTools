@@ -420,5 +420,16 @@ namespace Microsoft.Dynamics.ProductivityMacrosComponent.WebResources.Localizati
                 return ResourceManager.GetString("msdyn_macrosolutionconfiguration_msdyn_uservoicetext", resourceCulture);
             }
         }
-    }
+
+		/// <summary>
+		///   Looks up a localized string similar to You need macro admin permission to view macros.
+		/// </summary>
+		internal static string MACRO_DESIGNER_CONTROL_PERMISSION_ERROR
+		{
+			get
+			{
+				return ResourceManager.GetString("MACRO_DESIGNER_CONTROL_PERMISSION_ERROR", resourceCulture);
+			}
+		}
+	}
 }

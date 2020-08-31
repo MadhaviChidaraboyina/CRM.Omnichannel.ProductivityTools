@@ -447,7 +447,8 @@ export enum WrapperEvents {
 	DesignerControlInitEvent = "MSWP.DESIGNER_CONTROL_INIT",
 	DesignerControlInitErrorEvent = "MSWP.DESIGNER_CONTROL_INIT_ERROR",
 	DesignerControlExecutionEvent = "MSWP.DESIGNER_CONTROL_EXECUTION_EVENT",
-	DesignerControlExecutionErrorEvent = "MSWP.DESIGNER_CONTROL_EXECUTION_ERROR"
+    DesignerControlExecutionErrorEvent = "MSWP.DESIGNER_CONTROL_EXECUTION_ERROR",
+    UserPermissionErrorEvent = "MSWP.USER_PERMISSION_ERROR_EVENT"
 };
 
 export enum RequiredCDSOpersForInit {
