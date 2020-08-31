@@ -293,7 +293,7 @@ module MscrmControls.SmartassistPanelControl {
          */
         private getEntityRecordId(anchorContext: any): string {
             let recordId = anchorContext.entityId;
-            if (anchorContext.entityName == Constants.LWIEntityName) {
+            if (anchorContext.entityName == Constants.LWIEntityName && anchorContext.data != null) {
                 recordId = anchorContext.data.ocContext.config.sessionParams.LiveWorkItemId;
             }
             return recordId;

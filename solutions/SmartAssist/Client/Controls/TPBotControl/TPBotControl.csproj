@@ -19,6 +19,7 @@
     <RootNamespace>TPBotControl</RootNamespace>
     <AssemblyName>TPBotControl</AssemblyName>
     <TypeScriptOutFile>TPBotControl.js</TypeScriptOutFile>
+    <TypeScriptSkipLibCheck>true</TypeScriptSkipLibCheck>
   </PropertyGroup>
   <PropertyGroup>
     <UglifyJsMangle>true</UglifyJsMangle>
@@ -41,6 +42,7 @@
     <TypeScriptCompile Include="Utils\MacroHelper.ts" />
     <TypeScriptCompile Include="Utils\Constants.ts" />
     <TypeScriptCompile Include="Utils\TelemetryLogger.ts" />
+    <TypeScriptCompile Include="Utils\Utility.ts" />
     <TypeScriptCompile Include="$(PKG_TYPESCRIPT_MSBUILD)\tools\tsc\lib.es6.d.ts" />
     <TypeScriptCompile Include="Views\ViewTemplates.ts" />
   </ItemGroup>

@@ -28,11 +28,7 @@ module MscrmControls.ProductivityPanel {
 		 * @params container The div element to draw this control in
 		 */
         public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary, container: HTMLDivElement): void {
-
-            let sessionContext = context.factory["_customControlProperties"].configuration.Parameters.SessionContext;
-            if (!context.utils.isNullOrUndefined(sessionContext))
-                TPBot.TPBotManager.Instance.callbackOnCardReceived = sessionContext.Callback;
-            let self = this;
+                        
             let methodName = "init";
             // Initialize Telemetry Repoter
             this.telemetryReporter = new TPBot.TelemetryLogger(context);
@@ -130,8 +126,8 @@ module MscrmControls.ProductivityPanel {
                 let card = TPBot.AdaptiveCardHelper.GetCardFromMessageContent(content);
                 let tags = messageMap.get("tags");
                 if (conversationId && uiSessionId && tags.indexOf(TPBot.Constants.FPBTag) == -1) {
-                    TPBot.TPBotManager.Instance.RenderTPBotCard(conversationId, card.content);
-                    TPBot.TPBotManager.Instance.callbackOnCardReceived(true);
+                    TPBot.TPBotManager.Instance.RenderTPBotCard(conversationId, card.content);          
+                    TPBot.Utility.DispatchPaneNotificationEvent(1);
                 }
             }
         }
