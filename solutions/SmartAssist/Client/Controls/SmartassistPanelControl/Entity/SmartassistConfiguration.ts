@@ -62,8 +62,8 @@ module MscrmControls.SmartassistPanelControl {
         public SuggestionControlConfigUniquename = "";
         public CurrentAppConfigName = "";
         public SourceEntityName = "";
-        public IsEnabled: boolean = true;;
-        public IsDefault: boolean = null;;
+        public IsEnabled: boolean = true;
+        public IsDefault: boolean = null;
 
         /**
          * Sets SAConfig Model Values.
@@ -87,7 +87,7 @@ module MscrmControls.SmartassistPanelControl {
                 this.SuggestionControlConfigUniquename = Utility.GetValue(response[this.AttributeName.SuggestionControlConfigUniquename]);
                 this.CurrentAppConfigName = appUniqueName;
                 this.SourceEntityName = Utility.GetValue(response[this.AttributeName.SourceEntityName]);
-                this.IsDefault = Utility.GetValue(response[this.AttributeName.IsDefault]);
+                this.IsDefault = Utility.GetValue(response[this.AttributeName.IsDefault]) as boolean;
             }
         }
     }

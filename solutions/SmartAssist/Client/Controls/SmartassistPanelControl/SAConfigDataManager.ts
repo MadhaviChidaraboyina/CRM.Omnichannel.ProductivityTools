@@ -68,11 +68,11 @@ module MscrmControls.SmartassistPanelControl {
                         let result = false;
                         switch (data.SuggestionType) {
                             case SuggestionType.KnowledgeArticleSuggestion:
-                                result = !isDefaultKMAdded;
+                                result = !isDefaultCaseAdded;
                                 isDefaultCaseAdded = true;
                                 break;
                             case SuggestionType.SimilarCaseSuggestion:
-                                result = !isDefaultCaseAdded;
+                                result = !isDefaultKMAdded;
                                 isDefaultKMAdded = true;
                                 break;
                         }
@@ -163,8 +163,8 @@ module MscrmControls.SmartassistPanelControl {
 
         /**Fetches all default SA Configs */
         private getFetchXmlForDefaultSAConfig(): string {
-            let query: string = `fetchXml=<fetch version="1.0"><entity name="${this.saConfigSchema.EntityName}">
-                                    <all-attributes>
+            let query: string = `?fetchXml=<fetch version="1.0"><entity name="${this.saConfigSchema.EntityName}">
+                                    <all-attributes/>
                                     <filter type='and'><condition attribute='${this.saConfigSchema.StatusCode}' operator='eq' value='${SAConfigStatus.Active}' /></filter>
                                     <filter type='and'><condition attribute='${this.saConfigSchema.IsDefault}' operator='eq' value='1' /></filter>
                                     <link-entity name="${this.acConfigSchema.EntityName}" to="${this.saConfigSchema.SuggestionControlConfigUniquename}" from="${this.acConfigSchema.UniqueName}" link-type="outer">
