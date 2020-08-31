@@ -62,6 +62,8 @@ module MscrmControls.ProductivityPanel.TPBot {
         public static SuggestionOuterContainer = "sa-suggestion-outer-container";
         public static SuggestionInnerDiv = "sa-suggestion-inner-div-";
         public static FPBTag = "FPB";
+
+        public static PPChildControlId = "MscrmControls.SmartassistPanelControl.SmartassistPanelControl"
     }
 
 	/**
