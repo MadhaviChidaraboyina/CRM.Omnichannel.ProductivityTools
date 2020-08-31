@@ -49,7 +49,6 @@ module MscrmControls.Callscript {
 		public static getHeaderContainerStyle() {
             return {
                 height: "68px",
-                background: "#FAF9F8",
 				"align-items": "left",
 				minWidth: "234px"
 			}
@@ -61,7 +60,7 @@ module MscrmControls.Callscript {
                 fontSize: "20px",
                 fontWeight: 600,
                 lineHeight: "28px",
-                marginTop: "18px",
+                marginTop: "4px",
 				color: "#323130"
 			}
         }
@@ -74,7 +73,7 @@ module MscrmControls.Callscript {
 				"background-image": "url(" + backgroundIconUrl + ")",
 				"background-repeat": "no-repeat",
 				"background-position": "center",
-				marginTop: "22px",
+				marginTop: "11px",
                 paddingLeft: "15px",
 
                 fontFamily: "Full MDL2 Assets",
@@ -116,7 +115,7 @@ module MscrmControls.Callscript {
 				"float": "left",
 				width: "100%",
 				height: "32px",
-				marginBottom: "8px",
+				marginBottom: "12px",
 				minWidth: "234px"
 			};
 		}
