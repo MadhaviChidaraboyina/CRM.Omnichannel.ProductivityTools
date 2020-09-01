@@ -17,6 +17,22 @@ module MscrmControls.SmartassistPanelControl {
         DOWN_ARROW_KEY = 40
     }
 
+    /**
+    * Ids for localized strings from resx file
+    */
+    export class LocalizedStrings {
+        public static SmartAssistControlHeader = "ControlHeader";
+        public static SmartAssistSuccessMessage = "SuccessMessage";
+        public static SmartAssistFailureMessage = "FailureMessage";
+        public static LoadingText = "LoadingText";
+        public static SuggestionControlTitle = "SuggestionControlTitle";
+        public static TitleIconInfoText = "SuggestionControlTitleIconText";
+        public static InfoIcon = "SmartAssistInfoIcon";
+
+        //Accessibility Labels
+        public static Accessibility_ExecutedTextStepIndicator = "StepListItem_ExecutedTextStepAccessibilityLabel";
+    }
+
 	/**
 	 * Constants
 	 */
@@ -64,8 +80,8 @@ module MscrmControls.SmartassistPanelControl {
         public static TitleImgCss = "sapanel-title-img";
         public static SAPanelTitleIconPath = "/WebResources/msdyn_infoiconblue.svg";
         public static IconPopOutId = "IconPopOutId";
-        public static SAPanelTitleIconInfoDiv = `<div id="sapanel-info-icon" tabindex="0" onclick="var popup = document.getElementById('${Constants.IconPopOutId}');popup.classList.toggle('show');" class="popup"><img alt="icon" aria-label="Smart assist information icon" class="popup ${Constants.TitleImgCss}" src="${Constants.SAPanelTitleIconPath}"/><span class="popuptext" id="${Constants.IconPopOutId}">{1}</span></div>`;
-        public static SAPanelTitleDiv = `<div class="${Constants.TitleDivCss}" ><label tabindex="0" class="${Constants.TitleLabelCss}">{0}</label>${Constants.SAPanelTitleIconInfoDiv}</div>`;
+        public static SAPanelTitleIconInfoDiv = `<div id="sapanel-info-icon" tabindex="0" onclick="var popup = document.getElementById('${Constants.IconPopOutId}');popup.classList.toggle('show');" class="popup"><img alt="icon" aria-label=${LocalizedStrings.InfoIcon} class="popup ${Constants.TitleImgCss}" src="${Constants.SAPanelTitleIconPath}"/><span class="popuptext" id="${Constants.IconPopOutId}">{1}</span></div>`;
+        public static SAPanelTitleDiv = `<div class="${Constants.TitleDivCss}" ><label class="${Constants.TitleLabelCss}">{0}</label>${Constants.SAPanelTitleIconInfoDiv}</div>`;
         public static SAPanelStyle =
             `<style id="sa-panel-style">
 	        .hide-element{
@@ -178,21 +194,6 @@ module MscrmControls.SmartassistPanelControl {
             }
         </style>`;
         public static SAPanelControlDivCss = "overflow:auto;max-height:100%;width:100%;";
-    }
-
-    /**
-    * Ids for localized strings from resx file
-    */
-    export class LocalizedStrings {
-        public static SmartAssistControlHeader = "ControlHeader";
-        public static SmartAssistSuccessMessage = "SuccessMessage";
-        public static SmartAssistFailureMessage = "FailureMessage";
-        public static LoadingText = "LoadingText";
-        public static SuggestionControlTitle = "SuggestionControlTitle";
-        public static TitleIconInfoText = "SuggestionControlTitleIconText";
-
-        //Accessibility Labels
-        public static Accessibility_ExecutedTextStepIndicator = "StepListItem_ExecutedTextStepAccessibilityLabel";
     }
 
 	/**
