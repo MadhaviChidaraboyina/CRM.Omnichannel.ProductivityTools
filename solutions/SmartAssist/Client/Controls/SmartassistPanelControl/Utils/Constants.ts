@@ -52,7 +52,7 @@ module MscrmControls.SmartassistPanelControl {
         public static SAPanelTitleIconPath = "/WebResources/msdyn_infoiconblue.svg";
         public static IconPopOutId = "IconPopOutId";
         public static SAPanelTitleIconInfoDiv = `<div tabindex="0" onclick="var popup = document.getElementById('${Constants.IconPopOutId}');popup.classList.toggle('show');" class="popup"><img alt="icon" class="popup ${Constants.TitleImgCss}" src="${Constants.SAPanelTitleIconPath}"/>  <span class="popuptext" id="${Constants.IconPopOutId}">{1}</span></div>`;
-        public static SAPanelTitleDiv = `<div class="${Constants.TitleDivCss}" ><label tabindex="0" class="${Constants.TitleLabelCss}">{0}</label>${Constants.SAPanelTitleIconInfoDiv}</div>`;
+        public static SAPanelTitleDiv = `<div class="${Constants.TitleDivCss}" ><label class="${Constants.TitleLabelCss}">{0}</label>${Constants.SAPanelTitleIconInfoDiv}</div>`;
         public static SAPanelStyle =
             `<style id="sa-panel-style">
 	        .hide-element{
