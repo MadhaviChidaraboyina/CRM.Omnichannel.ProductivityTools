@@ -105,6 +105,7 @@ module MscrmControls.Smartassist.Suggestion {
 			try {
 				const cardId = Suggestion.Util.getSuggestionCardId(this._suggestionId);
 				if (action instanceof AdaptiveCards.SubmitAction) {
+					
 					const submitAction = <AdaptiveCards.SubmitAction>action;
 					if (Suggestion.CustomActionHelper.validateCustomAction(submitAction.data, this._context)) {
 						let customActionArgs: Suggestion.CustomActionArgs = { customActionParams: submitAction.data[Constants.CustomActionParams], refreshCallback: this._refreshCardCallback, controlContext: this._context };
@@ -114,34 +115,44 @@ module MscrmControls.Smartassist.Suggestion {
 						
 						let actionPromise = Suggestion.CustomActionHelper.invokeCustomAction(customAction);
 						const notificationBarId = "resolve_" + this._suggestionId;
-						
+
 						actionPromise.then((data) => {
 							let successMessageTemplate;
 							if (data) {
+								this.removePreviousActionMessage(notificationBarId);
 								successMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.SuccessImageEncode, data);
-								const successMessage = ViewTemplates.SuccessMessageTemplate.Format(notificationBarId, successMessageTemplate);
+								const successMessage = ViewTemplates.SuccessMessageTemplate.Format(notificationBarId, successMessageTemplate, data);
 								$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(successMessage);
 								$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).addClass(Constants.CustomActionSuccessStyle);
-								setTimeout(() => {
-									$('#' + notificationBarId).remove();
-									$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionSuccessStyle);
-								}, 3000);
+								$("#" + notificationBarId).ready(() => {
+									$("#" + notificationBarId).attr("tabindex", -1).focus();
+								})
+								//setTimeout(() => {
+								//	$('#' + notificationBarId).remove();
+								//	$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionSuccessStyle);
+									
+								//}, 5000);
 							}
 						}).catch((error) => {
+							this.removePreviousActionMessage(notificationBarId);
 							let errorMessageTemplate;
 							if (error) {
 								errorMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.ErrorImageEncode, error);
 							}
 							else {
 								errorMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.ErrorImageEncode, LocalizedStrings.CustomActionFailureMessage);
-                            }
-							let errorMessage = ViewTemplates.FailureMessageTemplates.Format(notificationBarId, errorMessageTemplate);
+							}
+							const errorString = error ? error : LocalizedStrings.CustomActionFailureMessage;
+							let errorMessage = ViewTemplates.FailureMessageTemplates.Format(notificationBarId, errorMessageTemplate, errorString);
 							$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(errorMessage);
 							$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).addClass(Constants.CustomActionErrorStyle);
-							setTimeout(() => {
-								$('#' + notificationBarId).remove();
-								$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionErrorStyle);
-							}, 3000);
+							$("#" + notificationBarId).ready(() => {
+								$("#" + notificationBarId).attr("tabindex", -1).focus();
+							})
+							//setTimeout(() => {
+							//	$('#' + notificationBarId).remove();
+							//	$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionErrorStyle);
+							//}, 5000);
 						});
 					}
 					else {
@@ -163,6 +174,18 @@ module MscrmControls.Smartassist.Suggestion {
 				let eventParameters = new TelemetryLogger.EventParameters();
 				eventParameters.addParameter("CustomAction", "Unable to invoke custom action");
 				RecommendationControl._telemetryReporter.logError("MainComponent", "onExecuteAction", "unable to invoke custom action", eventParameters);
+			}
+		}
+
+		private removePreviousActionMessage(notificationBarId) {
+			if ($("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).hasClass(Constants.CustomActionSuccessStyle)) {
+				$('#' + notificationBarId).remove();
+				$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionSuccessStyle);
+			}
+
+			if ($("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).hasClass(Constants.CustomActionErrorStyle)) {
+				$('#' + notificationBarId).remove();
+				$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionErrorStyle);
 			}
 		}
 
