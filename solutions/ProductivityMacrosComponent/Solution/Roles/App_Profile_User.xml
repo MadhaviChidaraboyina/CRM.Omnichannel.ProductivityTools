@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Role id="{61649654-ced8-ea11-a813-000d3a579805}" name="App Profile User">
+  <IsCustomizable>0</IsCustomizable>
+  <RolePrivileges>
+    <RolePrivilege name="prvReadWorkflow" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivityactioninputparameter" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivityactionoutputparameter" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_inputparameters" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivitymacroconnector" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivityparameterdefinition" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_designeroptions" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivitymacroactiontemplate" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivitymacrosolutionconfiguration" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_macrosession" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_macrosession" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_macrosession" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_macrosession" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_macrosession" level="Global" />
+  </RolePrivileges>
+</Role>
