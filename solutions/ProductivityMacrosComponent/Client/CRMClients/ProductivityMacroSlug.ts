@@ -28,7 +28,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 
             //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions : "?" character
 
-            let matches = input.match(new RegExp("\\{[^{]*\\}|\\{(?:[^{]*\\{[^}]*\\}[^{}]*)*\\}|\\$\{[^{]*\\}|\\$\{(?:[^{]*\\{[^}]*\\}[^{}]*)*\\}", "g")); // "\\{.*?\\}" (non -greedy) allows to resolve "{qp}{param1}" as qp and param1 whereas "\\{.*\\}" (greedy) resolve "{qp}{param1}" as {qp}{param1} itself.
+            let matches = input.match(new RegExp("\\{[^{]*?\\}|\\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}|\\$\{[^{]*?\\}|\\$\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}", "g")); // "\\{.*?\\}" (non -greedy) allows to resolve "{qp}{param1}" as qp and param1 whereas "\\{.*\\}" (greedy) resolve "{qp}{param1}" as {qp}{param1} itself.
             let slugCallbacks: string[] = [];
 
             for (let index in matches) {
