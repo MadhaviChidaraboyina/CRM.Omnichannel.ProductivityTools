@@ -32,7 +32,7 @@ export const icons = {
     operations :{
         setcallscript : getIconUrl("WebResources/AgentScriptDesigner/msdyn_setDefaultAction.svg"),
         start: getIconUrl("WebResources/AgentScriptDesigner/msdyn_manualTrigger.svg"),
-        listFlows: getIconUrl("WebResources/AgentScriptDesigner/msdyn_setDefaultAction.svg")
+        listFlows: getIconUrl("WebResources/msdyn_OmnichannelBase/_imgs/Macros/msdyn_ProductivityMacros_run_flow.svg")
     }
 
 };
