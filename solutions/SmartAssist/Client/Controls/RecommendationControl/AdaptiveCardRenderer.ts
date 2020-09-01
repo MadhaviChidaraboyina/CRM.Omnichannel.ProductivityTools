@@ -28,6 +28,7 @@ module MscrmControls.Smartassist.Suggestion {
 		private _suggestionId: string;
 		private _refreshCardCallback: (args: Suggestion.CardRefreshArgs) => void;
 		private _sessionStorageManager: Suggestion.SessionStorageManager;
+		private adaptivecardRoot: AdaptiveCards.AdaptiveCard;
 
 		constructor(refreshCallback: (args: Suggestion.CardRefreshArgs) => void) {
 			this._refreshCardCallback = refreshCallback;
@@ -82,6 +83,7 @@ module MscrmControls.Smartassist.Suggestion {
 			adaptiveCard.onExecuteAction = this.onExecuteAction.bind(this);
 			adaptiveCard.onElementVisibilityChanged = this.onVisibilityChanged.bind(this);
 			const htmlElement = adaptiveCard.render();
+			this.adaptivecardRoot = adaptiveCard;
 			return htmlElement;
 		}
 
@@ -138,8 +140,8 @@ module MscrmControls.Smartassist.Suggestion {
 
 						actionPromise.then((data) => {
 							let successMessageTemplate;
+							this.removePreviousActionMessage(notificationBarId);
 							if (data) {
-								this.removePreviousActionMessage(notificationBarId);
 								successMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.SuccessImageEncode, data);
 								const successMessage = ViewTemplates.SuccessMessageTemplate.Format(notificationBarId, successMessageTemplate, data);
 								$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(successMessage);
@@ -147,11 +149,10 @@ module MscrmControls.Smartassist.Suggestion {
 								$("#" + notificationBarId).ready(() => {
 									$("#" + notificationBarId).attr("tabindex", -1).focus();
 								})
-								//setTimeout(() => {
-								//	$('#' + notificationBarId).remove();
-								//	$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionSuccessStyle);
-									
-								//}, 5000);
+								var self = this;
+								setTimeout(() => {
+									self.removePreviousActionMessage(notificationBarId);
+								}, 5000);
 							}
 						}).catch((error) => {
 							this.removePreviousActionMessage(notificationBarId);
@@ -169,10 +170,10 @@ module MscrmControls.Smartassist.Suggestion {
 							$("#" + notificationBarId).ready(() => {
 								$("#" + notificationBarId).attr("tabindex", -1).focus();
 							})
-							//setTimeout(() => {
-							//	$('#' + notificationBarId).remove();
-							//	$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionErrorStyle);
-							//}, 5000);
+							var self = this;
+							setTimeout(() => {
+								self.removePreviousActionMessage(notificationBarId);
+							}, 5000);
 						});
 					}
 					else {
@@ -200,11 +201,17 @@ module MscrmControls.Smartassist.Suggestion {
 		private removePreviousActionMessage(notificationBarId) {
 			if ($("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).hasClass(Constants.CustomActionSuccessStyle)) {
 				$('#' + notificationBarId).remove();
+				if (this.adaptivecardRoot) {
+					this.adaptivecardRoot.renderedElement.focus();
+                }
 				$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionSuccessStyle);
 			}
 
 			if ($("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).hasClass(Constants.CustomActionErrorStyle)) {
 				$('#' + notificationBarId).remove();
+				if (this.adaptivecardRoot) {
+					this.adaptivecardRoot.renderedElement.focus();
+				}
 				$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionErrorStyle);
 			}
 		}
