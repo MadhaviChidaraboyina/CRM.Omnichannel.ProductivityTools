@@ -11,6 +11,10 @@ declare module MscrmControls.Smartassist.Suggestion {
          * Callback to refresh or dismiss a card.
          * */
         refreshCallback?: (args: CardRefreshArgs) => void;
+        /**
+         * PCF control context
+         * */
+        controlContext?: any;
     }
     const enum Action {
         /**
