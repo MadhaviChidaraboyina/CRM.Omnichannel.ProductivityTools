@@ -51,6 +51,23 @@ module MscrmControls.SmartassistPanelControl {
                 loaderElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelTitleDiv.Format(Utility.getString(LocalizedStrings.SuggestionControlTitle), Utility.getString(LocalizedStrings.TitleIconInfoText));
                 this.smartAssistContainer.appendChild(loaderElement);
 
+                var panelInfoIcon = document.getElementById(Constants.SAPanelInfoIcon);
+                panelInfoIcon.onkeydown = (e: KeyboardEvent) => {
+                    switch (e.keyCode) {
+                        case KeyCodes.ENTER_KEY:
+                            var popup = document.getElementById(Constants.IconPopOutId) as HTMLElement;
+                            popup.classList.toggle('show');
+                            popup.focus();
+                            break;
+                        case KeyCodes.ESCAPE_KEY:
+                            var panelInfoIcon = document.getElementById(Constants.SAPanelInfoIcon);
+                            var popup = document.getElementById(Constants.IconPopOutId);
+                            popup.classList.toggle('show');
+                            panelInfoIcon.focus();
+                            break;
+                    }
+                }
+
                 // Loader Element
                 var loaderElement: HTMLDivElement = document.createElement("div");
                 loaderElement.innerHTML = Constants.SAPanelLoaderDiv.Format(Utility.getString(LocalizedStrings.LoadingText));

@@ -5,6 +5,18 @@
 module MscrmControls.SmartassistPanelControl {
     'use strict';
 
+    /**
+     * Keyboard key codes
+     * */
+    export enum KeyCodes {
+        TAB_KEY = 9,
+        ENTER_KEY = 13,
+        ESCAPE_KEY = 27,
+        SPACE_KEY = 32,
+        UP_ARROW_KEY = 38,
+        DOWN_ARROW_KEY = 40
+    }
+
 	/**
 	 * Constants
 	 */
@@ -19,6 +31,7 @@ module MscrmControls.SmartassistPanelControl {
         public static IncidentEntityName = "incident";
         public static CECEntityRecordType = "entityrecord";
         public static SAConfigCacheKey = "SAConfig";
+        public static SAPanelInfoIcon = "sapanel-info-icon";
         public static SAAnyEntityControlContainerId = "SAAnyEntityControl_";
         public static FPBTag = "FPB";
         public static TPBTag = "smartbot";
@@ -51,7 +64,7 @@ module MscrmControls.SmartassistPanelControl {
         public static TitleImgCss = "sapanel-title-img";
         public static SAPanelTitleIconPath = "/WebResources/msdyn_infoiconblue.svg";
         public static IconPopOutId = "IconPopOutId";
-        public static SAPanelTitleIconInfoDiv = `<div tabindex="0" onclick="var popup = document.getElementById('${Constants.IconPopOutId}');popup.classList.toggle('show');" class="popup"><img alt="icon" class="popup ${Constants.TitleImgCss}" src="${Constants.SAPanelTitleIconPath}"/>  <span class="popuptext" id="${Constants.IconPopOutId}">{1}</span></div>`;
+        public static SAPanelTitleIconInfoDiv = `<div id="sapanel-info-icon" tabindex="0" onclick="var popup = document.getElementById('${Constants.IconPopOutId}');popup.classList.toggle('show');" class="popup"><img alt="icon" aria-label="Smart assist information icon" class="popup ${Constants.TitleImgCss}" src="${Constants.SAPanelTitleIconPath}"/><span class="popuptext" id="${Constants.IconPopOutId}">{1}</span></div>`;
         public static SAPanelTitleDiv = `<div class="${Constants.TitleDivCss}" ><label tabindex="0" class="${Constants.TitleLabelCss}">{0}</label>${Constants.SAPanelTitleIconInfoDiv}</div>`;
         public static SAPanelStyle =
             `<style id="sa-panel-style">
