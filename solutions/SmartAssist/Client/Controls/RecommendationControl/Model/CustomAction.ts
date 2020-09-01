@@ -30,7 +30,12 @@
         /**
          * To dismiss the card.
          */
-        Dismiss = 1
+        Dismiss = 1,
+
+        /**
+         * To update data in cache.
+         * */
+        CacheUpdate = 2
     }
 
     /**

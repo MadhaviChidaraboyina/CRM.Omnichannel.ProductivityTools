@@ -80,8 +80,21 @@ module MscrmControls.Smartassist.Suggestion {
 			AdaptiveCards.AdaptiveCard.elementTypeRegistry.registerType(Suggestion.Constants.PopupActionName, () => { return new PopupAction(this.onExecuteAction.bind(this)) });
 			adaptiveCard.parse(cardContent);
 			adaptiveCard.onExecuteAction = this.onExecuteAction.bind(this);
+			adaptiveCard.onElementVisibilityChanged = this.onVisibilityChanged.bind(this);
 			const htmlElement = adaptiveCard.render();
 			return htmlElement;
+		}
+
+		/**
+		 * callback for onElementVisibilityChanged
+		 * @param element
+		 */
+		onVisibilityChanged(element: AdaptiveCards.CardElement) {
+			const cardId = Suggestion.Util.getSuggestionCardId(this._suggestionId);
+			if ($("#" + cardId).hasClass(Suggestion.Constants.CardNewClass)) {
+				$("#" + cardId).removeClass(Suggestion.Constants.CardNewClass);
+				this._refreshCardCallback({ type: Smartassist.Suggestion.Action.CacheUpdate, data: { IsInteracted: true } });
+			}
 		}
 
 		/**
@@ -104,6 +117,13 @@ module MscrmControls.Smartassist.Suggestion {
 		onExecuteAction(action: AdaptiveCards.Action) {
 			try {
 				const cardId = Suggestion.Util.getSuggestionCardId(this._suggestionId);
+
+				// remove blueband
+				if ($("#" + cardId).hasClass(Suggestion.Constants.CardNewClass)) {
+					$("#" + cardId).removeClass(Suggestion.Constants.CardNewClass);
+					this._refreshCardCallback({ type: Smartassist.Suggestion.Action.CacheUpdate, data: { IsInteracted: true } });
+				}
+
 				if (action instanceof AdaptiveCards.SubmitAction) {
 					
 					const submitAction = <AdaptiveCards.SubmitAction>action;

@@ -88,7 +88,7 @@ module MscrmControls.ProductivityPanel.TPBot {
 								"subtle": "#DDFF0000"
 							}
 						},
-						"backgroundColor": "#FDFFEA"
+						"backgroundColor": "#FFFFFF"
 					},
 					"emphasis": {
 						"foregroundColors": {

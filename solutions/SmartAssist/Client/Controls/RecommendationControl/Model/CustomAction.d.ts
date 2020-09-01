@@ -24,7 +24,11 @@ declare module MscrmControls.Smartassist.Suggestion {
         /**
          * To dismiss the card.
          */
-        Dismiss = 1
+        Dismiss = 1,
+        /**
+         * To update data in cache.
+         * */
+        CacheUpdate = 2
     }
     /**
      * Interface for the argument to be passed in refresh callback.
