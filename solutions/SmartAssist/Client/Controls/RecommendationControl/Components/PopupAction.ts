@@ -23,6 +23,7 @@ module MscrmControls.Smartassist.Suggestion {
             // Creating the popup container.
             var popupContainer = document.createElement("div");
             popupContainer.setAttribute('aria-label', 'popup');
+            popupContainer.setAttribute('aria-modal', 'true');
             popupContainer.className = Suggestion.Constants.PopupContainerClassName;
             popupContainer.style.border = "1px solid #EEEEEE";
             popupContainer.style.backgroundColor = "#FFFFFF";
@@ -64,6 +65,7 @@ module MscrmControls.Smartassist.Suggestion {
             };
             this._popupContainerActionElement.tabIndex = 0;
             this._popupContainerActionElement.setAttribute('aria-label', 'popup');
+            this._popupContainerActionElement.setAttribute('aria-modal', 'true');
             this._popupContainerActionElement.onkeydown = (e: KeyboardEvent) => {
                 switch (e.keyCode) {
                     case KeyCodes.ESCAPE_KEY:
