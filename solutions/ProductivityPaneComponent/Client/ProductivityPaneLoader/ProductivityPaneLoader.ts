@@ -25,9 +25,22 @@ let loadLogicAppExecutor = function () {
     }
 };
 
+let loadMacrosDataLayer = function () {
+    try {
+        let macrosLibScript = document.createElement("script");
+        macrosLibScript.src = Xrm.Utility.getGlobalContext().getClientUrl() + "/" + "/WebResources/MacrosDataLayer/msdyn_MacrosDataLayer.js";
+        document.getElementsByTagName("body")[0].appendChild(macrosLibScript);
+        console.log("Loaded msdyn_MacrosDataLayer.js");
+
+    } catch (error) {
+        console.log("Failed to load msdyn_MacrosDataLayer.js");
+    }
+};
+
 
 loadLogicAppExecutor();
 loadMacrosComponentInternal();
+loadMacrosDataLayer();
 
 let _xrmApp: any = Xrm.App;
 _xrmApp.panels.loadPanel({
