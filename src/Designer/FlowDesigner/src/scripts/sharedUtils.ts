@@ -1,4 +1,5 @@
 ﻿import { isNullOrUndefined } from "util";
+import * as SharedDefines from "./sharedDefines";
 
 export class Utils {
     public static serialize(message, source, destination) {
@@ -68,5 +69,21 @@ export class Utils {
     }
     public static logAdminTelemetry(msg: any) {
         (window.top as any).Microsoft.ProductivityMacros.Internal.setMacrosAdminData(msg);
+    }
+
+    public static doTelemetry(msg: SharedDefines.LogObject, userVisibleError?: string, toClose?: boolean, showExceptionMsg: boolean = false) {
+        Utils.logAdminTelemetry(msg);
+        console.log(msg.eventTimeStamp + " " + msg.eventType + " " + msg.level + " " + msg.eventName + " " + msg.message);
+        if (userVisibleError) {
+            let alertMsg = showExceptionMsg ? Utils.getResourceString(userVisibleError) + ". " + msg.exception.innerException.message : Utils.getResourceString(userVisibleError);
+            window.top.Xrm.Navigation.openAlertDialog({ text: alertMsg }).then(function () {
+                if (toClose) {
+                    Utils.closeDesigner();
+                }
+            });
+        }
+    }
+    public static closeDesigner(event?: Event) {
+        (window.top.Xrm.Page.ui as XrmClientApi.FormUi).close();
     }
 };
