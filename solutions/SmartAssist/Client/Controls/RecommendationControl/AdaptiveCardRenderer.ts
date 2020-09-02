@@ -143,7 +143,7 @@ module MscrmControls.Smartassist.Suggestion {
 							this.removePreviousActionMessage(notificationBarId);
 							if (data) {
 								successMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.SuccessImageEncode, data);
-								const successMessage = ViewTemplates.SuccessMessageTemplate.Format(notificationBarId, successMessageTemplate, data);
+								const successMessage = ViewTemplates.SuccessMessageTemplate.Format(notificationBarId, successMessageTemplate);
 								$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(successMessage);
 								$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).addClass(Constants.CustomActionSuccessStyle);
 								$("#" + notificationBarId).ready(() => {
@@ -164,7 +164,7 @@ module MscrmControls.Smartassist.Suggestion {
 								errorMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.ErrorImageEncode, LocalizedStrings.CustomActionFailureMessage);
 							}
 							const errorString = error ? error : LocalizedStrings.CustomActionFailureMessage;
-							let errorMessage = ViewTemplates.FailureMessageTemplates.Format(notificationBarId, errorMessageTemplate, errorString);
+							let errorMessage = ViewTemplates.FailureMessageTemplates.Format(notificationBarId, errorMessageTemplate);
 							$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(errorMessage);
 							$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).addClass(Constants.CustomActionErrorStyle);
 							$("#" + notificationBarId).ready(() => {
