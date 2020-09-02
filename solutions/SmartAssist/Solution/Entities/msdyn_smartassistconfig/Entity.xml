@@ -365,7 +365,7 @@
             <Description description="Unique identifier for entity instances" languagecode="1033" />
           </Descriptions>
         </attribute>
-          <attribute PhysicalName="msdyn_SuggestionControlConfigUniquename">
+        <attribute PhysicalName="msdyn_SuggestionControlConfigUniquename">
           <Type>nvarchar</Type>
           <Name>msdyn_suggestioncontrolconfiguniquename</Name>
           <LogicalName>msdyn_suggestioncontrolconfiguniquename</LogicalName>
@@ -517,10 +517,10 @@
           <MaxLength>100</MaxLength>
           <Length>200</Length>
           <displaynames>
-              <displayname description="Suggestion Provider" languagecode="1033" />
+            <displayname description="Suggestion Provider" languagecode="1033" />
           </displaynames>
           <Descriptions>
-              <Description description="Provide the class name of Suggestion provider" languagecode="1033" />
+            <Description description="Provide the class name of Suggestion provider" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_SuggestionWebresourceURL">
@@ -557,10 +557,10 @@
           <MaxLength>256</MaxLength>
           <Length>512</Length>
           <displaynames>
-              <displayname description="Suggestion Webresource URL" languagecode="1033" />
+            <displayname description="Suggestion Webresource URL" languagecode="1033" />
           </displaynames>
           <Descriptions>
-              <Description description="Suggestion Webresource which brings smart assist actions or api to retrieve suggestions" languagecode="1033" />
+            <Description description="Suggestion Webresource which brings smart assist actions or api to retrieve suggestions" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_UniqueName">
@@ -761,7 +761,7 @@
           <Descriptions>
             <Description description="Suggestion source entity logical name." languagecode="1033" />
           </Descriptions>
-        </attribute>
+        </attribute>        
         <attribute PhysicalName="OrganizationId">
           <Type>lookup</Type>
           <Name>organizationid</Name>

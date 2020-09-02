@@ -60,5 +60,6 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public CurrentAppConfigName = "";
         public TitleIconePath = "";
         public IsEnabled: boolean = true;
+        public IsDefault: boolean = null;
     }
 }
