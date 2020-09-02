@@ -4,14 +4,13 @@
 
 /// <reference path="privatereferences.ts"/>
 
-module MscrmControls.Smartassist
-{
+module MscrmControls.Smartassist {
 	'use strict';
 
 	export class RecommendationControl implements Mscrm.StandardControl<IInputBag, IOutputBag> {
 
 		private _recommendationContainer: HTMLDivElement = null;
-		public  static _telemetryReporter: TelemetryLogger.TelemetryLogger = null;
+		public static _telemetryReporter: TelemetryLogger.TelemetryLogger = null;
 		public _context: Mscrm.ControlData<IInputBag> = null;
 		private _template: string;
 		private _data: any;
@@ -22,8 +21,7 @@ module MscrmControls.Smartassist
 		/**
 		 * Empty constructor.
 		 */
-		constructor()
-		{
+		constructor() {
 			this._adaptiveCardRenderer = new Suggestion.AdaptiveCardRenderer(this.handleCardRefresh.bind(this));
 			this._sessionStorageManager = Suggestion.SessionStorageManager.Instance;
 		}
@@ -35,8 +33,7 @@ module MscrmControls.Smartassist
 		 * @params state The user state for this control set from setState in the last session
 		 * @params container The div element to draw this control in
 		 */
-		public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary, container: HTMLDivElement): void
-		{
+		public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary, container: HTMLDivElement): void {
 			// custom code goes here
 			try {
 				this._context = context;
@@ -53,14 +50,14 @@ module MscrmControls.Smartassist
 				el.className = Suggestion.Constants.RecommendationOuterContainer;
 				el.id = Suggestion.Constants.RecommendationOuterContainer + this._suggestionId;
 				this._recommendationContainer.appendChild(el);
-	
+
 				$("#" + el.id).html(Smartassist.RecommendationTemplate.get(false));
 				this.renderRecommendation();
 			} catch (error) {
 				let eventParameters = new TelemetryLogger.EventParameters();
 				eventParameters.addParameter("Exception Details", error.message);
 				RecommendationControl._telemetryReporter.logError("MainComponent", "init", "Recommendation control fails to initialize", eventParameters)
-            }
+			}
 		}
 
 		/**
@@ -87,8 +84,7 @@ module MscrmControls.Smartassist
 		 * as well as resource, client, and theming info (see mscrm.d.ts)
 		 * @params context The "Input Bag" as described above
 		 */
-		public updateView(context: Mscrm.ControlData<IInputBag>): void
-		{
+		public updateView(context: Mscrm.ControlData<IInputBag>): void {
 			// custom code goes here
 		}
 
@@ -101,8 +97,7 @@ module MscrmControls.Smartassist
 		 * };
 		 * @returns The "Output Bag" containing values to pass to the infrastructure
 		 */
-		public getOutputs(): IOutputBag
-		{
+		public getOutputs(): IOutputBag {
 			// custom code goes here - remove the line below and return the correct output
 			return null;
 		}
@@ -111,8 +106,7 @@ module MscrmControls.Smartassist
 		 * This function will be called when the control is destroyed
 		 * It should be used for cleanup and releasing any memory the control is using
 		 */
-		public destroy(): void
-		{
+		public destroy(): void {
 			this._context = null;
 			this._adaptiveCardRenderer = null;
 		}
@@ -136,11 +130,12 @@ module MscrmControls.Smartassist
 						window.top.dispatchEvent(dismissEvent);
 					}
 				}
+
 			} catch (error) {
 				let eventParameters = new TelemetryLogger.EventParameters();
 				eventParameters.addParameter("Exception Details", error.message);
 				RecommendationControl._telemetryReporter.logError("MainComponent", "handleCardRefresh", "Recommendation control fails to refresh", eventParameters)
-            }
+			}
 		}
 	}
 }
