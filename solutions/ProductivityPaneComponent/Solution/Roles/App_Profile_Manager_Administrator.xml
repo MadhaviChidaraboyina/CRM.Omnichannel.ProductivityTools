@@ -2,13 +2,7 @@
 <Role id="{4758a2be-ccd8-ea11-a813-000d3a579805}" name="App Profile Manager Administrator">
   <IsCustomizable>0</IsCustomizable>
   <RolePrivileges>
-    <RolePrivilege name="prvReadmsdyn_appconfiguration" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_applicationextension" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_applicationtabtemplate" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_notificationfield" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_notificationtemplate" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_sessiontemplate" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_templateparameter" level="Global" />
+
 
     <RolePrivilege name="prvReadmsdyn_paneconfiguration" level="Global" />
     <RolePrivilege name="prvWritemsdyn_paneconfiguration" level="Global" />
