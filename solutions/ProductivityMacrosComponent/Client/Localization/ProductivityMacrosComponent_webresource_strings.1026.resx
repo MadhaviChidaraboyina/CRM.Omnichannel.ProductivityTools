@@ -306,7 +306,7 @@
     <comment>Select flow</comment>
   </data>
   <data name="MACRO_DESIGNER_CONTROL_PERMISSION_ERROR" xml:space="preserve">
-    <value>You need macro admin permission to view macros</value>
+    <value>За преглед на макроси се нуждаете от разрешение на администратор на макроси</value>
     <comment>Error message when user dows not have required admin permissions</comment>
   </data>
 </root>

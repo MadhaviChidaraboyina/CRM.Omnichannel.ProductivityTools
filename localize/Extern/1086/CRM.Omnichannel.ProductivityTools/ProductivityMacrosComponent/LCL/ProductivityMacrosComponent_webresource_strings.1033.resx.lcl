@@ -665,6 +665,22 @@
           <Str Name="Custom3" Val="WO32438_20200713" />
         </Props>
       </Item>
+      <Item ItemId=";MACRO_DESIGNER_CONTROL_PERMISSION_ERROR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You need macro admin permission to view macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Anda memerlukan keizinan pentadbir makro untuk melihat makro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-02T04:08:59.0004107Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when user dows not have required admin permissions]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34592_20200831" />
+        </Props>
+      </Item>
       <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Attribute logical name]]></Val>

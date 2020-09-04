@@ -1017,7 +1017,7 @@
     <comment> 'msdyn_paneconfiguration' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_panetabconfigurationentitymsdyn_panetabconfiguration" xml:space="preserve">
-    <value>Paani vahekardi konfiguratsioon</value>
+    <value>Paani vahekaardi konfiguratsioon</value>
     <comment> 'msdyn_panetabconfiguration' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_panetoolconfigurationentitymsdyn_panetoolconfiguration" xml:space="preserve">

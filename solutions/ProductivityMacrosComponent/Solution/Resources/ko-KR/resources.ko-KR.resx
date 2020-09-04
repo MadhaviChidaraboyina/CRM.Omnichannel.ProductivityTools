@@ -2461,7 +2461,7 @@
     <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{fe6efbe2-c00a-4b1e-8b40-dc639a12e9c6}'</comment>
   </data>
   <data name="1:label,Macro Solution Configuration{05132abe-0263-688e-82d2-e8c579762ac0}" xml:space="preserve">
-    <value>디자이너 URL 내 디자이너 BLOB의 상대 경로</value>
+    <value>디자이너 내 디자이너 BLOB의 상대적 경로</value>
     <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{05132abe-0263-688e-82d2-e8c579762ac0}'</comment>
   </data>
   <data name="1:label,Macro Solution Configuration{0744d9e1-dbb5-197b-4521-da2d69094d5d}" xml:space="preserve">

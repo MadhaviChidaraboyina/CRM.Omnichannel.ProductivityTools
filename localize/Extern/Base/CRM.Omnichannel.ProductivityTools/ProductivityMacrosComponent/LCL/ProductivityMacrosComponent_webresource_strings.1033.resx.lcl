@@ -378,6 +378,15 @@
           <Cmt Name="Dev"><![CDATA[Action to search KB]]></Cmt>
         </Cmts>
       </Item>
+      <Item ItemId=";MACRO_DESIGNER_CONTROL_PERMISSION_ERROR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You need macro admin permission to view macros]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when user dows not have required admin permissions]]></Cmt>
+        </Cmts>
+      </Item>
       <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Attribute logical name]]></Val>

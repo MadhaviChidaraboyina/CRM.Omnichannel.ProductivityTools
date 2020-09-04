@@ -306,7 +306,7 @@
     <comment>Select flow</comment>
   </data>
   <data name="MACRO_DESIGNER_CONTROL_PERMISSION_ERROR" xml:space="preserve">
-    <value>You need macro admin permission to view macros</value>
+    <value>您需要巨集管理員權限才能檢視巨集</value>
     <comment>Error message when user dows not have required admin permissions</comment>
   </data>
 </root>

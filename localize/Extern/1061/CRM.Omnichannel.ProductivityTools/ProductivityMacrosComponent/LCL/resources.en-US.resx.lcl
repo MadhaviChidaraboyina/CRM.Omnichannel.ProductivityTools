@@ -9140,11 +9140,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Record Id from which to read designer URL]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Kirje ID, millest lugeda kujundaja URLi]]></Val>
+            <Val><![CDATA[Kirje ID, millest lugeda kujundaja URL-i]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-robjan" DateTime="2020-07-13T17:13:52.0007879Z" />
+        <Modified By="v-jinsqi" DateTime="2020-09-03T11:22:03Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
@@ -9153,11 +9156,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Entity from which to read designer URL]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Olem, millest lugeda kujundaja URLi]]></Val>
+            <Val><![CDATA[Olem, millest lugeda kujundaja URL-i]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-robjan" DateTime="2020-07-13T17:13:52.0007879Z" />
+        <Modified By="v-jinsqi" DateTime="2020-09-03T11:22:03Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
@@ -9286,11 +9292,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Attribute from which to read designer URL]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Atribuut, millest lugeda kujundaja URLi]]></Val>
+            <Val><![CDATA[Atribuut, millest lugeda kujundaja URL-i]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-robjan" DateTime="2020-07-13T17:13:52.0007863Z" />
+        <Modified By="v-jinsqi" DateTime="2020-09-03T11:22:03Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>

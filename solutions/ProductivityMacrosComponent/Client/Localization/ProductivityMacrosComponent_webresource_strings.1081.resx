@@ -306,7 +306,7 @@
     <comment>Select flow</comment>
   </data>
   <data name="MACRO_DESIGNER_CONTROL_PERMISSION_ERROR" xml:space="preserve">
-    <value>You need macro admin permission to view macros</value>
+    <value>मैक्रोज़ को देखने के लिए आपको मैक्रो व्यवस्थापक अनुमति चाहिए</value>
     <comment>Error message when user dows not have required admin permissions</comment>
   </data>
 </root>

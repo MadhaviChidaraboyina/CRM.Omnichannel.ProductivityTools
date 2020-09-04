@@ -1602,11 +1602,14 @@
         <Str Cat="Text">
           <Val><![CDATA[Pane tab configuration]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
-            <Val><![CDATA[Paani vahekardi konfiguratsioon]]></Val>
+            <Val><![CDATA[Paani vahekaardi konfiguratsioon]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-robjan" DateTime="2020-07-13T17:13:53.0008403Z" />
+        <Modified By="v-jinsqi" DateTime="2020-09-03T11:22:03Z" />
+        <Notes>
+          <Note Name="Loc" Order="0"><![CDATA[LQI]]></Note>
+        </Notes>
         <Props>
           <Str Name="Custom3" Val="WO31963_20200709" />
         </Props>
