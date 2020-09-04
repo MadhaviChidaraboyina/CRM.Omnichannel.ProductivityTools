@@ -53,4 +53,57 @@
          * */
         data: any;
     }
+
+    export interface CustomActionReturn {
+        /**
+         * Success/Error message on resolving the action
+         * */
+        notificationMessage?: string
+
+        /**
+         * Telemetry details to log
+         * */
+        telemetryContext: TelemetryContext
+    }
+
+
+    export interface TelemetryContext {
+        /**
+         * Telemetry parameter
+         * */
+        telemetryParameters: TelemetryParameter
+
+        /**
+         * Additional telemetry parameter if any
+         * */
+        additionalTelemetryParameters?: { [name: string]: string };
+    }
+
+    export interface TelemetryParameter {
+        
+        /**
+         * Suggested entity id.
+         * */
+        suggestedEntityId: string,
+
+        /**
+         * Entity logical name for suggested entity id.
+         * */
+        suggestedEntityLogicalName: string,
+
+        /**
+         * Webresource name
+         * */
+        sourceType: string,
+
+        /**
+         * Custom Action's name
+         * */
+        interactionType: string,
+
+        /**
+         * Exception if any
+         * */
+        exception?: any
+    }
 }
