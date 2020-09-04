@@ -17,8 +17,8 @@ module MscrmControls.Smartassist {
 		height: 100%;
 		width: 99%;
 		margin: 0;
-	}
-    
+	}  
+
     .recommendation-outer-container {
 		max-width: calc(100% - 25px);
 		margin: 0 auto;
@@ -107,6 +107,14 @@ module MscrmControls.Smartassist {
 	.ac-pushButton > img{
 		width: 14px!important;
 		height: 30px!important;
+	}
+	.ac-anchor{
+	  text-decoration: none;
+	  color: inherit;
+	}
+	.ac-anchor, .ac-anchor:hover, .ac-anchor:focus, .ac-anchor:active {
+		  text-decoration: none;
+		  color: inherit;
 	}
 </style>
 `;
