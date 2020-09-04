@@ -3,7 +3,6 @@ import { Constants, Action, Parameter, Connector, Kind, Category, DesignerTempla
 import { isNullOrUndefined } from "util";
 import * as Designer from "./DesignerDefinitions";
 import flowScript from "./flowScript";
-import { doTelemetry } from "./macroDesigner";
 import * as SharedDefines from "./sharedDefines";
 
 let globalContext: XrmClientApi.GlobalContext = (window.top as any).Xrm.Utility.getGlobalContext();
@@ -112,7 +111,7 @@ export class Macros {
                     eventTimeStamp: new Date(),
                     eventType: SharedDefines.TelemetryEventType.Trace
                 };
-                doTelemetry(obj, "MACRO_DESIGNER_CONTROL_PERMISSION_ERROR", true);
+                Utils.doTelemetry(obj, "MACRO_DESIGNER_CONTROL_PERMISSION_ERROR", true);
                 return { actions: actions, connectors: connectors, categories: categories, operationManifestData: operationManifestData };
             });
 

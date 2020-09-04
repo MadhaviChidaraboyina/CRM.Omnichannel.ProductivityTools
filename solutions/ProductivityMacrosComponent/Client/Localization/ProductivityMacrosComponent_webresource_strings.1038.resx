@@ -278,31 +278,35 @@
     <comment>Summary for expression builder for expression evaluation</comment>
   </data>
   <data name="ENTITY_NAME_DESCRIPTION" xml:space="preserve">
-    <value>Select entity logical name</value>
+    <value>Adja meg az entitás logikai nevét</value>
     <comment>Select entity logical name</comment>
   </data>
   <data name="ENTITY_NAME_TITLE" xml:space="preserve">
-    <value>Entity logical name</value>
+    <value>Entitás logikai neve</value>
     <comment>Select entity logical name</comment>
   </data>
   <data name="ENTITY_RECORD_ID_DESCRIPTION" xml:space="preserve">
-    <value>Enter entity record id</value>
+    <value>Adja meg az entitásrekord azonosítóját</value>
     <comment>Enter entity record id</comment>
   </data>
   <data name="ENTITY_RECORD_ID_TITLE" xml:space="preserve">
-    <value>Entity record id</value>
+    <value>Entitásrekord azonosítója</value>
     <comment>Enter entity record id</comment>
   </data>
   <data name="FLOW_ACTION_DESCRIPTION" xml:space="preserve">
-    <value>Select flow</value>
+    <value>Folyamat kiválasztása</value>
     <comment>Action to select flow</comment>
   </data>
   <data name="FLOW_ID_DESCRIPTION" xml:space="preserve">
-    <value>Select flow</value>
+    <value>Folyamat kiválasztása</value>
     <comment>Select flow</comment>
   </data>
   <data name="FLOW_ID_TITLE" xml:space="preserve">
-    <value>Select flow</value>
+    <value>Folyamat kiválasztása</value>
     <comment>Select flow</comment>
+  </data>
+  <data name="MACRO_DESIGNER_CONTROL_PERMISSION_ERROR" xml:space="preserve">
+    <value>You need macro admin permission to view macros</value>
+    <comment>Error message when user dows not have required admin permissions</comment>
   </data>
 </root>

@@ -278,31 +278,35 @@
     <comment>Summary for expression builder for expression evaluation</comment>
   </data>
   <data name="ENTITY_NAME_DESCRIPTION" xml:space="preserve">
-    <value>Select entity logical name</value>
+    <value>엔터티 논리 이름 선택</value>
     <comment>Select entity logical name</comment>
   </data>
   <data name="ENTITY_NAME_TITLE" xml:space="preserve">
-    <value>Entity logical name</value>
+    <value>엔터티 논리 이름</value>
     <comment>Select entity logical name</comment>
   </data>
   <data name="ENTITY_RECORD_ID_DESCRIPTION" xml:space="preserve">
-    <value>Enter entity record id</value>
+    <value>엔터티 레코드 ID 입력</value>
     <comment>Enter entity record id</comment>
   </data>
   <data name="ENTITY_RECORD_ID_TITLE" xml:space="preserve">
-    <value>Entity record id</value>
+    <value>엔터티 레코드 ID</value>
     <comment>Enter entity record id</comment>
   </data>
   <data name="FLOW_ACTION_DESCRIPTION" xml:space="preserve">
-    <value>Select flow</value>
+    <value>흐름 선택</value>
     <comment>Action to select flow</comment>
   </data>
   <data name="FLOW_ID_DESCRIPTION" xml:space="preserve">
-    <value>Select flow</value>
+    <value>흐름 선택</value>
     <comment>Select flow</comment>
   </data>
   <data name="FLOW_ID_TITLE" xml:space="preserve">
-    <value>Select flow</value>
+    <value>흐름 선택</value>
     <comment>Select flow</comment>
+  </data>
+  <data name="MACRO_DESIGNER_CONTROL_PERMISSION_ERROR" xml:space="preserve">
+    <value>You need macro admin permission to view macros</value>
+    <comment>Error message when user dows not have required admin permissions</comment>
   </data>
 </root>
