@@ -191,11 +191,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
                     }
                 }
-
-                setTimeout(() => {
-                    this.hideLoader();
-                }, StringConstants.LoaderTimeout);
             }
+            setTimeout(() => {
+                this.hideLoader();
+            }, StringConstants.LoaderTimeout);
         }
 
         private createAndBindRecommendationControl(record: any, display: string = "block"): string {
@@ -221,7 +220,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 key: componentId,
                 id: componentId,
             };
-            
+
             var divElement = document.createElement("div");
             divElement.id = "Suggestion_" + record.SuggestionId;
             divElement.style.display = display;
@@ -251,7 +250,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     this._sessionStorageManager.deleteRecord(suggestion);
                 }
 
-                
+
                 // clear cachepool for previous window.
                 this._cachePoolManager.clearCachePoolForConfig(this.saConfig.SmartassistConfigurationId, this.recordId);
                 window.sessionStorage.setItem(Utility.getCurrentSessionId(), JSON.stringify([]));
@@ -296,18 +295,18 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private handleSessionClose() {
             // TODO: Revert(remove handler from window) this logic when PP is not destroyed in home tab
             if (!window["HandleSuggestionDataOnSessionClose"]) {
-                window["HandleSuggestionDataOnSessionClose"] = (event: any) => {                  
+                window["HandleSuggestionDataOnSessionClose"] = (event: any) => {
                     var sessions = [];
                     var cachePoolKeys = [];
                     if (event.type == "unload") {
                         var allSessions = Microsoft.AppRuntime.Sessions.getAll();
-                        sessions.concat(allSessions);
+                        sessions = allSessions;
                         cachePoolKeys = sessions.map(id => "smartassist-" + id + "-cachepool");
                     }
                     else {
                         sessions.push(event.getEventArgs()._inputArguments.sessionId);
                         cachePoolKeys.push("smartassist-" + event.getEventArgs()._inputArguments.sessionId + "-cachepool")
-                    }                    
+                    }
                     for (let i = 0; i < sessions.length; i++) {
                         const cacheData = window.sessionStorage.getItem(sessions[i]);
                         if (cacheData) {
@@ -315,11 +314,11 @@ module MscrmControls.SmartAssistAnyEntityControl {
                             suggestionIds.forEach(id => window.sessionStorage.removeItem(id));
                             window.sessionStorage.removeItem(sessions[i]);
                         }
-                    } 
+                    }
 
                     cachePoolKeys.forEach(cp => window.sessionStorage.removeItem(cp));
                 }
-                
+
                 this.sessionCloseHandlerId = Microsoft.AppRuntime.Sessions.addOnAfterSessionClose((<any>window).HandleSuggestionDataOnSessionClose);
                 window.addEventListener("unload", (<any>window).HandleSuggestionDataOnSessionClose);
             }

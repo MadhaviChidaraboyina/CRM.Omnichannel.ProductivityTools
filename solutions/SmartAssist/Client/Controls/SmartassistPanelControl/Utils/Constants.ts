@@ -51,7 +51,6 @@ module MscrmControls.SmartassistPanelControl {
         public static SAAnyEntityControlContainerId = "SAAnyEntityControl_";
         public static FPBTag = "FPB";
         public static TPBTag = "smartbot";
-        public static isSmartAssistFoundName = "_isSmartAssistFound";
         public static UserEntityName = "systemuser";
         public static FetchOperator = "?fetchXml=";
 
