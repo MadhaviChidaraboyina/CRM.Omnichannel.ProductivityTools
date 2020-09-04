@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Role id="{4758a2be-ccd8-ea11-a813-000d3a579805}" name="App Profile Manager Administrator" isinherited="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsCustomizable>0</IsCustomizable>
+  <RolePrivileges>
+    <RolePrivilege name="prvCreatemsdyn_adaptivecardconfiguration" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_smartassistconfig" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_suggestionssetting" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_adaptivecardconfiguration" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_smartassistconfig" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_suggestionssetting" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_adaptivecardconfiguration" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_smartassistconfig" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_suggestionssetting" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_adaptivecardconfiguration" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_smartassistconfig" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_suggestionssetting" level="Global" />
+  </RolePrivileges>
+</Role>
