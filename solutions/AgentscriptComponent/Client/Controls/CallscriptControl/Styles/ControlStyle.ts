@@ -357,6 +357,21 @@ module MscrmControls.Callscript {
 				marginRight: isRTL ? "24px" : "4px",
 				wordWrap: "break-word"
 			}
-		}
+        }
+
+        public static getSlugResolutionErrorMessageIcon(context: Mscrm.ControlData<IInputBag>) {
+            let backgroundIconUrl = Utility.getIconUrl(context, Constants.slugFailedIcon);
+            let isRTL = context.client.isRTL;
+            return {
+                "width": "15px",
+                "height": "15px",
+                "background-image": "url(" + backgroundIconUrl + ")",
+                "background-repeat": "no-repeat",
+                "background-position": "center",
+                "display": "inline-flex",
+                "margin": "-3px",
+                "padding-right": "6px"
+            };
+        }
 	}
 }

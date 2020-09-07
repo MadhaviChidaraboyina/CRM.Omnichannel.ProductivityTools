@@ -83,16 +83,7 @@ module MscrmControls.Callscript {
             var slugResolutionErrorIcon = context.factory.createElement("CONTAINER", {
                 key: "CallScriptStepResolutionErrorIcon-" + stepId + "-Key",
                 id: "CallScriptStepResolutionErrorIcon-" + stepId + "-Id",
-                style: {
-                    "width": "15px",
-                    "height": "15px",
-                    "background-image": "url(" + this.getIconUrl(context, Constants.slugFailedIcon) + ")",
-                    "background-repeat": "no-repeat",
-                    "background-position": "center",
-                    "display": "inline-flex",
-                    "margin": "-3px",
-                    "padding-right": "6px"
-                }
+                style: ControlStyle.getSlugResolutionErrorMessageIcon(context)
             }, []); 
             headerList.forEach(function (value, index) {
                 if (value != "") {
