@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.1.0.19405" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.0.0000.0330" SolutionPackageVersion="9.0" languagecode="1033" generatedBy="OnPremise" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
-    <UniqueName>AgentscriptComponent</UniqueName>
+    <UniqueName>msdyn_Agentscripts</UniqueName>
     <LocalizedNames>
       <LocalizedName description="Agent scripts" languagecode="1033" />
     </LocalizedNames>
-    <Descriptions />
+    <Descriptions>
+      <Description description="Agent scripts to be used in productivity tool" languagecode="1033" />
+    </Descriptions>
     <Version>1.0.0.0</Version>
     <Managed>2</Managed>
     <Publisher>
@@ -80,10 +82,11 @@
       </Addresses>
     </Publisher>
     <RootComponents>
-      <RootComponent type="1" schemaName="msdyn_agentscriptstep_v2" behavior="0" />
-      <RootComponent type="1" schemaName="msdyn_agentscript_v2" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_productivityagentscriptstep" behavior="0" />
+      <RootComponent type="1" schemaName="msdyn_productivityagentscript" behavior="0" />
       <RootComponent type="1" schemaName="msdyn_sessiontemplate" behavior="1" />
       <RootComponent type="1" schemaName="workflow" behavior="0" />
+	    <RootComponent type="60" id="{e99fa2c8-de6b-4c33-9f51-27b3ad3963ce}" behavior="0" />
       <RootComponent type="60" id="{371db648-34af-4f9e-817e-cfb9ea67540a}" behavior="0" />
       <RootComponent type="60" id="{1B68FF28-C6AF-4CBE-BE05-DA1B968CDDD4}" behavior="0" />
       <RootComponent type="60" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
@@ -102,107 +105,111 @@
       <RootComponent type="61" schemaName="msdyn_markasdone_text_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_run_macro_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_view_script_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_agent_script_header_info_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_AgentScriptStepFormScript.js" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_AgentscriptFormScript.js" behavior="0" />
-      <RootComponent type="61" schemaName="msdyn_agentscripticon" behavior="0" />
-	    <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1033.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1025.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1026.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1027.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1028.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1029.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1030.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1031.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1032.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1035.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1036.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1037.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1038.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1040.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1041.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1042.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1043.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1044.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1045.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1046.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1048.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1049.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1050.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1051.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1053.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1054.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1055.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1057.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1058.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1060.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1061.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1062.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1063.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1066.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1069.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1081.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1086.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1087.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.1110.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.2052.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.2070.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.2074.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.3076.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.3082.resx" behavior="0" />
-      <RootComponent type="61" schemaName="Localization/msdyn_Agentscript.3098.resx" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_agentscript_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1033.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1025.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1026.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1027.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1028.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1029.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1030.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1031.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1032.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1035.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1036.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1037.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1038.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1040.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1041.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1042.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1043.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1044.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1045.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1046.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1048.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1049.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1050.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1051.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1053.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1054.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1055.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1057.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1058.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1060.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1061.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1062.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1063.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1066.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1069.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1081.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1086.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1087.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1110.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.2052.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.2070.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.2074.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.3076.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.3082.resx" behavior="0" />
+      <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.3098.resx" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_SetDefaultAgentScriptHelpText.html" behavior="0" />
-      <RootComponent type="66" schemaName="MscrmControls.CallscriptControl.CallscriptControlV2" behavior="0" />
-      <RootComponent type="66" schemaName="MscrmControls.ButtonControl.ButtonControl" behavior="0" />
+      <RootComponent type="66" schemaName="MscrmControls.Callscript.CallscriptControl" behavior="0" />
+      <RootComponent type="66" schemaName="MscrmControls.Button.ButtonControl" behavior="0" />
       <RootComponent type="20" id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" behavior="0" />
       <RootComponent type="20" id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" behavior="0" />
+	  <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_setDefaultAction.svg" behavior="0" />
+      <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_manualTrigger.svg" behavior="0" />
+      <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_agentConnector.svg" behavior="0" />
+	  <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_Agentscript_spinner.svg" behavior="0" />
+	  <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_agentScriptDesigner.bundle.js" behavior="0" />
+      <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_agentScriptDesigner.html" behavior="0" />
+	  <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_AgentscriptDesginer_internal_libarary.js" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
-        <Required key="0" type="1" schemaName="msdyn_applicationtabtemplate" displayName="Application Tab Template" solution="Active" />
+        <Required key="0" type="1" schemaName="msdyn_applicationtabtemplate" displayName="Application Tab Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="2" type="2" schemaName="msdyn_name" displayName="Name" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="Active" />
+        <Required key="2" type="2" schemaName="msdyn_name" displayName="Name" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="3" type="2" schemaName="ownerid" displayName="Owner" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="Active" />
+        <Required key="3" type="2" schemaName="ownerid" displayName="Owner" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="4" type="2" schemaName="msdyn_description" displayName="Description" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="Active" />
+        <Required key="4" type="2" schemaName="msdyn_description" displayName="Description" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="5" type="2" schemaName="msdyn_title" displayName="Title" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="Active" />
+        <Required key="5" type="2" schemaName="msdyn_title" displayName="Title" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="6" type="2" schemaName="msdyn_uniquename" displayName="Unique Name" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="Active" />
+        <Required key="6" type="2" schemaName="msdyn_uniquename" displayName="Unique Name" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="7" type="2" schemaName="msdyn_anchortab" displayName="Anchor Tab" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="Active" />
+        <Required key="7" type="2" schemaName="msdyn_anchortab" displayName="Anchor Tab" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="8" type="10" schemaName="msdyn_sessiontemplate_applicationtab" displayName="msdyn_sessiontemplate_applicationtab" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="Active" />
+        <Required key="8" type="10" schemaName="msdyn_sessiontemplate_applicationtab" displayName="msdyn_sessiontemplate_applicationtab" parentSchemaName="msdyn_sessiontemplate" parentDisplayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="9" type="10" schemaName="msdyn_applicationtabtemplate_sessiontemplate_anchortab" displayName="msdyn_applicationtabtemplate_sessiontemplate_anchortab" parentSchemaName="msdyn_applicationtabtemplate" parentDisplayName="Application Tab Template" solution="Active" />
+        <Required key="9" type="10" schemaName="msdyn_applicationtabtemplate_sessiontemplate_anchortab" displayName="msdyn_applicationtabtemplate_sessiontemplate_anchortab" parentSchemaName="msdyn_applicationtabtemplate" parentDisplayName="Application Tab Template" solution="msdyn_AppProfileManager" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="10" type="26" schemaName="Active Application Tab Templates" displayName="Active Application Tab Templates" parentSchemaName="msdyn_applicationtabtemplate" parentDisplayName="Application Tab Template" solution="Active" id="{bde86e2f-6bd1-48a9-baf9-dae720aa9f45}" />
+        <Required key="10" type="26" schemaName="Active Application Tab Templates" displayName="Active Application Tab Templates" parentSchemaName="msdyn_applicationtabtemplate" parentDisplayName="Application Tab Template" solution="msdyn_AppProfileManager" id="{bde86e2f-6bd1-48a9-baf9-dae720aa9f45}" />
         <Dependent key="1" type="60" displayName="Information" parentDisplayName="Session Template" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       </MissingDependency>
       <MissingDependency>
-        <Required key="11" type="1" schemaName="msdyn_solutionhealthrule" displayName="Solution Health Rule" solution="msdyn_PowerAppsChecker (1.2.0.22)" />
-        <Dependent key="12" type="1" schemaName="workflow" displayName="Process" />
-      </MissingDependency>
-      <MissingDependency>
-        <Required key="13" type="1" schemaName="msdyn_sessiontemplate" displayName="Session Template" solution="Active" />
+        <Required key="13" type="1" schemaName="msdyn_sessiontemplate" displayName="Session Template" solution="msdyn_AppProfileManager" />
         <Dependent key="13" type="1" schemaName="msdyn_sessiontemplate" displayName="Session Template" />
       </MissingDependency>
     </MissingDependencies>

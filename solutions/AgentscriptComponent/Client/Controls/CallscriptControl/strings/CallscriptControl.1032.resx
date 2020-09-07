@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Δέσμη ενεργειών εκπροσώπου</value>
+    <value>Δέσμες ενεργειών εκπροσώπου</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Οι δέσμες ενεργειών εκπροσώπου σας βοηθούν να είστε ακριβείς και αποτελεσματικοί, και παράλληλα ταχύτεροι και πιο αποτελεσματικοί όσον αφορά τον χειρισμό πελατών</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>{0} βήμα μακροεντολής απέτυχε.</value>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>{0} βήμα οδηγιών κειμένου.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Δεν βρέθηκαν σχετικές δέσμες ενεργειών εκπροσώπου.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

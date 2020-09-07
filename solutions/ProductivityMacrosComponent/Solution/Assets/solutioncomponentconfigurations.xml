@@ -1,61 +1,61 @@
 <solutioncomponentconfigurations>
-  <solutioncomponentconfiguration entityid.logicalname="msdyn_macroconnector_v2">
+  <solutioncomponentconfiguration entityid.logicalname="msdyn_productivitymacroconnector">
     <fileformat>0</fileformat>
     <filescope>1</filescope>
     <iscustomizable>0</iscustomizable>
     <isdisplayable>1</isdisplayable>
     <issoftdeleteenabled>0</issoftdeleteenabled>
-    <name>msdyn_macroconnector_v2</name>
+    <name>msdyn_productivitymacroconnector</name>
     <statecode>0</statecode>
     <statuscode>1</statuscode>
   </solutioncomponentconfiguration>
-  <solutioncomponentconfiguration entityid.logicalname="msdyn_parameterdefinition_v2">
+  <solutioncomponentconfiguration entityid.logicalname="msdyn_productivityparameterdefinition">
     <fileformat>0</fileformat>
     <filescope>1</filescope>
     <iscustomizable>0</iscustomizable>
     <isdisplayable>1</isdisplayable>
     <issoftdeleteenabled>0</issoftdeleteenabled>
-    <name>msdyn_parameterdefinition_v2</name>
+    <name>msdyn_productivityparameterdefinition</name>
     <statecode>0</statecode>
     <statuscode>1</statuscode>
   </solutioncomponentconfiguration>
-  <solutioncomponentconfiguration entityid.logicalname="msdyn_actionoutputparameter_v2">
+  <solutioncomponentconfiguration entityid.logicalname="msdyn_productivityactionoutputparameter">
     <fileformat>0</fileformat>
     <filescope>1</filescope>
     <iscustomizable>0</iscustomizable>
     <isdisplayable>1</isdisplayable>
     <issoftdeleteenabled>0</issoftdeleteenabled>
-    <name>msdyn_actionoutputparameter_v2</name>
+    <name>msdyn_productivityactionoutputparameter</name>
     <statecode>0</statecode>
     <statuscode>1</statuscode>
   </solutioncomponentconfiguration>
-  <solutioncomponentconfiguration entityid.logicalname="msdyn_macroactiontemplate_v2">
+  <solutioncomponentconfiguration entityid.logicalname="msdyn_productivitymacroactiontemplate">
     <fileformat>0</fileformat>
     <filescope>1</filescope>
     <iscustomizable>0</iscustomizable>
     <isdisplayable>1</isdisplayable>
     <issoftdeleteenabled>0</issoftdeleteenabled>
-    <name>msdyn_macroactiontemplate_v2</name>
+    <name>msdyn_productivitymacroactiontemplate</name>
     <statecode>0</statecode>
     <statuscode>1</statuscode>
   </solutioncomponentconfiguration>
-  <solutioncomponentconfiguration entityid.logicalname="msdyn_actioninputparameter_v2">
+  <solutioncomponentconfiguration entityid.logicalname="msdyn_productivityactioninputparameter">
     <fileformat>0</fileformat>
     <filescope>1</filescope>
     <iscustomizable>0</iscustomizable>
     <isdisplayable>1</isdisplayable>
     <issoftdeleteenabled>0</issoftdeleteenabled>
-    <name>msdyn_actioninputparameter_v2</name>
+    <name>msdyn_productivityactioninputparameter</name>
     <statecode>0</statecode>
     <statuscode>1</statuscode>
   </solutioncomponentconfiguration>
-  <solutioncomponentconfiguration entityid.logicalname="msdyn_macrosolutionconfiguration_v2">
+  <solutioncomponentconfiguration entityid.logicalname="msdyn_productivitymacrosolutionconfiguration">
     <fileformat>0</fileformat>
     <filescope>1</filescope>
     <iscustomizable>0</iscustomizable>
     <isdisplayable>1</isdisplayable>
     <issoftdeleteenabled>0</issoftdeleteenabled>
-    <name>msdyn_macrosolutionconfiguration_v2</name>
+    <name>msdyn_productivitymacrosolutionconfiguration</name>
     <statecode>0</statecode>
     <statuscode>1</statuscode>
   </solutioncomponentconfiguration>

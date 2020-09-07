@@ -2,7 +2,7 @@
 <Dialog>
 	<FormId>{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}</FormId>
 	<LocalizedNames>
-		<LocalizedName description="View Macros Monitor v2" languagecode="1033" />
+		<LocalizedName description="View Macros Monitor" languagecode="1033" />
 	</LocalizedNames>
 	<Descriptions>
 		<Description description="Allows you to view Macro Monitor View" languagecode="1033" />
@@ -77,7 +77,7 @@
 				<events>
 					<event name="onload" application="false" active="false">
 						<Handlers>
-							<Handler functionName="Microsoft.Macros.Utility.monitorDialogOnLoadHandler" libraryName="$webresource:CRMClients/msdyn_ProductivityMacros_internal_library_v2.js" handlerUniqueId="{4EA010D8-93BC-4E05-8CA1-882AD5CA7815}" enabled="true" parameters="" passExecutionContext="true" />
+							<Handler functionName="Microsoft.Macros.Utility.monitorDialogOnLoadHandler" libraryName="$webresource:CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js" handlerUniqueId="{4EA010D8-93BC-4E05-8CA1-882AD5CA7815}" enabled="true" parameters="" passExecutionContext="true" />
 						</Handlers>
 					</event>
 				</events>

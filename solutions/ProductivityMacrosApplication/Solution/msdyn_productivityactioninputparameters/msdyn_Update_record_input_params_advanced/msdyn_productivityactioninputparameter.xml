@@ -1,0 +1,11 @@
+<msdyn_productivityactioninputparameter msdyn_uniquename="msdyn_Update_record_input_params_advanced">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiontemplateinputparameterid>
+    <msdyn_uniquename>msdyn_Update_Record</msdyn_uniquename>
+  </msdyn_actiontemplateinputparameterid>
+  <msdyn_name>Update_record_input_params_advanced</msdyn_name>
+  <msdyn_parametertype>0</msdyn_parametertype>
+  <msdyn_visibility>advanced</msdyn_visibility>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_productivityactioninputparameter>

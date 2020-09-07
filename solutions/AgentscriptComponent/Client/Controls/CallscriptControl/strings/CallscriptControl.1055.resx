@@ -118,15 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CC_Callscript_Control" xml:space="preserve">
-    <value>Aracı betik denetimi</value>
+    <value>Aracı hazır metni denetimi</value>
     <comment>Agent script control name</comment>
   </data>
   <data name="CC_FieldControl" xml:space="preserve">
-    <value>Aracı betik özelliği</value>
+    <value>Aracı hazır metni özelliği</value>
     <comment>Input property name</comment>
   </data>
   <data name="CC_FieldControl_Desc" xml:space="preserve">
-    <value>Aracı betik özelliği</value>
+    <value>Aracı hazır metni özelliği</value>
     <comment>Input property description</comment>
   </data>
   <data name="CompletedMacroStep_AccessibilityLabel" xml:space="preserve">
@@ -134,7 +134,7 @@
     <comment>When macro execution step completed successfully</comment>
   </data>
   <data name="CompletedScriptStep_AccessibilityLabel" xml:space="preserve">
-    <value>{0} betik adımı başarıyla tamamlandı.</value>
+    <value>{0} hazır metin adımı başarıyla tamamlandı.</value>
     <comment>When script step loading completed successfully</comment>
   </data>
   <data name="CompletedTextStep_AccessibilityLabel" xml:space="preserve">
@@ -142,15 +142,19 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Aracı betik</value>
+    <value>Aracı betikleri</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Aracı betikleri, müşteri işleme bakımından hız ve verimlilik kazandırırken doğru ve etkili olmanıza yardımcı olur</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>{0} makro adımı başarısız oldu.</value>
     <comment>When macro execution step failed</comment>
   </data>
   <data name="FailedScriptStep_AccessibilityLabel" xml:space="preserve">
-    <value>{0} betik adımı başarısız oldu.</value>
+    <value>{0} hazır metin adımı başarısız oldu.</value>
     <comment>When script step loading fails</comment>
   </data>
   <data name="FailedTextStep_AccessibilityLabel" xml:space="preserve">
@@ -158,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Aracı betik kayıtlarını yükleyemedik. Lütfen yöneticinize başvurun.</value>
+    <value>Aracı hazır metni kayıtlarını yükleyemedik. Lütfen yöneticinize başvurun.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">
@@ -186,19 +190,19 @@
     <comment>Screen reader message when macro execution successful</comment>
   </data>
   <data name="NoCallScriptFoundErrorMessage" xml:space="preserve">
-    <value>Geçerli oturumla bağlantılı aracı betik yok</value>
+    <value>Geçerli oturumla bağlantılı Aracı hazır metni yok</value>
     <comment>Error message when no agent scripts are linked with session template</comment>
   </data>
   <data name="ScriptActionStepLabel" xml:space="preserve">
-    <value>Betik yükle</value>
+    <value>Hazır metin yükle</value>
     <comment>Label for script action step</comment>
   </data>
   <data name="ScriptCombobox_EmptyOption" xml:space="preserve">
-    <value>Betik seçin</value>
+    <value>Hazır metin seçin</value>
     <comment>Label for empty option in script select combobox</comment>
   </data>
   <data name="ScriptStepsDataLoadFailure" xml:space="preserve">
-    <value>Aracı betik ayrıntılarını yükleyemedik. Lütfen yöneticinize başvurun.</value>
+    <value>Aracı hazır metni ayrıntılarını yükleyemedik. Lütfen yöneticinize başvurun.</value>
     <comment>Generic error message when script steps data load fails</comment>
   </data>
   <data name="SlugResolutionFailure" xml:space="preserve">
@@ -226,7 +230,7 @@
     <comment>Button text to prompt user to view configured route callscript</comment>
   </data>
   <data name="StepExeutionBtn_LabelForTextAction" xml:space="preserve">
-    <value>Tamamlandı olarak işaretle</value>
+    <value>Bitti olarak işaretle</value>
     <comment>Button text to Mark a text step as done</comment>
   </data>
   <data name="StepListItem_UnexecutedMacroStepAccessibilityLabel" xml:space="preserve">
@@ -234,11 +238,15 @@
     <comment>Text to be read by screen-reader on callscript step focus</comment>
   </data>
   <data name="StepListItem_UnexecutedRouteStepAccessibilityLabel" xml:space="preserve">
-    <value>{0} betik adımı.</value>
+    <value>{0} hazır metin adımı.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
   </data>
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>{0} metin yönergesi adımı.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Göreli aracı betiği bulunamadı.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

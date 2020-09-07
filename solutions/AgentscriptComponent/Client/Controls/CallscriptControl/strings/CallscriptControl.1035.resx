@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Asiakaspalvelijan komentosarja</value>
+    <value>Asiakaspalvelijan komentosarjat</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Asiakaspalvelijan komentosarjojen avulla voit toimia tarkasti ja tehokkaasti sekä samalla myös nopeammin ja tehokkaammin asiakasvuorovaikutuksen kannalta</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>{0} - makron vaihe epäonnistui.</value>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>{0} - tekstiohjeen vaihe.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Liittyviä asiakaspalvelijan komentosarjoja ei löytynyt.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

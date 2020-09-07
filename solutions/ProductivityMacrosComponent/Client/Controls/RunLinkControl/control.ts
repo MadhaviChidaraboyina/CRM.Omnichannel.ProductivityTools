@@ -4,7 +4,7 @@
 
 /// <reference path="privatereferences.ts"/>
 
-module MscrmControls.RunLinkControl {
+module MscrmControls.RunLink {
 	'use strict';
 
 	export class RunLinkControl implements Mscrm.Control<IInputBag, IOutputBag> {

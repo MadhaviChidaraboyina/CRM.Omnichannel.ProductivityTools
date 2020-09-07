@@ -60,6 +60,7 @@ module MscrmControls.PanelControl {
 
         public static isToolVisible(flag: boolean) {
             return {
+                width: "100%",
                 display: flag ? "" : "none"
             }
         }
@@ -113,7 +114,7 @@ module MscrmControls.PanelControl {
                 top: toolNumber * 3 + ".2em",
                 /* Persona/Red10 */
                 background: "#D13438",
-                border: "1px solid #A9A9A9",
+                border: "1px solid #FFFFFF",
                 borderRadius: "50%",
                 alignItems: "center"
             }

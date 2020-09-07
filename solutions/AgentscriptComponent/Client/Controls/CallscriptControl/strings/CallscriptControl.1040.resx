@@ -145,6 +145,10 @@
     <value>Script agente</value>
     <comment>Header value for callscript control</comment>
   </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Gli script agente garantiscono una maggiore accuratezza ed efficacia, ma anche velocità ed efficienza superiori in termini di gestione dei clienti</value>
+    <comment>Info value for callscript control</comment>
+  </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>Passaggio marco {0} non riuscito.</value>
     <comment>When macro execution step failed</comment>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>Passaggio di istruzione testo {0}.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Nessuno script agente relativo trovato.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Skripta agenta</value>
+    <value>Skripte agenta</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Skripte agenta pomažu vam da budete precizni i učinkoviti, a istovremeno budete brži i efikasniji u pogledu obrade klijenta</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>Makro korak za {0} nije uspio.</value>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>Korak tekstnih uputa za {0}.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Relativne skripte agenta nisu pronađene.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

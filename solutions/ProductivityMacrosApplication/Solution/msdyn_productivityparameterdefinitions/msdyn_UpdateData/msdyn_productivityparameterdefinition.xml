@@ -1,0 +1,13 @@
+<msdyn_productivityparameterdefinition msdyn_uniquename="msdyn_UpdateData">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_description default="A JSON string representing the attributes and values to be updated">
+    <label description="A JSON string representing the attributes and values to be updated" languagecode="1033" />
+  </msdyn_description>
+  <msdyn_displayname default="JSON string of key-value pairs">
+    <label description="JSON string of key-value pairs" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_name>UpdateData</msdyn_name>
+  <msdyn_parametertype>string</msdyn_parametertype>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_productivityparameterdefinition>

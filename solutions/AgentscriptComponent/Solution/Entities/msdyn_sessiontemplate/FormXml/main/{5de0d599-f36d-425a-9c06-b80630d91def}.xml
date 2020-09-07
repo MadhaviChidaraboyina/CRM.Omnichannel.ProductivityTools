@@ -45,8 +45,8 @@
                           <parameters>
                             <ViewId>{CED891B7-5F59-41EC-A83B-BBDBC3983808}</ViewId>
                             <IsUserView>false</IsUserView>
-                            <RelationshipName>msdyn_msdyn_agentscript_v2_msdyn_sessiontemplat</RelationshipName>
-                            <TargetEntityType>msdyn_agentscript_v2</TargetEntityType>
+                            <RelationshipName>msdyn_msdyn_prod_agentscript_msdyn_sessiontemplat</RelationshipName>
+                            <TargetEntityType>msdyn_productivityagentscript</TargetEntityType>
                             <AutoExpand>Auto</AutoExpand>
                             <EnableQuickFind>false</EnableQuickFind>
                             <EnableViewPicker>false</EnableViewPicker>
@@ -153,17 +153,17 @@
 							<datafieldname>msdyn_expressiondata</datafieldname>
 						</parameters>
 					</customControl>
-					<customControl formFactor="0" name="MscrmControls.ButtonControl.ButtonControl">
+					<customControl formFactor="0" name="MscrmControls.Button.ButtonControl">
 						<parameters>
 							<value>msdyn_expressiondata</value>
 						</parameters>
 					</customControl>
-					<customControl formFactor="1" name="MscrmControls.ButtonControl.ButtonControl">
+					<customControl formFactor="1" name="MscrmControls.Button.ButtonControl">
 						<parameters>
 							<value>msdyn_expressiondata</value>
 						</parameters>
 					</customControl>
-					<customControl formFactor="2" name="MscrmControls.ButtonControl.ButtonControl">
+					<customControl formFactor="2" name="MscrmControls.Button.ButtonControl">
 						<parameters>
 							<value>msdyn_expressiondata</value>
 						</parameters>

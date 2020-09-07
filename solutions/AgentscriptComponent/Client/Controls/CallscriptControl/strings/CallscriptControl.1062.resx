@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Aģenta skripts</value>
+    <value>Aģenta skripti</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Aģenta skripti palīdz strādāt precīzi un efektīvi, kā arī īstenot ātrāku un efektīvāku klientu apkalpošanu</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>{0} makro darbība neizdevās.</value>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>{0} teksta norādījuma darbība.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Nav atrasts neviens relatīvais aģenta skripts.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

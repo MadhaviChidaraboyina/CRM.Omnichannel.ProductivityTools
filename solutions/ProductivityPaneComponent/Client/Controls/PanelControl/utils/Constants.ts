@@ -53,11 +53,9 @@ module MscrmControls.PanelControl {
 		public static PanelToggleButton = "symbolFont SiteMap-symbol";
 
 		//icon paths
-		public static agentScriptIcon = "/webresources/cra2b_callscript_icon.svg";
-		public static productivityMacrosIcon = "/webresources/cra2b_macros_icon.svg";
-		public static productivityNotesIcon = "/webresources/cra2b_notes_icon.svg";
-		public static panelToggleExpand = "/webresources/cra2b_panel_toggle_collapse_icon.svg";
-		public static panelToggleCollpase = "/webresources/cra2b_panel_toggle_expand_icon.svg";
+		public static productivityNotesIcon = "/webresources/msdyn_notes_icon.svg";
+		public static panelToggleExpand = "/webresources/msdyn_panel_toggle_collapse_icon.svg";
+		public static panelToggleCollpase = "/webresources/msdyn_panel_toggle_expand_icon.svg";
 
 		//icon ids
 		public static agentScriptIconId = "agentGuidanceIcon";

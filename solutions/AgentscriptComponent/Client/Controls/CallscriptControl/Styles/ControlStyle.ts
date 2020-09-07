@@ -2,7 +2,7 @@
  * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
 
-module MscrmControls.CallscriptControl {
+module MscrmControls.Callscript {
 
 	export class ControlStyle {
 
@@ -12,8 +12,9 @@ module MscrmControls.CallscriptControl {
 				"width": "100%",
 				"text-align": "center",
 				"vertical-align": "middle",
-				"flex-direction": "column",
-				overflow: "auto",
+                "flex-direction": "column",
+                "overflow-x": "hidden",
+                "overflow-y": "auto",
 				minHeight: "auto",
 				marginTop: "16px",
 				marginBottom: "10px",
@@ -46,9 +47,9 @@ module MscrmControls.CallscriptControl {
 		}
 
 		public static getHeaderContainerStyle() {
-			return {
+            return {
+                height: "68px",
 				"align-items": "left",
-				marginBottom: "12px",
 				minWidth: "234px"
 			}
 		}
@@ -56,10 +57,34 @@ module MscrmControls.CallscriptControl {
 		public static getControlHeaderStyle(context: Mscrm.ControlData<IInputBag>) {
 			return {
 				fontFamily: context.theming.fontfamilies.regular,
-				fontSize: "16px",
-				fontWeight: 600,
+                fontSize: "20px",
+                fontWeight: 600,
+                lineHeight: "28px",
+                marginTop: "4px",
 				color: "#323130"
 			}
+        }
+
+        public static getControlHeaderInfoIconStyle(context: Mscrm.ControlData<IInputBag>) {
+            let backgroundIconUrl = Utility.getIconUrl(context, Constants.infoButtonIcon);
+			return {
+				width: "16px",
+				height: "16px",
+				"background-image": "url(" + backgroundIconUrl + ")",
+				"background-repeat": "no-repeat",
+				"background-position": "center",
+				marginTop: "11px",
+                paddingLeft: "15px",
+
+                fontFamily: "Full MDL2 Assets",
+                fontSize: "16px",
+                lineHeight: "19px",
+                textAlign: "center",
+
+                /* Dynamics / DYN Primary #2266E3 */
+
+                color: "#2266E3",
+			};
 		}
 
 		public static getDropDownArrowComponentStyle() {
@@ -90,7 +115,7 @@ module MscrmControls.CallscriptControl {
 				"float": "left",
 				width: "100%",
 				height: "32px",
-				marginBottom: "8px",
+				marginBottom: "12px",
 				minWidth: "234px"
 			};
 		}

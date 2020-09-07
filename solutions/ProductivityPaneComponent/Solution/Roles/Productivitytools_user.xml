@@ -2,6 +2,14 @@
 <Role id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" name="Productivity tools user">
   <IsCustomizable>0</IsCustomizable>
   <RolePrivileges>
+    <RolePrivilege name="prvReadmsdyn_appconfiguration" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_applicationextension" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_applicationtabtemplate" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_notificationfield" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_notificationtemplate" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_sessiontemplate" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_templateparameter" level="Global" />
+
     <RolePrivilege name="prvReadmsdyn_paneconfiguration" level="Global" />
     <RolePrivilege name="prvReadmsdyn_panetabconfiguration" level="Global" />
     <RolePrivilege name="prvReadmsdyn_panetoolconfiguration" level="Global" />

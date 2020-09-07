@@ -69,8 +69,8 @@ module MscrmControls.PanelControl {
                 this.sessionChangeManager = new SessionChangeManager(this.onSessionContextChanged.bind(this), this.telemetryLogger);
                 this.panelToggle = false;
                 this.productivityToolSelected = Constants.emptyString;
-                localStorage.setItem(LocalStorageKeyConstants.productivityToolDataModel, JSON.stringify({}));
-                this.eventManager = new EventManager(this.context);
+                this.panelState.init();
+                this.eventManager = new EventManager(this.context, this.panelState);
             } 
         }
 
@@ -89,28 +89,29 @@ module MscrmControls.PanelControl {
                     const data = {
                         productivityToolSelected: this.productivityPaneConfigData.getDefaultTool().toolName,
                         panelToggle: this.productivityPaneConfigData.productivityPaneMode,
-                        isCollapsedByUser: false
+                        isCollapsedByUser: false,
+                        isToggledByUser: false
                     }
                      for(let tool of this.productivityPaneConfigData.productivityToolsConfig.ToolsList){
                          data[LocalStorageKeyConstants.hasData+tool.toolControlName] = true;
                      }
-                    PanelState.SetState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData, data);
+                    this.panelState.SetState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData, data);
                 }
                 if (actionType === Constants.sessionSwitched) {
-                    let sessionData = PanelState.getState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData);
+                    let sessionData = this.panelState.getState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData);
                     this.productivityToolSelected = sessionData.productivityToolSelected;
                     this.panelToggle = sessionData.panelToggle;
 
                     this.eventManager.CurrentSessionId = this.currentSessionId;
                     if (this.panelToggle) {
                         this.eventManager.SelectedTool = this.productivityPaneConfigData.getToolByName(this.productivityToolSelected).toolControlName;
+                        this.setNotificationCountToZero();
                     }
-                    this.setNotificationCountToZero();
                     this.context.utils.requestRender();
                 }
                 if (actionType === Constants.sessionClosed) {
-                    PanelState.DeleteState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData);
-                    PanelState.DeleteState(sessionContextData.newSessionId + LocalStorageKeyConstants.notificationCount);
+                    this.panelState.DeleteState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData);
+                    this.panelState.DeleteState(sessionContextData.newSessionId + LocalStorageKeyConstants.notificationCount);
                     this.currentSessionId = this.sessionChangeManager.getCurrentFocusedSessionId();
                     if (this.currentSessionId == Constants.homeSessionId) {
                         this.isSessionChanged = false;
@@ -127,8 +128,8 @@ module MscrmControls.PanelControl {
             let isRTL = this.context.client.isRTL;
             let sessionContextJSON = JSON.stringify(this.sessionChangeManager.getSessionChangeEventData());
             let anchorTabContextJSON = JSON.stringify(this.sessionChangeManager.AnchorTabContext);
-
-            let toolSelected: ToolConfig = this.productivityPaneConfigData.getToolByName(this.productivityToolSelected);
+            let sessionData = this.panelState.getState(this.currentSessionId + LocalStorageKeyConstants.sessionData);
+            let toolSelected: ToolConfig = this.productivityPaneConfigData.getToolByName(sessionData.productivityToolSelected);
 
             let toolsList: Mscrm.Component[] = [];
             this.productivityPaneConfigData.productivityToolsConfig.ToolsList.forEach((tool, index) => {
@@ -157,6 +158,12 @@ module MscrmControls.PanelControl {
                             Usage: 1,
                             Static: true,
                             Value: tool.staticData,
+                            Primary: false
+                        },
+                        IsSelected: {
+                            Usage: 1,
+                            Static: true,
+                            Value: (tool.toolControlName === toolSelected.toolControlName)? true : false,
                             Primary: false
                         }
                     },
@@ -285,7 +292,9 @@ module MscrmControls.PanelControl {
             if(notificationCount == 0){
                 return Constants.emptyString;
             }
-                   
+
+            //notificationLabel shows the total count of notification, since we are not showing count
+            //and not using notificationLabel but keeping for future
             const notificationLabel = this.context.factory.createElement(
                 "Label",
                 {
@@ -302,14 +311,14 @@ module MscrmControls.PanelControl {
                     key: Constants.notificationContainerId,
                     style: ControlStyle.getNotificationContainerStyle(toolIndex+1)
                 },
-                notificationLabel);
+                Constants.emptyString);
 
             return notificationContainer;
         }
 
         private getNotificationCountForTool(controlName:string) : number {
             let count = 0;
-            let sessionNotification : {} = PanelState.getState(this.currentSessionId+LocalStorageKeyConstants.notificationCount);
+            let sessionNotification: {} = this.panelState.getState(this.currentSessionId+LocalStorageKeyConstants.notificationCount);
             if( !this.context.utils.isNullOrUndefined(sessionNotification) && sessionNotification.hasOwnProperty(controlName) && !this.context.utils.isNullOrUndefined(sessionNotification[controlName])){
                 count = sessionNotification[controlName];
             }
@@ -363,9 +372,10 @@ module MscrmControls.PanelControl {
             // fetch data 
             let navbarContainer;
             if (this.isDataFetched) {
-                let sessionData = PanelState.getState(this.currentSessionId + LocalStorageKeyConstants.sessionData);
+                let sessionData = this.panelState.getState(this.currentSessionId + LocalStorageKeyConstants.sessionData);
                 if(sessionData!=undefined){
                     this.panelToggle = sessionData.panelToggle;
+                    this.productivityToolSelected = sessionData.productivityToolSelected;
                 }
                 let paneState = this.productivityPaneConfigData.productivityPaneState;
                 if (paneState == true) {
@@ -433,20 +443,21 @@ module MscrmControls.PanelControl {
                 this.setSidePanelControlState(SidePanelControlState.Expand);
             }
             
-            let sessionData = PanelState.getState(this.currentSessionId + LocalStorageKeyConstants.sessionData);
+            let sessionData = this.panelState.getState(this.currentSessionId + LocalStorageKeyConstants.sessionData);
             sessionData.productivityToolSelected = this.productivityToolSelected;
             sessionData.isCollapsedByUser = this.panelToggle;
+            sessionData.isToggledByUser = true;
             sessionData.panelToggle = !this.panelToggle;
             this.panelToggle = !this.panelToggle;
-            PanelState.SetState(this.currentSessionId + LocalStorageKeyConstants.sessionData, sessionData);
+            this.panelState.SetState(this.currentSessionId + LocalStorageKeyConstants.sessionData, sessionData);
             this.context.utils.requestRender();
         }
 
         private setNotificationCountToZero(){
-            let _notification = PanelState.getState(this.currentSessionId+LocalStorageKeyConstants.notificationCount);
+            let _notification = this.panelState.getState(this.currentSessionId+LocalStorageKeyConstants.notificationCount);
             if(_notification!=undefined){
                 _notification[this.productivityPaneConfigData.getToolByName(this.productivityToolSelected).toolControlName] = 0;
-                PanelState.SetState(this.currentSessionId+LocalStorageKeyConstants.notificationCount,_notification);
+                this.panelState.SetState(this.currentSessionId+LocalStorageKeyConstants.notificationCount,_notification);
             }
         }
 
@@ -464,13 +475,14 @@ module MscrmControls.PanelControl {
             this.eventManager.SelectedTool = this.productivityPaneConfigData.getToolByName(this.productivityToolSelected).toolControlName;
             this.setNotificationCountToZero();
 
-            let sessionData = PanelState.getState(this.currentSessionId + LocalStorageKeyConstants.sessionData);
+            let sessionData = this.panelState.getState(this.currentSessionId + LocalStorageKeyConstants.sessionData);
             sessionData.productivityToolSelected = this.productivityToolSelected;
             sessionData.panelToggle = this.panelToggle;
+            sessionData.isToggledByUser = true;
             if(isCollapsedByUser != undefined){
                  sessionData.isCollapsedByUser = isCollapsedByUser;
             }            
-            PanelState.SetState(this.currentSessionId + LocalStorageKeyConstants.sessionData, sessionData);
+            this.panelState.SetState(this.currentSessionId + LocalStorageKeyConstants.sessionData, sessionData);
             this.context.utils.requestRender();
         }
 
@@ -513,7 +525,7 @@ module MscrmControls.PanelControl {
 		 * It should be used for cleanup and releasing any memory the control is using
 		 */
         public destroy(): void {
-            delete localStorage[LocalStorageKeyConstants.productivityToolDataModel];
+            this.panelState.deinit();
         }
 
         public retrieveIntitialData() {

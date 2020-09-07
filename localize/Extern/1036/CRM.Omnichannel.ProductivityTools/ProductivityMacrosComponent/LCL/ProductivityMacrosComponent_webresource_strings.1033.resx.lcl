@@ -1,0 +1,782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="ProductivityMacrosComponent_webresource_strings.1033.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="fr-FR" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";ProductivityMacrosComponent_webresource_strings.1033.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";DESIGNER_ACTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Action]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001704Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action string for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to read macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Impossible de lire la définition de macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001704Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when the macro definition to be edited could not be read]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to read action templates]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Impossible de lire les modèles d’action]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001704Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when templates entity read fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to find designer configuration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Impossible de trouver la configuration du concepteur]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001704Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when config entity read fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONNECTORDISPLAYNAME" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unified Interface automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Automatisation d’Unified Interface]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001704Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display Name String for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_CDS_WRITE_ERROR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to save macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Impossible d’enregistrer la définition de macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001704Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when write to CDS fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_INIT_FAILURE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Designer control initialization failed]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Échec de l’initialisation du contrôle Concepteur]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001704Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when designer control initialization fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_JSON_GENERATION_ERROR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to create macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Impossible de créer la définition de macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.00017Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when designer control cannot generate a valid JSON]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_LOAD_FAILURE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to load macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Impossible de charger la définition de macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.00017Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when the control cannot load the macro definition]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_RENDER_FAILURE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to render macro designer control]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Impossible d’afficher le contrôle Concepteur de macros]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.00017Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when the control cannot be rendered]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_MACROCONNECTOR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Macro connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Connecteur de macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.00017Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro connector string for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_SEARCHMACROS" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Rechercher une macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.00017Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Search Macro string for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_STARTMACRO_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start Macro Execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Démarrer l’exécution de la macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.00017Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description Text for Start Macro Trigger]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_STARTMACRO_NAME" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start Macro Execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Démarrer l’exécution de la macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.00017Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Name Text for Start Macro Trigger]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_STARTMACRO_SUBTITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start Macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Démarrer la macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.00017Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Subtitle String for Start Macro Trigger]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_STARTMACRO_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start Macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Démarrer la macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.00017Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary String for Start Macro Trigger]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_TRIGGER" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Trigger]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Déclencher]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001697Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Trigger String for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_USERVOICEMSG" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Let us know what you would like us to build next]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Indiquez-nous ce que vous aimeriez que nous créions ensuite]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001697Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[User Voice Message for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNR_STARTMACRO_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start Macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Démarrer la macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001697Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title String for Start Macro Trigger]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";ENTITY_NAME_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Select entity logical name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sélectionner un nom logique d’entité]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-08-31T13:53:54.0001791Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Select entity logical name]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34504_20200827" />
+        </Props>
+      </Item>
+      <Item ItemId=";ENTITY_NAME_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity logical name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nom logique de l’entité]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-08-31T13:53:54.0001791Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Select entity logical name]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34504_20200827" />
+        </Props>
+      </Item>
+      <Item ItemId=";ENTITY_RECORD_ID_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Enter entity record id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Entrer l’ID de l’enregistrement d’entité]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-08-31T13:53:54.0001791Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Enter entity record id]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34504_20200827" />
+        </Props>
+      </Item>
+      <Item ItemId=";ENTITY_RECORD_ID_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity record id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID d’enregistrement d’entité]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-08-31T13:53:54.0001791Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Enter entity record id]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34504_20200827" />
+        </Props>
+      </Item>
+      <Item ItemId=";FLOW_ACTION_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Select flow]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sélectionner un flux]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-08-31T13:53:54.0001791Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to select flow]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34504_20200827" />
+        </Props>
+      </Item>
+      <Item ItemId=";FLOW_ID_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Select flow]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sélectionner un flux]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-08-31T13:53:54.0001791Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Select flow]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34504_20200827" />
+        </Props>
+      </Item>
+      <Item ItemId=";FLOW_ID_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Select flow]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sélectionner un flux]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-08-31T13:53:54.0001791Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Select flow]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34504_20200827" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_CONDITION_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Condition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Condition]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001697Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary for expression builder for expression evaluation]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Built-in]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Intégré]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001697Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display string for logic app built in category]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SEARCHTEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Rechercher ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001697Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Search string for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_CANCEL" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Cancel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Annuler]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001698Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to cancel]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_CLOSE_ALL_EXCEPT_THIS" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Close All other Sessions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fermer toutes les autres sessions]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001698Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to close all except present session]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_CREATE_SESSION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create Session]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Créer une session]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001698Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to create session]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_OPEN_DASHBOARD" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Dashboard]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir le tableau de bord]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001698Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to open dashboard]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_OPEN_FORM" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Form]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir le formulaire]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001698Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to open form]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_OPEN_GRID" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir la grille]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001698Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to open grid]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_OPEN_KB_SEARCH" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open Knowledge Search]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ouvrir la recherche dans la Base de connaissances]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001698Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to open KB search]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_REFRESH" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Actualiser]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001698Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to refresh]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_SAVE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Enregistrer]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001697Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to save]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_SAVE_AND_CLOSE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save and close]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Enregistrer et fermer]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001697Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to save and close]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_SEARCH_BY_RELEVANCE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search by Relevance]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Rechercher par pertinence]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001697Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to search by relevance]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_SEARCH_KB" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search Knowledge Base]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Rechercher dans la Base de connaissances]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001697Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to search KB]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_DESIGNER_CONTROL_PERMISSION_ERROR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You need macro admin permission to view macros]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Une autorisation d’administrateur de macro est nécessaire pour afficher les macros]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-02T04:08:59.0004108Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when user dows not have required admin permissions]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34592_20200831" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_NAME_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Attribute logical name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nom logique de l’attribut]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001697Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for 'name' field of attribute]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_NAME_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nom]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001697Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title string for 'name' field of attribute]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_VALUE_DESC" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Attribute value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Valeur de l’attribut]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001697Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for 'value' field of attribute]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_PARAM_CUSTOM_ATTRIB_VALUE_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Valeur]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001697Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title string for 'value' field of attribute]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macrosolutionconfiguration_msdyn_searchhint" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search macro]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Rechercher une macro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001697Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Solution Configuration Search Hint Text]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";msdyn_macrosolutionconfiguration_msdyn_uservoicetext" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Let us know what you would like us to build next]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Indiquez-nous ce que vous aimeriez que nous créions ensuite]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T10:12:28.0001696Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Macro Solution Configuration User Voice Text]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

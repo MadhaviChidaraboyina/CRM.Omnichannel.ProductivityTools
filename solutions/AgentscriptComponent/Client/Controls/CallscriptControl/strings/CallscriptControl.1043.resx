@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Agentscript</value>
+    <value>Agentscripts</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Agentscripts helpen u nauwkeurig en doeltreffend te zijn, terwijl u hiermee ook sneller en efficiënter klanten kunt afhandelen</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>Macrostap voor {0} mislukt.</value>
@@ -162,11 +166,11 @@
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">
-    <value>Laden</value>
+    <value>Laden...</value>
     <comment>Button label for Load button</comment>
   </data>
   <data name="LoadingText" xml:space="preserve">
-    <value>Bezig met laden...</value>
+    <value>Laden...</value>
     <comment>Loading text to show when data fetch is in progress</comment>
   </data>
   <data name="MacroStepFailure_AccessibilityMessage" xml:space="preserve">
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>Tekstinstructiestap voor {0}.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Geen relatieve agentscripts gevonden.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

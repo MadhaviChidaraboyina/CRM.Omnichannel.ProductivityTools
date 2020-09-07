@@ -1,0 +1,28 @@
+<msdyn_productivitymacroactiontemplate msdyn_uniquename="msdyn_Clone_Input_Record">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiondescription default="This will clone the record given as macro input and open it in new tab as new unsaved record">
+    <label description="This will clone the record given as macro input and open it in new tab as new unsaved record" languagecode="1033" />
+  </msdyn_actiondescription>
+  <msdyn_brandcolor>#2266E3</msdyn_brandcolor>
+  <msdyn_displayname default="Clone input record">
+    <label description="Clone input record" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacros_clone_record.svg</msdyn_icon>
+  <msdyn_kind>ACTIONS</msdyn_kind>
+  <msdyn_macroconnector>
+    <msdyn_uniquename>msdyn_ProductivityAutomation</msdyn_uniquename>
+  </msdyn_macroconnector>
+  <msdyn_name>Clone_Input_Record</msdyn_name>
+  <msdyn_runtimeapi>Microsoft.ProductivityMacros.Internal.cloneInputRecord(actionName,actionInputs)</msdyn_runtimeapi>
+  <msdyn_subtitle default="Productivity automation">
+    <label description="Productivity automation" languagecode="1033" />
+  </msdyn_subtitle>
+  <msdyn_summary default="This will clone the record given as macro input and open it in new tab as new unsaved record">
+    <label description="This will clone the record given as macro input and open it in new tab as new unsaved record" languagecode="1033" />
+  </msdyn_summary>
+  <msdyn_title default="Clone input record">
+    <label description="Clone input record" languagecode="1033" />
+  </msdyn_title>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_productivitymacroactiontemplate>

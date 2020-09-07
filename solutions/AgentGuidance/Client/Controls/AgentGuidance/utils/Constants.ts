@@ -7,7 +7,7 @@ module MscrmControls.ProductivityToolAgentGuidance {
 
 	export class Constants {
         public static EmptyString = "";
-
+        public static homeSessionId = "session-id-0";
         //agent script / call script control ids and keys
         public static callScriptControlId = "MscrmControls.CallscriptControl.CallscriptControl";
         public static callScriptControlName = "childcontrol1";

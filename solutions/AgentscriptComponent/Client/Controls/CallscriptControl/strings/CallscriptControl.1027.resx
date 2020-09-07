@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Script de l'agent</value>
+    <value>Scripts de l’agent</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Els scripts d’agent us ajuden a ser exactes i eficaços i també més ràpids i eficients pel que fa a la gestió dels clients</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>El pas de macro {0} ha fallat.</value>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>Pas de la instrucció de text {0}.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>No s’ha trobat cap script d’agent relatiu.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

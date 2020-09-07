@@ -40,7 +40,7 @@
 			</EnableRules>
 			<DisplayRules />
 			<Actions>
-				<JavaScriptFunction FunctionName="Microsoft.Macros.Utility.openRecordHandler" Library="$webresource:CRMClients/msdyn_ProductivityMacros_internal_library_v2.js">
+				<JavaScriptFunction FunctionName="Microsoft.Macros.Utility.openRecordHandler" Library="$webresource:CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js">
 					<CrmParameter Value="SelectedControlSelectedItemReferences" />
 					<CrmParameter Value="SelectedControl" />
 				</JavaScriptFunction>
@@ -60,7 +60,7 @@
 				<DisplayRule Id="Mscrm.SelectedEntityIsNotBPFEntity" />
 			</DisplayRules>
 			<Actions>
-				<JavaScriptFunction FunctionName="Microsoft.Macros.Utility.newRecordHandler" Library="$webresource:CRMClients/msdyn_ProductivityMacros_internal_library_v2.js">
+				<JavaScriptFunction FunctionName="Microsoft.Macros.Utility.newRecordHandler" Library="$webresource:CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js">
 					<CrmParameter Value="SelectedControl" />
 				</JavaScriptFunction>
 			</Actions>
@@ -74,7 +74,7 @@
 		<DisplayRules />
 		<EnableRules>
 			<EnableRule Id="Mscrm.Macros.EnableRule">
-				<CustomRule FunctionName="Microsoft.Macros.Utility.macrosEnableRule" Library="$webresource:CRMClients/msdyn_ProductivityMacros_internal_library_v2.js" Default="false" InvertResult="false">
+				<CustomRule FunctionName="Microsoft.Macros.Utility.macrosEnableRule" Library="$webresource:CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js" Default="false" InvertResult="false">
 					<CrmParameter Value="SelectedControlSelectedItemReferences" />
 					<CrmParameter Value="SelectedControl" />
 				</CustomRule>

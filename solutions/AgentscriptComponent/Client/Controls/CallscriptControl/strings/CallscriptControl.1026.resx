@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Скрипт на агент</value>
+    <value>Скриптове на агента</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Скриптовете на агент ви помагат да бъдете прецизни и ефективни, като същевременно сте по-бързи и по-ефективни по отношение на работата с клиентите</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>Макростъпка {0} е неуспешна.</value>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>Стъпка с текстова инструкция {0}.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Не са намерени относителни скриптове на агент.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

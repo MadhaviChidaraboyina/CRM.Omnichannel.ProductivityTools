@@ -103,17 +103,17 @@
 				<events>
 					<event name="onload" application="false" active="false"> <!--testLoadHandlerDialog-->
 						<Handlers>
-							<Handler functionName="Microsoft.Macros.Utility.dialogOnLoadHandler" libraryName="$webresource:CRMClients/msdyn_ProductivityMacros_internal_library_v2.js" handlerUniqueId="{4EA010D8-93BC-4E05-8CA1-882AD5CA7815}" enabled="true" parameters="" passExecutionContext="true" />
+							<Handler functionName="Microsoft.Macros.Utility.dialogOnLoadHandler" libraryName="$webresource:CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js" handlerUniqueId="{4EA010D8-93BC-4E05-8CA1-882AD5CA7815}" enabled="true" parameters="" passExecutionContext="true" />
 						</Handlers>
 					</event>
 				</events>
 				<controlDescriptions>
 					<controlDescription forControl="{d0a99063-9af2-42a1-b336-47b79ba30112}">
-						<customControl name="MscrmControls.RunLinkControl.RunLinkControl" formFactor="0">
+						<customControl name="MscrmControls.RunLink.RunLinkControl" formFactor="0">
 						</customControl>
-						<customControl name="MscrmControls.RunLinkControl.RunLinkControl" formFactor="1">
+						<customControl name="MscrmControls.RunLink.RunLinkControl" formFactor="1">
 						</customControl>
-						<customControl name="MscrmControls.RunLinkControl.RunLinkControl" formFactor="2">
+						<customControl name="MscrmControls.RunLink.RunLinkControl" formFactor="2">
 						</customControl>
 					</controlDescription>
 				</controlDescriptions>

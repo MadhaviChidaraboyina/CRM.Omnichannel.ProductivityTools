@@ -2,7 +2,7 @@
 * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
 
-module MscrmControls.CallscriptControl {
+module MscrmControls.Callscript {
 	'use strict';
 
 	export enum CallscriptActionType {
@@ -29,7 +29,8 @@ module MscrmControls.CallscriptControl {
 		Failed
 	}
 
-	export class Constants {
+    export class Constants {
+        public static ControlId = "MscrmControls.Callscript.CallscriptControl";
 		public static EmptyString = "";
 		public static UninitializedString = "UNINITIALIZED";
 		public static ControlStateKey = "CallscriptControlState";
@@ -62,6 +63,8 @@ module MscrmControls.CallscriptControl {
 		public static viewScriptIcon = "msdyn_view_script_icon.svg";
 		public static markdoneTextIcon = "msdyn_markasdone_text_icon.svg";
 		public static runMacroIcon = "msdyn_run_macro_icon.svg";
+        //agent script header info icon
+        public static infoButtonIcon = "msdyn_agent_script_header_info_icon.svg";
 
 		// Accessibility ids
 		public static stepIdPrefix = "CallscriptStepsListItem-";
@@ -73,7 +76,9 @@ module MscrmControls.CallscriptControl {
 	 * Ids for localized strings from resx file
 	 */
 	export class LocalizedStrings {
-		public static CallscriptHeader = "ControlHeader";
+        public static CallscriptHeader = "ControlHeader";
+        public static ControlHeaderInfo = "ControlHeaderInfo";     
+
 		public static ScriptComboboxEmptyOptionLabel = "ScriptCombobox_EmptyOption";
 
 		//Accessibility Labels
@@ -95,7 +100,9 @@ module MscrmControls.CallscriptControl {
 		public static InitialScriptDataLoadFailure = "InitialScriptDataLoadFailure";
 		public static NoCallScriptFoundErrorMessage = "NoCallScriptFoundErrorMessage";
 		public static MacroStepFailureMessage = "MacroStepFailure_ErrorMessageWithoutError";
-		public static ScriptStepFailureMessage = "ScriptStepsDataLoadFailure";
+        public static ScriptStepFailureMessage = "ScriptStepsDataLoadFailure";
+        public static NoDataCallScriptMessage = "NoDataCallScriptMessage";
+
 	}
 
 	/**
@@ -146,14 +153,14 @@ module MscrmControls.CallscriptControl {
 	export class AgentScriptEntity
 	{
 		// Attributes
-        public static msdyn_agentscriptId = "msdyn_agentscript_v2id";
+        public static msdyn_agentscriptId = "msdyn_productivityagentscriptid";
 		public static msdyn_description = "msdyn_description";
 		public static msdyn_language = "msdyn_language";
 		public static msdyn_name = "msdyn_name";
 
 		// Entity constants
-		public static entitySetName = "msdyn_agentscript_v2s";
-		public static entityName = "msdyn_agentscript_v2";
+        public static entitySetName = "msdyn_productivityagentscripts";
+        public static entityName = "msdyn_productivityagentscript";
 	}
 
 	/**
@@ -162,9 +169,9 @@ module MscrmControls.CallscriptControl {
 	export class AgentScriptStepEntity
 	{
 		// Attributes
-        public static msdyn_agentscriptstepid = "msdyn_agentscriptstep_v2id";
+        public static msdyn_agentscriptstepid = "msdyn_productivityagentscriptstepid";
 		public static msdyn_name = "msdyn_name";
-        public static msdyn_agentscriptid = "msdyn_agentscript_v2id";
+        public static msdyn_agentscriptid = "msdyn_productivityagentscriptid";
 		public static msdyn_order = "msdyn_order";
 
 		public static msdyn_actiontype = "msdyn_actiontype";
@@ -178,8 +185,8 @@ module MscrmControls.CallscriptControl {
 		public static msdyn_routeactionName = "_msdyn_routeactionid_value@OData.Community.Display.V1.FormattedValue";
 
 		// Entity constants
-        public static entitySetName = "msdyn_agentscriptstep_v2s";
-        public static entityName = "msdyn_agentscriptstep_v2";
+        public static entitySetName = "msdyn_productivityagentscriptsteps";
+        public static entityName = "msdyn_productivityagentscriptstep";
 	}
 
 	/**

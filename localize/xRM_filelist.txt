@@ -1,4 +1,5 @@
-!  note: 
+!RelativeFilePath,ComponentName(in \Localize\Extern\[LCID]\[RepoName]\[ComponentName])
+!  note:
 !   a. Keep the list sorted
 !   b. Ensure to avoid filename conflict in side of [ComponentName] which is a folder to put the files together to prevent potential MAX_PATH issue during localization process
 !      for instance, following two entries cause a conflict because the target folder("ProductivityPaneControl") and the file name("ProductivityPaneControl.1033.resx") are the same
@@ -19,7 +20,7 @@ solutions\Agentscript\Client\Localization\Languages\msdyn_Agentscript.1033.resx,
 solutions\Agentscript\Solution\Resources\en-us\resources.en-US.resx,Agentscript
 solutions\AgentscriptComponent\Client\Controls\ButtonControl\strings\ButtonControl.1033.resx,AgentscriptComponent
 solutions\AgentscriptComponent\Client\Controls\CallscriptControl\strings\CallscriptControl.1033.resx,AgentscriptComponent
-solutions\AgentscriptComponent\Client\Localization\Languages\msdyn_Agentscript.1033.resx,AgentscriptComponent
+solutions\AgentscriptComponent\Client\Localization\Languages\msdyn_AgentscriptComponent.1033.resx,AgentscriptComponent
 solutions\AgentscriptComponent\Solution\Resources\en-US\resources.en-US.resx,AgentscriptComponent
 solutions\Anchors\ProductivityTools\Solution\Resources\en-US\resources.en-US.resx,Anchors
 solutions\OmnichannelProductivityToolsSettings\Solution\Resources\en-us\resources.en-US.resx,OmnichannelProductivityToolsSettings
@@ -28,24 +29,20 @@ solutions\ProductivityMacros\Client\Localization\ProductivityMacros_webresource_
 !solutions\ProductivityMacros\PVSPackage\ProductivityMacros\CmtDataFiles\data_1033\data.xml,ProductivityMacros
 solutions\ProductivityMacros\PVSPackage\ProductivityMacros\CmtDataFiles\data_1033\data.json,ProductivityMacros
 solutions\ProductivityMacros\Solution\Resources\en-us\resources.en-US.resx,ProductivityMacros
-solutions\ProductivityMacrosComponent\Client\Controls\RunLinkControl\Strings\RunLinkControl.1033.resx,ProductivityMacrosComponent
-solutions\ProductivityMacrosComponent\Client\Localization\ProductivityMacros_webresource_strings.1033.resx,ProductivityMacrosComponent
-solutions\ProductivityMacrosComponent\Solution\Resources\en-us\resources.en-US.resx,ProductivityMacrosComponent
 solutions\ProductivityMacrosApplication\Solution\Resources\en-US\resources.en-US.resx,ProductivityMacrosApplication
 solutions\ProductivityMacrosApplicationOC\Solution\Resources\en-US\resources.en-US.resx,ProductivityMacrosApplicationOC
-!solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.xml,ProductivityTools
-solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.json,ProductivityTools
-solutions\ProductivityPaneControl\Client\Controls\PanelControl\strings\PanelControl.1033.resx,ProductivityPaneControl
-solutions\ProductivityPaneControl\Client\Localization\Languages\ProductivityPaneControl.1033.resx,ProductivityPaneControl
-solutions\ProductivityPaneControl\Solution\Resources\en-us\resources.en-US.resx,ProductivityPaneControl
-solutions\ProductivityPaneControl\Solution\WebResources\msdyn_ProductivityPaneControl.1033.resx,ProductivityPaneControl
+solutions\ProductivityMacrosComponent\Client\Controls\RunLinkControl\Strings\RunLinkControl.1033.resx,ProductivityMacrosComponent
+solutions\ProductivityMacrosComponent\Client\Localization\ProductivityMacrosComponent_webresource_strings.1033.resx,ProductivityMacrosComponent
+solutions\ProductivityMacrosComponent\Solution\Resources\en-us\resources.en-US.resx,ProductivityMacrosComponent
 solutions\ProductivityPaneComponent\Client\Controls\PanelControl\strings\ProductivityPanelControl.1033.resx,ProductivityPaneComponent
 solutions\ProductivityPaneComponent\Client\Localization\Languages\ProductivityPaneComponent.1033.resx,ProductivityPaneComponent
 solutions\ProductivityPaneComponent\Solution\Resources\en-us\resources.en-US.resx,ProductivityPaneComponent
 solutions\ProductivityPaneComponent\Solution\WebResources\msdyn_ProductivityPaneComponent.1033.resx,ProductivityPaneComponent
+solutions\ProductivityPaneControl\Client\Controls\PanelControl\strings\PanelControl.1033.resx,ProductivityPaneControl
+solutions\ProductivityPaneControl\Client\Localization\Languages\ProductivityPaneControl.1033.resx,ProductivityPaneControl
+solutions\ProductivityPaneControl\Solution\Resources\en-us\resources.en-US.resx,ProductivityPaneControl
+solutions\ProductivityPaneControl\Solution\WebResources\msdyn_ProductivityPaneControl.1033.resx,ProductivityPaneControl
+!solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.xml,ProductivityTools
+solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.json,ProductivityTools
 solutions\SmartAssist\Client\Controls\SmartassistControl\strings\SmartassistControl.1033.resx,SmartAssist
-solutions\SmartAssist\Client\Controls\SmartAssistAnyEntityControl\strings\SmartAssistAnyEntityControl.1033.resx,SmartAssist
-solutions\SmartAssist\Client\Controls\RecommendationControl\strings\RecommendationControl.1033.resx,SmartAssist
-solutions\SmartAssist\Client\Controls\SmartassistPanelControl\strings\SmartassistPanelControl.1033.resx,SmartAssist
-solutions\SmartAssist\Client\Controls\TPBotControl\strings\TPBotControl.1033.resx,SmartAssist
 solutions\SmartAssist\Solution\Resources\en-US\resources.en-US.resx,SmartAssist

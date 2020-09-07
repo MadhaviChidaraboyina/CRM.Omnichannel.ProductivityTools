@@ -43,6 +43,7 @@
   </PropertyGroup>
 
 	<PropertyGroup>
+	    <PKG_XRMAPP_TOOLS_OLD>$(XrmSolutionsRoot)\Packages\Microsoft.Dynamics.XrmSolutions.Tools.1.1.430</PKG_XRMAPP_TOOLS_OLD>
 		<PKG_BASEAPP_DEPENDENCIES>$(XrmSolutionsRoot)\references\internal\Microsoft.Crm.BaseApp.ObjectModel.Dependencies</PKG_BASEAPP_DEPENDENCIES>
 		<PKG_KERNEL_CONTRACTS>$(XrmSolutionsRoot)\references\internal\Microsoft.Xrm.Kernel.Contracts</PKG_KERNEL_CONTRACTS>
 		<PKG_NUGET>$(XrmSolutionsRoot)</PKG_NUGET>

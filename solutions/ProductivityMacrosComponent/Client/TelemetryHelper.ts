@@ -105,7 +105,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 
 	function getMacroVersion(): string {
 		let MacrosVersion = "";
-		(window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_macrosolutionconfiguration_v2", "?$top=1").then(
+        (window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_productivitymacrosolutionconfiguration", "?$top=1").then(
 			(result: any) => {
 				if (result && result.entities) {
 					MacrosVersion = result.entities[0].msdyn_macrosversion;

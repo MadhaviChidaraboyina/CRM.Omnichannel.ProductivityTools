@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Helpdesk-medarbejder-script</value>
+    <value>Helpdesk-medarbejder-scripts</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Du kan bruge Helpdesk-medarbejder-scripts til at være præcis og effektiv, samtidig med at de også er hurtigere og mere effektive i forhold til kundehåndteringen</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>Makrotrinnet {0} mislykkedes.</value>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>Tekstvejledningstrinnet {0}.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Der blev ikke fundet nogen relative helpdesk-medarbejderscripts.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

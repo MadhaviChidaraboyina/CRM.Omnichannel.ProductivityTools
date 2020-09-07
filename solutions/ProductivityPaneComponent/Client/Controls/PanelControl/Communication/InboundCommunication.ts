@@ -9,10 +9,12 @@
 module MscrmControls.PanelControl {
 
     export class InboundCommunication {
-        private context: Mscrm.ControlData<IInputBag>; 
+        private context: Mscrm.ControlData<IInputBag>;
+        private panelState: PanelState;
 
-        constructor(context: Mscrm.ControlData<IInputBag>) {
+        constructor(context: Mscrm.ControlData<IInputBag>, panelState: PanelState) {
             this.context = context;
+            this.panelState = panelState;
         }
 
         public requestRerender(data : PanelInboundEventDataModel,currentSessionId : string, productivityPaneConfig : ProductivityPaneConfig): void{
@@ -21,6 +23,8 @@ module MscrmControls.PanelControl {
             let noData = _panelOperation.noData;
             let sessionId = _panelOperation.sessionId;
             let doCollpse : boolean = undefined;
+            let toolWithData: string = undefined;
+            let toolControlNameInFocus: string = undefined;
 
             if (sessionId == undefined ){
                 sessionId = currentSessionId;
@@ -34,19 +38,37 @@ module MscrmControls.PanelControl {
                 return;
             }
             
-            let sessionData = PanelState.getState(sessionId + LocalStorageKeyConstants.sessionData);  
+            let sessionData = this.panelState.getState(sessionId + LocalStorageKeyConstants.sessionData);  
             if(sessionData[LocalStorageKeyConstants.hasData+controlName] == !noData){
                 return;
             }
 
             sessionData[LocalStorageKeyConstants.hasData+controlName] = !noData;
-            if(!sessionData.isCollapsedByUser){
-                for (let tool of productivityPaneConfig.productivityToolsConfig.ToolsList) {
-                    doCollpse = doCollpse || sessionData[LocalStorageKeyConstants.hasData+tool.toolControlName];
+            for (let tool of productivityPaneConfig.productivityToolsConfig.ToolsList) {
+                doCollpse = doCollpse || sessionData[LocalStorageKeyConstants.hasData + tool.toolControlName];
+                if (tool.toolName === sessionData.productivityToolSelected) {
+                    toolControlNameInFocus = tool.toolControlName;
                 }
-                sessionData.panelToggle = (noData && !doCollpse) ? false : (true && productivityPaneConfig.productivityPaneMode);
+                if (sessionData[LocalStorageKeyConstants.hasData + tool.toolControlName] && this.context.utils.isNullOrUndefined(toolWithData)) {
+                    toolWithData = tool.toolName;
+                }
             }
-            PanelState.SetState(sessionId+LocalStorageKeyConstants.sessionData,sessionData);
+
+            if (!sessionData.isCollapsedByUser) {
+                sessionData.panelToggle = (noData && !doCollpse) ? false : (true && (productivityPaneConfig.productivityPaneMode || sessionData.isToggledByUser));
+            }
+
+            // if control in focus doesnt have data and atleast one control has data to show, then change focus
+            if (!sessionData[LocalStorageKeyConstants.hasData + toolControlNameInFocus] && // check if focused control has no data
+                !this.context.utils.isNullOrUndefined(toolWithData) && // check if there is a control with data
+                doCollpse && // true if a control has data, false if no control has data
+                ((toolControlNameInFocus != controlName && !noData) || // check if another control has sent noData(false)
+                  toolControlNameInFocus == controlName && noData)) // OR focus control has sent noData(true)
+                { 
+                    sessionData.productivityToolSelected = toolWithData;
+                    this.context.utils.requestRender();
+                }
+            this.panelState.SetState(sessionId+LocalStorageKeyConstants.sessionData,sessionData);
 
             if(sessionId == currentSessionId && !sessionData.isCollapsedByUser )
             {
@@ -75,7 +97,7 @@ module MscrmControls.PanelControl {
                 return;
             }
 
-            let sessionNotifications = PanelState.getState(sessionId+LocalStorageKeyConstants.notificationCount);
+            let sessionNotifications = this.panelState.getState(sessionId+LocalStorageKeyConstants.notificationCount);
             if(sessionNotifications == undefined){
                 sessionNotifications={};
             }
@@ -88,7 +110,7 @@ module MscrmControls.PanelControl {
                 sessionNotifications[controlName] = notificationNumber < 0 ? 0 : notificationNumber;
             }
 
-            PanelState.SetState(sessionId+LocalStorageKeyConstants.notificationCount,sessionNotifications);
+            this.panelState.SetState(sessionId+LocalStorageKeyConstants.notificationCount,sessionNotifications);
 
             if(sessionId == currentSessionId){
                 this.context.utils.requestRender();

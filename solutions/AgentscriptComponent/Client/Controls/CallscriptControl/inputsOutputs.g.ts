@@ -1,4 +1,4 @@
-module MscrmControls.CallscriptControl {
+module MscrmControls.Callscript {
 	export interface IInputBag {
 	}
 

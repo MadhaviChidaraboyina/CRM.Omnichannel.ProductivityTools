@@ -3,7 +3,7 @@
 */
 
 
-module MscrmControls.RunLinkControl {
+module MscrmControls.RunLink {
 
 	export class Constants {
 

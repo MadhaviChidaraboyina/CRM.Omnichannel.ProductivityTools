@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Skrypt agenta</value>
+    <value>Skrypty agenta</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Skrypty agenta pomagają dokładnie i efektywnie pracować, a jednocześnie szybciej i wydajniej obsługiwać klientów</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>Wykonywanie kroku makra {0} nie powiodło się.</value>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>Krok instrukcji tekstowej {0}.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Nie znaleziono powiązanych skryptów agenta.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

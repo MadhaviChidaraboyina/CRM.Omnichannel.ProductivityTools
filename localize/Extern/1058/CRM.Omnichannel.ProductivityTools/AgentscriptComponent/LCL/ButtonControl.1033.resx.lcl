@@ -12,62 +12,82 @@
       <Item ItemId=";CC_Build_Expression" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Build expression]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Build expression]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Створити вираз]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-13T09:39:20.000547Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Build Expression]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
       </Item>
       <Item ItemId=";CC_ButtonControl_Desc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Button to build an expression]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Button to build an expression]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Кнопка для створення виразу]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-13T09:39:20.0005471Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Button to build an expression]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
       </Item>
       <Item ItemId=";CC_ButtonControl_Name" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Build expression button]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Build expression button]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Кнопка "Створити вираз"]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-13T09:39:20.0005471Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Build Expression Button]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
       </Item>
       <Item ItemId=";CC_Field" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Value]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Value]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Значення]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-13T09:39:20.0005471Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Value]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
       </Item>
       <Item ItemId=";CC_Field_Desc" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Attribute details]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Attribute details]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Докладні відомості про атрибут]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-13T09:39:20.0005471Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Attribute details]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
       </Item>
     </Item>
   </Item>

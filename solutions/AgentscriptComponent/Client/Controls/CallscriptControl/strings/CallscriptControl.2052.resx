@@ -145,6 +145,10 @@
     <value>代理脚本</value>
     <comment>Header value for callscript control</comment>
   </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>代理脚本有助于提高准确度和有效性，同时也能更快、更高效地进行客户处理</value>
+    <comment>Info value for callscript control</comment>
+  </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>{0} 宏步骤失败。</value>
     <comment>When macro execution step failed</comment>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>{0} 文本说明步骤。</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>找不到任何相关代理脚本。</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

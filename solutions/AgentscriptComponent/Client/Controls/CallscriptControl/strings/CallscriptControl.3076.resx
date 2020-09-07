@@ -118,15 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CC_Callscript_Control" xml:space="preserve">
-    <value>客服專員底稿控制項</value>
+    <value>專員指令碼控制項</value>
     <comment>Agent script control name</comment>
   </data>
   <data name="CC_FieldControl" xml:space="preserve">
-    <value>客服專員底稿屬性</value>
+    <value>專員指令碼屬性</value>
     <comment>Input property name</comment>
   </data>
   <data name="CC_FieldControl_Desc" xml:space="preserve">
-    <value>客服專員底稿屬性</value>
+    <value>專員指令碼屬性</value>
     <comment>Input property description</comment>
   </data>
   <data name="CompletedMacroStep_AccessibilityLabel" xml:space="preserve">
@@ -134,7 +134,7 @@
     <comment>When macro execution step completed successfully</comment>
   </data>
   <data name="CompletedScriptStep_AccessibilityLabel" xml:space="preserve">
-    <value>{0} 底稿步驟成功完成。</value>
+    <value>{0} 指令碼步驟成功完成。</value>
     <comment>When script step loading completed successfully</comment>
   </data>
   <data name="CompletedTextStep_AccessibilityLabel" xml:space="preserve">
@@ -142,15 +142,19 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>客服專員底稿</value>
+    <value>專員指令碼</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>專員指令碼有助於提高準確度和有效性，也能更快、更高效地進行處理客戶問題</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>{0} 巨集步驟失敗。</value>
     <comment>When macro execution step failed</comment>
   </data>
   <data name="FailedScriptStep_AccessibilityLabel" xml:space="preserve">
-    <value>{0} 底稿步驟失敗。</value>
+    <value>{0} 指令碼步驟失敗。</value>
     <comment>When script step loading fails</comment>
   </data>
   <data name="FailedTextStep_AccessibilityLabel" xml:space="preserve">
@@ -158,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>無法載入客服專員底稿記錄。請連絡您的系統管理員。</value>
+    <value>無法載入專員指令碼記錄。請連絡您的管理員。</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">
@@ -170,7 +174,7 @@
     <comment>Loading text to show when data fetch is in progress</comment>
   </data>
   <data name="MacroStepFailure_AccessibilityMessage" xml:space="preserve">
-    <value>步驟 {0} 的巨集失敗。請連絡您的系統管理員。</value>
+    <value>步驟 {0} 的巨集失敗。請連絡您的管理員。</value>
     <comment>Screen reader message when macro execution failed</comment>
   </data>
   <data name="MacroStepFailure_ErrorMessageWithError" xml:space="preserve">
@@ -178,7 +182,7 @@
     <comment>Error message to show when macro execution failed</comment>
   </data>
   <data name="MacroStepFailure_ErrorMessageWithoutError" xml:space="preserve">
-    <value>巨集失敗。請連絡您的系統管理員。</value>
+    <value>巨集失敗。請連絡您的管理員。</value>
     <comment>Generic error message to show when macro execution failed</comment>
   </data>
   <data name="MacroStepSuccess_AccessibilityMessage" xml:space="preserve">
@@ -186,7 +190,7 @@
     <comment>Screen reader message when macro execution successful</comment>
   </data>
   <data name="NoCallScriptFoundErrorMessage" xml:space="preserve">
-    <value>沒有任何客服專員底稿與目前工作階段連結</value>
+    <value>沒有任何專員指令碼與目前工作階段連結</value>
     <comment>Error message when no agent scripts are linked with session template</comment>
   </data>
   <data name="ScriptActionStepLabel" xml:space="preserve">
@@ -194,15 +198,15 @@
     <comment>Label for script action step</comment>
   </data>
   <data name="ScriptCombobox_EmptyOption" xml:space="preserve">
-    <value>選取底稿</value>
+    <value>選取指令碼</value>
     <comment>Label for empty option in script select combobox</comment>
   </data>
   <data name="ScriptStepsDataLoadFailure" xml:space="preserve">
-    <value>無法載入客服專員底稿詳細資訊。請連絡您的系統管理員。</value>
+    <value>無法載入專員指令碼詳細資訊。請連絡您的管理員。</value>
     <comment>Generic error message when script steps data load fails</comment>
   </data>
   <data name="SlugResolutionFailure" xml:space="preserve">
-    <value>無法解析步驟 {0} 中的可取代參數。請連絡您的系統管理員。</value>
+    <value>無法解析步驟 {0} 中的可取代參數。請連絡您的管理員。</value>
     <comment>Error message when slug resolution fails</comment>
   </data>
   <data name="StepExecutionBtn_LabelForCompletedStep" xml:space="preserve">
@@ -234,11 +238,15 @@
     <comment>Text to be read by screen-reader on callscript step focus</comment>
   </data>
   <data name="StepListItem_UnexecutedRouteStepAccessibilityLabel" xml:space="preserve">
-    <value>{0} 底稿步驟。</value>
+    <value>{0} 指令碼步驟。</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
   </data>
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>{0} 文字指示步驟。</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>找不到任何相關的專員指令碼。</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

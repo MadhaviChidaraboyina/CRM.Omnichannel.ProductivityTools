@@ -9,11 +9,12 @@
     "aria-webjs-sdk-1.8.3.js",
     "../Libraries/requirejs/require.js",
     "Constants.ts",
-    "MacroActionTemplatesInfra.ts"
+    "MacroActionTemplatesInfra.ts",
+    "FPIHelper.ts"
   ],
   "compilerOptions": {
     "sourceMap": true,
-    "outFile": "../../Solution/WebResources/CRMClients/msdyn_ProductivityMacros_internal_library_v2.js",
+    "outFile": "../../Solution/WebResources/CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js",
     "module": "amd",
     "allowJs": true
   }

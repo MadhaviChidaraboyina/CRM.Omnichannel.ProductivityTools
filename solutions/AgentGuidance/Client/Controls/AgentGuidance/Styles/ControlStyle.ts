@@ -62,7 +62,8 @@ module MscrmControls.ProductivityToolAgentGuidance {
                 paddingLeft: "2px",
                 height: "auto",
                 maxHeight: isSmartassist && isCardExist ? "inherit" : "100%",
-                overflow: "hidden auto"
+                overflowX: "hidden", 
+                overflowY: "auto"
             }
         }
 

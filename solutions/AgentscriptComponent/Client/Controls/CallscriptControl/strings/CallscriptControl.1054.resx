@@ -145,6 +145,10 @@
     <value>สคริปต์ตัวแทน</value>
     <comment>Header value for callscript control</comment>
   </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>สคริปต์ตัวแทนช่วยให้คุณทำงานถูกต้องและมีประสิทธิภาพพร้อมกับสามารถรับมือกับลูกค้าได้รวดเร็วขึ้นและมีประสิทธิภาพมากขึ้น</value>
+    <comment>Info value for callscript control</comment>
+  </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>ขั้นตอนของแมโคร {0} ล้มเหลว</value>
     <comment>When macro execution step failed</comment>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>ขั้นตอนของคำแนะนำข้อความ {0}</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>ไม่พบสคริปต์ตัวแทนที่สัมพันธ์กัน</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

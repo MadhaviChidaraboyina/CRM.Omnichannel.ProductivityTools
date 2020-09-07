@@ -33,5 +33,5 @@
 		    
 		</ItemGroup>
 		<Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
-		<Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
+		<Import Project="$(PKG_XRMAPP_TOOLS_OLD)\build\include\SolutionPackager.targets" />
 </Project>

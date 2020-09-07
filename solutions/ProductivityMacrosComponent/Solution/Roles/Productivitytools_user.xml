@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Role id="{9AF48DD6-DBC2-437E-AD7C-14A01AE3492D}" name="Productivity tools user">
+<Role id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" name="Productivity tools user">
   <IsCustomizable>0</IsCustomizable>
   <RolePrivileges>
     <RolePrivilege name="prvReadWorkflow" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_actioninputparameter_v2" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_actionoutputparameter_v2" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivityactioninputparameter" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivityactionoutputparameter" level="Global" />
     <RolePrivilege name="prvReadmsdyn_inputparameters" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_macroconnector_v2" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_parameterdefinition_v2" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivitymacroconnector" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivityparameterdefinition" level="Global" />
     <RolePrivilege name="prvReadmsdyn_designeroptions" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_macroactiontemplate_v2" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivitymacroactiontemplate" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivitymacrosolutionconfiguration" level="Global" />
     <RolePrivilege name="prvCreatemsdyn_macrosession" level="Global" />
     <RolePrivilege name="prvReadmsdyn_macrosession" level="Global" />
     <RolePrivilege name="prvWritemsdyn_macrosession" level="Global" />

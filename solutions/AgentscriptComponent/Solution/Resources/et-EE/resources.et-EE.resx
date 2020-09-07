@@ -1,0 +1,1219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="Source LCID" xml:space="preserve">
+    <value>1033</value>
+  </metadata>
+  <metadata name="Source file" xml:space="preserve">
+    <value>msdyn_AgentscriptComponent_managed.zip</value>
+  </metadata>
+  <metadata name="Source package type" xml:space="preserve">
+    <value>Both</value>
+  </metadata>
+  <metadata name="SolutionPackager Version" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uVmVyc2lvbgQAAAAGX01ham9yBl9NaW5vcgZfQnVp
+        bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </metadata>
+  <data name="10:Description,business_unit_msdyn_productivityagentscript" xml:space="preserve">
+    <value>Kirjet omanikust äriüksuse ainuidentifikaator</value>
+    <comment>msdyn_productivityagentscript Description for EntityRelationship 'business_unit_msdyn_productivityagentscript'</comment>
+  </data>
+  <data name="10:Description,business_unit_msdyn_productivityagentscriptstep" xml:space="preserve">
+    <value>Kirjet omanikust äriüksuse ainuidentifikaator</value>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'business_unit_msdyn_productivityagentscriptstep'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_productivityagentscriptstep_createdby" xml:space="preserve">
+    <value>Selle kirje loonud kasutaja ainuidentifikaator.</value>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'lk_msdyn_productivityagentscriptstep_createdby'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_productivityagentscriptstep_modifiedby" xml:space="preserve">
+    <value>Kirjet muutnud kasutaja ainuidentifikaator.</value>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'lk_msdyn_productivityagentscriptstep_modifiedby'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_productivityagentscript_createdby" xml:space="preserve">
+    <value>Selle kirje loonud kasutaja ainuidentifikaator.</value>
+    <comment>msdyn_productivityagentscript Description for EntityRelationship 'lk_msdyn_productivityagentscript_createdby'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_productivityagentscript_modifiedby" xml:space="preserve">
+    <value>Kirjet muutnud kasutaja ainuidentifikaator.</value>
+    <comment>msdyn_productivityagentscript Description for EntityRelationship 'lk_msdyn_productivityagentscript_modifiedby'</comment>
+  </data>
+  <data name="10:Description,msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_agentscriptid" xml:space="preserve">
+    <value>Agendiskripti etapiga seostatud agendiskripti ainuidentifikaator.</value>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_agentscriptid'</comment>
+  </data>
+  <data name="10:Description,msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_routeactionid" xml:space="preserve">
+    <value>Agendiskripti etapiga seostatud sihtskripti ainuidentifikaator.</value>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_routeactionid'</comment>
+  </data>
+  <data name="10:Description,msdyn_workflow_msdyn_prod_agentscriptstep_macroactionid" xml:space="preserve">
+    <value>Agendiskripti etapiga seostatud makro ainuidentifikaator.</value>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'msdyn_workflow_msdyn_prod_agentscriptstep_macroactionid'</comment>
+  </data>
+  <data name="10:Description,owner_msdyn_productivityagentscript" xml:space="preserve">
+    <value>Omaniku ID</value>
+    <comment>msdyn_productivityagentscript Description for EntityRelationship 'owner_msdyn_productivityagentscript'</comment>
+  </data>
+  <data name="10:Description,owner_msdyn_productivityagentscriptstep" xml:space="preserve">
+    <value>Omaniku ID</value>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'owner_msdyn_productivityagentscriptstep'</comment>
+  </data>
+  <data name="10:Description,team_msdyn_productivityagentscript" xml:space="preserve">
+    <value>Kirje omanikust meeskonna ainuidentifikaator.</value>
+    <comment>msdyn_productivityagentscript Description for EntityRelationship 'team_msdyn_productivityagentscript'</comment>
+  </data>
+  <data name="10:Description,team_msdyn_productivityagentscriptstep" xml:space="preserve">
+    <value>Kirje omanikust meeskonna ainuidentifikaator.</value>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'team_msdyn_productivityagentscriptstep'</comment>
+  </data>
+  <data name="10:Description,user_msdyn_productivityagentscript" xml:space="preserve">
+    <value>Kirje omanikust kasutaja ainuidentifikaator.</value>
+    <comment>msdyn_productivityagentscript Description for EntityRelationship 'user_msdyn_productivityagentscript'</comment>
+  </data>
+  <data name="10:Description,user_msdyn_productivityagentscriptstep" xml:space="preserve">
+    <value>Kirje omanikust kasutaja ainuidentifikaator.</value>
+    <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'user_msdyn_productivityagentscriptstep'</comment>
+  </data>
+  <data name="15062:Description,microsoftdynamicsmsdyn19236" xml:space="preserve">
+    <value>Microsoft Dynamics 365</value>
+    <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
+  </data>
+  <data name="15062:Description,msdyn_Agentscripts" xml:space="preserve">
+    <value>Tööviljakustööriistas kasutatavad agendiskriptid</value>
+    <comment> 'msdyn_Agentscripts' : Description for Solution</comment>
+  </data>
+  <data name="15062:LocalizedName,microsoftdynamicsmsdyn19236" xml:space="preserve">
+    <value>Microsoft Dynamics 365</value>
+    <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
+  </data>
+  <data name="15062:LocalizedName,msdyn_Agentscripts" xml:space="preserve">
+    <value>Agendiskriptid</value>
+    <comment> 'msdyn_Agentscripts' : LocalizedName for Solution</comment>
+  </data>
+  <data name="1:Description,Agent script step{194a3727-e2aa-ea11-a81c-000d3ac5e423}" xml:space="preserve">
+    <value>Mulle kuuluvad aktiivsed agendiskripti etapid</value>
+    <comment>'Agent script step' : Description for SavedQuery on Entity QueryId: '{194a3727-e2aa-ea11-a81c-000d3ac5e423}'</comment>
+  </data>
+  <data name="1:Description,Agent script step{371db648-34af-4f9e-817e-cfb9ea67540a}" xml:space="preserve">
+    <value>Selle olemi vorm.</value>
+    <comment>'Agent script step' : Description for systemform in Entity FormXml ID: '{371db648-34af-4f9e-817e-cfb9ea67540a}'</comment>
+  </data>
+  <data name="1:Description,Agent script step{4cfec666-e1e5-4f10-8e91-98a2c286f9bc}" xml:space="preserve">
+    <value>Selle olemi kaardivorm.</value>
+    <comment>'Agent script step' : Description for systemform in Entity FormXml ID: '{4cfec666-e1e5-4f10-8e91-98a2c286f9bc}'</comment>
+  </data>
+  <data name="1:Description,Agent script{67277fb5-ba01-429e-a2cd-77407871f5a3}" xml:space="preserve">
+    <value>Selle olemi kaardivorm.</value>
+    <comment>'Agent script' : Description for systemform in Entity FormXml ID: '{67277fb5-ba01-429e-a2cd-77407871f5a3}'</comment>
+  </data>
+  <data name="1:Description,Agent script{a57f7d04-e2aa-ea11-a81c-000d3ac5e423}" xml:space="preserve">
+    <value>Mulle kuuluvad aktiivsed agendiskriptid</value>
+    <comment>'Agent script' : Description for SavedQuery on Entity QueryId: '{a57f7d04-e2aa-ea11-a81c-000d3ac5e423}'</comment>
+  </data>
+  <data name="1:Description,Agent script{fc60eca2-37c4-43c3-b604-e11d433ae008}" xml:space="preserve">
+    <value>Selle olemi vorm.</value>
+    <comment>'Agent script' : Description for systemform in Entity FormXml ID: '{fc60eca2-37c4-43c3-b604-e11d433ae008}'</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptCreatedBy" xml:space="preserve">
+    <value>Selle kirje loonud kasutaja ainuidentifikaator.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptCreatedOn" xml:space="preserve">
+    <value>Kirje loomise kuupäev ja kellaaeg.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptCreatedOnBehalfBy" xml:space="preserve">
+    <value>Kirje loonud delegaadi ainuidentifikaator.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptentitymsdyn_productivityagentscript" xml:space="preserve">
+    <value>Agendiskript v2</value>
+    <comment> 'msdyn_productivityagentscript' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptModifiedBy" xml:space="preserve">
+    <value>Kirjet muutnud kasutaja ainuidentifikaator.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptModifiedOn" xml:space="preserve">
+    <value>Kirje muutmise kuupäev ja kellaaeg.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptModifiedOnBehalfBy" xml:space="preserve">
+    <value>Kirjet muutnud delegaadi ainuidentifikaator.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_description" xml:space="preserve">
+    <value>Agendiskripti kirjeldus</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_language" xml:space="preserve">
+    <value>Agendiskripti keel</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_language' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_name" xml:space="preserve">
+    <value>Kohandatud olemi nimi.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" xml:space="preserve">
+    <value>Olemieksemplaride ainuidentifikaator</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_productivityagentscriptId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" xml:space="preserve">
+    <value>Agendiskripti olek</value>
+    <comment>'msdyn_productivityagentscript' : Description for OptionSet 'msdyn_productivityagentscript_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode" xml:space="preserve">
+    <value>Agendiskripti oleku põhjus</value>
+    <comment>'msdyn_productivityagentscript' : Description for OptionSet 'msdyn_productivityagentscript_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptmsdyn_UniqueName" xml:space="preserve">
+    <value>Olemi kordumatu nimi.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptOverriddenCreatedOn" xml:space="preserve">
+    <value>Kirje migreerimise kuupäev ja kellaaeg.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptOwnerId" xml:space="preserve">
+    <value>Omaniku ID</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptOwningBusinessUnit" xml:space="preserve">
+    <value>Kirjet omanikust äriüksuse ainuidentifikaator</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptOwningTeam" xml:space="preserve">
+    <value>Kirje omanikust meeskonna ainuidentifikaator.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptOwningUser" xml:space="preserve">
+    <value>Kirje omanikust kasutaja ainuidentifikaator.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstatecode" xml:space="preserve">
+    <value>Agendiskripti olek</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstatuscode" xml:space="preserve">
+    <value>Agendiskripti oleku põhjus</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepCreatedBy" xml:space="preserve">
+    <value>Selle kirje loonud kasutaja ainuidentifikaator.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepCreatedOn" xml:space="preserve">
+    <value>Kirje loomise kuupäev ja kellaaeg.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepCreatedOnBehalfBy" xml:space="preserve">
+    <value>Kirje loonud delegaadi ainuidentifikaator.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepentitymsdyn_productivityagentscriptstep" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_productivityagentscriptstep' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepModifiedBy" xml:space="preserve">
+    <value>Kirjet muutnud kasutaja ainuidentifikaator.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepModifiedOn" xml:space="preserve">
+    <value>Kirje muutmise kuupäev ja kellaaeg.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepModifiedOnBehalfBy" xml:space="preserve">
+    <value>Kirjet muutnud delegaadi ainuidentifikaator.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_actiontype" xml:space="preserve">
+    <value>Agendiskripti etapi tegevustüüp</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_actiontype' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_agentscriptid" xml:space="preserve">
+    <value>Agendiskripti etapiga seostatud agendiskripti ainuidentifikaator.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_agentscriptid' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_description" xml:space="preserve">
+    <value>Agendiskripti etapi kirjeldus</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_macroactionid" xml:space="preserve">
+    <value>Agendiskripti etapiga seostatud makro ainuidentifikaator.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_macroactionid' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_name" xml:space="preserve">
+    <value>Kohandatud olemi nimi.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_order" xml:space="preserve">
+    <value>Kuvamisjärjestus</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_order' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" xml:space="preserve">
+    <value>Olemieksemplaride ainuidentifikaator</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_productivityagentscriptstepId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" xml:space="preserve">
+    <value>Agendiskripti etapi tegevustüüp</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for OptionSet 'msdyn_productivityagentscriptstep_msdyn_actiontype' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode" xml:space="preserve">
+    <value>Agendiskripti etapi olek</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for OptionSet 'msdyn_productivityagentscriptstep_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode" xml:space="preserve">
+    <value>Agendiskripti etapi oleku põhjus</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for OptionSet 'msdyn_productivityagentscriptstep_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_routeactionid" xml:space="preserve">
+    <value>Agendiskripti etapiga seostatud sihtskripti ainuidentifikaator.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_routeactionid' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_textinstruction" xml:space="preserve">
+    <value>Tekstitegevusetüübi juhend</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_textinstruction' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_UniqueName" xml:space="preserve">
+    <value>Olemi kordumatu nimi.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepOverriddenCreatedOn" xml:space="preserve">
+    <value>Kirje migreerimise kuupäev ja kellaaeg.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepOwnerId" xml:space="preserve">
+    <value>Omaniku ID</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepOwningBusinessUnit" xml:space="preserve">
+    <value>Kirjet omanikust äriüksuse ainuidentifikaator</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepOwningTeam" xml:space="preserve">
+    <value>Kirje omanikust meeskonna ainuidentifikaator.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepOwningUser" xml:space="preserve">
+    <value>Kirje omanikust kasutaja ainuidentifikaator.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepstatecode" xml:space="preserve">
+    <value>Agendiskripti etapi olek</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepstatuscode" xml:space="preserve">
+    <value>Agendiskripti etapi oleku põhjus</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Ainult süsteemisiseseks kasutuseks.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Kirje loomise ajal kasutusel olnud ajavööndikood.</value>
+    <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Ainult süsteemisiseseks kasutuseks.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Kirje loomise ajal kasutusel olnud ajavööndikood.</value>
+    <comment>'msdyn_productivityagentscript' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_sessiontemplateentitymsdyn_sessiontemplate" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_sessiontemplate' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_sessiontemplatemsdyn_enablebuildexpression" xml:space="preserve">
+    <value>Ainuväärtus avaldise koostamise lubamiseks või keelamiseks</value>
+    <comment>'msdyn_sessiontemplate' : Description for Attribute 'msdyn_enablebuildexpression' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_sessiontemplatemsdyn_expressiondata" xml:space="preserve">
+    <value>Talletab avaldise JSON</value>
+    <comment>'msdyn_sessiontemplate' : Description for Attribute 'msdyn_expressiondata' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_sessiontemplatemsdyn_sessiontemplate_msdyn_enablebuildexpression" xml:space="preserve">
+    <value>Ainuväärtus avaldise koostamise lubamiseks või keelamiseks</value>
+    <comment>'msdyn_sessiontemplate' : Description for OptionSet 'msdyn_sessiontemplate_msdyn_enablebuildexpression' on Entity</comment>
+  </data>
+  <data name="1:Description,Process{46291012-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
+    <value>Aktiivsete makrode loend</value>
+    <comment>'Process' : Description for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
+  </data>
+  <data name="1:Description,Session Template{5de0d599-f36d-425a-9c06-b80630d91def}" xml:space="preserve">
+    <value>Selle olemi vorm.</value>
+    <comment>'Session Template' : Description for systemform in Entity FormXml ID: '{5de0d599-f36d-425a-9c06-b80630d91def}'</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptCreatedBy" xml:space="preserve">
+    <value>Looja:</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptCreatedOn" xml:space="preserve">
+    <value>Koostamiskuupäev</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptCreatedOnBehalfBy" xml:space="preserve">
+    <value>Loonud autor (delegaat):</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptModifiedBy" xml:space="preserve">
+    <value>Muutja:</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptModifiedOn" xml:space="preserve">
+    <value>Muudetud:</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptModifiedOnBehalfBy" xml:space="preserve">
+    <value>Muutnud (delegaat):</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_description" xml:space="preserve">
+    <value>Kirjeldus</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_language" xml:space="preserve">
+    <value>Keel</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'msdyn_language' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_name" xml:space="preserve">
+    <value>Nimi</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" xml:space="preserve">
+    <value>Agendiskript</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'msdyn_productivityagentscriptId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" xml:space="preserve">
+    <value>Olek</value>
+    <comment>'msdyn_productivityagentscript' : displayname for OptionSet 'msdyn_productivityagentscript_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode" xml:space="preserve">
+    <value>Oleku põhjus</value>
+    <comment>'msdyn_productivityagentscript' : displayname for OptionSet 'msdyn_productivityagentscript_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptmsdyn_UniqueName" xml:space="preserve">
+    <value>Ainunimi</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptOverriddenCreatedOn" xml:space="preserve">
+    <value>Kirje koostamiskuupäev</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptOwnerId" xml:space="preserve">
+    <value>Omanik</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptOwningBusinessUnit" xml:space="preserve">
+    <value>Omanikust äriüksus</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptOwningTeam" xml:space="preserve">
+    <value>Omanikust meeskond</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptOwningUser" xml:space="preserve">
+    <value>Omanikust kasutaja</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstatecode" xml:space="preserve">
+    <value>Olek</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstatuscode" xml:space="preserve">
+    <value>Oleku põhjus</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepCreatedBy" xml:space="preserve">
+    <value>Looja:</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepCreatedOn" xml:space="preserve">
+    <value>Koostamiskuupäev</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepCreatedOnBehalfBy" xml:space="preserve">
+    <value>Loonud autor (delegaat):</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepModifiedBy" xml:space="preserve">
+    <value>Muutja:</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepModifiedOn" xml:space="preserve">
+    <value>Muudetud:</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepModifiedOnBehalfBy" xml:space="preserve">
+    <value>Muutnud (delegaat):</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_actiontype" xml:space="preserve">
+    <value>Tegevuse tüüp</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_actiontype' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_agentscriptid" xml:space="preserve">
+    <value>Agendiskript</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_agentscriptid' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_description" xml:space="preserve">
+    <value>Kirjeldus</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_macroactionid" xml:space="preserve">
+    <value>Sihtmakro</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_macroactionid' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_name" xml:space="preserve">
+    <value>Nimi</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_order" xml:space="preserve">
+    <value>Tellimus</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_order' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" xml:space="preserve">
+    <value>Agendiskripti etapp</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_productivityagentscriptstepId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" xml:space="preserve">
+    <value>Tegevuse tüüp</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for OptionSet 'msdyn_productivityagentscriptstep_msdyn_actiontype' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode" xml:space="preserve">
+    <value>Olek</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for OptionSet 'msdyn_productivityagentscriptstep_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode" xml:space="preserve">
+    <value>Oleku põhjus</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for OptionSet 'msdyn_productivityagentscriptstep_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_routeactionid" xml:space="preserve">
+    <value>Sihtskript</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_routeactionid' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_textinstruction" xml:space="preserve">
+    <value>Tekstijuhised</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_textinstruction' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_UniqueName" xml:space="preserve">
+    <value>Ainunimi</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepOverriddenCreatedOn" xml:space="preserve">
+    <value>Kirje koostamiskuupäev</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepOwnerId" xml:space="preserve">
+    <value>Omanik</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'OwnerId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepOwningBusinessUnit" xml:space="preserve">
+    <value>Omanikust äriüksus</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'OwningBusinessUnit' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepOwningTeam" xml:space="preserve">
+    <value>Omanikust meeskond</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'OwningTeam' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepOwningUser" xml:space="preserve">
+    <value>Omanikust kasutaja</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'OwningUser' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepstatecode" xml:space="preserve">
+    <value>Olek</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepstatuscode" xml:space="preserve">
+    <value>Oleku põhjus</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Ajavööndireegli versiooni number</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Teisenduse ajavööndi kood (UTC)</value>
+    <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Ajavööndireegli versiooni number</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Teisenduse ajavööndi kood (UTC)</value>
+    <comment>'msdyn_productivityagentscript' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_sessiontemplatemsdyn_enablebuildexpression" xml:space="preserve">
+    <value>Avaldise loomise lubamine</value>
+    <comment>'msdyn_sessiontemplate' : displayname for Attribute 'msdyn_enablebuildexpression' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_sessiontemplatemsdyn_expressiondata" xml:space="preserve">
+    <value>Avaldise andmed</value>
+    <comment>'msdyn_sessiontemplate' : displayname for Attribute 'msdyn_expressiondata' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_sessiontemplatemsdyn_sessiontemplate_msdyn_enablebuildexpression" xml:space="preserve">
+    <value>Avaldise loomise lubamine</value>
+    <comment>'msdyn_sessiontemplate' : displayname for OptionSet 'msdyn_sessiontemplate_msdyn_enablebuildexpression' on Entity</comment>
+  </data>
+  <data name="1:label,Agent script step{06E780F6-7CD5-4C96-8376-99276FC53A43}" xml:space="preserve">
+    <value>Vahekaart</value>
+    <comment>'Agent script step' : label for tab in Entity FormXml ID: '{06E780F6-7CD5-4C96-8376-99276FC53A43}'</comment>
+  </data>
+  <data name="1:label,Agent script step{08AAD7E8-EAC9-4026-A48F-AE5C162E8638}" xml:space="preserve">
+    <value />
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{08AAD7E8-EAC9-4026-A48F-AE5C162E8638}'</comment>
+  </data>
+  <data name="1:label,Agent script step{0944a40d-51ad-4a8c-8a43-c0d782747d10}" xml:space="preserve">
+    <value>Üldist</value>
+    <comment>'Agent script step' : label for section in Entity FormXml ID: '{0944a40d-51ad-4a8c-8a43-c0d782747d10}'</comment>
+  </data>
+  <data name="1:label,Agent script step{0BDFC78D-0DCA-4442-B3C0-7533CD6E834A}" xml:space="preserve">
+    <value>Tekstijuhised</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{0BDFC78D-0DCA-4442-B3C0-7533CD6E834A}'</comment>
+  </data>
+  <data name="1:label,Agent script step{0db802e5-ca1b-728c-40ea-e55e95e32ac7}" xml:space="preserve">
+    <value>Ainunimi</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{0db802e5-ca1b-728c-40ea-e55e95e32ac7}'</comment>
+  </data>
+  <data name="1:label,Agent script step{108cee13-b063-44a4-a88a-85c1a6c367ec}" xml:space="preserve">
+    <value />
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{108cee13-b063-44a4-a88a-85c1a6c367ec}'</comment>
+  </data>
+  <data name="1:label,Agent script step{10AF75E8-453B-4B45-94E1-FCA4CC3A4EAB}" xml:space="preserve">
+    <value>Sihtskript</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{10AF75E8-453B-4B45-94E1-FCA4CC3A4EAB}'</comment>
+  </data>
+  <data name="1:label,Agent script step{11365ECC-7DDC-4A41-BF60-A8EC8910E06E}" xml:space="preserve">
+    <value>Tegevuse tüüp</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{11365ECC-7DDC-4A41-BF60-A8EC8910E06E}'</comment>
+  </data>
+  <data name="1:label,Agent script step{1d1b7e7d-8e67-9aa3-9db9-2413de675546}" xml:space="preserve">
+    <value>Tegevuse tüüp</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{1d1b7e7d-8e67-9aa3-9db9-2413de675546}'</comment>
+  </data>
+  <data name="1:label,Agent script step{27b22be1-ed26-9591-25c6-ea04540c3010}" xml:space="preserve">
+    <value>Sihtmakro</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{27b22be1-ed26-9591-25c6-ea04540c3010}'</comment>
+  </data>
+  <data name="1:label,Agent script step{27d0593f-b124-4ff7-9f02-35398b487bce}" xml:space="preserve">
+    <value>Üldist</value>
+    <comment>'Agent script step' : label for tab in Entity FormXml ID: '{27d0593f-b124-4ff7-9f02-35398b487bce}'</comment>
+  </data>
+  <data name="1:label,Agent script step{28C9C2CC-4450-4E23-A7A9-EE09121B4826}" xml:space="preserve">
+    <value>jaotis</value>
+    <comment>'Agent script step' : label for section in Entity FormXml ID: '{28C9C2CC-4450-4E23-A7A9-EE09121B4826}'</comment>
+  </data>
+  <data name="1:label,Agent script step{2a5d894c-4c5d-4187-b95c-0176b10176a2}" xml:space="preserve">
+    <value />
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{2a5d894c-4c5d-4187-b95c-0176b10176a2}'</comment>
+  </data>
+  <data name="1:label,Agent script step{309c94f7-a3b2-49db-8c8c-7b0e54bf4a7f}" xml:space="preserve">
+    <value />
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{309c94f7-a3b2-49db-8c8c-7b0e54bf4a7f}'</comment>
+  </data>
+  <data name="1:label,Agent script step{3b606bfb-283e-49b0-afce-eb118bc3d75f}" xml:space="preserve">
+    <value />
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{3b606bfb-283e-49b0-afce-eb118bc3d75f}'</comment>
+  </data>
+  <data name="1:label,Agent script step{4087ef62-0d07-4c28-9b73-a6d96cbcfdd9}" xml:space="preserve">
+    <value />
+    <comment>'Agent script step' : label for tab in Entity FormXml ID: '{4087ef62-0d07-4c28-9b73-a6d96cbcfdd9}'</comment>
+  </data>
+  <data name="1:label,Agent script step{4364e140-18ff-4a40-b24d-8f348f1e4e0f}" xml:space="preserve">
+    <value />
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{4364e140-18ff-4a40-b24d-8f348f1e4e0f}'</comment>
+  </data>
+  <data name="1:label,Agent script step{44ad0cd7-49a9-4e71-9163-ef6b6a154d70}" xml:space="preserve">
+    <value>ÜLDIST</value>
+    <comment>'Agent script step' : label for section in Entity FormXml ID: '{44ad0cd7-49a9-4e71-9163-ef6b6a154d70}'</comment>
+  </data>
+  <data name="1:label,Agent script step{46729a82-11a4-0bd8-aced-946b801902b6}" xml:space="preserve">
+    <value>Tellimus</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{46729a82-11a4-0bd8-aced-946b801902b6}'</comment>
+  </data>
+  <data name="1:label,Agent script step{4877817D-BAF0-4347-B5CE-DAF8C0BCF156}" xml:space="preserve">
+    <value>jaotis</value>
+    <comment>'Agent script step' : label for section in Entity FormXml ID: '{4877817D-BAF0-4347-B5CE-DAF8C0BCF156}'</comment>
+  </data>
+  <data name="1:label,Agent script step{4DF0386F-3B14-47C1-BD14-E375CBADEAB0}" xml:space="preserve">
+    <value>Tellimus</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{4DF0386F-3B14-47C1-BD14-E375CBADEAB0}'</comment>
+  </data>
+  <data name="1:label,Agent script step{5b9efe00-7849-4450-980e-0215db1f0cb5}" xml:space="preserve">
+    <value>Jalus</value>
+    <comment>'Agent script step' : label for section in Entity FormXml ID: '{5b9efe00-7849-4450-980e-0215db1f0cb5}'</comment>
+  </data>
+  <data name="1:label,Agent script step{7047a05b-c2a1-5d6d-2aa7-e1503787909b}" xml:space="preserve">
+    <value>Tekstijuhised</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{7047a05b-c2a1-5d6d-2aa7-e1503787909b}'</comment>
+  </data>
+  <data name="1:label,Agent script step{7102DCC7-3682-4993-B803-1D4CEA4E0B8E}" xml:space="preserve">
+    <value>jaotis</value>
+    <comment>'Agent script step' : label for section in Entity FormXml ID: '{7102DCC7-3682-4993-B803-1D4CEA4E0B8E}'</comment>
+  </data>
+  <data name="1:label,Agent script step{73164938-5F38-4087-B442-98BCF42CDED8}" xml:space="preserve">
+    <value>Sihtmakro</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{73164938-5F38-4087-B442-98BCF42CDED8}'</comment>
+  </data>
+  <data name="1:label,Agent script step{767551D7-DF70-41FE-B0DF-385686700A41}" xml:space="preserve">
+    <value>Ainunimi</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{767551D7-DF70-41FE-B0DF-385686700A41}'</comment>
+  </data>
+  <data name="1:label,Agent script step{7E95DE87-E1BC-473E-A20A-ED409753528B}" xml:space="preserve">
+    <value>Kirjeldus</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{7E95DE87-E1BC-473E-A20A-ED409753528B}'</comment>
+  </data>
+  <data name="1:label,Agent script step{854BA292-DE35-4E18-A01B-CDECA533BE77}" xml:space="preserve">
+    <value>Omanik</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{854BA292-DE35-4E18-A01B-CDECA533BE77}'</comment>
+  </data>
+  <data name="1:label,Agent script step{8b5a7e6a-396f-4412-a544-420081f65f03}" xml:space="preserve">
+    <value>Päis</value>
+    <comment>'Agent script step' : label for section in Entity FormXml ID: '{8b5a7e6a-396f-4412-a544-420081f65f03}'</comment>
+  </data>
+  <data name="1:label,Agent script step{8dbf8458-4488-4911-acbf-60a54f03006a}" xml:space="preserve">
+    <value>Nimi</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{8dbf8458-4488-4911-acbf-60a54f03006a}'</comment>
+  </data>
+  <data name="1:label,Agent script step{96b8dd39-535b-2455-811d-38a9c2690d6b}" xml:space="preserve">
+    <value>Kirjeldus</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{96b8dd39-535b-2455-811d-38a9c2690d6b}'</comment>
+  </data>
+  <data name="1:label,Agent script step{9B4F9B5E-8321-49E7-82A5-00CFEA6F4AA2}" xml:space="preserve">
+    <value />
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{9B4F9B5E-8321-49E7-82A5-00CFEA6F4AA2}'</comment>
+  </data>
+  <data name="1:label,Agent script step{9e4545dc-057b-b52a-e0ed-d2c2abb48da5}" xml:space="preserve">
+    <value>Agendiskript</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{9e4545dc-057b-b52a-e0ed-d2c2abb48da5}'</comment>
+  </data>
+  <data name="1:label,Agent script step{9e9a125f-5b45-4657-b6e4-ebba93d478e3}" xml:space="preserve">
+    <value />
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{9e9a125f-5b45-4657-b6e4-ebba93d478e3}'</comment>
+  </data>
+  <data name="1:label,Agent script step{a1b08ad0-457f-4927-8c02-13e3177be160}" xml:space="preserve">
+    <value>Värvikood</value>
+    <comment>'Agent script step' : label for section in Entity FormXml ID: '{a1b08ad0-457f-4927-8c02-13e3177be160}'</comment>
+  </data>
+  <data name="1:label,Agent script step{a9ce96ab-b94f-4b05-bce4-f76e94ab554b}" xml:space="preserve">
+    <value />
+    <comment>'Agent script step' : label for tab in Entity FormXml ID: '{a9ce96ab-b94f-4b05-bce4-f76e94ab554b}'</comment>
+  </data>
+  <data name="1:label,Agent script step{b69535d2-3913-4883-a915-5ced4a593170}" xml:space="preserve">
+    <value />
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{b69535d2-3913-4883-a915-5ced4a593170}'</comment>
+  </data>
+  <data name="1:label,Agent script step{BFCFAAFC-A65B-406C-9257-6F1DB1AE01ED}" xml:space="preserve">
+    <value>Agendiskript</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{BFCFAAFC-A65B-406C-9257-6F1DB1AE01ED}'</comment>
+  </data>
+  <data name="1:label,Agent script step{c6c32f91-654f-4114-860c-a2e08fcf67f0}" xml:space="preserve">
+    <value />
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{c6c32f91-654f-4114-860c-a2e08fcf67f0}'</comment>
+  </data>
+  <data name="1:label,Agent script step{cf000034-e3a0-4e8c-a708-7547d21d4c6c}" xml:space="preserve">
+    <value>Üksikasjad</value>
+    <comment>'Agent script step' : label for section in Entity FormXml ID: '{cf000034-e3a0-4e8c-a708-7547d21d4c6c}'</comment>
+  </data>
+  <data name="1:label,Agent script step{cf028b65-6196-447b-912b-5388b124c22f}" xml:space="preserve">
+    <value>Omanik</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{cf028b65-6196-447b-912b-5388b124c22f}'</comment>
+  </data>
+  <data name="1:label,Agent script step{d6569a23-5a1d-c576-397e-d266333ced48}" xml:space="preserve">
+    <value>Sihtskript</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{d6569a23-5a1d-c576-397e-d266333ced48}'</comment>
+  </data>
+  <data name="1:label,Agent script step{d90c4864-4835-461d-b061-8578d11a523b}" xml:space="preserve">
+    <value />
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{d90c4864-4835-461d-b061-8578d11a523b}'</comment>
+  </data>
+  <data name="1:label,Agent script step{e769bdac-e992-4759-bb91-0a3df4f8214b}" xml:space="preserve">
+    <value />
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{e769bdac-e992-4759-bb91-0a3df4f8214b}'</comment>
+  </data>
+  <data name="1:label,Agent script step{F327F271-497A-4D4B-A7A5-81B050BAE7D3}" xml:space="preserve">
+    <value>Nimi</value>
+    <comment>'Agent script step' : label for cell in Entity FormXml ID: '{F327F271-497A-4D4B-A7A5-81B050BAE7D3}'</comment>
+  </data>
+  <data name="1:label,Agent script{08ec1e6d-a261-4f27-8d3c-ccccb50a8149}" xml:space="preserve">
+    <value />
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{08ec1e6d-a261-4f27-8d3c-ccccb50a8149}'</comment>
+  </data>
+  <data name="1:label,Agent script{154eaff3-a573-40d0-a014-d4884a232a50}" xml:space="preserve">
+    <value>Üldist</value>
+    <comment>'Agent script' : label for section in Entity FormXml ID: '{154eaff3-a573-40d0-a014-d4884a232a50}'</comment>
+  </data>
+  <data name="1:label,Agent script{29a59df8-1979-4af1-9032-d72581380b50}" xml:space="preserve">
+    <value>Nimi</value>
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{29a59df8-1979-4af1-9032-d72581380b50}'</comment>
+  </data>
+  <data name="1:label,Agent script{38af55ec-102d-4071-9d3b-64163c760b2a}" xml:space="preserve">
+    <value />
+    <comment>'Agent script' : label for tab in Entity FormXml ID: '{38af55ec-102d-4071-9d3b-64163c760b2a}'</comment>
+  </data>
+  <data name="1:label,Agent script{445efd7f-e371-4794-9940-6afae7b974c9}" xml:space="preserve">
+    <value>ÜLDIST</value>
+    <comment>'Agent script' : label for section in Entity FormXml ID: '{445efd7f-e371-4794-9940-6afae7b974c9}'</comment>
+  </data>
+  <data name="1:label,Agent script{46e093f0-c9fd-441e-bbc3-c066825b9932}" xml:space="preserve">
+    <value />
+    <comment>'Agent script' : label for tab in Entity FormXml ID: '{46e093f0-c9fd-441e-bbc3-c066825b9932}'</comment>
+  </data>
+  <data name="1:label,Agent script{4ebb7bb5-c7de-2e3a-d381-9bd714ecb824}" xml:space="preserve">
+    <value>Ainunimi</value>
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{4ebb7bb5-c7de-2e3a-d381-9bd714ecb824}'</comment>
+  </data>
+  <data name="1:label,Agent script{506a840a-ac6a-4b74-9cc2-6556d37e9fda}" xml:space="preserve">
+    <value />
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{506a840a-ac6a-4b74-9cc2-6556d37e9fda}'</comment>
+  </data>
+  <data name="1:label,Agent script{538c617f-3050-43b9-8ec7-385ca7ba7674}" xml:space="preserve">
+    <value />
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{538c617f-3050-43b9-8ec7-385ca7ba7674}'</comment>
+  </data>
+  <data name="1:label,Agent script{6974cd18-a2a5-4df8-a49b-6e1e7f89b5fe}" xml:space="preserve">
+    <value>Jalus</value>
+    <comment>'Agent script' : label for section in Entity FormXml ID: '{6974cd18-a2a5-4df8-a49b-6e1e7f89b5fe}'</comment>
+  </data>
+  <data name="1:label,Agent script{760db8b7-253d-4b09-96ce-384d1af85f5c}" xml:space="preserve">
+    <value />
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{760db8b7-253d-4b09-96ce-384d1af85f5c}'</comment>
+  </data>
+  <data name="1:label,Agent script{7f39d554-3ee1-42fd-9e13-39337380e4a8}" xml:space="preserve">
+    <value>Üldist</value>
+    <comment>'Agent script' : label for tab in Entity FormXml ID: '{7f39d554-3ee1-42fd-9e13-39337380e4a8}'</comment>
+  </data>
+  <data name="1:label,Agent script{83945b72-696a-4b55-9a69-5bef53261f16}" xml:space="preserve">
+    <value>Värvikood</value>
+    <comment>'Agent script' : label for section in Entity FormXml ID: '{83945b72-696a-4b55-9a69-5bef53261f16}'</comment>
+  </data>
+  <data name="1:label,Agent script{8478748e-ed88-48a2-991a-64cf6a7b7d07}" xml:space="preserve">
+    <value>Üksikasjad</value>
+    <comment>'Agent script' : label for section in Entity FormXml ID: '{8478748e-ed88-48a2-991a-64cf6a7b7d07}'</comment>
+  </data>
+  <data name="1:label,Agent script{87e8ab98-d0a2-ab1e-4e49-da61dc2ac315}" xml:space="preserve">
+    <value>Kirjeldus</value>
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{87e8ab98-d0a2-ab1e-4e49-da61dc2ac315}'</comment>
+  </data>
+  <data name="1:label,Agent script{885f267b-494d-4cfe-9891-b5b804384808}" xml:space="preserve">
+    <value>Päis</value>
+    <comment>'Agent script' : label for section in Entity FormXml ID: '{885f267b-494d-4cfe-9891-b5b804384808}'</comment>
+  </data>
+  <data name="1:label,Agent script{94afe4ee-45a0-4c3c-9365-2c1003939ced}" xml:space="preserve">
+    <value />
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{94afe4ee-45a0-4c3c-9365-2c1003939ced}'</comment>
+  </data>
+  <data name="1:label,Agent script{acb81a22-384c-4709-96bd-dd1f734d4bd1}" xml:space="preserve">
+    <value />
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{acb81a22-384c-4709-96bd-dd1f734d4bd1}'</comment>
+  </data>
+  <data name="1:label,Agent script{b0a2c3c8-a5b4-80e8-8db8-029c72e6b0e4}" xml:space="preserve">
+    <value>Keel</value>
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{b0a2c3c8-a5b4-80e8-8db8-029c72e6b0e4}'</comment>
+  </data>
+  <data name="1:label,Agent script{B1716419-3C10-4908-999F-AD10A60CED21}" xml:space="preserve">
+    <value>Agendiskripti etapid</value>
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{B1716419-3C10-4908-999F-AD10A60CED21}'</comment>
+  </data>
+  <data name="1:label,Agent script{c92a251d-4c9e-48c9-9ad9-a13c2ca92bfe}" xml:space="preserve">
+    <value />
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{c92a251d-4c9e-48c9-9ad9-a13c2ca92bfe}'</comment>
+  </data>
+  <data name="1:label,Agent script{d66eb945-6a2a-414a-8020-92b0662261bf}" xml:space="preserve">
+    <value />
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{d66eb945-6a2a-414a-8020-92b0662261bf}'</comment>
+  </data>
+  <data name="1:label,Agent script{D9FE4353-9B2B-49BC-8C25-A9A9A209AACF}" xml:space="preserve">
+    <value>Jaotis</value>
+    <comment>'Agent script' : label for section in Entity FormXml ID: '{D9FE4353-9B2B-49BC-8C25-A9A9A209AACF}'</comment>
+  </data>
+  <data name="1:label,Agent script{dc6613e4-99e1-44d1-bf04-fc0c82998b00}" xml:space="preserve">
+    <value />
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{dc6613e4-99e1-44d1-bf04-fc0c82998b00}'</comment>
+  </data>
+  <data name="1:label,Agent script{f6f36233-99a7-4724-8ecc-0d6d07536d78}" xml:space="preserve">
+    <value />
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{f6f36233-99a7-4724-8ecc-0d6d07536d78}'</comment>
+  </data>
+  <data name="1:label,Agent script{fe273ef3-8d02-41ab-95a8-e8ce7c389aaf}" xml:space="preserve">
+    <value>Omanik</value>
+    <comment>'Agent script' : label for cell in Entity FormXml ID: '{fe273ef3-8d02-41ab-95a8-e8ce7c389aaf}'</comment>
+  </data>
+  <data name="1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode0" xml:space="preserve">
+    <value>Aktiivne</value>
+    <comment>'msdyn_productivityagentscript' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode1" xml:space="preserve">
+    <value>Passiivne</value>
+    <comment>'msdyn_productivityagentscript' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode1" xml:space="preserve">
+    <value>Aktiivne</value>
+    <comment>'msdyn_productivityagentscript' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_productivityagentscriptmsdyn_productivityagentscript_statuscode2" xml:space="preserve">
+    <value>Passiivne</value>
+    <comment>'msdyn_productivityagentscript' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype192350000" xml:space="preserve">
+    <value>Tekst</value>
+    <comment>'msdyn_productivityagentscriptstep' : label for option '192350000' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype192350001" xml:space="preserve">
+    <value>Makro</value>
+    <comment>'msdyn_productivityagentscriptstep' : label for option '192350001' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype192350002" xml:space="preserve">
+    <value>Skript</value>
+    <comment>'msdyn_productivityagentscriptstep' : label for option '192350002' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode0" xml:space="preserve">
+    <value>Aktiivne</value>
+    <comment>'msdyn_productivityagentscriptstep' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statecode1" xml:space="preserve">
+    <value>Passiivne</value>
+    <comment>'msdyn_productivityagentscriptstep' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode1" xml:space="preserve">
+    <value>Aktiivne</value>
+    <comment>'msdyn_productivityagentscriptstep' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_statuscode2" xml:space="preserve">
+    <value>Passiivne</value>
+    <comment>'msdyn_productivityagentscriptstep' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_sessiontemplatemsdyn_sessiontemplate_msdyn_enablebuildexpression0" xml:space="preserve">
+    <value>Ei</value>
+    <comment>'msdyn_sessiontemplate' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_sessiontemplatemsdyn_sessiontemplate_msdyn_enablebuildexpression1" xml:space="preserve">
+    <value>Jah</value>
+    <comment>'msdyn_sessiontemplate' : label for option '1' on Entity</comment>
+  </data>
+  <data name="1:label,Session Template{1301352c-6d58-9c88-b9e7-bd5747ba7e79}" xml:space="preserve">
+    <value>Avaldise loomise lubamine</value>
+    <comment>'Session Template' : label for cell in Entity FormXml ID: '{1301352c-6d58-9c88-b9e7-bd5747ba7e79}'</comment>
+  </data>
+  <data name="1:label,Session Template{2e02b3ce-2067-9658-434b-4eda0c1b5a33}" xml:space="preserve">
+    <value>Jaotis</value>
+    <comment>'Session Template' : label for section in Entity FormXml ID: '{2e02b3ce-2067-9658-434b-4eda0c1b5a33}'</comment>
+  </data>
+  <data name="1:label,Session Template{405de66e-42ea-302a-d2b0-1ce488ed96b0}" xml:space="preserve">
+    <value>Avaldise andmed</value>
+    <comment>'Session Template' : label for cell in Entity FormXml ID: '{405de66e-42ea-302a-d2b0-1ce488ed96b0}'</comment>
+  </data>
+  <data name="1:label,Session Template{76146e77-b856-6567-d21a-a62bbb3969ae}" xml:space="preserve">
+    <value>Agendiskriptid</value>
+    <comment>'Session Template' : label for tab in Entity FormXml ID: '{76146e77-b856-6567-d21a-a62bbb3969ae}'</comment>
+  </data>
+  <data name="1:label,Session Template{7A67B0BD-A184-4DF1-AECB-6C43D7D13A7F}" xml:space="preserve">
+    <value>Lahtiütlus</value>
+    <comment>'Session Template' : label for cell in Entity FormXml ID: '{7A67B0BD-A184-4DF1-AECB-6C43D7D13A7F}'</comment>
+  </data>
+  <data name="1:label,Session Template{ad3462b1-b750-2801-d556-a56550578053}" xml:space="preserve">
+    <value>Määrake agendi vaikeskript</value>
+    <comment>'Session Template' : label for section in Entity FormXml ID: '{ad3462b1-b750-2801-d556-a56550578053}'</comment>
+  </data>
+  <data name="1:label,Session Template{b01cb01a-c807-2e3a-a780-7de072ee7de8}" xml:space="preserve">
+    <value>Agendiskriptid</value>
+    <comment>'Session Template' : label for cell in Entity FormXml ID: '{b01cb01a-c807-2e3a-a780-7de072ee7de8}'</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_productivityagentscriptentitymsdyn_productivityagentscript" xml:space="preserve">
+    <value>Agendiskriptid</value>
+    <comment> 'msdyn_productivityagentscript' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_productivityagentscriptstepentitymsdyn_productivityagentscriptstep" xml:space="preserve">
+    <value>Agendiskripti etapid</value>
+    <comment> 'msdyn_productivityagentscriptstep' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_sessiontemplateentitymsdyn_sessiontemplate" xml:space="preserve">
+    <value>Seansimallid</value>
+    <comment> 'msdyn_sessiontemplate' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script step{05EBE83F-7DE2-4A01-ADBF-F99EB0871579}" xml:space="preserve">
+    <value>Agendiskripti etapid</value>
+    <comment>'Agent script step' : LocalizedName for SavedQuery on Entity QueryId: '{05EBE83F-7DE2-4A01-ADBF-F99EB0871579}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script step{0ee3ef67-758a-4a9a-b066-b6fbb925e777}" xml:space="preserve">
+    <value>Aktiivsete agendiskriptietappide kiirotsing</value>
+    <comment>'Agent script step' : LocalizedName for SavedQuery on Entity QueryId: '{0ee3ef67-758a-4a9a-b066-b6fbb925e777}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script step{104d656f-0b4d-4030-a5c9-6b7f02e05dcf}" xml:space="preserve">
+    <value>Passiivsed agendiskriptietapid</value>
+    <comment>'Agent script step' : LocalizedName for SavedQuery on Entity QueryId: '{104d656f-0b4d-4030-a5c9-6b7f02e05dcf}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script step{194a3727-e2aa-ea11-a81c-000d3ac5e423}" xml:space="preserve">
+    <value>Minu agendiskripti etapid</value>
+    <comment>'Agent script step' : LocalizedName for SavedQuery on Entity QueryId: '{194a3727-e2aa-ea11-a81c-000d3ac5e423}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script step{1B68FF28-C6AF-4CBE-BE05-DA1B968CDDD4}" xml:space="preserve">
+    <value>Teave</value>
+    <comment>'Agent script step' : LocalizedName for systemform in Entity FormXml ID: '{1B68FF28-C6AF-4CBE-BE05-DA1B968CDDD4}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script step{1ea4f420-f9df-4cb5-aace-00a69b77b8c7}" xml:space="preserve">
+    <value>Aktiivsed agendiskripti etapid</value>
+    <comment>'Agent script step' : LocalizedName for SavedQuery on Entity QueryId: '{1ea4f420-f9df-4cb5-aace-00a69b77b8c7}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script step{371db648-34af-4f9e-817e-cfb9ea67540a}" xml:space="preserve">
+    <value>Teave</value>
+    <comment>'Agent script step' : LocalizedName for systemform in Entity FormXml ID: '{371db648-34af-4f9e-817e-cfb9ea67540a}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script step{4cfec666-e1e5-4f10-8e91-98a2c286f9bc}" xml:space="preserve">
+    <value>Teave</value>
+    <comment>'Agent script step' : LocalizedName for systemform in Entity FormXml ID: '{4cfec666-e1e5-4f10-8e91-98a2c286f9bc}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script step{a70783f2-e38e-4202-8490-ee3c19dd09cb}" xml:space="preserve">
+    <value>Agendiskripti etapi otsinguvaade</value>
+    <comment>'Agent script step' : LocalizedName for SavedQuery on Entity QueryId: '{a70783f2-e38e-4202-8490-ee3c19dd09cb}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script step{c5f53883-26b9-4bde-a108-be2a1f7cf468}" xml:space="preserve">
+    <value>Agendiskripti etapi seostatud vaade</value>
+    <comment>'Agent script step' : LocalizedName for SavedQuery on Entity QueryId: '{c5f53883-26b9-4bde-a108-be2a1f7cf468}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script step{c6d5cd2b-a3ca-4684-869a-beba0f526eb2}" xml:space="preserve">
+    <value>Agendiskripti etapi täpsema otsingu vaade</value>
+    <comment>'Agent script step' : LocalizedName for SavedQuery on Entity QueryId: '{c6d5cd2b-a3ca-4684-869a-beba0f526eb2}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script step{e2dddf4d-ad98-4fb0-816e-0622524203b1}" xml:space="preserve">
+    <value>Teave</value>
+    <comment>'Agent script step' : LocalizedName for systemform in Entity FormXml ID: '{e2dddf4d-ad98-4fb0-816e-0622524203b1}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script{3f42d88e-78b9-4425-905b-10c86e4b26b8}" xml:space="preserve">
+    <value>Agendiskripti seostatud vaade</value>
+    <comment>'Agent script' : LocalizedName for SavedQuery on Entity QueryId: '{3f42d88e-78b9-4425-905b-10c86e4b26b8}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script{4fc38cc4-8428-49d2-8340-51ed96cd908b}" xml:space="preserve">
+    <value>Aktiivsete agendiskriptide kiirotsing</value>
+    <comment>'Agent script' : LocalizedName for SavedQuery on Entity QueryId: '{4fc38cc4-8428-49d2-8340-51ed96cd908b}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script{67277fb5-ba01-429e-a2cd-77407871f5a3}" xml:space="preserve">
+    <value>Teave</value>
+    <comment>'Agent script' : LocalizedName for systemform in Entity FormXml ID: '{67277fb5-ba01-429e-a2cd-77407871f5a3}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script{78cc8fd4-913c-474d-aab3-b9674867b5c9}" xml:space="preserve">
+    <value>Agendiskripti otsinguvaade</value>
+    <comment>'Agent script' : LocalizedName for SavedQuery on Entity QueryId: '{78cc8fd4-913c-474d-aab3-b9674867b5c9}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script{953935c6-e4d3-47d8-9278-48649c09cf71}" xml:space="preserve">
+    <value>Teave</value>
+    <comment>'Agent script' : LocalizedName for systemform in Entity FormXml ID: '{953935c6-e4d3-47d8-9278-48649c09cf71}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script{a57f7d04-e2aa-ea11-a81c-000d3ac5e423}" xml:space="preserve">
+    <value>Minu agendiskriptid</value>
+    <comment>'Agent script' : LocalizedName for SavedQuery on Entity QueryId: '{a57f7d04-e2aa-ea11-a81c-000d3ac5e423}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script{ced891b7-5f59-41ec-a83b-bbdbc3983808}" xml:space="preserve">
+    <value>Aktiivsed agendiskriptid</value>
+    <comment>'Agent script' : LocalizedName for SavedQuery on Entity QueryId: '{ced891b7-5f59-41ec-a83b-bbdbc3983808}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script{f42b1f24-c608-47b5-a701-41ae59874107}" xml:space="preserve">
+    <value>Passiivsed agendiskriptid</value>
+    <comment>'Agent script' : LocalizedName for SavedQuery on Entity QueryId: '{f42b1f24-c608-47b5-a701-41ae59874107}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script{f9097348-d815-4ac6-b00c-cf5b166a29c1}" xml:space="preserve">
+    <value>Agendiskripti täpsema otsingu vaade</value>
+    <comment>'Agent script' : LocalizedName for SavedQuery on Entity QueryId: '{f9097348-d815-4ac6-b00c-cf5b166a29c1}'</comment>
+  </data>
+  <data name="1:LocalizedName,Agent script{fc60eca2-37c4-43c3-b604-e11d433ae008}" xml:space="preserve">
+    <value>Teave</value>
+    <comment>'Agent script' : LocalizedName for systemform in Entity FormXml ID: '{fc60eca2-37c4-43c3-b604-e11d433ae008}'</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_productivityagentscriptentitymsdyn_productivityagentscript" xml:space="preserve">
+    <value>Agendiskript</value>
+    <comment> 'msdyn_productivityagentscript' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_productivityagentscriptstepentitymsdyn_productivityagentscriptstep" xml:space="preserve">
+    <value>Agendiskripti etapp</value>
+    <comment> 'msdyn_productivityagentscriptstep' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_sessiontemplateentitymsdyn_sessiontemplate" xml:space="preserve">
+    <value>Seansimall</value>
+    <comment> 'msdyn_sessiontemplate' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,Process{46291012-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
+    <value>Aktiivsed makrod</value>
+    <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
+  </data>
+  <data name="1:LocalizedName,Session Template{5de0d599-f36d-425a-9c06-b80630d91def}" xml:space="preserve">
+    <value>Teave</value>
+    <comment>'Session Template' : LocalizedName for systemform in Entity FormXml ID: '{5de0d599-f36d-425a-9c06-b80630d91def}'</comment>
+  </data>
+  <data name="1:Title,Agent script stepInfo{371db648-34af-4f9e-817e-cfb9ea67540a}" xml:space="preserve">
+    <value>Üldine</value>
+    <comment>'Agent script step' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Agent script stepMarketing{371db648-34af-4f9e-817e-cfb9ea67540a}" xml:space="preserve">
+    <value>Turundus</value>
+    <comment>'Agent script step' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Agent script stepProcessCenter{371db648-34af-4f9e-817e-cfb9ea67540a}" xml:space="preserve">
+    <value>Protsessiseansid</value>
+    <comment>'Agent script step' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Agent script stepSales{371db648-34af-4f9e-817e-cfb9ea67540a}" xml:space="preserve">
+    <value>Müügid</value>
+    <comment>'Agent script step' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Agent script stepService{371db648-34af-4f9e-817e-cfb9ea67540a}" xml:space="preserve">
+    <value>Teenindus</value>
+    <comment>'Agent script step' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+  <data name="1:Title,Agent scriptInfo{fc60eca2-37c4-43c3-b604-e11d433ae008}" xml:space="preserve">
+    <value>Üldine</value>
+    <comment>'Agent script' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Agent scriptMarketing{fc60eca2-37c4-43c3-b604-e11d433ae008}" xml:space="preserve">
+    <value>Turundus</value>
+    <comment>'Agent script' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Agent scriptProcessCenter{fc60eca2-37c4-43c3-b604-e11d433ae008}" xml:space="preserve">
+    <value>Protsessiseansid</value>
+    <comment>'Agent script' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Agent scriptSales{fc60eca2-37c4-43c3-b604-e11d433ae008}" xml:space="preserve">
+    <value>Müügid</value>
+    <comment>'Agent script' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Agent scriptService{fc60eca2-37c4-43c3-b604-e11d433ae008}" xml:space="preserve">
+    <value>Teenindus</value>
+    <comment>'Agent script' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+  <data name="68:Description,{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}" xml:space="preserve">
+    <value>Avaldisekoostaja agendi vaikeskriptile</value>
+    <comment> '{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}' : Description for Dialog</comment>
+  </data>
+  <data name="68:label,{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}{0988560E-093E-4CC0-88E6-85B92A75E973}" xml:space="preserve">
+    <value>Avaldisekoostaja</value>
+    <comment>'{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}' : label for cell in Dialog FormXml ID: '{0988560E-093E-4CC0-88E6-85B92A75E973}'</comment>
+  </data>
+  <data name="68:label,{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}{84C68612-4308-41D2-A1DC-A808B448119F}" xml:space="preserve">
+    <value>Makrode kujundaja</value>
+    <comment>'{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}' : label for cell in Dialog FormXml ID: '{84C68612-4308-41D2-A1DC-A808B448119F}'</comment>
+  </data>
+  <data name="68:LocalizedName,{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}" xml:space="preserve">
+    <value>Avaldisekoostaja</value>
+    <comment> '{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}' : LocalizedName for Dialog</comment>
+  </data>
+</root>

@@ -1,0 +1,14 @@
+﻿{
+  "include": [
+    "Constants.ts",
+    "AgentScriptDesignerScript.ts"
+  ],
+	"exclude": [
+		"node_modules"
+	],
+	"compileOnSave": true,
+  "compilerOptions": {
+    "outFile": "../../Solution/WebResources/AgentScriptDesigner/msdyn_AgentscriptDesginer_internal_libarary.js",
+    "skipLibCheck": true
+  }
+}

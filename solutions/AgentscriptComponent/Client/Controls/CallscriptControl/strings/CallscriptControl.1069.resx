@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Agenteentzako gidoia</value>
+    <value>Agenteen gidoiak</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Agenteen gidoiekin, zehatzagoa eta eraginkorragoa izango zara eta, bezeroarekiko tratuari dagokionez, bizkorragoa eta produktiboagoa.</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>{0} makro-urratsak huts egin du.</value>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>{0} testuzko argibidearen urratsa.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Ez da aurkitu erlazionatutako agenteen gidoirik.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

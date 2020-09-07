@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="msdyn_AgentscriptComponent.1033.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="pl-PL" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";msdyn_AgentscriptComponent.1033.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to read macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nie można odczytać definicji makra]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.0003566Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when the macro definition to be edited could not be read]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to read action templates]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nie można odczytać szablonów akcji]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.0003566Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when templates entity read fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to find designer configuration]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nie można odnaleźć konfiguracji projektanta]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.0003566Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when config entity read fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_CDS_WRITE_ERROR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to save macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nie można zapisać definicji makra]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.0003566Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when write to CDS fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_INIT_FAILURE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Designer control initialization failed]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Inicjowanie kontrolki projektanta nie powiodło się]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.0003566Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when designer control initialization fails]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_JSON_GENERATION_ERROR" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to create macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nie można utworzyć definicji makra]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.000355Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when designer control cannot generate a valid JSON]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_LOAD_FAILURE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to load macro definition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nie można załadować definicji makra]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.000355Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when the control cannot load the macro definition]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
+      <Item ItemId=";DESIGNER_CONTROL_RENDER_FAILURE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unable to render macro designer control]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nie można wyrenderować kontrolki projektanta makr]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-08-26T06:53:39.000355Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Error message when the control cannot be rendered]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO34357_20200824" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent script connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Łącznik skryptu agenta]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000927Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display name for custom connector]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_CONDITION_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Condition]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Warunek]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000927Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary for expression builder for expression evaluation]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Customer Service]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Obsługa klienta]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000927Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display string for custom category]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Built-in]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Wbudowane]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000927Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Display string for logic app built in category]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SEARCHTEXT" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Wyszukaj ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000927Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Search string for Designer Control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sets the default agent script ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ustawia domyślny skrypt agenta ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000927Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Select the agent script ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Wybierz skrypt agenta ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000927Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for input paramater  set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Agent script ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skrypt agenta ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000927Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for input paramater  set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Name of the agent script ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Nazwa skryptu agenta ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000927Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for output paramater  set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Default agent script ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Domyślny skrypt agenta ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000927Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for output paramater  set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_SETCALLSCRIPT_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Set default agent script]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ustaw domyślny skrypt agenta]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000927Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary for set call script action]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_START_DESCRIPTION" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[When the session loads, start evaluating the expression]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Podczas ładowania sesji rozpocznij obliczanie wyrażenia]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000927Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Description for start trigger for expression evaluation]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";LADESIGNER_START_SUMMARY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start evaluating expression  ]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Rozpocznij obliczanie wyrażenia  ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000927Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Summary for start trigger for expression evaluation]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_CANCEL" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Cancel]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Anuluj]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000927Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to cancel]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";MACRO_ACTION_SAVE_AND_CLOSE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save and close]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Zapisz i zamknij]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-22T07:50:32.0000927Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Action to save and close]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO32639_20200720" />
+        </Props>
+      </Item>
+      <Item ItemId=";Set_Default_AgentScript_No_Help_Text" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Set the toggle to No to disable the expression to set the default script for a particular session type.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ustaw przełącznik na wartość Nie, aby wyłączyć wyrażenie służące do ustawiania domyślnego skryptu dla określonego typu sesji.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T07:58:18.0003113Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+      <Item ItemId=";Set_Default_AgentScript_Yes_Help_Text" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Set the toggle to Yes to enable and build expression to set the default script for a particular session type.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ustaw przełącznik na wartość Tak, aby włączyć i skompilować wyrażenie służące do ustawiania domyślnego skryptu dla określonego typu sesji.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-15T07:58:18.0003113Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO32438_20200713" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

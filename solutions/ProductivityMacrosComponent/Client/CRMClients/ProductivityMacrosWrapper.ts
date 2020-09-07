@@ -4,8 +4,9 @@
 
 /// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 /// <reference path="Constants.ts" />
-/// <reference path="../../TypeDefinitions/msdyn_internal_ci_library.d.ts" />
+/// <reference path="../../TypeDefinitions/AppRuntimeClientSdk.d.ts" />
 /// <reference path="../TelemetryHelper.ts" />
+/// <reference path="FPIHelper.ts" />
 
 /** @internal */
 namespace Microsoft.ProductivityMacros.Internal {
@@ -70,6 +71,210 @@ namespace Microsoft.ProductivityMacros.Internal {
         return ret;
     }
 
+    function getCustomArrayFromEntityCollection(entities: any): any {
+        let arrayObj: any = [];
+        entities.forEach(function (item: any) {
+            let obj: any = {};
+            obj["Name"] = item.msdyn_name;
+            obj["Value"] = item.msdyn_value;
+            arrayObj.push(obj);
+        });
+        return arrayObj;
+    }
+
+    function focusTab(tabId: string): Promise<any> {
+        if (!(isNullOrUndefined(tabId))) {
+            return new Promise<any>((resolve, reject) => {
+                let sessionId: string = getFocusedSessionId();
+                let session = Microsoft.AppRuntime.Sessions.getSession(sessionId);
+                let tab = session.getTab(tabId);
+                tab.focus();
+                resolve("tab in focus");
+            });
+        } else {
+            return Promise.reject("tabId is null or undefined");
+        }
+    }
+
+    function refreshTab(tabId: string): Promise<any> {
+        if (!(isNullOrUndefined(tabId))) {
+            return new Promise<any>((resolve, reject) => {
+                let sessionId: string = getFocusedSessionId();
+                let session = Microsoft.AppRuntime.Sessions.getSession(sessionId);
+                let tab = session.getTab(tabId);
+                tab.refresh();
+                resolve("tab refreshed");
+            });
+        } else {
+            return Promise.reject("tabId is null or undefined");
+        }
+    }
+
+    function openTab(actionName: string, pageInput: XrmClientApi.PageInput): Promise<string> {
+        return new Promise<any>(function (resolve, reject) {
+            var tabInput: XrmClientApi.TabInput = {
+                pageInput: pageInput,
+                options: { isFocused: true }
+            }
+            createTab(tabInput).then(
+                function (tabId: string) {
+                    var ouputResponse: any = {};
+                    var sessionContextParams: any = {};
+                    sessionContextParams[actionName + ".TabId"] = tabId;
+                    sessionContextParams[actionName + ".PageType"] = tabInput.pageInput.pageType;
+                    ouputResponse["result"] = sessionContextParams;
+                    resolve(ouputResponse);
+                },
+                function (error: Error) {
+                    reject(error.message);
+                }
+            );
+        });
+    }
+
+    function getApplicationTemplate(guid: string): Promise<any> { // update consoleapplication
+        return new Promise<any>(function (resolve, reject) {
+            let xml = `<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+                          <entity name="msdyn_templateparameter">
+                            <attribute name='msdyn_name' />
+                            <attribute name='msdyn_value' />
+                            <order attribute="msdyn_name" descending="false" />
+                            <filter type="and">
+                                <condition attribute='msdyn_applicationtabtemplateid' operator='eq' uitype='msdyn_applicationtabtemplate' value='{` + guid + `}' />
+                            </filter>
+                          </entity>
+                        </fetch>`;
+
+            Xrm.WebApi.retrieveMultipleRecords("msdyn_templateparameter", "?fetchXml=" + encodeURIComponent(xml)).then(function (result) {
+                if (result.entities.length > 0)
+                    resolve(result);
+                else
+                    reject("No Parameter found for given Applicate Tab Template - openApplicationTamplate");
+            },
+                function (error) {
+                    reject(error)
+                });
+        });
+    }
+
+    function getPageInput(entityData: any): XrmClientApi.PageInput {
+        var pageInput: any = {};
+        let i: number;
+        let AppTabConstant = OpenAppTabType;
+        switch (entityData.PageType.replace(/\s/g, "").toLowerCase()) {
+            case AppTabConstant.CustomControlInputString:
+            case AppTabConstant.Control:
+                pageInput.pageType = AppTabConstant.Control;
+                for (i = 0; i < entityData.Custom_Array.length; i++) {
+                    try {
+                        if (entityData.Custom_Array[i].Value !== undefined) {
+                            pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
+                            if (entityData.Custom_Array[i].Name.toLowerCase() == AppTabConstant.Data)
+                                pageInput[entityData.Custom_Array[i].Name] = JSON.parse(entityData.Custom_Array[i].Value);
+                        }
+                    }
+                    catch (e) {
+                        continue;
+                    }
+                }
+                break;
+            case AppTabConstant.DashboardInputString:
+                pageInput.pageType = AppTabConstant.Dashboard;
+                for (i = 0; i < entityData.Custom_Array.length; i++) {
+                    if (entityData.Custom_Array[i].Value !== undefined) {
+                        pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
+                    }
+                }
+                break;
+            case AppTabConstant.EntityViewInputString:
+            case AppTabConstant.Entitylist:
+                pageInput.pageType = AppTabConstant.Entitylist;
+                for (i = 0; i < entityData.Custom_Array.length; i++) {
+                    if (entityData.Custom_Array[i].Value !== undefined) {
+                        pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
+                    }
+                }
+                break;
+            case AppTabConstant.EntityRecordInputString:
+                pageInput.pageType = AppTabConstant.Entityrecord;
+                for (i = 0; i < entityData.Custom_Array.length; i++) {
+                    try {
+                        if (entityData.Custom_Array[i].Value !== undefined) {
+                            switch (entityData.Custom_Array[i].Name.toLowerCase()) {
+                                case AppTabConstant.Relationship:
+                                    pageInput.relationship = JSON.parse(entityData.Custom_Array[i].Value);
+                                    break;
+                                case AppTabConstant.CreateFromEntity:
+                                    pageInput.processInstanceId = JSON.parse(entityData.Custom_Array[i].Value);
+                                    break;
+                                case AppTabConstant.Data:
+                                    pageInput.data = JSON.parse(entityData.Custom_Array[i].Value);
+                                    break;
+                                default:
+                                    pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
+                            }
+                        }
+                    }
+                    catch (e) {
+                        continue;
+                    }
+                }
+                break;
+            case AppTabConstant.EntitySearchInputString:
+                pageInput.pageType = AppTabConstant.Search;
+                for (i = 0; i < entityData.Custom_Array.length; i++) {
+                    try {
+                        if (entityData.Custom_Array[i].Value !== undefined) {
+                            pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
+                            if (entityData.Custom_Array[i].Name == AppTabConstant.SearchType)
+                                pageInput[entityData.Custom_Array[i].Name] = parseInt(entityData.Custom_Array[i].Value);
+                        }
+                    }
+                    catch (e) {
+                        continue;
+                    }
+                }
+                break;
+            case AppTabConstant.WebResourceInputString:
+                pageInput.pageType = AppTabConstant.Webresource;
+                for (i = 0; i < entityData.Custom_Array.length; i++) {
+                    if (entityData.Custom_Array[i].Value !== undefined) {
+                        pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
+                    }
+                }
+                break;
+            case AppTabConstant.ThirdPartyWebsiteInputString:
+            case AppTabConstant.ThirdPartyWebsiteInputString1:
+                //keeping thirthpartyWebsite as weresource as currently we are not able to access
+                //CIF public API and we are consuming Microsoft.CIFramework.External.CIFExternalUtilityImpl() to create tab
+                //pageInput.pageType = "ThirdPartyWebsite";
+                pageInput.pageType = AppTabConstant.Webresource;
+                for (i = 0; i < entityData.Custom_Array.length; i++) {
+                    if (entityData.Custom_Array[i].Value !== undefined) {
+                        switch (entityData.Custom_Array[i].Name) {
+                            case AppTabConstant.Data:
+                                //pageInput.data = entityData.Custom_Array[i].Value;
+                                pageInput.webresourceName = "msdyn_ExternalWebPageContainer.html";
+                                break;
+                            case AppTabConstant.Url:
+                                //pageInput.url = entityData.Custom_Array[i].Value;
+                                pageInput.data = "cif_thirdpartyurl" + entityData.Custom_Array[i].Value;
+                                break;
+                        }
+                    }
+                }
+                break;
+        }
+        return pageInput;
+    }
+
+    function getFocusedSessionId() {
+        if (Microsoft.AppRuntime && Microsoft.AppRuntime.Sessions) {
+            return Microsoft.AppRuntime.Sessions.getFocusedSession().sessionId;
+        } else {
+            return Xrm.App.sessions.getFocusedSession().sessionId;
+        }
+    }
 
     export function openNewForm(actionName: string, formInputs: any): Promise<string> {
         if (!(isNullOrUndefined(formInputs))) {
@@ -985,10 +1190,109 @@ namespace Microsoft.ProductivityMacros.Internal {
         });
     }
 
+    export function foucsTabAction(actionName: string, actionInputs: any): Promise<any> {
+        if (!(isNullOrUndefined(actionInputs))) {
+            return new Promise<any>((resolve, reject) => {
+                let tabId: string = actionInputs.TabId;
+                focusTab(tabId).then((success) => {
+                    var ouputResponse: any = {};
+                    var sessionContextParams: any = {};
+                    sessionContextParams[actionName + ".TabId"] = tabId;
+                    ouputResponse["result"] = sessionContextParams;
+                    resolve(ouputResponse);
+                }, (error: any) => {
+                    reject(error);
+                });
+            });
+        } else {
+            return Promise.reject("foucsTabAction is null or undefined");
+        }
+    }
+
+    export function getCurrentPageAction(actionName: string, actionInputs: any): Promise<any> {
+        if (!(isNullOrUndefined(actionInputs))) {
+            return new Promise<any>((resolve, reject) => {
+                let sessionId = getFocusedSessionId();
+                let session = Microsoft.AppRuntime.Sessions.getSession(sessionId);
+                var tabId = session.getFocusedTab().tabId;
+                var ouputResponse: any = {};
+                var sessionContextParams: any = {};
+                sessionContextParams[actionName + ".TabId"] = tabId;
+                ouputResponse["result"] = sessionContextParams;
+                resolve(ouputResponse);
+            });
+        } else {
+            return Promise.reject("getCurrentPageAction is null or undefined");
+        }
+    }
+
+    export function openApplicationTemplate(actionName: string, entityData: any): Promise<string> {
+
+        if (!entityData || entityData.PageType === undefined || entityData.ApplicationTemplateId === undefined) {
+            return Promise.reject("Need values to open application template - openApplicationTamplate");
+        }
+
+        return new Promise<string>((resolve, reject) => {
+            let pageInput: XrmClientApi.PageInput;
+            if (entityData.Custom_Array == undefined) {
+                getApplicationTemplate(entityData.ApplicationTemplateId).then(function (result) {
+                    entityData.Custom_Array = getCustomArrayFromEntityCollection(result.entities);
+                    pageInput = getPageInput(entityData);
+                    resolve(openTab(actionName, pageInput));
+                },
+                    function (error) {
+                        reject(error.message);
+                    });
+            }
+            else {
+                pageInput = getPageInput(entityData);
+                resolve(openTab(actionName, pageInput));
+            }
+        });
+    }
+
+    export function refreshPageAction(actionName: string, actionInputs: any): Promise<any> {
+        if (!(isNullOrUndefined(actionInputs))) {
+            return new Promise<any>((resolve, reject) => {
+                let tabId: string = actionInputs.TabId;
+                refreshTab(tabId).then((success) => {
+                    var ouputResponse: any = {};
+                    var sessionContextParams: any = {};
+                    sessionContextParams[actionName + ".TabId"] = tabId;
+                    ouputResponse["result"] = sessionContextParams;
+                    resolve(ouputResponse);
+                }, (error) => {
+                    reject(error);
+                });
+            });
+        } else {
+            return Promise.reject("refreshPageAction is null or undefined");
+        }
+    }
+
+    export function resolveSlug(context: any, paramName: string): Promise<any> {
+        return new Promise<any>(async (resolve, reject) => {
+            var callbackResponse: { [key: string]: any } = {};
+            let sessionContext = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
+
+            sessionContext.resolveSlug(paramName).then((result) => {
+                callbackResponse["statusCode"] = 200;
+                callbackResponse["status"] = "succedded";
+                callbackResponse["result"] = result;
+                resolve(callbackResponse);
+            },
+                (error) => {
+                    callbackResponse["statusCode"] = 500;
+                    callbackResponse["status"] = "failed";
+                    callbackResponse["result"] = error;
+                    reject(callbackResponse);
+                });
+        });
+    }
+
     function createTab(input: XrmClientApi.TabInput, telemetryData?: Object): Promise<string> {
-        if (Microsoft.CIFramework && Microsoft.CIFramework.External) {  // For OC, CIF state is rehydrated using it's own runtime dictionary. So, we are creating tab using CIF createTab api here
-            let cifExternal = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
-            return cifExternal.createTab(input);
+        if (Microsoft.AppRuntime && Microsoft.AppRuntime.Internal) {
+            return Microsoft.AppRuntime.Internal.createTab(input);
         } else {
             return Xrm.App.sessions.getFocusedSession().tabs.createTab(input);
         }
@@ -1159,4 +1463,81 @@ namespace Microsoft.ProductivityMacros.Internal {
             });
         });
     }
+
+    export function triggerFlow(actionName: string, actionInputs: any): Promise<string> {
+        if (!(isNullOrUndefined(actionInputs))) {
+            return new Promise<any>((resolve, reject) => {
+                var ouputResponse: any = {};
+                var sessionContextParams: any = {};
+
+                let fpiHelper = new FPIHelper();
+                fpiHelper.fetchFlowsEnvId()
+                    .then((flowEnvIdResponse) => {
+                        var flowEnvId: string = flowEnvIdResponse.name;
+                        // Build dialog parameters for Flow MDD.
+                        const dialogParams: XrmClientApi.Parameters = populateFlowDialogParams(
+                            actionInputs.flowId,
+                            actionInputs.entityLogicalName,
+                            actionInputs.entityRecordId,
+                            flowEnvId);
+
+                        // Set dialog options
+                        const dialogOptions: XrmClientApi.DialogOptions = {} as XrmClientApi.DialogOptions;
+                        dialogOptions.height = Constants.DIALOG_HEIGHT;
+                        dialogOptions.width = Constants.DIALOG_WIDTH;
+
+                        // Open dialog to invoke the Flow
+                        return Xrm.Navigation.openDialog(Constants.MICROSOFT_FLOWS_DIALOG, dialogOptions, dialogParams).then((result: any) => {
+                            sessionContextParams[actionName + Constants.SuffixFlowId] = result.parameters.flow_id;
+                            ouputResponse[Constants.OutputResult] = sessionContextParams;
+                            return resolve(ouputResponse);
+                        },
+                            (error: Error) => {
+                                let errorData = generateErrorObject(error, "ProductivityMacrosWrapper - triggerFlow", errorTypes.XrmApiError);
+                                logFailure("triggerFlow", errorData, "");
+                                return reject(error);
+                            });
+                    });
+
+            });
+        } else {
+            let errorObject = {} as IErrorHandler;
+            errorObject.errorMsg = "formInputs is Null or Undefined";
+            errorObject.errorType = errorTypes.InvalidParams;
+            errorObject.reportTime = new Date().toUTCString();
+            errorObject.sourceFunc = "ProductivityMacrosWrapper - triggerFlow";
+            logFailure("triggerFlow", errorObject, "");
+            return Promise.reject("triggerFlow - formInputs is Null or Undefined");
+        }
+    }
+
+
+    function populateFlowDialogParams(flowId: any, entityLogicalName: any, entityRecordId: any,
+        flowEnvId: String): XrmClientApi.Parameters {
+        const dialogParams: XrmClientApi.Parameters = {};
+        const entityIds = [];
+        entityIds.push(entityRecordId);
+        const entityId = JSON.stringify(entityIds);
+        dialogParams[Constants.ENTITIES_ID] = entityId;
+
+        dialogParams[Constants.DIALOG_FLOW_ID] = flowId;
+        dialogParams[Constants.DIALOG_FLOWS_ENVIRONMENT_ID] = flowEnvId;
+        dialogParams[Constants.DIALOG_ORG_UNIQUE_NAME] = Xrm.Utility.getGlobalContext().organizationSettings.uniqueName;
+        const destinationUrl = Xrm.Utility.getGlobalContext().getAdvancedConfigSetting(
+            Constants.FLOW_DESTINATION_URL
+        );
+
+        dialogParams[Constants.DIALOG_ENTITY_LOGICAL_NAME] = entityLogicalName;
+        dialogParams[Constants.DIALOG_FLOWS_DESTINATION_URL] = destinationUrl;
+
+        const flowFpiUrl = Xrm.Utility.getGlobalContext().getAdvancedConfigSetting(Constants.FLOW_FPI_URL);
+        dialogParams[Constants.DIALOG_FLOWS_FPI_SITE_URL] =
+            flowFpiUrl + Constants.FLOW_FPI_URL_ENABLE_WIDGET_V2_PARAMETER;
+
+        // Always load widget v2.
+        dialogParams[Constants.DIALOG_FLOWS_ENABLE_WIDGET_V2] = true;
+
+        return dialogParams;
+    }
+
 }

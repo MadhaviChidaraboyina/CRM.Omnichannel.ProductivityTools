@@ -122,11 +122,11 @@
     <comment>Button to build an expression</comment>
   </data>
   <data name="CC_ButtonControl_Name" xml:space="preserve">
-    <value>Schaltfläche „Ausdrucks-Generator“</value>
+    <value>Schaltfläche „Ausdruck generieren“</value>
     <comment>Build Expression Button</comment>
   </data>
   <data name="CC_Build_Expression" xml:space="preserve">
-    <value>Ausdrucks-Generator</value>
+    <value>Ausdruck generieren</value>
     <comment>Build Expression</comment>
   </data>
   <data name="CC_Field" xml:space="preserve">

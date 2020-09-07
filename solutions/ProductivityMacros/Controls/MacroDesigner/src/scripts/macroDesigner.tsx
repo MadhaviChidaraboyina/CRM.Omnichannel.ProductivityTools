@@ -428,6 +428,8 @@ async function startDesigner(rpc) {
 				}
 			});
 		}
+		let designerIframe = parent.window.document.getElementById("designer_id") as HTMLElement;
+		designerIframe.style.height = (parent.window.innerHeight - 240) + 'px';
 	}
 	catch (error) {
 		let obj: SharedDefines.LogObject = {

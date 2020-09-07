@@ -1,7 +1,7 @@
 ﻿/**
 * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
-module MscrmControls.CallscriptControl
+module MscrmControls.Callscript
 {
 	'use strict';
 
@@ -27,13 +27,13 @@ module MscrmControls.CallscriptControl
 		 * Get session template name for focussed session
 		 * @returns Session template name
 		 */
-		public getSessionTemplateName(): string
+		public async getSessionTemplateName(): Promise<string>
 		{
             let methodName = "getSessionTemplateName";
             let sessionTemplateName: string = "";
 
             try {
-                let context = Microsoft.AppRuntime.Sessions.getFocusedSession().context;
+                let context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
                 if (!this.context.utils.isNullOrUndefined(context)) {
                     sessionTemplateName = context.templateName;
                 }
@@ -52,13 +52,13 @@ module MscrmControls.CallscriptControl
 		 * Returns value for key in session template params for focussed session
 		 * @param key key for entry whose value is returned
 		 */
-        public getValueFromSessionTemplateParams(key: string): any {
+        public async getValueFromSessionTemplateParams(key: string): Promise<any> {
 			let methodName = "getValueFromSessionTemplateParams";
 			try {
                 //let sessionTemplateParams = this.cifExternalUtil.getSessionTemplateParams();
                 let sessionId = Microsoft.AppRuntime.Sessions.getFocusedSession().sessionId;
                 let sessionTemplateParams;
-                var context = Microsoft.AppRuntime.Sessions.getSession(sessionId).context;
+                var context = await Microsoft.AppRuntime.Sessions.getSession(sessionId).getContext();
                 if (!this.context.utils.isNullOrUndefined(context)) {
                     sessionTemplateParams = context.get(sessionId);
                 }
@@ -82,12 +82,12 @@ module MscrmControls.CallscriptControl
 		 * @param value value for the new/updated entry in session template params
 		 * @param sessionId id of session whose params are updated
 		 */
-        public setValueInSessionTemplateParams(key: string, value: any, sessionId: string): void {
+        public async setValueInSessionTemplateParams(key: string, value: any, sessionId: string): Promise<void> {
 			let methodName = "setValueInSessionTemplateParams";
 			let input: Mscrm.Dictionary = {};
 			input[key] = value;
             try {
-                var context = Microsoft.AppRuntime.Sessions.getSession(sessionId).context;
+                var context = await Microsoft.AppRuntime.Sessions.getSession(sessionId).getContext();
                 if (!this.context.utils.isNullOrUndefined(context)) {
                     context.set(sessionId, input);
                 }

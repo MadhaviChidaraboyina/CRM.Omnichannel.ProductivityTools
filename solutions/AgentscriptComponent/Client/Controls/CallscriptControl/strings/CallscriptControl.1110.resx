@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Script de axente</value>
+    <value>Scripts de axente</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Os scripts de axente axúdanlle a ser preciso e eficaz ao tempo que é máis rápido e eficiente en termos de xestión de clientes</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>Erro no paso de macro {0}.</value>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>Paso de instrución de texto {0}.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Non se atoparon scripts de axentes relativos.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

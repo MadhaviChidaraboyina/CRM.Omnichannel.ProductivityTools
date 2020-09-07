@@ -1,0 +1,28 @@
+<msdyn_productivitymacroactiontemplate msdyn_uniquename="msdyn_Update_Record">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiondescription default="Update an existing record">
+    <label description="Update an existing record" languagecode="1033" />
+  </msdyn_actiondescription>
+  <msdyn_brandcolor>#2266E3</msdyn_brandcolor>
+  <msdyn_displayname default="Update record">
+    <label description="Update record" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacros_update_record.svg</msdyn_icon>
+  <msdyn_kind>ACTIONS</msdyn_kind>
+  <msdyn_macroconnector>
+    <msdyn_uniquename>msdyn_ProductivityAutomation</msdyn_uniquename>
+  </msdyn_macroconnector>
+  <msdyn_name>Update_Record</msdyn_name>
+  <msdyn_runtimeapi>Microsoft.ProductivityMacros.Internal.updateRecord(actionName,actionInputs)</msdyn_runtimeapi>
+  <msdyn_subtitle default="Productivity automation">
+    <label description="Productivity automation" languagecode="1033" />
+  </msdyn_subtitle>
+  <msdyn_summary default="Update an existing record">
+    <label description="Update an existing record" languagecode="1033" />
+  </msdyn_summary>
+  <msdyn_title default="Update an existing record">
+    <label description="Update an existing record" languagecode="1033" />
+  </msdyn_title>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_productivitymacroactiontemplate>

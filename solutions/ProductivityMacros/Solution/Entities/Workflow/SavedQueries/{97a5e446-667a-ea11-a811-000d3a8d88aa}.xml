@@ -36,10 +36,10 @@
     </fetchxml>
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <LocalizedNames>
-      <LocalizedName description="Inactive Macros" languagecode="1033" />
+      <LocalizedName description="Draft macros" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
-      <Description description="List of Inactive Macros" languagecode="1033" />
+      <Description description="List of draft macros" languagecode="1033" />
     </Descriptions>
   </savedquery>
 </savedqueries>

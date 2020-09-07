@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Set_Default_AgentScript_No_Help_Text" xml:space="preserve">
+    <value>Белгілі бір сеанс түріне әдепкі сценарийді орнату мақсатында өрнекті өшіру үшін ауыстырып-қосқышты "Жоқ" күйіне орнатыңыз.</value>
+  </data>
+  <data name="Set_Default_AgentScript_Yes_Help_Text" xml:space="preserve">
+    <value>Белгілі бір сеанс түріне әдепкі сценарийді орнату мақсатында өрнекті қосу және құру үшін ауыстырып-қосқышты "Иә" күйіне орнатыңыз.</value>
+  </data>
+  <data name="LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" xml:space="preserve">
+    <value>Кіріктірілген</value>
+    <comment>Display string for logic app built in category</comment>
+  </data>
+  <data name="LADESIGNER_RECOMMENDATION_CATEGORY_CUSTOM" xml:space="preserve">
+    <value>Тұтынушыға қызмет көрсету</value>
+    <comment>Display string for custom category</comment>
+  </data>
+  <data name="LADESIGNER_CALLSCRIPT_CONNECTOR_DISPLAYNAME" xml:space="preserve">
+    <value>Агент сценарийінің қосқышы</value>
+    <comment>Display name for custom connector</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_SUMMARY" xml:space="preserve">
+    <value>Әдепкі агент сценарийін орнату</value>
+    <comment>Summary for set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_DESCRIPTION" xml:space="preserve">
+    <value>Әдепкі агент сценарийін орнатады </value>
+    <comment>Description for set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_TITLE" xml:space="preserve">
+    <value>Агент сценарийі </value>
+    <comment>Title for input paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_INPUT_ID_DESCRIPTION" xml:space="preserve">
+    <value>Агент сценарийін таңдау </value>
+    <comment>Description for input paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_TITLE" xml:space="preserve">
+    <value>Әдепкі агент сценарийі </value>
+    <comment>Title for output paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_SETCALLSCRIPT_OUTPUT_ID_DESCRIPTION" xml:space="preserve">
+    <value>Агент сценарийінің атауы </value>
+    <comment>Description for output paramater  set call script action</comment>
+  </data>
+  <data name="LADESIGNER_START_SUMMARY" xml:space="preserve">
+    <value>Өрнекті бағалауды бастаңыз  </value>
+    <comment>Summary for start trigger for expression evaluation</comment>
+  </data>
+  <data name="LADESIGNER_START_DESCRIPTION" xml:space="preserve">
+    <value>Сеанс жүктелген кезде, өрнекті бағалауды бастаңыз</value>
+    <comment>Description for start trigger for expression evaluation</comment>
+  </data>
+  <data name="LADESIGNER_SEARCHTEXT" xml:space="preserve">
+    <value>Іздеу </value>
+    <comment>Search string for Designer Control</comment>
+  </data>
+  <data name="LADESIGNER_CONDITION_SUMMARY" xml:space="preserve">
+    <value>Шарт</value>
+    <comment>Summary for expression builder for expression evaluation</comment>
+  </data>
+  <data name="MACRO_ACTION_SAVE_AND_CLOSE" xml:space="preserve">
+    <value>Сақтау және жабу</value>
+    <comment>Action to save and close</comment>
+  </data>
+  <data name="MACRO_ACTION_CANCEL" xml:space="preserve">
+    <value>Болдырмау</value>
+    <comment>Action to cancel</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_INVALID_MACRO_DEFINITION" xml:space="preserve">
+    <value>Макрос анықтамасын оқу мүмкін емес</value>
+    <comment>Error message when the macro definition to be edited could not be read</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" xml:space="preserve">
+    <value>Әрекет үлгілерін оқу мүмкін емес</value>
+    <comment>Error message when templates entity read fails</comment>
+  </data>
+  <data name="DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" xml:space="preserve">
+    <value>Құрастырушы конфигурациясын табу мүмкін емес</value>
+    <comment>Error message when config entity read fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_CDS_WRITE_ERROR" xml:space="preserve">
+    <value>Макрос анықтамасын сақтау мүмкін емес</value>
+    <comment>Error message when write to CDS fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_INIT_FAILURE" xml:space="preserve">
+    <value>Құрастырушының басқару элементін баптандыру сәтсіз аяқталды</value>
+    <comment>Error message when designer control initialization fails</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_JSON_GENERATION_ERROR" xml:space="preserve">
+    <value>Макрос анықтамасын жасау мүмкін емес</value>
+    <comment>Error message when designer control cannot generate a valid JSON</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_LOAD_FAILURE" xml:space="preserve">
+    <value>Макрос анықтамасын жүктеу мүмкін емес</value>
+    <comment>Error message when the control cannot load the macro definition</comment>
+  </data>
+  <data name="DESIGNER_CONTROL_RENDER_FAILURE" xml:space="preserve">
+    <value>Макрос құрастырушысының басқару элементін көрсету мүмкін емес</value>
+    <comment>Error message when the control cannot be rendered</comment>
+  </data>
+</root>

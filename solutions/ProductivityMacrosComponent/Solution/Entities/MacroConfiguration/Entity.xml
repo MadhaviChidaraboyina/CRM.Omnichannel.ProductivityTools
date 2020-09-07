@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name LocalizedName="Macro Solution Configuration" OriginalName="Macro Solution Configuration">msdyn_macrosolutionconfiguration_v2</Name>
+  <Name LocalizedName="Macro Solution Configuration" OriginalName="Macro Solution Configuration">msdyn_productivitymacrosolutionconfiguration</Name>
   <EntityInfo>
-    <entity Name="msdyn_macrosolutionconfiguration_v2">
+    <entity Name="msdyn_productivitymacrosolutionconfiguration">
       <LocalizedNames>
         <LocalizedName description="Macro Solution Configuration" languagecode="1033" />
       </LocalizedNames>
@@ -10,7 +10,7 @@
         <LocalizedCollectionName description="Macro Solution Configurations" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
-        <Description description="Macro solution related configurations v3" languagecode="1033" />
+        <Description description="Macro solution related configurations" languagecode="1033" />
       </Descriptions>
       <attributes>
         <attribute PhysicalName="CreatedBy">
@@ -443,10 +443,10 @@
           <MaxLength>1024</MaxLength>
           <Length>2048</Length>
           <displaynames>
-            <displayname description="An oData query to retrieve record from which to re" languagecode="1033" />
+            <displayname description="An OData query to retrieve record from which to read designer URL" languagecode="1033" />
           </displaynames>
           <Descriptions>
-            <Description description="An oData query to retrieve record from which to read designer URL" languagecode="1033" />
+            <Description description="An OData query to retrieve record from which to read designer URL" languagecode="1033" />
           </Descriptions>
         </attribute>
         <attribute PhysicalName="msdyn_designerurlrelativepath">
@@ -489,10 +489,10 @@
             <Description description="Sets the path to designer blob with designer URL" languagecode="1033" />
           </Descriptions>
         </attribute>
-        <attribute PhysicalName="msdyn_macrosolutionconfiguration_v2Id">
+        <attribute PhysicalName="msdyn_productivitymacrosolutionconfigurationId">
           <Type>primarykey</Type>
-          <Name>msdyn_macrosolutionconfiguration_v2id</Name>
-          <LogicalName>msdyn_macrosolutionconfiguration_v2id</LogicalName>
+          <Name>msdyn_productivitymacrosolutionconfigurationid</Name>
+          <LogicalName>msdyn_productivitymacrosolutionconfigurationid</LogicalName>
           <RequiredLevel>systemrequired</RequiredLevel>
           <DisplayMask>ValidForAdvancedFind|RequiredForGrid</DisplayMask>
           <ImeMode>auto</ImeMode>
@@ -994,7 +994,7 @@
           <IsFilterable>1</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_macrosolutionconfiguration_v2_statecode">
+          <optionset Name="msdyn_productivitymacrosolutionconfiguration_statecode">
             <OptionSetType>state</OptionSetType>
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -1054,7 +1054,7 @@
           <IsFilterable>0</IsFilterable>
           <IsRetrievable>0</IsRetrievable>
           <IsLocalizable>0</IsLocalizable>
-          <optionset Name="msdyn_macrosolutionconfiguration_v2_statuscode">
+          <optionset Name="msdyn_productivitymacrosolutionconfiguration_statuscode">
             <OptionSetType>status</OptionSetType>
             <IntroducedVersion>1.0.0.0</IntroducedVersion>
             <IsCustomizable>1</IsCustomizable>
@@ -1179,7 +1179,7 @@
           </displaynames>
         </EntityKey>
       </EntityKeys>
-      <EntitySetName>msdyn_macrosolutionconfiguration_v2s</EntitySetName>
+      <EntitySetName>msdyn_productivitymacrosolutionconfigurations</EntitySetName>
       <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>
       <IsBusinessProcessEnabled>0</IsBusinessProcessEnabled>
       <IsRequiredOffline>0</IsRequiredOffline>

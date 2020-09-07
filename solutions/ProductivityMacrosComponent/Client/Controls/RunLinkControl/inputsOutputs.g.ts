@@ -1,4 +1,4 @@
-module MscrmControls.RunLinkControl {
+module MscrmControls.RunLink {
 	export interface IInputBag {
 	}
 

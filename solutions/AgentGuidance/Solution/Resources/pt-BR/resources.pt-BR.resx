@@ -124,7 +124,7 @@
     <value>msdyn_AgentGuidance_managed.zip</value>
   </metadata>
   <metadata name="Source package type" xml:space="preserve">
-    <value>Managed</value>
+    <value>Both</value>
   </metadata>
   <metadata name="SolutionPackager Version" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -132,16 +132,16 @@
         bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
 </value>
   </metadata>
-  <data name="15062:Description,msdyn_smartassist" xml:space="preserve">
-    <value>Esta solução habilita a funcionalidade de suporte inteligente e de script de chamadas para os agentes. </value>
-    <comment> 'msdyn_AgentGuidance' : Description for Solution</comment>
+  <data name="15062:Description,AgentGuidance" xml:space="preserve">
+    <value>Esta solução tem o controle do script do agente e do suporte inteligente. </value>
+    <comment> 'AgentGuidance' : Description for Solution</comment>
+  </data>
+  <data name="15062:LocalizedName,AgentGuidance" xml:space="preserve">
+    <value>Diretrizes do agente</value>
+    <comment> 'AgentGuidance' : LocalizedName for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">
     <value>Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
-  </data>
-  <data name="15062:LocalizedName,msdyn_smartassist" xml:space="preserve">
-    <value>Diretrizes do Agente</value>
-    <comment> 'msdyn_AgentGuidance' : LocalizedName for Solution</comment>
   </data>
 </root>

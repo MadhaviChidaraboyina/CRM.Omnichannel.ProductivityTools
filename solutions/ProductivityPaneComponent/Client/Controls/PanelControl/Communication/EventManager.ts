@@ -15,9 +15,9 @@ module MscrmControls.PanelControl {
         private selectedTool : string;
         private productivityPaneConfigData : ProductivityPaneConfig;
 
-        constructor(context: Mscrm.ControlData<IInputBag>) {
+        constructor(context: Mscrm.ControlData<IInputBag>, panelState: PanelState) {
             this.context = context
-            this.inboundCommunication = new InboundCommunication(this.context);
+            this.inboundCommunication = new InboundCommunication(this.context, panelState);
             window.top.addEventListener(MscrmControls.PanelControl.PanelInboundEventName, this.inboundMessage.bind(this), false);
             this.selectedTool = "";
             this.productivityPaneConfigData = undefined;

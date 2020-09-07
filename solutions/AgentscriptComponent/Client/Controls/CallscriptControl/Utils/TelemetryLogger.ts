@@ -2,7 +2,7 @@
 * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
 
-module MscrmControls.CallscriptControl
+module MscrmControls.Callscript
 {
 	'use strict';
 
@@ -16,7 +16,7 @@ module MscrmControls.CallscriptControl
 		// Initialize context variable during init
 		constructor(context: Mscrm.ControlData<IInputBag>)
 		{
-			this.baseComponent = "MscrmControls.CallscriptControl";
+			this.baseComponent = "MscrmControls.Callscript";
 			this.separator = ".";
 			this.context = context;
 		}

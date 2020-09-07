@@ -145,6 +145,10 @@
     <value>Handläggarmanuskript</value>
     <comment>Header value for callscript control</comment>
   </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Med hjälp av handläggarskript kan du vara korrekt och effektiv samtidigt som du hanterar kunderna snabbare.</value>
+    <comment>Info value for callscript control</comment>
+  </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>Makrosteget {0} misslyckades.</value>
     <comment>When macro execution step failed</comment>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>Textinstruktionssteget {0}.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Inga relativa handläggarskript hittades.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

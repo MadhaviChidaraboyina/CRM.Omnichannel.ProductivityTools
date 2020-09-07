@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Agendi skript</value>
+    <value>Agendiskriptid</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Agendiskriptid aitavad teil olla täpne ja tõhus ning samuti ka kiirem ja efektiivsem klientide haldamisel</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>{0} – makroetapp nurjus.</value>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>{0} – tekstijuhise etapp.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Ühtegi suhtelist agendiskripti ei leitud.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

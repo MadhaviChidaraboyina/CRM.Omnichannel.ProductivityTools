@@ -1,4 +1,4 @@
-﻿module MscrmControls.ButtonControl {
+﻿module MscrmControls.Button {
 	export interface IInputBag {
 		value: string;
 	}

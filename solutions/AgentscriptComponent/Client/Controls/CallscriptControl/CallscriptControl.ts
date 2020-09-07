@@ -4,10 +4,10 @@
 
 /// <reference path="privatereferences.ts"/>
 
-module MscrmControls.CallscriptControl {
+module MscrmControls.Callscript {
 	'use strict';
 
-    export class CallscriptControlV2 implements Mscrm.Control<IInputBag, IOutputBag> {
+    export class CallscriptControl implements Mscrm.Control<IInputBag, IOutputBag> {
 
 		private context: Mscrm.ControlData<IInputBag>;
 		public stateManager: StateManager;
@@ -18,7 +18,7 @@ module MscrmControls.CallscriptControl {
 		private initCompleted: boolean;
 		private telemetryContext: string;
 		private telemetryLogger: TelemetryLogger;
-		private setFocusOnSelector: boolean;
+        private setFocusOnSelector: boolean;
 
 		/**
 		 * Constructor.
@@ -26,7 +26,7 @@ module MscrmControls.CallscriptControl {
 		constructor() {
 			this.initCompleted = false;
 			this.telemetryContext = TelemetryComponents.MainComponent;
-			this.setFocusOnSelector = false;
+            this.setFocusOnSelector = false;
 		}
 
 		/**
@@ -165,19 +165,45 @@ module MscrmControls.CallscriptControl {
 		/**
 		 * This function returns control header component
 		 */
-		private getControlHeader(): Mscrm.Component {
+        private getControlHeader(): Mscrm.Component {
+            
+            var controlHeader = [];
+
 			var controlHeaderLabel: Mscrm.Component = this.context.factory.createElement("LABEL", {
 				key: "CallscriptHeaderKey",
-				id: "CallscriptHeaderId",
+                id: "CallscriptHeaderId",               
 				style: ControlStyle.getControlHeaderStyle(this.context)
 			}, this.context.resources.getString(LocalizedStrings.CallscriptHeader));
+
+            controlHeader.push(controlHeaderLabel);
+
+            var controlHeaderInfoIcon: Mscrm.Component =  this.context.factory.createElement("CONTAINER", {
+                key: "CallscriptHeaderInfoIconKey",
+                id: "CallscriptHeaderInfoIconId",
+                className: "tooltip",
+                style: ControlStyle.getControlHeaderInfoIconStyle(this.context)
+            }, [this.getInfoMessage()]);
+
+            controlHeader.push(controlHeaderInfoIcon);
 
 			return this.context.factory.createElement("CONTAINER", {
 				key: "CallscriptHeaderContainerKey",
 				id: "CallscriptHeaderContainerId",
 				style: ControlStyle.getHeaderContainerStyle()
-			}, controlHeaderLabel);
-		}
+			}, controlHeader);
+        }
+
+        /**
+		 * This function returns the information when mouse over on info icon in call script header
+		 */
+        private getInfoMessage() {
+            return this.context.factory.createElement(
+                "CONTAINER", {
+                id: "CallscriptInfoMessageId",
+                key: "CallscriptInfoMessageKey",
+                className: "tooltiptext",
+            }, this.context.resources.getString(LocalizedStrings.ControlHeaderInfo));
+        }
 
 		/**
 		 * This function returns loading wheel until callscript data fetch is complete
@@ -251,15 +277,10 @@ module MscrmControls.CallscriptControl {
 			if (this.stateManager.scriptDataFetchFailed) {
 				return this.getScriptLoadErrorContainer(LocalizedStrings.InitialScriptDataLoadFailure);
 			}
-			if (this.stateManager.callscriptsForCurrentSession.length == 0) {
-				return this.getScriptLoadErrorContainer(LocalizedStrings.NoCallScriptFoundErrorMessage);
-			}
 
 			let callscriptComponents: Mscrm.Component[] = [];
 
-			/* Control header not required on form, to be un-commented when control is moved to Panel
 			callscriptComponents.push(this.getControlHeader());
-			*/
 
 			callscriptComponents.push(this.getScriptsDropdown());
 
@@ -283,13 +304,27 @@ module MscrmControls.CallscriptControl {
 				}
 			}
 
+            if (this.stateManager.callscriptsForCurrentSession.length == 0) {
+                this.DispatchNoDataEvent();
+                callscriptComponents.push(this.getScriptLoadErrorContainer(LocalizedStrings.NoDataCallScriptMessage));
+            }
+
 			return context.factory.createElement(
 				"CONTAINER", {
 					id: "CallScriptContainer",
 					key: "CallScriptContainer",
 					style: controlStyles
 				}, callscriptComponents);
-		}
+        }
+
+        /**Dispatch No data event to PP */
+        private DispatchNoDataEvent() {
+            var sessionId = Utility.getCurrentSessionId();
+            var ppRerender = new MscrmControls.PanelControl.Rerender(sessionId, true);
+
+            // Dispatch No Data PP event 
+            Utility.DispatchPanelInboundEvent(ppRerender);
+        }   
 
 		/**
 		 * Set focus on script selector

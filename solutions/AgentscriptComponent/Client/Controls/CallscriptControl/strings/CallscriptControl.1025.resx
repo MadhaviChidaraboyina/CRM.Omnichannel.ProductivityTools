@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>البرنامج النصي للمندوب</value>
+    <value>البرامج النصية للمندوب</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>تساعدك البرامج النصية للمندوب على أن تكون دقيقًا وفعالاً وفي الوقت نفسه أكثر سرعة وكفاءة فيما يتعلق بالتعامل مع العملاء.</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>{0} فشل خطوة الماكرو.</value>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>خطوة الإرشادات النصية {0}.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>لم يتم العثور علي برامج نصية بالنسبة إلى المندوب.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

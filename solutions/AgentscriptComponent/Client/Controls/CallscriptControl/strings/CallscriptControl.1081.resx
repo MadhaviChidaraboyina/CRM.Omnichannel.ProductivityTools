@@ -145,6 +145,10 @@
     <value>एजेंट स्क्रिप्ट</value>
     <comment>Header value for callscript control</comment>
   </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>एजेंट स्क्रिप्ट आपकी ग्राहक हैंडलिंग के मामले में तेज और अधिक कुशल होने के साथ-साथ सटीक और प्रभावी होने में मदद करती है</value>
+    <comment>Info value for callscript control</comment>
+  </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>{0} मैक्रो चरण विफल रहा.</value>
     <comment>When macro execution step failed</comment>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>{0} पाठ निर्देश चरण.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>कोई सापेक्ष एजेंट स्क्रिप्ट नहीं मिली.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

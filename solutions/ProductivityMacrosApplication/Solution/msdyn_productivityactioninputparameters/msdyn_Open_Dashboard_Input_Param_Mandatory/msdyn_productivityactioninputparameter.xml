@@ -1,0 +1,8 @@
+<msdyn_productivityactioninputparameter msdyn_uniquename="msdyn_Open_Dashboard_Input_Param_Mandatory">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_name>Open_Dashboard_Input_Param_Mandatory</msdyn_name>
+  <msdyn_parametertype>0</msdyn_parametertype>
+  <msdyn_visibility>required</msdyn_visibility>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_productivityactioninputparameter>

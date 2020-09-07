@@ -145,6 +145,13 @@ module MscrmControls.ProductivityToolPanel {
                                     this.context.utils.requestRender();
                                 },
                             },
+                            //to force update of child control every time
+                            DummyContext: { 
+                               Usage: 1,
+                                Static: true,
+                                Value: Math.random(),
+                                Primary: false 
+                            }
                         },
                     }
                 };

@@ -3,18 +3,18 @@
   <IsCustomizable>0</IsCustomizable>
   <RolePrivileges>
 
-    <RolePrivilege name="prvAppendmsdyn_agentscript_v2" level="Global" />
-    <RolePrivilege name="prvAppendTomsdyn_agentscript_v2" level="Global" />
-    <RolePrivilege name="prvCreatemsdyn_agentscript_v2" level="Global" />
-    <RolePrivilege name="prvDeletemsdyn_agentscript_v2" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_agentscript_v2" level="Global" />
-    <RolePrivilege name="prvWritemsdyn_agentscript_v2" level="Global" />
-    <RolePrivilege name="prvAppendmsdyn_agentscriptstep_v2" level="Global" />
-    <RolePrivilege name="prvAppendTomsdyn_agentscriptstep_v2" level="Global" />
-    <RolePrivilege name="prvCreatemsdyn_agentscriptstep_v2" level="Global" />
-    <RolePrivilege name="prvDeletemsdyn_agentscriptstep_v2" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_agentscriptstep_v2" level="Global" />
-    <RolePrivilege name="prvWritemsdyn_agentscriptstep_v2" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_productivityagentscript" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_productivityagentscript" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_productivityagentscript" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_productivityagentscript" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivityagentscript" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_productivityagentscript" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_productivityagentscriptstep" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_productivityagentscriptstep" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_productivityagentscriptstep" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_productivityagentscriptstep" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivityagentscriptstep" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_productivityagentscriptstep" level="Global" />
     
     <RolePrivilege name="prvAppendToWorkflow" level="Global" />
     <RolePrivilege name="prvAppendWorkflow" level="Global" />

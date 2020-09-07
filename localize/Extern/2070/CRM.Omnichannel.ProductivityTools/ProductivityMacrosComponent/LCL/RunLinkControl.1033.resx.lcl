@@ -12,50 +12,66 @@
       <Item ItemId=";RUNLINKCONTROL_CONFIRMBUTTONLABEL" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Close]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[Close]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fechar]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-13T08:02:57.0003914Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for no run history found alert box button]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
       </Item>
       <Item ItemId=";RUNLINKCONTROL_LINKLABEL" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[View run history]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[View run history]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Ver histórico de execuções]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-13T08:02:57.0003914Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for the link which opens run histories grid]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
       </Item>
       <Item ItemId=";RUNLINKCONTROL_NOHISTORY" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[There's no run history associated with this macro record.]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[There's no run history associated with this macro record.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Não existe nenhum histórico de execuções associado a este registo de macro.]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-13T08:02:57.000407Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Alert box text]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
       </Item>
       <Item ItemId=";RUNLINKCONTROL_NORUNALERTTITLE" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[No run history]]></Val>
-          <Tgt Cat="Text" Orig="New">
-            <Val><![CDATA[No run history]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sem histórico de execuções]]></Val>
           </Tgt>
         </Str>
         <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-07-13T08:02:57.000407Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Text for no run history found alert box title]]></Cmt>
         </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO31963_20200709" />
+        </Props>
       </Item>
     </Item>
   </Item>

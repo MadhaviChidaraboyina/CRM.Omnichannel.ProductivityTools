@@ -132,16 +132,1052 @@
         bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
 </value>
   </metadata>
-  <data name="15062:Description,ProductivityPaneComponent" xml:space="preserve">
-    <value>Dynamics 365 Termelékenység panel összetevőjének munkaterhelése</value>
-    <comment> 'ProductivityPaneComponent' : Description for Solution</comment>
+  <data name="10:Description,lk_msdyn_paneconfiguration_createdby" xml:space="preserve">
+    <value>A rekordot létrehozó felhasználó egyedi azonosítója.</value>
+    <comment>msdyn_paneconfiguration Description for EntityRelationship 'lk_msdyn_paneconfiguration_createdby'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_paneconfiguration_modifiedby" xml:space="preserve">
+    <value>A rekordot módosító felhasználó egyedi azonosítója.</value>
+    <comment>msdyn_paneconfiguration Description for EntityRelationship 'lk_msdyn_paneconfiguration_modifiedby'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_panetabconfiguration_createdby" xml:space="preserve">
+    <value>A rekordot létrehozó felhasználó egyedi azonosítója.</value>
+    <comment>msdyn_panetabconfiguration Description for EntityRelationship 'lk_msdyn_panetabconfiguration_createdby'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_panetabconfiguration_modifiedby" xml:space="preserve">
+    <value>A rekordot módosító felhasználó egyedi azonosítója.</value>
+    <comment>msdyn_panetabconfiguration Description for EntityRelationship 'lk_msdyn_panetabconfiguration_modifiedby'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_panetoolconfiguration_createdby" xml:space="preserve">
+    <value>A rekordot létrehozó felhasználó egyedi azonosítója.</value>
+    <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'lk_msdyn_panetoolconfiguration_createdby'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_panetoolconfiguration_modifiedby" xml:space="preserve">
+    <value>A rekordot módosító felhasználó egyedi azonosítója.</value>
+    <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'lk_msdyn_panetoolconfiguration_modifiedby'</comment>
+  </data>
+  <data name="10:Description,msdyn_msdyn_paneconfig_msdyn_tabconfig" xml:space="preserve">
+    <value>A panellap-konfigurációhoz társított termelékenységpanel-konfiguráció egyedi azonosítója.</value>
+    <comment>msdyn_panetabconfiguration Description for EntityRelationship 'msdyn_msdyn_paneconfig_msdyn_tabconfig'</comment>
+  </data>
+  <data name="10:Description,msdyn_msdyn_toolconfig_msdyn_tabconfig" xml:space="preserve">
+    <value>A panellap-konfigurációhoz társított paneleszköz-konfiguráció egyedi azonosítója.</value>
+    <comment>msdyn_panetabconfiguration Description for EntityRelationship 'msdyn_msdyn_toolconfig_msdyn_tabconfig'</comment>
+  </data>
+  <data name="10:Description,organization_msdyn_paneconfiguration" xml:space="preserve">
+    <value>A szervezet egyedi azonosítója</value>
+    <comment>msdyn_paneconfiguration Description for EntityRelationship 'organization_msdyn_paneconfiguration'</comment>
+  </data>
+  <data name="10:Description,organization_msdyn_panetabconfiguration" xml:space="preserve">
+    <value>A szervezet egyedi azonosítója</value>
+    <comment>msdyn_panetabconfiguration Description for EntityRelationship 'organization_msdyn_panetabconfiguration'</comment>
+  </data>
+  <data name="10:Description,organization_msdyn_panetoolconfiguration" xml:space="preserve">
+    <value>A szervezet egyedi azonosítója</value>
+    <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'organization_msdyn_panetoolconfiguration'</comment>
+  </data>
+  <data name="15062:Description,msdyn_ProductivityPaneComponent" xml:space="preserve">
+    <value>Termelékenység panel a hatékonyságnövelő eszközökhöz</value>
+    <comment> 'msdyn_ProductivityPaneComponent' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">
     <value>Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,ProductivityPaneComponent" xml:space="preserve">
+  <data name="15062:LocalizedName,msdyn_ProductivityPaneComponent" xml:space="preserve">
     <value>Termelékenység panel összetevője</value>
-    <comment> 'ProductivityPaneComponent' : LocalizedName for Solution</comment>
+    <comment> 'msdyn_ProductivityPaneComponent' : LocalizedName for Solution</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationCreatedBy" xml:space="preserve">
+    <value>A rekordot létrehozó felhasználó egyedi azonosítója.</value>
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationCreatedOn" xml:space="preserve">
+    <value>A rekord létrehozásának dátuma és időpontja.</value>
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationCreatedOnBehalfBy" xml:space="preserve">
+    <value>A rekordot létrehozó meghatalmazott felhasználó egyedi azonosítója.</value>
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationentitymsdyn_paneconfiguration" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_paneconfiguration' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationModifiedBy" xml:space="preserve">
+    <value>A rekordot módosító felhasználó egyedi azonosítója.</value>
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationModifiedOn" xml:space="preserve">
+    <value>A rekord módosításának dátuma és időpontja.</value>
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationModifiedOnBehalfBy" xml:space="preserve">
+    <value>A rekordot módosító meghatalmazott felhasználó egyedi azonosítója.</value>
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationmsdyn_name" xml:space="preserve">
+    <value>Az egyéni entitás neve.</value>
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfigurationId" xml:space="preserve">
+    <value>Entitáspéldányok egyedi azonosítója</value>
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_paneconfigurationId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode" xml:space="preserve">
+    <value />
+    <comment>'msdyn_paneconfiguration' : Description for OptionSet 'msdyn_paneconfiguration_msdyn_panemode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panestate" xml:space="preserve">
+    <value />
+    <comment>'msdyn_paneconfiguration' : Description for OptionSet 'msdyn_paneconfiguration_msdyn_panestate' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfiguration_statecode" xml:space="preserve">
+    <value>A Termelékenység panel konfigurációjának állapota</value>
+    <comment>'msdyn_paneconfiguration' : Description for OptionSet 'msdyn_paneconfiguration_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfiguration_statuscode" xml:space="preserve">
+    <value>A Termelékenység panel konfigurációjához tartozó állapot oka</value>
+    <comment>'msdyn_paneconfiguration' : Description for OptionSet 'msdyn_paneconfiguration_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationmsdyn_panemode" xml:space="preserve">
+    <value />
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_panemode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationmsdyn_panestate" xml:space="preserve">
+    <value />
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_panestate' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationmsdyn_UniqueName" xml:space="preserve">
+    <value>Az entitás egyedi neve.</value>
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationOrganizationId" xml:space="preserve">
+    <value>A szervezet egyedi azonosítója</value>
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationOverriddenCreatedOn" xml:space="preserve">
+    <value>A rekord áttelepítésének dátuma és időpontja.</value>
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationstatecode" xml:space="preserve">
+    <value>A Termelékenység panel konfigurációjának állapota</value>
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationstatuscode" xml:space="preserve">
+    <value>A Termelékenység panel konfigurációjához tartozó állapot oka</value>
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Csak belső használatra.</value>
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>A rekord létrehozásakor használt időzóna kódja.</value>
+    <comment>'msdyn_paneconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationCreatedBy" xml:space="preserve">
+    <value>A rekordot létrehozó felhasználó egyedi azonosítója.</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationCreatedOn" xml:space="preserve">
+    <value>A rekord létrehozásának dátuma és időpontja.</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationCreatedOnBehalfBy" xml:space="preserve">
+    <value>A rekordot létrehozó meghatalmazott felhasználó egyedi azonosítója.</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationentitymsdyn_panetabconfiguration" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_panetabconfiguration' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationModifiedBy" xml:space="preserve">
+    <value>A rekordot módosító felhasználó egyedi azonosítója.</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationModifiedOn" xml:space="preserve">
+    <value>A rekord módosításának dátuma és időpontja.</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationModifiedOnBehalfBy" xml:space="preserve">
+    <value>A rekordot módosító meghatalmazott felhasználó egyedi azonosítója.</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationmsdyn_iconpath" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_iconpath' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationmsdyn_isEnabled" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_isEnabled' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationmsdyn_name" xml:space="preserve">
+    <value>Az egyéni entitás neve.</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationmsdyn_order" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_order' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfigurationid" xml:space="preserve">
+    <value>Entitáspéldányok egyedi azonosítója</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_panetabconfigurationid' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfiguration_msdyn_isenabled" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetabconfiguration' : Description for OptionSet 'msdyn_panetabconfiguration_msdyn_isenabled' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfiguration_statecode" xml:space="preserve">
+    <value>A panellap-konfiguráció állapota</value>
+    <comment>'msdyn_panetabconfiguration' : Description for OptionSet 'msdyn_panetabconfiguration_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfiguration_statuscode" xml:space="preserve">
+    <value>A panellap-konfiguráció állapotának oka</value>
+    <comment>'msdyn_panetabconfiguration' : Description for OptionSet 'msdyn_panetabconfiguration_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationmsdyn_ProductivityPaneId" xml:space="preserve">
+    <value>A panellap-konfigurációhoz társított termelékenységpanel-konfiguráció egyedi azonosítója.</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_ProductivityPaneId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationmsdyn_ToolId" xml:space="preserve">
+    <value>A panellap-konfigurációhoz társított paneleszköz-konfiguráció egyedi azonosítója.</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_ToolId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationmsdyn_tooltip" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_tooltip' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationmsdyn_UniqueName" xml:space="preserve">
+    <value>Az entitás egyedi neve.</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationOrganizationId" xml:space="preserve">
+    <value>A szervezet egyedi azonosítója</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationOverriddenCreatedOn" xml:space="preserve">
+    <value>A rekord áttelepítésének dátuma és időpontja.</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationstatecode" xml:space="preserve">
+    <value>A panellap-konfiguráció állapota</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationstatuscode" xml:space="preserve">
+    <value>A panellap-konfiguráció állapotának oka</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Csak belső használatra.</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>A rekord létrehozásakor használt időzóna kódja.</value>
+    <comment>'msdyn_panetabconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationCreatedBy" xml:space="preserve">
+    <value>A rekordot létrehozó felhasználó egyedi azonosítója.</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationCreatedOn" xml:space="preserve">
+    <value>A rekord létrehozásának dátuma és időpontja.</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationCreatedOnBehalfBy" xml:space="preserve">
+    <value>A rekordot létrehozó meghatalmazott felhasználó egyedi azonosítója.</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationentitymsdyn_panetoolconfiguration" xml:space="preserve">
+    <value />
+    <comment> 'msdyn_panetoolconfiguration' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationModifiedBy" xml:space="preserve">
+    <value>A rekordot módosító felhasználó egyedi azonosítója.</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationModifiedOn" xml:space="preserve">
+    <value>A rekord módosításának dátuma és időpontja.</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationModifiedOnBehalfBy" xml:space="preserve">
+    <value>A rekordot módosító meghatalmazott felhasználó egyedi azonosítója.</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_category" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_category' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_controlname" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_controlname' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_data" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_data' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_description" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_isConfigurable" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_isConfigurable' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_learnmorelink" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_learnmorelink' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_name" xml:space="preserve">
+    <value>Az egyéni entitás neve.</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfigurationid" xml:space="preserve">
+    <value>Entitáspéldányok egyedi azonosítója</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_panetoolconfigurationid' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_category" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetoolconfiguration' : Description for OptionSet 'msdyn_panetoolconfiguration_msdyn_category' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_isconfigurable" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetoolconfiguration' : Description for OptionSet 'msdyn_panetoolconfiguration_msdyn_isconfigurable' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_statecode" xml:space="preserve">
+    <value>A paneleszköz-konfiguráció állapota</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for OptionSet 'msdyn_panetoolconfiguration_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_statuscode" xml:space="preserve">
+    <value>A paneleszköz-konfiguráció állapotának oka</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for OptionSet 'msdyn_panetoolconfiguration_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_toolConfigurationEntity" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_toolConfigurationEntity' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_UniqueName" xml:space="preserve">
+    <value>Az entitás egyedi neve.</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationOrganizationId" xml:space="preserve">
+    <value>A szervezet egyedi azonosítója</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationOverriddenCreatedOn" xml:space="preserve">
+    <value>A rekord áttelepítésének dátuma és időpontja.</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationstatecode" xml:space="preserve">
+    <value>A paneleszköz-konfiguráció állapota</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationstatuscode" xml:space="preserve">
+    <value>A paneleszköz-konfiguráció állapotának oka</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Csak belső használatra.</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>A rekord létrehozásakor használt időzóna kódja.</value>
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,Pane tab configuration{53119dc8-3b00-44cd-8656-dce8c75bbd35}" xml:space="preserve">
+    <value>Az adott entitáshoz tartozó űrlap.</value>
+    <comment>'Pane tab configuration' : Description for systemform in Entity FormXml ID: '{53119dc8-3b00-44cd-8656-dce8c75bbd35}'</comment>
+  </data>
+  <data name="1:Description,Pane tab configuration{a871234d-aaaf-ea11-a81b-000d3ac61e3a}" xml:space="preserve">
+    <value>Minden aktív panellap-konfiguráció</value>
+    <comment>'Pane tab configuration' : Description for SavedQuery on Entity QueryId: '{a871234d-aaaf-ea11-a81b-000d3ac61e3a}'</comment>
+  </data>
+  <data name="1:Description,Pane tool configuration{86bce1bc-32cd-432f-9223-4536f3fc777a}" xml:space="preserve">
+    <value>Az adott entitáshoz tartozó űrlap.</value>
+    <comment>'Pane tool configuration' : Description for systemform in Entity FormXml ID: '{86bce1bc-32cd-432f-9223-4536f3fc777a}'</comment>
+  </data>
+  <data name="1:Description,Pane tool configuration{c9081ef5-aaaf-ea11-a81b-000d3ac61e3a}" xml:space="preserve">
+    <value>Aktív paneleszköz-konfigurációk</value>
+    <comment>'Pane tool configuration' : Description for SavedQuery on Entity QueryId: '{c9081ef5-aaaf-ea11-a81b-000d3ac61e3a}'</comment>
+  </data>
+  <data name="1:Description,Productivity pane configuration{2190ac35-a8af-ea11-a81b-000d3ac61e3a}" xml:space="preserve">
+    <value>Aktív termelékenységpanel-konfigurációk</value>
+    <comment>'Productivity pane configuration' : Description for SavedQuery on Entity QueryId: '{2190ac35-a8af-ea11-a81b-000d3ac61e3a}'</comment>
+  </data>
+  <data name="1:Description,Productivity pane configuration{f4d67a2f-7ec5-44c4-803e-f80eac68dfb7}" xml:space="preserve">
+    <value>Az adott entitáshoz tartozó űrlap.</value>
+    <comment>'Productivity pane configuration' : Description for systemform in Entity FormXml ID: '{f4d67a2f-7ec5-44c4-803e-f80eac68dfb7}'</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationCreatedBy" xml:space="preserve">
+    <value>Létrehozta</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationCreatedOn" xml:space="preserve">
+    <value>Létrehozás ideje</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationCreatedOnBehalfBy" xml:space="preserve">
+    <value>Létrehozta (meghatalmazott)</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationModifiedBy" xml:space="preserve">
+    <value>Módosította</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationModifiedOn" xml:space="preserve">
+    <value>Módosítás ideje</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationModifiedOnBehalfBy" xml:space="preserve">
+    <value>Módosította (meghatalmazott)</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationmsdyn_name" xml:space="preserve">
+    <value>Név</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationmsdyn_paneconfigurationId" xml:space="preserve">
+    <value>Termelékenység panel konfigurációja</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'msdyn_paneconfigurationId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode" xml:space="preserve">
+    <value>Alapértelmezett mód</value>
+    <comment>'msdyn_paneconfiguration' : displayname for OptionSet 'msdyn_paneconfiguration_msdyn_panemode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panestate" xml:space="preserve">
+    <value>Termelékenység panel engedélyezése</value>
+    <comment>'msdyn_paneconfiguration' : displayname for OptionSet 'msdyn_paneconfiguration_msdyn_panestate' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationmsdyn_paneconfiguration_statecode" xml:space="preserve">
+    <value>Állapot</value>
+    <comment>'msdyn_paneconfiguration' : displayname for OptionSet 'msdyn_paneconfiguration_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationmsdyn_paneconfiguration_statuscode" xml:space="preserve">
+    <value>Állapot oka</value>
+    <comment>'msdyn_paneconfiguration' : displayname for OptionSet 'msdyn_paneconfiguration_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationmsdyn_panemode" xml:space="preserve">
+    <value>Alapértelmezett mód</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'msdyn_panemode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationmsdyn_panestate" xml:space="preserve">
+    <value>Termelékenység panel engedélyezése</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'msdyn_panestate' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationmsdyn_UniqueName" xml:space="preserve">
+    <value>Egyedi név</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationOrganizationId" xml:space="preserve">
+    <value>Szervezet azonosítója</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'OrganizationId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationOverriddenCreatedOn" xml:space="preserve">
+    <value>Rekord létrehozásának ideje</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationstatecode" xml:space="preserve">
+    <value>Állapot</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationstatuscode" xml:space="preserve">
+    <value>Állapot oka</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Időzónaszabály verziószáma</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>UTC-konverzió időzónakódja</value>
+    <comment>'msdyn_paneconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationCreatedBy" xml:space="preserve">
+    <value>Létrehozta</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationCreatedOn" xml:space="preserve">
+    <value>Létrehozás ideje</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationCreatedOnBehalfBy" xml:space="preserve">
+    <value>Létrehozta (meghatalmazott)</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationModifiedBy" xml:space="preserve">
+    <value>Módosította</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationModifiedOn" xml:space="preserve">
+    <value>Módosítás ideje</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationModifiedOnBehalfBy" xml:space="preserve">
+    <value>Módosította (meghatalmazott)</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationmsdyn_iconpath" xml:space="preserve">
+    <value>Ikon elérési útja</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'msdyn_iconpath' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationmsdyn_isEnabled" xml:space="preserve">
+    <value>Engedélyezve</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'msdyn_isEnabled' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationmsdyn_name" xml:space="preserve">
+    <value>Név</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationmsdyn_order" xml:space="preserve">
+    <value>Sorrend</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'msdyn_order' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationmsdyn_panetabconfigurationid" xml:space="preserve">
+    <value>Panellap-konfiguráció</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'msdyn_panetabconfigurationid' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationmsdyn_panetabconfiguration_msdyn_isenabled" xml:space="preserve">
+    <value>Engedélyezve</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for OptionSet 'msdyn_panetabconfiguration_msdyn_isenabled' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationmsdyn_panetabconfiguration_statecode" xml:space="preserve">
+    <value>Állapot</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for OptionSet 'msdyn_panetabconfiguration_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationmsdyn_panetabconfiguration_statuscode" xml:space="preserve">
+    <value>Állapot oka</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for OptionSet 'msdyn_panetabconfiguration_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationmsdyn_ProductivityPaneId" xml:space="preserve">
+    <value>Termelékenység panel</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'msdyn_ProductivityPaneId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationmsdyn_ToolId" xml:space="preserve">
+    <value>Eszköz</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'msdyn_ToolId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationmsdyn_tooltip" xml:space="preserve">
+    <value>Eszközleírás</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'msdyn_tooltip' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationmsdyn_UniqueName" xml:space="preserve">
+    <value>Egyedi név</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationOrganizationId" xml:space="preserve">
+    <value>Szervezet azonosítója</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'OrganizationId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationOverriddenCreatedOn" xml:space="preserve">
+    <value>Rekord létrehozásának ideje</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationstatecode" xml:space="preserve">
+    <value>Állapot</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationstatuscode" xml:space="preserve">
+    <value>Állapot oka</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Időzónaszabály verziószáma</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>UTC-konverzió időzónakódja</value>
+    <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationCreatedBy" xml:space="preserve">
+    <value>Létrehozta</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationCreatedOn" xml:space="preserve">
+    <value>Létrehozás ideje</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationCreatedOnBehalfBy" xml:space="preserve">
+    <value>Létrehozta (meghatalmazott)</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationModifiedBy" xml:space="preserve">
+    <value>Módosította</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationModifiedOn" xml:space="preserve">
+    <value>Módosítás ideje</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationModifiedOnBehalfBy" xml:space="preserve">
+    <value>Módosította (meghatalmazott)</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_category" xml:space="preserve">
+    <value>Kategória</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_category' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_controlname" xml:space="preserve">
+    <value>Vezérlő neve</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_controlname' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_data" xml:space="preserve">
+    <value>Adat</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_data' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_description" xml:space="preserve">
+    <value>Leírás</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_description' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_isConfigurable" xml:space="preserve">
+    <value>Konfigurálható</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_isConfigurable' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_learnmorelink" xml:space="preserve">
+    <value>További információk hivatkozás</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_learnmorelink' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_name" xml:space="preserve">
+    <value>Név</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_panetoolconfigurationid" xml:space="preserve">
+    <value>Paneleszköz-konfiguráció</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_panetoolconfigurationid' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_category" xml:space="preserve">
+    <value>Kategória</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for OptionSet 'msdyn_panetoolconfiguration_msdyn_category' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_isconfigurable" xml:space="preserve">
+    <value>Konfigurálható</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for OptionSet 'msdyn_panetoolconfiguration_msdyn_isconfigurable' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_statecode" xml:space="preserve">
+    <value>Állapot</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for OptionSet 'msdyn_panetoolconfiguration_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_statuscode" xml:space="preserve">
+    <value>Állapot oka</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for OptionSet 'msdyn_panetoolconfiguration_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_toolConfigurationEntity" xml:space="preserve">
+    <value>Eszközkonfigurációs entitás</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_toolConfigurationEntity' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_UniqueName" xml:space="preserve">
+    <value>Egyedi név</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationOrganizationId" xml:space="preserve">
+    <value>Szervezet azonosítója</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'OrganizationId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationOverriddenCreatedOn" xml:space="preserve">
+    <value>Rekord létrehozásának ideje</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationstatecode" xml:space="preserve">
+    <value>Állapot</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationstatuscode" xml:space="preserve">
+    <value>Állapot oka</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Időzónaszabály verziószáma</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>UTC-konverzió időzónakódja</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode0" xml:space="preserve">
+    <value>Összecsukva</value>
+    <comment>'msdyn_paneconfiguration' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode1" xml:space="preserve">
+    <value>Kibontva</value>
+    <comment>'msdyn_paneconfiguration' : label for option '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panestate0" xml:space="preserve">
+    <value>Nem</value>
+    <comment>'msdyn_paneconfiguration' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panestate1" xml:space="preserve">
+    <value>Igen</value>
+    <comment>'msdyn_paneconfiguration' : label for option '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_paneconfigurationmsdyn_paneconfiguration_statecode0" xml:space="preserve">
+    <value>Aktív</value>
+    <comment>'msdyn_paneconfiguration' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_paneconfigurationmsdyn_paneconfiguration_statecode1" xml:space="preserve">
+    <value>Inaktív</value>
+    <comment>'msdyn_paneconfiguration' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_paneconfigurationmsdyn_paneconfiguration_statuscode1" xml:space="preserve">
+    <value>Aktív</value>
+    <comment>'msdyn_paneconfiguration' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_paneconfigurationmsdyn_paneconfiguration_statuscode2" xml:space="preserve">
+    <value>Inaktív</value>
+    <comment>'msdyn_paneconfiguration' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetabconfigurationmsdyn_panetabconfiguration_msdyn_isenabled0" xml:space="preserve">
+    <value>Nem</value>
+    <comment>'msdyn_panetabconfiguration' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetabconfigurationmsdyn_panetabconfiguration_msdyn_isenabled1" xml:space="preserve">
+    <value>Igen</value>
+    <comment>'msdyn_panetabconfiguration' : label for option '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetabconfigurationmsdyn_panetabconfiguration_statecode0" xml:space="preserve">
+    <value>Aktív</value>
+    <comment>'msdyn_panetabconfiguration' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetabconfigurationmsdyn_panetabconfiguration_statecode1" xml:space="preserve">
+    <value>Inaktív</value>
+    <comment>'msdyn_panetabconfiguration' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetabconfigurationmsdyn_panetabconfiguration_statuscode1" xml:space="preserve">
+    <value>Aktív</value>
+    <comment>'msdyn_panetabconfiguration' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetabconfigurationmsdyn_panetabconfiguration_statuscode2" xml:space="preserve">
+    <value>Inaktív</value>
+    <comment>'msdyn_panetabconfiguration' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_category100000000" xml:space="preserve">
+    <value>Nem besorolt</value>
+    <comment>'msdyn_panetoolconfiguration' : label for option '100000000' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_category100000001" xml:space="preserve">
+    <value>Ügynöki útmutatás</value>
+    <comment>'msdyn_panetoolconfiguration' : label for option '100000001' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_category100000002" xml:space="preserve">
+    <value>Hivatkozás</value>
+    <comment>'msdyn_panetoolconfiguration' : label for option '100000002' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_category100000003" xml:space="preserve">
+    <value>Együttműködés</value>
+    <comment>'msdyn_panetoolconfiguration' : label for option '100000003' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_category100000004" xml:space="preserve">
+    <value>Automatikus művelet</value>
+    <comment>'msdyn_panetoolconfiguration' : label for option '100000004' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_isconfigurable0" xml:space="preserve">
+    <value>Nem</value>
+    <comment>'msdyn_panetoolconfiguration' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_isconfigurable1" xml:space="preserve">
+    <value>Igen</value>
+    <comment>'msdyn_panetoolconfiguration' : label for option '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_statecode0" xml:space="preserve">
+    <value>Aktív</value>
+    <comment>'msdyn_panetoolconfiguration' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_statecode1" xml:space="preserve">
+    <value>Inaktív</value>
+    <comment>'msdyn_panetoolconfiguration' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_statuscode1" xml:space="preserve">
+    <value>Aktív</value>
+    <comment>'msdyn_panetoolconfiguration' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_statuscode2" xml:space="preserve">
+    <value>Inaktív</value>
+    <comment>'msdyn_panetoolconfiguration' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,Pane tab configuration{050ad075-259f-4143-ad2d-f8f17e981ba6}" xml:space="preserve">
+    <value>Általános</value>
+    <comment>'Pane tab configuration' : label for section in Entity FormXml ID: '{050ad075-259f-4143-ad2d-f8f17e981ba6}'</comment>
+  </data>
+  <data name="1:label,Pane tab configuration{55ba0246-15a8-d329-c433-be7144eca92b}" xml:space="preserve">
+    <value>Eszköz</value>
+    <comment>'Pane tab configuration' : label for cell in Entity FormXml ID: '{55ba0246-15a8-d329-c433-be7144eca92b}'</comment>
+  </data>
+  <data name="1:label,Pane tab configuration{57d6bd83-a84d-ebe8-7904-0785c7bd6a7c}" xml:space="preserve">
+    <value>Egyedi név</value>
+    <comment>'Pane tab configuration' : label for cell in Entity FormXml ID: '{57d6bd83-a84d-ebe8-7904-0785c7bd6a7c}'</comment>
+  </data>
+  <data name="1:label,Pane tab configuration{71983e13-50ed-b284-d283-0bd5101cc791}" xml:space="preserve">
+    <value>Sorrend</value>
+    <comment>'Pane tab configuration' : label for cell in Entity FormXml ID: '{71983e13-50ed-b284-d283-0bd5101cc791}'</comment>
+  </data>
+  <data name="1:label,Pane tab configuration{88c3af02-9b35-4887-931f-062ef1fcd58a}" xml:space="preserve">
+    <value>Név</value>
+    <comment>'Pane tab configuration' : label for cell in Entity FormXml ID: '{88c3af02-9b35-4887-931f-062ef1fcd58a}'</comment>
+  </data>
+  <data name="1:label,Pane tab configuration{8b074759-44b2-4532-6bb0-d926bcd888e0}" xml:space="preserve">
+    <value>Ikon elérési útja</value>
+    <comment>'Pane tab configuration' : label for cell in Entity FormXml ID: '{8b074759-44b2-4532-6bb0-d926bcd888e0}'</comment>
+  </data>
+  <data name="1:label,Pane tab configuration{9dd5e2c0-0a9d-40bf-be24-d6e9a942c2f1}" xml:space="preserve">
+    <value>Általános</value>
+    <comment>'Pane tab configuration' : label for tab in Entity FormXml ID: '{9dd5e2c0-0a9d-40bf-be24-d6e9a942c2f1}'</comment>
+  </data>
+  <data name="1:label,Pane tab configuration{bcac9ecd-4415-0045-8b2c-451ec717e9a4}" xml:space="preserve">
+    <value>Eszközleírás</value>
+    <comment>'Pane tab configuration' : label for cell in Entity FormXml ID: '{bcac9ecd-4415-0045-8b2c-451ec717e9a4}'</comment>
+  </data>
+  <data name="1:label,Pane tab configuration{bcb731e1-5de2-03ce-183d-dd678a01d41c}" xml:space="preserve">
+    <value>Termelékenység panel</value>
+    <comment>'Pane tab configuration' : label for cell in Entity FormXml ID: '{bcb731e1-5de2-03ce-183d-dd678a01d41c}'</comment>
+  </data>
+  <data name="1:label,Pane tab configuration{d59e9866-a272-3ebe-067c-83ee05d291ea}" xml:space="preserve">
+    <value>Engedélyezve</value>
+    <comment>'Pane tab configuration' : label for cell in Entity FormXml ID: '{d59e9866-a272-3ebe-067c-83ee05d291ea}'</comment>
+  </data>
+  <data name="1:label,Pane tool configuration{1a787188-aec0-a916-2d7a-2ea748654162}" xml:space="preserve">
+    <value>Adat</value>
+    <comment>'Pane tool configuration' : label for cell in Entity FormXml ID: '{1a787188-aec0-a916-2d7a-2ea748654162}'</comment>
+  </data>
+  <data name="1:label,Pane tool configuration{219565e0-3eac-3576-73a2-1ea323bec192}" xml:space="preserve">
+    <value>Egyedi név</value>
+    <comment>'Pane tool configuration' : label for cell in Entity FormXml ID: '{219565e0-3eac-3576-73a2-1ea323bec192}'</comment>
+  </data>
+  <data name="1:label,Pane tool configuration{2f565711-ed4d-4239-b510-ed4dc171fbd7}" xml:space="preserve">
+    <value>Név</value>
+    <comment>'Pane tool configuration' : label for cell in Entity FormXml ID: '{2f565711-ed4d-4239-b510-ed4dc171fbd7}'</comment>
+  </data>
+  <data name="1:label,Pane tool configuration{538d1b01-a834-7849-d641-4e0ec4621024}" xml:space="preserve">
+    <value>Vezérlő neve</value>
+    <comment>'Pane tool configuration' : label for cell in Entity FormXml ID: '{538d1b01-a834-7849-d641-4e0ec4621024}'</comment>
+  </data>
+  <data name="1:label,Pane tool configuration{547760b5-d9c8-45a4-8403-1cb74a98be3a}" xml:space="preserve">
+    <value>Általános</value>
+    <comment>'Pane tool configuration' : label for tab in Entity FormXml ID: '{547760b5-d9c8-45a4-8403-1cb74a98be3a}'</comment>
+  </data>
+  <data name="1:label,Pane tool configuration{5684cc01-c0c7-4b62-caa0-eb5140801324}" xml:space="preserve">
+    <value>Eszközkonfigurációs entitás</value>
+    <comment>'Pane tool configuration' : label for cell in Entity FormXml ID: '{5684cc01-c0c7-4b62-caa0-eb5140801324}'</comment>
+  </data>
+  <data name="1:label,Pane tool configuration{8db55fef-2843-4b05-bee8-4e1d598b6436}" xml:space="preserve">
+    <value>Általános</value>
+    <comment>'Pane tool configuration' : label for section in Entity FormXml ID: '{8db55fef-2843-4b05-bee8-4e1d598b6436}'</comment>
+  </data>
+  <data name="1:label,Pane tool configuration{9c795c47-d1b2-0d33-7d8c-83ab3dc20c1c}" xml:space="preserve">
+    <value>További információk hivatkozás</value>
+    <comment>'Pane tool configuration' : label for cell in Entity FormXml ID: '{9c795c47-d1b2-0d33-7d8c-83ab3dc20c1c}'</comment>
+  </data>
+  <data name="1:label,Pane tool configuration{cd2453ea-e07c-0799-9118-0a842c6e5372}" xml:space="preserve">
+    <value>Kategória</value>
+    <comment>'Pane tool configuration' : label for cell in Entity FormXml ID: '{cd2453ea-e07c-0799-9118-0a842c6e5372}'</comment>
+  </data>
+  <data name="1:label,Pane tool configuration{da09d865-972b-23c9-41e4-9e47b30c125e}" xml:space="preserve">
+    <value>Leírás</value>
+    <comment>'Pane tool configuration' : label for cell in Entity FormXml ID: '{da09d865-972b-23c9-41e4-9e47b30c125e}'</comment>
+  </data>
+  <data name="1:label,Pane tool configuration{da91513e-66a1-2d75-6838-d5c204c62387}" xml:space="preserve">
+    <value>Konfigurálható</value>
+    <comment>'Pane tool configuration' : label for cell in Entity FormXml ID: '{da91513e-66a1-2d75-6838-d5c204c62387}'</comment>
+  </data>
+  <data name="1:label,Productivity pane configuration{05236db8-c04c-9cba-41d1-c172ce19b859}" xml:space="preserve">
+    <value>Egyedi név</value>
+    <comment>'Productivity pane configuration' : label for cell in Entity FormXml ID: '{05236db8-c04c-9cba-41d1-c172ce19b859}'</comment>
+  </data>
+  <data name="1:label,Productivity pane configuration{0a509bd2-b6b9-e0ab-d707-297e61ed6e9d}" xml:space="preserve">
+    <value>Termelékenység panel engedélyezése</value>
+    <comment>'Productivity pane configuration' : label for cell in Entity FormXml ID: '{0a509bd2-b6b9-e0ab-d707-297e61ed6e9d}'</comment>
+  </data>
+  <data name="1:label,Productivity pane configuration{1601d0ee-668e-3d19-08d7-6eb7e97e3147}" xml:space="preserve">
+    <value>Alapértelmezett mód</value>
+    <comment>'Productivity pane configuration' : label for cell in Entity FormXml ID: '{1601d0ee-668e-3d19-08d7-6eb7e97e3147}'</comment>
+  </data>
+  <data name="1:label,Productivity pane configuration{461d5133-d1b8-4fa6-9bc1-b188bb24d245}" xml:space="preserve">
+    <value>Név</value>
+    <comment>'Productivity pane configuration' : label for cell in Entity FormXml ID: '{461d5133-d1b8-4fa6-9bc1-b188bb24d245}'</comment>
+  </data>
+  <data name="1:label,Productivity pane configuration{5981946b-6638-409d-9882-1ea85d596d25}" xml:space="preserve">
+    <value>Általános</value>
+    <comment>'Productivity pane configuration' : label for section in Entity FormXml ID: '{5981946b-6638-409d-9882-1ea85d596d25}'</comment>
+  </data>
+  <data name="1:label,Productivity pane configuration{98f1ff15-1f22-414c-b8ac-efea3c55c478}" xml:space="preserve">
+    <value>Általános</value>
+    <comment>'Productivity pane configuration' : label for tab in Entity FormXml ID: '{98f1ff15-1f22-414c-b8ac-efea3c55c478}'</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_paneconfigurationentitymsdyn_paneconfiguration" xml:space="preserve">
+    <value>Termelékenység panel konfigurációi</value>
+    <comment> 'msdyn_paneconfiguration' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_panetabconfigurationentitymsdyn_panetabconfiguration" xml:space="preserve">
+    <value>Panellap-konfigurációk</value>
+    <comment> 'msdyn_panetabconfiguration' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_panetoolconfigurationentitymsdyn_panetoolconfiguration" xml:space="preserve">
+    <value>Paneleszköz-konfigurációk</value>
+    <comment> 'msdyn_panetoolconfiguration' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_paneconfigurationentitymsdyn_paneconfiguration" xml:space="preserve">
+    <value>Termelékenység panel konfigurációja</value>
+    <comment> 'msdyn_paneconfiguration' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_panetabconfigurationentitymsdyn_panetabconfiguration" xml:space="preserve">
+    <value>Panellap-konfiguráció</value>
+    <comment> 'msdyn_panetabconfiguration' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_panetoolconfigurationentitymsdyn_panetoolconfiguration" xml:space="preserve">
+    <value>Paneleszköz-konfiguráció</value>
+    <comment> 'msdyn_panetoolconfiguration' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tab configuration{16bc01a5-ef2d-4183-976d-a9548103e716}" xml:space="preserve">
+    <value>Aktív panellap-konfigurációk</value>
+    <comment>'Pane tab configuration' : LocalizedName for SavedQuery on Entity QueryId: '{16bc01a5-ef2d-4183-976d-a9548103e716}'</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tab configuration{270656d1-b0dc-468a-8ade-53f63773f3e3}" xml:space="preserve">
+    <value>Panellap-konfiguráció keresési nézete</value>
+    <comment>'Pane tab configuration' : LocalizedName for SavedQuery on Entity QueryId: '{270656d1-b0dc-468a-8ade-53f63773f3e3}'</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tab configuration{277feec9-6352-4637-8f76-c4fc6a554472}" xml:space="preserve">
+    <value>Panellap-konfiguráció irányított keresési nézete</value>
+    <comment>'Pane tab configuration' : LocalizedName for SavedQuery on Entity QueryId: '{277feec9-6352-4637-8f76-c4fc6a554472}'</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tab configuration{3ae9e719-47c6-448b-8d47-7ccfd10b4841}" xml:space="preserve">
+    <value>Inaktív panellap-konfigurációk</value>
+    <comment>'Pane tab configuration' : LocalizedName for SavedQuery on Entity QueryId: '{3ae9e719-47c6-448b-8d47-7ccfd10b4841}'</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tab configuration{51d60998-3471-4f14-8841-15af807795f4}" xml:space="preserve">
+    <value>Aktív panellap-konfigurációk gyorskeresése</value>
+    <comment>'Pane tab configuration' : LocalizedName for SavedQuery on Entity QueryId: '{51d60998-3471-4f14-8841-15af807795f4}'</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tab configuration{53119dc8-3b00-44cd-8656-dce8c75bbd35}" xml:space="preserve">
+    <value>Információ</value>
+    <comment>'Pane tab configuration' : LocalizedName for systemform in Entity FormXml ID: '{53119dc8-3b00-44cd-8656-dce8c75bbd35}'</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tab configuration{9ae443a4-6434-438b-8712-821a35a8fd8f}" xml:space="preserve">
+    <value>Panellap-konfiguráció társított nézete</value>
+    <comment>'Pane tab configuration' : LocalizedName for SavedQuery on Entity QueryId: '{9ae443a4-6434-438b-8712-821a35a8fd8f}'</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tab configuration{a871234d-aaaf-ea11-a81b-000d3ac61e3a}" xml:space="preserve">
+    <value>Panellap-konfigurációk</value>
+    <comment>'Pane tab configuration' : LocalizedName for SavedQuery on Entity QueryId: '{a871234d-aaaf-ea11-a81b-000d3ac61e3a}'</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tool configuration{1a8f8076-45c0-43cb-aeed-39af72767f42}" xml:space="preserve">
+    <value>Paneleszköz-konfiguráció keresési nézete</value>
+    <comment>'Pane tool configuration' : LocalizedName for SavedQuery on Entity QueryId: '{1a8f8076-45c0-43cb-aeed-39af72767f42}'</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tool configuration{6aa61e13-c902-4fbc-b85e-4337e239a358}" xml:space="preserve">
+    <value>Aktív paneleszköz-konfigurációk gyorskeresése</value>
+    <comment>'Pane tool configuration' : LocalizedName for SavedQuery on Entity QueryId: '{6aa61e13-c902-4fbc-b85e-4337e239a358}'</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tool configuration{6e7610eb-1064-4cbe-8ec3-544d29201cf6}" xml:space="preserve">
+    <value>Paneleszköz-konfiguráció társított nézete</value>
+    <comment>'Pane tool configuration' : LocalizedName for SavedQuery on Entity QueryId: '{6e7610eb-1064-4cbe-8ec3-544d29201cf6}'</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tool configuration{86bce1bc-32cd-432f-9223-4536f3fc777a}" xml:space="preserve">
+    <value>Információ</value>
+    <comment>'Pane tool configuration' : LocalizedName for systemform in Entity FormXml ID: '{86bce1bc-32cd-432f-9223-4536f3fc777a}'</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tool configuration{c9081ef5-aaaf-ea11-a81b-000d3ac61e3a}" xml:space="preserve">
+    <value>Paneleszköz-konfigurációk</value>
+    <comment>'Pane tool configuration' : LocalizedName for SavedQuery on Entity QueryId: '{c9081ef5-aaaf-ea11-a81b-000d3ac61e3a}'</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tool configuration{e2242bc9-457c-47e2-b909-5475546c51db}" xml:space="preserve">
+    <value>Aktív paneleszköz-konfigurációk</value>
+    <comment>'Pane tool configuration' : LocalizedName for SavedQuery on Entity QueryId: '{e2242bc9-457c-47e2-b909-5475546c51db}'</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tool configuration{e455adca-8b84-46a6-818a-14d4004bd041}" xml:space="preserve">
+    <value>Paneleszköz-konfiguráció irányított keresési nézete</value>
+    <comment>'Pane tool configuration' : LocalizedName for SavedQuery on Entity QueryId: '{e455adca-8b84-46a6-818a-14d4004bd041}'</comment>
+  </data>
+  <data name="1:LocalizedName,Pane tool configuration{ef95486d-9cde-4c38-86f1-e1f11b9933fd}" xml:space="preserve">
+    <value>Inaktív paneleszköz-konfigurációk</value>
+    <comment>'Pane tool configuration' : LocalizedName for SavedQuery on Entity QueryId: '{ef95486d-9cde-4c38-86f1-e1f11b9933fd}'</comment>
+  </data>
+  <data name="1:LocalizedName,Productivity pane configuration{11ffad88-2136-441b-9b41-c846e39cbb25}" xml:space="preserve">
+    <value>Inaktív termelékenységpanel-konfigurációk</value>
+    <comment>'Productivity pane configuration' : LocalizedName for SavedQuery on Entity QueryId: '{11ffad88-2136-441b-9b41-c846e39cbb25}'</comment>
+  </data>
+  <data name="1:LocalizedName,Productivity pane configuration{19a835a8-f198-4401-b09f-161e9516a9b3}" xml:space="preserve">
+    <value>Aktív termelékenységpanel-konfigurációk gyorskeresése</value>
+    <comment>'Productivity pane configuration' : LocalizedName for SavedQuery on Entity QueryId: '{19a835a8-f198-4401-b09f-161e9516a9b3}'</comment>
+  </data>
+  <data name="1:LocalizedName,Productivity pane configuration{1b19a4d7-3854-48aa-9384-c391ec3d3868}" xml:space="preserve">
+    <value>Termelékenységpanel-konfiguráció keresési nézete</value>
+    <comment>'Productivity pane configuration' : LocalizedName for SavedQuery on Entity QueryId: '{1b19a4d7-3854-48aa-9384-c391ec3d3868}'</comment>
+  </data>
+  <data name="1:LocalizedName,Productivity pane configuration{2190ac35-a8af-ea11-a81b-000d3ac61e3a}" xml:space="preserve">
+    <value>Termelékenység panel konfigurációi</value>
+    <comment>'Productivity pane configuration' : LocalizedName for SavedQuery on Entity QueryId: '{2190ac35-a8af-ea11-a81b-000d3ac61e3a}'</comment>
+  </data>
+  <data name="1:LocalizedName,Productivity pane configuration{7a716623-bb62-4edb-8f13-6031b6d7b0b1}" xml:space="preserve">
+    <value>Termelékenységpanel-konfiguráció irányított keresési nézete</value>
+    <comment>'Productivity pane configuration' : LocalizedName for SavedQuery on Entity QueryId: '{7a716623-bb62-4edb-8f13-6031b6d7b0b1}'</comment>
+  </data>
+  <data name="1:LocalizedName,Productivity pane configuration{85dc5a4d-d686-4c3f-9300-97c60f34e365}" xml:space="preserve">
+    <value>Termelékenységpanel-konfiguráció társított nézete</value>
+    <comment>'Productivity pane configuration' : LocalizedName for SavedQuery on Entity QueryId: '{85dc5a4d-d686-4c3f-9300-97c60f34e365}'</comment>
+  </data>
+  <data name="1:LocalizedName,Productivity pane configuration{94a33da5-1a98-45b3-ab16-692186c9cc95}" xml:space="preserve">
+    <value>Aktív termelékenységpanel-konfigurációk</value>
+    <comment>'Productivity pane configuration' : LocalizedName for SavedQuery on Entity QueryId: '{94a33da5-1a98-45b3-ab16-692186c9cc95}'</comment>
+  </data>
+  <data name="1:LocalizedName,Productivity pane configuration{f4d67a2f-7ec5-44c4-803e-f80eac68dfb7}" xml:space="preserve">
+    <value>Információ</value>
+    <comment>'Productivity pane configuration' : LocalizedName for systemform in Entity FormXml ID: '{f4d67a2f-7ec5-44c4-803e-f80eac68dfb7}'</comment>
+  </data>
+  <data name="1:Title,Pane tab configurationInfo{53119dc8-3b00-44cd-8656-dce8c75bbd35}" xml:space="preserve">
+    <value>Közös</value>
+    <comment>'Pane tab configuration' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Pane tab configurationMarketing{53119dc8-3b00-44cd-8656-dce8c75bbd35}" xml:space="preserve">
+    <value>Marketing</value>
+    <comment>'Pane tab configuration' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Pane tab configurationProcessCenter{53119dc8-3b00-44cd-8656-dce8c75bbd35}" xml:space="preserve">
+    <value>Feldolgozási munkamenetek</value>
+    <comment>'Pane tab configuration' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Pane tab configurationSales{53119dc8-3b00-44cd-8656-dce8c75bbd35}" xml:space="preserve">
+    <value>Értékesítés</value>
+    <comment>'Pane tab configuration' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Pane tab configurationService{53119dc8-3b00-44cd-8656-dce8c75bbd35}" xml:space="preserve">
+    <value>Szolgáltatás</value>
+    <comment>'Pane tab configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+  <data name="1:Title,Pane tool configurationInfo{86bce1bc-32cd-432f-9223-4536f3fc777a}" xml:space="preserve">
+    <value>Közös</value>
+    <comment>'Pane tool configuration' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Pane tool configurationMarketing{86bce1bc-32cd-432f-9223-4536f3fc777a}" xml:space="preserve">
+    <value>Marketing</value>
+    <comment>'Pane tool configuration' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Pane tool configurationProcessCenter{86bce1bc-32cd-432f-9223-4536f3fc777a}" xml:space="preserve">
+    <value>Feldolgozási munkamenetek</value>
+    <comment>'Pane tool configuration' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Pane tool configurationSales{86bce1bc-32cd-432f-9223-4536f3fc777a}" xml:space="preserve">
+    <value>Értékesítés</value>
+    <comment>'Pane tool configuration' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Pane tool configurationService{86bce1bc-32cd-432f-9223-4536f3fc777a}" xml:space="preserve">
+    <value>Szolgáltatás</value>
+    <comment>'Pane tool configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+  <data name="1:Title,Productivity pane configurationInfo{f4d67a2f-7ec5-44c4-803e-f80eac68dfb7}" xml:space="preserve">
+    <value>Közös</value>
+    <comment>'Productivity pane configuration' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Productivity pane configurationMarketing{f4d67a2f-7ec5-44c4-803e-f80eac68dfb7}" xml:space="preserve">
+    <value>Marketing</value>
+    <comment>'Productivity pane configuration' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Productivity pane configurationProcessCenter{f4d67a2f-7ec5-44c4-803e-f80eac68dfb7}" xml:space="preserve">
+    <value>Feldolgozási munkamenetek</value>
+    <comment>'Productivity pane configuration' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Productivity pane configurationSales{f4d67a2f-7ec5-44c4-803e-f80eac68dfb7}" xml:space="preserve">
+    <value>Értékesítés</value>
+    <comment>'Productivity pane configuration' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Productivity pane configurationService{f4d67a2f-7ec5-44c4-803e-f80eac68dfb7}" xml:space="preserve">
+    <value>Szolgáltatás</value>
+    <comment>'Productivity pane configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
 </root>

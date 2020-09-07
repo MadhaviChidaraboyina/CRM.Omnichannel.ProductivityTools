@@ -197,10 +197,6 @@
     <comment> 'Agentscript' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,Agentscript" xml:space="preserve">
-    <value>Agent scripts</value>
-    <comment> 'Agentscript' : LocalizedName for Solution</comment>
-  </data>
-  <data name="15062:LocalizedName,Agentscript" xml:space="preserve">
     <value>Δέσμες ενεργειών εκπροσώπου</value>
     <comment> 'Agentscript' : LocalizedName for Solution</comment>
   </data>

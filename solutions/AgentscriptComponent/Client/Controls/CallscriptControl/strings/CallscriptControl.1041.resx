@@ -145,6 +145,10 @@
     <value>エージェント スクリプト</value>
     <comment>Header value for callscript control</comment>
   </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>エージェント スクリプトにより、ユーザーの精度と効率が支援されるだけでなく、顧客処理の点においても速度と効率が向上します。</value>
+    <comment>Info value for callscript control</comment>
+  </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>{0} のマクロ ステップが失敗しました。</value>
     <comment>When macro execution step failed</comment>
@@ -166,7 +170,7 @@
     <comment>Button label for Load button</comment>
   </data>
   <data name="LoadingText" xml:space="preserve">
-    <value>読み込んでいます...</value>
+    <value>読み込み中...</value>
     <comment>Loading text to show when data fetch is in progress</comment>
   </data>
   <data name="MacroStepFailure_AccessibilityMessage" xml:space="preserve">
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>{0} のテキスト指示ステップ。</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>相対エージェント スクリプトが見つかりませんでした。</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

@@ -2,6 +2,7 @@
 	<ItemGroup>
 		<ProjectToBuild Include="Anchors\ProductivityTools\dirs.proj" />
 		<ProjectToBuild Include="ProductivityMacros\dirs.proj" />
+		<ProjectToBuild Include="..\src\Designer\FlowDesigner\flowDesignerControl.njsproj" />
 		<ProjectToBuild Include="ProductivityMacrosComponent\dirs.proj" />
 		<ProjectToBuild Include="ProductivityMacrosApplication\dirs.proj" />
 		<ProjectToBuild Include="ProductivityMacrosApplicationOC\dirs.proj" />

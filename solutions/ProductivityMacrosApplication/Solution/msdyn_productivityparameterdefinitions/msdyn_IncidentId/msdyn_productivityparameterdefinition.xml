@@ -1,0 +1,13 @@
+<msdyn_productivityparameterdefinition msdyn_uniquename="msdyn_IncidentId">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_description default="Case ID">
+    <label description="Case ID" languagecode="1033" />
+  </msdyn_description>
+  <msdyn_displayname default="Incident ID">
+    <label description="Incident ID" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_name>IncidentId</msdyn_name>
+  <msdyn_parametertype>string</msdyn_parametertype>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_productivityparameterdefinition>

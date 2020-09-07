@@ -145,6 +145,10 @@
     <value>Kịch bản tổng đài viên</value>
     <comment>Header value for callscript control</comment>
   </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Kịch bản tổng đài viên giúp bạn làm việc chính xác và hiệu quả, đồng thời xử lý vấn đề cho khách hàng nhanh và năng suất hơn</value>
+    <comment>Info value for callscript control</comment>
+  </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>Bước macro {0} đã thất bại.</value>
     <comment>When macro execution step failed</comment>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>Bước hướng dẫn văn bản {0}.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Không tìm thấy kịch bản tổng đài viên liên quan.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

@@ -2,7 +2,7 @@
 * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
 
-module MscrmControls.CallscriptControl {
+module MscrmControls.Callscript {
 	'use strict';
 
 	export class StateManager {
@@ -39,10 +39,10 @@ module MscrmControls.CallscriptControl {
         }
 
         // this method reset the required properties when session switch / create
-        public onSessionSwitch(): void {
+        public async onSessionSwitch(): Promise<void> {
             this.updateControlStateInCEC();
             this.setCurrentUciSessionId();
-            this.initializeControlStateFromCEC();
+            await this.initializeControlStateFromCEC();
             if (this.context.utils.isNullOrUndefined(this.callscriptsForCurrentSession)) {
                 this.callscriptsForCurrentSession = null;
                 this.selectedScriptForCurrentSession = null;
@@ -73,8 +73,8 @@ module MscrmControls.CallscriptControl {
 		/**
 		 * Initializes control state from CIF session template params
 		 */
-		private initializeControlStateFromCEC(): void {
-			this.callscriptsForCurrentSession = this.cecUtil.getValueFromSessionTemplateParams(Constants.ControlStateKey);
+		private async initializeControlStateFromCEC(): Promise<void> {
+			this.callscriptsForCurrentSession = await this.cecUtil.getValueFromSessionTemplateParams(Constants.ControlStateKey);
 		}
 
 		/**

@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Script de agent</value>
+    <value>Scripturi de agent</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Scripturile de agent vă ajută să fiți preciși și eficienți, fiind totodată mai rapide și mai eficiente în ceea ce privește gestionarea clienților</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>Pasul de macrocomandă {0} nu a reușit.</value>
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>Pasul de instrucțiuni text {0}.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Nu s-au găsit scripturi de agent relative.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

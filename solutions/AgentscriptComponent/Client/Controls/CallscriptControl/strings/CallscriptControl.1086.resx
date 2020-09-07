@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Ejen skrip</value>
+    <value>Skrip ejen</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Skrip ejen membantu memastikan anda mengendalikan pelanggan secara tepat dan berkesan di samping lebih pantas serta cekap</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>Langkah makro {0} telah gagal.</value>
@@ -226,7 +230,7 @@
     <comment>Button text to prompt user to view configured route callscript</comment>
   </data>
   <data name="StepExeutionBtn_LabelForTextAction" xml:space="preserve">
-    <value>Tandai sebagai selesai</value>
+    <value>Tandai sebagai siap</value>
     <comment>Button text to Mark a text step as done</comment>
   </data>
   <data name="StepListItem_UnexecutedMacroStepAccessibilityLabel" xml:space="preserve">
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>Langkah arahan teks {0}.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Tiada skrip ejen relatif ditemui.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

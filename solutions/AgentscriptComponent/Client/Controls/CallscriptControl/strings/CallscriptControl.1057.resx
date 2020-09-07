@@ -142,8 +142,12 @@
     <comment>When text instruction step completed successfully</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Skrip Agen</value>
+    <value>Skrip agen</value>
     <comment>Header value for callscript control</comment>
+  </data>
+  <data name="ControlHeaderInfo" xml:space="preserve">
+    <value>Skrip agen membantu Anda agar lebih akurat dan efektif, serta menangani pelanggan dengan lebih cepat dan efisien</value>
+    <comment>Info value for callscript control</comment>
   </data>
   <data name="FailedMacroStep_AccessibilityLabel" xml:space="preserve">
     <value>Langkah makro {0} gagal.</value>
@@ -158,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Kami tidak dapat memuat data skrip agen. Hubungi admin Anda.</value>
+    <value>Kami tidak dapat memuat rekaman skrip agen. Hubungi admin Anda.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">
@@ -240,5 +244,9 @@
   <data name="StepListItem_UnexecutedTextStepAccessibilityLabel" xml:space="preserve">
     <value>Langkah instruksi teks {0}.</value>
     <comment>Text to be read by screen-reader on callscript step focus</comment>
+  </data>
+  <data name="NoDataCallScriptMessage" xml:space="preserve">
+    <value>Tidak ada skrip agen relatif yang ditemukan.</value>
+    <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
 </root>

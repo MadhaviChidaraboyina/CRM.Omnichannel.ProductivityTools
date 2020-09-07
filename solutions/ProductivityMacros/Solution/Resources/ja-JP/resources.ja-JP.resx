@@ -1021,8 +1021,16 @@
     <comment>'Parameter definition' : Description for systemform in Entity FormXml ID: '{a1b84754-82c8-4d2e-afe6-bceae91df1ca}'</comment>
   </data>
   <data name="1:Description,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
-    <value>すべてのマクロの一覧を表示します</value>
+    <value>すべてのマクロの一覧を表示する</value>
     <comment>'Process' : Description for SavedQuery on Entity QueryId: '{012107d2-54d0-e911-a81c-000d3a6e50b0}'</comment>
+  </data>
+  <data name="1:Description,Process{46291012-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
+    <value>アクティブなマクロの一覧</value>
+    <comment>'Process' : Description for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
+  </data>
+  <data name="1:Description,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
+    <value>下書きのマクロの一覧</value>
+    <comment>'Process' : Description for SavedQuery on Entity QueryId: '{97a5e446-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:displayname,msdyn_actioninputparameterCreatedBy" xml:space="preserve">
     <value>作成者</value>
@@ -2503,6 +2511,14 @@
   <data name="1:LocalizedName,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
     <value>すべてのマクロ</value>
     <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{012107d2-54d0-e911-a81c-000d3a6e50b0}'</comment>
+  </data>
+  <data name="1:LocalizedName,Process{46291012-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
+    <value>アクティブなマクロ</value>
+    <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
+  </data>
+  <data name="1:LocalizedName,Process{97a5e446-667a-ea11-a811-000d3a8d88aa}" xml:space="preserve">
+    <value>下書きのマクロ</value>
+    <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{97a5e446-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:Title,Action Input ParameterInfo{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
     <value>共通</value>
