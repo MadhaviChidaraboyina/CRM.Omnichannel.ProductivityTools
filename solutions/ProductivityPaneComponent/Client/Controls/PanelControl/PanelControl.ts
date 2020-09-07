@@ -86,19 +86,16 @@ module MscrmControls.PanelControl {
             }
             else {
                 if (actionType === Constants.sessionCreated) {
-                    const data = {
-                        productivityToolSelected: this.productivityPaneConfigData.getDefaultTool().toolName,
-                        panelToggle: this.productivityPaneConfigData.productivityPaneMode,
-                        isCollapsedByUser: false,
-                        isToggledByUser: false
-                    }
-                     for(let tool of this.productivityPaneConfigData.productivityToolsConfig.ToolsList){
-                         data[LocalStorageKeyConstants.hasData+tool.toolControlName] = true;
-                     }
-                    this.panelState.SetState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData, data);
+                    this.setSessionData(sessionContextData.newSessionId);
                 }
                 if (actionType === Constants.sessionSwitched) {
                     let sessionData = this.panelState.getState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData);
+                    if (this.context.utils.isNullOrUndefined(sessionData)) {
+                        //event recieved out of order
+                        this.setSessionData(sessionContextData.newSessionId);
+                        sessionData = this.panelState.getState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData);
+                    }
+
                     this.productivityToolSelected = sessionData.productivityToolSelected;
                     this.panelToggle = sessionData.panelToggle;
 
@@ -119,6 +116,19 @@ module MscrmControls.PanelControl {
                     }
                 }
             }
+        }
+
+        private setSessionData(sessionId: string) {
+            const data = {
+                productivityToolSelected: this.productivityPaneConfigData.getDefaultTool().toolName,
+                panelToggle: this.productivityPaneConfigData.productivityPaneMode,
+                isCollapsedByUser: false,
+                isToggledByUser: false
+            }
+            for (let tool of this.productivityPaneConfigData.productivityToolsConfig.ToolsList) {
+                data[LocalStorageKeyConstants.hasData + tool.toolControlName] = true;
+            }
+            this.panelState.SetState(sessionId + LocalStorageKeyConstants.sessionData, data);
         }
 
 		/**
