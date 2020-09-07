@@ -54,5 +54,94 @@ module MscrmControls.Callscript {
             window.top.dispatchEvent(event);
         }
 
+
+        /**
+		 * Replace unresolved slugs with error message
+		 */
+        public static replaceUnresolvedSlugs(header: string): string {
+            let resolvedString = header;
+
+            if (resolvedString.includes("$odata")) {
+                let matches = header.match(new RegExp("\\{[^{]*?\\}|\\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}|\\$\{[^{]*?\\}|\\$\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}", "g"));
+
+                matches.forEach((query) => {
+                    if (query.includes("odata")) {
+                        resolvedString = resolvedString.replace(query, Constants.OdataError);
+                    }
+                });
+            }
+
+            return resolvedString;
+        }
+
+        /**
+		 * formatted string with error message
+		 */
+        public static formattedStringDisplay(context: Mscrm.ControlData<IInputBag>, stepString: string, stepId: string, showIcon, highlightError: boolean = true): any {
+            var stepLabelComponents = [];
+            let headerList = stepString.split(Constants.OdataError);
+            var slugResolutionErrorIcon = context.factory.createElement("CONTAINER", {
+                key: "CallScriptStepResolutionErrorIcon-" + stepId + "-Key",
+                id: "CallScriptStepResolutionErrorIcon-" + stepId + "-Id",
+                style: {
+                    "width": "15px",
+                    "height": "15px",
+                    "background-image": "url(" + this.getIconUrl(context, Constants.slugFailedIcon) + ")",
+                    "background-repeat": "no-repeat",
+                    "background-position": "center",
+                    "display": "inline-flex",
+                    "margin": "-3px",
+                    "padding-right": "6px"
+                }
+            }, []); 
+            headerList.forEach(function (value, index) {
+                if (value != "") {
+                    let noErrorLabel = context.factory.createElement(
+                        "Label",
+                        {
+                            id: "CallScriptLabel-id" + stepId + "-Id-" + index,
+                            key: "CallScriptLabel-id" + stepId + "-Key-" + index,
+                        }, value);
+
+                    let noErrorMessageContainer = context.factory.createElement("CONTAINER", {
+                        id: "CallScriptStepLabel-" + stepId + "-Id-" + index,
+                        key: "CallScriptStepLabel-" + stepId + "-Key-" + index,
+                        style: {
+                            display: "contents"
+                        }
+                    }, noErrorLabel);
+                    stepLabelComponents.push(noErrorMessageContainer);
+                }
+
+                if (!(index + 1 == headerList.length)) {
+                    let errorMessageLabel = context.factory.createElement(
+                        "Label",
+                        {
+                            id: "CallScriptLabelError-" + stepId + "-Id-" + index,
+                            key: "CallScriptLabelError-" + stepId + "-Key-" + index,
+                            style: {
+                                color: highlightError ? "#A80000" : "none",
+                                display: "contents"
+                            }
+                        }, context.resources.getString(LocalizedStrings.SlugResolutionErrorMessage));
+
+                    let errorMessageContainer = context.factory.createElement("CONTAINER", {
+                        id: "CallScriptStepFormattedLErrorabel-" + stepId + "-Id" + index,
+                        key: "CallScriptStepFormattedErrorLabel-" + stepId + "-Key" + index,
+                        style: {
+                            display: "contents"
+                        }
+                    }, [showIcon ? slugResolutionErrorIcon : [], errorMessageLabel]);
+
+                    stepLabelComponents.push(errorMessageContainer);
+                }
+            });
+
+            return context.factory.createElement("CONTAINER", {
+                key: "CallScriptStepFormattedLabelContainer" + stepId + "-Key",
+                id: "CallScriptStepFormattedLabelContainer-" + stepId + "-Id",
+            }, stepLabelComponents);
+        }
+
 	}
 }

@@ -297,7 +297,24 @@ module MscrmControls.Callscript {
 				margin: "4px",
 				padding: "6px 6px",
 			};
-		}
+        }
+
+        public static getSlugResolutionErrorIcon(context: Mscrm.ControlData<IInputBag>) {
+            let backgroundIconUrl = Utility.getIconUrl(context, Constants.slugFailedIcon);
+            let isRTL = context.client.isRTL;
+            return {
+                width: "17px",
+                height: "15px",
+                "background-image": "url(" + backgroundIconUrl + ")",
+                "background-repeat": "no-repeat",
+                "background-position": "center",
+                marginTop: "4px",
+                marginBottom: "4px",
+                marginLeft: "4px",
+                paddingTop: "6px",
+                paddingBottom: "6px",
+            };
+        }
 
 		public static getStepActionContainerStyle(isVisible: boolean, stepExecutionStatus: ExecutionStatus) {
 			let backgroundColor = (stepExecutionStatus === ExecutionStatus.Failed) ? "#F9F0EF" : "#F3F2F1";

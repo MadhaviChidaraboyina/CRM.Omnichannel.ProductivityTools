@@ -206,23 +206,29 @@ module MscrmControls.Callscript {
 		 */
 		private getStepDescriptionContainer(step: CallScriptStep) {
 			// This will be changed to return step descrption as per updated UX specs
+            let formattedString = Utility.replaceUnresolvedSlugs(step.action.getResolvedTextInstruction());
+            let formattedLabel = Utility.formattedStringDisplay(this.context, formattedString, step.id, true);
+
 			return this.context.factory.createElement("CONTAINER", {
 				key: "CallScriptStepDescription-" + step.id + "-Key",
 				id: "CallScriptStepDescription-" + step.id + "-Id",
 				style: ControlStyle.getActionTextStyle(step.executionStatus, this.context)
-            }, step.action.getResolvedTextInstruction());
+            }, formattedLabel);
 		}
 
 		/**
 		 * Returns container with instruction of text action step - to be called only for text action step
 		 * @param step step object whose description is contained in returned container
 		 */
-		private getTextInstructionContainer(step: CallScriptStep) {
+        private getTextInstructionContainer(step: CallScriptStep) {
+            let formattedString = Utility.replaceUnresolvedSlugs(step.action.getResolvedTextInstruction());
+            let formattedLabel = Utility.formattedStringDisplay(this.context, formattedString, step.id, true);
+
 			return this.context.factory.createElement("CONTAINER", {
 				key: "CallScriptStepDescription-" + step.id + "-Key",
 				id: "CallScriptStepDescription-" + step.id + "-Id",
 				style: ControlStyle.getActionTextStyle(step.executionStatus, this.context)
-			}, step.action.getResolvedTextInstruction());
+            }, formattedLabel);
 		}
 
 		/**

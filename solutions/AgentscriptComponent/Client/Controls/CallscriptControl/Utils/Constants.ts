@@ -33,7 +33,8 @@ module MscrmControls.Callscript {
         public static ControlId = "MscrmControls.Callscript.CallscriptControl";
 		public static EmptyString = "";
 		public static UninitializedString = "UNINITIALIZED";
-		public static ControlStateKey = "CallscriptControlState";
+        public static ControlStateKey = "CallscriptControlState";
+        public static OdataError = "ODATA_ERROR";
 
 		//class names for styling
 		public static AccordionRightArrowClassName = "accordionRightArrow";
@@ -62,7 +63,8 @@ module MscrmControls.Callscript {
 		public static retryBtnIcon = "callscriptstep_retrystep_button_icon.svg";
 		public static viewScriptIcon = "msdyn_view_script_icon.svg";
 		public static markdoneTextIcon = "msdyn_markasdone_text_icon.svg";
-		public static runMacroIcon = "msdyn_run_macro_icon.svg";
+        public static runMacroIcon = "msdyn_run_macro_icon.svg";
+        public static slugFailedIcon = "msdyn_slug_fail_icon.svg";
         //agent script header info icon
         public static infoButtonIcon = "msdyn_agent_script_header_info_icon.svg";
 
@@ -102,6 +104,7 @@ module MscrmControls.Callscript {
 		public static MacroStepFailureMessage = "MacroStepFailure_ErrorMessageWithoutError";
         public static ScriptStepFailureMessage = "ScriptStepsDataLoadFailure";
         public static NoDataCallScriptMessage = "NoDataCallScriptMessage";
+        public static SlugResolutionErrorMessage = "SlugResolutionErrorMessage"
 
 	}
 

@@ -45,15 +45,19 @@ module MscrmControls.Callscript {
             else {
                 if (stepToExpand.action.actionType === CallscriptActionType.TextAction || stepToExpand.action.actionType === CallscriptActionType.MacroAction) {
                     stepToExpand.action.resolveInstructionText(this.macroUtil).then(
-						(resolvedInstructionText) => {
-							stepToExpand.action.setResolvedInstructionText(resolvedInstructionText);
+                        (resolvedInstructionText) => {
+                            let formattedText = Utility.replaceUnresolvedSlugs(resolvedInstructionText);
+                            stepToExpand.action.setResolvedInstructionText(formattedText);
 							this.context.utils.requestRender();
 						},
-						(error) => {
+                        (error) => {
+                            let formattedText = Utility.replaceUnresolvedSlugs(stepToExpand.action.getResolvedTextInstruction());
+                            stepToExpand.action.setResolvedInstructionText(formattedText);
 							let eventParams = new EventParameters();
 							eventParams.addParameter("stepId", stepToExpand.id);
 							eventParams.addParameter("message", "Error in resolving text instruction for text step");
-							this.telemetryLogger.logError(this.telemetryContext, methodName, error, eventParams);
+                            this.telemetryLogger.logError(this.telemetryContext, methodName, error, eventParams);
+                            this.context.utils.requestRender();
 						}
 					);
 				}
@@ -277,9 +281,15 @@ module MscrmControls.Callscript {
 		 */
 		private getStepHeaderContainer(step: CallScriptStep, tabIndexValue: number): Mscrm.Component {
 			let isExpandedStep = (step.id === this.expandedStepId);
-			var listItemBlock: Mscrm.Component[] = [];
+            var listItemBlock: Mscrm.Component[] = [];
+            let hasHeaderSlugResolutionFailed = false;
+            let hasDescriptionSlugResolutionFailed = false;
 
-			var arrowIcon = this.context.factory.createElement("Container", {
+            if (step.action.getResolvedTextInstruction().includes(Constants.OdataError)) {
+                hasDescriptionSlugResolutionFailed = true;
+            }
+
+            var arrowIcon = this.context.factory.createElement("Container", {
 				key: "CallScriptArrowIcon-" + step.id + "-Key",
 				id: "CallScriptArrowIcon-" + step.id + "-Id",
 				style: ControlStyle.getArrowIconStyle(this.context, isExpandedStep),
@@ -297,8 +307,15 @@ module MscrmControls.Callscript {
 					accessibilityHidden: true
 				}, []);
 				stepLabelComponents.push(stepExecutionStatusIcon);
-			}
-			stepLabelComponents.push(step.name);
+            }
+
+            let formattedString = Utility.replaceUnresolvedSlugs(step.name);
+            let formattedLabel = Utility.formattedStringDisplay(this.context, formattedString, step.id, false, !step.isExecuted);
+            if (formattedString.includes(Constants.OdataError)) {
+                hasHeaderSlugResolutionFailed = true;
+            }
+            stepLabelComponents.push(hasHeaderSlugResolutionFailed ? formattedLabel : formattedString);
+
 			var stepLabelContainer = this.context.factory.createElement("CONTAINER", {
 				key: "CallScriptStepLabelContainer-" + step.id + "-Key",
 				id: "CallScriptStepLabelContainer-" + step.id + "-Id",
@@ -321,9 +338,19 @@ module MscrmControls.Callscript {
 				key: "CallScriptStepProgressIcon-" + step.id + "-Key",
 				id: "CallScriptStepProgressIcon-" + step.id + "-Id",
 				style: ControlStyle.getProgressIconStyle(this.context)
-			}, []);
+            }, []);
 
-			let stepListItemComponents: Mscrm.Component[] = [arrowIcon, stepLabelContainer];
+            var slugResolutionErrorIcon = this.context.factory.createElement("CONTAINER", {
+                key: "CallScriptStepResolutionErrorIcon-" + step.id + "-Key",
+                id: "CallScriptStepResolutionErrorIcon-" + step.id + "-Id",
+                style: ControlStyle.getSlugResolutionErrorIcon(this.context)
+            }, []); 
+
+            let stepListItemComponents: Mscrm.Component[] = [arrowIcon, stepLabelContainer];
+            if (hasHeaderSlugResolutionFailed || hasDescriptionSlugResolutionFailed) {
+                stepListItemComponents.push(slugResolutionErrorIcon);
+            }
+
 			if (step.executionStatus === ExecutionStatus.Started) {
 				stepListItemComponents.push(stepInProgressIcon);
 			}
