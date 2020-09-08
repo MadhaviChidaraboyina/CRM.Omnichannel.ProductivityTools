@@ -159,6 +159,8 @@
       <RootComponent type="66" schemaName="MscrmControls.Button.ButtonControl" behavior="0" />
       <RootComponent type="20" id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" behavior="0" />
       <RootComponent type="20" id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" behavior="0" />
+      <RootComponent type="20" id="{61649654-ced8-ea11-a813-000d3a579805}" behavior="0" />
+      <RootComponent type="20" id="{4758a2be-ccd8-ea11-a813-000d3a579805}" behavior="0" />
 	  <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_setDefaultAction.svg" behavior="0" />
       <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_manualTrigger.svg" behavior="0" />
       <RootComponent type="61" schemaName="AgentScriptDesigner/msdyn_agentConnector.svg" behavior="0" />

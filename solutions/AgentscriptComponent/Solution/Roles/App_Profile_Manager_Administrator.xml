@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Role id="{4758a2be-ccd8-ea11-a813-000d3a579805}" name="App Profile Manager Administrator">
+  <IsCustomizable>0</IsCustomizable>
+  <RolePrivileges>
+    <RolePrivilege name="prvAppendmsdyn_productivityagentscript" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_productivityagentscript" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_productivityagentscript" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_productivityagentscript" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivityagentscript" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_productivityagentscript" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_productivityagentscriptstep" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_productivityagentscriptstep" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_productivityagentscriptstep" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_productivityagentscriptstep" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_productivityagentscriptstep" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_productivityagentscriptstep" level="Global" />
+
+    <RolePrivilege name="prvAppendToWorkflow" level="Global" />
+    <RolePrivilege name="prvAppendWorkflow" level="Global" />
+    <RolePrivilege name="prvCreateWorkflow" level="Global" />
+    <RolePrivilege name="prvDeleteWorkflow" level="Global" />
+    <RolePrivilege name="prvReadWorkflow" level="Global" />
+    <RolePrivilege name="prvWriteWorkflow" level="Global" />
+  </RolePrivileges>
+</Role>

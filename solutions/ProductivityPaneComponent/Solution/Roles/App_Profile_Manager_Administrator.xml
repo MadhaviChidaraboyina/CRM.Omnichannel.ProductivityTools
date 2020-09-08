@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Role id="{4758a2be-ccd8-ea11-a813-000d3a579805}" name="App Profile Manager Administrator">
+  <IsCustomizable>0</IsCustomizable>
+  <RolePrivileges>
+
+
+    <RolePrivilege name="prvReadmsdyn_paneconfiguration" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_paneconfiguration" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_paneconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_paneconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_paneconfiguration" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_paneconfiguration" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_panetabconfiguration" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_panetabconfiguration" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_panetabconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_panetabconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_panetabconfiguration" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_panetabconfiguration" level="Global" />
+    <RolePrivilege name="prvReadmsdyn_panetoolconfiguration" level="Global" />
+    <RolePrivilege name="prvWritemsdyn_panetoolconfiguration" level="Global" />
+    <RolePrivilege name="prvCreatemsdyn_panetoolconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendmsdyn_panetoolconfiguration" level="Global" />
+    <RolePrivilege name="prvAppendTomsdyn_panetoolconfiguration" level="Global" />
+    <RolePrivilege name="prvDeletemsdyn_panetoolconfiguration" level="Global" />
+  </RolePrivileges>
+</Role>
