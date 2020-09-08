@@ -1,0 +1,15 @@
+<solutioncomponentattributeconfigurations>
+  <solutioncomponentattributeconfiguration attributeid.logicalname="msdyn_adaptivecardtemplate" attributeid.entityid.logicalname="msdyn_adaptivecardconfiguration">
+    <encodingformat>2</encodingformat>
+    <fileextension>.json</fileextension>
+    <iscustomizable>0</iscustomizable>
+    <isexportdisabled>0</isexportdisabled>
+    <isexportedasfile>1</isexportedasfile>
+    <name>msdyn_adaptivecardtemplate</name>
+    <solutioncomponentconfigurationid>
+      <entityid.logicalname>msdyn_adaptivecardconfiguration</entityid.logicalname>
+    </solutioncomponentconfigurationid>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentattributeconfiguration>
+</solutioncomponentattributeconfigurations>

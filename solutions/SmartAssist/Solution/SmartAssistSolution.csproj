@@ -9,7 +9,7 @@
     <SolutionFileNamePrefix>msdyn_smartassist</SolutionFileNamePrefix>
     <ApplicationFolder>$(WSRoot)\solutions\SmartAssist</ApplicationFolder>
     <SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
-    <PluginMapFile></PluginMapFile>
+    <PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
     <CustomControlsPath>$(XrmSolutionsRoot)\target\$(BuildType)\$(BuildTarget)\SmartassistControls</CustomControlsPath>
     <SystemConverted>false</SystemConverted>
 	  <SkipArtifactVersioning>True</SkipArtifactVersioning>

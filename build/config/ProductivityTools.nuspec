@@ -23,5 +23,6 @@
     <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityMacrosComponent_*.*" target="Solutions" />
     <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityMacrosApplication_*.*" target="Solutions" />
     <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityMacrosApplicationOC_*.*" target="Solutions" />
+     <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_smartassist_*.*" target="Solutions" />
   </files>
 </package>

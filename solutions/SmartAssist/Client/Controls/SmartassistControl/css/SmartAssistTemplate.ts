@@ -90,7 +90,7 @@ module MscrmControls.ProductivityPanel {
 	.ac-pushButton {
 		background: none!important;
 		border: none;
-		padding: 0!important;
+		padding: 0px!important;
 		color: #069;
 		cursor: pointer;
 	}

@@ -1,4 +1,4 @@
-﻿declare module AdaptiveCards {
+declare module AdaptiveCards {
 	export enum Size {
 		Auto = 0,
 		Stretch = 1,
@@ -421,7 +421,6 @@
 		height: "auto" | "stretch";
 		customCssSelector: string;
 		abstract getJsonTypeName(): string;
-		abstract renderSpeech(): string;
 		toJSON(): {};
 		setParent(value: CardElement): void;
 		getNonZeroPadding(): PaddingDefinition;

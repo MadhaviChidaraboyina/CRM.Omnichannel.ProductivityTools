@@ -1,0 +1,15 @@
+<msdyn_panetoolconfiguration msdyn_uniquename="msdyn_smartassist_tool_config">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_category>100000001</msdyn_category>
+  <msdyn_controlname>MscrmControls.SmartassistPanelControl.SmartassistPanelControl</msdyn_controlname>
+  <msdyn_data>{}</msdyn_data>
+  <msdyn_description default="Make intelligent recommendations of knowledge articles, similar cases, and more based on real-time context.">
+    <label description="Make intelligent recommendations of knowledge articles, similar cases, and more based on real-time context." languagecode="1033" />
+  </msdyn_description>
+  <msdyn_isconfigurable>0</msdyn_isconfigurable>
+  <msdyn_learnmorelink>https://go.microsoft.com/fwlink/p/?linkid=2138866</msdyn_learnmorelink>
+  <msdyn_name>Smart assist</msdyn_name>
+  <msdyn_toolconfigurationentity>msdyn_smartassistconfig</msdyn_toolconfigurationentity>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_panetoolconfiguration>

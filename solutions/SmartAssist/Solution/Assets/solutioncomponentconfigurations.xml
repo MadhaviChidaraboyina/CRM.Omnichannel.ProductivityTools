@@ -1,0 +1,21 @@
+<solutioncomponentconfigurations>
+  <solutioncomponentconfiguration entityid.logicalname="msdyn_smartassistconfig">
+    <fileformat>0</fileformat>
+    <filescope>1</filescope>
+    <iscustomizable>1</iscustomizable>
+    <isdisplayable>1</isdisplayable>
+    <name>msdyn_smartassistconfig</name>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentconfiguration>
+  <solutioncomponentconfiguration entityid.logicalname="msdyn_adaptivecardconfiguration">
+    <fileformat>0</fileformat>
+    <filescope>1</filescope>
+    <iscustomizable>0</iscustomizable>
+    <isdisplayable>1</isdisplayable>
+    <issoftdeleteenabled>0</issoftdeleteenabled>
+    <name>msdyn_adaptivecardconfiguration</name>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentconfiguration>
+</solutioncomponentconfigurations>

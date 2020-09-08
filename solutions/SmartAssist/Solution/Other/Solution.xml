@@ -121,8 +121,33 @@
 			</Addresses>
 		</Publisher>
 		<RootComponents>
-            <RootComponent type="66" schemaName="MscrmControls.ProductivityPanel.SmartassistControl" behavior="0" />
+			<RootComponent type="66" schemaName="MscrmControls.ProductivityPanel.SmartassistControl" behavior="0" />
+			<RootComponent type="66" schemaName="MscrmControls.SmartassistPanelControl.SmartassistPanelControl" behavior="0" />
+			<RootComponent type="66" schemaName="MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl" behavior="0" />
+			<RootComponent type="66" schemaName="MscrmControls.Smartassist.RecommendationControl" behavior="0" />
+			<RootComponent type="66" schemaName="MscrmControls.ProductivityPanel.TPBotControl" behavior="0" />
+			<RootComponent type="1" schemaName="msdyn_adaptivecardconfiguration" behavior="0" />
+			<RootComponent type="1" schemaName="msdyn_appconfiguration" behavior="2" />
+			<RootComponent type="1" schemaName="msdyn_smartassistconfig" behavior="0" />
+			<RootComponent type="9" schemaName="msdyn_suggestioncontroltype" behavior="0" />
+			<RootComponent type="9" schemaName="msdyn_suggestiontype" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_smartassistkbsearchicon.png" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_smartassistsimilarcaseicon.png" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_smartassisttabicon.svg" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_infoiconblue.svg" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_infoicongrey.svg" behavior="0" />
+			<RootComponent type="61" schemaName="msdyn_tpboticon.svg" behavior="0" />
+			<RootComponent type="91" id="{ed5f5bed-fcd1-48f1-8066-a33396ebbd7c}" schemaName="Microsoft.Dynamics.SmartAssist.Plugins, Version=9.0.0.0, Culture=neutral, PublicKeyToken=d5bf6fb07843d8e8" behavior="0" />
+			<RootComponent type="20" id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" behavior="0" />
+			<RootComponent type="20" id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" behavior="0" />
+			<RootComponent type="20" id="{4758a2be-ccd8-ea11-a813-000d3a579805}" behavior="0" />
+			<RootComponent type="20" id="{61649654-ced8-ea11-a813-000d3a579805}" behavior="0" />
 		</RootComponents>
-		<MissingDependencies />
+		<MissingDependencies>
+			<MissingDependency>
+				<Required key="0" type="1" schemaName="msdyn_appconfiguration" displayName="App Configuration" solution="msdyn_AppProfileManager" />
+				<Dependent key="0" type="1" schemaName="msdyn_appconfiguration" displayName="App Configuration" />
+			</MissingDependency>
+		</MissingDependencies>
 	</SolutionManifest>
 </ImportExportXml>

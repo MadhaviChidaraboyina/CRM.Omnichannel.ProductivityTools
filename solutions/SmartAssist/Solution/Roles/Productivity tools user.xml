@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Role id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" name="Productivity tools user">
+	<IsCustomizable>0</IsCustomizable>
+	<RolePrivileges>
+		<RolePrivilege name="prvReadmsdyn_adaptivecardconfiguration" level="Global" />
+				<RolePrivilege name="prvReadmsdyn_smartassistconfig" level="Global" />
+				<RolePrivilege name="prvReadmsdyn_suggestionssetting" level="Global" />
+	</RolePrivileges>
+</Role>
