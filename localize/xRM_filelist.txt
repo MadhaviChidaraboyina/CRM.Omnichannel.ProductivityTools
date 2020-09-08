@@ -46,3 +46,8 @@ solutions\ProductivityPaneControl\Solution\WebResources\msdyn_ProductivityPaneCo
 solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.json,ProductivityTools
 solutions\SmartAssist\Client\Controls\SmartassistControl\strings\SmartassistControl.1033.resx,SmartAssist
 solutions\SmartAssist\Solution\Resources\en-US\resources.en-US.resx,SmartAssist
+solutions\SmartAssist\Common\Localization\Labels.resx,SmartAssist
+solutions\SmartAssist\Client\Controls\RecommendationControl\strings\RecommendationControl.1033.resx,SmartAssist
+solutions\SmartAssist\Client\Controls\SmartAssistAnyEntityControl\strings\SmartAssistAnyEntityControl.1033.resx,SmartAssist
+solutions\SmartAssist\Client\Controls\SmartassistPanelControl\strings\SmartassistPanelControl.1033.resx,SmartAssist
+solutions\SmartAssist\Client\Controls\TPBotControl\strings\TPBotControl.1033.resx,SmartAssist
