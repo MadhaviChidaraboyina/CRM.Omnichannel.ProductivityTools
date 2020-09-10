@@ -87,7 +87,8 @@ namespace PVSPackage
             //Skipping install of old deprecated solutions in case of fresh install
             if(NewOrgVersion.Equals(deployedSolutionVersion.ToString()) && DeprecatedSolutions.Contains(solutionUniqueName))
             {
-               return UserRequestedImportAction.Skip;
+                this.DataImportBypass = true;
+                return UserRequestedImportAction.Skip;
             }
             // Perform “Update” to the existing solution
             // instead of “Delete And Promote” when a new version
@@ -102,11 +103,11 @@ namespace PVSPackage
 
         #region Properties
 
-        /// <summary>
-        /// Name of the Import Package to Use
-        /// </summary>
-        /// <param name="plural">if true, return plural version</param>
-        /// <returns>Name of import</returns>
+            /// <summary>
+            /// Name of the Import Package to Use
+            /// </summary>
+            /// <param name="plural">if true, return plural version</param>
+            /// <returns>Name of import</returns>
         public override string GetNameOfImport(bool plural)
         {
             return "ProductivityTools";
