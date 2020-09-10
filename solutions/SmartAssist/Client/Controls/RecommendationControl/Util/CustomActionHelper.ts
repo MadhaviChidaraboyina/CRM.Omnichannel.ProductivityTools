@@ -18,18 +18,18 @@ module MscrmControls.Smartassist.Suggestion {
 		 * Invoke the custom actions which will be executed in webresource.
 		 * @param actionParams Action parameters
 		 */
-		public static invokeCustomAction(actionParams: any) : Promise<any> {
+		public static invokeCustomAction(actionParams: any, context: Mscrm.ControlData<IInputBag>) : Promise<any> {
 			const actionName = actionParams.customActionName;
 			const params = actionParams.customActionArgs;
 
-			return CustomActionHelper.getCustiomActionMethod(actionName)(params);
+			return CustomActionHelper.getCustomActionMethod(actionName, context)(params);
 		}
 
 		/**
 		 * Returns the custom action method to be invoked.
 		 * @param customActioName Full qualified name for action.
 		 */
-		public static getCustiomActionMethod(customActioName: string): (param: any) => Promise<any> {
+		public static getCustomActionMethod(customActioName: string, context: Mscrm.ControlData<IInputBag>): (param: any) => Promise<any> {
 			let findFunc = window;
 			for (const ctorNamePart of customActioName.split(".")) {
 				findFunc = findFunc[ctorNamePart];
@@ -39,7 +39,9 @@ module MscrmControls.Smartassist.Suggestion {
 			}
 
 			if (!findFunc || typeof findFunc !== "function") {
-				throw new Error(`Could not find/invoke ${customActioName}`);
+				const e = new Error(`Could not find/invoke ${customActioName}`);
+				context.reporting.reportFailure(TelemetryEventTypes.CustomActionInvocationFailed, e, "TSG-TODO", [{ name: "ActionName", value: customActioName }])
+				throw e;
 			}
 			return findFunc;
 		}

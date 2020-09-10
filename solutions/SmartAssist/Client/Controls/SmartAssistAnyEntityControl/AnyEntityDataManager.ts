@@ -6,6 +6,7 @@
         private _controlContext: Mscrm.ControlData<IInputBag>;
         private _isSmartAssistAvailable: boolean = null;
         private _cachePoolManager: CachePoolManager;
+        private telemetryHelper: TelemetryHelper;
         private CONSTRUCTOR_CACHE: {
             [name: string]: {
                 new(): Microsoft.Smartassist.SuggestionProvider.SuggestionProvider;
@@ -17,8 +18,9 @@
             this._cachePoolManager = CachePoolManager.Instance;
         }
 
-        public initializeContextParameters(context: Mscrm.ControlData<IInputBag>) {
+        public initializeOtherParameters(context: Mscrm.ControlData<IInputBag>, telemetryHelper: TelemetryHelper) {
             this._controlContext = context;
+            this.telemetryHelper = telemetryHelper;
         }
 
         /**
@@ -43,8 +45,7 @@
             }
             catch (error) {
                 this.Suggestions = null;
-                eventParameters.addParameter("Exception Details", error.message);
-                SmartAssistAnyEntityControl._telemetryReporter.logError("Main Component", "getSuggestionsData", "Error occurred while getting suggestions data", eventParameters);
+                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchData, error, null);
             }
             return this.Suggestions;
         }
@@ -54,15 +55,14 @@
                 const data = suggestionIds.map(id => JSON.parse(this._sessionStorageManager.getRecord(id)).data);
                 if (data) {
                     this.Suggestions[saConfig.SmartassistConfigurationId] = data;
+                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.DataFetchedFromCache, null);
                 }
                 else {
                     this.Suggestions = null;
                 }
             } catch (error) {
                 this.Suggestions = null;
-                let eventParameters = new TelemetryLogger.EventParameters();
-                eventParameters.addParameter("Exception Details", error.message);
-                SmartAssistAnyEntityControl._telemetryReporter.logError("Main Component", "fetchSAConfigurationsData", "Error occurred while fetching SA Configurations Data from cache", eventParameters);
+                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchDataFromCache, error, null);
             }
         }
 
@@ -84,6 +84,7 @@
 
                 if (!findCtor || typeof findCtor !== "function") {
                     let message = `Could not find/invoke ${suggestionProviderName}'s constructor`;
+                    this.telemetryHelper.logTelemetryError(TelemetryEventTypes.SuggestionProviderNotFound, new Error(message), null);
                     throw new Error(message);
                 }
 
@@ -91,9 +92,11 @@
                     new(): Microsoft.Smartassist.SuggestionProvider.SuggestionProvider;
                 };
                 this.CONSTRUCTOR_CACHE[suggestionProviderName] = ctor;
+                this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SuggestionProviderFound, null);
                 return new ctor();
             }
             else {
+                this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SuggestionProviderFound, null);
                 return new ctor();
             }
         }
@@ -104,8 +107,8 @@
          * @param RecordId: Record id to find the suggestion upon.
          */
         public async getSuggestionsDataFromAPI(saConfig: SAConfig, RecordId: string) {
-            let eventParameters = new TelemetryLogger.EventParameters();
             try {
+                this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.FetchingDataFromAPI, null);
                 const suggestionProvider = this.getSuggestionProvider(saConfig);
                 var context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext() as any;
                 let tabcontext;
@@ -119,6 +122,13 @@
                 }
 
                 this.Suggestions = {};
+                if (suggestionDataFromAPI.length < 1) {
+                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoDataFoundFromAPI, null);
+                }
+                else {
+                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.DataFetchedFromAPI, null);
+                }
+
                 let data = suggestionDataFromAPI;
                 data = data.sort((a, b) => a.ConfidenceScore > b.ConfidenceScore ? -1 : 1);
                 var slicedData = data.slice(0, parseInt(saConfig.MaxSuggestionCount));
@@ -133,7 +143,7 @@
 
                 let additionalData = data.slice(parseInt(saConfig.MaxSuggestionCount));
 
-                this._cachePoolManager.addOrUpdateSuggestionsInCachePool(RecordId, saConfig.SmartassistConfigurationId, additionalData);
+                this._cachePoolManager.addOrUpdateSuggestionsInCachePool(RecordId, saConfig.SmartassistConfigurationId, additionalData, this.telemetryHelper);
 
                 // Raise PP notification
                 var saConfigData = this.Suggestions;
@@ -147,8 +157,7 @@
             }
             catch (error) {
                 this.Suggestions = null;
-                eventParameters.addParameter("Exception Details", error.message);
-                SmartAssistAnyEntityControl._telemetryReporter.logError("Main Component", "getSuggestionsDataFromAPI", "Error occurred while getting suggestions from API", eventParameters);
+                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchDataFromAPI, error, null);
                 return null;
             }
         }
@@ -171,8 +180,7 @@
                 data.forEach(item => this._sessionStorageManager.createRecord(item.SuggestionId, JSON.stringify({ data: item })));
                 this.saveAllSuggestionIdsInSessionStorage(suggestionIds);
             } catch (error) {
-                eventParameters.addParameter("Exception Details", error.message);
-                SmartAssistAnyEntityControl._telemetryReporter.logError("Main Component", "initializeCacheForSuggestions", "Error occurred while initializing cache suggestions", eventParameters);
+                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.CacheInitializationFailed, error, null);
             }
         }
 

@@ -19,6 +19,7 @@
     <RootNamespace>RecommendationControl</RootNamespace>
     <AssemblyName>RecommendationControl</AssemblyName>
     <TypeScriptOutFile>RecommendationControl.js</TypeScriptOutFile>
+    <TypeScriptSkipLibCheck>true</TypeScriptSkipLibCheck>
   </PropertyGroup>
   <PropertyGroup>
     <UglifyJsMangle>false</UglifyJsMangle>

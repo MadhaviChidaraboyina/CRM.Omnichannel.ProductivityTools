@@ -17,6 +17,7 @@ module MscrmControls.Smartassist {
 		private _suggestionId: string;
 		private _adaptiveCardRenderer: Suggestion.AdaptiveCardRenderer;
 		private _sessionStorageManager: Suggestion.SessionStorageManager;
+		public static anchorTabContext: AppRuntimeClientSdk.ISessionContext;
 
 		/**
 		 * Empty constructor.
@@ -52,11 +53,12 @@ module MscrmControls.Smartassist {
 				this._recommendationContainer.appendChild(el);
 
 				$("#" + el.id).html(Smartassist.RecommendationTemplate.get(false));
+				
+				Microsoft.AppRuntime.Sessions.getFocusedSession().getContext().then((context) => { RecommendationControl.anchorTabContext = context });
+
 				this.renderRecommendation();
 			} catch (error) {
-				let eventParameters = new TelemetryLogger.EventParameters();
-				eventParameters.addParameter("Exception Details", error.message);
-				RecommendationControl._telemetryReporter.logError("MainComponent", "init", "Recommendation control fails to initialize", eventParameters)
+				this._context.reporting.reportFailure(Suggestion.TelemetryEventTypes.InitFailed, error, "TSG-TODO", Suggestion.Util.getTelemetryParameter(null, this._suggestionId));
 			}
 		}
 
@@ -72,6 +74,7 @@ module MscrmControls.Smartassist {
 			const cardHtml = suggestionCardElement.cardHTMLElement;
 			if (cardHtml) {
 				$("#" + cardId).append(cardHtml);
+				this._context.reporting.reportSuccess(Suggestion.TelemetryEventTypes.AdaptiveCardRenderingSucceed, Suggestion.Util.getTelemetryParameter(null, this._suggestionId));
 				if (!this._data.IsInteracted) {
 					$("#" + cardId).addClass(Suggestion.Constants.CardNewClass);
                 }
@@ -123,6 +126,7 @@ module MscrmControls.Smartassist {
 				if (el) {
 					if (args.type == Suggestion.Action.Refresh) {
 						el.parentNode.removeChild(el);
+						this._context.reporting.reportSuccess(Suggestion.TelemetryEventTypes.CardRefreshInitiated, Suggestion.Util.getTelemetryParameter(null, this._suggestionId));
 						this.renderRecommendation();
 						// After the card is refreshed, the focus should be on previous action element.
 						if (args.actionType == Suggestion.CustomActionType.PopupAction) {
@@ -137,14 +141,13 @@ module MscrmControls.Smartassist {
 					}
 					else if (args.type == Suggestion.Action.Dismiss) {
 						let dismissEvent = new CustomEvent(Suggestion.Constants.DissmissCardAction, { detail: { id: this._suggestionId, data: dataToOverride } });
+						this._context.reporting.reportSuccess(Suggestion.TelemetryEventTypes.CardDismissInitiated, Suggestion.Util.getTelemetryParameter(null, this._suggestionId));
 						window.top.dispatchEvent(dismissEvent);
 					}
 				}
 
 			} catch (error) {
-				let eventParameters = new TelemetryLogger.EventParameters();
-				eventParameters.addParameter("Exception Details", error.message);
-				RecommendationControl._telemetryReporter.logError("MainComponent", "handleCardRefresh", "Recommendation control fails to refresh", eventParameters)
+				this._context.reporting.reportFailure(Suggestion.TelemetryEventTypes.HandleCardRefreshOrDismissFailed, error, "TSG-TODO", Suggestion.Util.getTelemetryParameter(null, this._suggestionId));
 			}
 		}
 	}

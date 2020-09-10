@@ -20,7 +20,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * @param saConfigId
          * @param additionalSuggestionsData
          */
-        public addOrUpdateSuggestionsInCachePool(recordId: string, saConfigId: string, additionalSuggestionsData: any[]) {
+        public addOrUpdateSuggestionsInCachePool(recordId: string, saConfigId: string, additionalSuggestionsData: any[], telemetryHelper: TelemetryHelper) {
             if (!recordId || !saConfigId) {
                 // TODO: Telemetry: invalid argument.
                 return;
@@ -34,6 +34,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     cachePoolForEntity.suggestionsForConfig[saConfigId] = additionalSuggestionsData;
                     cachePoolForSession.suggestionsForEntityIds[recordId] = cachePoolForEntity;
                     window.sessionStorage.setItem(key, JSON.stringify(cachePoolForSession));
+                    telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.CachePoolUpdated, null);
                 }
                 else {
                     let cachePoolForSession = <SuggestionCachePoolForSession>JSON.parse(additionalCacheData);
@@ -42,18 +43,17 @@ module MscrmControls.SmartAssistAnyEntityControl {
                         let suggestionForEntity = suggestions[recordId];
                         suggestionForEntity.suggestionsForConfig[saConfigId] = additionalSuggestionsData;
                         window.sessionStorage.setItem(key, JSON.stringify(cachePoolForSession));
+                        telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.CachePoolUpdated, null);
                     }
                     else if (suggestions) {
                         suggestions[recordId] = new SuggestionCachePoolForEntity();
                         suggestions[recordId].suggestionsForConfig[saConfigId] = additionalSuggestionsData;
                         window.sessionStorage.setItem(key, JSON.stringify(cachePoolForSession));
-                    }
-                    else {
-                        // TODO: Telemerty for cache pool not being initialized.
+                        telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.CachePoolUpdated, null);
                     }
                 }
             } catch (error) {
-                // TODO: Telemetry
+                telemetryHelper.logTelemetryError(TelemetryEventTypes.CachePoolAddOrUpdateFailed, error, null);
             }
         }
 
@@ -62,7 +62,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * @param recordId
          * @param saConfigId
          */
-        public fetchSuggestionFromCachePool(recordId: string, saConfigId: string): any {
+        public fetchSuggestionFromCachePool(recordId: string, saConfigId: string, telemetryHelper: TelemetryHelper): any {
             if (!recordId || !saConfigId) {
                 // TODO: Telemetry: invalid argument.
                 return null;
@@ -81,7 +81,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                                 if (suggestionsForConfig.length > 0) {
                                     const suggestionToReturn = suggestionsForConfig[0];
                                     suggestionsForConfig.shift();
-                                    this.addOrUpdateSuggestionsInCachePool(recordId, saConfigId, suggestionsForConfig);
+                                    this.addOrUpdateSuggestionsInCachePool(recordId, saConfigId, suggestionsForConfig, telemetryHelper);
                                     return suggestionToReturn;
                                 }
                             }
@@ -89,10 +89,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     }
                 }
                 else {
-                    // TODO: CachePool not initialized.
+                    telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchDataFromCachePool, new Error("CachePool not found"), null);
                 }
             } catch (error) {
-                //TODO Telemetry
+                telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchDataFromCachePool, error, null);
             }
             return null;
         }

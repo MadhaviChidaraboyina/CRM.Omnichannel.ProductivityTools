@@ -41,6 +41,7 @@
     <TypeScriptCompile Include="PrivateReferences.ts" />
     <TypeScriptCompile Include="$(PKG_TYPESCRIPT_MSBUILD)\tools\tsc\lib.es6.d.ts" />
     <TypeScriptCompile Include="SmartAssistAnyEntityControl.ts" />
+    <TypeScriptCompile Include="Utils\TelemetryHelper.ts" />
     <TypeScriptCompile Include="Utils\Utility.ts" />
     <TypeScriptCompile Include="Views\ViewTemplates.ts" />
   </ItemGroup>
