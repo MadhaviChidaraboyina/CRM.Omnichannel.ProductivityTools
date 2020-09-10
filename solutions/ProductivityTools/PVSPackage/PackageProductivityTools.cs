@@ -20,6 +20,8 @@ namespace PVSPackage
     [Export(typeof(IImportExtensions))]
     public class PackageMacros : ImportExtension
     {
+        private const string NewOrgVersion = "0.0.0.0";
+        private List<string> DeprecatedSolutions = new List<string> { "ProductivityMacros", "Agentscript", "ProductivityPaneControl", "AgentGuidance" };
         /// <summary>
         /// Called When the package is initialized. 
         /// </summary>
@@ -82,12 +84,11 @@ namespace PVSPackage
         /// <returns>Import action object</returns>
         public override UserRequestedImportAction OverrideSolutionImportDecision(string solutionUniqueName, Version organizationVersion, Version packageSolutionVersion, Version inboundSolutionVersion, Version deployedSolutionVersion, ImportAction systemSelectedImportAction)
         {
-            //Skipping install of OC related solution in case of CEC & Omnichannel not installed
-            //TODO: to add version check too to ensure OC solution don't get upgraded with CEC install & to add other solutions too
-            //if (!IsSolutionInstalled("OmnichannelBase") && (solutionUniqueName.Equals("msdyn_OmnichannelProductivityToolsSettings") || solutionUniqueName.Equals("Agentscript")))
-            //{
-            //   return UserRequestedImportAction.Skip;
-            //}
+            //Skipping install of old deprecated solutions in case of fresh install
+            if(NewOrgVersion.Equals(deployedSolutionVersion.ToString()) && DeprecatedSolutions.Contains(solutionUniqueName))
+            {
+               return UserRequestedImportAction.Skip;
+            }
             // Perform “Update” to the existing solution
             // instead of “Delete And Promote” when a new version
             // of an existing solution is detected.
