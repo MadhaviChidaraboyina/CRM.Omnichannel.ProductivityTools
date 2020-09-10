@@ -28,7 +28,9 @@ module MscrmControls.Smartassist.Suggestion {
 		private _suggestionId: string;
 		private _refreshCardCallback: (args: Suggestion.CardRefreshArgs) => void;
 		private _sessionStorageManager: Suggestion.SessionStorageManager;
-		private adaptivecardRoot: AdaptiveCards.AdaptiveCard;
+		public adaptivecardRoot: AdaptiveCards.AdaptiveCard;
+		public popupAction: PopupAction;
+		public previousActionClicked: string;
 
 		constructor(refreshCallback: (args: Suggestion.CardRefreshArgs) => void) {
 			this._refreshCardCallback = refreshCallback;
@@ -64,6 +66,10 @@ module MscrmControls.Smartassist.Suggestion {
 				const suggestionCard: SuggestionCard = { cardId: cardId, cardContent: card, cardState: CardState.New };
 
 				const htmlElement = this.createAdaptiveCard(card);
+
+				// TODO: To be removed and configure in adaptive card when uptaking adaptivecard >= 2.3 version
+				htmlElement.removeAttribute("tabindex");				
+
 				const suggestionCardElement: SuggestionCardElement = { card: suggestionCard, cardHTMLElement: htmlElement };
 
 				return suggestionCardElement;
@@ -78,7 +84,8 @@ module MscrmControls.Smartassist.Suggestion {
 		createAdaptiveCard(cardContent: any): HTMLElement {
 			const adaptiveCard = new AdaptiveCards.AdaptiveCard();
 			this.initializeAdaptiveCardsHostConfig(adaptiveCard);
-			AdaptiveCards.AdaptiveCard.elementTypeRegistry.registerType(Suggestion.Constants.PopupActionName, () => { return new PopupAction(this.onExecuteAction.bind(this)) });
+			this.popupAction = new PopupAction(this.onExecuteAction.bind(this));
+			AdaptiveCards.AdaptiveCard.elementTypeRegistry.registerType(Suggestion.Constants.PopupActionName, () => { return this.popupAction });
 			adaptiveCard.parse(cardContent);
 			adaptiveCard.onExecuteAction = this.onExecuteAction.bind(this);
 			adaptiveCard.onElementVisibilityChanged = this.onVisibilityChanged.bind(this);
@@ -119,6 +126,7 @@ module MscrmControls.Smartassist.Suggestion {
 		onExecuteAction(action: AdaptiveCards.Action) {
 			try {
 				const cardId = Suggestion.Util.getSuggestionCardId(this._suggestionId);
+				this.setPreviousActionClick(action);
 
 				// remove blueband
 				if ($("#" + cardId).hasClass(Suggestion.Constants.CardNewClass)) {
@@ -146,9 +154,6 @@ module MscrmControls.Smartassist.Suggestion {
 								const successMessage = ViewTemplates.SuccessMessageTemplate.Format(notificationBarId, successMessageTemplate);
 								$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(successMessage);
 								$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).addClass(Constants.CustomActionSuccessStyle);
-								$("#" + notificationBarId).ready(() => {
-									$("#" + notificationBarId).attr("tabindex", -1).focus();
-								})
 								var self = this;
 								setTimeout(() => {
 									self.removePreviousActionMessage(notificationBarId);
@@ -167,9 +172,6 @@ module MscrmControls.Smartassist.Suggestion {
 							let errorMessage = ViewTemplates.FailureMessageTemplates.Format(notificationBarId, errorMessageTemplate);
 							$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(errorMessage);
 							$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).addClass(Constants.CustomActionErrorStyle);
-							$("#" + notificationBarId).ready(() => {
-								$("#" + notificationBarId).attr("tabindex", -1).focus();
-							})
 							var self = this;
 							setTimeout(() => {
 								self.removePreviousActionMessage(notificationBarId);
@@ -198,20 +200,29 @@ module MscrmControls.Smartassist.Suggestion {
 			}
 		}
 
+		/**
+		 * Get column id which is a parent to this action element.
+		 * @param action
+		 */
+		private setPreviousActionClick(action: AdaptiveCards.Action) {
+			// This is required to resolve the accessibility issue for focusing Link/Unlink button on KB and SimilarCase card.
+			// After the card is refreshed, the previous action image should be focused.
+			if (action.parent && (action.parent.parent instanceof AdaptiveCards.Column)) {
+				this.previousActionClicked = action.parent.parent.id;
+			}
+			else {
+				this.previousActionClicked = null;
+            }
+		}
+
 		private removePreviousActionMessage(notificationBarId) {
 			if ($("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).hasClass(Constants.CustomActionSuccessStyle)) {
 				$('#' + notificationBarId).remove();
-				if (this.adaptivecardRoot) {
-					this.adaptivecardRoot.renderedElement.focus();
-                }
 				$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionSuccessStyle);
 			}
 
 			if ($("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).hasClass(Constants.CustomActionErrorStyle)) {
 				$('#' + notificationBarId).remove();
-				if (this.adaptivecardRoot) {
-					this.adaptivecardRoot.renderedElement.focus();
-				}
 				$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionErrorStyle);
 			}
 		}

@@ -149,7 +149,7 @@
     <value>AI suggestions for knowledge articles and similar cases.</value>
     <comment>Title Icon text</comment>
   </data>
-  <data name="SmartAssistInfoIcon" xml:space="preserve">
+  <data name="SmartAssistInformationIcon" xml:space="preserve">
     <value>Smart assist information icon</value>
     <comment>Information icon</comment>
   </data>

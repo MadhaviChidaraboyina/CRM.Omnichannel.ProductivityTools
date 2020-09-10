@@ -38,6 +38,17 @@
         CacheUpdate = 2
     }
 
+    export const enum CustomActionType {
+        /**
+         * Action added on the card's body.
+         * */
+        PrimaryAction = 1,
+        /**
+         * Popup actions
+         * */
+        PopupAction = 2
+    }
+
     /**
      * Interface for the argument to be passed in refresh callback.
      * */
@@ -52,6 +63,11 @@
          * The data to override.
          * */
         data: any;
+
+        /**
+         * CustomAction's type.
+         * */
+        actionType?: CustomActionType;
     }
 
     export interface CustomActionReturn {

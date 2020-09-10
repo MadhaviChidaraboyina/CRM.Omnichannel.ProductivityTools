@@ -30,6 +30,16 @@ declare module MscrmControls.Smartassist.Suggestion {
          * */
         CacheUpdate = 2
     }
+    const enum CustomActionType {
+        /**
+         * Action added on the card's body.
+         * */
+        PrimaryAction = 1,
+        /**
+         * Popup actions
+         * */
+        PopupAction = 2
+    }
     /**
      * Interface for the argument to be passed in refresh callback.
      * */
@@ -42,6 +52,10 @@ declare module MscrmControls.Smartassist.Suggestion {
          * The data to override.
          * */
         data: any;
+        /**
+         * CustomAction's type.
+         * */
+        actionType?: CustomActionType;
     }
     interface CustomActionReturn {
         /**

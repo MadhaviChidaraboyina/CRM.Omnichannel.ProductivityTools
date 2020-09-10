@@ -124,6 +124,16 @@ module MscrmControls.Smartassist {
 					if (args.type == Suggestion.Action.Refresh) {
 						el.parentNode.removeChild(el);
 						this.renderRecommendation();
+						// After the card is refreshed, the focus should be on previous action element.
+						if (args.actionType == Suggestion.CustomActionType.PopupAction) {
+							this._adaptiveCardRenderer.popupAction._popupOwner.focus();
+						}
+						else if (this._adaptiveCardRenderer.previousActionClicked) {
+							const uiElement = (<AdaptiveCards.ColumnSet>this._adaptiveCardRenderer.adaptivecardRoot.getElementById(this._adaptiveCardRenderer.previousActionClicked)).getItemAt(0);
+							if (uiElement) {
+								(<HTMLElement>uiElement.renderedElement.children[0]).focus();
+							}
+						}	
 					}
 					else if (args.type == Suggestion.Action.Dismiss) {
 						let dismissEvent = new CustomEvent(Suggestion.Constants.DissmissCardAction, { detail: { id: this._suggestionId, data: dataToOverride } });

@@ -47,7 +47,7 @@ module MscrmControls.SmartassistPanelControl {
 
                 //Control title
                 var loaderElement: HTMLDivElement = document.createElement("div");
-                loaderElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelTitleDiv.Format(Utility.getString(LocalizedStrings.SuggestionControlTitle), Utility.getString(LocalizedStrings.TitleIconInfoText));
+                loaderElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelTitleDiv.Format(Utility.getString(LocalizedStrings.SuggestionControlTitle), Utility.getString(LocalizedStrings.TitleIconInfoText), Utility.getString(LocalizedStrings.InfoIcon));
                 this.smartAssistContainer.appendChild(loaderElement);
 
                 var panelInfoIcon = document.getElementById(Constants.SAPanelInfoIcon);

@@ -3,7 +3,7 @@
 module MscrmControls.Smartassist.Suggestion {
     export class PopupAction extends AdaptiveCards.CardElement {
 
-        private _popupOwner: HTMLElement; // Ellipse Icon
+        public _popupOwner: HTMLElement; // Ellipse Icon
         private _renderedItems: HTMLElement;
         private _overlayElement: HTMLElement;
         private _popupActionContainer: AdaptiveCards.Container;
@@ -80,6 +80,7 @@ module MscrmControls.Smartassist.Suggestion {
         onExecuteAction(action: AdaptiveCards.Action) {
             this.onExecuteAdaptiveCardAction(action);
             this.closePopup();
+            this._popupOwner.focus();
         }
 
         getScrollX(): number {
