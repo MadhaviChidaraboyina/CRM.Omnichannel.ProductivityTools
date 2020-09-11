@@ -18,10 +18,10 @@ solutions\Agentscript\Client\Controls\ButtonControl\strings\ButtonControl.1033.r
 solutions\Agentscript\Client\Controls\CallscriptControl\strings\CallscriptControl.1033.resx,Agentscript
 solutions\Agentscript\Client\Localization\Languages\msdyn_Agentscript.1033.resx,Agentscript
 solutions\Agentscript\Solution\Resources\en-us\resources.en-US.resx,Agentscript
-solutions\AgentscriptComponent\Solution\Resources\Assets\1033.json,AgentscriptComponent
 solutions\AgentscriptComponent\Client\Controls\ButtonControl\strings\ButtonControl.1033.resx,AgentscriptComponent
 solutions\AgentscriptComponent\Client\Controls\CallscriptControl\strings\CallscriptControl.1033.resx,AgentscriptComponent
 solutions\AgentscriptComponent\Client\Localization\Languages\msdyn_AgentscriptComponent.1033.resx,AgentscriptComponent
+solutions\AgentscriptComponent\Solution\Resources\Assets\1033.json,AgentscriptComponent
 solutions\AgentscriptComponent\Solution\Resources\en-US\resources.en-US.resx,AgentscriptComponent
 solutions\Anchors\ProductivityTools\Solution\Resources\en-US\resources.en-US.resx,Anchors
 solutions\OmnichannelProductivityToolsSettings\Solution\Resources\en-us\resources.en-US.resx,OmnichannelProductivityToolsSettings
@@ -47,10 +47,10 @@ solutions\ProductivityPaneControl\Solution\Resources\en-us\resources.en-US.resx,
 solutions\ProductivityPaneControl\Solution\WebResources\msdyn_ProductivityPaneControl.1033.resx,ProductivityPaneControl
 !solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.xml,ProductivityTools
 solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.json,ProductivityTools
-solutions\SmartAssist\Solution\Resources\Assets\1033.json,SmartAssist
 solutions\SmartAssist\Client\Controls\RecommendationControl\strings\RecommendationControl.1033.resx,SmartAssist
 solutions\SmartAssist\Client\Controls\SmartAssistAnyEntityControl\strings\SmartAssistAnyEntityControl.1033.resx,SmartAssist
 solutions\SmartAssist\Client\Controls\SmartassistControl\strings\SmartassistControl.1033.resx,SmartAssist
 solutions\SmartAssist\Client\Controls\SmartassistPanelControl\strings\SmartassistPanelControl.1033.resx,SmartAssist
 solutions\SmartAssist\Client\Controls\TPBotControl\strings\TPBotControl.1033.resx,SmartAssist
+solutions\SmartAssist\Solution\Resources\Assets\1033.json,SmartAssist
 solutions\SmartAssist\Solution\Resources\en-US\resources.en-US.resx,SmartAssist
