@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-  <Name LocalizedName="Action Input Parameter" OriginalName="Action Input Parameter">msdyn_actioninputparameter</Name>
+  <Name LocalizedName="Action Input Parameter (Deprecated)" OriginalName="Action Input Parameter">msdyn_actioninputparameter</Name>
   <EntityInfo>
     <entity Name="msdyn_actioninputparameter">
       <LocalizedNames>
-        <LocalizedName description="Action Input Parameter" languagecode="1033" />
+        <LocalizedName description="Action Input Parameter (Deprecated)" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="Action Input Parameters" languagecode="1033" />
+        <LocalizedCollectionName description="Action Input Parameters (Deprecated)" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="Attributes of action input parameters" languagecode="1033" />

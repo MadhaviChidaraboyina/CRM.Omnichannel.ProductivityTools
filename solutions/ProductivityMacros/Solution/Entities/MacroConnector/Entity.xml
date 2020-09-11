@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity>
-  <Name LocalizedName="Macro Connector" OriginalName="Macro Connector">msdyn_macroconnector</Name>
+  <Name LocalizedName="Macro Connector (Deprecated)" OriginalName="Macro Connector">msdyn_macroconnector</Name>
   <EntityInfo>
     <entity Name="msdyn_macroconnector">
       <LocalizedNames>
-        <LocalizedName description="Macro Connector" languagecode="1033" />
+        <LocalizedName description="Macro Connector (Deprecated)" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="macroconnectors" languagecode="1033" />
+        <LocalizedCollectionName description="macroconnectors (Deprecated)" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="Attributes for macro connectors" languagecode="1033" />

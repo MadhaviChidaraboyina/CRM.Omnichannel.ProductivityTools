@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-  <Name LocalizedName="Parameter definition" OriginalName="Parameter definition">msdyn_parameterdefinition</Name>
+  <Name LocalizedName="Parameter definition (Deprecated)" OriginalName="Parameter definition">msdyn_parameterdefinition</Name>
   <EntityInfo>
     <entity Name="msdyn_parameterdefinition">
       <LocalizedNames>
-        <LocalizedName description="Parameter definition" languagecode="1033" />
+        <LocalizedName description="Parameter definition (Deprecated)" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="Parameter definitions" languagecode="1033" />
+        <LocalizedCollectionName description="Parameter definitions (Deprecated)" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="" languagecode="1033" />
