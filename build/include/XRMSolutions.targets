@@ -74,4 +74,8 @@
 	<Target Name="Clean">
 		<RemoveDir Directories="$(OutputPath)" />
 	</Target>
+	<PropertyGroup>
+		<SolutionPackageDefaultLocale>en-US</SolutionPackageDefaultLocale>
+	</PropertyGroup>
+	<Import Project="AssetLocalization.targets" />
 </Project>
