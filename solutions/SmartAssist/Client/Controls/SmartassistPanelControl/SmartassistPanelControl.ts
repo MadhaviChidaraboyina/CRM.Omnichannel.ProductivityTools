@@ -47,22 +47,23 @@ module MscrmControls.SmartassistPanelControl {
 
                 //Control title
                 var loaderElement: HTMLDivElement = document.createElement("div");
-                loaderElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelTitleDiv.Format(Utility.getString(LocalizedStrings.SuggestionControlTitle), Utility.getString(LocalizedStrings.TitleIconInfoText));
+                loaderElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelTitleDiv.Format(Utility.getString(LocalizedStrings.SuggestionControlTitle), Utility.getString(LocalizedStrings.TitleIconInfoText), Utility.getString(LocalizedStrings.InfoIcon));
                 this.smartAssistContainer.appendChild(loaderElement);
 
                 var panelInfoIcon = document.getElementById(Constants.SAPanelInfoIcon);
+                panelInfoIcon.onclick = (e) => {
+                    Utility.toggleTooltip();
+                }
                 panelInfoIcon.onkeydown = (e: KeyboardEvent) => {
                     switch (e.keyCode) {
                         case KeyCodes.ENTER_KEY:
-                            var popup = document.getElementById(Constants.IconPopOutId) as HTMLElement;
-                            popup.classList.toggle('show');
-                            popup.focus();
+                            Utility.toggleTooltip();
                             break;
                         case KeyCodes.ESCAPE_KEY:
-                            var panelInfoIcon = document.getElementById(Constants.SAPanelInfoIcon);
-                            var popup = document.getElementById(Constants.IconPopOutId);
-                            popup.classList.toggle('show');
-                            panelInfoIcon.focus();
+                            var popup = document.getElementById('IconPopOutId');
+                            if (popup.classList.contains('show')) {
+                                Utility.toggleTooltip();
+                            }
                             break;
                     }
                 }

@@ -119,5 +119,16 @@ module MscrmControls.SmartassistPanelControl {
             }
             return workStreamId;
         }
+
+        /**Toggle tooltip icon */
+        public static toggleTooltip() {
+            var popup = document.getElementById('IconPopOutId');
+            popup.classList.toggle('show');
+            if (popup.classList.contains('show')) {
+                popup.focus();
+            } else {
+                document.getElementById('sapanel-info-icon').focus();
+            }
+        }
     }
 }
