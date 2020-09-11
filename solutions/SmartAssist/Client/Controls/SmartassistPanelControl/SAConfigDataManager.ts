@@ -25,11 +25,11 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         /**Gets SA configuration from memory if available otherwise from cds */
-        public async getSAConfigurations() {
+        public async getSAConfigurations(telemetryHelper: TelemetryHelper) {
             let environmentData = await Utility.getAppRuntimeEnvironment();
-            this.getSAConfigurationFromCache(environmentData.AppConfigName);
+            this.getSAConfigurationFromCache(environmentData.AppConfigName, telemetryHelper);
             if ((this.saConfig.length < 1)) {
-                await this.fetchSAConfigurationsData(environmentData.AppConfigName);
+                await this.fetchSAConfigurationsData(environmentData.AppConfigName, telemetryHelper);
             }
 
             return this.saConfig;
@@ -39,15 +39,19 @@ module MscrmControls.SmartassistPanelControl {
         * Get Filtered SA config from admin suggestions setting
         * @param saConfig: All active SA config
         */
-        public async getFilteredSAConfig(sourceEntity: string) {
+        public async getFilteredSAConfig(sourceEntity: string, telemetryHelper: TelemetryHelper) {
             let sessionId = Utility.getCurrentSessionId();
-            await this.getSuggestionsSetting(sessionId);
-            let configs = await this.getSAConfigurations();
+            await this.getSuggestionsSetting(sessionId, telemetryHelper);
+            let configs = await this.getSAConfigurations(telemetryHelper);
 
             let isSmartbotAvailable = false;
             let botConfig = configs.find(i => i.SuggestionType == SuggestionType.BotSuggestion);
             if (botConfig) {
-                isSmartbotAvailable = await this.isSmartbotAvailable() as any;
+                isSmartbotAvailable = await this.isSmartbotAvailable(telemetryHelper) as any;
+            }
+
+            if (!isSmartbotAvailable) {
+                telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ThirdPartyBotNotFoundInWorkStream, null);
             }
 
             let isDefaultCaseAdded = false;
@@ -63,6 +67,7 @@ module MscrmControls.SmartassistPanelControl {
                     }
                 }
                 else {
+                    telemetryHelper.logTelemetryError(TelemetryEventTypes.InvalidSourceEntityName, new Error("Invalid source entityName found"), null);
                     //for invalid session or invalid source entity - select a Case and km config to show no suggestions
                     if (data.IsDefault == true) {
                         let result = false;
@@ -96,30 +101,31 @@ module MscrmControls.SmartassistPanelControl {
             return result;
         }
 
-        private getSAConfigurationFromCache(appConfigName: string) {
+        private getSAConfigurationFromCache(appConfigName: string, telemetryHelper: TelemetryHelper) {
             let eventParameters = new TelemetryLogger.EventParameters();
             try {
                 var data = window.sessionStorage.getItem(Constants.SAConfigCacheKey);
                 if (data) {
                     var saConfigs = JSON.parse(data) as SAConfig[];
                     if (saConfigs[0].CurrentAppConfigName == appConfigName) {
+                        telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SAConfigFetchedFromCache, null);
                         this.saConfig = saConfigs;
                     }
                 }
             }
             catch (error) {
-                eventParameters.addParameter("Exception Details", error.message);
-                SmartassistPanelControl._telemetryReporter.logError(TelemetryComponents.MainComponent, "getSAConfigurationFromCache", "Error occurred while fetching SA Configurations Data from cache", eventParameters);
+                telemetryHelper.logTelemetryError(TelemetryEventTypes.ExceptionInFetchingSAConfigFromCache, error, null);
             }
         };
 
         /**Fetch SA config from cds */
-        private async fetchSAConfigurationsData(appConfigName: string) {
+        private async fetchSAConfigurationsData(appConfigName: string, telemetryHelper: TelemetryHelper) {
             let eventParameters = new TelemetryLogger.EventParameters();
             try {
                 let fetchXml = this.getXmlQueryForSAConfig(appConfigName)
                 var result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.saConfigSchema.EntityName, fetchXml) as any;
                 if (result.entities.length < 1) {
+                    telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.FetchingDefaultSAConfig, null);
                     let defaultConfigFetchXml = this.getFetchXmlForDefaultSAConfig();
                     result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.saConfigSchema.EntityName, defaultConfigFetchXml) as any;
                 }
@@ -127,16 +133,12 @@ module MscrmControls.SmartassistPanelControl {
                 for (var i = 0; i < result.entities.length; i++) {
                     this.saConfig.push(new SAConfig(result.entities[i], this.acConfigSchema.AdaptiveCardTemplateAlias, appConfigName))
                 }
-                try {
-                    window.sessionStorage.setItem(Constants.SAConfigCacheKey, JSON.stringify(this.saConfig));
+                if (this.saConfig.length == 0) {
+                    telemetryHelper.logTelemetryError(TelemetryEventTypes.NoSAConfigFound, new Error("No SAConfig record found"), null);
                 }
-                catch (error) {
-                    eventParameters.addParameter("Exception Details", error.message);
-                    SmartassistPanelControl._telemetryReporter.logError(TelemetryComponents.MainComponent, "fetchSAConfigurationsData", "Error occurred while to store sa config data in cache.", eventParameters);
-                }
+                window.sessionStorage.setItem(Constants.SAConfigCacheKey, JSON.stringify(this.saConfig));
             } catch (error) {
-                eventParameters.addParameter("Exception Details", error.message);
-                SmartassistPanelControl._telemetryReporter.logError(TelemetryComponents.MainComponent, "fetchSAConfigurationsData", "Error occurred while fetching SA Configurations Data", eventParameters);
+                telemetryHelper.logTelemetryError(TelemetryEventTypes.ExceptionInFetchingSAConfigData, error, null);
             }
         }
 
@@ -176,15 +178,17 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         /**Get Session Sttings */
-        public async getSuggestionsSetting(sessionId: string) {
+        public async getSuggestionsSetting(sessionId: string, telemetryHelper: TelemetryHelper) {
             if (this.suggestionsSetting[sessionId] && !Utility.isNullOrEmptyString(this.suggestionsSetting[sessionId].SuggestionsSettingId)) {
+                telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.FetchingSuggestionSettingsFromCache, null);
                 return this.suggestionsSetting[sessionId];
             }
-            return this.getSuggestionsSettingFromAPI();
+            return this.getSuggestionsSettingFromAPI(telemetryHelper);
         }
 
         /**Gets Admin settings for KM and Case suggestions */
-        private async getSuggestionsSettingFromAPI() {
+        private async getSuggestionsSettingFromAPI(telemetryHelper: TelemetryHelper) {
+            telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.FetchingSuggestionSettingsFromAPI, null);
             let eventParameters = new TelemetryLogger.EventParameters();
             var currentSessionId = Utility.getCurrentSessionId();
             try {
@@ -194,6 +198,7 @@ module MscrmControls.SmartassistPanelControl {
                     this.suggestionsSetting[currentSessionId] = data;
                 }
                 else {
+                    telemetryHelper.logTelemetryError(TelemetryEventTypes.SuggestionSettingsNotFound, new Error("No suggestion settings record found"), null);
                     data = new SuggestionsSetting(null);
                     this.suggestionsSetting[currentSessionId] = data;
                 }
@@ -201,22 +206,22 @@ module MscrmControls.SmartassistPanelControl {
             catch (error) {
                 data = new SuggestionsSetting(null);
                 this.suggestionsSetting[currentSessionId] = data;
-                eventParameters.addParameter("Exception Details", error.message);
-                SmartassistPanelControl._telemetryReporter.logError(TelemetryComponents.MainComponent, "getSuggestionsSetting", "Error occurred while fetching suggestions admin settings", eventParameters);
+                telemetryHelper.logTelemetryError(TelemetryEventTypes.ExceptionInSuggestionSettings, error, null);
             }
         }
 
         /**Check if Smart assist is added in OC WS */
-        public async isSmartbotAvailable() {
+        public async isSmartbotAvailable(telemetryHelper: TelemetryHelper) {
             var liveworkStreamItem = Utility.getLiveWorkStreamId();
             if (Utility.isNullOrEmptyString(liveworkStreamItem)) {
+                telemetryHelper.logTelemetryError(TelemetryEventTypes.LiveWorkStreamIdNotFound, new Error("LiveWorkStreamIdNotFound"), null);
                 return false;
             }
             var sessionId = Utility.getCurrentSessionId();
             if (this.smartbotConfig[sessionId + liveworkStreamItem] != undefined) {
                 return this.smartbotConfig[sessionId + liveworkStreamItem];
             }
-            await this.FetchSmartAssistBotRecordAndSetCriteria(liveworkStreamItem, sessionId);
+            await this.FetchSmartAssistBotRecordAndSetCriteria(liveworkStreamItem, sessionId, telemetryHelper);
             return this.smartbotConfig[sessionId + liveworkStreamItem];
         }
 
@@ -224,7 +229,7 @@ module MscrmControls.SmartassistPanelControl {
          * Fet sa bots set SA rendering criteria
          * @param liveWorkStreamId: Work Stream Unique identifier
          */
-        private async FetchSmartAssistBotRecordAndSetCriteria(liveWorkStreamId: string, sessionId: string) {
+        private async FetchSmartAssistBotRecordAndSetCriteria(liveWorkStreamId: string, sessionId: string, telemetryHelper: TelemetryHelper) {
             let eventParameters = new TelemetryLogger.EventParameters();
             try {
                 //fetch smart assist bots
@@ -233,16 +238,11 @@ module MscrmControls.SmartassistPanelControl {
                 let dataResponse = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(Constants.UserEntityName, fetchXmlQuery) as any;
                 let entityRecords: WebApi.Entity[] = dataResponse.entities;
                 this.smartbotConfig[sessionId + liveWorkStreamId] = entityRecords.length > 0;
-
-                eventParameters.addParameter("total SmartAssistBotRecordFetch", entityRecords.length.toString());
-                SmartassistPanelControl._telemetryReporter.logSuccess("Main Component", "SmartAssistBotRecordFetch", eventParameters);
             }
             catch (error) {
                 this.smartbotConfig = {};
-                eventParameters.addParameter("Exception Details", error.message);
-                SmartassistPanelControl._telemetryReporter.logError("Main Component", "SmartAssistBotRecordFetch", "Error occurred while fetching smart assist bot", eventParameters);
+                telemetryHelper.logTelemetryError(TelemetryEventTypes.ExceptionInFetchingTPBDetails, error, null);
             }
-
         }
 
         /**

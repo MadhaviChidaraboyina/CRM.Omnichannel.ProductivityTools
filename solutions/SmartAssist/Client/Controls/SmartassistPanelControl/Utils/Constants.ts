@@ -27,7 +27,7 @@ module MscrmControls.SmartassistPanelControl {
         public static LoadingText = "LoadingText";
         public static SuggestionControlTitle = "SuggestionControlTitle";
         public static TitleIconInfoText = "SuggestionControlTitleIconText";
-        public static InfoIcon = "SmartAssistInfoIcon";
+        public static InfoIcon = "SmartAssistInformationIcon";
 
         //Accessibility Labels
         public static Accessibility_ExecutedTextStepIndicator = "StepListItem_ExecutedTextStepAccessibilityLabel";

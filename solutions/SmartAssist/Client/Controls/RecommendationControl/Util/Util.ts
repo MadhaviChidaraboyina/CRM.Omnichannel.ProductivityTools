@@ -66,5 +66,62 @@ module MscrmControls.Smartassist.Suggestion {
 		public static getSuggestionCardId(suggestionId: string) {
 			return Suggestion.Constants.CardNamePrefix + suggestionId;
 		}
+
+		/**
+		 * Get Telemetery params
+		 * @param additionalParameters
+		 * @param suggestionId
+		 */
+		public static getTelemetryParameter(additionalParameters: Mscrm.EventParameter[], suggestionId: string): Mscrm.EventParameter[] {
+			var entityContext = Util.getSuggestedForRecordIdAndEntityLogicalName();
+			var params: Mscrm.EventParameter[] = [
+				{ name: "SuggestionForEntityId", value: entityContext.recordId },
+				{ name: "SuggestedForEntityLogicalName", value: entityContext.entityLogicalName },
+				{ name: "UISuggestionId", value: suggestionId }
+			]
+			if (additionalParameters) {
+				return params.concat(additionalParameters);
+            }
+			return params;
+		}
+
+		/**
+		 * Get anchor tab entitycontext.
+		 * */
+		public static getSuggestedForRecordIdAndEntityLogicalName(): any {
+			var context = RecommendationControl.anchorTabContext;
+			if (context) {
+				//Get anchor context
+				var anchorContext = context.getTabContext("anchor") as any;
+				let recordId;
+				if (anchorContext.entityName == "msdyn_ocliveworkitem" && anchorContext.data != null) {
+					recordId = anchorContext.data.ocContext.config.sessionParams.LiveWorkItemId;
+				}
+				else {
+					recordId = anchorContext.entityId;
+                }
+				return {
+					recordId: recordId,
+					entityLogicalName: anchorContext.entityName
+				};
+			}
+			return {};
+		}
+	}
+
+	export class TelemetryEventTypes {
+		public static CustomActionActivityFailed = "MscrmControls.Smartassist.RecommendationControl.OnExecuteAction.Failed";
+		public static CustomActionActivitySuccess = "MscrmControls.Smartassist.RecommendationControl.OnExecuteAction.Succeed";
+		public static CustomActionInvocationFailed = "MscrmControls.Smartassist.RecommendationControl.CustomActionInvocationFailed";
+		public static CustomActionInvocationSuccess = "MscrmControls.Smartassist.RecommendationControl.CustomActionInvocationSucceed";
+		public static AdaptiveCardRenderingFailed = "MscrmControls.Smartassist.RecommendationControl.RenderAdaptiveCard.Failed";
+		public static AdaptiveCardRenderingSucceed = "MscrmControls.Smartassist.RecommendationControl.RenderAdaptiveCard.Succeed";
+		public static TemplateParsingCompleted = "MscrmControls.Smartassist.RecommendationControl.TemplateParsing.Completed";
+		public static InitFailed = "MscrmControls.Smartassist.RecommendationControl.InitFailed";
+		public static HandleCardRefreshOrDismissFailed = "MscrmControls.Smartassist.RecommendationControl.HandleCardRefreshOrDismiss.Failed";
+		public static CardRefreshInitiated = "MscrmControls.Smartassist.RecommendationControl.CardRefresh.Initiated";
+		public static CardDismissInitiated = "MscrmControls.Smartassist.RecommendationControl.CardDismiss.Initiated";
+		public static ActionNotSupported = "MscrmControls.Smartassist.RecommendationControl.ActionNotSupported"; 
+		public static CustomActionValidationFailed = "MscrmControls.Smartassist.RecommendationControl.CustomActionValidationFailed"
 	}
 }

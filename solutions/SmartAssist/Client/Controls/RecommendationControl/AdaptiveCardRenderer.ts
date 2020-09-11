@@ -28,7 +28,9 @@ module MscrmControls.Smartassist.Suggestion {
 		private _suggestionId: string;
 		private _refreshCardCallback: (args: Suggestion.CardRefreshArgs) => void;
 		private _sessionStorageManager: Suggestion.SessionStorageManager;
-		private adaptivecardRoot: AdaptiveCards.AdaptiveCard;
+		public adaptivecardRoot: AdaptiveCards.AdaptiveCard;
+		public popupAction: PopupAction;
+		public previousActionClicked: string;
 
 		constructor(refreshCallback: (args: Suggestion.CardRefreshArgs) => void) {
 			this._refreshCardCallback = refreshCallback;
@@ -53,6 +55,9 @@ module MscrmControls.Smartassist.Suggestion {
 			try {
 				const cardId = Suggestion.Util.getSuggestionCardId(suggestionId);
 				const templatePayload = JSON.parse(template);
+
+				this._context.reporting.reportSuccess(TelemetryEventTypes.TemplateParsingCompleted, Util.getTelemetryParameter(null, this._suggestionId));
+
 				const cardTemplate = new ACData.Template(templatePayload);
 
 				const dataToBind: any = data;
@@ -64,13 +69,16 @@ module MscrmControls.Smartassist.Suggestion {
 				const suggestionCard: SuggestionCard = { cardId: cardId, cardContent: card, cardState: CardState.New };
 
 				const htmlElement = this.createAdaptiveCard(card);
+
+				// TODO: To be removed and configure in adaptive card when uptaking adaptivecard >= 2.3 version
+				htmlElement.removeAttribute("tabindex");				
+
 				const suggestionCardElement: SuggestionCardElement = { card: suggestionCard, cardHTMLElement: htmlElement };
 
+				
 				return suggestionCardElement;
 			} catch (error) {
-				let eventParameters = new TelemetryLogger.EventParameters();
-				eventParameters.addParameter("Exception Details", error.message);
-				RecommendationControl._telemetryReporter.logError("MainComponent", "create card", "Recommendation control fails to create adaptivecard", eventParameters)
+				this._context.reporting.reportFailure(TelemetryEventTypes.AdaptiveCardRenderingFailed, error, "TSG-TODO", Util.getTelemetryParameter(null, this._suggestionId));
 				return null;
 			}
 		}
@@ -78,7 +86,8 @@ module MscrmControls.Smartassist.Suggestion {
 		createAdaptiveCard(cardContent: any): HTMLElement {
 			const adaptiveCard = new AdaptiveCards.AdaptiveCard();
 			this.initializeAdaptiveCardsHostConfig(adaptiveCard);
-			AdaptiveCards.AdaptiveCard.elementTypeRegistry.registerType(Suggestion.Constants.PopupActionName, () => { return new PopupAction(this.onExecuteAction.bind(this)) });
+			this.popupAction = new PopupAction(this.onExecuteAction.bind(this));
+			AdaptiveCards.AdaptiveCard.elementTypeRegistry.registerType(Suggestion.Constants.PopupActionName, () => { return this.popupAction });
 			adaptiveCard.parse(cardContent);
 			adaptiveCard.onExecuteAction = this.onExecuteAction.bind(this);
 			adaptiveCard.onElementVisibilityChanged = this.onVisibilityChanged.bind(this);
@@ -119,7 +128,9 @@ module MscrmControls.Smartassist.Suggestion {
 		onExecuteAction(action: AdaptiveCards.Action) {
 			try {
 				const cardId = Suggestion.Util.getSuggestionCardId(this._suggestionId);
+				this.setPreviousActionClick(action);
 
+				const executionStart = Date.now();
 				// remove blueband
 				if ($("#" + cardId).hasClass(Suggestion.Constants.CardNewClass)) {
 					$("#" + cardId).removeClass(Suggestion.Constants.CardNewClass);
@@ -134,27 +145,42 @@ module MscrmControls.Smartassist.Suggestion {
 						let customAction = {
 							customActionName: submitAction.data[Constants.CustomActionName], customActionArgs: customActionArgs
 						};
-						
-						let actionPromise = Suggestion.CustomActionHelper.invokeCustomAction(customAction);
+
+						let actionPromise = Suggestion.CustomActionHelper.invokeCustomAction(customAction, this._context);
 						const notificationBarId = "resolve_" + this._suggestionId;
 
-						actionPromise.then((data) => {
+						// log telemetry for custom action invocation
+						this._context.reporting.reportSuccess(TelemetryEventTypes.CustomActionInvocationSuccess, Util.getTelemetryParameter([
+							{ name: "ActionName", value: submitAction.data[Constants.CustomActionName] }
+						], this._suggestionId));
+
+						actionPromise.then((customActionReturn: CustomActionReturn) => {
+							const executionTime = Date.now() - executionStart;
 							let successMessageTemplate;
 							this.removePreviousActionMessage(notificationBarId);
+
+							let data;
+							if (customActionReturn) {
+								data = customActionReturn.notificationMessage;
+							}
+							AdaptiveCardRenderer.logTelemetryForCustomActions(this._context, true, "", customActionReturn, executionTime + "ms");
 							if (data) {
 								successMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.SuccessImageEncode, data);
 								const successMessage = ViewTemplates.SuccessMessageTemplate.Format(notificationBarId, successMessageTemplate);
 								$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(successMessage);
 								$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).addClass(Constants.CustomActionSuccessStyle);
-								$("#" + notificationBarId).ready(() => {
-									$("#" + notificationBarId).attr("tabindex", -1).focus();
-								})
 								var self = this;
 								setTimeout(() => {
 									self.removePreviousActionMessage(notificationBarId);
 								}, 5000);
 							}
-						}).catch((error) => {
+						}).catch((customActionReturn: CustomActionReturn) => {
+							const executionTime = Date.now() - executionStart;
+							let error;
+							if (customActionReturn) {
+								error = customActionReturn.notificationMessage;
+							}
+							
 							this.removePreviousActionMessage(notificationBarId);
 							let errorMessageTemplate;
 							if (error) {
@@ -164,12 +190,10 @@ module MscrmControls.Smartassist.Suggestion {
 								errorMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.ErrorImageEncode, LocalizedStrings.CustomActionFailureMessage);
 							}
 							const errorString = error ? error : LocalizedStrings.CustomActionFailureMessage;
+							AdaptiveCardRenderer.logTelemetryForCustomActions(this._context, false, errorString, customActionReturn, executionTime + "ms");
 							let errorMessage = ViewTemplates.FailureMessageTemplates.Format(notificationBarId, errorMessageTemplate);
 							$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(errorMessage);
 							$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).addClass(Constants.CustomActionErrorStyle);
-							$("#" + notificationBarId).ready(() => {
-								$("#" + notificationBarId).attr("tabindex", -1).focus();
-							})
 							var self = this;
 							setTimeout(() => {
 								self.removePreviousActionMessage(notificationBarId);
@@ -177,41 +201,37 @@ module MscrmControls.Smartassist.Suggestion {
 						});
 					}
 					else {
-						let eventParameters = new TelemetryLogger.EventParameters();
-						eventParameters.addParameter("CustomAction Validation", "Invalid custom action");
-						RecommendationControl._telemetryReporter.logError("MainComponent", "onExecuteAction", "invalid custom action", eventParameters);
+						this._context.reporting.reportFailure(TelemetryEventTypes.CustomActionValidationFailed, new Error("Invalid custom action"), "TSG-TODO", Util.getTelemetryParameter(null, this._suggestionId));
 					}
 				}
-				else if (action instanceof AdaptiveCards.OpenUrlAction) {
-					const openAction = <AdaptiveCards.OpenUrlAction>action;
-					window.open(openAction.url.toString());
-				}
-				else {
-					let eventParameters = new TelemetryLogger.EventParameters();
-					eventParameters.addParameter("CustomAction", "Action not supported");
-					RecommendationControl._telemetryReporter.logError("MainComponent", "onExecuteAction", "action not supported", eventParameters);
-				}
 			} catch (error) {
-				let eventParameters = new TelemetryLogger.EventParameters();
-				eventParameters.addParameter("CustomAction", "Unable to invoke custom action");
-				RecommendationControl._telemetryReporter.logError("MainComponent", "onExecuteAction", "unable to invoke custom action", eventParameters);
+				this._context.reporting.reportFailure(TelemetryEventTypes.CustomActionActivityFailed, error, "TSG-TODO", Util.getTelemetryParameter(null, this._suggestionId));
 			}
+		}
+
+		/**
+		 * Get column id which is a parent to this action element.
+		 * @param action
+		 */
+		private setPreviousActionClick(action: AdaptiveCards.Action) {
+			// This is required to resolve the accessibility issue for focusing Link/Unlink button on KB and SimilarCase card.
+			// After the card is refreshed, the previous action image should be focused.
+			if (action.parent && (action.parent.parent instanceof AdaptiveCards.Column)) {
+				this.previousActionClicked = action.parent.parent.id;
+			}
+			else {
+				this.previousActionClicked = null;
+            }
 		}
 
 		private removePreviousActionMessage(notificationBarId) {
 			if ($("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).hasClass(Constants.CustomActionSuccessStyle)) {
 				$('#' + notificationBarId).remove();
-				if (this.adaptivecardRoot) {
-					this.adaptivecardRoot.renderedElement.focus();
-                }
 				$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionSuccessStyle);
 			}
 
 			if ($("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).hasClass(Constants.CustomActionErrorStyle)) {
 				$('#' + notificationBarId).remove();
-				if (this.adaptivecardRoot) {
-					this.adaptivecardRoot.renderedElement.focus();
-				}
 				$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).removeClass(Constants.CustomActionErrorStyle);
 			}
 		}
@@ -223,5 +243,38 @@ module MscrmControls.Smartassist.Suggestion {
 		initializeAdaptiveCardsHostConfig(adaptiveCard: AdaptiveCards.AdaptiveCard): void {
 			adaptiveCard.hostConfig = new AdaptiveCards.HostConfig(Suggestion.hostConfig);
 		}
+
+		private static logTelemetryForCustomActions(context: Mscrm.ControlData<IInputBag>, success: boolean, message: string, customActionReturn: CustomActionReturn, executionTime: string) {
+			if (!customActionReturn || !customActionReturn.telemetryContext) {
+				return;
+            }
+			var telemetryParameter = customActionReturn.telemetryContext.telemetryParameters;
+			var additionalTelemetry = customActionReturn.telemetryContext.additionalTelemetryParameters;
+			let eventparams: Mscrm.EventParameter[] = [];
+			const entityContext = Util.getSuggestedForRecordIdAndEntityLogicalName();
+			eventparams.push({ name: "SuggestionForEntityId", value: entityContext.recordId });
+			eventparams.push({ name: "SuggestedForEntityLogicalName", value: entityContext.entityLogicalName });
+			if (telemetryParameter) {
+				for (let param in telemetryParameter) {
+					if (telemetryParameter[param]) {
+						eventparams.push({ name: param, value: telemetryParameter[param] });
+					}
+				}
+			}
+			if (additionalTelemetry) {
+				for (let param in telemetryParameter) {
+					eventparams.push({ name: param, value: telemetryParameter[param] });
+				}
+			}
+			eventparams.push({ name: "ExecutionTime", value: executionTime });
+			
+			if (success) {
+				context.reporting.reportSuccess(TelemetryEventTypes.CustomActionActivitySuccess, eventparams);
+			}
+			else {
+				const suggestedMitigation = "TSG guide -TODO";
+				context.reporting.reportFailure(TelemetryEventTypes.CustomActionActivityFailed, new Error(message), suggestedMitigation, eventparams);
+            }
+        }
 	}
 }

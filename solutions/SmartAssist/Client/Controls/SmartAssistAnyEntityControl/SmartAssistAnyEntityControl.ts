@@ -24,6 +24,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private sessionCloseHandlerId: string;
         private receiveFPBMessageEventHandler: any;
         private _cachePoolManager: CachePoolManager;
+        private telemetryHelper: TelemetryHelper;
 
 		/**
 		 * Empty constructor.
@@ -63,23 +64,20 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     var anyEntityElement: HTMLDivElement = document.createElement("div");
                     anyEntityElement.id = this.parentDivId;
                     this.anyEntityContainer.appendChild(anyEntityElement);
-                    this.anyEntityDataManager.initializeContextParameters(context);
-
+                    this.telemetryHelper = new TelemetryHelper(this.recordId, this.saConfig);
+                    this.anyEntityDataManager.initializeOtherParameters(context, this.telemetryHelper);
                     // inner container
                     this.constructAnyEntityInnerContainers();
 
                     this.registerBotEventHandler();
                     this.initCompleted = true;
                 }
-                // fromcache: true; fromServer: false;
+
                 this.InitiateSuggestionControl();
             }
             catch (error) {
                 this.hideLoader();
-                //Log error
-                let eventParameters = new TelemetryLogger.EventParameters();
-                eventParameters.addParameter("Exception Details", error.message);
-                SmartAssistAnyEntityControl._telemetryReporter.logError("MainComponent", "init", "Smart Assist Any Entity Control Init error", eventParameters);
+                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.InitFailed, error, null);
             }
         }
 
@@ -91,7 +89,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
 		 */
         public updateView(context: Mscrm.ControlData<IInputBag>): void {
             // custom code goes here
-            this.anyEntityDataManager.initializeContextParameters(context);
+            this.anyEntityDataManager.initializeOtherParameters(context, this.telemetryHelper);
 
             //Note: call getCurrentContext to get current session context on tab switch, 
             //currently it's destroyed everytime but this is temp solution, when this issue is fixed need to get context tab switch as well.
@@ -129,6 +127,9 @@ module MscrmControls.SmartAssistAnyEntityControl {
          */
         public async InitiateSuggestionControl(isFPBot = false): Promise<void> {
 
+            // logging initialization . ControlInitializationStarted
+            this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ControlInitializationStarted, null);
+
             //Get Current context
             await this.getCurrentContext();
             this.showLoader();
@@ -154,6 +155,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 //TODO: add telemetry for all the scenarios
                 var data;
                 if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled) {
+                    this.telemetryHelper.logTelemetryError(TelemetryEventTypes.ContainerStateIsDisabled, new Error("AI settings are disabled"), null);
                     this.appendTitle();
                     var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                     if (!noSuggestionElm) {
@@ -178,6 +180,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     }
 
                     if (dataLength < 1) {
+                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoDataFound, null);
                         var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                         if (!noSuggestionElm) {
                             var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
@@ -225,6 +228,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             divElement.id = "Suggestion_" + record.SuggestionId;
             divElement.style.display = display;
 
+            this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.InitiatingRMControl, null);
             //Initiate Suggestion Control
             const suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.Smartassist.RecommendationControl", componentId, properties);
             SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
@@ -249,17 +253,13 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     this._sessionStateManager.deleteRecord(this.recordId, this.saConfig.SmartassistConfigurationId, suggestion);
                     this._sessionStorageManager.deleteRecord(suggestion);
                 }
-
-
+                
                 // clear cachepool for previous window.
                 this._cachePoolManager.clearCachePoolForConfig(this.saConfig.SmartassistConfigurationId, this.recordId);
                 window.sessionStorage.setItem(Utility.getCurrentSessionId(), JSON.stringify([]));
-
+                this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.DismissPreviousSuggestion, null);
             } catch (error) {
-                let eventParameters = new TelemetryLogger.EventParameters();
-                eventParameters.addParameter("Exception Details", error.message);
-                let message = "Failed to dismiss previous suggestions";
-                SmartAssistAnyEntityControl._telemetryReporter.logError("MainComponent", "dismissPreviousSuggestions", message, eventParameters);
+                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToDismissPreviousSuggestion, error, null);
             }
             $("#" + StringConstants.AnyEntityContainer + this.saConfig.SmartassistConfigurationId).empty();
         }
@@ -283,10 +283,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 let errorMessage = "In-correct parameters are passed.";
 
                 //Log error
-                let eventParameters = new TelemetryLogger.EventParameters();
-                eventParameters.addParameter("SAConfig", context.parameters.SAConfig.raw);
-                eventParameters.addParameter("RecordId", context.parameters.RecordId.raw);
-                SmartAssistAnyEntityControl._telemetryReporter.logError("MainComponent", "validateParameters", errorMessage, eventParameters);
+                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.ParameterValidationFailed, new Error(errorMessage), null);
                 throw errorMessage;
             }
         }
@@ -328,8 +325,9 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * Fetch new suggestion from cachepool.
          * */
         private fetchNewCard(): string {
-            var data = this._cachePoolManager.fetchSuggestionFromCachePool(this.recordId, this.saConfig.SmartassistConfigurationId);
+            var data = this._cachePoolManager.fetchSuggestionFromCachePool(this.recordId, this.saConfig.SmartassistConfigurationId, this.telemetryHelper);
             if (data) {
+                this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.DataFetchedFromCachePool, null);
                 var id = this.createAndBindRecommendationControl(data, "none");
                 this._sessionStateManager.addRecord(this.recordId, this.saConfig.SmartassistConfigurationId, data.SuggestionId);
                 this._sessionStorageManager.createRecord(data.SuggestionId, JSON.stringify({ data: data }));
@@ -469,6 +467,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     && this.saConfig.UniqueName != StringConstants.TPBotUniqueName) {
                     try {
                         if (this.recordId == conversationId) {
+                            this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.FPBEventReceived, null);
                             // remove previous suggestions
                             this.dismissPreviousSuggestions();
                             this.constructAnyEntityInnerContainers();
@@ -486,16 +485,20 @@ module MscrmControls.SmartAssistAnyEntityControl {
                                 }
                                 SessionStateManager.Instance.deleteAllRecords(context, conversationId);
                             });
+
+                            this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ClearedCacheOnFPBEvent,
+                                [
+                                    { name: "OtherSessionId", value: uiSessionId },
+                                    { name: "OtherRecordId", value: conversationId }
+                                ]);
                         }
                     } catch (error) {
-                        let eventParameters = new TelemetryLogger.EventParameters();
-                        eventParameters.addParameter("Exception Details", error.message);
-                        let message = "Failed to render FPB suggestions";
-                        SmartAssistAnyEntityControl._telemetryReporter.logError("MainComponent", "receiveMessage", message, eventParameters);
+                        this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToRenderFPBSuggestion, error, null);
                     }
                 }
             }
         }
+
         /**Add loader element in config div */
         private addConfigLoader() {
             // Loader element

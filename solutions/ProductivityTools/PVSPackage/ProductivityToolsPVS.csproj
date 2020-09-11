@@ -82,10 +82,6 @@
       <Link>ProductivityTools\msdyn_ProductivityMacros_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_OmnichannelProductivityToolsSettings_managed.cab">
-      <Link>ProductivityTools\msdyn_OmnichannelProductivityToolsSettings_managed.cab</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_Agentscript_managed.cab">
       <Link>ProductivityTools\msdyn_Agentscript_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -94,12 +90,32 @@
       <Link>ProductivityTools\msdyn_ProductivityPaneControl_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_AgentGuidance_managed.cab">
+      <Link>ProductivityTools\msdyn_AgentGuidance_managed.cab</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityPaneComponent_managed.cab">
+      <Link>ProductivityTools\msdyn_ProductivityPaneComponent_managed.cab</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_SmartAssist_managed.cab">
       <Link>ProductivityTools\msdyn_SmartAssist_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>  
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_AgentscriptComponent_managed.cab">
+      <Link>ProductivityTools\msdyn_AgentscriptComponent_managed.cab</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-	<Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_AgentGuidance_managed.cab">
-      <Link>ProductivityTools\msdyn_AgentGuidance_managed.cab</Link>
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityMacrosComponent_managed.cab">
+      <Link>ProductivityTools\msdyn_ProductivityMacrosComponent_managed.cab</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityMacrosApplication_managed.cab">
+      <Link>ProductivityTools\msdyn_ProductivityMacrosApplication_managed.cab</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityMacrosApplicationOC_managed.cab">
+      <Link>ProductivityTools\msdyn_ProductivityMacrosApplicationOC_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

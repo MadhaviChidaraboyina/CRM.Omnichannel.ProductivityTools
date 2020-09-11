@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Name LocalizedName="Agent script" OriginalName="Agent script">msdyn_agentscript</Name>
+  <Name LocalizedName="Agent script (Deprecated)" OriginalName="Agent script">msdyn_agentscript</Name>
   <EntityInfo>
     <entity Name="msdyn_agentscript">
       <LocalizedNames>
-        <LocalizedName description="Agent script" languagecode="1033" />
+        <LocalizedName description="Agent script (Deprecated)" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="Agent scripts" languagecode="1033" />
+        <LocalizedCollectionName description="Agent scripts (Deprecated)" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="Agent script" languagecode="1033" />

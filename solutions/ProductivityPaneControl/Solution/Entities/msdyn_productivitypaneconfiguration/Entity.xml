@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity>
-  <Name LocalizedName="Productivity pane configuration" OriginalName="Productivity pane configuration">msdyn_productivitypaneconfiguration</Name>
+  <Name LocalizedName="Productivity pane configuration (Deprecated)" OriginalName="Productivity pane configuration">msdyn_productivitypaneconfiguration</Name>
   <EntityInfo>
     <entity Name="msdyn_productivitypaneconfiguration">
       <LocalizedNames>
-        <LocalizedName description="Productivity pane configuration" languagecode="1033" />
+        <LocalizedName description="Productivity pane configuration (Deprecated)" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="Productivity pane configurations" languagecode="1033" />
+        <LocalizedCollectionName description="Productivity pane configurations (Deprecated)" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="Attributes related to productivity pane configurations" languagecode="1033" />

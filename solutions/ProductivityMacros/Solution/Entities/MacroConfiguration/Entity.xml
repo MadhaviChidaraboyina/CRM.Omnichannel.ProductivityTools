@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Entity>
-  <Name LocalizedName="Macro Solution Configuration" OriginalName="Macro Solution Configuration">msdyn_macrosolutionconfiguration</Name>
+  <Name LocalizedName="Macro Solution Configuration (Deprecated)" OriginalName="Macro Solution Configuration">msdyn_macrosolutionconfiguration</Name>
   <EntityInfo>
     <entity Name="msdyn_macrosolutionconfiguration">
       <LocalizedNames>
-        <LocalizedName description="Macro Solution Configuration" languagecode="1033" />
+        <LocalizedName description="Macro Solution Configuration (Deprecated)" languagecode="1033" />
       </LocalizedNames>
       <LocalizedCollectionNames>
-        <LocalizedCollectionName description="Macro Solution Configurations" languagecode="1033" />
+        <LocalizedCollectionName description="Macro Solution Configurations (Deprecated)" languagecode="1033" />
       </LocalizedCollectionNames>
       <Descriptions>
         <Description description="Macro solution related configurations" languagecode="1033" />

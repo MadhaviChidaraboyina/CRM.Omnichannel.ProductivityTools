@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-	<Name LocalizedName="Macro Action Template" OriginalName="Macro Action Template">msdyn_macroactiontemplate</Name>
+	<Name LocalizedName="Macro Action Template (Deprecated)" OriginalName="Macro Action Template">msdyn_macroactiontemplate</Name>
 	<EntityInfo>
 		<entity Name="msdyn_macroactiontemplate">
 			<LocalizedNames>
-				<LocalizedName description="Macro Action Template" languagecode="1033" />
+				<LocalizedName description="Macro Action Template (Deprecated)" languagecode="1033" />
 			</LocalizedNames>
 			<LocalizedCollectionNames>
-				<LocalizedCollectionName description="Macro Action Templates" languagecode="1033" />
+				<LocalizedCollectionName description="Macro Action Templates (Deprecated)" languagecode="1033" />
 			</LocalizedCollectionNames>
 			<Descriptions>
 				<Description description="Attributes for macro action template" languagecode="1033" />

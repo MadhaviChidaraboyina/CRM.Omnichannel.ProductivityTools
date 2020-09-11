@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity>
-	<Name LocalizedName="Action Output Parameter" OriginalName="Action Output Parameter">msdyn_actionoutputparameter</Name>
+	<Name LocalizedName="Action Output Parameter (Deprecated)" OriginalName="Action Output Parameter">msdyn_actionoutputparameter</Name>
 	<EntityInfo>
 		<entity Name="msdyn_actionoutputparameter">
 			<LocalizedNames>
-				<LocalizedName description="Action Output Parameter" languagecode="1033" />
+				<LocalizedName description="Action Output Parameter (Deprecated)" languagecode="1033" />
 			</LocalizedNames>
 			<LocalizedCollectionNames>
-				<LocalizedCollectionName description="Action Output Parameters" languagecode="1033" />
+				<LocalizedCollectionName description="Action Output Parameters (Deprecated)" languagecode="1033" />
 			</LocalizedCollectionNames>
 			<Descriptions>
 				<Description description="" languagecode="1033" />

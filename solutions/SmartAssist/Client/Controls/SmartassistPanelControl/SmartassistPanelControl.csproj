@@ -38,6 +38,7 @@
     <TypeScriptCompile Include="Utils\StringHelper.ts" />
     <TypeScriptCompile Include="Utils\Constants.ts" />
     <TypeScriptCompile Include="$(PKG_TYPESCRIPT_MSBUILD)\tools\tsc\lib.es6.d.ts" />
+    <TypeScriptCompile Include="Utils\TelemetryHelper.ts" />
     <TypeScriptCompile Include="Utils\Utility.ts" />
   </ItemGroup>
   <ItemGroup>
