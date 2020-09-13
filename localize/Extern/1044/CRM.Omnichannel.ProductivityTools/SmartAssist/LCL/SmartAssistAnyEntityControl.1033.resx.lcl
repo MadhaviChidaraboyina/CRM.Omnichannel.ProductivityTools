@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="SmartAssistAnyEntityControl.1033.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="nb-NO" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";SmartAssistAnyEntityControl.1033.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";CC_AnyEntityContainerState" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Any Entity Container State]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Alle tilstander for enhetsbeholder]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006135Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";CC_PPSessionContext" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Panel Session Context]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kontekst for paneløkt]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006135Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";CC_RecordId" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record Id]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Post-ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006135Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";CC_SAConfig" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[SA Config]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[SA-konfigurasjon]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006135Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";CC_SmartAssist_Any_Entity_Control" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Smart Assist Any Entity Control]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Alle typer enhetskontroll for smartassistent]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006135Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Control Name]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";KnowledgeArticleSuggestionTitle" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Knowledge article suggestions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kunnskapsartikkelforslag]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006135Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for KM suggstions]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";LoadingText" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Loading...]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Laster inn ...]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006135Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Loading]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";NoKMSuggestionText" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No suggestions found for knowledge article.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Finner ingen forslag for kunnskapsartikkel.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006135Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[No KM records]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";NoSettingsText" ItemType="0;.resx" PsrId="211" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[AI suggestions not turned on.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[AI-forslag er ikke aktivert.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006135Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";NoSimilarCaseSuggestionText" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No suggestions found for similar cases.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fant ingen forslag for lignende saker.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006135Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[No Case records]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";SimilarCasesSuggestionTitle" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Similar case suggestions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Forslag for lignende sak]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006135Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title for Case suggstions]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

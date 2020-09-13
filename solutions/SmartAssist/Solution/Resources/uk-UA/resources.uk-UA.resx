@@ -121,10 +121,10 @@
     <value>1033</value>
   </metadata>
   <metadata name="Source file" xml:space="preserve">
-    <value>msdyn_SmartAssist_managed.zip</value>
+    <value>msdyn_smartassist_managed.zip</value>
   </metadata>
   <metadata name="Source package type" xml:space="preserve">
-    <value>Managed</value>
+    <value>Both</value>
   </metadata>
   <metadata name="SolutionPackager Version" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -132,6 +132,30 @@
         bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
 </value>
   </metadata>
+  <data name="10:Description,lk_msdyn_adaptivecardconfiguration_createdby" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача, який створив запис.</value>
+    <comment>msdyn_adaptivecardconfiguration Description for EntityRelationship 'lk_msdyn_adaptivecardconfiguration_createdby'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_adaptivecardconfiguration_modifiedby" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача, який змінив запис.</value>
+    <comment>msdyn_adaptivecardconfiguration Description for EntityRelationship 'lk_msdyn_adaptivecardconfiguration_modifiedby'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_smartassistconfig_createdby" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача, який створив запис.</value>
+    <comment>msdyn_smartassistconfig Description for EntityRelationship 'lk_msdyn_smartassistconfig_createdby'</comment>
+  </data>
+  <data name="10:Description,lk_msdyn_smartassistconfig_modifiedby" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача, який змінив запис.</value>
+    <comment>msdyn_smartassistconfig Description for EntityRelationship 'lk_msdyn_smartassistconfig_modifiedby'</comment>
+  </data>
+  <data name="10:Description,organization_msdyn_adaptivecardconfiguration" xml:space="preserve">
+    <value>Унікальний ідентифікатор організації</value>
+    <comment>msdyn_adaptivecardconfiguration Description for EntityRelationship 'organization_msdyn_adaptivecardconfiguration'</comment>
+  </data>
+  <data name="10:Description,organization_msdyn_smartassistconfig" xml:space="preserve">
+    <value>Унікальний ідентифікатор організації</value>
+    <comment>msdyn_smartassistconfig Description for EntityRelationship 'organization_msdyn_smartassistconfig'</comment>
+  </data>
   <data name="15062:Description,msdyn_smartassist" xml:space="preserve">
     <value>Це рішення надає агентам можливість інтелектуальної підтримки. </value>
     <comment> 'msdyn_smartassist' : Description for Solution</comment>
@@ -143,5 +167,829 @@
   <data name="15062:LocalizedName,msdyn_smartassist" xml:space="preserve">
     <value>Інтелектуальна підтримка</value>
     <comment> 'msdyn_smartassist' : LocalizedName for Solution</comment>
+  </data>
+  <data name="1:Description,Adaptive Card Configuration{3919736b-aeab-ea11-a81b-000d3ac622d1}" xml:space="preserve">
+    <value>Усі активні adaptivecardconfigurations</value>
+    <comment>'Adaptive Card Configuration' : Description for SavedQuery on Entity QueryId: '{3919736b-aeab-ea11-a81b-000d3ac622d1}'</comment>
+  </data>
+  <data name="1:Description,Adaptive Card Configuration{67f74c42-2118-4ff3-9713-0f6d518d24b8}" xml:space="preserve">
+    <value>Форма для цієї сутності.</value>
+    <comment>'Adaptive Card Configuration' : Description for systemform in Entity FormXml ID: '{67f74c42-2118-4ff3-9713-0f6d518d24b8}'</comment>
+  </data>
+  <data name="1:Description,Adaptive Card Configuration{88a15309-45b3-49b3-86ae-2434136ab066}" xml:space="preserve">
+    <value>Форма картки для цієї сутності.</value>
+    <comment>'Adaptive Card Configuration' : Description for systemform in Entity FormXml ID: '{88a15309-45b3-49b3-86ae-2434136ab066}'</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationCreatedBy" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача, який створив запис.</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationCreatedOn" xml:space="preserve">
+    <value>Дата та час створення запису.</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationCreatedOnBehalfBy" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача-представника, який створив запис.</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationentitymsdyn_adaptivecardconfiguration" xml:space="preserve">
+    <value>Конфігурація адаптивної картки</value>
+    <comment> 'msdyn_adaptivecardconfiguration' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationModifiedBy" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача, який змінив запис.</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationModifiedOn" xml:space="preserve">
+    <value>Дата та час змінення запису.</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationModifiedOnBehalfBy" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача-представника, який змінив запис.</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfigurationId" xml:space="preserve">
+    <value>Унікальний ідентифікатор одного з екземплярів сутності</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'msdyn_adaptivecardconfigurationId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfiguration_statecode" xml:space="preserve">
+    <value>Стан конфігурації адаптивної картки</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for OptionSet 'msdyn_adaptivecardconfiguration_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfiguration_statuscode" xml:space="preserve">
+    <value>Опис стану конфігурації адаптивної картки</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for OptionSet 'msdyn_adaptivecardconfiguration_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_adaptivecardtemplate" xml:space="preserve">
+    <value>Шаблон адаптивної картки</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'msdyn_adaptivecardtemplate' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_name" xml:space="preserve">
+    <value>Ім’я настроюваної сутності.</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_UniqueName" xml:space="preserve">
+    <value>Унікальне ім’я сутності.</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationOrganizationId" xml:space="preserve">
+    <value>Унікальний ідентифікатор організації</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationOverriddenCreatedOn" xml:space="preserve">
+    <value>Дата та час перенесення запису.</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationstatecode" xml:space="preserve">
+    <value>Стан конфігурації адаптивної картки</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationstatuscode" xml:space="preserve">
+    <value>Опис стану конфігурації адаптивної картки</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Лише для внутрішнього використання.</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_adaptivecardconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Код часового поясу, використаний під час створення запису.</value>
+    <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigCreatedBy" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача, який створив запис.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigCreatedOn" xml:space="preserve">
+    <value>Дата та час створення запису.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigCreatedOnBehalfBy" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача-представника, який створив запис.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigentitymsdyn_smartassistconfig" xml:space="preserve">
+    <value>Зберігає конфігурації інтелектуальної підтримки</value>
+    <comment> 'msdyn_smartassistconfig' : Description for Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigModifiedBy" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача, який змінив запис.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigModifiedOn" xml:space="preserve">
+    <value>Дата та час змінення запису.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigModifiedOnBehalfBy" xml:space="preserve">
+    <value>Унікальний ідентифікатор користувача-представника, який змінив запис.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_IconURL" xml:space="preserve">
+    <value>Піктограма контейнера групи пропозицій</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_IconURL' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_maxsuggestioncount" xml:space="preserve">
+    <value>Це число визначає максимальну кількість пропозицій, які можна відобразити в елементі керування інтелектуальної підтримки</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_maxsuggestioncount' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_name" xml:space="preserve">
+    <value>Ім’я настроюваної сутності.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_Order" xml:space="preserve">
+    <value>Порядок групування сутностей інтелектуальної підтримки.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Order' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfigId" xml:space="preserve">
+    <value>Унікальний ідентифікатор одного з екземплярів сутності</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_smartassistconfigId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfig_statecode" xml:space="preserve">
+    <value>Стан конфігурації інтелектуальної підтримки</value>
+    <comment>'msdyn_smartassistconfig' : Description for OptionSet 'msdyn_smartassistconfig_statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfig_statuscode" xml:space="preserve">
+    <value>Опис стану конфігурації інтелектуальної підтримки</value>
+    <comment>'msdyn_smartassistconfig' : Description for OptionSet 'msdyn_smartassistconfig_statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_SourceEntityName" xml:space="preserve">
+    <value>Логічне ім’я сутності джерела пропозицій.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_SourceEntityName' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_Suggestioncontainertitle" xml:space="preserve">
+    <value>Воно використовуватиметься як заголовок панелі пропозицій сутностей.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Suggestioncontainertitle' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_SuggestionControlConfigUniquename" xml:space="preserve">
+    <value>Унікальне ім’я сутності конфігурації елемента керування пропозиціями. Якщо пропозиція має тип "Адаптивна картка", вона має посилатися на відповідну адаптивну конфігурацію.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_SuggestionControlConfigUniquename' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_Suggestioncontroltype" xml:space="preserve">
+    <value>Указує тип елемента керування для пропозицій (наприклад, "Адаптивна картка")</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Suggestioncontroltype' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_SuggestionProvider" xml:space="preserve">
+    <value>Укажіть назву класу для постачальника пропозицій</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_SuggestionProvider' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_Suggestiontype" xml:space="preserve">
+    <value>Указує тип пропозицій, наприклад "Пропозиція подібних інцидентів" або "Пропозиція статі бази знань"</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Suggestiontype' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_SuggestionWebresourceURL" xml:space="preserve">
+    <value>Веб-ресурс, дії інтелектуальної підтримки або API якого використовуються для отримання пропозицій</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_SuggestionWebresourceURL' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_UniqueName" xml:space="preserve">
+    <value>Унікальне ім’я сутності.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigOrganizationId" xml:space="preserve">
+    <value>Унікальний ідентифікатор організації</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'OrganizationId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigOverriddenCreatedOn" xml:space="preserve">
+    <value>Дата та час перенесення запису.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigstatecode" xml:space="preserve">
+    <value>Стан конфігурації інтелектуальної підтримки</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigstatuscode" xml:space="preserve">
+    <value>Опис стану конфігурації інтелектуальної підтримки</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Лише для внутрішнього використання.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Код часового поясу, використаний під час створення запису.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:Description,Smartassist configuration{0beeec6f-1ad0-4d4e-bf62-d4875b24764c}" xml:space="preserve">
+    <value>Форма для цієї сутності.</value>
+    <comment>'Smartassist configuration' : Description for systemform in Entity FormXml ID: '{0beeec6f-1ad0-4d4e-bf62-d4875b24764c}'</comment>
+  </data>
+  <data name="1:Description,Smartassist configuration{53db0d63-67b8-49a5-8c80-677cd77bed47}" xml:space="preserve">
+    <value>Форма картки для цієї сутності.</value>
+    <comment>'Smartassist configuration' : Description for systemform in Entity FormXml ID: '{53db0d63-67b8-49a5-8c80-677cd77bed47}'</comment>
+  </data>
+  <data name="1:Description,Smartassist configuration{bb1d8168-d3b5-ea11-a81c-000d3ac629fa}" xml:space="preserve">
+    <value>Усі активні конфігурації інтелектуальної підтримки</value>
+    <comment>'Smartassist configuration' : Description for SavedQuery on Entity QueryId: '{bb1d8168-d3b5-ea11-a81c-000d3ac629fa}'</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationCreatedBy" xml:space="preserve">
+    <value>Автор</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationCreatedOn" xml:space="preserve">
+    <value>Створено</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationCreatedOnBehalfBy" xml:space="preserve">
+    <value>Автор (представник)</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationModifiedBy" xml:space="preserve">
+    <value>Автор змін:</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationModifiedOn" xml:space="preserve">
+    <value>Змінено:</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationModifiedOnBehalfBy" xml:space="preserve">
+    <value>Автор змін (представник)</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfigurationId" xml:space="preserve">
+    <value>Конфігурація адаптивної картки</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'msdyn_adaptivecardconfigurationId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfiguration_statecode" xml:space="preserve">
+    <value>Стан</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for OptionSet 'msdyn_adaptivecardconfiguration_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfiguration_statuscode" xml:space="preserve">
+    <value>Опис стану</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for OptionSet 'msdyn_adaptivecardconfiguration_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationmsdyn_adaptivecardtemplate" xml:space="preserve">
+    <value>Шаблон адаптивної картки</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'msdyn_adaptivecardtemplate' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationmsdyn_name" xml:space="preserve">
+    <value>Ім’я</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationmsdyn_UniqueName" xml:space="preserve">
+    <value>Унікальне ім’я</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationOrganizationId" xml:space="preserve">
+    <value>Ідентифікатор організації</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'OrganizationId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationOverriddenCreatedOn" xml:space="preserve">
+    <value>Запис створено</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationstatecode" xml:space="preserve">
+    <value>Стан</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationstatuscode" xml:space="preserve">
+    <value>Опис стану</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Номер версії правила часового поясу</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_adaptivecardconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Код часового поясу у форматі UTC</value>
+    <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigCreatedBy" xml:space="preserve">
+    <value>Автор</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'CreatedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigCreatedOn" xml:space="preserve">
+    <value>Створено</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'CreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigCreatedOnBehalfBy" xml:space="preserve">
+    <value>Автор (представник)</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'CreatedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigModifiedBy" xml:space="preserve">
+    <value>Автор змін:</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'ModifiedBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigModifiedOn" xml:space="preserve">
+    <value>Змінено:</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'ModifiedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigModifiedOnBehalfBy" xml:space="preserve">
+    <value>Автор змін (представник)</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_IconURL" xml:space="preserve">
+    <value>URL-адреса піктограми веб-ресурсу</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_IconURL' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_maxsuggestioncount" xml:space="preserve">
+    <value>Максимальна кількість пропозицій</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_maxsuggestioncount' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_name" xml:space="preserve">
+    <value>Ім’я</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_name' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_Order" xml:space="preserve">
+    <value>Порядок</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_Order' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_smartassistconfigId" xml:space="preserve">
+    <value>Конфігурація інтелектуальної підтримки</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_smartassistconfigId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_smartassistconfig_statecode" xml:space="preserve">
+    <value>Стан</value>
+    <comment>'msdyn_smartassistconfig' : displayname for OptionSet 'msdyn_smartassistconfig_statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_smartassistconfig_statuscode" xml:space="preserve">
+    <value>Опис стану</value>
+    <comment>'msdyn_smartassistconfig' : displayname for OptionSet 'msdyn_smartassistconfig_statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_SourceEntityName" xml:space="preserve">
+    <value>Ім’я вихідної сутності</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_SourceEntityName' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_Suggestioncontainertitle" xml:space="preserve">
+    <value>Заголовок панелі пропозицій</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_Suggestioncontainertitle' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_SuggestionControlConfigUniquename" xml:space="preserve">
+    <value>Унікальне ім’я конфігурації елемента керування пропозиціями</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_SuggestionControlConfigUniquename' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_Suggestioncontroltype" xml:space="preserve">
+    <value>Suggestioncontroltype</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_Suggestioncontroltype' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_SuggestionProvider" xml:space="preserve">
+    <value>Постачальник пропозицій</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_SuggestionProvider' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_Suggestiontype" xml:space="preserve">
+    <value>Suggestiontype</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_Suggestiontype' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_SuggestionWebresourceURL" xml:space="preserve">
+    <value>URL-адреса веб-ресурсу надання пропозицій</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_SuggestionWebresourceURL' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_UniqueName" xml:space="preserve">
+    <value>Унікальне ім’я</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_UniqueName' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigOrganizationId" xml:space="preserve">
+    <value>Ідентифікатор організації</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'OrganizationId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigOverriddenCreatedOn" xml:space="preserve">
+    <value>Запис створено</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'OverriddenCreatedOn' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigstatecode" xml:space="preserve">
+    <value>Стан</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'statecode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigstatuscode" xml:space="preserve">
+    <value>Опис стану</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'statuscode' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigTimeZoneRuleVersionNumber" xml:space="preserve">
+    <value>Номер версії правила часового поясу</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigUTCConversionTimeZoneCode" xml:space="preserve">
+    <value>Код часового поясу у форматі UTC</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{06bad12e-c299-29a7-00d4-a0a2b654519a}" xml:space="preserve">
+    <value>Шаблон адаптивної картки</value>
+    <comment>'Adaptive Card Configuration' : label for cell in Entity FormXml ID: '{06bad12e-c299-29a7-00d4-a0a2b654519a}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{10bacc32-8317-4830-a2ff-32d9760fb587}" xml:space="preserve">
+    <value>Колірна шкала</value>
+    <comment>'Adaptive Card Configuration' : label for section in Entity FormXml ID: '{10bacc32-8317-4830-a2ff-32d9760fb587}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{10fc3c28-7834-45ba-8d4f-a81fac84d66c}" xml:space="preserve">
+    <value />
+    <comment>'Adaptive Card Configuration' : label for tab in Entity FormXml ID: '{10fc3c28-7834-45ba-8d4f-a81fac84d66c}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{11bdcced-7e6d-4960-98c4-08fc46e87b4f}" xml:space="preserve">
+    <value />
+    <comment>'Adaptive Card Configuration' : label for cell in Entity FormXml ID: '{11bdcced-7e6d-4960-98c4-08fc46e87b4f}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{1f69e77e-8cf7-461a-9cf1-69b3440ed6d6}" xml:space="preserve">
+    <value>Докладно</value>
+    <comment>'Adaptive Card Configuration' : label for section in Entity FormXml ID: '{1f69e77e-8cf7-461a-9cf1-69b3440ed6d6}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{283b9e23-918b-bb38-4b73-4d0487aa02c7}" xml:space="preserve">
+    <value>Унікальне ім’я</value>
+    <comment>'Adaptive Card Configuration' : label for cell in Entity FormXml ID: '{283b9e23-918b-bb38-4b73-4d0487aa02c7}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{318aad5f-67df-4132-8ca5-24e5445e6b89}" xml:space="preserve">
+    <value>Ім’я</value>
+    <comment>'Adaptive Card Configuration' : label for cell in Entity FormXml ID: '{318aad5f-67df-4132-8ca5-24e5445e6b89}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{3cee1ec4-6606-4577-8123-b6bd5e5a86c8}" xml:space="preserve">
+    <value>Верхній колонтитул</value>
+    <comment>'Adaptive Card Configuration' : label for section in Entity FormXml ID: '{3cee1ec4-6606-4577-8123-b6bd5e5a86c8}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{533a063a-a910-49bf-97b3-3c19b90f53d1}" xml:space="preserve">
+    <value>ЗАГАЛЬНЕ</value>
+    <comment>'Adaptive Card Configuration' : label for section in Entity FormXml ID: '{533a063a-a910-49bf-97b3-3c19b90f53d1}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{58057af7-6f58-4691-b14a-437b005983e2}" xml:space="preserve">
+    <value />
+    <comment>'Adaptive Card Configuration' : label for tab in Entity FormXml ID: '{58057af7-6f58-4691-b14a-437b005983e2}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{59c9a145-94e0-c721-5c08-4699a644989c}" xml:space="preserve">
+    <value>Шаблон адаптивної картки</value>
+    <comment>'Adaptive Card Configuration' : label for cell in Entity FormXml ID: '{59c9a145-94e0-c721-5c08-4699a644989c}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{5bffb91b-80e3-45e6-9b40-07ddd54fb057}" xml:space="preserve">
+    <value />
+    <comment>'Adaptive Card Configuration' : label for cell in Entity FormXml ID: '{5bffb91b-80e3-45e6-9b40-07ddd54fb057}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{630d9d60-eb14-4349-ba2f-b431e59e8fa8}" xml:space="preserve">
+    <value>Загальне</value>
+    <comment>'Adaptive Card Configuration' : label for section in Entity FormXml ID: '{630d9d60-eb14-4349-ba2f-b431e59e8fa8}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{6d9863d0-f28c-4f61-b7b8-0df3bca37ff7}" xml:space="preserve">
+    <value />
+    <comment>'Adaptive Card Configuration' : label for cell in Entity FormXml ID: '{6d9863d0-f28c-4f61-b7b8-0df3bca37ff7}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{71b067e5-ac35-4953-9109-263118229abb}" xml:space="preserve">
+    <value>Загальне</value>
+    <comment>'Adaptive Card Configuration' : label for tab in Entity FormXml ID: '{71b067e5-ac35-4953-9109-263118229abb}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{7847cdc2-cb41-45cb-90d2-f8109b21dd23}" xml:space="preserve">
+    <value>Ім’я</value>
+    <comment>'Adaptive Card Configuration' : label for cell in Entity FormXml ID: '{7847cdc2-cb41-45cb-90d2-f8109b21dd23}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{8173c8b0-ffef-434a-9ec7-63f5a185dd50}" xml:space="preserve">
+    <value>Ім’я</value>
+    <comment>'Adaptive Card Configuration' : label for cell in Entity FormXml ID: '{8173c8b0-ffef-434a-9ec7-63f5a185dd50}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{84a214f6-9add-46f7-85d0-f51a2a1c4dca}" xml:space="preserve">
+    <value>Нижній колонтитул</value>
+    <comment>'Adaptive Card Configuration' : label for section in Entity FormXml ID: '{84a214f6-9add-46f7-85d0-f51a2a1c4dca}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{b195b2d0-c6f3-42f5-876f-a49600230721}" xml:space="preserve">
+    <value>Створено</value>
+    <comment>'Adaptive Card Configuration' : label for cell in Entity FormXml ID: '{b195b2d0-c6f3-42f5-876f-a49600230721}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{b6eb8eef-6bc5-4516-b402-9208b0d09ee8}" xml:space="preserve">
+    <value>Опис стану</value>
+    <comment>'Adaptive Card Configuration' : label for cell in Entity FormXml ID: '{b6eb8eef-6bc5-4516-b402-9208b0d09ee8}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{d6c2b21a-08d3-9cdd-a16c-096a925ae658}" xml:space="preserve">
+    <value>Унікальне ім’я</value>
+    <comment>'Adaptive Card Configuration' : label for cell in Entity FormXml ID: '{d6c2b21a-08d3-9cdd-a16c-096a925ae658}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{f4ce7e6b-d0a4-47f3-9a5f-bd743d4522cf}" xml:space="preserve">
+    <value />
+    <comment>'Adaptive Card Configuration' : label for cell in Entity FormXml ID: '{f4ce7e6b-d0a4-47f3-9a5f-bd743d4522cf}'</comment>
+  </data>
+  <data name="1:label,Adaptive Card Configuration{f6c4dc06-1053-4080-901e-5b2d2c68316b}" xml:space="preserve">
+    <value />
+    <comment>'Adaptive Card Configuration' : label for cell in Entity FormXml ID: '{f6c4dc06-1053-4080-901e-5b2d2c68316b}'</comment>
+  </data>
+  <data name="1:label,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfiguration_statecode0" xml:space="preserve">
+    <value>Активно</value>
+    <comment>'msdyn_adaptivecardconfiguration' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfiguration_statecode1" xml:space="preserve">
+    <value>Неактивно</value>
+    <comment>'msdyn_adaptivecardconfiguration' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfiguration_statuscode1" xml:space="preserve">
+    <value>Активно</value>
+    <comment>'msdyn_adaptivecardconfiguration' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfiguration_statuscode2" xml:space="preserve">
+    <value>Неактивно</value>
+    <comment>'msdyn_adaptivecardconfiguration' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_smartassistconfigmsdyn_smartassistconfig_statecode0" xml:space="preserve">
+    <value>Активно</value>
+    <comment>'msdyn_smartassistconfig' : label for state '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_smartassistconfigmsdyn_smartassistconfig_statecode1" xml:space="preserve">
+    <value>Неактивно</value>
+    <comment>'msdyn_smartassistconfig' : label for state '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_smartassistconfigmsdyn_smartassistconfig_statuscode1" xml:space="preserve">
+    <value>Активно</value>
+    <comment>'msdyn_smartassistconfig' : label for status '1' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_smartassistconfigmsdyn_smartassistconfig_statuscode2" xml:space="preserve">
+    <value>Неактивно</value>
+    <comment>'msdyn_smartassistconfig' : label for status '2' on Entity</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{090b5b5b-0115-c0d2-6867-889c31d95ea3}" xml:space="preserve">
+    <value>Унікальне ім’я конфігурації елемента керування пропозиціями</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{090b5b5b-0115-c0d2-6867-889c31d95ea3}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{0d22f832-329d-46c7-9eb7-9e678967842a}" xml:space="preserve">
+    <value>Верхній колонтитул</value>
+    <comment>'Smartassist configuration' : label for section in Entity FormXml ID: '{0d22f832-329d-46c7-9eb7-9e678967842a}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{12beab6f-21a0-4c74-8f83-e39ecbbabfc7}" xml:space="preserve">
+    <value>Загальне</value>
+    <comment>'Smartassist configuration' : label for tab in Entity FormXml ID: '{12beab6f-21a0-4c74-8f83-e39ecbbabfc7}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{139b8758-0e79-48f7-8d18-9521e7492727}" xml:space="preserve">
+    <value />
+    <comment>'Smartassist configuration' : label for tab in Entity FormXml ID: '{139b8758-0e79-48f7-8d18-9521e7492727}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{30600e39-2bc3-7e42-35d4-a7382de163ad}" xml:space="preserve">
+    <value>Постачальник пропозицій</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{30600e39-2bc3-7e42-35d4-a7382de163ad}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{3098b899-2fed-4738-bfc2-863ad133dce1}" xml:space="preserve">
+    <value>Загальне</value>
+    <comment>'Smartassist configuration' : label for section in Entity FormXml ID: '{3098b899-2fed-4738-bfc2-863ad133dce1}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{34cd776a-518c-483f-9708-5d66a72920ca}" xml:space="preserve">
+    <value>ЗАГАЛЬНЕ</value>
+    <comment>'Smartassist configuration' : label for section in Entity FormXml ID: '{34cd776a-518c-483f-9708-5d66a72920ca}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{35b63da5-02f5-4114-8234-3f7fc03b5a01}" xml:space="preserve">
+    <value />
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{35b63da5-02f5-4114-8234-3f7fc03b5a01}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{38239a20-44ba-0b00-051d-57ac5a40c277}" xml:space="preserve">
+    <value>Унікальне ім’я</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{38239a20-44ba-0b00-051d-57ac5a40c277}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{398e8d32-1fe3-467a-b0e5-27cdb75608a2}" xml:space="preserve">
+    <value>Нижній колонтитул</value>
+    <comment>'Smartassist configuration' : label for section in Entity FormXml ID: '{398e8d32-1fe3-467a-b0e5-27cdb75608a2}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{5a5d9607-2e97-4d53-83d3-75f533b4e1b1}" xml:space="preserve">
+    <value />
+    <comment>'Smartassist configuration' : label for tab in Entity FormXml ID: '{5a5d9607-2e97-4d53-83d3-75f533b4e1b1}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{612929ac-998d-4685-9538-6ca241d4c314}" xml:space="preserve">
+    <value>Колірна шкала</value>
+    <comment>'Smartassist configuration' : label for section in Entity FormXml ID: '{612929ac-998d-4685-9538-6ca241d4c314}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{6bc6d935-26a8-a2a0-8220-7946b5b5a292}" xml:space="preserve">
+    <value>Тип пропозиції</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{6bc6d935-26a8-a2a0-8220-7946b5b5a292}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{6e3c5096-d129-4dce-5484-30d042471be8}" xml:space="preserve">
+    <value>Метод веб-ресурсу надання пропозицій</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{6e3c5096-d129-4dce-5484-30d042471be8}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{6eebea4a-0d66-0908-6ba6-69a1d85822ec}" xml:space="preserve">
+    <value>Заголовок панелі пропозицій</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{6eebea4a-0d66-0908-6ba6-69a1d85822ec}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{6f9dd352-2a4c-4ef4-a6c4-65effda1064a}" xml:space="preserve">
+    <value />
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{6f9dd352-2a4c-4ef4-a6c4-65effda1064a}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{75a118d4-1e4b-7370-0d89-d72104b4d025}" xml:space="preserve">
+    <value>Порядок</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{75a118d4-1e4b-7370-0d89-d72104b4d025}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{8a0de17d-20a4-067e-c18d-da0751ace0a8}" xml:space="preserve">
+    <value>Тип елемента керування пропозиціями</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{8a0de17d-20a4-067e-c18d-da0751ace0a8}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{9fc75914-081f-43de-9c88-407e97be649a}" xml:space="preserve">
+    <value />
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{9fc75914-081f-43de-9c88-407e97be649a}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{a0c11cf3-9f39-4a6b-8cdc-fd574bd33d89}" xml:space="preserve">
+    <value />
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{a0c11cf3-9f39-4a6b-8cdc-fd574bd33d89}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{a5eb374b-a349-1381-bd31-7abb094a1ec6}" xml:space="preserve">
+    <value>URL-адреса піктограми веб-ресурсу</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{a5eb374b-a349-1381-bd31-7abb094a1ec6}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{a721d397-630b-7577-48bc-dc536ad915e6}" xml:space="preserve">
+    <value>URL-адреса веб-ресурсу надання пропозицій</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{a721d397-630b-7577-48bc-dc536ad915e6}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{b041ca6d-5b1e-4802-acb5-321537d04436}" xml:space="preserve">
+    <value />
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{b041ca6d-5b1e-4802-acb5-321537d04436}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{b80bba50-14d8-444d-80ce-d8338a547ac9}" xml:space="preserve">
+    <value />
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{b80bba50-14d8-444d-80ce-d8338a547ac9}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{bdcf237b-84b5-4aa1-b0da-296d76be1279}" xml:space="preserve">
+    <value>Ім’я вихідної сутності</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{bdcf237b-84b5-4aa1-b0da-296d76be1279}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{c2347681-2d12-42f0-a8c8-9c4c70bea31b}" xml:space="preserve">
+    <value />
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{c2347681-2d12-42f0-a8c8-9c4c70bea31b}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{c6407655-7ea1-b549-4b7c-d74c9b69dd3d}" xml:space="preserve">
+    <value>Максимальна кількість пропозицій</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{c6407655-7ea1-b549-4b7c-d74c9b69dd3d}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{d495a7bd-c90a-423e-82f2-99062bfd6e9c}" xml:space="preserve">
+    <value>Докладно</value>
+    <comment>'Smartassist configuration' : label for section in Entity FormXml ID: '{d495a7bd-c90a-423e-82f2-99062bfd6e9c}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{e40f6a83-ab40-408e-8150-b629f7ec3231}" xml:space="preserve">
+    <value />
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{e40f6a83-ab40-408e-8150-b629f7ec3231}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{e86bf732-6421-4e21-9174-5fb23775998a}" xml:space="preserve">
+    <value />
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{e86bf732-6421-4e21-9174-5fb23775998a}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{f79d4adb-ab43-4229-966b-cbb00bc6f034}" xml:space="preserve">
+    <value>Ім’я</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{f79d4adb-ab43-4229-966b-cbb00bc6f034}'</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_adaptivecardconfigurationentitymsdyn_adaptivecardconfiguration" xml:space="preserve">
+    <value>Конфігурація адаптивної картки</value>
+    <comment> 'msdyn_adaptivecardconfiguration' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedCollectionName,msdyn_smartassistconfigentitymsdyn_smartassistconfig" xml:space="preserve">
+    <value>Конфігурації інтелектуальної підтримки</value>
+    <comment> 'msdyn_smartassistconfig' : LocalizedCollectionName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,Adaptive Card Configuration{3919736b-aeab-ea11-a81b-000d3ac622d1}" xml:space="preserve">
+    <value>adaptivecardconfigurations</value>
+    <comment>'Adaptive Card Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{3919736b-aeab-ea11-a81b-000d3ac622d1}'</comment>
+  </data>
+  <data name="1:LocalizedName,Adaptive Card Configuration{59e42816-7451-4976-98e5-b9672486e249}" xml:space="preserve">
+    <value>Подання розширеного пошуку конфігурацій адаптивних карток</value>
+    <comment>'Adaptive Card Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{59e42816-7451-4976-98e5-b9672486e249}'</comment>
+  </data>
+  <data name="1:LocalizedName,Adaptive Card Configuration{67f74c42-2118-4ff3-9713-0f6d518d24b8}" xml:space="preserve">
+    <value>Відомості</value>
+    <comment>'Adaptive Card Configuration' : LocalizedName for systemform in Entity FormXml ID: '{67f74c42-2118-4ff3-9713-0f6d518d24b8}'</comment>
+  </data>
+  <data name="1:LocalizedName,Adaptive Card Configuration{7755a4d1-719c-4364-8743-873e1a01a78e}" xml:space="preserve">
+    <value>Швидкий пошук активних adaptivecardconfigurations</value>
+    <comment>'Adaptive Card Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{7755a4d1-719c-4364-8743-873e1a01a78e}'</comment>
+  </data>
+  <data name="1:LocalizedName,Adaptive Card Configuration{7dd89a1d-e700-45f2-bf4e-6b7d22879b0e}" xml:space="preserve">
+    <value>Відомості</value>
+    <comment>'Adaptive Card Configuration' : LocalizedName for systemform in Entity FormXml ID: '{7dd89a1d-e700-45f2-bf4e-6b7d22879b0e}'</comment>
+  </data>
+  <data name="1:LocalizedName,Adaptive Card Configuration{88a15309-45b3-49b3-86ae-2434136ab066}" xml:space="preserve">
+    <value>Відомості</value>
+    <comment>'Adaptive Card Configuration' : LocalizedName for systemform in Entity FormXml ID: '{88a15309-45b3-49b3-86ae-2434136ab066}'</comment>
+  </data>
+  <data name="1:LocalizedName,Adaptive Card Configuration{a06ed756-a7f9-4e3b-8c8f-32ca698f6424}" xml:space="preserve">
+    <value>Неактивні adaptivecardconfigurations</value>
+    <comment>'Adaptive Card Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{a06ed756-a7f9-4e3b-8c8f-32ca698f6424}'</comment>
+  </data>
+  <data name="1:LocalizedName,Adaptive Card Configuration{cdb85b67-7316-4792-b92b-3535652bd3db}" xml:space="preserve">
+    <value>Зв’язане подання конфігурацій адаптивних карток</value>
+    <comment>'Adaptive Card Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{cdb85b67-7316-4792-b92b-3535652bd3db}'</comment>
+  </data>
+  <data name="1:LocalizedName,Adaptive Card Configuration{dfd4314c-f420-4fb3-8fa2-c04cb7e7e26b}" xml:space="preserve">
+    <value>Подання підстановки конфігурацій адаптивних карток</value>
+    <comment>'Adaptive Card Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{dfd4314c-f420-4fb3-8fa2-c04cb7e7e26b}'</comment>
+  </data>
+  <data name="1:LocalizedName,Adaptive Card Configuration{e3f3d898-73fe-495b-9749-45975c94a3ac}" xml:space="preserve">
+    <value>Активні adaptivecardconfigurations</value>
+    <comment>'Adaptive Card Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{e3f3d898-73fe-495b-9749-45975c94a3ac}'</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_adaptivecardconfigurationentitymsdyn_adaptivecardconfiguration" xml:space="preserve">
+    <value>Конфігурація адаптивної картки</value>
+    <comment> 'msdyn_adaptivecardconfiguration' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,msdyn_smartassistconfigentitymsdyn_smartassistconfig" xml:space="preserve">
+    <value>Конфігурація інтелектуальної підтримки</value>
+    <comment> 'msdyn_smartassistconfig' : LocalizedName for Entity</comment>
+  </data>
+  <data name="1:LocalizedName,Smartassist configuration{0beeec6f-1ad0-4d4e-bf62-d4875b24764c}" xml:space="preserve">
+    <value>Відомості</value>
+    <comment>'Smartassist configuration' : LocalizedName for systemform in Entity FormXml ID: '{0beeec6f-1ad0-4d4e-bf62-d4875b24764c}'</comment>
+  </data>
+  <data name="1:LocalizedName,Smartassist configuration{1565cc00-20de-4579-a3ca-b169317a80fd}" xml:space="preserve">
+    <value>Неактивні конфігурації інтелектуальної підтримки</value>
+    <comment>'Smartassist configuration' : LocalizedName for SavedQuery on Entity QueryId: '{1565cc00-20de-4579-a3ca-b169317a80fd}'</comment>
+  </data>
+  <data name="1:LocalizedName,Smartassist configuration{2579b151-61e3-4d61-bd22-e80d833753b4}" xml:space="preserve">
+    <value>Зв’язане подання конфігурацій інтелектуальної підтримки</value>
+    <comment>'Smartassist configuration' : LocalizedName for SavedQuery on Entity QueryId: '{2579b151-61e3-4d61-bd22-e80d833753b4}'</comment>
+  </data>
+  <data name="1:LocalizedName,Smartassist configuration{41d32b37-1cf3-4da6-b23c-518d55a689fe}" xml:space="preserve">
+    <value>Подання розширеного пошуку конфігурацій інтелектуальної підтримки</value>
+    <comment>'Smartassist configuration' : LocalizedName for SavedQuery on Entity QueryId: '{41d32b37-1cf3-4da6-b23c-518d55a689fe}'</comment>
+  </data>
+  <data name="1:LocalizedName,Smartassist configuration{53db0d63-67b8-49a5-8c80-677cd77bed47}" xml:space="preserve">
+    <value>Відомості</value>
+    <comment>'Smartassist configuration' : LocalizedName for systemform in Entity FormXml ID: '{53db0d63-67b8-49a5-8c80-677cd77bed47}'</comment>
+  </data>
+  <data name="1:LocalizedName,Smartassist configuration{8f024f5a-0a46-40f7-94a2-4c33746ac348}" xml:space="preserve">
+    <value>Швидкий пошук активних конфігурацій інтелектуальної підтримки</value>
+    <comment>'Smartassist configuration' : LocalizedName for SavedQuery on Entity QueryId: '{8f024f5a-0a46-40f7-94a2-4c33746ac348}'</comment>
+  </data>
+  <data name="1:LocalizedName,Smartassist configuration{b4f20736-6aee-419f-a3f2-7256353806e2}" xml:space="preserve">
+    <value>Відомості</value>
+    <comment>'Smartassist configuration' : LocalizedName for systemform in Entity FormXml ID: '{b4f20736-6aee-419f-a3f2-7256353806e2}'</comment>
+  </data>
+  <data name="1:LocalizedName,Smartassist configuration{bb1d8168-d3b5-ea11-a81c-000d3ac629fa}" xml:space="preserve">
+    <value>Конфігурації інтелектуальної підтримки</value>
+    <comment>'Smartassist configuration' : LocalizedName for SavedQuery on Entity QueryId: '{bb1d8168-d3b5-ea11-a81c-000d3ac629fa}'</comment>
+  </data>
+  <data name="1:LocalizedName,Smartassist configuration{d2d43bd8-c80b-4d38-8767-ca3690bdf67d}" xml:space="preserve">
+    <value>Активні конфігурації інтелектуальної підтримки</value>
+    <comment>'Smartassist configuration' : LocalizedName for SavedQuery on Entity QueryId: '{d2d43bd8-c80b-4d38-8767-ca3690bdf67d}'</comment>
+  </data>
+  <data name="1:LocalizedName,Smartassist configuration{f0258f77-cb3f-4962-bd41-dc43021412b7}" xml:space="preserve">
+    <value>Подання підстановки конфігурацій інтелектуальної підтримки</value>
+    <comment>'Smartassist configuration' : LocalizedName for SavedQuery on Entity QueryId: '{f0258f77-cb3f-4962-bd41-dc43021412b7}'</comment>
+  </data>
+  <data name="1:Title,Adaptive Card ConfigurationInfo{67f74c42-2118-4ff3-9713-0f6d518d24b8}" xml:space="preserve">
+    <value>Спільне</value>
+    <comment>'Adaptive Card Configuration' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Adaptive Card ConfigurationMarketing{67f74c42-2118-4ff3-9713-0f6d518d24b8}" xml:space="preserve">
+    <value>Маркетинг</value>
+    <comment>'Adaptive Card Configuration' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Adaptive Card ConfigurationProcessCenter{67f74c42-2118-4ff3-9713-0f6d518d24b8}" xml:space="preserve">
+    <value>Сеанси процесів</value>
+    <comment>'Adaptive Card Configuration' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Adaptive Card ConfigurationSales{67f74c42-2118-4ff3-9713-0f6d518d24b8}" xml:space="preserve">
+    <value>Збут</value>
+    <comment>'Adaptive Card Configuration' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Adaptive Card ConfigurationService{67f74c42-2118-4ff3-9713-0f6d518d24b8}" xml:space="preserve">
+    <value>Послуга</value>
+    <comment>'Adaptive Card Configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+  <data name="1:Title,Smartassist configurationInfo{0beeec6f-1ad0-4d4e-bf62-d4875b24764c}" xml:space="preserve">
+    <value>Спільне</value>
+    <comment>'Smartassist configuration' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+  </data>
+  <data name="1:Title,Smartassist configurationMarketing{0beeec6f-1ad0-4d4e-bf62-d4875b24764c}" xml:space="preserve">
+    <value>Маркетинг</value>
+    <comment>'Smartassist configuration' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+  </data>
+  <data name="1:Title,Smartassist configurationProcessCenter{0beeec6f-1ad0-4d4e-bf62-d4875b24764c}" xml:space="preserve">
+    <value>Сеанси процесів</value>
+    <comment>'Smartassist configuration' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+  </data>
+  <data name="1:Title,Smartassist configurationSales{0beeec6f-1ad0-4d4e-bf62-d4875b24764c}" xml:space="preserve">
+    <value>Збут</value>
+    <comment>'Smartassist configuration' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+  </data>
+  <data name="1:Title,Smartassist configurationService{0beeec6f-1ad0-4d4e-bf62-d4875b24764c}" xml:space="preserve">
+    <value>Послуга</value>
+    <comment>'Smartassist configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+  </data>
+  <data name="9:Description,msdyn_suggestioncontroltype" xml:space="preserve">
+    <value />
+    <comment>'msdyn_suggestioncontroltype' : Description for OptionSet</comment>
+  </data>
+  <data name="9:Description,msdyn_suggestioncontroltype192360000" xml:space="preserve">
+    <value />
+    <comment>'msdyn_suggestioncontroltype' : Description for OptionSet Value '192360000'</comment>
+  </data>
+  <data name="9:Description,msdyn_suggestiontype" xml:space="preserve">
+    <value />
+    <comment>'msdyn_suggestiontype' : Description for OptionSet</comment>
+  </data>
+  <data name="9:Description,msdyn_suggestiontype192360000" xml:space="preserve">
+    <value>Пропозиція статі бази знань</value>
+    <comment>'msdyn_suggestiontype' : Description for OptionSet Value '192360000'</comment>
+  </data>
+  <data name="9:Description,msdyn_suggestiontype192360001" xml:space="preserve">
+    <value>Пропозиції подібних інцидентів</value>
+    <comment>'msdyn_suggestiontype' : Description for OptionSet Value '192360001'</comment>
+  </data>
+  <data name="9:Description,msdyn_suggestiontype192360002" xml:space="preserve">
+    <value>Пропозиція бота</value>
+    <comment>'msdyn_suggestiontype' : Description for OptionSet Value '192360002'</comment>
+  </data>
+  <data name="9:displayname,msdyn_suggestioncontroltype" xml:space="preserve">
+    <value>Тип елемента керування пропозиціями</value>
+    <comment>'msdyn_suggestioncontroltype' : displayname for OptionSet</comment>
+  </data>
+  <data name="9:displayname,msdyn_suggestiontype" xml:space="preserve">
+    <value>Тип пропозиції</value>
+    <comment>'msdyn_suggestiontype' : displayname for OptionSet</comment>
+  </data>
+  <data name="9:label,msdyn_suggestioncontroltype192360000" xml:space="preserve">
+    <value>Адаптивна картка</value>
+    <comment>'msdyn_suggestioncontroltype' : label for OptionSet Value '192360000'</comment>
+  </data>
+  <data name="9:label,msdyn_suggestiontype192360000" xml:space="preserve">
+    <value>Пропозиція статі бази знань</value>
+    <comment>'msdyn_suggestiontype' : label for OptionSet Value '192360000'</comment>
+  </data>
+  <data name="9:label,msdyn_suggestiontype192360001" xml:space="preserve">
+    <value>Пропозиція подібного інциденту</value>
+    <comment>'msdyn_suggestiontype' : label for OptionSet Value '192360001'</comment>
+  </data>
+  <data name="9:label,msdyn_suggestiontype192360002" xml:space="preserve">
+    <value>Пропозиція бота</value>
+    <comment>'msdyn_suggestiontype' : label for OptionSet Value '192360002'</comment>
   </data>
 </root>

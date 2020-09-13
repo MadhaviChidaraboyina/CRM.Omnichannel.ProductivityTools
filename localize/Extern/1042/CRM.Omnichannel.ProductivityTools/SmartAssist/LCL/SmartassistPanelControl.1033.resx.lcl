@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="SmartassistPanelControl.1033.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="ko-KR" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";SmartassistPanelControl.1033.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";CC_Smartassist_Control" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Smart Assist control]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[스마트 지원 컨트롤]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006005Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Control name]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";ControlHeader" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Smart assist]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[스마트 지원]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006005Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Header value for smartassist control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";EmptyMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No suggestions available]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[사용할 수 있는 제안 없음]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006005Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Empty message]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";FailureMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Something went wrong. Please try again]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[문제가 발생했습니다. 다시 시도하세요.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006005Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Failure Message]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";LoadingText" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Loading...]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[로드 중...]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006005Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Loading]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";SmartAssistInfoIcon" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Smart assist information icon]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[스마트 지원 정보 아이콘]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006005Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Information icon]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";SuccessMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Done!]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[완료되었습니다!]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006005Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Success Message]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";SuggestionControlTitle" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Smart assist]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[스마트 지원]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006005Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Suggestions parent control title]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";SuggestionControlTitleIconText" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[AI suggestions for knowledge articles and similar cases.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[참조 자료 문서 및 유사한 서비스 케이스에 대한 AI 추천 단어입니다.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-robjan" DateTime="2020-09-10T11:34:18.0006005Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title Icon text]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>
