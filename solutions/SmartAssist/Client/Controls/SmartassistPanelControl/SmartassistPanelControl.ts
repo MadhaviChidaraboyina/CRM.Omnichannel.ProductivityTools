@@ -19,6 +19,7 @@ module MscrmControls.SmartassistPanelControl {
         private anchorTabEntityId: string = null;
         private tabSwitchHandlerId: string = null;
         private telemetryHelper: TelemetryHelper;
+        private smartAssistInfoIconElement: HTMLDivElement;
 
         /**
          * Empty constructor.
@@ -46,11 +47,15 @@ module MscrmControls.SmartassistPanelControl {
                 this.smartAssistContainer = container;
                 this.smartAssistContainer.setAttribute("style", Constants.SAPanelControlDivCss);
 
-                //Control title
-                var loaderElement: HTMLDivElement = document.createElement("div");
-                loaderElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelTitleDiv.Format(Utility.getString(LocalizedStrings.SuggestionControlTitle), Utility.getString(LocalizedStrings.TitleIconInfoText), Utility.getString(LocalizedStrings.InfoIcon));
-                this.smartAssistContainer.appendChild(loaderElement);
+                if (context.parameters.AnchorTabContext && Utility.IsValidJsonString(context.parameters.AnchorTabContext.raw)) {
+                    this.AnchorTabContext = JSON.parse(context.parameters.AnchorTabContext.raw);
+                }
 
+                //Control title
+                this.smartAssistInfoIconElement = document.createElement("div");
+                this.setSmartAssistInfoIconText(this.AnchorTabContext);
+                this.smartAssistContainer.appendChild(this.smartAssistInfoIconElement);
+                
                 var panelInfoIcon = document.getElementById(Constants.SAPanelInfoIcon);
                 panelInfoIcon.onkeydown = (e: KeyboardEvent) => {
                     switch (e.keyCode) {
@@ -76,9 +81,7 @@ module MscrmControls.SmartassistPanelControl {
                 var SuggestionEl: HTMLDivElement = document.createElement("div");
                 SuggestionEl.id = Constants.SuggestionOuterContainer;
                 this.smartAssistContainer.appendChild(SuggestionEl);
-                if (context.parameters.AnchorTabContext && Utility.IsValidJsonString(context.parameters.AnchorTabContext.raw)) {
-                    this.AnchorTabContext = JSON.parse(context.parameters.AnchorTabContext.raw);
-                }
+                
 
                 if (!this.tabSwitchHandlerId) {
 
@@ -110,12 +113,13 @@ module MscrmControls.SmartassistPanelControl {
             if (context.parameters.SessionContext && Utility.IsValidJsonString(context.parameters.SessionContext.raw)) {
                 this.ppSessionContext = JSON.parse(context.parameters.SessionContext.raw);
             }
-            this.telemetryHelper.updateValues(Utility.FormatGuid(this.getEntityRecordId(this.AnchorTabContext)), this.AnchorTabContext.entityName);
+            
             if (this.newInstance) {
                 let recordId = this.getEntityRecordId(this.AnchorTabContext);
                 this.renderSuggestions(false, this.AnchorTabContext.entityName, Utility.FormatGuid(recordId));
             }
             this.newInstance = false;
+            this.telemetryHelper.updateValues(Utility.FormatGuid(this.getEntityRecordId(this.AnchorTabContext)), this.AnchorTabContext.entityName);
         }
 
 		/** 
@@ -262,11 +266,11 @@ module MscrmControls.SmartassistPanelControl {
          * @param event: Current tab opened context
          */
         public async listenCECContextChangeAPI(event: any) {
-
             var sessionId = Utility.getCurrentSessionId()
             var context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
             //Get anchor context
             var anchorContext = context.getTabContext("anchor") as any;
+            this.setSmartAssistInfoIconText(anchorContext);
 
             // update recordId and entityName in telemetry helper;
             this.telemetryHelper.updateValues(Utility.FormatGuid(this.getEntityRecordId(anchorContext)), anchorContext.entityName);
@@ -375,6 +379,16 @@ module MscrmControls.SmartassistPanelControl {
                 return AnyEntityContainerState.Disabled;
             }
             return AnyEntityContainerState.Enabled;
+        }
+
+        /**
+         * Set icon text.
+         * @param anchorContext
+         */
+        private setSmartAssistInfoIconText(anchorContext: any) {
+            this.smartAssistInfoIconElement.innerHTML= "";
+            const infoIconString = anchorContext && anchorContext.entityName === Constants.LWIEntityName ? LocalizedStrings.LWITitleIconInfoText : LocalizedStrings.TitleIconInfoText;
+            this.smartAssistInfoIconElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelTitleDiv.Format(Utility.getString(LocalizedStrings.SuggestionControlTitle), Utility.getString(infoIconString), Utility.getString(LocalizedStrings.InfoIcon));
         }
     }
 }
