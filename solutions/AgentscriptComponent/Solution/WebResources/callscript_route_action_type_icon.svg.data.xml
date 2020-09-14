@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource>
-  <WebResourceId>{fd9b0f98-9f76-4933-95ac-a3fd2dac28e0}</WebResourceId>
+  <WebResourceId>{1df5df64-d35d-4093-8f3c-1f7c098321cd}</WebResourceId>
   <Name>callscript_route_action_type_icon.svg</Name>
   <DisplayName>Script icon</DisplayName>
   <Description>Script icon</Description>
@@ -13,5 +13,5 @@
   <IsCustomizable>0</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/msdyn_callscript_route_action_type_iconfd9b0f98-9f76-4933-95ac-a3fd2dac28e0</FileName>
+  <FileName>/WebResources/msdyn_callscript_route_action_type_iconfd1df5df64-d35d-4093-8f3c-1f7c098321cd</FileName>
 </WebResource>

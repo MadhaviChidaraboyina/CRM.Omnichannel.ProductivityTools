@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource>
-  <WebResourceId>{816c59f8-1243-42bc-9e53-b09c87d74a97}</WebResourceId>
+  <WebResourceId>{4efc1eaf-5ea4-4e64-8664-9e38df9f91c3}</WebResourceId>
   <Name>callscriptstep_retrystep_button_icon.svg</Name>
   <DisplayName>Retry icon</DisplayName>
   <Description>Retry icon</Description>
@@ -13,5 +13,5 @@
   <IsCustomizable>0</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/callscriptstep_retrystep_button_icon816c59f8-1243-42bc-9e53-b09c87d74a97</FileName>
+  <FileName>/WebResources/callscriptstep_retrystep_button_icon4efc1eaf-5ea4-4e64-8664-9e38df9f91c3</FileName>
 </WebResource>

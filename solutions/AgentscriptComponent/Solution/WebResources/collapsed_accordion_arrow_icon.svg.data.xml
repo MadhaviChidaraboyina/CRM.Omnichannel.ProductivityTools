@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource>
-  <WebResourceId>{a0628e6f-4c5f-4ebe-a32c-466ea73b9015}</WebResourceId>
+  <WebResourceId>{5de8a2aa-a15b-4054-9cc9-9271af5b9ac6}</WebResourceId>
   <Name>collapsed_accordion_arrow_icon.svg</Name>
   <DisplayName>Collapsed step icon</DisplayName>
   <Description>Collapsed step icon</Description>
@@ -13,5 +13,5 @@
   <IsCustomizable>0</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/collapsed_accordion_arrow_icona0628e6f-4c5f-4ebe-a32c-466ea73b9015</FileName>
+  <FileName>/WebResources/collapsed_accordion_arrow_icon5de8a2aa-a15b-4054-9cc9-9271af5b9ac6</FileName>
 </WebResource>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource>
-  <WebResourceId>{ced13be1-6f1c-4277-9ec3-ce442051681d}</WebResourceId>
+  <WebResourceId>{d3bbd4f9-a72d-402e-9870-6011798a882d}</WebResourceId>
   <Name>callscript_unexecuted_step_icon.svg</Name>
   <DisplayName>Incompleted step icon</DisplayName>
   <Description>Incompleted step icon</Description>
@@ -13,5 +13,5 @@
   <IsCustomizable>0</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/msdyn_ocsupervisorfilter_uncheckedsvgced13be1-6f1c-4277-9ec3-ce442051681d</FileName>
+  <FileName>/WebResources/msdyn_ocsupervisorfilter_uncheckedsvgd3bbd4f9-a72d-402e-9870-6011798a882d</FileName>
 </WebResource>

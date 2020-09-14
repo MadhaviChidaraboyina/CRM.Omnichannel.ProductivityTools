@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource>
-  <WebResourceId>{3725b4ae-e409-4e04-a9d2-eafc7a5dfd52}</WebResourceId>
+  <WebResourceId>{1f902186-01bb-429d-a7e4-bf842ecbcbc7}</WebResourceId>
   <Name>msdyn_progress_spinner.svg</Name>
   <DisplayName>Loading icon</DisplayName>
   <Description>Loading icon</Description>
@@ -13,5 +13,5 @@
   <IsCustomizable>0</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/msdyn_progress_spinnersvg3725b4ae-e409-4e04-a9d2-eafc7a5dfd52</FileName>
+  <FileName>/WebResources/msdyn_progress_spinnersvg1f902186-01bb-429d-a7e4-bf842ecbcbc7</FileName>
 </WebResource>

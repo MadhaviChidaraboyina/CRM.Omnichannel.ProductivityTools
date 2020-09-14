@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <WebResourceId>{15368020-a2cf-e911-a81c-000d3a6e454e}</WebResourceId>
+  <WebResourceId>{8b092839-6b43-47ce-a02b-977d22529bb0}</WebResourceId>
   <Name>msdyn_AgentscriptFormScript.js</Name>
   <DisplayName>Form script for agent script entity forms</DisplayName>
   <Description>Form script for agent script entity forms</Description>
@@ -13,5 +13,5 @@
   <IsCustomizable>0</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/msdyn_AgentscriptFormScriptjs15368020-A2CF-E911-A81C-000D3A6E454E</FileName>
+  <FileName>/WebResources/msdyn_AgentscriptFormScriptjs8b092839-6b43-47ce-a02b-977d22529bb0</FileName>
 </WebResource>
