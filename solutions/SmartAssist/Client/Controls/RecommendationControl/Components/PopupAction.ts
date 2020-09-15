@@ -11,6 +11,7 @@ module MscrmControls.Smartassist.Suggestion {
         private _isOpen: boolean = false;
         private _imageUrl: string;
         private onExecuteAdaptiveCardAction: (action: AdaptiveCards.Action) => void;
+        private hasAction: boolean;
 
         constructor(onExecuteAction: (action: AdaptiveCards.Action) => void) {
             super();
@@ -47,6 +48,10 @@ module MscrmControls.Smartassist.Suggestion {
             this._renderedItems = popupContainer;
 
             this._popupOwner.tabIndex = 0;
+            if (!this.hasAction && this._popupOwner) {
+                this._popupOwner.style.opacity = "0.5";
+            }
+
             this._popupOwner.onkeydown = (e: KeyboardEvent) => {
                 switch (e.keyCode) {
                     case KeyCodes.ENTER_KEY:
@@ -195,11 +200,11 @@ module MscrmControls.Smartassist.Suggestion {
         parse(json: any, errors?: Array<AdaptiveCards.IValidationError>) {
             const actionItems = json.items;
             this._imageUrl = json.image;
-            var hasAction = false;
+            this.hasAction = false;
             for (var item of actionItems) {
                 const displayAction = item && ((item.hasOwnProperty(Suggestion.Constants.FilterExpression) && item[Suggestion.Constants.FilterExpression]) || !item.hasOwnProperty(Suggestion.Constants.FilterExpression));
                 if (displayAction == true) {
-                    hasAction = displayAction;
+                    this.hasAction = displayAction;
                     let actionSet = new AdaptiveCards.ActionSet();
                     actionSet.parse(item.actionset, errors);
                     actionSet.orientation = AdaptiveCards.Orientation.Vertical;
@@ -210,10 +215,6 @@ module MscrmControls.Smartassist.Suggestion {
                     }
                     this._popupActionContainer.addItem(actionSet);
                 }
-            }
-
-            if (!hasAction) {
-                this._popupOwner.style.opacity = "0.5";
             }
         }
     }
