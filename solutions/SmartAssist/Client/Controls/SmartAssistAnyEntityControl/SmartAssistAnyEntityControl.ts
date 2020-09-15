@@ -253,7 +253,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     this._sessionStateManager.deleteRecord(this.recordId, this.saConfig.SmartassistConfigurationId, suggestion);
                     this._sessionStorageManager.deleteRecord(suggestion);
                 }
-                
+
                 // clear cachepool for previous window.
                 this._cachePoolManager.clearCachePoolForConfig(this.saConfig.SmartassistConfigurationId, this.recordId);
                 window.sessionStorage.setItem(Utility.getCurrentSessionId(), JSON.stringify([]));
@@ -370,6 +370,16 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
                         self._sessionStateManager.deleteRecord(this.recordId, this.saConfig.SmartassistConfigurationId, suggestionId);
                         self._sessionStorageManager.deleteRecord(suggestionId);
+
+                        // Show empty message if no more suggestions left
+                        var suggestions = this._sessionStateManager.getAllRecordsForConfigId(this.recordId, this.saConfig.SmartassistConfigurationId);
+                        if (suggestions.length < 1) {
+                            var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
+                            if (!noSuggestionElm) {
+                                var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
+                                $("#" + this.parentDivId).append(emptyRecordElm);
+                            }
+                        }
                     }
                 }
             } catch (error) {
