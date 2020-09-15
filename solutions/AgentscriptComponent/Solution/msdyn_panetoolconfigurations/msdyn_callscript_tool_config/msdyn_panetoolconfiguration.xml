@@ -4,10 +4,14 @@
   <msdyn_controlname>MscrmControls.Callscript.CallscriptControl</msdyn_controlname>
   <msdyn_data>{}</msdyn_data>
   <msdyn_isconfigurable>1</msdyn_isconfigurable>
-  <msdyn_name>Call script tool configuration</msdyn_name>
+  <msdyn_name default="Call script tool configuration">
+	<label description="Call script tool configuration" languagecode="1033" />
+  </msdyn_name>
   <msdyn_toolconfigurationentity>msdyn_productivityagentscript</msdyn_toolconfigurationentity>
   <msdyn_learnmorelink>https://go.microsoft.com/fwlink/p/?linkid=2138866</msdyn_learnmorelink>
-  <msdyn_description>Give step-by-step instructions to help minimize human error and provide consistent service.</msdyn_description>
+  <msdyn_description default="Give step-by-step instructions to help minimize human error and provide consistent service.">
+	<label description="Give step-by-step instructions to help minimize human error and provide consistent service." languagecode="1033" />
+  </msdyn_description>
   <statecode>0</statecode>
   <statuscode>1</statuscode>
 </msdyn_panetoolconfiguration>

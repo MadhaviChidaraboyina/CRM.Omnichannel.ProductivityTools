@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource>
-  <WebResourceId>{33dddf6c-dafb-4a2c-9f03-aec2e5ce573e}</WebResourceId>
+  <WebResourceId>{0b9812e5-e575-493e-8370-1ca28e5d9424}</WebResourceId>
   <Name>msdyn_view_script_icon.svg</Name>
   <DisplayName>Script step icon</DisplayName>
   <Description>Script step icon</Description>
@@ -13,5 +13,5 @@
   <IsCustomizable>0</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/msdyn_view_script_iconsvg33dddf6c-dafb-4a2c-9f03-aec2e5ce573e</FileName>
+  <FileName>/WebResources/msdyn_view_script_iconsvg0b9812e5-e575-493e-8370-1ca28e5d9424</FileName>
 </WebResource>

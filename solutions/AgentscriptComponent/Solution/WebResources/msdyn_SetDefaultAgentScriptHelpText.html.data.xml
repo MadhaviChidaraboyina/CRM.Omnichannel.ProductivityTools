@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <WebResourceId>{E3D92944-7308-4B9C-A37E-316DDF5127A8}</WebResourceId>
+  <WebResourceId>{BDE997ED-50B0-4D06-B5D1-94104FE923B4}</WebResourceId>
   <Name>msdyn_SetDefaultAgentScriptHelpText.html</Name>
   <DisplayName>Set Default AgentScript Help Text Template</DisplayName>
   <LanguageCode>1033</LanguageCode>
@@ -62,5 +62,5 @@
   <IsCustomizable>1</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/msdyn_SetDefaultAgentScriptHelpTexthtmlE3D92944-7308-4B9C-A37E-316DDF5127A8</FileName>
+  <FileName>/WebResources/msdyn_SetDefaultAgentScriptHelpTexthtmlBDE997ED-50B0-4D06-B5D1-94104FE923B4</FileName>
 </WebResource>

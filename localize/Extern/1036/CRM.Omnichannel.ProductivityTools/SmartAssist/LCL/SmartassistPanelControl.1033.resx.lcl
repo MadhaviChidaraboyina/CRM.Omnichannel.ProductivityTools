@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="SmartassistPanelControl.1033.resx" PsrId="211" FileType="1" SrcCul="en-US" TgtCul="fr-FR" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";SmartassistPanelControl.1033.resx" ItemType="0" PsrId="211" Leaf="false">
+    <Disp Icon="Str" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="211" Leaf="false">
+      <Disp Icon="Str" LocTbl="false" />
+      <Item ItemId=";CC_Smartassist_Control" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Smart Assist control]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Contrôle Assistance intelligente]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-11T08:26:03.0002033Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Control name]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";ControlHeader" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Smart assist]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Assistance intelligente]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-11T08:26:03.0002033Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Header value for smartassist control]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";EmptyMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[No suggestions available]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Aucune suggestion disponible]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-11T08:26:03.0002033Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Empty message]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";FailureMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Something went wrong. Please try again]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Un problème s’est produit. Veuillez recommencer]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-11T08:26:03.0002033Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Failure Message]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";LoadingText" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Loading...]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Chargement...]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-11T08:26:03.0002033Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Loading]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";SmartAssistInfoIcon" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Smart assist information icon]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Icône informations sur l’assistance intelligente]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-11T08:26:03.0002033Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Information icon]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";SuccessMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Done!]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Terminé !]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-11T08:26:03.0002033Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Success Message]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";SuggestionControlTitle" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Smart assist]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Assistance intelligente]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-11T08:26:03.0002033Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Suggestions parent control title]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";SuggestionControlTitleIconText" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[AI suggestions for knowledge articles and similar cases.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Suggestion de l’IA pour les articles de base de connaissances et incidents similaires.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-11T08:26:03.0002012Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title Icon text]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

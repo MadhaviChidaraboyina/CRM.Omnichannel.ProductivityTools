@@ -57,7 +57,11 @@ module MscrmControls.Smartassist.Suggestion {
                     },
                     "good": {
                         "default": "#323130",
-                        "subtle": "#DD54a254"
+                        "subtle": "#DD54a254",
+                        "highlightColors": {
+                            "default": "#B5D0FF",
+                            "subtle": "#11000000"
+                        }
                     },
                     "warning": {
                         "default": "#c3ab23",
