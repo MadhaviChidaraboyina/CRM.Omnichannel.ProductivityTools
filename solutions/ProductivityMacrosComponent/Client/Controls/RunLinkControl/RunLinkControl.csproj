@@ -28,6 +28,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<TypeScriptCompile Include="CommonReferences.ts" />
+		<TypeScriptCompile Include="constants.ts" />
 		<TypeScriptCompile Include="control.ts" />
 		<TypeScriptCompile Include="inputsOutputs.g.ts" />
 		<TypeScriptCompile Include="PrivateReferences.ts" />
