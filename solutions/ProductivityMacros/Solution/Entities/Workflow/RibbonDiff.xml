@@ -30,8 +30,9 @@
 			</CommandUIDefinition>
 		</CustomAction>
 	</CustomActions>
-	<CommandDefinitions>
-		<!-- Command Definition for OpenRecordItem Button -->
+  <!-- Using CommandDefinitions, Templates and RuleDefinitions from ProductivityMacrosComponent -->
+  <!--<CommandDefinitions>
+		--><!-- Command Definition for OpenRecordItem Button --><!--
 		<CommandDefinition Id="Mscrm.OpenRecordItem">
 			<EnableRules>
 				<EnableRule Id="Mscrm.Disabled" />
@@ -46,7 +47,7 @@
 				</JavaScriptFunction>
 			</Actions>
 		</CommandDefinition>
-		<!-- Command Definition for NewRecord Button -->
+		--><!-- Command Definition for NewRecord Button --><!--
 		<CommandDefinition Id="Mscrm.NewRecordFromGrid">
 			<EnableRules>
 				<EnableRule Id="Mscrm.IsValidForHierarchyView" />
@@ -80,7 +81,7 @@
 				</CustomRule>
 			</EnableRule>
 		</EnableRules>
-	</RuleDefinitions>
+	</RuleDefinitions>-->
 	<LocLabels>
 		<LocLabel Id="workflow.HomePageGrid.New.Button.LabelText">
 			<Titles>
