@@ -38,6 +38,7 @@ module MscrmControls.Smartassist {
 			// custom code goes here
 			try {
 				this._context = context;
+				this._context.reporting.reportSuccess(Suggestion.TelemetryEventTypes.InitStarted);
 				this._recommendationContainer = container;
 
 				this._data = context.parameters.data.raw;

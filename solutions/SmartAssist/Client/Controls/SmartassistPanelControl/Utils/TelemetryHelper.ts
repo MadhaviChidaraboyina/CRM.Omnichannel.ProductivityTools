@@ -64,7 +64,9 @@
 		public static componentName = "MscrmControls.SmartassistPanelControl.";
 		public static InitFailed = TelemetryEventTypes.componentName + "InitFailed";
 		public static InitCompleted = TelemetryEventTypes.componentName + "InitCompleted";
+		public static InitStarted = TelemetryEventTypes.componentName + "InitStarted"
 		public static UpdateViewStarted = TelemetryEventTypes.componentName + "UpdateViewStarted";
+		public static SessionInitStarted = TelemetryEventTypes.componentName + "SessionInitStarted";
 		public static RenderSuggestionStarted = TelemetryEventTypes.componentName + "RenderSuggestionStarted";
 		public static ConfigNotFound = TelemetryEventTypes.componentName + "ConfigNotFound";
 		public static AllConfigsDisabled = TelemetryEventTypes.componentName + "AllConfigsDisabled";
@@ -72,9 +74,11 @@
 		public static KBSettingDisabled = TelemetryEventTypes.componentName + "KBSettingIsDisabled";
 		public static ThirdPartyBotDisabled = TelemetryEventTypes.componentName + "ThirdPartyBotIsDisabled";
 		public static SAConfigFetchedFromCache = TelemetryEventTypes.componentName + "SAConfigFetchedFromCache";
+		public static AppProfileAssociationNotFound = TelemetryEventTypes.componentName + "AppProfileAssociationNotFound";
 		public static FetchingDefaultSAConfig = TelemetryEventTypes.componentName + "FetchingDefaultSAConfig";
 		public static ExceptionInFetchingSAConfigData = TelemetryEventTypes.componentName + "ExceptionInFetchingSAConfigData";
 		public static NoSAConfigFound = TelemetryEventTypes.componentName + "NoSAConfigFound";
+		public static DefaultSAConfigNotFound = TelemetryEventTypes.componentName + "DefaultSAConfigNotFound";
 		public static InvalidSourceEntityName = TelemetryEventTypes.componentName + "InvalidSourceEntityName";
 		public static ExceptionInFetchingSAConfigFromCache = TelemetryEventTypes.componentName + "ExceptionInFetchingSAConfigFromCache";
 		public static ThirdPartyBotNotFoundInWorkStream = TelemetryEventTypes.componentName + "ThirdPartyBotNotFoundInWorkStream";

@@ -52,6 +52,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             try {
                 if (this.initCompleted == false) {
                     SmartAssistAnyEntityControl._context = context;
+                    SmartAssistAnyEntityControl._context.reporting.reportSuccess(TelemetryEventTypes.InitStarted);
                     SmartAssistAnyEntityControl._telemetryReporter = new TelemetryLogger.TelemetryLogger(context, "MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl")
                     this.anyEntityContainer = container;
                     this.validateParameters(context);
@@ -66,6 +67,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     this.anyEntityContainer.appendChild(anyEntityElement);
                     this.telemetryHelper = new TelemetryHelper(this.recordId, this.saConfig);
                     this.anyEntityDataManager.initializeOtherParameters(context, this.telemetryHelper);
+                    
                     // inner container
                     this.constructAnyEntityInnerContainers();
 
@@ -153,9 +155,20 @@ module MscrmControls.SmartAssistAnyEntityControl {
             }
             else {
                 //TODO: add telemetry for all the scenarios
+
+                // Turn off AI suggestions for non-english user.
+                let englishOrgAndEnglishUser = true;
+                if (SmartAssistAnyEntityControl._context.orgSettings && SmartAssistAnyEntityControl._context.userSettings) {
+                    englishOrgAndEnglishUser = SmartAssistAnyEntityControl._context.orgSettings.languageId == 1033 && SmartAssistAnyEntityControl._context.userSettings.languageId == 1033;
+                }
                 var data;
-                if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled) {
-                    this.telemetryHelper.logTelemetryError(TelemetryEventTypes.ContainerStateIsDisabled, new Error("AI settings are disabled"), null);
+                if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled || !englishOrgAndEnglishUser) {
+                    if (!englishOrgAndEnglishUser) {
+                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionsNotSupportedForNonEnglishUser, null);
+                    }
+                    else {
+                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ContainerStateIsDisabled, null);
+                    }
                     this.appendTitle();
                     var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                     if (!noSuggestionElm) {
@@ -374,6 +387,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                         // Show empty message if no more suggestions left
                         var suggestions = this._sessionStateManager.getAllRecordsForConfigId(this.recordId, this.saConfig.SmartassistConfigurationId);
                         if (suggestions.length < 1) {
+                            self.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoSuggestionsFoundAfterDismiss, null);
                             var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                             if (!noSuggestionElm) {
                                 var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);

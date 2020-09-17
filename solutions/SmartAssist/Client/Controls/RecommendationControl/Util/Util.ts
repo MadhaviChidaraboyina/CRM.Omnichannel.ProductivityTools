@@ -117,6 +117,7 @@ module MscrmControls.Smartassist.Suggestion {
 		public static AdaptiveCardRenderingFailed = "MscrmControls.Smartassist.RecommendationControl.RenderAdaptiveCard.Failed";
 		public static AdaptiveCardRenderingSucceed = "MscrmControls.Smartassist.RecommendationControl.RenderAdaptiveCard.Succeed";
 		public static TemplateParsingCompleted = "MscrmControls.Smartassist.RecommendationControl.TemplateParsing.Completed";
+		public static InitStarted = "MscrmControls.Smartassist.RecommendationControl.InitStarted";
 		public static InitFailed = "MscrmControls.Smartassist.RecommendationControl.InitFailed";
 		public static HandleCardRefreshOrDismissFailed = "MscrmControls.Smartassist.RecommendationControl.HandleCardRefreshOrDismiss.Failed";
 		public static CardRefreshInitiated = "MscrmControls.Smartassist.RecommendationControl.CardRefresh.Initiated";

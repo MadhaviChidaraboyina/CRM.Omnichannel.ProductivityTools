@@ -83,5 +83,8 @@
 		public static FPBEventReceived = TelemetryEventTypes.componentName + "FPBEventReceived";
 		public static FailedToRenderFPBSuggestion = TelemetryEventTypes.componentName + "FailedToRenderFPBSuggestion";
 		public static InitFailed = TelemetryEventTypes.componentName + "InitFailed";
+		public static InitStarted = TelemetryEventTypes.componentName + "InitStarted";
+		public static NoSuggestionsFoundAfterDismiss = TelemetryEventTypes.componentName + "NoSuggestionsFoundAfterDismiss";
+		public static AISuggestionsNotSupportedForNonEnglishUser = TelemetryEventTypes.componentName + "AISuggestionsNotSupportedForNonEnglishUser";
 	}
 }

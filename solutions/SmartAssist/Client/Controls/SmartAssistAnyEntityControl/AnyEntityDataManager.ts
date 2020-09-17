@@ -115,6 +115,7 @@
                 if (context) {
                     tabcontext = context.getTabContext("anchor");
                 }
+                const startTime = Date.now();
                 const param: Microsoft.Smartassist.SuggestionProvider.SuggestionContext = { controlContext: this._controlContext, tabcontext: tabcontext };
                 let suggestionDataFromAPI: any[] = [];
                 if (suggestionProvider) {
@@ -122,11 +123,16 @@
                 }
 
                 this.Suggestions = {};
+                let executionTime = (Date.now() - startTime) + "ms";
                 if (suggestionDataFromAPI.length < 1) {
-                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoDataFoundFromAPI, null);
+                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoDataFoundFromAPI, [{ name: "ExecutionTime", value: executionTime }]);
                 }
                 else {
-                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.DataFetchedFromAPI, null);
+                    
+                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.DataFetchedFromAPI, [
+                        { name: "ExecutionTime", value: executionTime },
+                        { name: "NoOfSuggestions", value: suggestionDataFromAPI.length}
+                    ]);
                 }
 
                 let data = suggestionDataFromAPI;

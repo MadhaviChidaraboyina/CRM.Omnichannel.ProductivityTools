@@ -36,7 +36,6 @@ module MscrmControls.SmartassistPanelControl {
 		 * @params container The div element to draw this control in
 		 */
         public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary, container: HTMLDivElement): void {
-
             // Initialize Telemetry Repoter
             SmartassistPanelControl._telemetryReporter = new TelemetryLogger.TelemetryLogger(context, Constants.ControlId);
             var methodName = "init";
@@ -44,13 +43,14 @@ module MscrmControls.SmartassistPanelControl {
             this.previousSessionId = Utility.getCurrentSessionId();
             try {
                 SmartassistPanelControl._context = context;
+                SmartassistPanelControl._context.reporting.reportSuccess(TelemetryEventTypes.InitStarted);
                 this.smartAssistContainer = container;
                 this.smartAssistContainer.setAttribute("style", Constants.SAPanelControlDivCss);
 
                 if (context.parameters.AnchorTabContext && Utility.IsValidJsonString(context.parameters.AnchorTabContext.raw)) {
                     this.AnchorTabContext = JSON.parse(context.parameters.AnchorTabContext.raw);
                 }
-
+               
                 //Control title
                 this.smartAssistInfoIconElement = document.createElement("div");
                 this.setSmartAssistInfoIconText(this.AnchorTabContext);
@@ -111,16 +111,17 @@ module MscrmControls.SmartassistPanelControl {
             if (context.parameters.AnchorTabContext && Utility.IsValidJsonString(context.parameters.AnchorTabContext.raw)) {
                 this.AnchorTabContext = JSON.parse(context.parameters.AnchorTabContext.raw);
             }
+            this.telemetryHelper.updateValues(Utility.FormatGuid(this.getEntityRecordId(this.AnchorTabContext)), this.AnchorTabContext.entityName);
             if (context.parameters.SessionContext && Utility.IsValidJsonString(context.parameters.SessionContext.raw)) {
                 this.ppSessionContext = JSON.parse(context.parameters.SessionContext.raw);
             }
             
             if (this.newInstance) {
                 let recordId = this.getEntityRecordId(this.AnchorTabContext);
+                this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SessionInitStarted, null);
                 this.renderSuggestions(false, this.AnchorTabContext.entityName, Utility.FormatGuid(recordId));
             }
-            this.newInstance = false;
-            this.telemetryHelper.updateValues(Utility.FormatGuid(this.getEntityRecordId(this.AnchorTabContext)), this.AnchorTabContext.entityName);
+            this.newInstance = false;   
         }
 
 		/** 

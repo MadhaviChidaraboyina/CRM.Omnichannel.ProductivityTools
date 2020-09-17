@@ -125,9 +125,13 @@ module MscrmControls.SmartassistPanelControl {
                 let fetchXml = this.getXmlQueryForSAConfig(appConfigName)
                 var result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.saConfigSchema.EntityName, fetchXml) as any;
                 if (result.entities.length < 1) {
+                    telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AppProfileAssociationNotFound, null);
                     telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.FetchingDefaultSAConfig, null);
                     let defaultConfigFetchXml = this.getFetchXmlForDefaultSAConfig();
                     result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.saConfigSchema.EntityName, defaultConfigFetchXml) as any;
+                    if (result && result.entities && result.entities.length < 1) {
+                        telemetryHelper.logTelemetryError(TelemetryEventTypes.DefaultSAConfigNotFound, new Error("Default SAConfig not found"), null);
+                    }
                 }
                 this.saConfig = [];
                 for (var i = 0; i < result.entities.length; i++) {
