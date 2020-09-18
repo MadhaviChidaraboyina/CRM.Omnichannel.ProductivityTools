@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource>
-  <WebResourceId>{051629c5-9ccd-47ad-8871-1058cfc22cfc}</WebResourceId>
+  <WebResourceId>{cef8da44-dc8b-45a5-a798-35ee4f84449f}</WebResourceId>
   <Name>msdyn_markasdone_text_icon.svg</Name>
   <DisplayName>Complete text instruction step icon</DisplayName>
   <Description>Complete text instruction step icon</Description>
@@ -13,5 +13,5 @@
   <IsCustomizable>0</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/msdyn_markasdone_text_iconsvg051629c5-9ccd-47ad-8871-1058cfc22cfc</FileName>
+  <FileName>/WebResources/msdyn_markasdone_text_iconsvgcef8da44-dc8b-45a5-a798-35ee4f84449f</FileName>
 </WebResource>

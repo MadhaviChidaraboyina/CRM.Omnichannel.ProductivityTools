@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource>
-  <WebResourceId>{0a09124e-ddf3-45ef-bb34-39612419f750}</WebResourceId>
+  <WebResourceId>{b3553985-9f97-4979-beb5-6c3bbc87e2d0}</WebResourceId>
   <Name>callscriptstep_executestep_button_icon.svg</Name>
   <DisplayName>Checked state icon</DisplayName>
   <Description>Checked state icon</Description>
@@ -13,5 +13,5 @@
   <IsCustomizable>0</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/callscriptstep_executestep_button_iconsvg0a09124e-ddf3-45ef-bb34-39612419f750</FileName>
+  <FileName>/WebResources/callscriptstep_executestep_button_iconsvgb3553985-9f97-4979-beb5-6c3bbc87e2d0</FileName>
 </WebResource>

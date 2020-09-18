@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource>
-  <WebResourceId>{4df28e22-7417-484b-b55a-fb76c8ba7aea}</WebResourceId>
+  <WebResourceId>{de1fad5c-7919-4fd3-aca3-c4ce62cfc028}</WebResourceId>
   <Name>callscript_failed_step_icon.svg</Name>
   <DisplayName>Failed step icon</DisplayName>
   <Description>Failed step icon</Description>
@@ -13,5 +13,5 @@
   <IsCustomizable>0</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/callscript_failed_step_iconsvg4df28e22-7417-484b-b55a-fb76c8ba7aea</FileName>
+  <FileName>/WebResources/callscript_failed_step_iconsvgde1fad5c-7919-4fd3-aca3-c4ce62cfc028</FileName>
 </WebResource>

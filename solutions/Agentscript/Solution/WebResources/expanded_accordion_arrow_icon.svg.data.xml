@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource>
-  <WebResourceId>{91d8be42-98f2-4818-a849-f6dd465c72fd}</WebResourceId>
+  <WebResourceId>{6ccad2eb-a1a8-480c-b0d4-59a6fc2190f0}</WebResourceId>
   <Name>expanded_accordion_arrow_icon.svg</Name>
   <DisplayName>Expanded step icon</DisplayName>
   <Description>Expanded step icon</Description>
@@ -13,5 +13,5 @@
   <IsCustomizable>0</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/expanded_accordion_arrow_icon91d8be42-98f2-4818-a849-f6dd465c72fd</FileName>
+  <FileName>/WebResources/expanded_accordion_arrow_icon6ccad2eb-a1a8-480c-b0d4-59a6fc2190f0</FileName>
 </WebResource>

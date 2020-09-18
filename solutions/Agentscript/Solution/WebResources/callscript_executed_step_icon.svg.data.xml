@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WebResource>
-  <WebResourceId>{6999fbbd-c71f-41ae-ba7f-2b6ff35fb188}</WebResourceId>
+  <WebResourceId>{9a6df49b-21a8-40f2-86be-7f55538bf2f7}</WebResourceId>
   <Name>callscript_executed_step_icon.svg</Name>
   <DisplayName>Completed step icon</DisplayName>
   <Description>Completed step icon</Description>
@@ -13,5 +13,5 @@
   <IsCustomizable>0</IsCustomizable>
   <CanBeDeleted>1</CanBeDeleted>
   <IsHidden>0</IsHidden>
-  <FileName>/WebResources/callscript_executed_step_iconsvg6999fbbd-c71f-41ae-ba7f-2b6ff35fb188</FileName>
+  <FileName>/WebResources/callscript_executed_step_iconsvg9a6df49b-21a8-40f2-86be-7f55538bf2f7</FileName>
 </WebResource>
