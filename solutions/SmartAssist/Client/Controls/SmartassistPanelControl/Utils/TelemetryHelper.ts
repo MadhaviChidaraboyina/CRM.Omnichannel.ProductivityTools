@@ -70,6 +70,7 @@
 		public static RenderSuggestionStarted = TelemetryEventTypes.componentName + "RenderSuggestionStarted";
 		public static ConfigNotFound = TelemetryEventTypes.componentName + "ConfigNotFound";
 		public static AllConfigsDisabled = TelemetryEventTypes.componentName + "AllConfigsDisabled";
+		public static DIAPackageNotInstalled = TelemetryEventTypes.componentName + "DIAPackageNotInstalled";
 		public static CaseSettingDisabled = TelemetryEventTypes.componentName + "CaseSettingIsDisabled";
 		public static KBSettingDisabled = TelemetryEventTypes.componentName + "KBSettingIsDisabled";
 		public static ThirdPartyBotDisabled = TelemetryEventTypes.componentName + "ThirdPartyBotIsDisabled";
@@ -94,5 +95,6 @@
 		public static WebresourceLoadingFailed = TelemetryEventTypes.componentName + "WebResourceLoadingFailed";
 		public static WebresourceLoadedSuccessfully = TelemetryEventTypes.componentName + "WebresourceLoadedSuccessfully";
 		public static RenderingSmartAssistAnyEntityControl = TelemetryEventTypes.componentName + "RenderingSmartAssistAnyEntityControl";
+		public static ErrorInCheckEmptyStatus = TelemetryEventTypes.componentName + "ErrorInCheckEmptyStatus";
 	}
 }

@@ -210,8 +210,9 @@ module MscrmControls.SmartassistPanelControl {
             catch (error) {
                 data = new SuggestionsSetting(null);
                 this.suggestionsSetting[currentSessionId] = data;
-                telemetryHelper.logTelemetryError(TelemetryEventTypes.ExceptionInSuggestionSettings, error, null);
+                telemetryHelper.logTelemetryError(TelemetryEventTypes.DIAPackageNotInstalled, error, null);
             }
+            return this.suggestionsSetting[currentSessionId];
         }
 
         /**Check if Smart assist is added in OC WS */

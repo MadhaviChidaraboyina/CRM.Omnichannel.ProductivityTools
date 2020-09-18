@@ -360,26 +360,38 @@ module MscrmControls.SmartassistPanelControl {
          * @param entityId
          */
         private async checkEmptyStatus(entityName: string, entityId: string, configs: SAConfig[]) {
-            if (!Utility.isValidSourceEntityName(entityName) || Utility.isNullOrEmptyString(entityId)) {
-                return AnyEntityContainerState.NoSuggestions;
+            try {
+                if (!Utility.isValidSourceEntityName(entityName) || Utility.isNullOrEmptyString(entityId)) {
+                    return AnyEntityContainerState.NoSuggestions;
+                }
+                var currentSession = Utility.getCurrentSessionId();
+                var settings = await SAConfigDataManager.Instance.getSuggestionsSetting(currentSession, this.telemetryHelper);
+                var botConfig = configs.find(i => i.SuggestionType == SuggestionType.BotSuggestion);
+                if (!botConfig) {
+                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ThirdPartyBotDisabled, null);
+                }
+                if (!settings) {
+                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.DIAPackageNotInstalled, null);
+                    if (!botConfig) {
+                        return AnyEntityContainerState.Disabled;
+                    }
+                    return AnyEntityContainerState.Enabled;
+                }
+                if (!settings.CaseIsEnabled) {
+                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.CaseSettingDisabled, null);
+                }
+                if (!settings.KbIsEnable) {
+                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.KBSettingDisabled, null);
+                }
+                if (!settings.CaseIsEnabled && !settings.KbIsEnable && !botConfig) {
+                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AllConfigsDisabled, null);
+                    return AnyEntityContainerState.Disabled;
+                }
+                return AnyEntityContainerState.Enabled;
+            } catch (error) {
+                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.ErrorInCheckEmptyStatus, error, null);
+                return AnyEntityContainerState.Enabled;
             }
-            var currentSession = Utility.getCurrentSessionId();
-            var settings = await SAConfigDataManager.Instance.getSuggestionsSetting(currentSession, this.telemetryHelper);
-            var botConfig = configs.find(i => i.SuggestionType == SuggestionType.BotSuggestion)
-            if (!settings.CaseIsEnabled) {
-                this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.CaseSettingDisabled, null);
-            }
-            if (!settings.KbIsEnable) {
-                this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.KBSettingDisabled, null);
-            }
-            if (!botConfig) {
-                this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ThirdPartyBotDisabled, null);
-            }
-            if (!settings.CaseIsEnabled && !settings.KbIsEnable && !botConfig) {
-                this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AllConfigsDisabled, null);
-                return AnyEntityContainerState.Disabled;
-            }
-            return AnyEntityContainerState.Enabled;
         }
 
         /**
