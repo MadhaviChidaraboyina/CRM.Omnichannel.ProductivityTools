@@ -136,7 +136,10 @@ module MscrmControls.Smartassist {
 						else if (this._adaptiveCardRenderer.previousActionClicked) {
 							const uiElement = (<AdaptiveCards.ColumnSet>this._adaptiveCardRenderer.adaptivecardRoot.getElementById(this._adaptiveCardRenderer.previousActionClicked)).getItemAt(0);
 							if (uiElement) {
-								(<HTMLElement>uiElement.renderedElement.children[0]).focus();
+								let focusable = uiElement.renderedElement.querySelectorAll("button, img");
+								if (focusable.length > 0) {
+									(<HTMLElement>focusable[0]).focus();
+								}
 							}
 						}	
 					}

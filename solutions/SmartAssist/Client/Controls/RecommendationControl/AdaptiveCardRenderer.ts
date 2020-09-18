@@ -187,9 +187,9 @@ module MscrmControls.Smartassist.Suggestion {
 								errorMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.ErrorImageEncode, error);
 							}
 							else {
-								errorMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.ErrorImageEncode, LocalizedStrings.CustomActionFailureMessage);
+								errorMessageTemplate = ViewTemplates.CustomActionResolveIcon.Format(Constants.ErrorImageEncode, CustomActionHelper.getString(this._context, LocalizedStrings.CustomActionFailureMessage));
 							}
-							const errorString = error ? error : LocalizedStrings.CustomActionFailureMessage;
+							const errorString = error ? error : CustomActionHelper.getString(this._context, LocalizedStrings.CustomActionFailureMessage);
 							AdaptiveCardRenderer.logTelemetryForCustomActions(this._context, false, errorString, customActionReturn, executionTime + "ms");
 							let errorMessage = ViewTemplates.FailureMessageTemplates.Format(notificationBarId, errorMessageTemplate);
 							$("#" + Suggestion.Util.getSuggestionCardId(this._suggestionId)).before(errorMessage);

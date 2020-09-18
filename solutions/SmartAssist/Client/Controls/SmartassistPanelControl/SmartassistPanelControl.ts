@@ -272,7 +272,6 @@ module MscrmControls.SmartassistPanelControl {
             var context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
             //Get anchor context
             var anchorContext = context.getTabContext("anchor") as any;
-            this.setSmartAssistInfoIconText(anchorContext);
 
             // update recordId and entityName in telemetry helper;
             this.telemetryHelper.updateValues(Utility.FormatGuid(this.getEntityRecordId(anchorContext)), anchorContext.entityName);
