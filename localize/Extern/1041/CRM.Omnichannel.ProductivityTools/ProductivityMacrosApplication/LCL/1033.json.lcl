@@ -1,0 +1,1808 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="1033.json" PsrId="306" FileType="1" SrcCul="en-US" TgtCul="ja-JP" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";String Table" ItemType="0" PsrId="306" Leaf="false">
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="306" Leaf="false">
+      <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";(msdyn_uniquename=msdyn_ApplicationTemplateId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application template ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[アプリケーション テンプレート ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006377Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ApplicationTemplateId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application Template ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[アプリケーション テンプレート ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_BillableTime).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time that is billable]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[請求可能な時間]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_BillableTime).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Billable time]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[請求可能な時間]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_Input_Record).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This will clone the record given as macro input and open it in new tab as new unsaved record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[これにより、マクロ入力として指定されたレコードが複製され、新しいタブで新しい未保存のレコードとして開かれます]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_Input_Record).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone input record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[入力レコードの複製]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_Input_Record).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_Input_Record).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This will clone the record given as macro input and open it in new tab as new unsaved record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[これにより、マクロ入力として指定されたレコードが複製され、新しいタブで新しい未保存のレコードとして開かれます]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_Input_Record).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone input record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[入力レコードの複製]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_focused_Record).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This will clone the record in the curent tab and open it in a new tab as new unsaved record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[これにより、現在のタブのレコードが複製され、新しいタブで新しい未保存のレコードとして開かれます]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_focused_Record).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone current record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[現在のレコードの複製]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_focused_Record).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_focused_Record).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This will clone the record in the curent tab and open it in a new tab as new unsaved record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[これにより、現在のタブのレコードが複製され、新しいタブで新しい未保存のレコードとして開かれます]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_focused_Record).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone current record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[現在のレコードの複製]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Create_New).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a new form to create a record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[新しいフォームを開いてレコードを作成]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Create_New).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create New]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[新規作成する]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Create_New).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Create_New).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a new form to create a record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[新しいフォームを開いてレコードを作成]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Create_New).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a new form to create a record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[新しいフォームを開いてレコードを作成]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Custom_Array).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Array of custom name-value pairs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[カスタム名と値のペアの配列]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Custom_Array).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Attribute]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[属性]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Custom_Object).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sample JSON object]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[JSONオ ブジェクトのサンプル]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Custom_Object).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sample custom JSON Object]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[カスタム JSON オブジェクトのサンプル]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_DashboardId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The ID of the dashboard to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[開くダッシュボードの ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_DashboardId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dashboard ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ダッシュボード ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Draft_Email).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[定義済みのテンプレートで電子メール フォームを開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Draft_Email).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[電子メール]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Draft_Email).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Draft_Email).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[定義済みのテンプレートで電子メール フォームを開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Draft_Email).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[定義済みのテンプレートで電子メール フォームを開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity record ID to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[開くエンティティ レコード ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity record ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[エンティティ レコード ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityName).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Logical name of the entity to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[開くエンティティの論理名]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityName).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity logical name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[エンティティの論理名]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Focus_tab).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[タブにフォーカスする]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Focus_tab).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[タブにフォーカスする]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Focus_tab).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[セッション コネクタ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Focus_tab).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[タブにフォーカスする]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Focus_tab).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[タブにフォーカスする]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_FormId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Form ID to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[開くフォーム ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_FormId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity form ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[エンティティ フォーム ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Get_current_page).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[現在のタブを取得する]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Get_current_page).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[現在のタブを取得する]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Get_current_page).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[セッション コネクタ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Get_current_page).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[現在のタブを取得する]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Get_current_page).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[現在のタブを取得する]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_IncidentId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Case ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[サポート案件 ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_IncidentId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Incident ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[インシデント ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Application_Tab).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This will open an application tab for the given inputs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[これにより、指定された入力のアプリケーション タブが開きます]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Application_Tab).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open application tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[アプリケーション タブを開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Application_Tab).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[セッション コネクタ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006367Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Application_Tab).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This action will open an application tab for the given inputs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[このアクションにより、指定された入力のアプリケーション タブが開きます]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006369Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Application_Tab).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open application tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[アプリケーション タブを開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006369Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Form).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[既存のレコードを開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006369Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Form).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open form]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[フォームを開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006369Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Form).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006369Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Form).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[既存のレコードを開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006369Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Form).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[既存のレコードを開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006369Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Grid).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a record grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[レコード グリッドを開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006369Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Grid).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[グリッドを開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006369Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Grid).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006369Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Grid).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a record grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[レコード グリッドを開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006369Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Grid).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a record grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[レコード グリッドを開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006369Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_KB_Article).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You’ll need to enter the entity ID to open the knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[サポート情報記事を開くには、エンティティ ID を入力する必要があります]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_KB_Article).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[サポート情報記事を開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_KB_Article).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_KB_Article).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[サポート情報記事を開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_KB_Article).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[サポート情報記事を開く]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PageType).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application page type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[アプリケーションのページの種類]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PageType).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Page type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ページの種類]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PartyListName).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email recipients]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[電子メール受信者]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PartyListName).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email recipients]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[電子メール受信者]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PrimaryNameAttributeValue).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Primary name of the entity to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[開くエンティティのプライマリ名]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PrimaryNameAttributeValue).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity primary name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[エンティティ プライマリ名]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ProductivityAutomation).msdyn_categorylabel.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[定義済みのオートメーション アクション]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ProductivityAutomation).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate commonly used client-side tasks]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[よく使用されるクライアント側のタスクを自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006364Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ProductivityAutomation).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity Automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006364Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ProductivityAutomation).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity Automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006364Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_RecordTitle).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This is the title of the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[これはレコードのタイトルです]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006364Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_RecordTitle).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record title]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[レコードのタイトル]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006364Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Refresh).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[タブを更新する]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006364Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Refresh).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[タブを更新する]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006364Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Refresh).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[セッション コネクタ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006364Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Refresh).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[タブを更新する]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006364Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Refresh).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[タブを更新する]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006364Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Resolution).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolution reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[解決の理由]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006379Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Resolution).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[解決]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006379Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Resolve_Case).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action to resolve case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[サポート案件を解決するアクション]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006379Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Resolve_Case).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolve Case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[サポート案件の解決]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006379Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Resolve_Case).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006379Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Resolve_Case).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolve Case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[サポート案件の解決]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006379Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Resolve_Case).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action to resolve case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[サポート案件を解決するアクション]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006379Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Save).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[レコードを保存]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006379Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Save).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[保存]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006379Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Save).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006379Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Save).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[レコードを保存]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006379Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Save).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[レコードを保存]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006379Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_SearchString).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The phrase to be searched for&amp;amp;quot;]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[&amp;amp;quot; を検索する語句]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_SearchString).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[検索文字列]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_by_relevance).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[語句に基づいて関連性検索を実行]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_by_relevance).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search by relevance]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[関連性で検索]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_by_relevance).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_by_relevance).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[語句に基づいて関連性検索を実行]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_by_relevance).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[語句に基づいて関連性検索を実行]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_knowledge_base).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[入力した語句でサポート情報を検索]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_knowledge_base).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[サポート情報記事を検索]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_knowledge_base).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_knowledge_base).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[入力した語句でサポート情報を検索]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_knowledge_base).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[入力した語句でサポート情報を検索]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006368Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_SessionConnector).msdyn_categorylabel.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[定義済みのオートメーション アクション]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006371Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_SessionConnector).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate commonly used session actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[よく使用するセッション操作を自動化する]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006371Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_SessionConnector).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[セッション コネクタ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006371Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_SessionConnector).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[セッション コネクタ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006371Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Start).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[マクロの実行を開始]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006371Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Start).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[開始]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006371Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Start).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006371Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Start).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[マクロの実行を開始]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006371Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Start).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[マクロの実行を開始]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006371Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_TabId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[ID of the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[タブの ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006371Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_TabId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Tab ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[タブ ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006371Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_TemplateId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[ID of the email template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[電子メール テンプレートの ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006371Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_TemplateId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Template ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[テンプレート ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_UpdateData).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A JSON string representing the attributes and values to be updated]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[更新する属性と値を表す JSON 文字列]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_UpdateData).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[JSON string of key-value pairs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[キーと値のペアの JSON 文字列]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Update_Record).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[既存のレコードを更新]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Update_Record).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[レコードの更新]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Update_Record).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Update_Record).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[既存のレコードを更新]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Update_Record).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[既存のレコードを更新]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ViewId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The ID of the view to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[開くビューの ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ViewId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ビュー ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ViewType).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The type of view]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ビューの種類]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ViewType).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ビューの種類]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_update_form_attributes).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This macro will autofill form fields based on the information you provide]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[このマクロは、入力した情報に基づいてフォーム フィールドに自動入力します]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_update_form_attributes).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Autofill form fields]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[フォーム フィールドの自動入力]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_update_form_attributes).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[生産性自動化]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_update_form_attributes).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This macro will autofill form fields based on the information you provide]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[このマクロは、入力した情報に基づいてフォーム フィールドに自動入力します]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_update_form_attributes).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Autofill form fields]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[フォーム フィールドの自動入力]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006365Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

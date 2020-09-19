@@ -64,11 +64,6 @@ REM ----------------------------------------------------------------------
 
 set inetroot=%~dp0
 set inetroot=%inetroot:\Localize\=%
-if NOT DEFINED PKG_JSON (
-    pushd %inetroot% 
-    call init.cmd
-    popd
-)
 set PKG_LSBUILD=%inetroot%\packages\LSBuild.Corext.6.12.4929.5
 @echo off
 
@@ -92,10 +87,14 @@ call :Get_CharCount %inetroot%
 setlocal ENABLEDELAYEDEXPANSION
 for /f "usebackq  eol=! tokens=1,2 delims=," %%i in (%~dp0xRM_filelist.txt) do (
     set xRM_TRG=%%i
-    if /i "%%~xi"==".json" (
-        set xRM_SRC=!xRM_TRG:json=xml!
-        if exist "%xRM_SRCPATH%\!xRM_TRG!" del "%xRM_SRCPATH%\!xRM_TRG!" /f /q
-        call powershell -noprofile %~dp0DataXml2json.ps1 -mode generate -sourceDataxmlPath %xRM_SRCPATH%\!xRM_SRC! -referenceFilePath %~dp0%%~ni_rules.xml -jsonFilePath %xRM_SRCPATH%\!xRM_TRG!
+    REM if path includes 'CmtDataFiles\data_1033' and .json, call DataXml2json.ps1 to generate data json from data xml
+    if not "!xRM_TRG:CmtDataFiles\data_1033=!"=="!xRM_TRG!" (
+        if /i "%%~xi"==".json" (
+            set xRM_SRC=!xRM_TRG:json=xml!
+            REM delete data json file generated in previous run
+            if exist "%xRM_SRCPATH%\!xRM_TRG!" del "%xRM_SRCPATH%\!xRM_TRG!" /f /q
+            call powershell -noprofile %~dp0DataXml2json.ps1 -mode generate -sourceDataxmlPath %xRM_SRCPATH%\!xRM_SRC! -referenceFilePath %~dp0%%~ni_rules.xml -jsonFilePath %xRM_SRCPATH%\!xRM_TRG!
+        )
     )
     call :Get_RelativePath "%xRM_SRCPATH%\%%i" %xRM_charcount% "%%j"
 )
@@ -207,7 +206,8 @@ if Exist "%xRM_TMPPATH%\target.txt" (
             REM Just need to copy the source file to Master folder once so check if the source file exists in Master folder
             if not exist %xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\!xRM_FILE! (
                 echo "Copy the source file (%%~do%%~po!xRM_FILE!) to Master folder (%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!)"
-                if /i "%%~xo"==".json" (
+                REM if path includes 'CmtDataFiles\data_1033', use '/MOV' to delete data json file after copying since no need to check it in to core team repo
+                if not "!xRM_SOURCE:CmtDataFiles\data_1033=!"=="!xRM_SOURCE!" (
                     call robocopy "%%~do%%~po\" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\" !xRM_FILE! /MOV
                 ) else (
                     call robocopy "%%~do%%~po\" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\" !xRM_FILE!
@@ -217,25 +217,47 @@ if Exist "%xRM_TMPPATH%\target.txt" (
             REM Set LSBuild Parser and Target file name
             REM Default to RESX Parser
             set xRM_PARSER=211
+            if /i "%%~xo"==".json" ( set xRM_PARSER=306 )
 
-            if /i "%%~xo"==".json" (
-                set xRM_PARSER=306
+            if not "!xRM_PATH:CmtDataFiles\data_1033=!"=="!xRM_PATH!" (
+                REM from: \solutions\ProductivityMacros\PVSPackage\ProductivityMacros\CmtDataFiles\data_1033\
+                REM to:   \solutions\ProductivityMacros\PVSPackage\ProductivityMacros\CmtDataFiles\data_1031\
                 set xRM_PATH=!xRM_PATH:1033=%xRM_LCID%!
+
+                REM from: "D:\Latest\CS\CRM.Omnichannel.ProductivityTools\solutions\ProductivityMacros\PVSPackage\ProductivityMacros\CmtDataFiles\data_1033\data.json"
+                REM to:   "D:\Latest\CS\CRM.Omnichannel.ProductivityTools\solutions\ProductivityMacros\PVSPackage\ProductivityMacros\CmtDataFiles\data_1031\data.json"
                 set xRM_TARGET=!xRM_TARGET:1033=%xRM_LCID%!
+
+                REM from: "D:\Latest\CS\CRM.Omnichannel.ProductivityTools\solutions\ProductivityMacros\PVSPackage\ProductivityMacros\CmtDataFiles\data_1031\data.json"
+                REM to:   "D:\Latest\CS\CRM.Omnichannel.ProductivityTools\solutions\ProductivityMacros\PVSPackage\ProductivityMacros\CmtDataFiles\data_1031\data.xml"
                 set xRM_TARGET=!xRM_TARGET:json=xml!
+
+                REM from: data.json
+                REM to:   data.xml
                 set xRM_TARGETFILE=!xRM_FILE:json=xml!
-            )
-            if not "!xRM_FILE:1033=!" == "!xRM_FILE!" (
-                set xRM_TARGETFILE=!xRM_FILE:1033=%xRM_LCID%!
-                set xRM_TARGET=!xRM_TARGET:1033=%xRM_LCID%!
             ) else (
-                if not "!xRM_FILE:en-US=!" == "!xRM_FILE!" (
-                    set xRM_TARGETFILE=!xRM_FILE:en-US=%xRM_CULTURE_NAME%!
-                    set xRM_PATH=!xRM_PATH:en-US=%xRM_CULTURE_NAME%!
-                    set xRM_TARGET=!xRM_TARGET:en-US=%xRM_CULTURE_NAME%!
+                if not "!xRM_FILE:1033=!" == "!xRM_FILE!" (
+                    REM from: OCTagsControl.1033.resx
+                    REM to:   OCTagsControl.1031.resx
+                    set xRM_TARGETFILE=!xRM_FILE:1033=%xRM_LCID%!
+
+                    REM from: "D:\Latest\CS\CRM.Omnichannel.ProductivityTools\solutions\OmnichannelBase\Client\Controls\OCTagsControl\strings\OCTagsControl.1033.resx"
+                    REM to:   "D:\Latest\CS\CRM.Omnichannel.ProductivityTools\solutions\OmnichannelBase\Client\Controls\OCTagsControl\strings\OCTagsControl.1031.resx"
+                    set xRM_TARGET=!xRM_TARGET:1033=%xRM_LCID%!
                 ) else (
-                    if /i "!xRM_PATH:CmtDataFiles\data_=!" == "!xRM_PATH!" (
-                        REM 'CmtDataFiles\data_[lcid]\data.xml' file name doesn't change so only if path doesn't contain 'CmtDataFiles\data_',
+                    if not "!xRM_FILE:en-US=!" == "!xRM_FILE!" (
+                        REM from: resources.en-US.resx
+                        REM to:   resources.de-DE.resx
+                        set xRM_TARGETFILE=!xRM_FILE:en-US=%xRM_CULTURE_NAME%!
+
+                        REM from: \solutions\AgentGuidance\Solution\Resources\en-US\
+                        REM to:   \solutions\AgentGuidance\Solution\Resources\de-DE\
+                        set xRM_PATH=!xRM_PATH:en-US=%xRM_CULTURE_NAME%!
+
+                        REM from: "D:\Latest\CS\CRM.Omnichannel.ProductivityTools\solutions\AgentGuidance\Solution\Resources\en-us\resources.en-US.resx"
+                        REM to:   "D:\Latest\CS\CRM.Omnichannel.ProductivityTools\solutions\AgentGuidance\Solution\Resources\de-DE\resources.de-DE.resx"
+                        set xRM_TARGET=!xRM_TARGET:en-US=%xRM_CULTURE_NAME%!
+                    ) else (
                         REM Add [ll-cc] in the filename as default behavior
                         REM  note: %%~no (filename only), %%~xo (file extention only) and %%~dpo (target path without filename & file extention)
                         set FILE_NAME=%%~no
@@ -263,10 +285,14 @@ if Exist "%xRM_TMPPATH%\target.txt" (
             if NOT DEFINED xRM_EXTRACT (
                 echo generate %xRM_PL_FULL% /novalidate /ol "%xRM_TMPPATH%\%xRM_LCID%\!xRM_COMPNAME!\LCL\target\!xRM_TARGETFILE!.lcl" /d %xRM_LCID% /s "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\LSS\lss.lss" /o "%xRM_TMPPATH%\%xRM_LCID%\!xRM_PATH!\!xRM_FILE!" /t "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\!xRM_FILE!">>%xRM_TMPPATH%\lsbuild.response
                 if NOT EXIST %xRM_SRCPATH%!xRM_PATH! md %xRM_SRCPATH%!xRM_PATH!
-                if /i "%%~xo"==".json" (
-                    REM Generate PowerShell command to generate dataxml
-                    set xRM_SOURCE=!xRM_SOURCE:json=xml!
-                    echo call powershell -noprofile %~dp0DataXml2json.ps1 -mode importjson -sourceDataxmlPath "!xRM_SOURCE!" -referenceFilePath %~dp0%%~no_rules.xml -jsonFilePath "%xRM_TMPPATH%\%xRM_LCID%\!xRM_PATH!\!xRM_FILE!" -outputDataXmlPath !xRM_TARGET!>>%xRM_TMPPATH%\genXML.cmd
+
+                REM if path includes 'CmtDataFiles\data_1033' and .json, construct PowerShell command
+                REM to run DataXml2json.ps1 to generate data xml from data json which has translation, then append it to genXML.cmd
+                if not "!xRM_SOURCE:CmtDataFiles\data_1033=!"=="!xRM_SOURCE!" (
+                    if /i "%%~xo"==".json" (
+                        set xRM_SOURCE=!xRM_SOURCE:json=xml!
+                        echo call powershell -noprofile %~dp0DataXml2json.ps1 -mode importjson -sourceDataxmlPath "!xRM_SOURCE!" -referenceFilePath %~dp0%%~no_rules.xml -jsonFilePath "%xRM_TMPPATH%\%xRM_LCID%\!xRM_PATH!\!xRM_FILE!" -outputDataXmlPath !xRM_TARGET!>>%xRM_TMPPATH%\genXML.cmd
+                    )
                 ) else ( 
                     REM Generate copy command
                     echo call copy "%xRM_TMPPATH%\%xRM_LCID%!xRM_PATH!!xRM_FILE!" "!xRM_TARGET!" /Y>>%xRM_TMPPATH%\copytarget.cmd

@@ -149,8 +149,12 @@
     <value>Пропозиції статей бази знань і подібних інцидентів на основі ШІ.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Пропозиції статей бази знань і подібних інцидентів на основі ШІ, а також інші рекомендації.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Піктограма відомостей про інтелектуальну підтримку</value>
     <comment>Information icon</comment>
   </data>
 </root>

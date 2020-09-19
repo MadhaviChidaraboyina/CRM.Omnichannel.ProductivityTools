@@ -149,8 +149,12 @@
     <value>Suxestións de IA para artigos de Knowledge e casos semellantes.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Suxestións de IA para artigos de Knowledge, casos semellantes e outros pasos seguintes recomendados.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Icona de información de asistencia intelixente</value>
     <comment>Information icon</comment>
   </data>
 </root>

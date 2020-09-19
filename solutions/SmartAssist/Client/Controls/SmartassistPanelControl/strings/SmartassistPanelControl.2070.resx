@@ -149,8 +149,12 @@
     <value>Sugestões de IA para artigos da base de dados de conhecimento e incidentes semelhantes.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Sugestões de IA para artigos da base de dados de conhecimento, incidentes semelhantes e outros passos seguintes recomendados.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Ícone de informações do Smart Assist</value>
     <comment>Information icon</comment>
   </data>
 </root>

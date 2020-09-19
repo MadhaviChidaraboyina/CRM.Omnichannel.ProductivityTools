@@ -1,0 +1,4 @@
+{
+  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_name.label": "Configuració de l’eina de l’script de trucades",
+  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_description.label": "Doneu instruccions pas a pas per minimitzar el nombre d’errors humans i proporcionar un servei coherent."
+}

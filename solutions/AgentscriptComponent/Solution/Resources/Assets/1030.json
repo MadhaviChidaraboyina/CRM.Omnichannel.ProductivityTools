@@ -1,0 +1,4 @@
+{
+  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_name.label": "Konfiguration af værktøjet til opkaldsscript",
+  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_description.label": "Giver trinvise instruktioner som en hjælp til at minimere menneskelige fejl og yde ensartet service."
+}

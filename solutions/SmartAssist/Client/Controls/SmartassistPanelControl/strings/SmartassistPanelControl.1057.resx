@@ -149,8 +149,12 @@
     <value>Saran AI untuk artikel pengetahuan dan kasus serupa.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Saran AI untuk artikel pengetahuan dan kasus serupa serta langkah terbaik berikutnya.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Ikon informasi bantuan pintar</value>
     <comment>Information icon</comment>
   </data>
 </root>

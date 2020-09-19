@@ -149,8 +149,12 @@
     <value>Predlogi umetne inteligence za članke zbirke znanja in podobne primere.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Predlogi umetne inteligence za članke zbirke znanja, podobne primere in druge najboljše naslednje korake.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Ikona za informacije o pametni pomoči</value>
     <comment>Information icon</comment>
   </data>
 </root>

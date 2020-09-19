@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="1033.json" PsrId="306" FileType="1" SrcCul="en-US" TgtCul="fi-FI" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";String Table" ItemType="0" PsrId="306" Leaf="false">
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="306" Leaf="false">
+      <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity record ID to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Avattavan entiteettitietueen tunnus]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006341Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity record ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Entiteettitietueen tunnus]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006341Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityName).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Logical name of the entity to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Avattavan entiteetin looginen nimi]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006341Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityName).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity logical name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Entiteetin looginen nimi]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006341Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_FlowConnector).msdyn_categorylabel.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Esimääritetyt automaatiotoiminnot]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006341Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_FlowConnector).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate flow trigger actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Automatisoi työnkulun käynnistintoiminnot]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006341Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_FlowConnector).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Flow Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Työnkulun yhdistin]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006341Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_FlowConnector).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Flow Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Työnkulun yhdistin]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006341Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Link_record_to_conversation).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Linkitä tietue keskusteluun]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006341Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Link_record_to_conversation).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Linkitä tietue keskusteluun]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006341Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Link_record_to_conversation).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Monikanava-yhdistin]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.000634Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Link_record_to_conversation).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Linkitä tietue keskusteluun]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.000634Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Link_record_to_conversation).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Linkitä tietue keskusteluun]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.000634Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_List_Flows).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[List Instant CDS flows and run the selected one at runtime]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Luetteloi välittömät CDS-työnkulut ja suorita valittu työnkulku suorituksen aikana]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.000634Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_List_Flows).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[List_Flows]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Luetteloi työnkulut]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.000634Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_List_Flows).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Flow Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Työnkulun yhdistin]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.000634Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_List_Flows).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Run Flow]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Suorita työnkulku]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.000634Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_List_Flows).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Run Flow]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Suorita työnkulku]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.000634Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_OmnichannelConnector).msdyn_categorylabel.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Esimääritetyt automaatiotoiminnot]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.000634Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_OmnichannelConnector).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate commonly used Omnichannel actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Automatisoi usein käytetyt Monikanava-toiminnot]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_OmnichannelConnector).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Monikanava-yhdistin]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_OmnichannelConnector).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Monikanava-yhdistin]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PrimaryNameAttributeValue).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Primary name of the entity to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Avattavan entiteetin ensisijainen nimi]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PrimaryNameAttributeValue).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity primary name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Entiteetin ensisijainen nimi]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Send_KB).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This will send a knowledgebase article link to the chat]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tämä lähettää tietoartikkelin linkin keskusteluun]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Send_KB).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send KB article in chat]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lähetä tietoartikkeli keskusteluun]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Send_KB).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Monikanava-yhdistin]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Send_KB).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This will send a knowledgebase article link to the chat]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tämä lähettää tietoartikkelin linkin keskusteluun]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Send_KB).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send KB article in chat]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lähetä tietoartikkeli keskusteluun]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Unlink_record_from_conversation).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Poista tietueen linkitys keskustelusta]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Unlink_record_from_conversation).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Poista tietueen linkitys keskustelusta]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006375Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Unlink_record_from_conversation).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Monikanava-yhdistin]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006352Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Unlink_record_from_conversation).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Poista tietueen linkitys keskustelusta]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006352Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Unlink_record_from_conversation).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Poista tietueen linkitys keskustelusta]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T03:36:51.0006352Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

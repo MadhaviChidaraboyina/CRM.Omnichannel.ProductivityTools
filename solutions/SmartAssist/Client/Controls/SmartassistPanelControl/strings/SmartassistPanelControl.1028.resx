@@ -149,8 +149,12 @@
     <value>提供知識文章和類似案例的 AI 建議。</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>提供知識文章、類似案例及其他最佳後續步驟的 AI 建議。</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>智慧小幫手資訊圖示</value>
     <comment>Information icon</comment>
   </data>
 </root>

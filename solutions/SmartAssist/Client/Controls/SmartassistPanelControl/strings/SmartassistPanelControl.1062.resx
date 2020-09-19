@@ -149,8 +149,12 @@
     <value>MI ieteikumi zināšanu bāzes rakstiem un līdzīgiem gadījumiem.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>MI ieteikumi zināšanu bāzes rakstiem, līdzīgiem gadījumiem un citām noderīgām darbībām.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Viedās palīdzības informācijas ikona</value>
     <comment>Information icon</comment>
   </data>
 </root>

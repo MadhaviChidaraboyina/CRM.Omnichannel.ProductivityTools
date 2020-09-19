@@ -149,8 +149,12 @@
     <value>Suggerimenti di intelligenza artificiale per articoli della Knowledge Base e casi simili.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Suggerimenti di intelligenza artificiale per articoli della Knowledge Base, casi simili e altri migliori passaggi successivi.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Icona informazioni Smart Assist</value>
     <comment>Information icon</comment>
   </data>
 </root>

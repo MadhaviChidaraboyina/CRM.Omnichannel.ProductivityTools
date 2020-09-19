@@ -149,8 +149,12 @@
     <value>Предложения статей базы знаний и подобных обращений от ИИ.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Предложения статей базы знаний и подобных обращений от ИИ, а также другие рекомендации.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Значок сведений интеллектуальной помощи</value>
     <comment>Information icon</comment>
   </data>
 </root>

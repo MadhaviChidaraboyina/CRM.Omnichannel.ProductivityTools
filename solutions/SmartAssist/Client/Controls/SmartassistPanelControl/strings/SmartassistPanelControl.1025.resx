@@ -149,8 +149,12 @@
     <value>اقتراحات الذكاء الاصطناعي (AI) للمقالات المعرفية والحالات المماثلة.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>اقتراحات الذكاء الاصطناعي (AI) للمقالات المعرفية والحالات المماثلة وأفضل الخطوات الأخرى التالية.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>أيقونة معلومات المساعدة الذكية</value>
     <comment>Information icon</comment>
   </data>
 </root>

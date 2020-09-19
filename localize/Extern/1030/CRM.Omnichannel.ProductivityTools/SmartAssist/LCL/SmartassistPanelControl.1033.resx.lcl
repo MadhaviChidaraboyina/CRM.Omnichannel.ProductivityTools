@@ -89,7 +89,7 @@
           <Str Name="Custom3" Val="WO35098_20200908" />
         </Props>
       </Item>
-      <Item ItemId=";SmartAssistInfoIcon" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+      <Item ItemId=";SmartAssistInformationIcon" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Smart assist information icon]]></Val>
           <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
@@ -97,12 +97,12 @@
           </Tgt>
         </Str>
         <Disp Icon="Str" />
-        <Modified By="v-rondai" DateTime="2020-09-11T04:30:18.0001129Z" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0009077Z" />
         <Cmts>
           <Cmt Name="Dev"><![CDATA[Information icon]]></Cmt>
         </Cmts>
         <Props>
-          <Str Name="Custom3" Val="WO35098_20200908" />
+          <Str Name="Custom3" Val="WO35436_20200914" />
         </Props>
       </Item>
       <Item ItemId=";SuccessMessage" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
@@ -119,6 +119,22 @@
         </Cmts>
         <Props>
           <Str Name="Custom3" Val="WO35098_20200908" />
+        </Props>
+      </Item>
+      <Item ItemId=";SuggestionControlLWITitleIconText" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[AI suggestions for knowledge articles, similar cases and other next best steps.]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[AI-forslag til vidensartikler, lignende sager og andre næste bedste trin.]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0009077Z" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title Icon text]]></Cmt>
+        </Cmts>
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
         </Props>
       </Item>
       <Item ItemId=";SuggestionControlTitle" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">

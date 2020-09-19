@@ -149,8 +149,12 @@
     <value>Adimen artifizialeko iradokizunak ezagutza artikuluetarako eta antzeko kasuetarako.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Adimen artifizialeko iradokizunak; adibidez, ezagutza-artikuluak, antzeko kasuak eta hurrengo urrats egokienak.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Laguntza adimendunaren informazio-ikonoa</value>
     <comment>Information icon</comment>
   </data>
 </root>

@@ -149,8 +149,12 @@
     <value>サポート情報や類似したサポート案件に関する AI サジェスチョン。</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>サポート情報、類似したサポート案件、およびその他の次の最適なステップに関する AI サジェスチョン。</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>スマート アシスト情報アイコン</value>
     <comment>Information icon</comment>
   </data>
 </root>

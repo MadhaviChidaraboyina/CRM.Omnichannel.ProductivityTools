@@ -149,8 +149,12 @@
     <value>Dirbtinio intelekto pasiūlymai informaciniams straipsniams ir panašiems atvejams.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>DI pasiūlymai informaciniams straipsniams, panašiems atvejams ir kitiems artimiausiems geriausiems veiksmams.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Išmaniojo pagelbiklio informacijos piktograma</value>
     <comment>Information icon</comment>
   </data>
 </root>

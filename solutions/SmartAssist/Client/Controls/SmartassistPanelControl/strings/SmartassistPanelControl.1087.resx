@@ -149,8 +149,12 @@
     <value>Білім туралы мақалаларға және осыған ұқсас жағдайларға арналған AI ұсыныстары.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Білім туралы мақалаларға, осыған ұқсас жағдайларға және басқа келесі ең жақсы қадамдарға арналған AI ұсыныстары.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Смарт көмекші туралы ақпарат белгішесі</value>
     <comment>Information icon</comment>
   </data>
 </root>

@@ -149,8 +149,12 @@
     <value>Tudásbáziscikkekre és hasonló esetekre vonatkozó, AI-alapú javaslatok.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Tudásbáziscikkekre, hasonló esetekre és a következő lépésekre vonatkozó, AI-alapú javaslatok.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Intelligens segéd információi ikon</value>
     <comment>Information icon</comment>
   </data>
 </root>

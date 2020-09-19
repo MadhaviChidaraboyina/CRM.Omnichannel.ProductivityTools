@@ -1,0 +1,4 @@
+{
+  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_name.label": "Configuration de l’outil de script d’appel",
+  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_description.label": "Fournissez des instructions pas à pas pour réduire les erreurs humaines et fournir un service cohérent."
+}

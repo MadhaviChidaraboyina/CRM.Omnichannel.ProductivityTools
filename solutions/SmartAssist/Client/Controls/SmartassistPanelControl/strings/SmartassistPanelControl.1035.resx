@@ -149,8 +149,12 @@
     <value>Tekoälyn tuottamat ehdotukset tietoartikkeleista ja samankaltaisista palvelupyynnöistä.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Tekoälyn tuottamia ehdotuksia tietoartikkeleista, samankaltaisista palvelupyynnöistä ja muista seuraavista parhaista toimista.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Älykäs avustaja -tietokuvake</value>
     <comment>Information icon</comment>
   </data>
 </root>

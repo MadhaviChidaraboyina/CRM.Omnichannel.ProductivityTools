@@ -149,8 +149,12 @@
     <value>Sugestii de inteligență artificială pentru articole din baza de cunoștințe și cazuri similare.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Sugestii de inteligență artificială pentru articole din baza de cunoștințe, cazuri similare și alți pași consecutivi optimi.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Pictogramă informație asistență inteligentă</value>
     <comment>Information icon</comment>
   </data>
 </root>

@@ -149,8 +149,12 @@
     <value>AI teadmusartiklite ja sarnaste teenindusjuhtumite soovitused.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Teadmusartiklite, sarnaste teenindusjuhtumite ja parimate järgmiste sammude tehisintellektipõhised soovitused.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Nutiabilise teabeikoon</value>
     <comment>Information icon</comment>
   </data>
 </root>

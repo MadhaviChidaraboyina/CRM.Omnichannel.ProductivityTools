@@ -149,8 +149,12 @@
     <value>הצעות AI למאמרי ידע ולאירועים דומים.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>הצעות AI למאמרי ידע, לאירועים דומים ולשלבים המומלצים הבאים.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>סמל מידע של כלי עזר חכמים‬</value>
     <comment>Information icon</comment>
   </data>
 </root>

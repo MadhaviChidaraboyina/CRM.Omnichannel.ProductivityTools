@@ -149,8 +149,12 @@
     <value>참조 자료 문서 및 유사한 서비스 케이스에 대한 AI 추천 단어입니다.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>기술 항목, 유사한 서비스 케이스 및 다른 차상 단계에 대한 AI 제안입니다.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>스마트 지원 정보 아이콘</value>
     <comment>Information icon</comment>
   </data>
 </root>

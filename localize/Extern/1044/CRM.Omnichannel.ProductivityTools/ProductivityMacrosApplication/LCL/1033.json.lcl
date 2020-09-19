@@ -1,0 +1,1808 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="1033.json" PsrId="306" FileType="1" SrcCul="en-US" TgtCul="nb-NO" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";String Table" ItemType="0" PsrId="306" Leaf="false">
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="306" Leaf="false">
+      <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";(msdyn_uniquename=msdyn_ApplicationTemplateId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application template ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID for programmal]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ApplicationTemplateId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application Template ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID for programmal]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_BillableTime).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Time that is billable]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Tid som er fakturerbar]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_BillableTime).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Billable time]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fakturerbar tid]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_Input_Record).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This will clone the record given as macro input and open it in new tab as new unsaved record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Dette kopierer oppføringen som er angitt som makroinndata, og åpne den i en ny fane som ny ulagret oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_Input_Record).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone input record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kopier inndataoppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_Input_Record).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_Input_Record).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This will clone the record given as macro input and open it in new tab as new unsaved record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Dette kopierer oppføringen som er angitt som makroinndata, og åpne den i en ny fane som ny ulagret oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_Input_Record).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone input record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kopier inndataoppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_focused_Record).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This will clone the record in the curent tab and open it in a new tab as new unsaved record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Dette kopierer oppføringen i den gjeldende fanen og åpne den i en ny fane som ny ulagret oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_focused_Record).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone current record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kopier gjeldende oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006028Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_focused_Record).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006028Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_focused_Record).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This will clone the record in the curent tab and open it in a new tab as new unsaved record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Dette kopierer oppføringen i den gjeldende fanen og åpne den i en ny fane som ny ulagret oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006028Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Clone_focused_Record).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Clone current record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Kopier gjeldende oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006028Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Create_New).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a new form to create a record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne et nytt skjema for å opprette en oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006028Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Create_New).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Create New]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Opprett ny]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006028Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Create_New).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006028Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Create_New).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a new form to create a record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne et nytt skjema for å opprette en oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006028Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Create_New).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a new form to create a record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne et nytt skjema for å opprette en oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006028Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Custom_Array).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Array of custom name-value pairs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Matrise med egendefinerte navn/verdi-par]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006028Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Custom_Array).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Attribute]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Attributt]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006028Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Custom_Object).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sample JSON object]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Eksempel på JSON-objekt]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006028Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Custom_Object).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Sample custom JSON Object]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Eksempel på egendefinert JSON-objekt]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006028Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_DashboardId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The ID of the dashboard to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID-en for instrumentbordet som skal åpnes]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006006Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_DashboardId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Dashboard ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID for instrumentbord]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006006Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Draft_Email).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne et e-postskjema med forhåndsdefinert mal]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006006Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Draft_Email).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[E-postadresse]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006006Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Draft_Email).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006006Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Draft_Email).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne et e-postskjema med forhåndsdefinert mal]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006006Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Draft_Email).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an email form with predefined template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne et e-postskjema med forhåndsdefinert mal]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006006Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity record ID to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID for enhetsoppføring som skal åpnes]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006006Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity record ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID for enhetsoppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006006Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityName).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Logical name of the entity to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Logisk navn for enheten som skal åpnes]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006006Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityName).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity logical name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Logisk navn for enhet]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006006Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Focus_tab).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fokuser på fanen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006006Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Focus_tab).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fokuser på fanen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Focus_tab).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Øktkobling]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Focus_tab).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fokuser på fanen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Focus_tab).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Focus on the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fokuser på fanen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_FormId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Form ID to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skjema-ID som skal åpnes]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_FormId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity form ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID for enhetsskjema]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Get_current_page).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Hent den gjeldende fanen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Get_current_page).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Hent den gjeldende fanen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Get_current_page).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Øktkobling]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Get_current_page).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Hent den gjeldende fanen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Get_current_page).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Get the current tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Hent den gjeldende fanen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_IncidentId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Case ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Saks-ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_IncidentId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Incident ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Hendelses-ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Application_Tab).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This will open an application tab for the given inputs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Dette åpner en programfane for de angitte inndataene]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Application_Tab).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open application tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne programfane]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Application_Tab).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Øktkobling]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Application_Tab).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This action will open an application tab for the given inputs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Denne handlingen åpner en programfane for de angitte inndataene]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Application_Tab).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open application tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne programfane]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Form).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne en eksisterende oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Form).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open form]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne skjema]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Form).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Form).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne en eksisterende oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Form).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne en eksisterende oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Grid).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a record grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne et oppføringsrutenett]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Grid).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne rutenett]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Grid).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Grid).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a record grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne et oppføringsrutenett]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_Grid).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open a record grid]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne et oppføringsrutenett]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_KB_Article).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[You’ll need to enter the entity ID to open the knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Du må angi enhets-ID-en for å åpne kunnskapsbaseartikkelen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_KB_Article).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne kunnskapsbaseartikkel]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_KB_Article).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_KB_Article).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne kunnskapsbaseartikkel]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Open_KB_Article).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Open knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Åpne kunnskapsbaseartikkel]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PageType).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Application page type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Programsidetype]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PageType).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Page type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Sidetype]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PartyListName).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email recipients]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[E-postmottakere]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PartyListName).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Email recipients]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[E-postmottakere]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PrimaryNameAttributeValue).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Primary name of the entity to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Primært navn for enheten som skal åpnes]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PrimaryNameAttributeValue).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity primary name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Navn på primær enhet]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ProductivityAutomation).msdyn_categorylabel.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Forhåndsdefinerte automatiseringshandlinger]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ProductivityAutomation).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate commonly used client-side tasks]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Automatiser mest brukte oppgaver på klientsiden]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ProductivityAutomation).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity Automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ProductivityAutomation).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity Automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_RecordTitle).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This is the title of the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Dette er tittelen på oppføringen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_RecordTitle).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Record title]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Oppføringstittel]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Refresh).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Oppdater fanen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Refresh).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Oppdater fanen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Refresh).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Øktkobling]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Refresh).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Oppdater fanen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Refresh).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Refresh the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Oppdater fanen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Resolution).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolution reason]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Avslutningsårsak]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Resolution).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Avslutning]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Resolve_Case).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action to resolve case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Handling for å avslutte sak]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Resolve_Case).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolve Case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Avslutt sak]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Resolve_Case).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Resolve_Case).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Resolve Case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Avslutt sak]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Resolve_Case).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Action to resolve case]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Handling for å avslutte sak]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Save).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lagre oppføringen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Save).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lagre]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Save).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Save).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lagre oppføringen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Save).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Save the record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Lagre oppføringen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_SearchString).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The phrase to be searched for&amp;amp;quot;]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Uttrykket det skal søkes etter&amp;amp;quot;]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_SearchString).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search string]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Søkestreng]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_by_relevance).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Utfør et relevanssøk basert på uttrykket]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_by_relevance).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search by relevance]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Søk etter relevans]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_by_relevance).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_by_relevance).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Utfør et relevanssøk basert på uttrykket]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_by_relevance).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Do a relevance search based on the phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Utfør et relevanssøk basert på uttrykket]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_knowledge_base).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Søk i kunnskapsbasen etter det utfylte uttrykket]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_knowledge_base).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search knowledge base article]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Søk i kunnskapsbaseartikkel]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_knowledge_base).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006003Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_knowledge_base).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Søk i kunnskapsbasen etter det utfylte uttrykket]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Search_knowledge_base).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Search the knowledge base for the populated phrase]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Søk i kunnskapsbasen etter det utfylte uttrykket]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_SessionConnector).msdyn_categorylabel.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Forhåndsdefinerte automatiseringshandlinger]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_SessionConnector).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate commonly used session actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Automatiser mest brukte økthandlinger]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_SessionConnector).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Øktkobling]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_SessionConnector).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Session Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Øktkobling]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Start).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Start kjøring av makro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Start).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Start]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Start).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Start).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Start kjøring av makro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Start).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Start macro execution]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Start kjøring av makro]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_TabId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[ID of the tab]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID for fanen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_TabId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Tab ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Fane-ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_TemplateId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[ID of the email template]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID for e-postmalen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_TemplateId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Template ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Mal-ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_UpdateData).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[A JSON string representing the attributes and values to be updated]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[En JSON-streng som representerer attributtene og verdiene som skal oppdateres]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_UpdateData).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[JSON string of key-value pairs]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[JSON-streng for nøkkelverdipar]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Update_Record).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Oppdater en eksisterende oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Update_Record).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Oppdater oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Update_Record).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Update_Record).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Oppdater en eksisterende oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Update_Record).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Update an existing record]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Oppdater en eksisterende oppføring]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ViewId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The ID of the view to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ID-en for visningen som skal åpnes]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ViewId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Visnings-ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ViewType).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[The type of view]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Visningstypen]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_ViewType).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[View type]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Visningstype]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_update_form_attributes).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This macro will autofill form fields based on the information you provide]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Denne makroen fyller ut skjemafelt automatisk basert på informasjonen du angir]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_update_form_attributes).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Autofill form fields]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skjemafelt for Autoutfyll]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_update_form_attributes).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Productivity automation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Produktivitetsautomatisering]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_update_form_attributes).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This macro will autofill form fields based on the information you provide]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Denne makroen fyller ut skjemafelt automatisk basert på informasjonen du angir]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006002Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_update_form_attributes).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Autofill form fields]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[Skjemafelt for Autoutfyll]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0006341Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

@@ -149,8 +149,12 @@
     <value>AI-forslag til kunnskapsartikler og lignende saker.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>AI-forslag til kunnskapsartikler, lignende saker og andre beste fremgangsmåter.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Ikon for smartassistentinformasjon</value>
     <comment>Information icon</comment>
   </data>
 </root>

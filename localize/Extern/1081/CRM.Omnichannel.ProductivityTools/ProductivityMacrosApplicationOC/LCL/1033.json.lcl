@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LCX SchemaVersion="6.0" Name="1033.json" PsrId="306" FileType="1" SrcCul="en-US" TgtCul="hi-IN" xmlns="http://schemas.microsoft.com/locstudio/2006/6/lcx">
+  <OwnedComments>
+    <Cmt Name="Dev" />
+    <Cmt Name="LcxAdmin" />
+    <Cmt Name="Rccx" />
+  </OwnedComments>
+  <Item ItemId=";String Table" ItemType="0" PsrId="306" Leaf="false">
+    <Disp Icon="Expand" Expand="true" Disp="true" LocTbl="false" />
+    <Item ItemId=";Strings" ItemType="0" PsrId="306" Leaf="false">
+      <Disp Icon="Str" Disp="true" LocTbl="false" />
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityId).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity record ID to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[खोली जाने वाली निकाय रिकॉर्ड ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005541Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityId).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity record ID]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[निकाय रिकॉर्ड ID]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005541Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityName).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Logical name of the entity to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[खोले जाने वाले निकाय का तार्किक नाम]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005544Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_EntityName).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity logical name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[निकाय का तार्किक नाम]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005544Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_FlowConnector).msdyn_categorylabel.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[पूर्वनिर्धारित स्वचालन क्रियाएँ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005544Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_FlowConnector).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate flow trigger actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[स्वचालित प्रवाह ट्रिगर क्रियाएँ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005544Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_FlowConnector).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Flow Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[प्रवाह कनेक्टर]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005544Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_FlowConnector).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Flow Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[प्रवाह कनेक्टर]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005548Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Link_record_to_conversation).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[वार्तालाप से रिकॉर्ड को लिंक करें]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005548Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Link_record_to_conversation).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[वार्तालाप से रिकॉर्ड को लिंक करें]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005548Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Link_record_to_conversation).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ओमनीचैनल कनेक्टर]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005548Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Link_record_to_conversation).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[वार्तालाप से रिकॉर्ड को लिंक करें]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005548Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Link_record_to_conversation).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Link record to the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[वार्तालाप से रिकॉर्ड को लिंक करें]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005547Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_List_Flows).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[List Instant CDS flows and run the selected one at runtime]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[तत्काल CDS प्रवाह को सूचीबद्ध करें और चयनित को रनटाइम पर चलाएं]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005547Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_List_Flows).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[List_Flows]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[सूची_प्रवाह]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005547Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_List_Flows).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Flow Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[प्रवाह कनेक्टर]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005547Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_List_Flows).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Run Flow]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[प्रवाह चलाएँ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005547Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_List_Flows).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Run Flow]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[प्रवाह चलाएँ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005551Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_OmnichannelConnector).msdyn_categorylabel.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Predefined automation actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[पूर्वनिर्धारित स्वचालन क्रियाएँ]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005551Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_OmnichannelConnector).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Automate commonly used Omnichannel actions]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[आमतौर पर उपयोग की गईं ओमनीचैनल क्रियाओं को स्वचालित करें]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005551Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_OmnichannelConnector).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ओमनीचैनल कनेक्टर]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005551Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_OmnichannelConnector).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ओमनीचैनल कनेक्टर]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005551Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PrimaryNameAttributeValue).msdyn_description.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Primary name of the entity to be opened]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[खोल जाने वाले निकाय का प्राथमिक नाम]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.000555Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_PrimaryNameAttributeValue).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Entity primary name]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[निकाय का प्राथमिक नाम]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.000555Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Send_KB).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This will send a knowledgebase article link to the chat]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[यह चैट को एक knowledgebase आलेख का लिंक भेजेगा]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.000555Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Send_KB).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send KB article in chat]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[चैट में KB आलेख भेजें]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.000555Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Send_KB).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel Connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ओमनीचैनल कनेक्टर]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.000555Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Send_KB).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[This will send a knowledgebase article link to the chat]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[यह चैट को एक knowledgebase आलेख का लिंक भेजेगा]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005548Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Send_KB).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Send KB article in chat]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[चैट में KB आलेख भेजें]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005548Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Unlink_record_from_conversation).msdyn_actiondescription.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[वार्तालाप से रिकॉर्ड अनलिंक करें]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005548Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Unlink_record_from_conversation).msdyn_displayname.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[वार्तालाप से रिकॉर्ड अनलिंक करें]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005548Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Unlink_record_from_conversation).msdyn_subtitle.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Omnichannel connector]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[ओमनीचैनल कनेक्टर]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005548Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Unlink_record_from_conversation).msdyn_summary.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[वार्तालाप से रिकॉर्ड अनलिंक करें]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005548Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+      <Item ItemId=";(msdyn_uniquename=msdyn_Unlink_record_from_conversation).msdyn_title.label" ItemType="0" PsrId="306" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[Unlink record from the conversation]]></Val>
+          <Tgt Cat="Text" Stat="Loc" Appr="PreApproved" Orig="New" AutoAppr="N/A">
+            <Val><![CDATA[वार्तालाप से रिकॉर्ड अनलिंक करें]]></Val>
+          </Tgt>
+        </Str>
+        <Disp Icon="Str" />
+        <Modified By="v-rondai" DateTime="2020-09-17T07:50:41.0005548Z" />
+        <Props>
+          <Str Name="Custom3" Val="WO35436_20200914" />
+        </Props>
+      </Item>
+    </Item>
+  </Item>
+</LCX>

@@ -149,8 +149,12 @@
     <value>Pengesyoran AI untuk artikel pengetahuan dan kes serupa.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Cadangan AI untuk artikel pengetahuan, kes serupa dan langkah terbaik seterusnya yang lain.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Ikon maklumat bantuan pintar</value>
     <comment>Information icon</comment>
   </data>
 </root>

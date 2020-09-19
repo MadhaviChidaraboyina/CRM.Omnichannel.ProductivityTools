@@ -149,8 +149,12 @@
     <value>Предлози вештачке интелигенције за чланке о бази знања и сличне предмете.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Предлози вештачке интелигенције за чланке у бази знања, сличне предмете и друге следеће најбоље кораке.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Икона информација о паметној подршци</value>
     <comment>Information icon</comment>
   </data>
 </root>

@@ -149,8 +149,12 @@
     <value>Предложения на AI за статии от базата знания и подобни случаи.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Предложения на AI за статии от базата знания, подобни случаи и други следващи най-добри стъпки.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Икона за информация за интелигентна помощ</value>
     <comment>Information icon</comment>
   </data>
 </root>

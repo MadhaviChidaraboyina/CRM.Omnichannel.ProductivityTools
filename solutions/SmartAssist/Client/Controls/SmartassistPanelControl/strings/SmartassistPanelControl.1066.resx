@@ -149,8 +149,12 @@
     <value>Gợi ý dựa trên AI về bài viết trong cơ sở kiến thức và trường hợp tương tự.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Các đề xuất dựa trên trí tuệ nhân tạo về bài viết trong cơ sở kiến thức, trường hợp tương tự và các bước tiếp theo phù hợp nhất khác.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Biểu tượng thông tin về tính năng hỗ trợ thông minh</value>
     <comment>Information icon</comment>
   </data>
 </root>

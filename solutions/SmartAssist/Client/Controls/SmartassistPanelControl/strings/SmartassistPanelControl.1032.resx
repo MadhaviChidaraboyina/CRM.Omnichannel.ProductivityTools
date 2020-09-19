@@ -149,8 +149,12 @@
     <value>Προτάσεις AI για άρθρα γνωσιακής βάσης και παρόμοιες υποθέσεις.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Προτάσεις AI για άρθρα γνωσιακής βάσης, παρόμοιες υποθέσεις και άλλα επόμενα καλύτερα βήματα.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Εικονίδιο πληροφοριών έξυπνης βοήθειας</value>
     <comment>Information icon</comment>
   </data>
 </root>

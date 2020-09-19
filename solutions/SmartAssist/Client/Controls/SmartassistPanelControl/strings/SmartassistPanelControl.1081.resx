@@ -149,8 +149,12 @@
     <value>ज्ञान आलेख और एक समान मामलों के लिए AI सुझाव.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>नॉलेज आलेखों, समान मामलों और अन्य अगले सर्वोत्तम चरणों के लिए AI सुझाव.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>स्मार्ट सहायक सूचना आइकन</value>
     <comment>Information icon</comment>
   </data>
 </root>

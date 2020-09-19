@@ -149,8 +149,12 @@
     <value>AI-suggesties voor kennisartikelen en vergelijkbare aanvragen.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>AI-suggesties voor kennisartikelen, vergelijkbare aanvragen en andere juiste stappen.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Informatiepictogram voor Smart Assist</value>
     <comment>Information icon</comment>
   </data>
 </root>

@@ -149,8 +149,12 @@
     <value>KI-Vorschläge für Wissensartikel und ähnliche Anfragen.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>KI-Vorschläge für Wissensartikel, ähnliche Anfragen und andere bewährte Schritte.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Symbol für Smart Assist-Informationen</value>
     <comment>Information icon</comment>
   </data>
 </root>

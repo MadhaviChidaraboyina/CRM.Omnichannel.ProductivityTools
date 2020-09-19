@@ -149,8 +149,12 @@
     <value>Suggeriments d’IA per als articles de la Knowledge Base i casos semblants.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Suggeriments d’IA per als articles de la Knowledge Base, casos semblants i altres passos següents recomanats.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Icona d’informació d’assistència intel·ligent</value>
     <comment>Information icon</comment>
   </data>
 </root>

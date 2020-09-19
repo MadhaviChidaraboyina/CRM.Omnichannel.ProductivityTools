@@ -149,8 +149,12 @@
     <value>Návrhy článkov vedomostnej databázy a podobných prípadov od umelej inteligencie.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Návrhy článkov vedomostnej databázy, podobných prípadov a ďalších osvedčených krokov od umelej inteligencie.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Informačná ikona inteligentného asistenta</value>
     <comment>Information icon</comment>
   </data>
 </root>

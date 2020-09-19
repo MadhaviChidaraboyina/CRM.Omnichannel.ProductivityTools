@@ -149,8 +149,12 @@
     <value>Sugestie AI dotyczące artykułów merytorycznych i podobnych spraw.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Sugestie AI dotyczące artykułów merytorycznych, podobnych spraw i innych następnych najlepszych kroków.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Ikona informacji inteligentnej pomocy</value>
     <comment>Information icon</comment>
   </data>
 </root>

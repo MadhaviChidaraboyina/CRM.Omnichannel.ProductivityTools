@@ -149,8 +149,12 @@
     <value>Bilgi bankası makaleleri ve benzer servis talepleri için yapay zeka önerileri.</value>
     <comment>Title Icon text</comment>
   </data>
+  <data name="SuggestionControlLWITitleIconText" xml:space="preserve">
+    <value>Bilgi bankası makaleleri, benzer servis talepleri ve diğer sonraki en iyi adımlar için yapay zeka önerileri.</value>
+    <comment>Title Icon text</comment>
+  </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Smart assist information icon</value>
+    <value>Akıllı yardım bilgileri simgesi</value>
     <comment>Information icon</comment>
   </data>
 </root>

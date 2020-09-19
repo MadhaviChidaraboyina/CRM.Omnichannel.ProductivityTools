@@ -192,14 +192,6 @@
     <value>Hiermee wordt de toepassingsnaam ingesteld</value>
     <comment>'msdyn_productivitypaneconfiguration' : Description for Attribute 'msdyn_Applicationname' on Entity</comment>
   </data>
-  <data name="1:Description,msdyn_productivitypaneconfigurationmsdyn_Productivitypanemode" xml:space="preserve">
-    <value>Unique value to set the productivity pane to expanded or collpased mode</value>
-    <comment>'msdyn_productivitypaneconfiguration' : Description for Attribute 'msdyn_Productivitypanemode' on Entity</comment>
-  </data>
-  <data name="1:Description,msdyn_productivitypaneconfigurationmsdyn_Productivitypanestate" xml:space="preserve">
-    <value>Unique value to set the productivity mode to enabled or disabled mode</value>
-    <comment>'msdyn_productivitypaneconfiguration' : Description for Attribute 'msdyn_Productivitypanestate' on Entity</comment>
-  </data>
   <data name="1:Description,msdyn_productivitypaneconfigurationmsdyn_name" xml:space="preserve">
     <value>Naam van de aangepaste entiteit.</value>
     <comment>'msdyn_productivitypaneconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
@@ -256,9 +248,9 @@
     <value>Code van de tijdzone die werd gebruikt toen de record werd gemaakt.</value>
     <comment>'msdyn_productivitypaneconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
-  <data name="1:Description,Productivity pane configuration{4d182267-6a95-40e1-9c02-ae8db486af12}" xml:space="preserve">
-    <value>Een formulier voor deze entiteit.</value>
-    <comment>'Productivity pane configuration' : Description for systemform in Entity FormXml ID: '{4d182267-6a95-40e1-9c02-ae8db486af12}'</comment>
+  <data name="1:Description,Productivity pane configuration (Deprecated){4d182267-6a95-40e1-9c02-ae8db486af12}" xml:space="preserve">
+    <value>A form for this entity.</value>
+    <comment>'Productivity pane configuration (Deprecated)' : Description for systemform in Entity FormXml ID: '{4d182267-6a95-40e1-9c02-ae8db486af12}'</comment>
   </data>
   <data name="1:displayname,msdyn_productivitypaneconfigurationCreatedBy" xml:space="preserve">
     <value>Gemaakt door</value>
@@ -380,33 +372,37 @@
     <value>Inactief</value>
     <comment>'msdyn_productivitypaneconfiguration' : label for status '2' on Entity</comment>
   </data>
-  <data name="1:label,Productivity pane configuration{09e9c271-36bd-db1d-9580-a7a68aea45bc}" xml:space="preserve">
-    <value>Sectie</value>
-    <comment>'Productivity pane configuration' : label for section in Entity FormXml ID: '{09e9c271-36bd-db1d-9580-a7a68aea45bc}'</comment>
+  <data name="1:label,Productivity pane configuration (Deprecated){09e9c271-36bd-db1d-9580-a7a68aea45bc}" xml:space="preserve">
+    <value>Section</value>
+    <comment>'Productivity pane configuration (Deprecated)' : label for section in Entity FormXml ID: '{09e9c271-36bd-db1d-9580-a7a68aea45bc}'</comment>
   </data>
-  <data name="1:label,Productivity pane configuration{1d232692-b84d-3a66-920a-aa61b957a77c}" xml:space="preserve">
-    <value>Instellingen</value>
-    <comment>'Productivity pane configuration' : label for tab in Entity FormXml ID: '{1d232692-b84d-3a66-920a-aa61b957a77c}'</comment>
+  <data name="1:label,Productivity pane configuration (Deprecated){1d232692-b84d-3a66-920a-aa61b957a77c}" xml:space="preserve">
+    <value>Settings</value>
+    <comment>'Productivity pane configuration (Deprecated)' : label for tab in Entity FormXml ID: '{1d232692-b84d-3a66-920a-aa61b957a77c}'</comment>
   </data>
-  <data name="1:label,Productivity pane configuration{2001b56e-bd86-d68b-822b-83b0b06c2b74}" xml:space="preserve">
-    <value>Toepassingsnaam</value>
-    <comment>'Productivity pane configuration' : label for cell in Entity FormXml ID: '{2001b56e-bd86-d68b-822b-83b0b06c2b74}'</comment>
+  <data name="1:label,Productivity pane configuration (Deprecated){2001b56e-bd86-d68b-822b-83b0b06c2b74}" xml:space="preserve">
+    <value>Application name</value>
+    <comment>'Productivity pane configuration (Deprecated)' : label for cell in Entity FormXml ID: '{2001b56e-bd86-d68b-822b-83b0b06c2b74}'</comment>
   </data>
-  <data name="1:label,Productivity pane configuration{2a7739b1-fb2c-489c-aa09-58a8c58aee88}" xml:space="preserve">
-    <value>Naam</value>
-    <comment>'Productivity pane configuration' : label for cell in Entity FormXml ID: '{2a7739b1-fb2c-489c-aa09-58a8c58aee88}'</comment>
+  <data name="1:label,Productivity pane configuration (Deprecated){2a7739b1-fb2c-489c-aa09-58a8c58aee88}" xml:space="preserve">
+    <value>Name</value>
+    <comment>'Productivity pane configuration (Deprecated)' : label for cell in Entity FormXml ID: '{2a7739b1-fb2c-489c-aa09-58a8c58aee88}'</comment>
   </data>
-  <data name="1:label,Productivity pane configuration{30a60635-8c70-ac66-40ec-b14b9e336aab}" xml:space="preserve">
-    <value>Sectie</value>
-    <comment>'Productivity pane configuration' : label for section in Entity FormXml ID: '{30a60635-8c70-ac66-40ec-b14b9e336aab}'</comment>
+  <data name="1:label,Productivity pane configuration (Deprecated){30a60635-8c70-ac66-40ec-b14b9e336aab}" xml:space="preserve">
+    <value>Section</value>
+    <comment>'Productivity pane configuration (Deprecated)' : label for section in Entity FormXml ID: '{30a60635-8c70-ac66-40ec-b14b9e336aab}'</comment>
   </data>
-  <data name="1:label,Productivity pane configuration{5e7ac5d0-172a-89e4-e506-91ec8a282253}" xml:space="preserve">
-    <value>Sectie</value>
-    <comment>'Productivity pane configuration' : label for section in Entity FormXml ID: '{5e7ac5d0-172a-89e4-e506-91ec8a282253}'</comment>
+  <data name="1:label,Productivity pane configuration (Deprecated){518514e8-d2e2-ab26-3838-e710a0e6d747}" xml:space="preserve">
+    <value>ProductivityPaneConfigExp</value>
+    <comment>'Productivity pane configuration (Deprecated)' : label for cell in Entity FormXml ID: '{518514e8-d2e2-ab26-3838-e710a0e6d747}'</comment>
   </data>
-  <data name="1:label,Productivity pane configuration{7131592a-8239-bedc-0585-a975894a0a2e}" xml:space="preserve">
+  <data name="1:label,Productivity pane configuration (Deprecated){5e7ac5d0-172a-89e4-e506-91ec8a282253}" xml:space="preserve">
+    <value>Section</value>
+    <comment>'Productivity pane configuration (Deprecated)' : label for section in Entity FormXml ID: '{5e7ac5d0-172a-89e4-e506-91ec8a282253}'</comment>
+  </data>
+  <data name="1:label,Productivity pane configuration (Deprecated){7131592a-8239-bedc-0585-a975894a0a2e}" xml:space="preserve">
     <value />
-    <comment>'Productivity pane configuration' : label for cell in Entity FormXml ID: '{7131592a-8239-bedc-0585-a975894a0a2e}'</comment>
+    <comment>'Productivity pane configuration (Deprecated)' : label for cell in Entity FormXml ID: '{7131592a-8239-bedc-0585-a975894a0a2e}'</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_productivitypaneconfigurationentitymsdyn_productivitypaneconfiguration" xml:space="preserve">
     <value>Configuraties van productiviteitsdeelvenster</value>
@@ -416,9 +412,9 @@
     <value>Configuratie van productiviteitsdeelvenster</value>
     <comment> 'msdyn_productivitypaneconfiguration' : LocalizedName for Entity</comment>
   </data>
-  <data name="1:LocalizedName,Productivity pane configuration{4d182267-6a95-40e1-9c02-ae8db486af12}" xml:space="preserve">
-    <value>Productiviteitsdeelvenster</value>
-    <comment>'Productivity pane configuration' : LocalizedName for systemform in Entity FormXml ID: '{4d182267-6a95-40e1-9c02-ae8db486af12}'</comment>
+  <data name="1:LocalizedName,Productivity pane configuration (Deprecated){4d182267-6a95-40e1-9c02-ae8db486af12}" xml:space="preserve">
+    <value>Productivity pane</value>
+    <comment>'Productivity pane configuration (Deprecated)' : LocalizedName for systemform in Entity FormXml ID: '{4d182267-6a95-40e1-9c02-ae8db486af12}'</comment>
   </data>
   <data name="29:Description,{7753e97d-af27-ea11-a810-000d3a1026fe}" xml:space="preserve">
     <value>Klik hier om een beschrijving toe te voegen</value>

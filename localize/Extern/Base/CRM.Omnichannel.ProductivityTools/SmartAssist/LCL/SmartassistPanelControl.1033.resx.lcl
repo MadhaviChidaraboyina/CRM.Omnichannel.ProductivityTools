@@ -72,6 +72,15 @@
           <Cmt Name="Dev"><![CDATA[Success Message]]></Cmt>
         </Cmts>
       </Item>
+      <Item ItemId=";SuggestionControlLWITitleIconText" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
+        <Str Cat="Text">
+          <Val><![CDATA[AI suggestions for knowledge articles, similar cases and other next best steps.]]></Val>
+        </Str>
+        <Disp Icon="Str" />
+        <Cmts>
+          <Cmt Name="Dev"><![CDATA[Title Icon text]]></Cmt>
+        </Cmts>
+      </Item>
       <Item ItemId=";SuggestionControlTitle" ItemType="0;.resx" PsrId="211" InstFlg="true" Leaf="true">
         <Str Cat="Text">
           <Val><![CDATA[Smart assist]]></Val>
