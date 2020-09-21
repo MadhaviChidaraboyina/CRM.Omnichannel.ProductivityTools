@@ -4,7 +4,7 @@
 
 /// <reference path="privatereferences.ts"/>
 
-module MscrmControls.GridControl {
+module MscrmControls.GridCtrl {
 	'use strict';
 
 	export class MacroSessionAssociatedGridControl implements Mscrm.Control<IInputBag, IOutputBag> {

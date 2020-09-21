@@ -1,4 +1,4 @@
-module MscrmControls.GridControl {
+module MscrmControls.GridCtrl {
 	export interface IInputBag {
 		UsageContext: Mscrm.SingleLineProperty;
 	}

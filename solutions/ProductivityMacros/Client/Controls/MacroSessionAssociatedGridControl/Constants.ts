@@ -3,7 +3,7 @@
 */
 
 
-module MscrmControls.GridControl {
+module MscrmControls.GridCtrl {
 	'use strict';
 
 	export class XMLConstants {
