@@ -21,7 +21,7 @@ namespace PVSPackage
     public class PackageMacros : ImportExtension
     {
         private const string NewOrgVersion = "0.0.0.0";
-        private List<string> DeprecatedSolutions = new List<string> { "ProductivityMacros", "Agentscript", "ProductivityPaneControl", "AgentGuidance", "msdyn_OmnichannelProductivityToolsSettings" };
+        private List<string> DeprecatedSolutions = new List<string> { "ProductivityMacros", "Agentscript", "ProductivityPaneControl", "AgentGuidance" };
         /// <summary>
         /// Called When the package is initialized. 
         /// </summary>
