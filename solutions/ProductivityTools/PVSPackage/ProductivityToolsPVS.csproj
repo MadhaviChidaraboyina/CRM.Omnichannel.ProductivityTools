@@ -89,6 +89,10 @@
       <Link>ProductivityTools\msdyn_AgentGuidance_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_OmnichannelProductivityToolsSettings_managed.cab">
+      <Link>ProductivityTools\msdyn_OmnichannelProductivityToolsSettings_managed.cab</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="ProductivityTools\Content\en-us\EndHtml\CSS\common.css">

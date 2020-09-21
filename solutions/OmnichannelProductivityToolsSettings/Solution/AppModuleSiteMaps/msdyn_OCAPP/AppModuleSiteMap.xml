@@ -10,17 +10,12 @@
         <Titles>
           <Title LCID="1033" Title="Agent Experience" />
         </Titles>
-        <SubArea Id="NewSubArea_386b5beb" VectorIcon="/WebResources/msdyn_Macros.svg" Icon="/WebResources/msdyn_Macros.svg" Url="/main.aspx?pagetype=entitylist&amp;etn=workflow&amp;viewid=012107d2-54d0-e911-a81c-000d3a6e50b0&amp;viewType=0139" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" ordinalvalue="0" solutionaction="Added">
-          <Titles>
-            <Title LCID="1033" Title="Macros" />
-          </Titles>
-        </SubArea>
-        <SubArea Id="NewSubArea_5857f7fc" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="msdyn_agentscript" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" ordinalvalue="1" solutionaction="Added">
+        <SubArea Id="NewSubArea_5857f7fc" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="msdyn_agentscript" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" ordinalvalue="1" solutionaction="Removed">
           <Titles>
             <Title LCID="1033" Title="Agent scripts" />
           </Titles>
         </SubArea>
-        <SubArea Id="NewSubArea_9798d3c6" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/msdyn_productivitypaneconfiguration/_imgs/SitemapIcon/ProductivityPane" Icon="/WebResources/msdyn_productivitypaneconfiguration/_imgs/SitemapIcon/ProductivityPane" Url="/main.aspx?appName=msdyn_OCAPP&amp;pagetype=entityrecord&amp;etn=msdyn_productivitypaneconfiguration&amp;id=482d09b0-d327-ea11-a810-000d3a1026fe&amp;formid=4D182267-6A95-40E1-9C02-AE8DB486AF12" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" solutionaction="Added">
+        <SubArea Id="NewSubArea_9798d3c6" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/msdyn_productivitypaneconfiguration/_imgs/SitemapIcon/ProductivityPane" Icon="/WebResources/msdyn_productivitypaneconfiguration/_imgs/SitemapIcon/ProductivityPane" Url="/main.aspx?appName=msdyn_OCAPP&amp;pagetype=entityrecord&amp;etn=msdyn_productivitypaneconfiguration&amp;id=482d09b0-d327-ea11-a810-000d3a1026fe&amp;formid=4D182267-6A95-40E1-9C02-AE8DB486AF12" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" solutionaction="Removed">
             <Titles>
               <Title LCID="1033" Title="Productivity pane" />
             </Titles>
