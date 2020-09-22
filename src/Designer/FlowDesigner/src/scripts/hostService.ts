@@ -619,14 +619,16 @@ export class OperationManifestServiceImpl implements Designer.OperationManifestS
     }
 
     private _lookupOperationManifest(connectorId: string, operationId: string): Designer.OperationManifest | undefined {
-        for (const metadata of this.operationManifestData) {
-            if (metadata.connectorId === connectorId || metadata.operationId === operationId) {
-                return metadata.manifest;
-            }
-        }
-
-        return undefined;
-    }
+		if (!isNullOrUndefined(this.operationManifestData)) {
+			for (const metadata of this.operationManifestData) {
+				if (metadata.connectorId === connectorId || metadata.operationId === operationId) {
+					return metadata.manifest;
+				}
+			}
+		}
+		
+		return undefined;
+	}
 }
 
 export class Analytics implements Designer.AnalyticsService {
