@@ -249,7 +249,7 @@
     <comment>'msdyn_productivitypaneconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Productivity pane configuration (Deprecated){4d182267-6a95-40e1-9c02-ae8db486af12}" xml:space="preserve">
-    <value>A form for this entity.</value>
+    <value>Форма для цієї сутності.</value>
     <comment>'Productivity pane configuration (Deprecated)' : Description for systemform in Entity FormXml ID: '{4d182267-6a95-40e1-9c02-ae8db486af12}'</comment>
   </data>
   <data name="1:displayname,msdyn_productivitypaneconfigurationCreatedBy" xml:space="preserve">
@@ -349,11 +349,11 @@
     <comment>'msdyn_productivitypaneconfiguration' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate0" xml:space="preserve">
-    <value>Вимкнено</value>
+    <value>Ні</value>
     <comment>'msdyn_productivitypaneconfiguration' : label for option '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate1" xml:space="preserve">
-    <value>Увімкнуто</value>
+    <value>Так</value>
     <comment>'msdyn_productivitypaneconfiguration' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_statecode0" xml:space="preserve">
@@ -373,23 +373,23 @@
     <comment>'msdyn_productivitypaneconfiguration' : label for status '2' on Entity</comment>
   </data>
   <data name="1:label,Productivity pane configuration (Deprecated){09e9c271-36bd-db1d-9580-a7a68aea45bc}" xml:space="preserve">
-    <value>Section</value>
+    <value>Розділ</value>
     <comment>'Productivity pane configuration (Deprecated)' : label for section in Entity FormXml ID: '{09e9c271-36bd-db1d-9580-a7a68aea45bc}'</comment>
   </data>
   <data name="1:label,Productivity pane configuration (Deprecated){1d232692-b84d-3a66-920a-aa61b957a77c}" xml:space="preserve">
-    <value>Settings</value>
+    <value>Параметри</value>
     <comment>'Productivity pane configuration (Deprecated)' : label for tab in Entity FormXml ID: '{1d232692-b84d-3a66-920a-aa61b957a77c}'</comment>
   </data>
   <data name="1:label,Productivity pane configuration (Deprecated){2001b56e-bd86-d68b-822b-83b0b06c2b74}" xml:space="preserve">
-    <value>Application name</value>
+    <value>Назва програми</value>
     <comment>'Productivity pane configuration (Deprecated)' : label for cell in Entity FormXml ID: '{2001b56e-bd86-d68b-822b-83b0b06c2b74}'</comment>
   </data>
   <data name="1:label,Productivity pane configuration (Deprecated){2a7739b1-fb2c-489c-aa09-58a8c58aee88}" xml:space="preserve">
-    <value>Name</value>
+    <value>Ім’я</value>
     <comment>'Productivity pane configuration (Deprecated)' : label for cell in Entity FormXml ID: '{2a7739b1-fb2c-489c-aa09-58a8c58aee88}'</comment>
   </data>
   <data name="1:label,Productivity pane configuration (Deprecated){30a60635-8c70-ac66-40ec-b14b9e336aab}" xml:space="preserve">
-    <value>Section</value>
+    <value>Розділ</value>
     <comment>'Productivity pane configuration (Deprecated)' : label for section in Entity FormXml ID: '{30a60635-8c70-ac66-40ec-b14b9e336aab}'</comment>
   </data>
   <data name="1:label,Productivity pane configuration (Deprecated){518514e8-d2e2-ab26-3838-e710a0e6d747}" xml:space="preserve">
@@ -397,7 +397,7 @@
     <comment>'Productivity pane configuration (Deprecated)' : label for cell in Entity FormXml ID: '{518514e8-d2e2-ab26-3838-e710a0e6d747}'</comment>
   </data>
   <data name="1:label,Productivity pane configuration (Deprecated){5e7ac5d0-172a-89e4-e506-91ec8a282253}" xml:space="preserve">
-    <value>Section</value>
+    <value>Розділ</value>
     <comment>'Productivity pane configuration (Deprecated)' : label for section in Entity FormXml ID: '{5e7ac5d0-172a-89e4-e506-91ec8a282253}'</comment>
   </data>
   <data name="1:label,Productivity pane configuration (Deprecated){7131592a-8239-bedc-0585-a975894a0a2e}" xml:space="preserve">
@@ -405,15 +405,15 @@
     <comment>'Productivity pane configuration (Deprecated)' : label for cell in Entity FormXml ID: '{7131592a-8239-bedc-0585-a975894a0a2e}'</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_productivitypaneconfigurationentitymsdyn_productivitypaneconfiguration" xml:space="preserve">
-    <value>Конфігурації панелей продуктивності</value>
+    <value>Конфігурації області продуктивності (вилучено)</value>
     <comment> 'msdyn_productivitypaneconfiguration' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_productivitypaneconfigurationentitymsdyn_productivitypaneconfiguration" xml:space="preserve">
-    <value>Конфігурація панелі продуктивності</value>
+    <value>Конфігурація області продуктивності (вилучено)</value>
     <comment> 'msdyn_productivitypaneconfiguration' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,Productivity pane configuration (Deprecated){4d182267-6a95-40e1-9c02-ae8db486af12}" xml:space="preserve">
-    <value>Productivity pane</value>
+    <value>Область продуктивності</value>
     <comment>'Productivity pane configuration (Deprecated)' : LocalizedName for systemform in Entity FormXml ID: '{4d182267-6a95-40e1-9c02-ae8db486af12}'</comment>
   </data>
   <data name="29:Description,{7753e97d-af27-ea11-a810-000d3a1026fe}" xml:space="preserve">

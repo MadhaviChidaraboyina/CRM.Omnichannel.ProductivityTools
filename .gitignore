@@ -41,6 +41,7 @@ SolutionPackage/
 
 # Loc related temp file
 /Localize/Temp
+/Localize/Extern
 *.edb
 *.lsp
 
