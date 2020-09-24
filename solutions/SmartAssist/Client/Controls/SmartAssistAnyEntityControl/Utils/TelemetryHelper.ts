@@ -25,10 +25,10 @@
 		 * @param eventType
 		 * @param additionalParameter
 		 */
-        public logTelemetrySuccess(eventType: string, additionalParameter: Mscrm.EventParameter[]) {
-            const params = this.getTelemetryParameter(additionalParameter);
-            SmartAssistAnyEntityControl._context.reporting.reportSuccess(eventType, params);
-        }
+		public logTelemetrySuccess(eventType: string, additionalParameter: Mscrm.EventParameter[]) {
+			const params = this.getTelemetryParameter(additionalParameter);
+			SmartAssistAnyEntityControl._context.reporting.reportSuccess(eventType, params);
+		}
 
 		/**
 		 * Get Telemetry event parameter
