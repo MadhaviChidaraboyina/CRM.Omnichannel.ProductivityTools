@@ -8,6 +8,6 @@
 	],
 	"compileOnSave": true,
 	"compilerOptions": {
-		"outFile": "../../Solution/WebResources/msdyn_AgentScriptStepFormScript.js"
+		"outFile": "../../Solution/WebResources/msdyn_AgentScriptStepComponentFormScript.js"
 	}
 }

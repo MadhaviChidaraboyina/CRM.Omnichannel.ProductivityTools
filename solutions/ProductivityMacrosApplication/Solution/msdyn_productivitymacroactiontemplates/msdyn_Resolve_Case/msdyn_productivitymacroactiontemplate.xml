@@ -7,7 +7,7 @@
   <msdyn_displayname default="Resolve Case">
     <label description="Resolve Case" languagecode="1033" />
   </msdyn_displayname>
-  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacros_resolve_case.svg</msdyn_icon>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacrosApplication_resolve_case.svg</msdyn_icon>
   <msdyn_kind>ACTIONS</msdyn_kind>
   <msdyn_macroconnector>
     <msdyn_uniquename>msdyn_ProductivityAutomation</msdyn_uniquename>

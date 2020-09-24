@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WebResource>
+  <WebResourceId>{2C866767-4620-4343-8308-9274669D57DD}</WebResourceId>
+  <Name>MacroDesigner/msdyn_ProductivityMacrosApplication_update_form_attribute.svg</Name>
+  <DisplayName>MacroDesigner/msdyn_ProductivityMacrosApplication_update_form_attribute.svg</DisplayName>
+  <LanguageCode>1033</LanguageCode>
+  <WebResourceType>11</WebResourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <IsCustomizable>0</IsCustomizable>
+  <CanBeDeleted>0</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/MacroDesigner/msdyn_ProductivityMacrosApplication_update_form_attribute.svg</FileName>
+</WebResource>

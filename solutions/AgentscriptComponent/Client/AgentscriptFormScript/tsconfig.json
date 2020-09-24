@@ -6,7 +6,7 @@
 		"node_modules"
 	],
 	"compileOnSave": true,
-	"compilerOptions": {
-		"outFile": "../../Solution/WebResources/msdyn_AgentscriptFormScript.js"
-	}
+  "compilerOptions": {
+    "outFile": "../../Solution/WebResources/msdyn_AgentscriptComponentFormScript.js"
+  }
 }

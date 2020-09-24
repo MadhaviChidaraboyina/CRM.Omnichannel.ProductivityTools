@@ -7,7 +7,7 @@
   <msdyn_displayname default="Start">
     <label description="Start" languagecode="1033" />
   </msdyn_displayname>
-  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacros_macro_connector.svg</msdyn_icon>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacrosApplication_macro_connector.svg</msdyn_icon>
   <msdyn_kind>TRIGGERS</msdyn_kind>
   <msdyn_macroconnector>
     <msdyn_uniquename>msdyn_ProductivityAutomation</msdyn_uniquename>

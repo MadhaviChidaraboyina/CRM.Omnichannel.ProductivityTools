@@ -118,12 +118,12 @@
     <Content Include="WebResources\MacrosDataLayer\msdyn_MacrosDataLayer.js.data.xml" />
     <Content Include="WebResources\CRMClients\msdyn_ProductivityMacrosComponent_internal_library.js.data.xml" />
    
-    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_spinner.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosComponent_spinner.svg" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosComponent_macroDesigner.bundle.js.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosComponent_macroDesigner.html.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosComponent_macroMonitor.bundle.js.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosComponent_macroMonitor.html.data.xml" />
-    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_spinner.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosComponent_spinner.svg.data.xml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Other\Customizations.xml">

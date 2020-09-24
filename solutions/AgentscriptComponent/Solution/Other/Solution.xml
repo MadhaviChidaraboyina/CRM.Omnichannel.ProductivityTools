@@ -91,24 +91,24 @@
       <RootComponent type="60" id="{1B68FF28-C6AF-4CBE-BE05-DA1B968CDDD4}" behavior="0" />
       <RootComponent type="60" id="{5de0d599-f36d-425a-9c06-b80630d91def}" />
       <RootComponent type="60" id="{fc60eca2-37c4-43c3-b604-e11d433ae008}" behavior="0" />
-      <RootComponent type="61" schemaName="callscript_executed_step_icon.svg" behavior="0" />
-      <RootComponent type="61" schemaName="callscript_unexecuted_step_icon.svg" behavior="0" />
-      <RootComponent type="61" schemaName="callscript_failed_step_icon.svg" behavior="0" />
-      <RootComponent type="61" schemaName="callscript_text_action_type_icon.svg" behavior="0" />
-      <RootComponent type="61" schemaName="callscript_macro_action_type_icon.svg" behavior="0" />
-      <RootComponent type="61" schemaName="callscript_route_action_type_icon.svg" behavior="0" />
-      <RootComponent type="61" schemaName="callscriptstep_executestep_button_icon.svg" behavior="0" />
-      <RootComponent type="61" schemaName="callscriptstep_retrystep_button_icon.svg" behavior="0" />
-      <RootComponent type="61" schemaName="collapsed_accordion_arrow_icon.svg" behavior="0" />
-      <RootComponent type="61" schemaName="expanded_accordion_arrow_icon.svg" behavior="0" />
-      <RootComponent type="61" schemaName="msdyn_progress_spinner.svg" behavior="0" />
-      <RootComponent type="61" schemaName="msdyn_markasdone_text_icon.svg" behavior="0" />
-      <RootComponent type="61" schemaName="msdyn_run_macro_icon.svg" behavior="0" />
-      <RootComponent type="61" schemaName="msdyn_view_script_icon.svg" behavior="0" />
-      <RootComponent type="61" schemaName="msdyn_agent_script_header_info_icon.svg" behavior="0" />
-      <RootComponent type="61" schemaName="msdyn_AgentScriptStepFormScript.js" behavior="0" />
-      <RootComponent type="61" schemaName="msdyn_AgentscriptFormScript.js" behavior="0" />
-      <RootComponent type="61" schemaName="msdyn_agentscript_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_callscriptcomponent_executed_step_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_callscriptcomponent_unexecuted_step_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_callscriptcomponent_failed_step_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_callscriptcomponent_text_action_type_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_callscriptcomponent_macro_action_type_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_callscriptcomponent_route_action_type_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_callscriptstepcomponent_executestep_button_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_callscriptstepcomponent_retrystep_button_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_collapsed_accordion_arrow_component_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_expanded_accordion_arrow_component_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_progress_component_spinner.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_markasdone_component_text_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_run_macro_component_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_view_script_component_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_agent_script_component_header_info_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_AgentScriptStepComponentFormScript.js" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_AgentscriptComponentFormScript.js" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_agentscriptcomponent_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1033.resx" behavior="0" />
       <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1025.resx" behavior="0" />
       <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1026.resx" behavior="0" />
@@ -154,7 +154,7 @@
       <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.3076.resx" behavior="0" />
       <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.3082.resx" behavior="0" />
       <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.3098.resx" behavior="0" />
-      <RootComponent type="61" schemaName="msdyn_SetDefaultAgentScriptHelpText.html" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_SetDefaultAgentScriptHelpText_component.html" behavior="0" />
       <RootComponent type="66" schemaName="MscrmControls.Callscript.CallscriptControl" behavior="0" />
       <RootComponent type="66" schemaName="MscrmControls.Button.ButtonControl" behavior="0" />
       <RootComponent type="20" id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" behavior="0" />

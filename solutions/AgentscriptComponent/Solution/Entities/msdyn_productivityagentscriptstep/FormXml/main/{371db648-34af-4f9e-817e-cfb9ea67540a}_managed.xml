@@ -147,22 +147,22 @@
         </NavBarAreas>
       </Navigation>
 	  <formLibraries>
-        <Library name="msdyn_AgentScriptStepFormScript.js" libraryUniqueId="{db3bccbe-b510-d5e9-242e-d346574746ab}" />
+        <Library name="msdyn_AgentScriptStepComponentFormScript.js" libraryUniqueId="{db3bccbe-b510-d5e9-242e-d346574746ab}" />
       </formLibraries>
       <events>
         <event name="onload" application="false" active="false">
           <Handlers>
-            <Handler functionName="AgentScriptPackage.AgentScriptStepFormScript.Instance.onFormLoad" libraryName="msdyn_AgentScriptStepFormScript.js" handlerUniqueId="{da29152d-7a71-13b2-2e79-ab628d5eadc6}" enabled="true" parameters="" passExecutionContext="true" />
+            <Handler functionName="AgentScriptPackage.AgentScriptStepFormScript.Instance.onFormLoad" libraryName="msdyn_AgentScriptStepComponentFormScript.js" handlerUniqueId="{da29152d-7a71-13b2-2e79-ab628d5eadc6}" enabled="true" parameters="" passExecutionContext="true" />
           </Handlers>
         </event>
         <event name="onsave" application="false" active="false">
           <Handlers>
-            <Handler functionName="AgentScriptPackage.AgentScriptStepFormScript.Instance.onFormSave" libraryName="msdyn_AgentScriptStepFormScript.js" handlerUniqueId="{6a9a332c-646d-d732-4959-6404e9e99ee0}" enabled="true" parameters="" passExecutionContext="true" />
+            <Handler functionName="AgentScriptPackage.AgentScriptStepFormScript.Instance.onFormSave" libraryName="msdyn_AgentScriptStepComponentFormScript.js" handlerUniqueId="{6a9a332c-646d-d732-4959-6404e9e99ee0}" enabled="true" parameters="" passExecutionContext="true" />
           </Handlers>
         </event>
         <event name="onchange" application="false" active="false" attribute="msdyn_actiontype">
           <Handlers>
-            <Handler functionName="AgentScriptPackage.AgentScriptStepFormScript.Instance.onActionTypeChange" libraryName="msdyn_AgentScriptStepFormScript.js" handlerUniqueId="{889a0c7e-307a-5e69-eb50-0579daa7bd9e}" enabled="true" parameters="" passExecutionContext="true" />
+            <Handler functionName="AgentScriptPackage.AgentScriptStepFormScript.Instance.onActionTypeChange" libraryName="msdyn_AgentScriptStepComponentFormScript.js" handlerUniqueId="{889a0c7e-307a-5e69-eb50-0579daa7bd9e}" enabled="true" parameters="" passExecutionContext="true" />
           </Handlers>
         </event>
       </events>														
