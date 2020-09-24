@@ -37,7 +37,7 @@
 		 */
 		public logTelemetrySuccess(eventType: string, additionalParameter: Mscrm.EventParameter[]) {
 			const params = this.getTelemetryParameter(additionalParameter);
-			SmartassistPanelControl._context.reporting.reportSuccess(eventType, additionalParameter);
+			SmartassistPanelControl._context.reporting.reportSuccess(eventType, params);
 		}
 
 		/**

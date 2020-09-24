@@ -27,7 +27,7 @@
 		 */
 		public logTelemetrySuccess(eventType: string, additionalParameter: Mscrm.EventParameter[]) {
 			const params = this.getTelemetryParameter(additionalParameter);
-			SmartAssistAnyEntityControl._context.reporting.reportSuccess(eventType, additionalParameter);
+			SmartAssistAnyEntityControl._context.reporting.reportSuccess(eventType, params);
 		}
 
 		/**
