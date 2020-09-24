@@ -374,7 +374,19 @@ module MscrmControls.SmartAssistAnyEntityControl {
                         const newCardId = self.fetchNewCard();
                         setTimeout(function () {
                             $("#" + id).slideUp("slow", function () {
+                                let moveToNextContainer = false;
+                                if ($("#" + id).next().find(".ac-container .ac-selectable").length > 0) {
+                                    $("#" + id).next().find(".ac-container .ac-selectable")[0].focus()
+                                } else {
+                                    moveToNextContainer = true;
+                                }
+
                                 $("#" + id).remove();
+                                if (moveToNextContainer) {
+                                    if ($(".ac-container .ac-selectable").length > 0) {
+                                        $(".ac-container .ac-selectable")[0].focus();
+                                    }
+                                }
                             });
                             if (newCardId) {
                                 $("#" + newCardId).fadeIn("slow");
