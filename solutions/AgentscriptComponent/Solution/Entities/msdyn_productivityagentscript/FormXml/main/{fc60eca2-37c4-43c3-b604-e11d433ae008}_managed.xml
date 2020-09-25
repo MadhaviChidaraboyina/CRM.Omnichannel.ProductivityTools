@@ -139,12 +139,12 @@
       </Navigation>
       <controlDescriptions />
       <formLibraries>
-        <Library name="msdyn_AgentscriptFormScript.js" libraryUniqueId="{2aceaca6-4299-b381-c2ae-072228acb58a}" />
+        <Library name="msdyn_AgentscriptComponentFormScript.js" libraryUniqueId="{2aceaca6-4299-b381-c2ae-072228acb58a}" />
       </formLibraries>
       <events>
         <event name="onload" application="false" active="false">
           <Handlers>
-            <Handler functionName="AgentScriptPackage.AgentscriptFormScript.Instance.onFormLoad" libraryName="msdyn_AgentscriptFormScript.js" handlerUniqueId="{30d84e6b-5066-95b1-57eb-edca9d813c36}" enabled="true" parameters="" passExecutionContext="true" />
+            <Handler functionName="AgentScriptPackage.AgentscriptFormScript.Instance.onFormLoad" libraryName="msdyn_AgentscriptComponentFormScript.js" handlerUniqueId="{30d84e6b-5066-95b1-57eb-edca9d813c36}" enabled="true" parameters="" passExecutionContext="true" />
           </Handlers>
         </event>
       </events>							 

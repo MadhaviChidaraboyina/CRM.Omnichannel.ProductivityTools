@@ -7,7 +7,7 @@
   <msdyn_displayname default="Search knowledge base article">
     <label description="Search knowledge base article" languagecode="1033" />
   </msdyn_displayname>
-  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacros_search_kb.svg</msdyn_icon>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacrosApplication_search_kb.svg</msdyn_icon>
   <msdyn_kind>ACTIONS</msdyn_kind>
   <msdyn_macroconnector>
     <msdyn_uniquename>msdyn_ProductivityAutomation</msdyn_uniquename>

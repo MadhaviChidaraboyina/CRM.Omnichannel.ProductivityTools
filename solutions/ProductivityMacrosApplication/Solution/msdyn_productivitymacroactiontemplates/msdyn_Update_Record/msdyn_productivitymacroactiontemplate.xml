@@ -7,7 +7,7 @@
   <msdyn_displayname default="Update record">
     <label description="Update record" languagecode="1033" />
   </msdyn_displayname>
-  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacros_update_record.svg</msdyn_icon>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacrosApplication_update_record.svg</msdyn_icon>
   <msdyn_kind>ACTIONS</msdyn_kind>
   <msdyn_macroconnector>
     <msdyn_uniquename>msdyn_ProductivityAutomation</msdyn_uniquename>

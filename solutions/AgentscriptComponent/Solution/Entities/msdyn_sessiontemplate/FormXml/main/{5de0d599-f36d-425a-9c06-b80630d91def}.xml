@@ -85,7 +85,7 @@
                         </labels>
                         <control id="WebResource_Disclaimer" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
                           <parameters>
-                            <Url>msdyn_SetDefaultAgentScriptHelpText.html</Url>
+                            <Url>msdyn_SetDefaultAgentScriptHelpText_component.html</Url>
                             <PassParameters>false</PassParameters>
                             <ShowOnMobileClient>false</ShowOnMobileClient>
                             <Security>false</Security>

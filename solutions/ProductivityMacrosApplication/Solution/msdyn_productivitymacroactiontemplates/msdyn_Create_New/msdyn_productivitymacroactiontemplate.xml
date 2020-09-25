@@ -7,7 +7,7 @@
   <msdyn_displayname default="Create New">
     <label description="Create New" languagecode="1033" />
   </msdyn_displayname>
-  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacros_open_new_form.svg</msdyn_icon>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacrosApplication_open_new_form.svg</msdyn_icon>
   <msdyn_kind>ACTIONS</msdyn_kind>
   <msdyn_macroconnector>
     <msdyn_uniquename>msdyn_ProductivityAutomation</msdyn_uniquename>

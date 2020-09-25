@@ -120,6 +120,46 @@
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_ViewType\msdyn_productivityparameterdefinition.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_macro_connector.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_macro_connector.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_associated.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_associated.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_dashboard.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_dashboard.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_form.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_form.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_grid.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_grid.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_kb.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_kb.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_new_form.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_new_form.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_refresh.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_refresh.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_save.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_save.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_search_kb.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_search_kb.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_search_relevance.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_search_relevance.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_update_form_attribute.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_update_form_attribute.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_update_record.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_update_record.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_clone_record.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_clone_record.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_close_session.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_close_session.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_close_all_sessions.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_close_all_sessions.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_create_session.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_create_session.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_email.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_email.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_kb_article.svg"/>
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_kb_article.svg.data.xml" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Other\Customizations.xml">
       <SubType>Designer</SubType>
     </Content>

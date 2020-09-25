@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource>
+  <WebResourceId>{5de8a2aa-a15b-4054-9cc9-9271af5b9ac6}</WebResourceId>
+  <Name>msdyn_collapsed_accordion_arrow_component_icon.svg</Name>
+  <DisplayName>Collapsed step icon</DisplayName>
+  <Description>Collapsed step icon</Description>
+  <LanguageCode>1033</LanguageCode>
+  <WebResourceType>11</WebResourceType>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <IsCustomizable>0</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/msdyn_collapsed_accordion_arrow_component_icon5de8a2aa-a15b-4054-9cc9-9271af5b9ac6</FileName>
+</WebResource>

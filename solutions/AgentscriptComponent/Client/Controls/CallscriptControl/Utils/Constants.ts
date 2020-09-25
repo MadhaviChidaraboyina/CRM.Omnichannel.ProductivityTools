@@ -46,25 +46,25 @@ module MscrmControls.Callscript {
 
 		//keys for icon names
 		//accordion icons
-		public static expandedAccordionItemIcon = "expanded_accordion_arrow_icon.svg";
-		public static collapsedAccordionItemIcon = "collapsed_accordion_arrow_icon.svg";
+        public static expandedAccordionItemIcon = "msdyn_expanded_accordion_arrow_component_icon.svg";
+        public static collapsedAccordionItemIcon = "msdyn_collapsed_accordion_arrow_component_icon.svg";
 		//step executionstatus indicator icons
-		public static executedStepIcon = "callscript_executed_step_icon.svg";
-		public static notExecutedStepIcon = "callscript_unexecuted_step_icon.svg";
-		public static failedStepIcon = "callscript_failed_step_icon.svg";
-		public static inprogressStepIcon = "msdyn_progress_spinner.svg";
+        public static executedStepIcon = "msdyn_callscriptcomponent_executed_step_icon.svg";
+        public static notExecutedStepIcon = "msdyn_callscriptcomponent_unexecuted_step_icon.svg";
+        public static failedStepIcon = "msdyn_callscriptcomponent_failed_step_icon.svg";
+        public static inprogressStepIcon = "msdyn_progress_component_spinner.svg";
 		//action type icons
-		public static textActionIcon = "callscript_text_action_type_icon.svg";
-		public static macroActionIcon = "callscript_macro_action_type_icon.svg";
-		public static routeActionIcon = "callscript_route_action_type_icon.svg";
+        public static textActionIcon = "msdyn_callscriptcomponent_text_action_type_icon.svg";
+        public static macroActionIcon = "msdyn_callscriptcomponent_macro_action_type_icon.svg";
+        public static routeActionIcon = "msdyn_callscriptcomponent_route_action_type_icon.svg";
 		//action button icons
-		public static executeBtnIcon = "callscriptstep_executestep_button_icon.svg";
-		public static retryBtnIcon = "callscriptstep_retrystep_button_icon.svg";
-		public static viewScriptIcon = "msdyn_view_script_icon.svg";
-		public static markdoneTextIcon = "msdyn_markasdone_text_icon.svg";
-		public static runMacroIcon = "msdyn_run_macro_icon.svg";
+        public static executeBtnIcon = "msdyn_callscriptstepcomponent_executestep_button_icon.svg";
+        public static retryBtnIcon = "msdyn_callscriptstepcomponent_retrystep_button_icon.svg";
+        public static viewScriptIcon = "msdyn_view_script_component_icon.svg";
+        public static markdoneTextIcon = "msdyn_markasdone_component_text_icon.svg";
+        public static runMacroIcon = "msdyn_run_macro_component_icon.svg";
         //agent script header info icon
-        public static infoButtonIcon = "msdyn_agent_script_header_info_icon.svg";
+        public static infoButtonIcon = "msdyn_agent_script_component_header_info_icon.svg";
 
 		// Accessibility ids
 		public static stepIdPrefix = "CallscriptStepsListItem-";

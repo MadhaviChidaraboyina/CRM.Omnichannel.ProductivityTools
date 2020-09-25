@@ -7,7 +7,7 @@
   <msdyn_displayname default="Open knowledge base article">
     <label description="Open knowledge base article" languagecode="1033" />
   </msdyn_displayname>
-  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacros_open_kb_article.svg</msdyn_icon>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacrosApplication_open_kb_article.svg</msdyn_icon>
   <msdyn_kind>ACTIONS</msdyn_kind>
   <msdyn_macroconnector>
     <msdyn_uniquename>msdyn_ProductivityAutomation</msdyn_uniquename>
