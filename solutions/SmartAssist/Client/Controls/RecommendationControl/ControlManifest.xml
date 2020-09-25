@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="MscrmControls.Smartassist" constructor="RecommendationControl" version="1.0.11" display-name-key="CC_RecommendationControl_Component">
+  <control namespace="MscrmControls.Smartassist" constructor="RecommendationControl" version="1.0.12" display-name-key="CC_RecommendationControl_Component">
     <property name="data" display-name-key="CC_Data" description-key="CC_Data_Desc" of-type="Multiple" usage="input" required="true" hidden="false" />
     <property name="Template" display-name-key="CC_Template" description-key="CC_Template_Desc" of-type="Multiple" usage="input" required="true" hidden="false" />
     <modes>
