@@ -132,9 +132,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 										return reject(error);
 									});
 							}).catch(function(error) {
-                                    //return error;
                                     console.log("Error resolving " + param + " : " + error);
-                                    return error;
                             });
 						paramResolvers.push(promise);
 					}
