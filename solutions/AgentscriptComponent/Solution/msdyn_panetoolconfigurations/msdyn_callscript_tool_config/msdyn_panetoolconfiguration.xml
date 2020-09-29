@@ -14,4 +14,5 @@
   </msdyn_description>
   <statecode>0</statecode>
   <statuscode>1</statuscode>
+  <msdyn_defaulticon>/WebResources/msdyn_agentscriptcomponent_icon.svg</msdyn_defaulticon>
 </msdyn_panetoolconfiguration>

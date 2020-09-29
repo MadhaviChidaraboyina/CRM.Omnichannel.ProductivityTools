@@ -106,7 +106,8 @@ module MscrmControls.PanelControl {
                             tabconfig[index].msdyn_isenabled,
                             tabconfig[index].msdyn_uniquename,
                             tabconfig[index].msdyn_tooltip,
-                            result.msdyn_data)
+                            result.msdyn_data,
+                            result.msdyn_defaulticon)
                         );
                     });
                     resolve(toolsList);

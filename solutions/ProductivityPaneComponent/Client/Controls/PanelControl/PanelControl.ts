@@ -355,7 +355,8 @@ module MscrmControls.PanelControl {
             this.productivityPaneConfigData.productivityToolsConfig.ToolsList.forEach((tool, index) => {
                 if (tool.isEnabled) {
                     listItems.push(this.toolSeparator(index));
-                    listItems.push(this.getProductivityToolButton(tool.toolName + "Icon", tool.toolIcon, tool.toolName, true, tool.tooltip, { "accessibilityLabel": this.context.resources.getString(tool.tooltip) }, this.getNotificationCountForTool(tool.toolControlName), index));
+                    let iconPath = this.getToolIcon(tool);
+                    listItems.push(this.getProductivityToolButton(tool.toolName + "Icon", iconPath, tool.toolName, true, tool.tooltip, { "accessibilityLabel": this.context.resources.getString(tool.tooltip) }, this.getNotificationCountForTool(tool.toolControlName), index));
                 }
             });
 
@@ -369,6 +370,40 @@ module MscrmControls.PanelControl {
                 listItems);
 
             return buttonContainer;
+        }
+
+        private getToolIcon(tool: ToolConfig): string {
+            if (tool.toolIcon && this.isValidIconPath(tool.toolIcon)) {
+                return tool.toolIcon;
+            } else if (tool.defaultIcon && this.isValidIconPath(tool.defaultIcon)) {
+                return tool.defaultIcon;
+            } else {
+                //return fallback icon URL
+                return "";
+            }
+        }
+
+        private isValidIconPath(iconPath: string): boolean {
+            let methodName = "isValidIconPath";
+            try {
+                var request = new XMLHttpRequest();
+                var context: XrmClientApi.GlobalContext = Xrm.Utility.getGlobalContext();
+                var requestUrl = context.getClientUrl() + iconPath;
+                request.open('GET', requestUrl, false);
+                request.send(null);
+                if (request.status === 200) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            catch (error) {
+                let eventParams = new EventParameters();
+                eventParams.addParameter("message", "Failed to validate icon path");
+                this.telemetryLogger.logError(this.telemetryContext, methodName, error, eventParams);
+                return false;
+            }
         }
 
 		/**
