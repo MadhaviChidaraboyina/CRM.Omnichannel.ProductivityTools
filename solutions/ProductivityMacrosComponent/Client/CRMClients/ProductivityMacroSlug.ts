@@ -131,7 +131,11 @@ namespace Microsoft.ProductivityMacros.Internal {
 										console.log("Error resolving " + input + " : " + error);
 										return reject(error);
 									});
-							});
+							}).catch(function(error) {
+                                    //return error;
+                                    console.log("Error resolving " + param + " : " + error);
+                                    return error;
+                            });
 						paramResolvers.push(promise);
 					}
 					else {
