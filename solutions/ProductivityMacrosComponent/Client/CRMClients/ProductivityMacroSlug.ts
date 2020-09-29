@@ -20,7 +20,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                 return resolve(input);
             }
             let paramVals: Map<string, string> = new Map<string, string>();
-            let paramResolvers: Promise<string>[] = [];
+            let paramResolvers: Promise<string | void>[] = [];
 
             if (input.startsWith(SlugPrefix.SPLIT_BY_DOLLAR)) { // For backward compatibilty.
                 input = input.substr(1, input.length - 1);   
@@ -93,7 +93,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 						if (queryParts.length < 4) {
 							continue;   //Invalid template parameter; ignore it
 						}
-						let promise: Promise<string> = new Promise<string>(
+						let promise: Promise<string | void> = new Promise<string>(
 							function (resolve, reject) {
 								let qPromises: Promise<string>[] = [];
 								qPromises.push(resolveTemplateString(queryParts[1], templateParams, scope));
@@ -132,7 +132,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 										return reject(error);
 									});
 							}).catch(function(error) {
-                                    console.log("Error resolving " + param + " : " + error);
+                                console.log("Error resolving " + param + " : " + error);
                             });
 						paramResolvers.push(promise);
 					}
