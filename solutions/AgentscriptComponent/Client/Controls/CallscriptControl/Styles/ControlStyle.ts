@@ -48,9 +48,10 @@ module MscrmControls.Callscript {
 
 		public static getHeaderContainerStyle() {
             return {
-                height: "68px",
+                height: "auto",
 				"align-items": "left",
-				minWidth: "234px"
+                minWidth: "234px",
+                paddingBottom: "23px"
 			}
 		}
 

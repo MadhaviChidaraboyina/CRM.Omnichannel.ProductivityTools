@@ -273,16 +273,15 @@ module MscrmControls.Callscript {
 			let isScriptDataInitialized = this.stateManager.initializeCallscriptsForCurrentSession();
 			if (isScriptDataInitialized === false) {
 				return this.getLoadingWheel();
-			}
-			if (this.stateManager.scriptDataFetchFailed) {
-				return this.getScriptLoadErrorContainer(LocalizedStrings.InitialScriptDataLoadFailure);
-			}
+            }
 
 			let callscriptComponents: Mscrm.Component[] = [];
 
 			callscriptComponents.push(this.getControlHeader());
 
-			callscriptComponents.push(this.getScriptsDropdown());
+            if (!this.stateManager.scriptDataFetchFailed) {
+                callscriptComponents.push(this.getScriptsDropdown());
+            }
 
 			if (this.stateManager.selectedScriptForCurrentSession) {
 				callscriptComponents.push(this.getScriptDescriptionContainer(this.stateManager.selectedScriptForCurrentSession));
@@ -304,7 +303,11 @@ module MscrmControls.Callscript {
 				}
 			}
 
-            if (this.stateManager.callscriptsForCurrentSession.length == 0) {
+            if (this.stateManager.scriptDataFetchFailed) {
+                this.DispatchNoDataEvent();
+                callscriptComponents.push(this.getScriptLoadErrorContainer(LocalizedStrings.InitialScriptDataLoadFailure));
+            }
+            else if (this.stateManager.callscriptsForCurrentSession.length == 0) {
                 this.DispatchNoDataEvent();
                 callscriptComponents.push(this.getScriptLoadErrorContainer(LocalizedStrings.NoDataCallScriptMessage));
             }
