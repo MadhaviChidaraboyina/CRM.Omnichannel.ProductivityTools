@@ -133,9 +133,9 @@ module MscrmControls.SmartAssistAnyEntityControl {
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ControlInitializationStarted, null);
 
             //Get Current context
-            await this.getCurrentContext();
-            this.showLoader();
+            await this.getCurrentContext();            
             if (this.saConfig.SuggestionType == SuggestionType.BotSuggestion && this.AnyEntityContainerState == AnyEntityContainerState.Enabled) {
+                this.showLoader();
                 //TODO: add telemetry for all the scenarios
                 this.appendTitle();
                 const componentId = "TPBot";
@@ -163,6 +163,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 }
                 var data;
                 if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled || !englishOrgAndEnglishUser) {
+                    this.showLoader();
                     if (!englishOrgAndEnglishUser) {
                         this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionsNotSupportedForNonEnglishUser, null);
                     }
@@ -177,6 +178,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     }
                 }
                 else if (this.saConfig.IsEnabled) {
+                    this.showLoader();
                     this.appendTitle();
 
                     // Get Suggestions data records for provide saConfig

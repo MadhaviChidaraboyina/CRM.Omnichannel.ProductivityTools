@@ -165,6 +165,7 @@ module MscrmControls.SmartassistPanelControl {
                 script.onerror = function (event: ErrorEvent) {
                     document.getElementsByTagName("head")[0].removeChild(script);
                     telemetryHelper.logTelemetryError(TelemetryEventTypes.WebresourceLoadingFailed, new Error("Webresource loading failed"), null);
+                    callback(saConfig, emptyStatus, recordId, update);
                 };
                 script.onload = function () {
                     telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.WebresourceLoadedSuccessfully, null);
