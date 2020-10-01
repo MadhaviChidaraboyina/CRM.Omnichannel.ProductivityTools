@@ -44,14 +44,17 @@ module MscrmControls.Callscript {
             this.setCurrentUciSessionId();
             await this.initializeControlStateFromCEC();
             if (this.context.utils.isNullOrUndefined(this.callscriptsForCurrentSession)) {
-                this.callscriptsForCurrentSession = null;
                 this.selectedScriptForCurrentSession = null;
                 this.isScriptsDataRequested = false;
                 this.scriptDataFetchFailed = false;
                 //TODO: need to remove this code once CEC bug is fixed related to null context on
                 //session create and session switch
-                this.context.utils.requestRender();
             }
+            else {
+                this.isScriptsDataRequested = false;
+                this.scriptDataFetchFailed = false;
+            }
+            this.context.utils.requestRender();
         }
 
 		/**
