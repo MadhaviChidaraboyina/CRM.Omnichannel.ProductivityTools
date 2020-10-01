@@ -45,11 +45,11 @@ module MscrmControls.PanelControl {
 
             sessionData[LocalStorageKeyConstants.hasData+controlName] = !noData;
             for (let tool of productivityPaneConfig.productivityToolsConfig.ToolsList) {
-                doCollpse = doCollpse || sessionData[LocalStorageKeyConstants.hasData + tool.toolControlName];
+                doCollpse = doCollpse || (sessionData[LocalStorageKeyConstants.hasData + tool.toolControlName] && tool.isEnabled);
                 if (tool.toolName === sessionData.productivityToolSelected) {
                     toolControlNameInFocus = tool.toolControlName;
                 }
-                if (sessionData[LocalStorageKeyConstants.hasData + tool.toolControlName] && this.context.utils.isNullOrUndefined(toolWithData)) {
+                if (sessionData[LocalStorageKeyConstants.hasData + tool.toolControlName] && this.context.utils.isNullOrUndefined(toolWithData) && tool.isEnabled) {
                     toolWithData = tool.toolName;
                 }
             }
