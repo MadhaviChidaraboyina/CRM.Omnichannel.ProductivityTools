@@ -51,7 +51,6 @@ module MscrmControls.Callscript {
                 //session create and session switch
             }
             else {
-                this.isScriptsDataRequested = false;
                 this.scriptDataFetchFailed = false;
             }
             this.context.utils.requestRender();
