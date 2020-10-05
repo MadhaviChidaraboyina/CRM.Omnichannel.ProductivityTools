@@ -1,7 +1,6 @@
 <msdyn_productivitymacroconnector msdyn_uniquename="msdyn_FlowConnector">
   <iscustomizable>0</iscustomizable>
   <msdyn_brandcolor>#2266E3</msdyn_brandcolor>
-  <msdyn_callback></msdyn_callback>
   <msdyn_categorykey>CONNECTORS</msdyn_categorykey>
   <msdyn_categorylabel default="Predefined automation actions">
     <label description="Predefined automation actions" languagecode="1033" />
@@ -19,7 +18,6 @@
     <label description="Flow Connector" languagecode="1033" />
   </msdyn_title>
   <msdyn_type>CDSClientAutomation</msdyn_type>
-  <msdyn_webresourcename></msdyn_webresourcename>
   <statecode>0</statecode>
   <statuscode>1</statuscode>
 </msdyn_productivitymacroconnector>
