@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Nepavyko įkelti agento scenarijaus įrašų. Kreipkitės į administratorių.</value>
+    <value>Agentų scenarijai dar nesukurti arba jų įkelti nepavyko. Kreipkitės į administratorių.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

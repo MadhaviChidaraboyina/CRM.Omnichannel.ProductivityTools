@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Det gick inte att läsa in posterna för handläggarmanuskriptet. Kontakta administratören.</value>
+    <value>Handläggarmanuskript har inte skapats, eller kunde inte läsas in. Kontakta din administratör.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

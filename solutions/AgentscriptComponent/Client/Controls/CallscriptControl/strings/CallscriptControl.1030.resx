@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Vi kunne ikke indlæse posterne for helpdesk-medarbejder-scriptet. Kontakt din administrator.</value>
+    <value>Scripts til helpdesk-medarbejdere er ikke blevet oprettet eller kan ikke indlæses. Kontakt administratoren.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

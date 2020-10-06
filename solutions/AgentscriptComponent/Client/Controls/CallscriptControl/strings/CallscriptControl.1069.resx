@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Ezin izan ditugu kargatu agenteentzako gidoien erregistroak. Jarri harremanetan administratzailearekin.</value>
+    <value>Agenteentzako gidoiak ez dira sortu edo ezin izan dira kargatu. Jarri harremanetan administratzailearekin.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

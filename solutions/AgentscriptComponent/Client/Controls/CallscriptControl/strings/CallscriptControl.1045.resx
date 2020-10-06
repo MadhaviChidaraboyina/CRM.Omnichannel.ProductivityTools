@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Nie możemy załadować rekordów skryptu agenta. Skontaktuj się z administratorem.</value>
+    <value>Nie utworzono skryptów agenta lub nie można ich załadować. Skontaktuj się z administratorem.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

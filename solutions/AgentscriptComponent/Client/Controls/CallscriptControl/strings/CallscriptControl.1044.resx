@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Kan ikke laste inn agentskriptoppføringene. Kontakt administratoren.</value>
+    <value>Agentskriptene er ikke opprettet eller kan ikke lastes inn. Kontakt administratoren.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

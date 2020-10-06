@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>エージェント スクリプト レコードを読み込めませんでした。管理者にお問い合わせください。</value>
+    <value>エージェント スクリプトが作成されていないか、読み込めませんでした。管理者に問い合わせてください。</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

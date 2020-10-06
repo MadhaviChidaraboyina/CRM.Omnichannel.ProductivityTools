@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Die Agent-Skriptdatensätze konnten nicht geladen werden. Wenden Sie sich an den Administrator.</value>
+    <value>Agents-Skripts wurden nicht erstellt oder konnten nicht geladen werden. Wenden Sie sich an Ihren Administrator.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

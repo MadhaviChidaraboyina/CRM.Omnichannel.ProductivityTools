@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Impossibile caricare i record script agente. Contatta l'amministratore.</value>
+    <value>Gli script degli agenti non sono stati creati o non sono stati caricati. Contatta l'amministratore.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

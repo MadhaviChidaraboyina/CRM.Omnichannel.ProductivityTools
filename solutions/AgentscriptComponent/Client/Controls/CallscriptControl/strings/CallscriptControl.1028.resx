@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>無法載入專員指令碼記錄。請連絡您的管理員。</value>
+    <value>尚未建立或無法載入專員底稿。請連絡管理員。</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

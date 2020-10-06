@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Агент сценарийінің жазбаларын жүктеу мүмкін болған жоқ. Әкімшіңізге хабарласыңыз.</value>
+    <value>Агент сценарийлері жасалмаған немесе оларды жүктеу мүмкін болмады. Әкімшіңізге хабарласыңыз.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

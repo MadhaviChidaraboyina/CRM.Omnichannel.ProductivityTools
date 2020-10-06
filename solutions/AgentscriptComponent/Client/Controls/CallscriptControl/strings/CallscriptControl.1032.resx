@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Δεν ήταν δυνατή η φόρτωση των καρτελών δέσμης ενεργειών εκπροσώπου. Επικοινωνήστε με τον διαχειριστή σας.</value>
+    <value>Δεν δημιουργήθηκαν ή δεν ήταν δυνατή η φόρτωση των δεσμών ενεργειών εκπροσώπων. Επικοινωνήστε με το διαχειριστή σας.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

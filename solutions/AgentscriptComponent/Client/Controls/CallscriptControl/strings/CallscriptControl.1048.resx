@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Nu am putut încărca înregistrările script de agent. Contactați administratorul.</value>
+    <value>Scripturile de agenți nu au fost create sau nu au putut fi încărcate. Contactați administratorul.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Chúng tôi không thể tải các bản ghi kịch bản tổng đài viên. Vui lòng liên hệ với quản trị viên của bạn.</value>
+    <value>Chưa tạo hoặc chưa tải được kịch bản của tổng đài viên. Vui lòng liên hệ với quản trị viên của bạn.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

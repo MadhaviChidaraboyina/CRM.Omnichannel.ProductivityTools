@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>हम एजेंट स्क्रिप्ट रिकॉर्ड लोड नहीं कर सके. कृपया अपने व्यवस्थापक से संपर्क करें.</value>
+    <value>एजेंट स्क्रिप्ट को बनाया नहीं गया है या लोड नहीं किया जा सकता है. कृपया अपने व्यवस्थापक से संपर्क करें.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>تعذر علينا تحميل سجلات البرنامج النصي للمندوب. يُرجى الاتصال بالمسؤول.</value>
+    <value>لم يتم إنشاء البرامج النصية للمندوبين أو تعذر تحميلها. الرجاء الاتصال بالمسؤول.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>我们无法加载代理脚本记录。请与您的管理员联系。</value>
+    <value>尚未创建或无法加载代理脚本。请与您的管理员联系。</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

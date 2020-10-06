@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Nous n'avons pas pu charger les enregistrements de script de l'agent. Contactez votre administrateur.</value>
+    <value>Les scripts des agents n’ont pas été créés ou n’ont pas pu être chargés. Veuillez contacter votre administrateur.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Не вдалося завантажити записи сценаріїв агентів. Зверніться до адміністратора.</value>
+    <value>Не створено або не вдалося завантажити сценарії агентів. Зверніться до свого адміністратора.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

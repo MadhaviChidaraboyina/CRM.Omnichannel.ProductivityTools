@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Kami tidak dapat memuatkan rekod skrip ejen. Sila hubungi pentadbir anda.</value>
+    <value>Skrip ejen belum dicipta atau tidak dapat dimuatkan. Sila hubungi pentadbir anda.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

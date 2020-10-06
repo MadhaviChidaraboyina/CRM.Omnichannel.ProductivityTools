@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>No hem pogut carregar els registres de l'script de l'agent. Poseu-vos en contacte amb el vostre administrador.</value>
+    <value>No s’han creat scripts d’agents o no s’han pogut carregar. Poseu-vos en contacte amb l’administrador.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

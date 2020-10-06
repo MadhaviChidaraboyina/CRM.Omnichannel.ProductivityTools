@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Kami tidak dapat memuat rekaman skrip agen. Hubungi admin Anda.</value>
+    <value>Skrip agen belum dibuat atau tidak dapat dimuat. Hubungi administrator Anda.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

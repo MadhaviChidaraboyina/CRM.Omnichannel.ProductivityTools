@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Nevarēja ielādēt aģenta skripta ierakstus. Lūdzu, sazinieties ar administratoru.</value>
+    <value>Aģentu skripti nav izveidoti vai netika ielādēti. Lūdzu, sazinieties ar administratoru.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

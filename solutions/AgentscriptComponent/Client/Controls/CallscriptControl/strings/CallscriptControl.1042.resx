@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>에이전트 스크립트 레코드를 로드할 수 없습니다. 관리자에게 문의하십시오.</value>
+    <value>에이전트 스크립트를 만들지 않았거나 로드할 수 없습니다. 관리자에게 문의하세요.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

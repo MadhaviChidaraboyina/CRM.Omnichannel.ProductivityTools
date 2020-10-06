@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Non se puideron cargar os rexistros de script de axente. Póñase en contacto co administrador.</value>
+    <value>Os scripts dos axentes non se crearon ou non se puideron cargar. Póñase en contacto co administrador.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

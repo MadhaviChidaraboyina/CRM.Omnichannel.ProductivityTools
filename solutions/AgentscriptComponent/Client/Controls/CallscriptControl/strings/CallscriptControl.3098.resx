@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Нисмо могли да учитамо записе скрипте агента. Обратите се администратору.</value>
+    <value>Скрипте за агенте нису креиране или их није могуће учитати. Обратите се администратору.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

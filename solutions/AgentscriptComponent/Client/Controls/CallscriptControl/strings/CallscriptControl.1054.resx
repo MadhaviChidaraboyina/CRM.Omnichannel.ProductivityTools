@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>เราไม่สามารถโหลดเรกคอร์ดของสคริปต์ตัวแทน โปรดติดต่อผู้ดูแลระบบของคุณ</value>
+    <value>ยังไม่มีการสร้างหรือไม่สามารถโหลดสคริปต์ตัวแทน โปรดติดต่อผู้ดูแลระบบของคุณ</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

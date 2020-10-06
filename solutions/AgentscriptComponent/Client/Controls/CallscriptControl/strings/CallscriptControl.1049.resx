@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Не удалось загрузить записи скрипта агента. Обратитесь к администратору.</value>
+    <value>Скрипты агентов не созданы, или их не удалось загрузить. Обратитесь к администратору.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

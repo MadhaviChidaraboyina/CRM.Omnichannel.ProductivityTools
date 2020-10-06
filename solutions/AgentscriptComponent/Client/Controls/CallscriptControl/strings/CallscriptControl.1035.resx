@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Asiakaspalvelijan komentosarjatietueita ei voitu ladata. Ota yhteyttä järjestelmänvalvojaan.</value>
+    <value>Asiakaspalvelijoiden komentosarjoja ei ole luotu tai niitä ei voitu ladata. Ota yhteyttä järjestelmänvalvojaan.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

@@ -162,7 +162,7 @@
     <comment>When text instruction step failed</comment>
   </data>
   <data name="InitialScriptDataLoadFailure" xml:space="preserve">
-    <value>Nepodařilo se načíst záznamy skriptu agenta. Kontaktujte svého správce.</value>
+    <value>Skripty agentů nebyly vytvořeny nebo je nebylo možné načíst. Obraťte se na správce.</value>
     <comment>Generic error message when initial script data load fails</comment>
   </data>
   <data name="LoadButtonLabel" xml:space="preserve">

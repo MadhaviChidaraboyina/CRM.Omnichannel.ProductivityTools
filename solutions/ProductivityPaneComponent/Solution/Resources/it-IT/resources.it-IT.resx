@@ -416,6 +416,10 @@
     <value />
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_data' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_defaulticon" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_defaulticon' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_description" xml:space="preserve">
     <value />
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_description' on Entity</comment>
@@ -723,6 +727,10 @@
   <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_data" xml:space="preserve">
     <value>Dati</value>
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_data' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_defaulticon" xml:space="preserve">
+    <value>Icona predefinita</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_defaulticon' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_description" xml:space="preserve">
     <value>Descrizione</value>
