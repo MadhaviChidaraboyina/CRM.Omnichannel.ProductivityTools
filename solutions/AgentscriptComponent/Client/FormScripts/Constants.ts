@@ -37,6 +37,6 @@ module AgentScriptPackage
 		public static RequiredLevel = "required";
         public static OptionalLevel = "none";
         public static RecordIdParam = "record_Id";
-        public static CreateMacrosDialog = "CreateMacrosMDD";
+        public static CreateMacrosDialog = "CreateMacrosMDD_v2";
 	}
 }
