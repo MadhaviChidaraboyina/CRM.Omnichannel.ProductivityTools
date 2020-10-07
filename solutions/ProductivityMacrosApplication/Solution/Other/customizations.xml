@@ -13,6 +13,15 @@
   <WebResources/>
   <EntityDataProviders />
   <msdyn_msdyn_prod_actioninputparameter_msdyn_parset>
+    <msdyn_msdyn_prod_actioninputparameter_msdyn_par msdyn_productivityactioninputparameterid.msdyn_uniquename="msdyn_Resolve_Case_Input_Mandatory" msdyn_productivityparameterdefinitionid.msdyn_uniquename="msdyn_BillableTime">
+      <iscustomizable>1</iscustomizable>
+    </msdyn_msdyn_prod_actioninputparameter_msdyn_par>
+    <msdyn_msdyn_prod_actioninputparameter_msdyn_par msdyn_productivityactioninputparameterid.msdyn_uniquename="msdyn_Resolve_Case_Input_Mandatory" msdyn_productivityparameterdefinitionid.msdyn_uniquename="msdyn_IncidentId">
+      <iscustomizable>1</iscustomizable>
+    </msdyn_msdyn_prod_actioninputparameter_msdyn_par>
+    <msdyn_msdyn_prod_actioninputparameter_msdyn_par msdyn_productivityactioninputparameterid.msdyn_uniquename="msdyn_Resolve_Case_Input_Mandatory" msdyn_productivityparameterdefinitionid.msdyn_uniquename="msdyn_Resolution">
+      <iscustomizable>1</iscustomizable>
+    </msdyn_msdyn_prod_actioninputparameter_msdyn_par>  
     <msdyn_msdyn_prod_actioninputparameter_msdyn_par msdyn_productivityactioninputparameterid.msdyn_uniquename="msdyn_Open_Grid_Input_Params_Optional" msdyn_productivityparameterdefinitionid.msdyn_uniquename="msdyn_ViewId">
       <iscustomizable>1</iscustomizable>
     </msdyn_msdyn_prod_actioninputparameter_msdyn_par>
