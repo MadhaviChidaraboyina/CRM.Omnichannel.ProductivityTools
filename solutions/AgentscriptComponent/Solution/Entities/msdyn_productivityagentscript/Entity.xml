@@ -915,6 +915,7 @@
       <CanEnableSyncToExternalSearchIndex>1</CanEnableSyncToExternalSearchIndex>
       <EnforceStateTransitions>0</EnforceStateTransitions>
       <CanChangeHierarchicalRelationship>1</CanChangeHierarchicalRelationship>
+      <IconVectorName>msdyn_agentscriptcomponent_icon.svg</IconVectorName>
       <EntityHelpUrlEnabled>0</EntityHelpUrlEnabled>
       <ChangeTrackingEnabled>0</ChangeTrackingEnabled>
       <CanChangeTrackingBeEnabled>1</CanChangeTrackingBeEnabled>
