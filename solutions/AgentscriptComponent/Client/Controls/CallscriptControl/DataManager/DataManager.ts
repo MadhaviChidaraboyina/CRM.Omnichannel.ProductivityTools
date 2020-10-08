@@ -447,7 +447,7 @@ module MscrmControls.Callscript
         }
 
         private insertIdentifierForSlugs(callScriptString: string): string {
-            let matches = callScriptString.match(new RegExp(new RegExp("\\{[^{]*\\}|\\{(?:[^{]*\\{[^}]*\\}[^{}]*)*\\}|\\$\{[^{]*\\}|\\$\{(?:[^{]*\\{[^}]*\\}[^{}]*)*\\}", "g"));
+            let matches = callScriptString.match(new RegExp("\\{[^{]*?\\}|\\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}|\\$\{[^{]*?\\}|\\$\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}", "g"));
             if (matches != null) {
                 matches.forEach(function (query) {
                     callScriptString = callScriptString.replace(query, "[" + query + "]");
