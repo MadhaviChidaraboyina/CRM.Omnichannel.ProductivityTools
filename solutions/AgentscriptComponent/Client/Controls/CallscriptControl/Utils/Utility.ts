@@ -61,7 +61,7 @@ module MscrmControls.Callscript {
         public static replaceUnresolvedSlugs(header: string): string {
             let resolvedString = header;
 
-            resolvedString = resolvedString.replace(/[/[/]]/g, Callscript.Constants.OdataError);
+            resolvedString = resolvedString.replace(/[[]]/g, Callscript.Constants.OdataError);
 
             return resolvedString;
         }
