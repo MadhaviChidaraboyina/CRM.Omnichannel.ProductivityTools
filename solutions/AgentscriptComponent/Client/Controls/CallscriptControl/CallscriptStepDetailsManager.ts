@@ -206,8 +206,7 @@ module MscrmControls.Callscript {
 		 */
 		private getStepDescriptionContainer(step: CallScriptStep) {
 			// This will be changed to return step descrption as per updated UX specs
-            let formattedString = Utility.replaceUnresolvedSlugs(step.action.getResolvedTextInstruction());
-            let formattedLabel = Utility.formattedStringDisplay(this.context, formattedString, step.id, true);
+            let formattedLabel = Utility.formattedStringDisplay(this.context, step.action.getResolvedTextInstruction(), step.id, true);
 
 			return this.context.factory.createElement("CONTAINER", {
 				key: "CallScriptStepDescription-" + step.id + "-Key",
@@ -221,8 +220,7 @@ module MscrmControls.Callscript {
 		 * @param step step object whose description is contained in returned container
 		 */
         private getTextInstructionContainer(step: CallScriptStep) {
-            let formattedString = Utility.replaceUnresolvedSlugs(step.action.getResolvedTextInstruction());
-            let formattedLabel = Utility.formattedStringDisplay(this.context, formattedString, step.id, true);
+            let formattedLabel = Utility.formattedStringDisplay(this.context, step.action.getResolvedTextInstruction(), step.id, true);
 
 			return this.context.factory.createElement("CONTAINER", {
 				key: "CallScriptStepDescription-" + step.id + "-Key",

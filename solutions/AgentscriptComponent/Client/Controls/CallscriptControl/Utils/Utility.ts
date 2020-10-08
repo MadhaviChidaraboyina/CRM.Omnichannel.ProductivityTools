@@ -61,15 +61,7 @@ module MscrmControls.Callscript {
         public static replaceUnresolvedSlugs(header: string): string {
             let resolvedString = header;
 
-            if (resolvedString.includes("$odata")) {
-                let matches = header.match(new RegExp("\\{[^{]*?\\}|\\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}|\\$\{[^{]*?\\}|\\$\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}", "g"));
-
-                matches.forEach((query) => {
-                    if (query.includes("odata")) {
-                        resolvedString = resolvedString.replace(query, Constants.OdataError);
-                    }
-                });
-            }
+            resolvedString = resolvedString.replace(/[/[/]]/g, Callscript.Constants.OdataError);
 
             return resolvedString;
         }
@@ -79,6 +71,7 @@ module MscrmControls.Callscript {
 		 */
         public static formattedStringDisplay(context: Mscrm.ControlData<IInputBag>, stepString: string, stepId: string, showIcon, highlightError: boolean = true): any {
             var stepLabelComponents = [];
+            stepString = stepString.replace(/(\[)|(\])/g, "");
             let headerList = stepString.split(Constants.OdataError);
             var slugResolutionErrorIcon = context.factory.createElement("CONTAINER", {
                 key: "CallScriptStepResolutionErrorIcon-" + stepId + "-Key",

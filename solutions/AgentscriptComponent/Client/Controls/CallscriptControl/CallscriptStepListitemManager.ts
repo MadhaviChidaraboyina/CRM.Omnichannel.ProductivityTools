@@ -314,7 +314,7 @@ module MscrmControls.Callscript {
             if (formattedString.includes(Constants.OdataError)) {
                 hasHeaderSlugResolutionFailed = true;
             }
-            stepLabelComponents.push(hasHeaderSlugResolutionFailed ? formattedLabel : formattedString);
+            stepLabelComponents.push(formattedLabel);
 
 			var stepLabelContainer = this.context.factory.createElement("CONTAINER", {
 				key: "CallScriptStepLabelContainer-" + step.id + "-Key",
