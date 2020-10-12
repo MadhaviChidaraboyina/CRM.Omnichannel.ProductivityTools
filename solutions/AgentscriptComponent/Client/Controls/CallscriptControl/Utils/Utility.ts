@@ -69,7 +69,7 @@ module MscrmControls.Callscript {
         /**
 		 * formatted string with error message
 		 */
-        public static formattedStringDisplay(context: Mscrm.ControlData<IInputBag>, stepString: string, stepId: string, showIcon, highlightError: boolean = true): any {
+        public static formattedStringDisplay(context: Mscrm.ControlData<IInputBag>, stepString: string, stepId: string, showIcon: boolean, highlightError: boolean = true): any {
             var stepLabelComponents = [];
             stepString = stepString.replace(/(\[)|(\])/g, "");
             let headerList = stepString.split(Constants.OdataError);
@@ -103,10 +103,7 @@ module MscrmControls.Callscript {
                         {
                             id: "CallScriptLabelError-" + stepId + "-Id-" + index,
                             key: "CallScriptLabelError-" + stepId + "-Key-" + index,
-                            style: {
-                                color: highlightError ? "#A80000" : "none",
-                                display: "contents"
-                            }
+                            style: ControlStyle.getSlugResolutionErrorMessageLabel(highlightError)
                         }, context.resources.getString(LocalizedStrings.SlugResolutionErrorMessage));
 
                     let errorMessageContainer = context.factory.createElement("CONTAINER", {

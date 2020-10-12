@@ -373,5 +373,12 @@ module MscrmControls.Callscript {
                 "padding-right": "6px"
             };
         }
+
+        public static getSlugResolutionErrorMessageLabel(highlightError: boolean) {
+            return {
+                color: highlightError ? "#A80000" : "none",
+                display: "contents"
+            };
+        }
 	}
 }

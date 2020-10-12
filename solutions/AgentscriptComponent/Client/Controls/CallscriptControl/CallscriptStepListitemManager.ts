@@ -340,14 +340,15 @@ module MscrmControls.Callscript {
 				style: ControlStyle.getProgressIconStyle(this.context)
             }, []);
 
-            var slugResolutionErrorIcon = this.context.factory.createElement("CONTAINER", {
-                key: "CallScriptStepResolutionErrorIcon-" + step.id + "-Key",
-                id: "CallScriptStepResolutionErrorIcon-" + step.id + "-Id",
-                style: ControlStyle.getSlugResolutionErrorIcon(this.context)
-            }, []); 
-
             let stepListItemComponents: Mscrm.Component[] = [arrowIcon, stepLabelContainer];
+
             if (hasHeaderSlugResolutionFailed || hasDescriptionSlugResolutionFailed) {
+                var slugResolutionErrorIcon = this.context.factory.createElement("CONTAINER", {
+                    key: "CallScriptStepResolutionErrorIcon-" + step.id + "-Key",
+                    id: "CallScriptStepResolutionErrorIcon-" + step.id + "-Id",
+                    style: ControlStyle.getSlugResolutionErrorIcon(this.context)
+                }, []); 
+
                 stepListItemComponents.push(slugResolutionErrorIcon);
             }
 
