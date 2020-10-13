@@ -70,35 +70,35 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\..\drop\debug\amd64\Solutions\msdyn_ProductivityPaneComponent_managed.cab">
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityPaneComponent_managed.cab">
       <Link>ProductivityToolsComponent\msdyn_ProductivityPaneComponent_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\..\drop\debug\amd64\Solutions\msdyn_AgentscriptComponent_managed.cab">
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_AgentscriptComponent_managed.cab">
       <Link>ProductivityToolsComponent\msdyn_AgentscriptComponent_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\..\drop\debug\amd64\Solutions\msdyn_ProductivityMacrosComponent_managed.cab">
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityMacrosComponent_managed.cab">
       <Link>ProductivityToolsComponent\ProductivityMacrosComponent_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\..\drop\debug\amd64\Solutions\msdyn_ProductivityMacrosComponent_managed.cab">
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityMacrosComponent_managed.cab">
       <Link>ProductivityToolsComponent\msdyn_ProductivityMacrosComponent_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\..\drop\debug\amd64\Solutions\msdyn_ProductivityMacrosApplication_managed.cab">
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityMacrosApplication_managed.cab">
       <Link>ProductivityToolsComponent\msdyn_ProductivityMacrosApplication_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\..\drop\debug\amd64\Solutions\msdyn_ProductivityMacrosApplicationOC_managed.cab">
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityMacrosApplicationOC_managed.cab">
       <Link>ProductivityToolsComponent\msdyn_ProductivityMacrosApplicationOC_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\..\drop\debug\amd64\Solutions\msdyn_smartassist_managed.cab">
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_smartassist_managed.cab">
       <Link>ProductivityToolsComponent\msdyn_smartassist_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\..\drop\debug\amd64\Solutions\msdyn_ProductivityToolsAnchor_managed.zip">
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityToolsAnchor_managed.zip">
       <Link>ProductivityToolsComponent\msdyn_ProductivityToolsAnchor_managed.zip</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
