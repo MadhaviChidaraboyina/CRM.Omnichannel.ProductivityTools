@@ -109,6 +109,7 @@
       <RootComponent type="61" schemaName="msdyn_AgentScriptStepComponentFormScript.js" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_AgentscriptComponentFormScript.js" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_agentscriptcomponent_icon.svg" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_slug_fail_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1033.resx" behavior="0" />
       <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1025.resx" behavior="0" />
       <RootComponent type="61" schemaName="Localization/msdyn_AgentscriptComponent.1026.resx" behavior="0" />

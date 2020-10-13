@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource>
+  <WebResourceId>{8767B84C-B973-49FF-8543-DD285CF9CD42}</WebResourceId>
+  <Name>msdyn_slug_fail_icon.svg</Name>
+  <DisplayName>Slug resolution fail icon</DisplayName>
+  <Description>Slug resolution fail icon</Description>
+  <LanguageCode>1033</LanguageCode>
+  <WebResourceType>11</WebResourceType>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <IsCustomizable>0</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/msdyn_slug_fail_iconsvg8767B84C-B973-49FF-8543-DD285CF9CD42</FileName>
+</WebResource>

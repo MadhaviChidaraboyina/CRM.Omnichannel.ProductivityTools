@@ -361,7 +361,7 @@ module MscrmControls.Callscript
 					let actionType: number = entityRecord[AgentScriptStepEntity.msdyn_actiontype];
 					let description: string = entityRecord[AgentScriptStepEntity.msdyn_description];
 					let stepAction = null;
-
+                    name = this.insertIdentifierForSlugs(name);
 					switch (actionType)
 					{
 						case AgentScriptStepActionType.TextAction:
@@ -373,6 +373,7 @@ module MscrmControls.Callscript
 								this.logFieldError("StepsDataParser", id, AgentScriptStepEntity.msdyn_textinstruction);
 							}
 
+                            textInstruction = this.insertIdentifierForSlugs(textInstruction);
                             stepAction = new TextAction(textInstruction);
 							break;
 
@@ -384,8 +385,9 @@ module MscrmControls.Callscript
 							if (this.context.utils.isNullOrUndefined(macroId))
 							{
 								this.logFieldError("StepsDataParser", id, AgentScriptStepEntity.msdyn_macroactionId);
-							}
+                            }
 
+                            macroDescription = this.insertIdentifierForSlugs(macroDescription);
                             stepAction = new MacroAction(macroId, macroName, macroDescription);
 							break;
 
@@ -442,8 +444,18 @@ module MscrmControls.Callscript
 				this.telemetryLogger.logError(this.telemetryContext, DataManagerComponents.StepsDataFetch, errorMessage, errorParam);
 			}
             return callScriptStepRecords;
-		}
+        }
 
+        private insertIdentifierForSlugs(callScriptString: string): string {
+            let matches = callScriptString.match(new RegExp("\\{[^{]*?\\}|\\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}|\\$\{[^{]*?\\}|\\$\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}", "g"));
+            if (matches != null) {
+                matches.forEach(function (query) {
+                    callScriptString = callScriptString.replace(query, "[" + query + "]");
+                });
+            }
+
+            return callScriptString;
+        }
 
 		/**
 		 * Logs error for attributes

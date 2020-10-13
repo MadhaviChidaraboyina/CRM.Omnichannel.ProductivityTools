@@ -298,7 +298,24 @@ module MscrmControls.Callscript {
 				margin: "4px",
 				padding: "6px 6px",
 			};
-		}
+        }
+
+        public static getSlugResolutionErrorIcon(context: Mscrm.ControlData<IInputBag>) {
+            let backgroundIconUrl = Utility.getIconUrl(context, Constants.slugFailedIcon);
+            let isRTL = context.client.isRTL;
+            return {
+                width: "17px",
+                height: "15px",
+                "background-image": "url(" + backgroundIconUrl + ")",
+                "background-repeat": "no-repeat",
+                "background-position": "center",
+                marginTop: "4px",
+                marginBottom: "4px",
+                marginLeft: "4px",
+                paddingTop: "6px",
+                paddingBottom: "6px",
+            };
+        }
 
 		public static getStepActionContainerStyle(isVisible: boolean, stepExecutionStatus: ExecutionStatus) {
 			let backgroundColor = (stepExecutionStatus === ExecutionStatus.Failed) ? "#F9F0EF" : "#F3F2F1";
@@ -341,6 +358,28 @@ module MscrmControls.Callscript {
 				marginRight: isRTL ? "24px" : "4px",
 				wordWrap: "break-word"
 			}
-		}
+        }
+
+        public static getSlugResolutionErrorMessageIcon(context: Mscrm.ControlData<IInputBag>) {
+            let backgroundIconUrl = Utility.getIconUrl(context, Constants.slugFailedIcon);
+            let isRTL = context.client.isRTL;
+            return {
+                "width": "15px",
+                "height": "15px",
+                "background-image": "url(" + backgroundIconUrl + ")",
+                "background-repeat": "no-repeat",
+                "background-position": "center",
+                "display": "inline-flex",
+                "margin": "-3px",
+                "padding-right": "6px"
+            };
+        }
+
+        public static getSlugResolutionErrorMessageLabel(highlightError: boolean) {
+            return {
+                color: highlightError ? "#A80000" : "none",
+                display: "contents"
+            };
+        }
 	}
 }
