@@ -232,7 +232,8 @@ module MscrmControls.Callscript {
 		 * @param currentScript script whose description container is returned
 		 */
         private getScriptDescriptionContainer(currentScript: CallScript): Mscrm.Component {
-            let formattedLabel = Callscript.Utility.formattedStringDisplay(this.context, currentScript.description, currentScript.id, true);
+            let formattedLabel = !this.context.utils.isNullOrUndefined(currentScript.description) ?
+                Callscript.Utility.formattedStringDisplay(this.context, currentScript.description, currentScript.id, true) : Constants.EmptyString;
 			var scriptDescriptionComponent = this.context.factory.createElement("TEXT", {
 				key: "CallScriptDescription-" + currentScript.id + "-Key",
 				id: "CallScriptDescription-" + currentScript.id + "-Id",

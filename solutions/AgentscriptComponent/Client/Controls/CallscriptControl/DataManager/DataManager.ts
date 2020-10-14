@@ -283,6 +283,21 @@ module MscrmControls.Callscript
 			});
 		}
 
+        public async resolveSlugValues(callScriptString: string, methodName: string): Promise<string> {
+                await this.macroUtil.resolveReplaceableParameters(callScriptString).then(
+                    (resolvedText) => {
+                        callScriptString = resolvedText;
+                    },
+                    (error) => {
+                        let errorMessage = "Failed to resolve slug";
+                        let eventParams = new EventParameters();
+                        eventParams.addParameter("callScriptString", callScriptString);
+                        eventParams.addParameter("message", "Error in resolving slugs");
+                        this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, eventParams);
+                    }
+            );
+            return callScriptString;
+        }
 		/**
 		 * Parse call script record from data response
 		 * @param entityRecord returned entity records
@@ -302,22 +317,11 @@ module MscrmControls.Callscript
                     errorMessage, eventParam);
                 return null;
             }
-            callScriptDescription = this.insertIdentifierForSlugs(callScriptDescription);
-
-            await this.macroUtil.resolveReplaceableParameters(callScriptDescription).then(
-                (resolvedText) => {
-                    callScriptDescription = resolvedText;
-                },
-                (error) => {
-                    let errorMessage = "Failed to resolve slug";
-                    let eventParams = new EventParameters();
-                    eventParams.addParameter("callScriptDescription", callScriptDescription);
-                    eventParams.addParameter("message", "Error in resolving text instruction for text step");
-                    this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, eventParams);
-                }
-            );
-
-            callScriptDescription = Callscript.Utility.replaceUnresolvedSlugs(callScriptDescription);
+            if (!Callscript.Utility.isNullOrUndefined(callScriptDescription)) {
+                callScriptDescription = this.insertIdentifierForSlugs(callScriptDescription);
+                callScriptDescription = await this.resolveSlugValues(callScriptDescription, methodName);
+                callScriptDescription = Callscript.Utility.replaceUnresolvedSlugs(callScriptDescription);
+            }
             let callScriptRecord = new CallScript(callScriptId, callScriptName, callScriptDescription, false, []);
             return callScriptRecord;
 		}
@@ -434,18 +438,7 @@ module MscrmControls.Callscript
 					}
 
                     await this.macroUtil.resolveInitMacroTemplate();
-                    await this.macroUtil.resolveReplaceableParameters(name).then(
-                        (resolvedText) => {
-                            name = resolvedText; 
-                        },
-                        (error) => {
-                            let errorMessage = "Failed to resolve slug";
-                            let eventParams = new EventParameters();
-                            eventParams.addParameter("stepId", id);
-                            eventParams.addParameter("message", "Error in resolving text instruction for text step");
-                            this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, eventParams);
-                        }
-                    );
+                    name = await this.resolveSlugValues(name, methodName);
              
                     let stepRecord = new CallScriptStep(id, name, order, description, stepAction, this.context);
                     callScriptStepRecords.push(stepRecord);
@@ -462,11 +455,13 @@ module MscrmControls.Callscript
         }
 
         private insertIdentifierForSlugs(callScriptString: string): string {
-            let matches = callScriptString.match(new RegExp("\\{[^{]*?\\}|\\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}|\\$\{[^{]*?\\}|\\$\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}", "g"));
-            if (matches != null) {
-                matches.forEach(function (query) {
-                    callScriptString = callScriptString.replace(query, "[" + query + "]");
-                });
+            if (!Callscript.Utility.isNullOrUndefined(callScriptString)) {
+                let matches = callScriptString.match(new RegExp("\\{[^{]*?\\}|\\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}|\\$\{[^{]*?\\}|\\$\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}", "g"));
+                if (matches != null) {
+                    matches.forEach(function (query) {
+                        callScriptString = callScriptString.replace(query, "[" + query + "]");
+                    });
+                }
             }
 
             return callScriptString;

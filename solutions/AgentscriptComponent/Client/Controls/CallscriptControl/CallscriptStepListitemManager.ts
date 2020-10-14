@@ -285,7 +285,7 @@ module MscrmControls.Callscript {
             let hasHeaderSlugResolutionFailed = false;
             let hasDescriptionSlugResolutionFailed = false;
 
-            if (step.action.getResolvedTextInstruction().includes(Constants.OdataError)) {
+            if (!this.context.utils.isNullOrUndefined(step.action.getResolvedTextInstruction()) && step.action.getResolvedTextInstruction().includes(Constants.OdataError)) {
                 hasDescriptionSlugResolutionFailed = true;
             }
 
@@ -310,8 +310,10 @@ module MscrmControls.Callscript {
             }
 
             let formattedString = Utility.replaceUnresolvedSlugs(step.name);
-            let formattedLabel = Utility.formattedStringDisplay(this.context, formattedString, step.id, false, !step.isExecuted);
-            if (formattedString.includes(Constants.OdataError)) {
+            let formattedLabel = !this.context.utils.isNullOrUndefined(formattedString) ?
+                Utility.formattedStringDisplay(this.context, formattedString, step.id, false, !step.isExecuted) : Constants.EmptyString;
+
+            if (!this.context.utils.isNullOrUndefined(formattedString) && formattedString.includes(Constants.OdataError)) {
                 hasHeaderSlugResolutionFailed = true;
             }
             stepLabelComponents.push(formattedLabel);
