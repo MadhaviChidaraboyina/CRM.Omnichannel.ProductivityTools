@@ -317,10 +317,10 @@ module MscrmControls.Callscript
                     errorMessage, eventParam);
                 return null;
             }
-            if (!Callscript.Utility.isNullOrUndefined(callScriptDescription)) {
+            if (!this.context.utils.isNullOrUndefined(callScriptDescription)) {
                 callScriptDescription = this.insertIdentifierForSlugs(callScriptDescription);
                 callScriptDescription = await this.resolveSlugValues(callScriptDescription, methodName);
-                callScriptDescription = Callscript.Utility.replaceUnresolvedSlugs(callScriptDescription);
+                callScriptDescription = Utility.replaceUnresolvedSlugs(callScriptDescription);
             }
             let callScriptRecord = new CallScript(callScriptId, callScriptName, callScriptDescription, false, []);
             return callScriptRecord;
@@ -455,7 +455,7 @@ module MscrmControls.Callscript
         }
 
         private insertIdentifierForSlugs(callScriptString: string): string {
-            if (!Callscript.Utility.isNullOrUndefined(callScriptString)) {
+            if (!this.context.utils.isNullOrUndefined(callScriptString)) {
                 let matches = callScriptString.match(new RegExp("\\{[^{]*?\\}|\\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}|\\$\{[^{]*?\\}|\\$\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}", "g"));
                 if (matches != null) {
                     matches.forEach(function (query) {
