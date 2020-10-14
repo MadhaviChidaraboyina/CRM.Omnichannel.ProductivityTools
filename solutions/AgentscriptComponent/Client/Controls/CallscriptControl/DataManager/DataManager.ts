@@ -145,9 +145,9 @@ module MscrmControls.Callscript
 				let dataFetchPromise = this.context.webAPI.retrieveMultipleRecords(AgentScriptEntity.entityName, fetchXmlQuery);
 
 				dataFetchPromise.then(
-					(dataResponse: any) => {
+					async (dataResponse: any) => {
 						let entityRecords: WebApi.Entity[] = dataResponse.entities;
-						let callscriptRecords = this.parseCallscriptData(entityRecords);
+						let callscriptRecords = await this.parseCallscriptData(entityRecords);
 
 						this.isInitialDataFetchCompleted = true
 
@@ -229,8 +229,8 @@ module MscrmControls.Callscript
 				let callscriptRecordPromise = this.context.webAPI.retrieveRecord(AgentScriptEntity.entityName, callscriptId);
 
 				callscriptRecordPromise.then(
-					(dataResponse: WebApi.Entity) => {
-						let callscriptRecord = this.parseCallscriptRecord(dataResponse);
+					async (dataResponse: WebApi.Entity) => {
+						let callscriptRecord = await this.parseCallscriptRecord(dataResponse);
 
 						if (this.context.utils.isNullOrUndefined(callscriptRecord))
 						{
@@ -283,35 +283,54 @@ module MscrmControls.Callscript
 			});
 		}
 
+        public async resolveSlugValues(callScriptString: string, methodName: string): Promise<string> {
+                await this.macroUtil.resolveReplaceableParameters(callScriptString).then(
+                    (resolvedText) => {
+                        callScriptString = resolvedText;
+                    },
+                    (error) => {
+                        let errorMessage = "Failed to resolve slug";
+                        let eventParams = new EventParameters();
+                        eventParams.addParameter("callScriptString", callScriptString);
+                        eventParams.addParameter("message", "Error in resolving slugs");
+                        this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, eventParams);
+                    }
+            );
+            return callScriptString;
+        }
 		/**
 		 * Parse call script record from data response
 		 * @param entityRecord returned entity records
 		 */
-		private parseCallscriptRecord(entityRecord: WebApi.Entity): CallScript
+		private async parseCallscriptRecord(entityRecord: WebApi.Entity): Promise<CallScript>
 		{
-			let callScriptId = entityRecord[AgentScriptEntity.msdyn_agentscriptId];
-			let callScriptName = entityRecord[AgentScriptEntity.msdyn_name];
-			let callScriptDescription = entityRecord[AgentScriptEntity.msdyn_description];
+            const methodName = "parseCallscriptRecord";
+            let callScriptId = entityRecord[AgentScriptEntity.msdyn_agentscriptId];
+            let callScriptName = entityRecord[AgentScriptEntity.msdyn_name];
+            let callScriptDescription = entityRecord[AgentScriptEntity.msdyn_description];
 
-			if (this.context.utils.isNullOrUndefined(callScriptId))
-			{
-				let errorMessage = "Error parsing call script record";
-				let eventParam = new EventParameters();
-				eventParam.addParameter("scenario", "ParseCallscriptRecord");
-				this.telemetryLogger.logError(this.telemetryContext, DataManagerComponents.CallscriptRecordFetch,
-					errorMessage, eventParam);
-				return null;
-			}
-
-			let callScriptRecord = new CallScript(callScriptId, callScriptName, callScriptDescription, false, []);
-			return callScriptRecord;
+            if (this.context.utils.isNullOrUndefined(callScriptId)) {
+                let errorMessage = "Error parsing call script record";
+                let eventParam = new EventParameters();
+                eventParam.addParameter("scenario", "ParseCallscriptRecord");
+                this.telemetryLogger.logError(this.telemetryContext, DataManagerComponents.CallscriptRecordFetch,
+                    errorMessage, eventParam);
+                return null;
+            }
+            if (!this.context.utils.isNullOrUndefined(callScriptDescription)) {
+                callScriptDescription = this.insertIdentifierForSlugs(callScriptDescription);
+                callScriptDescription = await this.resolveSlugValues(callScriptDescription, methodName);
+                callScriptDescription = Utility.replaceUnresolvedSlugs(callScriptDescription);
+            }
+            let callScriptRecord = new CallScript(callScriptId, callScriptName, callScriptDescription, false, []);
+            return callScriptRecord;
 		}
 
 		/**
 		 * Parse call script records
 		 * @param entityRecords retrieved entity records
 		 */
-		private parseCallscriptData(entityRecords: WebApi.Entity[]): CallScript[]
+		private async parseCallscriptData(entityRecords: WebApi.Entity[]): Promise<CallScript[]>
 		{
 			let callScriptRecords: CallScript[] = [];
 			try
@@ -319,7 +338,7 @@ module MscrmControls.Callscript
 				for (let i = 0; i < entityRecords.length; i++)
 				{
 					let entityRecord = entityRecords[i];
-					let callScriptRecord = this.parseCallscriptRecord(entityRecord);
+					let callScriptRecord = await this.parseCallscriptRecord(entityRecord);
 
 					if (this.context.utils.isNullOrUndefined(callScriptRecord))
 					{
@@ -419,18 +438,7 @@ module MscrmControls.Callscript
 					}
 
                     await this.macroUtil.resolveInitMacroTemplate();
-                    await this.macroUtil.resolveReplaceableParameters(name).then(
-                        (resolvedText) => {
-                            name = resolvedText; 
-                        },
-                        (error) => {
-                            let errorMessage = "Failed to resolve slug";
-                            let eventParams = new EventParameters();
-                            eventParams.addParameter("stepId", id);
-                            eventParams.addParameter("message", "Error in resolving text instruction for text step");
-                            this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, eventParams);
-                        }
-                    );
+                    name = await this.resolveSlugValues(name, methodName);
              
                     let stepRecord = new CallScriptStep(id, name, order, description, stepAction, this.context);
                     callScriptStepRecords.push(stepRecord);
@@ -447,11 +455,13 @@ module MscrmControls.Callscript
         }
 
         private insertIdentifierForSlugs(callScriptString: string): string {
-            let matches = callScriptString.match(new RegExp("\\{[^{]*?\\}|\\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}|\\$\{[^{]*?\\}|\\$\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}", "g"));
-            if (matches != null) {
-                matches.forEach(function (query) {
-                    callScriptString = callScriptString.replace(query, "[" + query + "]");
-                });
+            if (!this.context.utils.isNullOrUndefined(callScriptString)) {
+                let matches = callScriptString.match(new RegExp("\\{[^{]*?\\}|\\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}|\\$\{[^{]*?\\}|\\$\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}", "g"));
+                if (matches != null) {
+                    matches.forEach(function (query) {
+                        callScriptString = callScriptString.replace(query, "[" + query + "]");
+                    });
+                }
             }
 
             return callScriptString;
