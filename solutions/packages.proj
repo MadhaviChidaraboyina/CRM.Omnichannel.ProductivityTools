@@ -9,6 +9,7 @@
 		<ProjectToBuild Include="Agentscript\packages.proj" />
 		<ProjectToBuild Include="AgentscriptComponent\packages.proj" />
 		<ProjectToBuild Include="ProductivityTools\packages.proj" />
+		<ProjectToBuild Include="ProductivityPaneComponent\packages.proj" />
   </ItemGroup>
 	<Target Name="Clean">
 		<MSBuild Projects="@(ProjectToBuild)" Targets="Clean" />
