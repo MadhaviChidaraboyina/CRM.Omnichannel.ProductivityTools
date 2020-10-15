@@ -284,6 +284,7 @@ module MscrmControls.Callscript
 		}
 
         public async resolveSlugValues(callScriptString: string, methodName: string): Promise<string> {
+                await this.macroUtil.resolveInitMacroTemplate();
                 await this.macroUtil.resolveReplaceableParameters(callScriptString).then(
                     (resolvedText) => {
                         callScriptString = resolvedText;
@@ -413,13 +414,15 @@ module MscrmControls.Callscript
 						case AgentScriptStepActionType.RouteAction:
 							let scriptId = entityRecord[AgentScriptStepEntity.msdyn_routeactionId];
 							let scriptName = entityRecord[AgentScriptStepEntity.msdyn_routeactionName];
+                            let scriptDescription = description;
 
 							if (this.context.utils.isNullOrUndefined(scriptId))
 							{
 								this.logFieldError("StepsDataParser", id, AgentScriptStepEntity.msdyn_routeactionId);
-							}
+                            }
 
-							stepAction = new RouteAction(scriptId, scriptName);
+                            scriptDescription = this.insertIdentifierForSlugs(scriptDescription);
+                            stepAction = new RouteAction(scriptId, scriptName, scriptDescription);
 							break;
 
 						default:
@@ -437,7 +440,6 @@ module MscrmControls.Callscript
 							break;
 					}
 
-                    await this.macroUtil.resolveInitMacroTemplate();
                     name = await this.resolveSlugValues(name, methodName);
              
                     let stepRecord = new CallScriptStep(id, name, order, description, stepAction, this.context);

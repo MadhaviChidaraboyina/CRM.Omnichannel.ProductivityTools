@@ -122,12 +122,16 @@ module MscrmControls.Callscript {
 	 */
 	export class RouteAction extends CallScriptAction {
 		public routeCallscriptId: string;
-		private routeCallscriptName: string;
+        private routeCallscriptName: string;
+        public configuredTextInstruction: string;
+        public resolvedTextInstruction: string;
 
-		constructor(routeCallscriptId: string, routeCallscriptName: string) {
+		constructor(routeCallscriptId: string, routeCallscriptName: string, scriptDescription: string) {
 			super(CallscriptActionType.ReRouteAction);
 			this.routeCallscriptId = routeCallscriptId;
-			this.routeCallscriptName = routeCallscriptName;
+            this.routeCallscriptName = routeCallscriptName;
+            this.configuredTextInstruction = scriptDescription;
+            this.resolvedTextInstruction = scriptDescription;
 		}
 
 		/**
@@ -189,6 +193,19 @@ module MscrmControls.Callscript {
 					resolve();
 				}
 			});
-		}
+        }
+
+        public resolveInstructionText(macroUtil: MacroUtil): Promise<string> {
+            macroUtil.resolveInitMacroTemplate();
+            return macroUtil.resolveReplaceableParameters(this.configuredTextInstruction);
+        }
+
+        public getResolvedTextInstruction(): string {
+            return this.resolvedTextInstruction;
+        }
+
+        public setResolvedInstructionText(resolvedText: string): void {
+            this.resolvedTextInstruction = resolvedText;
+        }
 	}
 }

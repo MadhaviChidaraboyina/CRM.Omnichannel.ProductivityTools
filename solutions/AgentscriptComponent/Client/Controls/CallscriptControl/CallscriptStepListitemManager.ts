@@ -43,7 +43,9 @@ module MscrmControls.Callscript {
 				this.expandedStepId = Constants.EmptyString;
 			}
             else {
-                if (stepToExpand.action.actionType === CallscriptActionType.TextAction || stepToExpand.action.actionType === CallscriptActionType.MacroAction) {
+                if (stepToExpand.action.actionType === CallscriptActionType.TextAction ||
+                    stepToExpand.action.actionType === CallscriptActionType.MacroAction ||
+                    stepToExpand.action.actionType === CallscriptActionType.ReRouteAction) {
                     stepToExpand.action.resolveInstructionText(this.macroUtil).then(
                         (resolvedInstructionText) => {
                             let formattedText = Utility.replaceUnresolvedSlugs(resolvedInstructionText);
