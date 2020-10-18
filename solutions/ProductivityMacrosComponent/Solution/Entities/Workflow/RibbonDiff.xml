@@ -24,7 +24,9 @@
 					TemplateAlias="o1" 
 					LabelText="$LocLabels:workflow.HomePageGrid.New.Button.LabelText" 
 					ToolTipTitle="$LocLabels:workflow.HomePageGrid.New.Button.ToolTipTitle" 
-					ToolTipDescription="$LocLabels:workflow.HomePageGrid.New.Button.ToolTipDesc" 
+					ToolTipDescription="$LocLabels:workflow.HomePageGrid.New.Button.ToolTipDesc"
+					Image32by32="/_imgs/ribbon/newrecord32.png" 
+					Image16by16="/_imgs/ribbon/New_16.png"
 					ModernImage="New"
 				/>
 			</CommandUIDefinition>
