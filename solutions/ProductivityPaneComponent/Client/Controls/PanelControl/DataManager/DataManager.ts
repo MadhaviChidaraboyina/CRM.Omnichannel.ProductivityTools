@@ -33,8 +33,11 @@ module MscrmControls.PanelControl {
                            (response: any) => {
                                this.getToolsConfigData(response.entities[0].msdyn_msdyn_paneconfig_msdyn_tabconfig).then((toolsConfig) => {
                                    if (toolsConfig.length > 0) {
-                                       let productivityPane = new ProductivityPaneConfig(response.entities[0].msdyn_panestate, response.entities[0].msdyn_panemode, new ProductivityToolsConfig(toolsConfig));
-                                       resolve(productivityPane);
+                                       this.getToolsIconConfigData(toolsConfig).then((toolsConfig) => {
+                                           let productivityPane = new ProductivityPaneConfig(response.entities[0].msdyn_panestate, response.entities[0].msdyn_panemode, new ProductivityToolsConfig(toolsConfig));
+                                           resolve(productivityPane);
+                                       });
+
                                    } else {
                                        reject("No tools configured");
                                    }
@@ -107,10 +110,40 @@ module MscrmControls.PanelControl {
                             tabconfig[index].msdyn_uniquename,
                             tabconfig[index].msdyn_tooltip,
                             result.msdyn_data,
-                            result.msdyn_defaulticon)
+                            result.msdyn_defaulticon,
+                            new ToolIconConfig(false, false))
                         );
                     });
                     resolve(toolsList);
+                },
+                (error) => {
+                    let errorParam = new EventParameters();
+                    errorParam.addParameter("errorObj", JSON.stringify(error));
+                    this.telemetryLogger.logError(this.telemetryContext, methodName, error.message, errorParam);
+                    reject(error);
+                });
+            });
+        }
+
+        public getToolsIconConfigData(tabconfig: ToolConfig[]): Promise<ToolConfig[]> {
+            let methodName = 'getToolsConfigData';
+            return new Promise<ToolConfig[]>((resolve, reject) => {
+                let tPromises: Promise<any>[] = [];
+                tabconfig.forEach((tab) => {
+                    tPromises.push(this.isValidIconPath(tab.toolIcon));
+                    tPromises.push(this.isValidIconPath(tab.defaultIcon));
+                });
+                Promise.all(tPromises).then((results: any[]) => {
+                    var pos = 0;
+                    results.forEach((result: any, index: number) => {
+                        if (index % 2 == 0) {
+                            tabconfig[pos].toolIconConfig.toolIcon = result;
+                        } else {
+                            tabconfig[pos].toolIconConfig.defaultIcon = result;
+                            pos++;
+                        }
+                    });
+                    resolve(tabconfig);
                 },
                 (error) => {
                     let errorParam = new EventParameters();
@@ -157,7 +190,43 @@ module MscrmControls.PanelControl {
 			eventParam.addParameter("attribute", attribute);
 		}
 
-		
+        private isValidIconPath(iconPath: string): Promise<boolean> {
+            let methodName = "isValidIconPath";
+            try {
+                return new Promise<boolean>((resolve, reject) => {
+                    if (iconPath == null || iconPath.trim() == "") {
+                        resolve(false);
+                    } else {
+                        iconPath = iconPath.includes("WebResources") ? iconPath.replace("/WebResources/", "") : iconPath;
+                        let webResourceQuery = this.getWebResourceQuery(iconPath);
+                        let getIconPath = Xrm.WebApi.retrieveMultipleRecords("webresource", webResourceQuery);
+                        getIconPath.then((response: any) => {
+                            response.entities.length > 0 ? resolve(true) : resolve(false);
+                        },
+                        (error) => {
+                            resolve(false);
+                        })
+                    }
+                });
+            }
+            catch (error) {
+                return new Promise<boolean>((resolve, reject) => {
+                    let eventParams = new EventParameters();
+                    eventParams.addParameter("message", "Failed to validate icon path");
+                    this.telemetryLogger.logError(this.telemetryContext, methodName, error, eventParams);
+                    resolve(false);
+                })
+            }
+        }
+
+        public getWebResourceQuery(WebResourceName: string): string {
+            let query = String.format("?{0}{1} eq '{2}'",
+                QueryDataConstants.FilterOperator,
+                "name",
+                WebResourceName,
+            );
+            return query;
+        }
 
 	}
 }

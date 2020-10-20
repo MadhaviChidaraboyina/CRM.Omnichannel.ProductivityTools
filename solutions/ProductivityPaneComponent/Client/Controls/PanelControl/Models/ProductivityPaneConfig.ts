@@ -9,7 +9,7 @@ module MscrmControls.PanelControl {
 		// Attributes
 		public productivityPaneState: boolean;
         public productivityPaneMode: boolean;
-        public productivityToolsConfig: ProductivityToolsConfig
+        public productivityToolsConfig: ProductivityToolsConfig;
 
         constructor(productivityPaneState: boolean, productivityPaneMode: boolean, productivityToolsConfig: ProductivityToolsConfig) {
 			this.productivityPaneState = productivityPaneState;
