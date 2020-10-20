@@ -82,11 +82,6 @@ namespace PVSPackage
         /// <returns>Import action object</returns>
         public override UserRequestedImportAction OverrideSolutionImportDecision(string solutionUniqueName, Version organizationVersion, Version packageSolutionVersion, Version inboundSolutionVersion, Version deployedSolutionVersion, ImportAction systemSelectedImportAction)
         {
-            //Skipping install of OC macro solutions in case of OC not present
-            if (solutionUniqueName.Equals("msdyn_MacrosDataOmnichannel") && !IsSolutionInstalled("OmnichannelBase"))
-            {
-                return UserRequestedImportAction.Skip;
-            }
             // Perform “Update” to the existing solution
             // instead of “Delete And Promote” when a new version
             // of an existing solution is detected.

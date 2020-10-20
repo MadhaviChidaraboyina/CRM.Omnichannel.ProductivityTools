@@ -23,6 +23,7 @@ solutions\AgentscriptComponent\Client\Controls\CallscriptControl\strings\Callscr
 solutions\AgentscriptComponent\Client\Localization\Languages\msdyn_AgentscriptComponent.1033.resx,AgentscriptComponent
 solutions\AgentscriptComponent\Solution\Resources\Assets\1033.json,AgentscriptComponent
 solutions\AgentscriptComponent\Solution\Resources\en-US\resources.en-US.resx,AgentscriptComponent
+solutions\Anchors\AgentProductivityTools\Solution\Resources\en-US\resources.en-US.resx,Anchors\AgentProductivityTools
 solutions\Anchors\ProductivityTools\Solution\Resources\en-US\resources.en-US.resx,Anchors
 solutions\OmnichannelProductivityToolsSettings\Solution\Resources\en-us\resources.en-US.resx,OmnichannelProductivityToolsSettings
 solutions\ProductivityMacros\Client\Controls\RunLinkControl\Strings\RunLinkControl.1033.resx,ProductivityMacros

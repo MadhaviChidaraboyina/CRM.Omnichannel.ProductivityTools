@@ -226,13 +226,14 @@ function Handle_Vesion_For_ProductivityToolAchor {
 	param(
 		[int] $commit,
 		[Object] $derivedVersion,
+		[string] $AnchorSolutionName,
 		[Object] $versionFile = ""
 	)
 		# this portion of code is written to handle version for ProductivityToolAchor - its version will be increased if there are any changes in (wsroot)/solutions/ProductivityTools
 		$baseSln= New-Object Solution
-		$baseSln.Name = "ProductivityTools"
-		$baseSln.Folder = $solutionsFolder + "\ProductivityTools"
-		$baseSln.SlnXML = $solutionsFolder + "\Anchors\ProductivityTools" +$solutionXmlPath
+		$baseSln.Name = $AnchorSolutionName
+		$baseSln.Folder = $solutionsFolder + $AnchorSolutionName
+		$baseSln.SlnXML = $solutionsFolder + "\Anchors\" + $AnchorSolutionName +$solutionXmlPath
 		$PatchFlagName = $record.EnvironmentVariableForPatching
 		
 		Write-Host $baseSln	
@@ -345,7 +346,8 @@ foreach ($record in $solutionDependencies) {
 	} #>		
 }
 
-Handle_Vesion_For_ProductivityToolAchor -commit $TotalCommits -derivedVersion $derivedBaseVersion -versionFile $versionFilePath
+Handle_Vesion_For_ProductivityToolAchor -commit $TotalCommits -derivedVersion $derivedBaseVersion -AnchorSolutionName "ProductivityTools" -versionFile $versionFilePath
+Handle_Vesion_For_ProductivityToolAchor -commit $TotalCommits -derivedVersion $derivedBaseVersion -AnchorSolutionName "AgentProductivityTools" -versionFile $versionFilePath
 
 	foreach($obj in $solutionObjects) {
 		Write-Host $obj.Name":" $obj.Version

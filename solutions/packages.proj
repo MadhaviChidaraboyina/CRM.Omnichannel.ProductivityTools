@@ -2,6 +2,7 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
 		<ProjectToBuild Include="Anchors\ProductivityTools\packages.proj" />
+		<ProjectToBuild Include="Anchors\AgentProductivityTools\packages.proj" />
 		<ProjectToBuild Include="ProductivityMacros\packages.proj" />
 		<ProjectToBuild Include="ProductivityMacrosComponent\packages.proj" />
 		<ProjectToBuild Include="ProductivityMacrosApplication\packages.proj" />

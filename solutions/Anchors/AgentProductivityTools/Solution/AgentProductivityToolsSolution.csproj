@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="$(WSRoot)\build\include\XRMSolutions.targets" />
+  <PropertyGroup>
+    <ProjectGuid>{3d3ea2f0-fe15-4797-ad12-1dd175480167}</ProjectGuid>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <NOTARGET>true</NOTARGET>
+    <SolutionProjectNamePrefix>AgentProductivityToolsAnchor</SolutionProjectNamePrefix>
+    <SolutionFileNamePrefix>msdyn_AgentProductivityToolsAnchor</SolutionFileNamePrefix>
+    <ApplicationFolder>$(WSRoot)\Solutions\Anchors\AgentProductivityTools</ApplicationFolder>
+    <SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
+    <PluginMapFile></PluginMapFile>
+    <SystemConverted>false</SystemConverted>
+    <ThrowsLocalizeError>true</ThrowsLocalizeError>
+	<SkipArtifactVersioning>True</SkipArtifactVersioning>
+	<MakeCab>false</MakeCab>
+  </PropertyGroup>
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
+  <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
+</Project>

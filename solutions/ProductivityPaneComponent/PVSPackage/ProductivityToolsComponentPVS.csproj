@@ -90,16 +90,12 @@
       <Link>ProductivityToolsComponent\msdyn_ProductivityMacrosApplication_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityMacrosApplicationOC_managed.cab">
-      <Link>ProductivityToolsComponent\msdyn_ProductivityMacrosApplicationOC_managed.cab</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_smartassist_managed.cab">
       <Link>ProductivityToolsComponent\msdyn_smartassist_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityToolsAnchor_managed.zip">
-      <Link>ProductivityToolsComponent\msdyn_ProductivityToolsAnchor_managed.zip</Link>
+    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_AgentProductivityToolsAnchor_managed.zip">
+      <Link>ProductivityToolsComponent\msdyn_AgentProductivityToolsAnchor_managed.zip</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ProductivityToolsComponent\Content\en-us\EndHtml\CSS\common.css">
