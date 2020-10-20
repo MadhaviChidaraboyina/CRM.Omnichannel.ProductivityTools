@@ -249,4 +249,8 @@
     <value>Geen relatieve agentscripts gevonden.</value>
     <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
+  <data name="SlugResolutionErrorMessage" xml:space="preserve">
+    <value>Ontbrekende entiteits-id in query</value>
+    <comment>Error message when there is a slug resolution error</comment>
+  </data>
 </root>

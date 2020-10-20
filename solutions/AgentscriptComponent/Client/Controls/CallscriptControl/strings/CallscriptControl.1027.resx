@@ -249,4 +249,8 @@
     <value>No s’ha trobat cap script d’agent relatiu.</value>
     <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
+  <data name="SlugResolutionErrorMessage" xml:space="preserve">
+    <value>Falta l’identificador de l’entitat a la consulta</value>
+    <comment>Error message when there is a slug resolution error</comment>
+  </data>
 </root>

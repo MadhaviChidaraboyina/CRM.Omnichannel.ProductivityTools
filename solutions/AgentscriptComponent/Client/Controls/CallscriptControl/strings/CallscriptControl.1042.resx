@@ -249,4 +249,8 @@
     <value>상대 에이전트 스크립트를 찾을 수 없습니다.</value>
     <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
+  <data name="SlugResolutionErrorMessage" xml:space="preserve">
+    <value>쿼리에 엔터티 ID가 없음</value>
+    <comment>Error message when there is a slug resolution error</comment>
+  </data>
 </root>

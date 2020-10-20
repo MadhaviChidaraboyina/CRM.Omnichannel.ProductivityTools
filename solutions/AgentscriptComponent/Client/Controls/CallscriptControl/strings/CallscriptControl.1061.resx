@@ -249,4 +249,8 @@
     <value>Ühtegi suhtelist agendiskripti ei leitud.</value>
     <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
+  <data name="SlugResolutionErrorMessage" xml:space="preserve">
+    <value>Päringus puudub olemi ID</value>
+    <comment>Error message when there is a slug resolution error</comment>
+  </data>
 </root>

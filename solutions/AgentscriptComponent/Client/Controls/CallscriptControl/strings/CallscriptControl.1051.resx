@@ -249,4 +249,8 @@
     <value>Nenašli sa žiadne relatívne skripty agentov.</value>
     <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
+  <data name="SlugResolutionErrorMessage" xml:space="preserve">
+    <value>V dotaze chýba ID entity</value>
+    <comment>Error message when there is a slug resolution error</comment>
+  </data>
 </root>

@@ -249,4 +249,8 @@
     <value>Liittyviä asiakaspalvelijan komentosarjoja ei löytynyt.</value>
     <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
+  <data name="SlugResolutionErrorMessage" xml:space="preserve">
+    <value>Kyselystä puuttuu entiteettitunnus</value>
+    <comment>Error message when there is a slug resolution error</comment>
+  </data>
 </root>

@@ -249,4 +249,8 @@
     <value>Не са намерени относителни скриптове на агент.</value>
     <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
+  <data name="SlugResolutionErrorMessage" xml:space="preserve">
+    <value>В заявката липсва ИД на обект</value>
+    <comment>Error message when there is a slug resolution error</comment>
+  </data>
 </root>

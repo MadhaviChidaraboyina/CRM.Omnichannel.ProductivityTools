@@ -249,4 +249,8 @@
     <value>Nenhum script de agente relativo encontrado.</value>
     <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
+  <data name="SlugResolutionErrorMessage" xml:space="preserve">
+    <value>A ID da entidade está ausente na consulta</value>
+    <comment>Error message when there is a slug resolution error</comment>
+  </data>
 </root>

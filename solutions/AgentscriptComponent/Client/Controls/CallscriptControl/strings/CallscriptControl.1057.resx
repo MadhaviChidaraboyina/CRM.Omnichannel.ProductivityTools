@@ -249,4 +249,8 @@
     <value>Tidak ada skrip agen relatif yang ditemukan.</value>
     <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
+  <data name="SlugResolutionErrorMessage" xml:space="preserve">
+    <value>ID entitas tidak ada dalam kueri</value>
+    <comment>Error message when there is a slug resolution error</comment>
+  </data>
 </root>

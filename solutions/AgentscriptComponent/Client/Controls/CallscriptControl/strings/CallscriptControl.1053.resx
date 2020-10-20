@@ -249,4 +249,8 @@
     <value>Inga relativa handläggarskript hittades.</value>
     <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
+  <data name="SlugResolutionErrorMessage" xml:space="preserve">
+    <value>Entitets-ID saknas i frågan</value>
+    <comment>Error message when there is a slug resolution error</comment>
+  </data>
 </root>

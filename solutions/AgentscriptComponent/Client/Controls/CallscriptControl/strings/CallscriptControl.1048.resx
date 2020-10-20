@@ -249,4 +249,8 @@
     <value>Nu s-au găsit scripturi de agent relative.</value>
     <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
+  <data name="SlugResolutionErrorMessage" xml:space="preserve">
+    <value>ID-ul entității lipsește din interogare</value>
+    <comment>Error message when there is a slug resolution error</comment>
+  </data>
 </root>

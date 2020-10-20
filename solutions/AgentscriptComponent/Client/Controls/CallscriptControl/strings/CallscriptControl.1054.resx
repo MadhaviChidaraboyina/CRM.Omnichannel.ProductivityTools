@@ -249,4 +249,8 @@
     <value>ไม่พบสคริปต์ตัวแทนที่สัมพันธ์กัน</value>
     <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
+  <data name="SlugResolutionErrorMessage" xml:space="preserve">
+    <value>ไม่มีรหัสเอนทิตีในการสอบถาม</value>
+    <comment>Error message when there is a slug resolution error</comment>
+  </data>
 </root>

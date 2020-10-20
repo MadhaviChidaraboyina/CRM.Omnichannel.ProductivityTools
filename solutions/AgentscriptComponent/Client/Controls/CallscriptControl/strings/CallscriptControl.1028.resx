@@ -249,4 +249,8 @@
     <value>找不到任何相關的專員指令碼。</value>
     <comment>Error message when no relative agent scripts are linked with session template</comment>
   </data>
+  <data name="SlugResolutionErrorMessage" xml:space="preserve">
+    <value>查詢中缺少實體識別碼</value>
+    <comment>Error message when there is a slug resolution error</comment>
+  </data>
 </root>
