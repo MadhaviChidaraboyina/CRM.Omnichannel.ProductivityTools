@@ -566,7 +566,7 @@ module MscrmControls.PanelControl {
                                 //get productivity pane configuration data
                                 this.dataManager.getProductivityPaneConfigData(appConfigUniqueName).then(
                                     (configData: ProductivityPaneConfig) => {
-                                        this.dataManager.getToolsIconConfigData(configData.productivityToolsConfig.ToolsList).then((toolsConfig) => {
+                                        this.dataManager.validateToolsIconConfigData(configData.productivityToolsConfig.ToolsList).then((toolsConfig) => {
                                             configData.productivityToolsConfig.ToolsList = toolsConfig;
                                             this.productivityPaneConfigData = configData;
                                             this.eventManager.ProductivityPaneConfigData = this.productivityPaneConfigData;

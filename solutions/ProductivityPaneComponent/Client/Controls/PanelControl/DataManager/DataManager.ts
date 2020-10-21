@@ -121,7 +121,7 @@ module MscrmControls.PanelControl {
             });
         }
 
-        public getToolsIconConfigData(tabconfig: ToolConfig[]): Promise<ToolConfig[]> {
+        public validateToolsIconConfigData(tabconfig: ToolConfig[]): Promise<ToolConfig[]> {
             let methodName = 'getToolsConfigData';
             return new Promise<ToolConfig[]>((resolve, reject) => {
                 let tPromises: Promise<any>[] = [];
