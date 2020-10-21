@@ -374,10 +374,10 @@ module MscrmControls.PanelControl {
 
         private getToolIcon(tool: ToolConfig): string {
 
-            if (tool.toolIconConfig.toolIcon) {
+            if (tool.istoolIconValid) {
                 return tool.toolIcon;
             }
-            else if (tool.toolIconConfig.defaultIcon) {
+            else if (tool.isDefaultIconValid) {
                 return tool.defaultIcon;
             }
             else {
@@ -566,12 +566,15 @@ module MscrmControls.PanelControl {
                                 //get productivity pane configuration data
                                 this.dataManager.getProductivityPaneConfigData(appConfigUniqueName).then(
                                     (configData: ProductivityPaneConfig) => {
-                                        this.productivityPaneConfigData = configData;
-                                        this.eventManager.ProductivityPaneConfigData = this.productivityPaneConfigData;
-                                        if (this.productivityPaneConfigData.validateConfig()) {
-                                            this.isDataFetched = true;
-                                        }
-                                        this.context.utils.requestRender();
+                                        this.dataManager.getToolsIconConfigData(configData.productivityToolsConfig.ToolsList).then((toolsConfig) => {
+                                            configData.productivityToolsConfig.ToolsList = toolsConfig;
+                                            this.productivityPaneConfigData = configData;
+                                            this.eventManager.ProductivityPaneConfigData = this.productivityPaneConfigData;
+                                            if (this.productivityPaneConfigData.validateConfig()) {
+                                                this.isDataFetched = true;
+                                            }
+                                            this.context.utils.requestRender();
+                                        });
                                     },
                                     (error: XrmClientApi.ErrorResponse) => {
                                         let errorParam = new EventParameters();

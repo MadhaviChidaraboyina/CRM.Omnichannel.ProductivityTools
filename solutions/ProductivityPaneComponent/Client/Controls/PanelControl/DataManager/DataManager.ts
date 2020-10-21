@@ -33,11 +33,8 @@ module MscrmControls.PanelControl {
                            (response: any) => {
                                this.getToolsConfigData(response.entities[0].msdyn_msdyn_paneconfig_msdyn_tabconfig).then((toolsConfig) => {
                                    if (toolsConfig.length > 0) {
-                                       this.getToolsIconConfigData(toolsConfig).then((toolsConfig) => {
-                                           let productivityPane = new ProductivityPaneConfig(response.entities[0].msdyn_panestate, response.entities[0].msdyn_panemode, new ProductivityToolsConfig(toolsConfig));
-                                           resolve(productivityPane);
-                                       });
-
+                                       let productivityPane = new ProductivityPaneConfig(response.entities[0].msdyn_panestate, response.entities[0].msdyn_panemode, new ProductivityToolsConfig(toolsConfig));
+                                       resolve(productivityPane);
                                    } else {
                                        reject("No tools configured");
                                    }
@@ -110,8 +107,7 @@ module MscrmControls.PanelControl {
                             tabconfig[index].msdyn_uniquename,
                             tabconfig[index].msdyn_tooltip,
                             result.msdyn_data,
-                            result.msdyn_defaulticon,
-                            new ToolIconConfig(false, false))
+                            result.msdyn_defaulticon)
                         );
                     });
                     resolve(toolsList);
@@ -137,9 +133,9 @@ module MscrmControls.PanelControl {
                     var pos = 0;
                     results.forEach((result: any, index: number) => {
                         if (index % 2 == 0) {
-                            tabconfig[pos].toolIconConfig.toolIcon = result;
+                            tabconfig[pos].istoolIconValid = result;
                         } else {
-                            tabconfig[pos].toolIconConfig.defaultIcon = result;
+                            tabconfig[pos].isDefaultIconValid = result;
                             pos++;
                         }
                     });
