@@ -193,7 +193,7 @@ module MscrmControls.PanelControl {
                     if (iconPath == null || iconPath.trim() == "") {
                         resolve(false);
                     } else {
-                        iconPath = iconPath.includes("WebResources") ? iconPath.replace("/WebResources/", "") : iconPath;
+                        iconPath = iconPath.includes("WebResources") ? (iconPath.includes("/WebResources/") ? iconPath.replace("/WebResources/", "") : iconPath.replace("WebResources/", "")) : iconPath;
                         let webResourceQuery = this.getWebResourceQuery(iconPath);
                         let getIconPath = Xrm.WebApi.retrieveMultipleRecords("webresource", webResourceQuery);
                         getIconPath.then((response: any) => {
