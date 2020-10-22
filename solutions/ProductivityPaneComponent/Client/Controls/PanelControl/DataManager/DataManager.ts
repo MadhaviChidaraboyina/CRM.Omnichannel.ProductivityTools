@@ -121,6 +121,35 @@ module MscrmControls.PanelControl {
             });
         }
 
+        public validateToolsIconConfigData(tabconfig: ToolConfig[]): Promise<ToolConfig[]> {
+            let methodName = 'getToolsConfigData';
+            return new Promise<ToolConfig[]>((resolve, reject) => {
+                let tPromises: Promise<any>[] = [];
+                tabconfig.forEach((tab) => {
+                    tPromises.push(this.isValidIconPath(tab.toolIcon));
+                    tPromises.push(this.isValidIconPath(tab.defaultIcon));
+                });
+                Promise.all(tPromises).then((results: any[]) => {
+                    var pos = 0;
+                    results.forEach((result: any, index: number) => {
+                        if (index % 2 == 0) {
+                            tabconfig[pos].istoolIconValid = result;
+                        } else {
+                            tabconfig[pos].isDefaultIconValid = result;
+                            pos++;
+                        }
+                    });
+                    resolve(tabconfig);
+                },
+                (error) => {
+                    let errorParam = new EventParameters();
+                    errorParam.addParameter("errorObj", JSON.stringify(error));
+                    this.telemetryLogger.logError(this.telemetryContext, methodName, error.message, errorParam);
+                    reject(error);
+                });
+            });
+        }
+
         private getProductivityPaneUniqueNameQuery(appConfigName: string) {
             let query = String.format("?{0}{1}&{2}{3} eq '{4}'&{5}{6}({7}{8})", 
                 QueryDataConstants.SelectOperator, 
@@ -157,7 +186,43 @@ module MscrmControls.PanelControl {
 			eventParam.addParameter("attribute", attribute);
 		}
 
-		
+        private isValidIconPath(iconPath: string): Promise<boolean> {
+            let methodName = "isValidIconPath";
+            try {
+                return new Promise<boolean>((resolve, reject) => {
+                    if (iconPath == null || iconPath.trim() == "") {
+                        resolve(false);
+                    } else {
+                        iconPath = iconPath.includes("WebResources") ? (iconPath.includes("/WebResources/") ? iconPath.replace("/WebResources/", "") : iconPath.replace("WebResources/", "")) : iconPath;
+                        let webResourceQuery = this.getWebResourceQuery(iconPath);
+                        let getIconPath = Xrm.WebApi.retrieveMultipleRecords("webresource", webResourceQuery);
+                        getIconPath.then((response: any) => {
+                            response.entities.length > 0 ? resolve(true) : resolve(false);
+                        },
+                        (error) => {
+                            resolve(false);
+                        })
+                    }
+                });
+            }
+            catch (error) {
+                return new Promise<boolean>((resolve, reject) => {
+                    let eventParams = new EventParameters();
+                    eventParams.addParameter("message", "Failed to validate icon path");
+                    this.telemetryLogger.logError(this.telemetryContext, methodName, error, eventParams);
+                    resolve(false);
+                })
+            }
+        }
+
+        public getWebResourceQuery(WebResourceName: string): string {
+            let query = String.format("?{0}{1} eq '{2}'",
+                QueryDataConstants.FilterOperator,
+                "name",
+                WebResourceName,
+            );
+            return query;
+        }
 
 	}
 }

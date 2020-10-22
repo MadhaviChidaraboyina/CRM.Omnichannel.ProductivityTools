@@ -40,8 +40,10 @@ module MscrmControls.PanelControl {
         public tooltip: string;
         public staticData: string;
         public defaultIcon: string;
+        public istoolIconValid: boolean;
+        public isDefaultIconValid: boolean;
 
-        constructor(toolControlName: string, toolIcon: string, toolPosition: number, isEnabled: boolean, toolName: string, toolTip: string, staticData: string, defaultIcon: string) {
+        constructor(toolControlName: string, toolIcon: string, toolPosition: number, isEnabled: boolean, toolName: string, toolTip: string, staticData: string, defaultIcon: string, istoolIconValid: boolean = false, isDefaultIconValid: boolean = false) {
             this.toolControlName = toolControlName;
             this.toolIcon = toolIcon;
             this.toolPosition = toolPosition;
@@ -50,6 +52,9 @@ module MscrmControls.PanelControl {
             this.tooltip = toolTip;
             this.staticData = staticData;
             this.defaultIcon = defaultIcon;
+            this.istoolIconValid = istoolIconValid;
+            this.isDefaultIconValid = isDefaultIconValid;
+
         }
     }
 }

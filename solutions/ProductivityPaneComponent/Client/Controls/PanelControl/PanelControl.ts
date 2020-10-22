@@ -373,36 +373,16 @@ module MscrmControls.PanelControl {
         }
 
         private getToolIcon(tool: ToolConfig): string {
-            if (tool.toolIcon && this.isValidIconPath(tool.toolIcon)) {
+
+            if (tool.istoolIconValid) {
                 return tool.toolIcon;
-            } else if (tool.defaultIcon && this.isValidIconPath(tool.defaultIcon)) {
+            }
+            else if (tool.isDefaultIconValid) {
                 return tool.defaultIcon;
-            } else {
+            }
+            else {
                 //return fallback icon URL
                 return "";
-            }
-        }
-
-        private isValidIconPath(iconPath: string): boolean {
-            let methodName = "isValidIconPath";
-            try {
-                var request = new XMLHttpRequest();
-                var context: XrmClientApi.GlobalContext = Xrm.Utility.getGlobalContext();
-                var requestUrl = context.getClientUrl() + iconPath;
-                request.open('GET', requestUrl, false);
-                request.send(null);
-                if (request.status === 200) {
-                    return true;
-                }
-                else {
-                    return false;
-                }
-            }
-            catch (error) {
-                let eventParams = new EventParameters();
-                eventParams.addParameter("message", "Failed to validate icon path");
-                this.telemetryLogger.logError(this.telemetryContext, methodName, error, eventParams);
-                return false;
             }
         }
 
@@ -586,12 +566,15 @@ module MscrmControls.PanelControl {
                                 //get productivity pane configuration data
                                 this.dataManager.getProductivityPaneConfigData(appConfigUniqueName).then(
                                     (configData: ProductivityPaneConfig) => {
-                                        this.productivityPaneConfigData = configData;
-                                        this.eventManager.ProductivityPaneConfigData = this.productivityPaneConfigData;
-                                        if (this.productivityPaneConfigData.validateConfig()) {
-                                            this.isDataFetched = true;
-                                        }
-                                        this.context.utils.requestRender();
+                                        this.dataManager.validateToolsIconConfigData(configData.productivityToolsConfig.ToolsList).then((toolsConfig) => {
+                                            configData.productivityToolsConfig.ToolsList = toolsConfig;
+                                            this.productivityPaneConfigData = configData;
+                                            this.eventManager.ProductivityPaneConfigData = this.productivityPaneConfigData;
+                                            if (this.productivityPaneConfigData.validateConfig()) {
+                                                this.isDataFetched = true;
+                                            }
+                                            this.context.utils.requestRender();
+                                        });
                                     },
                                     (error: XrmClientApi.ErrorResponse) => {
                                         let errorParam = new EventParameters();
