@@ -27,7 +27,7 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
                 this.isMock = isMock;
             }
 
-            let fpiURL = this.appendParamterstoURL(EndpointConstants.publicFPIUrlMap.get(EndpointConstants.PRODEnvKey), EndpointConstants.PRODEnvKey.toLowerCase(), EndpointConstants.publicString, false);
+            let fpiURL = this.appendParamterstoURL(EndpointConstants.getFPIURLMap(EndpointConstants.publicString).get(EndpointConstants.PRODEnvKey), EndpointConstants.PRODEnvKey.toLowerCase(), EndpointConstants.publicString, false);
             this.svcMap = new Map()
                 .set(EndpointConstants.ocEndpointNameKey, EndpointConstants.emptyString)
                 .set(EndpointConstants.ocBaseUrlKey, EndpointConstants.emptyString)

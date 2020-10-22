@@ -48,26 +48,38 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 		public static ocDeploymentTypeKey = "ocDeploymentType";
 		public static ocEndpointNameKey = "ocEndpointName";
 
-		public static readonly publicFPIUrlMap = new Map()
-			.set("DEV", "https://fpi-dev.oc.crmlivetie.com/fpi/OmniChannel/9.0/Runtime.html?")
-			.set("INT", "https://fpi.oc.crmlivetie.com/fpi/OmniChannel/9.0/Runtime.html?")
-			.set("TEST", "https://fpi.oc.crmlivetie.com/fpi/OmniChannel/9.0/Runtime.html?")
-			.set("PPE", "https://fpi.omnichannelengagementhub.com/fpi/OmniChannel/9.0/Runtime.html?")
-			.set("PROD", "https://fpi.omnichannelengagementhub.com/fpi/OmniChannel/9.0/Runtime.html?");
+        private static readonly publicFPIUrlMap = new Map();
 
-		public static readonly fairfaxFPIUrlMap = new Map()
-			.set("DEV", "https://omnichanneltestauthservice.azurewebsites.us/OmniChannel/9.0/Runtime.html?")
-			.set("INT", "https://omnichanneltestauthservice.azurewebsites.us/OmniChannel/9.0/Runtime.html?")
-			.set("TEST", "https://omnichanneltestauthservice.azurewebsites.us/OmniChannel/9.0/Runtime.html?")
-			.set("PPE", "https://oc-auth.azurewebsites.us/OmniChannel/9.0/Runtime.html?")
-			.set("PROD", "https://oc-auth.azurewebsites.us/OmniChannel/9.0/Runtime.html?");
+        public static setPublicFPIUrlMap() {
+            EndpointConstants.publicFPIUrlMap.set("DEV", "https://fpi-dev.oc.crmlivetie.com/fpi/OmniChannel/9.0/Runtime.html?");
+            EndpointConstants.publicFPIUrlMap.set("INT", "https://fpi.oc.crmlivetie.com/fpi/OmniChannel/9.0/Runtime.html?");
+            EndpointConstants.publicFPIUrlMap.set("TEST", "https://fpi.oc.crmlivetie.com/fpi/OmniChannel/9.0/Runtime.html?");
+            EndpointConstants.publicFPIUrlMap.set("PPE", "https://fpi.omnichannelengagementhub.com/fpi/OmniChannel/9.0/Runtime.html?");
+            EndpointConstants.publicFPIUrlMap.set("PROD", "https://fpi.omnichannelengagementhub.com/fpi/OmniChannel/9.0/Runtime.html?");
+        }
+
+        private static readonly fairfaxFPIUrlMap = new Map();
+
+        public static setFairfaxFPIUrlMap() {
+            EndpointConstants.fairfaxFPIUrlMap.set("DEV", "https://omnichanneltestauthservice.azurewebsites.us/OmniChannel/9.0/Runtime.html?");
+            EndpointConstants.fairfaxFPIUrlMap.set("INT", "https://omnichanneltestauthservice.azurewebsites.us/OmniChannel/9.0/Runtime.html?");
+            EndpointConstants.fairfaxFPIUrlMap.set("TEST", "https://omnichanneltestauthservice.azurewebsites.us/OmniChannel/9.0/Runtime.html?");
+            EndpointConstants.fairfaxFPIUrlMap.set("PPE", "https://oc-auth.azurewebsites.us/OmniChannel/9.0/Runtime.html?");
+            EndpointConstants.fairfaxFPIUrlMap.set("PROD", "https://oc-auth.azurewebsites.us/OmniChannel/9.0/Runtime.html?");
+        }
 
 		//public static readonly mooncakeFPIUrlMap = new Map()  //Not deployed yet, to be updated after deployment. If common deployment for all GCC, will be a copy of fairfaxFPIUrlMap
 
 		public static getFPIURLMap(cloudType: string)
-		{
+        {
+            if (this.publicFPIUrlMap.size == 0) {
+                this.setPublicFPIUrlMap();
+            }
+            if (this.fairfaxFPIUrlMap.size == 0) {
+                this.setFairfaxFPIUrlMap();
+            }
 			if(cloudType === null || cloudType === undefined)
-			{
+            {
 				return this.publicFPIUrlMap;
 			}
 			switch (cloudType.toLowerCase())

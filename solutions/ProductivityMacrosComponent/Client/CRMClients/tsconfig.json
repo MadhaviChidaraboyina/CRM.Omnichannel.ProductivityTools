@@ -16,6 +16,7 @@
     "sourceMap": true,
     "outFile": "../../Solution/WebResources/CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js",
     "module": "amd",
-    "allowJs": true
+    "allowJs": true,
+	"target": "ES5"
   }
 }

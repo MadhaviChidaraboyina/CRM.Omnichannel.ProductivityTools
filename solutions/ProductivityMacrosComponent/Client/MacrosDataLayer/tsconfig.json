@@ -12,6 +12,7 @@
 	"compileOnSave": true,
 	"compilerOptions": {
 		"outFile": "../../Solution/WebResources/MacrosDataLayer/msdyn_MacrosDataLayer.js",
-    "declaration": true
+		"declaration": true,
+		"target": "ES5"
 	}
 }
