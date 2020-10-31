@@ -117,31 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Source LCID" xml:space="preserve">
-    <value>1033</value>
-  </metadata>
-  <metadata name="Source file" xml:space="preserve">
-    <value>msdyn_ProductivityToolsAnchor_managed.zip</value>
-  </metadata>
-  <metadata name="Source package type" xml:space="preserve">
-    <value>Managed</value>
-  </metadata>
-  <metadata name="SolutionPackager Version" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="Source LCID" xml:space="preserve">
+    <value>2052</value>
+  </data>
+  <data name="Source file" xml:space="preserve">
+    <value>msdyn_AgentProductivityToolsAnchor_managed.zip</value>
+  </data>
+  <data name="Source package type" xml:space="preserve">
+    <value>托管</value>
+  </data>
+  <data name="SolutionPackager Version" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uVmVyc2lvbgQAAAAGX01ham9yBl9NaW5vcgZfQnVp
         bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
 </value>
-  </metadata>
-  <data name="15062:Description,ProductivityToolsAnchor" xml:space="preserve">
-    <value>适用于 Dynamics 365 应用程序的实用工具提供的功能可帮助用户以更快、更高效且过程兼容的方式执行日常业务操作，并为客户提供价值</value>
-    <comment> 'ProductivityToolsAnchor' : Description for Solution</comment>
+  </data>
+  <data name="15062:Description,AgentProductivityToolsAnchor" xml:space="preserve">
+    <value>适用于 Dynamics 365 应用的工作效率工具提供多种功能，这些功能帮助用户更快、更高效且更符合过程地执行日常业务操作，从而为客户创造价值</value>
+    <comment> 'AgentProductivityToolsAnchor' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">
     <value>Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,ProductivityToolsAnchor" xml:space="preserve">
-    <value>实用工具</value>
-    <comment> 'ProductivityToolsAnchor' : LocalizedName for Solution</comment>
+  <data name="15062:LocalizedName,AgentProductivityToolsAnchor" xml:space="preserve">
+    <value>工作效率工具</value>
+    <comment> 'AgentProductivityToolsAnchor' : LocalizedName for Solution</comment>
   </data>
 </root>

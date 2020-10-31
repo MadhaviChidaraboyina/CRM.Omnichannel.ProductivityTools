@@ -117,31 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Source LCID" xml:space="preserve">
-    <value>1033</value>
-  </metadata>
-  <metadata name="Source file" xml:space="preserve">
-    <value>msdyn_ProductivityToolsAnchor_managed.zip</value>
-  </metadata>
-  <metadata name="Source package type" xml:space="preserve">
-    <value>Managed</value>
-  </metadata>
-  <metadata name="SolutionPackager Version" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="Source LCID" xml:space="preserve">
+    <value>3082</value>
+  </data>
+  <data name="Source file" xml:space="preserve">
+    <value>msdyn_AgentProductivityToolsAnchor_managed.zip</value>
+  </data>
+  <data name="Source package type" xml:space="preserve">
+    <value>Administrado</value>
+  </data>
+  <data name="SolutionPackager Version" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uVmVyc2lvbgQAAAAGX01ham9yBl9NaW5vcgZfQnVp
         bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
 </value>
-  </metadata>
-  <data name="15062:Description,ProductivityToolsAnchor" xml:space="preserve">
+  </data>
+  <data name="15062:Description,AgentProductivityToolsAnchor" xml:space="preserve">
     <value>Las herramientas de productividad para aplicaciones de Dynamics 365 proporcionan funcionalidades que ayudan a los usuarios a realizar las operaciones comerciales diarias de forma más rápida, eficiente y conforme al proceso y permiten aportar valor a los clientes </value>
-    <comment> 'ProductivityToolsAnchor' : Description for Solution</comment>
+    <comment> 'AgentProductivityToolsAnchor' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">
     <value>Dynamics 365</value>
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,ProductivityToolsAnchor" xml:space="preserve">
+  <data name="15062:LocalizedName,AgentProductivityToolsAnchor" xml:space="preserve">
     <value>ProductivityTools</value>
-    <comment> 'ProductivityToolsAnchor' : LocalizedName for Solution</comment>
+    <comment> 'AgentProductivityToolsAnchor' : LocalizedName for Solution</comment>
   </data>
 </root>
