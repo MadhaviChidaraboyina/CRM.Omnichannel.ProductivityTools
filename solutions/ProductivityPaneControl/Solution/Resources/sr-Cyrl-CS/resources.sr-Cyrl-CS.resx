@@ -349,7 +349,7 @@
     <comment>'msdyn_productivitypaneconfiguration' : label for option '1' on Entity</comment>
   </data>
   <data name="1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate0" xml:space="preserve">
-    <value>Ne</value>
+    <value>Не</value>
     <comment>'msdyn_productivitypaneconfiguration' : label for option '0' on Entity</comment>
   </data>
   <data name="1:label,msdyn_productivitypaneconfigurationmsdyn_productivitypaneconfiguration_msdyn_productivitypanestate1" xml:space="preserve">
