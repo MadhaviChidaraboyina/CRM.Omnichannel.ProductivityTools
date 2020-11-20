@@ -110,11 +110,11 @@ namespace Microsoft.ProductivityMacros.Internal {
         }
     }
 
-    function openTab(actionName: string, pageInput: XrmClientApi.PageInput): Promise<string> {
+    function openTab(actionName: string, pageInput: XrmClientApi.PageInput, options: any): Promise<string> {
         return new Promise<any>(function (resolve, reject) {
             var tabInput: XrmClientApi.TabInput = {
                 pageInput: pageInput,
-                options: { isFocused: true }
+                options: options
             }
             createTab(tabInput).then(
                 function (tabId: string) {
@@ -154,6 +154,28 @@ namespace Microsoft.ProductivityMacros.Internal {
                 function (error) {
                     reject(error)
                 });
+        });
+    }
+
+    function getApplicationTemplateRecord(guid: string): Promise<any> { 
+        return new Promise<any>(function (resolve, reject) {
+            let xml = `<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+                          <entity name="msdyn_applicationtabtemplate">
+                            <attribute name='msdyn_title' />
+                            <filter type="and">
+                                <condition attribute='msdyn_applicationtabtemplateid' operator='eq' uitype='msdyn_applicationtabtemplate' value='{` + guid + `}' />
+                            </filter>
+                          </entity>
+                        </fetch>`;
+            Xrm.WebApi.retrieveMultipleRecords("msdyn_applicationtabtemplate", "?fetchXml=" + encodeURIComponent(xml)).then(function (result) {
+                if (result.entities.length > 0)
+                    resolve(result);
+                else
+                    reject("No Parameter found for given Applicate Tab Template - openApplicationTamplate");
+            },
+            function (error) {
+                reject(error)
+            });
         });
     }
 
@@ -1234,19 +1256,27 @@ namespace Microsoft.ProductivityMacros.Internal {
 
         return new Promise<string>((resolve, reject) => {
             let pageInput: XrmClientApi.PageInput;
+            let Options: any = { isFocused: true };
             if (entityData.Custom_Array == undefined) {
-                getApplicationTemplate(entityData.ApplicationTemplateId).then(function (result) {
-                    entityData.Custom_Array = getCustomArrayFromEntityCollection(result.entities);
+                let promises = [];
+                promises.push(getApplicationTemplate(entityData.ApplicationTemplateId));
+                promises.push(getApplicationTemplateRecord(entityData.ApplicationTemplateId));
+                Promise.all(promises).then(function (result) {
+                    entityData.Custom_Array = getCustomArrayFromEntityCollection(result[0].entities);
                     pageInput = getPageInput(entityData);
-                    resolve(openTab(actionName, pageInput));
+                    var title = result[1].entities[0].msdyn_title;
+                    if (!isNullOrUndefined(title)) {
+                        Options = { isFocused: true, title: title };
+                    }
+                    resolve(openTab(actionName, pageInput, Options));
                 },
-                    function (error) {
-                        reject(error.message);
-                    });
+                function (error) {
+                    reject(error.message);
+                });
             }
             else {
                 pageInput = getPageInput(entityData);
-                resolve(openTab(actionName, pageInput));
+                resolve(openTab(actionName, pageInput, Options));
             }
         });
     }
