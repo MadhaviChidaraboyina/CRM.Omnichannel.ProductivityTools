@@ -1256,7 +1256,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 
         return new Promise<string>((resolve, reject) => {
             let pageInput: XrmClientApi.PageInput;
-            let Options: any = { isFocused: true };
+            let options: any = { isFocused: true };
             if (entityData.Custom_Array == undefined) {
                 let promises = [];
                 promises.push(getApplicationTemplate(entityData.ApplicationTemplateId));
@@ -1266,9 +1266,9 @@ namespace Microsoft.ProductivityMacros.Internal {
                     pageInput = getPageInput(entityData);
                     var title = result[1].entities[0].msdyn_title;
                     if (!isNullOrUndefined(title)) {
-                        Options = { isFocused: true, title: title };
+                        options = { isFocused: true, title: title };
                     }
-                    resolve(openTab(actionName, pageInput, Options));
+                    resolve(openTab(actionName, pageInput, options));
                 },
                 function (error) {
                     reject(error.message);
@@ -1276,7 +1276,7 @@ namespace Microsoft.ProductivityMacros.Internal {
             }
             else {
                 pageInput = getPageInput(entityData);
-                resolve(openTab(actionName, pageInput, Options));
+                resolve(openTab(actionName, pageInput, options));
             }
         });
     }
