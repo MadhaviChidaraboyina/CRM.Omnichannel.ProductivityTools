@@ -171,7 +171,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                 if (result.entities.length > 0)
                     resolve(result);
                 else
-                    reject("No Parameter found for given Applicate Tab Template - openApplicationTamplate");
+                    reject("No record found for given application tab template id");
             },
             function (error) {
                 reject(error)
