@@ -79,7 +79,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityMacrosComponent_managed.cab">
-      <Link>ProductivityToolsComponent\ProductivityMacrosComponent_managed.cab</Link>
+      <Link>ProductivityToolsComponent\msdyn_ProductivityMacrosComponent_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityMacrosApplication_managed.cab">
