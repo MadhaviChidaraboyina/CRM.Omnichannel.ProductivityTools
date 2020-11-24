@@ -110,7 +110,7 @@ namespace Microsoft.ProductivityMacros.Internal {
         }
     }
 
-    function openTab(actionName: string, pageInput: XrmClientApi.PageInput, options: any): Promise<string> {
+    function openTab(actionName: string, pageInput: XrmClientApi.PageInput, options: XrmClientApi.TabOptions): Promise<string> {
         return new Promise<any>(function (resolve, reject) {
             var tabInput: XrmClientApi.TabInput = {
                 pageInput: pageInput,
@@ -1256,7 +1256,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 
         return new Promise<string>((resolve, reject) => {
             let pageInput: XrmClientApi.PageInput;
-            let options: any = { isFocused: true };
+            let options: XrmClientApi.TabOptions = { isFocused: true };
             if (entityData.Custom_Array == undefined) {
                 let promises = [];
                 promises.push(getApplicationTemplate(entityData.ApplicationTemplateId));
@@ -1266,7 +1266,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                     pageInput = getPageInput(entityData);
                     var title = result[1].entities[0].msdyn_title;
                     if (!isNullOrUndefined(title)) {
-                        options = { isFocused: true, title: title };
+                        options.title = title;
                     }
                     resolve(openTab(actionName, pageInput, options));
                 },
