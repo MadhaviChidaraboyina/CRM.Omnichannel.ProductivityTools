@@ -79,8 +79,9 @@ function Start-Executable {
   }
 }
 
+
 if($target -eq "GenerateCvrp"){
-    $RootPath = "$PSScriptRoot\solutions\ProductivityMacros"
+    $RootPath = "$PSScriptRoot\solutions\ProductivityMacrosComponent"
     $OutCvrpPath = "$PSScriptRoot\drop\retail\AnyCPU\Blobs\RDPackage\fairfax.cvrp"
     Write-Host "Generating Cvrp file for fairfax...[RootPath:$RootPath] and [OutCvrpPath:$OutCvrpPath]"
 
@@ -92,24 +93,8 @@ if($target -eq "GenerateCvrp"){
 #$build = Get-MsBuildLocation
 $srcPath = $PSScriptRoot;
 Write-Host "Source path is: "$srcPath
-$buildFilePath = $srcPath +"\solutions\ProductivityMacros\build.xml";
+$buildFilePath = $srcPath +"\src\Designer\build.xml";
 Write-Host "Build file path is: "$buildFilePath
-
-#if($target -eq "GenerateCvrp"){
-    #$RootPath = "$PSScriptRoot\solutions\ProductivityMacrosComponent"
-    #$OutCvrpPath = "$PSScriptRoot\drop\retail\AnyCPU\Blobs\RDPackage\fairfax.cvrp"
-    #Write-Host "Generating Cvrp file for fairfax...[RootPath:$RootPath] and [OutCvrpPath:$OutCvrpPath]"
-
-    #."$PSScriptRoot\tools\cvrp.onebranch.1.0.22\content\scripts\GenerateCvrpByPath.ps1" -paths "$PSScriptRoot\drop\retail\AnyCPU\Blobs" -dropRoot $RootPath -outCvrpPath $OutCvrpPath
-    #Write-Host "Cvrp file has generated successfully!"
-    #return
-#}
-
-#$build = Get-MsBuildLocation
-#$srcPath = $PSScriptRoot;
-#Write-Host "Source path is: "$srcPath
-#$buildFilePath = $srcPath +"\solutions\ProductivityMacrosComponent\build.xml";
-#Write-Host "Build file path is: "$buildFilePath
 
 $Env:BuildPlatform  = "AnyCPU"
 $Env:BuildConfiguration  = "retail"

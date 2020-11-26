@@ -2,10 +2,10 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
   <PropertyGroup>
     <SlnDir>$(MSBuildProjectDirectory)</SlnDir>
-    <SlnName>ProductivityMacrosComponent.sln</SlnName>
+    <SlnName>Designer.sln</SlnName>
     <ProjectName>flowDesignerControl.njsproj</ProjectName>
     <SlnPath>$(SlnDir)\$(SlnName)</SlnPath>
-    <ProjectPath>$(SlnDir)\Controls\MacroDesigner\$(ProjectName)</ProjectPath>
+    <ProjectPath>$(SlnDir)\FlowDesigner\$(ProjectName)</ProjectPath>
     <PackageLocation>$(SlnDir)\drop\$(BuildConfiguration)\$(BuildPlatform)\Blobs</PackageLocation>
     <VS2017>C:\Program Files (x86)\Microsoft Visual Studio\2017</VS2017>
   </PropertyGroup>
@@ -14,7 +14,7 @@
     <ProjectToBuild Include="$(ProjectPath)">
     </ProjectToBuild>
 	
-    <FlowDesignerControl Include ="$(SlnDir)\ProductivityMacrosComponent\Controls\MacroDesigner\flowDesignerControl.njsproj">
+    <FlowDesignerControl Include ="$(SlnDir)\FlowDesigner\flowDesignerControl.njsproj">
     </FlowDesignerControl>
     
   </ItemGroup>
