@@ -28,13 +28,13 @@ module MscrmControls.SmartassistPanelControl {
 
         }
 
-		/**
-		 * This function should be used for any initial setup necessary for your control.
-		 * @params context The "Input Bag" containing the parameters and other control metadata.
-		 * @params notifyOutputchanged The method for this control to notify the framework that it has new outputs
-		 * @params state The user state for this control set from setState in the last session
-		 * @params container The div element to draw this control in
-		 */
+        /**
+         * This function should be used for any initial setup necessary for your control.
+         * @params context The "Input Bag" containing the parameters and other control metadata.
+         * @params notifyOutputchanged The method for this control to notify the framework that it has new outputs
+         * @params state The user state for this control set from setState in the last session
+         * @params container The div element to draw this control in
+         */
         public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary, container: HTMLDivElement): void {
             // Initialize Telemetry Repoter
             SmartassistPanelControl._telemetryReporter = new TelemetryLogger.TelemetryLogger(context, Constants.ControlId);
@@ -50,12 +50,12 @@ module MscrmControls.SmartassistPanelControl {
                 if (context.parameters.AnchorTabContext && Utility.IsValidJsonString(context.parameters.AnchorTabContext.raw)) {
                     this.AnchorTabContext = JSON.parse(context.parameters.AnchorTabContext.raw);
                 }
-               
+
                 //Control title
                 this.smartAssistInfoIconElement = document.createElement("div");
                 this.setSmartAssistInfoIconText(this.AnchorTabContext);
                 this.smartAssistContainer.appendChild(this.smartAssistInfoIconElement);
-                
+
                 var panelInfoIcon = document.getElementById(Constants.SAPanelInfoIcon);
                 panelInfoIcon.onclick = (e) => {
                     Utility.toggleTooltip();
@@ -82,7 +82,7 @@ module MscrmControls.SmartassistPanelControl {
                 var SuggestionEl: HTMLDivElement = document.createElement("div");
                 SuggestionEl.id = Constants.SuggestionOuterContainer;
                 this.smartAssistContainer.appendChild(SuggestionEl);
-                
+
 
                 if (!this.tabSwitchHandlerId) {
 
@@ -99,12 +99,12 @@ module MscrmControls.SmartassistPanelControl {
             }
         }
 
-		/** 
-		 * This function will recieve an "Input Bag" containing the values currently assigned to the parameters in your manifest
-		 * It will send down the latest values (static or dynamic) that are assigned as defined by the manifest & customization experience
-		 * as well as resource, client, and theming info (see mscrm.d.ts)
-		 * @params context The "Input Bag" as described above
-		 */
+        /** 
+         * This function will recieve an "Input Bag" containing the values currently assigned to the parameters in your manifest
+         * It will send down the latest values (static or dynamic) that are assigned as defined by the manifest & customization experience
+         * as well as resource, client, and theming info (see mscrm.d.ts)
+         * @params context The "Input Bag" as described above
+         */
         public updateView(context: Mscrm.ControlData<IInputBag>): void {
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.UpdateViewStarted, null);
             SmartassistPanelControl._context = context;
@@ -115,33 +115,33 @@ module MscrmControls.SmartassistPanelControl {
             if (context.parameters.SessionContext && Utility.IsValidJsonString(context.parameters.SessionContext.raw)) {
                 this.ppSessionContext = JSON.parse(context.parameters.SessionContext.raw);
             }
-            
+
             if (this.newInstance) {
                 let recordId = this.getEntityRecordId(this.AnchorTabContext);
                 this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SessionInitStarted, null);
                 this.renderSuggestions(false, this.AnchorTabContext.entityName, Utility.FormatGuid(recordId));
             }
-            this.newInstance = false;   
+            this.newInstance = false;
         }
 
-		/** 
-		 * This function will return an "Output Bag" to the Crm Infrastructure
-		 * The ouputs will contain a value for each property marked as "input-output"/"bound" in your manifest 
-		 * i.e. if your manifest has a property "value" that is an "input-output", and you want to set that to the local variable "myvalue" you should return:
-		 * {
-		 *		value: myvalue
-		 * };
-		 * @returns The "Output Bag" containing values to pass to the infrastructure
-		 */
+        /** 
+         * This function will return an "Output Bag" to the Crm Infrastructure
+         * The ouputs will contain a value for each property marked as "input-output"/"bound" in your manifest 
+         * i.e. if your manifest has a property "value" that is an "input-output", and you want to set that to the local variable "myvalue" you should return:
+         * {
+         *		value: myvalue
+         * };
+         * @returns The "Output Bag" containing values to pass to the infrastructure
+         */
         public getOutputs(): IOutputBag {
             // custom code goes here - remove the line below and return the correct output
             return null;
         }
 
-		/**
-		 * This function will be called when the control is destroyed
-		 * It should be used for cleanup and releasing any memory the control is using
-		 */
+        /**
+         * This function will be called when the control is destroyed
+         * It should be used for cleanup and releasing any memory the control is using
+         */
         public destroy(): void {
             Microsoft.AppRuntime.Sessions.removeOnContextChange(this.tabSwitchHandlerId);
         }
@@ -151,13 +151,17 @@ module MscrmControls.SmartassistPanelControl {
          * @param saConfig saConfig
          * @param callback callback to create SmartassistAnyEntityControl
          */
-        public loadWebresourceAndRenderSmartassistAnyEntity(
+        public async loadWebresourceAndRenderSmartassistAnyEntity(
             saConfig: SAConfig,
-            callback: (config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean) => void,
+            callback: (config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean, locStrings?: string) => void,
             emptyStatus: AnyEntityContainerState,
             recordId: string,
             update: boolean,
-            telemetryHelper: TelemetryHelper): void {
+            telemetryHelper: TelemetryHelper): Promise<void> {
+            // load localization strings
+            let localizationWebresource = "new_testloc"; //replace with saConfig.LocalizationWebResourceUrl
+            let locStrings = await this.loadLocalizationResources(localizationWebresource);
+
             let src = SmartassistPanelControl._context.page.getClientUrl() + "/" + saConfig.SuggestionWebResourceUrl;
             //SuggestionWebResourceUrl is empty for TPBot
             if (!document.getElementById(src) && !Utility.isNullOrEmptyString(saConfig.SuggestionWebResourceUrl)) {
@@ -165,11 +169,11 @@ module MscrmControls.SmartassistPanelControl {
                 script.onerror = function (event: ErrorEvent) {
                     document.getElementsByTagName("head")[0].removeChild(script);
                     telemetryHelper.logTelemetryError(TelemetryEventTypes.WebresourceLoadingFailed, new Error("Webresource loading failed"), null);
-                    callback(saConfig, emptyStatus, recordId, update);
+                    callback(saConfig, emptyStatus, recordId, update, locStrings);
                 };
                 script.onload = function () {
                     telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.WebresourceLoadedSuccessfully, null);
-                    callback(saConfig, emptyStatus, recordId, update);
+                    callback(saConfig, emptyStatus, recordId, update, locStrings);
                 };
 
                 script.src = src;
@@ -177,11 +181,29 @@ module MscrmControls.SmartassistPanelControl {
                 script.type = "text/javascript";
                 document.getElementsByTagName("head")[0].appendChild(script);
             } else {
-                callback(saConfig, emptyStatus, recordId, update);
+                callback(saConfig, emptyStatus, recordId, update, locStrings);
             }
         }
 
-        public renderSmartassistAnyEntityControl(config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean): void {
+        /**
+         * Fetch localization strings for the given webresource.
+         * @param locWebResource localization webresource\
+         */
+        private async loadLocalizationResources(localizationWebresource: string): Promise<string> {
+            let org = SmartassistPanelControl._context.page.getClientUrl();
+            let languageCode = SmartassistPanelControl._context.userSettings.languageId;
+            let url = `${org}/api/data/v9.0/webresourceset?$filter=name eq '${localizationWebresource}' and languagecode eq ${languageCode}&$select=contentjson`;
+            let locStrings: string;
+            let data: any = await $.getJSON(url);
+            if (data && data.value) {
+                locStrings = data.value[0].contentjson;
+            } else {
+                console.log("No localization web resource found");
+            }
+            return locStrings;
+        }
+
+        public renderSmartassistAnyEntityControl(config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean, locStrings?: string): void {
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.RenderingSmartAssistAnyEntityControl, null);
             const componentId = Constants.SAAnyEntityControlContainerId + config.SmartassistConfigurationId;
             let properties: any =
@@ -214,6 +236,11 @@ module MscrmControls.SmartassistPanelControl {
                         Static: true,
                         Usage: 1, // input
                         Value: emptyStatus
+                    },
+                    LocStrings: {
+                        Usage: 1,
+                        Value: locStrings,
+                        Type: "string"
                     }
                 },
                 key: componentId,
@@ -287,7 +314,7 @@ module MscrmControls.SmartassistPanelControl {
                     $("#" + Constants.SuggestionOuterContainer).empty();
                     let entityId = this.getEntityRecordId(anchorContext);
                     this.anchorTabEntityId = Utility.FormatGuid(entityId);
-                    
+
                     this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SessionSwitchDetected,
                         [
                             { name: "PrevSessionId", value: this.previousSessionId },
