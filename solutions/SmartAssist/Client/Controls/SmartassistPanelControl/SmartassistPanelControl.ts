@@ -160,7 +160,7 @@ module MscrmControls.SmartassistPanelControl {
             telemetryHelper: TelemetryHelper): Promise<void> {
             // load localization strings
             let localizationWebresource = "new_testloc"; //replace with saConfig.LocalizationWebResourceUrl
-            let locStrings = await this.loadLocalizationResources(localizationWebresource);
+            let locStrings = await this.loadLocalizationWebResource(localizationWebresource);
 
             let src = SmartassistPanelControl._context.page.getClientUrl() + "/" + saConfig.SuggestionWebResourceUrl;
             //SuggestionWebResourceUrl is empty for TPBot
@@ -187,9 +187,9 @@ module MscrmControls.SmartassistPanelControl {
 
         /**
          * Fetch localization strings for the given webresource.
-         * @param locWebResource localization webresource\
+         * @param locWebResource localization webresource name
          */
-        private async loadLocalizationResources(localizationWebresource: string): Promise<string> {
+        private async loadLocalizationWebResource(localizationWebresource: string): Promise<string> {
             let org = SmartassistPanelControl._context.page.getClientUrl();
             let languageCode = SmartassistPanelControl._context.userSettings.languageId;
             let url = `${org}/api/data/v9.0/webresourceset?$filter=name eq '${localizationWebresource}' and languagecode eq ${languageCode}&$select=contentjson`;
