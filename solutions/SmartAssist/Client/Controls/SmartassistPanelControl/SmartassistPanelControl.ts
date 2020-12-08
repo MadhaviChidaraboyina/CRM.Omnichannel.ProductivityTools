@@ -153,14 +153,14 @@ module MscrmControls.SmartassistPanelControl {
          */
         public async loadWebresourceAndRenderSmartassistAnyEntity(
             saConfig: SAConfig,
-            callback: (config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean, locStrings?: string) => void,
+            callback: (config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean, locString?: string) => void,
             emptyStatus: AnyEntityContainerState,
             recordId: string,
             update: boolean,
             telemetryHelper: TelemetryHelper): Promise<void> {
             // load localization strings
             let localizationWebresource = "new_testloc"; //replace with saConfig.LocalizationWebResourceUrl
-            let locStrings = await this.loadLocalizationWebResource(localizationWebresource);
+            let locString = await this.loadLocalizationWebResource(localizationWebresource);
 
             let src = SmartassistPanelControl._context.page.getClientUrl() + "/" + saConfig.SuggestionWebResourceUrl;
             //SuggestionWebResourceUrl is empty for TPBot
@@ -169,11 +169,11 @@ module MscrmControls.SmartassistPanelControl {
                 script.onerror = function (event: ErrorEvent) {
                     document.getElementsByTagName("head")[0].removeChild(script);
                     telemetryHelper.logTelemetryError(TelemetryEventTypes.WebresourceLoadingFailed, new Error("Webresource loading failed"), null);
-                    callback(saConfig, emptyStatus, recordId, update, locStrings);
+                    callback(saConfig, emptyStatus, recordId, update, locString);
                 };
                 script.onload = function () {
                     telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.WebresourceLoadedSuccessfully, null);
-                    callback(saConfig, emptyStatus, recordId, update, locStrings);
+                    callback(saConfig, emptyStatus, recordId, update, locString);
                 };
 
                 script.src = src;
@@ -181,7 +181,7 @@ module MscrmControls.SmartassistPanelControl {
                 script.type = "text/javascript";
                 document.getElementsByTagName("head")[0].appendChild(script);
             } else {
-                callback(saConfig, emptyStatus, recordId, update, locStrings);
+                callback(saConfig, emptyStatus, recordId, update, locString);
             }
         }
 
@@ -193,17 +193,17 @@ module MscrmControls.SmartassistPanelControl {
             let org = SmartassistPanelControl._context.page.getClientUrl();
             let languageCode = SmartassistPanelControl._context.userSettings.languageId;
             let url = `${org}/api/data/v9.0/webresourceset?$filter=name eq '${localizationWebresource}' and languagecode eq ${languageCode}&$select=contentjson`;
-            let locStrings: string;
+            let locString: string;
             let data: any = await $.getJSON(url);
             if (data && data.value) {
-                locStrings = data.value[0].contentjson;
+                locString = data.value[0].contentjson;
             } else {
                 console.log("No localization web resource found");
             }
-            return locStrings;
+            return locString;
         }
 
-        public renderSmartassistAnyEntityControl(config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean, locStrings?: string): void {
+        public renderSmartassistAnyEntityControl(config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean, locString?: string): void {
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.RenderingSmartAssistAnyEntityControl, null);
             const componentId = Constants.SAAnyEntityControlContainerId + config.SmartassistConfigurationId;
             let properties: any =
@@ -237,9 +237,9 @@ module MscrmControls.SmartassistPanelControl {
                         Usage: 1, // input
                         Value: emptyStatus
                     },
-                    LocStrings: {
-                        Usage: 1,
-                        Value: locStrings,
+                    LocString: {
+                        Usage: 3,
+                        Value: locString,
                         Type: "string"
                     }
                 },

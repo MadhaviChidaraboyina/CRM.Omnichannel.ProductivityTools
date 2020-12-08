@@ -14,6 +14,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private anyEntityContainer: HTMLDivElement = null;
         private initCompleted: boolean;
         private saConfig: SAConfig = null;
+        private locString: string = null;
         private AnyEntityContainerState: AnyEntityContainerState = AnyEntityContainerState.Enabled;
         private recordId: string;
         private anyEntityDataManager: AnyEntityDataManager = null;
@@ -58,6 +59,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     this.validateParameters(context);
                     this.recordId = context.parameters.RecordId.raw;
                     this.saConfig = context.parameters.SAConfig.raw as any;
+                    this.locString = context.parameters.LocString.raw;
                     this.AnyEntityContainerState = context.parameters.AnyEntityContainerState.raw as any;
 
                     // Anyentity Main Container
@@ -233,6 +235,11 @@ module MscrmControls.SmartAssistAnyEntityControl {
                         Static: true,
                         Usage: 1,
                         Value: this.saConfig.ACTemplate
+                    },
+                    LocString: {
+                        Usage: 3,
+                        Value: this.locString,
+                        Type: "string"
                     }
                 },
                 key: componentId,
