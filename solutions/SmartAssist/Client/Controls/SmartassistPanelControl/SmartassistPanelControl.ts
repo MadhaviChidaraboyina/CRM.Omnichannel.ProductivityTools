@@ -159,7 +159,7 @@ module MscrmControls.SmartassistPanelControl {
             update: boolean,
             telemetryHelper: TelemetryHelper): Promise<void> {
             // load localization strings
-            let localizationWebresource = "new_testloc"; //replace with saConfig.LocalizationWebResourceUrl
+            let localizationWebresource = this.getLocalizationWebResourceName(saConfig);
             let locString = await this.loadLocalizationWebResource(localizationWebresource);
 
             let src = SmartassistPanelControl._context.page.getClientUrl() + "/" + saConfig.SuggestionWebResourceUrl;
@@ -182,6 +182,16 @@ module MscrmControls.SmartassistPanelControl {
                 document.getElementsByTagName("head")[0].appendChild(script);
             } else {
                 callback(saConfig, emptyStatus, recordId, update, locString);
+            }
+        }
+
+        private getLocalizationWebResourceName(saConfig: SAConfig): string {
+            // replace with saConfig.LocalizationWebResourceUrl
+            if (saConfig.SuggestionProvider.indexOf("Knowledge") !== -1) {
+                return "new_KMlocwebresource.1033";
+            }
+            else {
+                return "new_Caselocwebresource.1033";
             }
         }
 
