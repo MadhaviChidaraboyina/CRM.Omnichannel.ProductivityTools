@@ -46,8 +46,8 @@ module MscrmControls.PanelControl {
         public static sessionCreated = "sessionCreated";
         public static sessionSwitched = "sessionSwitched";
         public static sessionClosed = "sessionClosed";
-        public static toolSeparatorId = "toolSeparator";
-        public static homeSessionId = "session-id-0";
+		public static homeSessionId = "session-id-0";
+		public static PanelControlIdPrefix = "MscrmControls.PanelControl.PanelControl-";
 
 		//class names for styling
 		public static PanelToggleButton = "symbolFont SiteMap-symbol";
