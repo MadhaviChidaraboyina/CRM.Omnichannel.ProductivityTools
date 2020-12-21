@@ -14,7 +14,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private anyEntityContainer: HTMLDivElement = null;
         private initCompleted: boolean;
         private saConfig: SAConfig = null;
-        private locString: string = null;
+        private locString: { [key: string]: string } = null;
         private AnyEntityContainerState: AnyEntityContainerState = AnyEntityContainerState.Enabled;
         private recordId: string;
         private anyEntityDataManager: AnyEntityDataManager = null;
@@ -59,7 +59,6 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     this.validateParameters(context);
                     this.recordId = context.parameters.RecordId.raw;
                     this.saConfig = context.parameters.SAConfig.raw as any;
-                    this.locString = context.parameters.LocString.raw;
                     this.AnyEntityContainerState = context.parameters.AnyEntityContainerState.raw as any;
 
                     // Anyentity Main Container
@@ -188,6 +187,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                         data = await this.anyEntityDataManager.getSuggestionsDataFromAPI(this.saConfig, this.recordId) as { [key: string]: any };
                     }
                     else {
+                        this.locString = await this.anyEntityDataManager.getLocalizationData(this.saConfig, this.recordId);
                         data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
                     }
 
@@ -217,8 +217,14 @@ module MscrmControls.SmartAssistAnyEntityControl {
             }, StringConstants.LoaderTimeout);
         }
 
+        private mergeDataWithLocalizedString(record: any): any {
+            const mergedData: string = Object.assign(record, this.locString);      
+            return mergedData;
+        }
+
         private createAndBindRecommendationControl(record: any, display: string = "block"): string {
             const componentId = Utility.getRCComponentId(record.SuggestionId);
+            var data = this.mergeDataWithLocalizedString(record);
             let properties: any =
             {
                 parameters: {
@@ -227,7 +233,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                         Primary: false,
                         Static: true,
                         Usage: 1, // input
-                        Value: record
+                        Value: data
                     },
                     Template: {
                         Type: "Multiple",

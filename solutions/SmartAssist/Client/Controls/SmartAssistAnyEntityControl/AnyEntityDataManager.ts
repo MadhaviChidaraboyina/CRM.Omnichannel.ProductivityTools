@@ -1,6 +1,7 @@
 ﻿module MscrmControls.SmartAssistAnyEntityControl {
     export class AnyEntityDataManager {
         private Suggestions: { [key: string]: any } = {};
+        private LocStrings: { [key: string]: string } = {};
         private _sessionStateManager: SessionStateManager;
         private _sessionStorageManager: SessionStorageManager;
         private _controlContext: Mscrm.ControlData<IInputBag>;
@@ -99,6 +100,54 @@
                 this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SuggestionProviderFound, null);
                 return new ctor();
             }
+        }
+
+        public async getLocalizationData(saConfig: SAConfig, recordId: string) {
+            let eventParameters = new TelemetryLogger.EventParameters();
+            try {
+                let localizationWebresource: string = await this.getLocalizationProvider(saConfig);
+                if (localizationWebresource) {
+                    this.LocStrings = await this.loadLocalizationWebResource(localizationWebresource);
+                }
+            }
+            catch (error) {
+                this.LocStrings = null;
+                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchData, error, null);
+            }
+            return this.LocStrings;
+        }
+
+        public async getLocalizationProvider(saConfig: SAConfig) {
+            const suggestionProvider = this.getSuggestionProvider(saConfig);
+            let locProvider: string = null;
+            if (suggestionProvider) {
+                    locProvider = await suggestionProvider.getSuggestionLocalizationProvider();
+                    if (locProvider == 'KnowledgeArticleTemplate.1033.resx') {
+                        locProvider = "msdyncrm_/KnowledgeManagementFeatureWebResource/Localization/Languages/KnowledgeArticleTemplate.1033.resx";
+                    }
+            }
+            return locProvider;
+        }
+
+        /**
+         * Fetch localization strings for the given webresource.
+         * @param locWebResource localization webresource name
+         */
+        private async loadLocalizationWebResource(localizationWebresource: string): Promise<{ [key: string]: string }> {
+            let org = this._controlContext.page.getClientUrl();
+            let languageCode: number = this._controlContext.userSettings.languageId;
+            // replace webresource name language code
+            localizationWebresource.replace("1033",languageCode.toString());
+            let url = `${org}/api/data/v9.0/webresourceset?$filter=name eq '${localizationWebresource}' and languagecode eq ${languageCode}&$select=contentjson`;
+            let locString: { [key: string]: string };
+            let data: any = await $.getJSON(url);
+            if (data && data.value) {
+                let locstrings = data.value[0].contentjson;
+                locString = JSON.parse(locstrings) as { [key: string]: string };
+            } else {
+                console.log("No localization web resource found");
+            }
+            return locString;
         }
 
         /**

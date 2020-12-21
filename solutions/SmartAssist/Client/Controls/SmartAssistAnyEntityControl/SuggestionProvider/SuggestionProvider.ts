@@ -18,5 +18,6 @@
          * @param param SuggestionContext
          */
         getSuggestions(param: SuggestionContext): Promise<Array<any>>;
+        getSuggestionLocalizationProvider(): Promise<string>;
     }
 }

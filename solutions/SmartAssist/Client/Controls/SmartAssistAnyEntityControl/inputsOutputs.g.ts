@@ -11,7 +11,6 @@ module MscrmControls.SmartAssistAnyEntityControl {
 		SAConfig: Mscrm.StringProperty;
 		AnyEntityContainerState?: Mscrm.StringProperty;
 		PPSessionContext?: Mscrm.StringProperty;
-		LocString?: Mscrm.StringProperty;
 	}
 
 	export interface IOutputBag {
