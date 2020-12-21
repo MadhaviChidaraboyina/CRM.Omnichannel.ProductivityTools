@@ -151,14 +151,13 @@ module MscrmControls.SmartassistPanelControl {
          * @param saConfig saConfig
          * @param callback callback to create SmartassistAnyEntityControl
          */
-        public async loadWebresourceAndRenderSmartassistAnyEntity(
+        public loadWebresourceAndRenderSmartassistAnyEntity(
             saConfig: SAConfig,
-            callback: (config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean, locString?: string) => void,
+            callback: (config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean) => void,
             emptyStatus: AnyEntityContainerState,
             recordId: string,
             update: boolean,
-            telemetryHelper: TelemetryHelper): Promise<void> {
-
+            telemetryHelper: TelemetryHelper): void {
             let src = SmartassistPanelControl._context.page.getClientUrl() + "/" + saConfig.SuggestionWebResourceUrl;
             //SuggestionWebResourceUrl is empty for TPBot
             if (!document.getElementById(src) && !Utility.isNullOrEmptyString(saConfig.SuggestionWebResourceUrl)) {
