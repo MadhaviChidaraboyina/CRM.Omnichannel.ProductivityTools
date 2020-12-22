@@ -187,7 +187,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                         data = await this.anyEntityDataManager.getSuggestionsDataFromAPI(this.saConfig, this.recordId) as { [key: string]: any };
                     }
                     else {
-                        this.locString = await this.anyEntityDataManager.getLocalizationData(this.saConfig, this.recordId);
+                        this.locString = await this.anyEntityDataManager.getLocalizationData(this.saConfig);
                         data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
                     }
 
@@ -217,7 +217,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             }, StringConstants.LoaderTimeout);
         }
 
-        private mergeDataWithLocalizedString(record: any): any {
+        private mergeDataWithLocalizedString(record: any): string {
             const mergedData: string = Object.assign(record, this.locString);      
             return mergedData;
         }

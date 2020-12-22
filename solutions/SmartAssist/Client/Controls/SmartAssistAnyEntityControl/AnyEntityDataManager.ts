@@ -1,7 +1,6 @@
 ﻿module MscrmControls.SmartAssistAnyEntityControl {
     export class AnyEntityDataManager {
         private Suggestions: { [key: string]: any } = {};
-        private LocStrings: { [key: string]: string } = {};
         private _sessionStateManager: SessionStateManager;
         private _sessionStorageManager: SessionStorageManager;
         private _controlContext: Mscrm.ControlData<IInputBag>;
@@ -102,22 +101,36 @@
             }
         }
 
-        public async getLocalizationData(saConfig: SAConfig, recordId: string) {
-            let eventParameters = new TelemetryLogger.EventParameters();
+        /**
+         * Gets localization data for the suggestion provider.
+         * @param saConfig: Smart Assist configuration for suggestion.
+         */
+        public async getLocalizationData(saConfig: SAConfig): Promise<{ [key: string]: string }> {
+            let localizationData: { [key: string]: string } = null;
+            let cachedLocData = this._sessionStorageManager.getRecord(saConfig.SmartassistConfigurationId + StringConstants.LocCacheString);
+            if (cachedLocData) {
+                return Utility.getMapObject(cachedLocData);
+            }
             try {
                 let localizationWebresource: string = await this.getLocalizationProvider(saConfig);
                 if (localizationWebresource) {
-                    this.LocStrings = await this.loadLocalizationWebResource(localizationWebresource);
+                    // loc strings fetched only once per config for the entire session
+                    let locStrings = await this.loadLocalizationWebResource(localizationWebresource);
+                    this._sessionStorageManager.createRecord(saConfig.SmartassistConfigurationId + StringConstants.LocCacheString, locStrings);
+                    localizationData = Utility.getMapObject(locStrings);
                 }
             }
             catch (error) {
-                this.LocStrings = null;
-                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchData, error, null);
+                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchLocalizationData, error, null);
             }
-            return this.LocStrings;
+            return localizationData;
         }
 
-        public async getLocalizationProvider(saConfig: SAConfig) {
+         /**
+         * Gets localization webresource name for the suggestion provider.
+         * @param saConfig: Smart Assist configuration for suggestion.
+         */
+        public async getLocalizationProvider(saConfig: SAConfig): Promise<string> {
             const suggestionProvider = this.getSuggestionProvider(saConfig);
             let locProvider: string = null;
             if (suggestionProvider) {
@@ -130,22 +143,21 @@
         }
 
         /**
-         * Fetch localization strings for the given webresource.
-         * @param locWebResource localization webresource name
+         * Fetch localization strings for the suggestionprovider webresource and UI setting language code.
+         * @param localizationWebresource localization webresource name of suggestion provider
          */
-        private async loadLocalizationWebResource(localizationWebresource: string): Promise<{ [key: string]: string }> {
-            let org = this._controlContext.page.getClientUrl();
-            let languageCode: number = this._controlContext.userSettings.languageId;
-            // replace webresource name language code
-            localizationWebresource.replace("1033",languageCode.toString());
-            let url = `${org}/api/data/v9.0/webresourceset?$filter=name eq '${localizationWebresource}' and languagecode eq ${languageCode}&$select=contentjson`;
-            let locString: { [key: string]: string };
-            let data: any = await $.getJSON(url);
-            if (data && data.value) {
-                let locstrings = data.value[0].contentjson;
-                locString = JSON.parse(locstrings) as { [key: string]: string };
-            } else {
-                console.log("No localization web resource found");
+        private async loadLocalizationWebResource(localizationWebresource: string): Promise<string> {
+            let locString: string = null;
+            if (localizationWebresource && localizationWebresource.indexOf(StringConstants.EnglishLanguageCode) != -1) {
+                const org = this._controlContext.page.getClientUrl();
+                const languageCode: number = this._controlContext.userSettings.languageId;
+                // replace webresource name with language code
+                localizationWebresource.replace(StringConstants.EnglishLanguageCode, languageCode.toString());
+                let url = `${org}/api/data/v9.0/webresourceset?$filter=name eq '${localizationWebresource}' and languagecode eq ${languageCode}&$select=contentjson`;
+                let data = await $.getJSON(url);
+                if (data && data.value.length > 0) {
+                    locString = data.value[0].contentjson;
+                }
             }
             return locString;
         }
