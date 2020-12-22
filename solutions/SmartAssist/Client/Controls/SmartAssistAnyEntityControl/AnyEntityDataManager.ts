@@ -132,12 +132,9 @@
          */
         public async getLocalizationProvider(saConfig: SAConfig): Promise<string> {
             const suggestionProvider = this.getSuggestionProvider(saConfig);
-            let locProvider: string = null;
+            let locProvider: string;
             if (suggestionProvider) {
-                    locProvider = await suggestionProvider.getSuggestionLocalizationProvider();
-                    if (locProvider == 'KnowledgeArticleTemplate.1033.resx') {
-                        locProvider = "msdyncrm_/KnowledgeManagementFeatureWebResource/Localization/Languages/KnowledgeArticleTemplate.1033.resx";
-                    }
+                locProvider = await suggestionProvider.getSuggestionLocalizationProvider();
             }
             return locProvider;
         }
@@ -147,7 +144,7 @@
          * @param localizationWebresource localization webresource name of suggestion provider
          */
         private async loadLocalizationWebResource(localizationWebresource: string): Promise<string> {
-            let locString: string = null;
+            let locString: string;
             if (localizationWebresource && localizationWebresource.indexOf(StringConstants.EnglishLanguageCode) != -1) {
                 const org = this._controlContext.page.getClientUrl();
                 const languageCode: number = this._controlContext.userSettings.languageId;

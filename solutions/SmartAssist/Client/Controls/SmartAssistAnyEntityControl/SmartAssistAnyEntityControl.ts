@@ -217,14 +217,9 @@ module MscrmControls.SmartAssistAnyEntityControl {
             }, StringConstants.LoaderTimeout);
         }
 
-        private mergeDataWithLocalizedString(record: any): string {
-            const mergedData: string = Object.assign(record, this.locString);      
-            return mergedData;
-        }
-
         private createAndBindRecommendationControl(record: any, display: string = "block"): string {
             const componentId = Utility.getRCComponentId(record.SuggestionId);
-            var data = this.mergeDataWithLocalizedString(record);
+            let data = this.mergeSuggestionDataWithLocalizationData(record);
             let properties: any =
             {
                 parameters: {
@@ -262,6 +257,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
             SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
             $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
             return divElement.id;
+        }
+
+        private mergeSuggestionDataWithLocalizationData(record: any) {
+            return Object.assign(record, this.locString);
         }
 
         /**
