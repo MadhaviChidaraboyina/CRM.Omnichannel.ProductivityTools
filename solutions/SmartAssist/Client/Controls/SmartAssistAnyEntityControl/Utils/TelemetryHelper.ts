@@ -87,5 +87,6 @@
         public static InitStarted = TelemetryEventTypes.componentName + "InitStarted";
         public static NoSuggestionsFoundAfterDismiss = TelemetryEventTypes.componentName + "NoSuggestionsFoundAfterDismiss";
         public static AISuggestionsNotSupportedForNonEnglishUser = TelemetryEventTypes.componentName + "AISuggestionsNotSupportedForNonEnglishUser";
+        public static AISuggestionsNotSupportedForUserLanguage = TelemetryEventTypes.componentName + "AISuggestionsNotSupportedForUserLanguage";
     }
 }

@@ -118,6 +118,9 @@
                     let locStrings = await this.loadLocalizationWebResource(localizationWebresource);
                     this._sessionStorageManager.createRecord(saConfig.SmartassistConfigurationId + StringConstants.LocCacheString, locStrings);
                     localizationData = Utility.getMapObject(locStrings);
+                } else {
+                    let message = "Couldn't get suggestion provider localization webresource";
+                    throw new Error(message);
                 }
             }
             catch (error) {
@@ -145,12 +148,11 @@
          */
         private async loadLocalizationWebResource(localizationWebresource: string): Promise<string> {
             let locString: string;
-            if (localizationWebresource && localizationWebresource.indexOf(StringConstants.EnglishLanguageCode) != -1) {
+            const languageCode: string = this._controlContext.userSettings.languageId.toString();
+            if (languageCode && localizationWebresource && localizationWebresource.indexOf(StringConstants.EnglishLanguageCode) != -1) {
                 const org = this._controlContext.page.getClientUrl();
-                const languageCode: number = this._controlContext.userSettings.languageId;
-                // replace webresource name with language code
-                localizationWebresource.replace(StringConstants.EnglishLanguageCode, languageCode.toString());
-                let url = `${org}/api/data/v9.0/webresourceset?$filter=name eq '${localizationWebresource}' and languagecode eq ${languageCode}&$select=contentjson`;
+                let locWebresource = localizationWebresource.replace(StringConstants.EnglishLanguageCode, languageCode);
+                let url = `${org}/api/data/v9.0/webresourceset?$filter=name eq '${locWebresource}' and languagecode eq ${languageCode}&$select=contentjson`;
                 let data = await $.getJSON(url);
                 if (data && data.value.length > 0) {
                     locString = data.value[0].contentjson;

@@ -157,16 +157,17 @@ module MscrmControls.SmartAssistAnyEntityControl {
             else {
                 //TODO: add telemetry for all the scenarios
 
-                // Turn off AI suggestions for non-english user.
-                let englishOrgAndEnglishUser = true;
-                if (SmartAssistAnyEntityControl._context.orgSettings && SmartAssistAnyEntityControl._context.userSettings) {
-                    englishOrgAndEnglishUser = SmartAssistAnyEntityControl._context.orgSettings.languageId == 1033 && SmartAssistAnyEntityControl._context.userSettings.languageId == 1033;
+                // Turn off AI suggestions if user settings has unsupported Language.
+                let isUserLanguageSupported = true;
+                if (SmartAssistAnyEntityControl._context.userSettings) {
+                    let userSettingLanguage = SmartAssistAnyEntityControl._context.userSettings.languageId;
+                    isUserLanguageSupported = StringConstants.SupportedLanguages.indexOf(userSettingLanguage) > -1;
                 }
                 var data;
-                if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled || !englishOrgAndEnglishUser) {
+                if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled || !isUserLanguageSupported) {
                     this.showLoader();
-                    if (!englishOrgAndEnglishUser) {
-                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionsNotSupportedForNonEnglishUser, null);
+                    if (!isUserLanguageSupported) {
+                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionsNotSupportedForUserLanguage, null);
                     }
                     else {
                         this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ContainerStateIsDisabled, null);
@@ -174,7 +175,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     this.appendTitle();
                     var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                     if (!noSuggestionElm) {
-                        var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
+                        var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState, isUserLanguageSupported);
                         $("#" + this.parentDivId).append(emptyRecordElm);
                     }
                 }
@@ -182,14 +183,20 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     this.showLoader();
                     this.appendTitle();
 
-                    // Get Suggestions data records for provide saConfig
+                    // Get Suggestions data records for provided saConfig
                     if (isFPBot == true) {
                         data = await this.anyEntityDataManager.getSuggestionsDataFromAPI(this.saConfig, this.recordId) as { [key: string]: any };
                     }
                     else {
                         this.locString = await this.anyEntityDataManager.getLocalizationData(this.saConfig);
-                        data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
+                        // fetch suggestions only when there is locstrings
+                        if (this.locString) {
+                            data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
+                        }
                     }
+
+                    // TODO: Add appropriate error message for locString
+                    // if(!this.locString && !isFPBot) {}
 
                     var dataLength = 0;
                     if (data && data[this.saConfig.SmartassistConfigurationId]) {
@@ -208,7 +215,6 @@ module MscrmControls.SmartAssistAnyEntityControl {
                         var record = data[this.saConfig.SmartassistConfigurationId][i];
                         //Initiate Suggestion Control
                         const suggestionControl = this.createAndBindRecommendationControl(record);
-
                     }
                 }
             }

@@ -14,7 +14,8 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static UserEntityName = "systemuser";      
         public static FetchOperator = "?fetchXml=";
         public static LocCacheString = "SAlocStrings";
-        public static EnglishLanguageCode = "1033";   
+        public static EnglishLanguageCode = "1033";
+        public static SupportedLanguages: number[] = [1033,1036,1036,1031,3082,1043,1040,1041];
 
         //FPBot
         public static ConversatonControlOrigin = "ConversatonControlOrigin";

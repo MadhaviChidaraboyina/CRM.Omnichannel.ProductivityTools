@@ -28,7 +28,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * Gets html template for no suggestions
          * @param suggestionType: SA config type
          */
-        public static getSuggestionTemplate(saConfig: SAConfig, anyEntityContainerState: AnyEntityContainerState) {
+        public static getSuggestionTemplate(saConfig: SAConfig, anyEntityContainerState: AnyEntityContainerState, isUserLanguageSupported?: boolean) {
             var iconTemp = "";
             var text = ""
             if (!Utility.isNullOrEmptyString(StringConstants.NoRecordDivIconPath))
@@ -36,9 +36,17 @@ module MscrmControls.SmartAssistAnyEntityControl {
 
             switch (saConfig.SuggestionType) {
                 case SuggestionType.KnowledgeArticleSuggestion:
+                    if(isUserLanguageSupported === false) {
+                        text = Utility.getString("KnowledgeArticleUnsupportedUserLanguage");
+                        break;
+                    }
                     text = anyEntityContainerState == AnyEntityContainerState.Disabled ? Utility.getString(LocalizedStrings.NoSettingsText) : Utility.getString(LocalizedStrings.NoKnowledgeArticleText);
                     break;
                 case SuggestionType.SimilarCaseSuggestion:
+                    if(isUserLanguageSupported === false) {
+                        text = Utility.getString("SimilarCasesUnsupportedUserLanguage");
+                        break;
+                    }
                     text = anyEntityContainerState == AnyEntityContainerState.Disabled ? Utility.getString(LocalizedStrings.NoSettingsText) : Utility.getString(LocalizedStrings.NoSimilarCaseText);                    
                     break;
                 default:

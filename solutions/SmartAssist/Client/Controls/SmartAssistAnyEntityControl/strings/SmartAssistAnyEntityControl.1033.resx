@@ -156,4 +156,10 @@
     <value>Similar case suggestions</value>
     <comment>Title for Case suggstions</comment>
   </data>
+  <data name="SimilarCasesUnsupportedUserLanguage" xml:space="preserve">
+    <value>The selected language isn’t supported for similar case suggestions. To fully utilize this feature, please select one of the supported languages.</value>
+  </data>
+  <data name="KnowledgeArticleUnsupportedUserLanguage" xml:space="preserve">
+    <value>The selected language isn’t supported for knowledge article suggestions. To fully utilize this feature, please select one of the supported languages.</value>
+  </data>
 </root>
