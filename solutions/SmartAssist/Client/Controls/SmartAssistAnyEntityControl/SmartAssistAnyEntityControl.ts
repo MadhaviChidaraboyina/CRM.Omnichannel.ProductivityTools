@@ -157,25 +157,14 @@ module MscrmControls.SmartAssistAnyEntityControl {
             else {
                 //TODO: add telemetry for all the scenarios
 
-                // Turn off AI suggestions if user settings has unsupported Language.
-                let isUserLanguageSupported = true;
-                if (SmartAssistAnyEntityControl._context.userSettings) {
-                    let userSettingLanguage = SmartAssistAnyEntityControl._context.userSettings.languageId;
-                    isUserLanguageSupported = StringConstants.SupportedLanguages.indexOf(userSettingLanguage) > -1;
-                }
                 var data;
-                if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled || !isUserLanguageSupported) {
+                if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled) {
                     this.showLoader();
-                    if (!isUserLanguageSupported) {
-                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionsNotSupportedForUserLanguage, null);
-                    }
-                    else {
-                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ContainerStateIsDisabled, null);
-                    }
+                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ContainerStateIsDisabled, null);
                     this.appendTitle();
                     var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                     if (!noSuggestionElm) {
-                        var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState, isUserLanguageSupported);
+                        var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
                         $("#" + this.parentDivId).append(emptyRecordElm);
                     }
                 }
