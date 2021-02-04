@@ -79,19 +79,6 @@ module MscrmControls.PanelControl {
             };
         }
 
-        public static toolSeparatorStyle(flag: boolean) {
-            return {
-                position: "absolute",
-                width: "26px",
-                height: "1px",
-                background: "#D4D0CB",
-                borderRadius: "2px",
-                marginRight: "9px",
-                marginLeft: "9px",
-                visibility: flag ? "hidden" : "visible"
-            }
-        }
-
         public static getNotificationLabelStyle() {
             return {
                 width: "inherit",

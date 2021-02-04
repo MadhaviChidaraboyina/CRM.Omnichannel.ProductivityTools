@@ -37,22 +37,24 @@ module MscrmControls.PanelControl {
         private sessionChangeManager: SessionChangeManager;
         private controls: Mscrm.Component[];
         private isSessionChanged: boolean;
-		/**
-		 * Constructor.
-		 */
+        private productivityToolButtonContainerId:string = "productivity-tools-button-container";
+        private productivityToolButtonIds: string[];
+        /**
+         * Constructor.
+         */
         constructor() {
             this.initCompleted = false;
             this.telemetryContext = TelemetryComponents.MainComponent;
             this.productivityPaneConfigData = new ProductivityPaneConfig(false, false, new ProductivityToolsConfig());
         }
 
-		/**
-		 * This function should be used for any initial setup necessary for your control.
-		 * @params context The "Input Bag" containing the parameters and other control metadata.
-		 * @params notifyOutputchanged The method for this control to notify the framework that it has new outputs
-		 * @params state The user state for this control set from setState in the last session
-		 * @params container The div element to draw this control in
-		 */
+        /**
+         * This function should be used for any initial setup necessary for your control.
+         * @params context The "Input Bag" containing the parameters and other control metadata.
+         * @params notifyOutputchanged The method for this control to notify the framework that it has new outputs
+         * @params state The user state for this control set from setState in the last session
+         * @params container The div element to draw this control in
+         */
         public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary): void {
             if (this.initCompleted == false) {
                 this.context = context;
@@ -71,7 +73,8 @@ module MscrmControls.PanelControl {
                 this.productivityToolSelected = Constants.emptyString;
                 this.panelState.init();
                 this.eventManager = new EventManager(this.context, this.panelState);
-            } 
+                this.productivityToolButtonIds = [];
+            }
         }
 
         private onSessionContextChanged(sessionContextData: SessionChangeEventData, actionType: string): void {
@@ -131,9 +134,9 @@ module MscrmControls.PanelControl {
             this.panelState.SetState(sessionId + LocalStorageKeyConstants.sessionData, data);
         }
 
-		/**
-		 * getPanelContainer generates a side panel.
-		 */
+        /**
+         * getPanelContainer generates a side panel.
+         */
         private getToolsContainer(): Mscrm.Component {
             let isRTL = this.context.client.isRTL;
             let sessionContextJSON = JSON.stringify(this.sessionChangeManager.getSessionChangeEventData());
@@ -173,7 +176,7 @@ module MscrmControls.PanelControl {
                         IsSelected: {
                             Usage: 1,
                             Static: true,
-                            Value: (tool.toolControlName === toolSelected.toolControlName)? true : false,
+                            Value: (tool.toolControlName === toolSelected.toolControlName) ? true : false,
                             Primary: false
                         }
                     },
@@ -223,11 +226,11 @@ module MscrmControls.PanelControl {
         }
 
 
-		/**
-		 * getProductivityToolButton generates the toggle button.
-		 */
+        /**
+         * getProductivityToolButton generates the toggle button.
+         */
 
-        private getProductivityToolButton(iconId: string, iconPath: string, buttonId: string, selectionIndicator: boolean, toolTip: string, properties: any = {},notificationCount:number,toolIndex:number): Mscrm.Component {
+        private getProductivityToolButton(iconId: string, iconPath: string, buttonId: string, selectionIndicator: boolean, toolTip: string, properties: any = {}, notificationCount: number, toolIndex: number): Mscrm.Component {
             const icon = this.getProductivityToolIcon(iconId, iconPath);
             let btnProperties = {
                 id: buttonId,
@@ -243,7 +246,7 @@ module MscrmControls.PanelControl {
             const toggleButton = this.context.factory.createElement(
                 "BUTTON",
                 btnProperties,
-                [icon, this.getNotificationContainer(notificationCount,toolIndex), selectionIndicator ? this.getProductivityToolSelectionIndicator(buttonId) : Constants.emptyString]);
+                [icon, this.getNotificationContainer(notificationCount, toolIndex), selectionIndicator ? this.getProductivityToolSelectionIndicator(buttonId) : Constants.emptyString]);
 
             const listItem = this.context.factory.createElement(
                 "LISTITEM",
@@ -253,7 +256,10 @@ module MscrmControls.PanelControl {
                     style: {
                         display: "flex"
                     },
-                    title: this.context.resources.getString(toolTip)
+                    title: this.context.resources.getString(toolTip),
+                    role: "listitem",
+                    onKeyDown: (event) => this.handleKeyDownEventOnToolButton(event, toolIndex)
+                    ,
                 },
                 toggleButton);
 
@@ -273,33 +279,10 @@ module MscrmControls.PanelControl {
             return lastContainer;
         }
 
-        private toolSeparator(toolId: number): Mscrm.Component {
-            const separator = this.context.factory.createElement(
-                "Label",
-                {
-                    id: Constants.toolSeparatorId + toolId,
-                    key: Constants.toolSeparatorId + toolId,
-                    style: ControlStyle.toolSeparatorStyle(this.panelToggle)
-                },
-                Constants.emptyString);
 
-            const listItem = this.context.factory.createElement(
-                "LISTITEM",
-                {
-                    id: `${Constants.listItemId}${Constants.toolSeparatorId}${toolId}`,
-                    key: `${Constants.listItemId}${Constants.toolSeparatorId}${toolId}`,
-                    style: {
-                        display: "flex"
-                    }
-                },
-                separator);
+        private getNotificationContainer(notificationCount: number, toolIndex: number): any {
 
-            return listItem;
-        }
-
-        private getNotificationContainer(notificationCount:number,toolIndex:number): any {
-
-            if(notificationCount == 0){
+            if (notificationCount == 0) {
                 return Constants.emptyString;
             }
 
@@ -319,17 +302,17 @@ module MscrmControls.PanelControl {
                 {
                     id: Constants.notificationContainerId,
                     key: Constants.notificationContainerId,
-                    style: ControlStyle.getNotificationContainerStyle(toolIndex+1)
+                    style: ControlStyle.getNotificationContainerStyle(toolIndex + 1)
                 },
                 Constants.emptyString);
 
             return notificationContainer;
         }
 
-        private getNotificationCountForTool(controlName:string) : number {
+        private getNotificationCountForTool(controlName: string): number {
             let count = 0;
-            let sessionNotification: {} = this.panelState.getState(this.currentSessionId+LocalStorageKeyConstants.notificationCount);
-            if( !this.context.utils.isNullOrUndefined(sessionNotification) && sessionNotification.hasOwnProperty(controlName) && !this.context.utils.isNullOrUndefined(sessionNotification[controlName])){
+            let sessionNotification: {} = this.panelState.getState(this.currentSessionId + LocalStorageKeyConstants.notificationCount);
+            if (!this.context.utils.isNullOrUndefined(sessionNotification) && sessionNotification.hasOwnProperty(controlName) && !this.context.utils.isNullOrUndefined(sessionNotification[controlName])) {
                 count = sessionNotification[controlName];
             }
 
@@ -338,6 +321,7 @@ module MscrmControls.PanelControl {
 
         private getproductivityToolButtons(): Mscrm.Component {
             let listItems: Mscrm.Component[] = [];
+            let buttonIds: string[] = [];
             let iconPath;
             let toolTip;
             if (this.panelToggle) {
@@ -349,23 +333,25 @@ module MscrmControls.PanelControl {
                 toolTip = Constants.expandToolTip;
             }
 
-            const toggleButton = this.getProductivityToolButton(Constants.toggleIconId, iconPath, Constants.toggle, false, toolTip, { "accessibilityLabel": String.format("{0} {1}", this.context.resources.getString(toolTip), this.context.resources.getString('CC_Panel_Control'))},Constants.toggleButtonNotification,Constants.toggleButtonNotification);
+            const toggleButton = this.getProductivityToolButton(Constants.toggleIconId, iconPath, Constants.toggle, false, toolTip, { "accessibilityLabel": String.format("{0} {1}", this.context.resources.getString(toolTip), this.context.resources.getString('CC_Panel_Control')) }, Constants.toggleButtonNotification, Constants.toggleButtonNotification);
             listItems.push(toggleButton);
 
             this.productivityPaneConfigData.productivityToolsConfig.ToolsList.forEach((tool, index) => {
                 if (tool.isEnabled) {
-                    listItems.push(this.toolSeparator(index));
                     let iconPath = this.getToolIcon(tool);
-                    listItems.push(this.getProductivityToolButton(tool.toolName + "Icon", iconPath, tool.toolName, true, tool.tooltip, { "accessibilityLabel": this.context.resources.getString(tool.tooltip) }, this.getNotificationCountForTool(tool.toolControlName), index));
+                    const toolButton = this.getProductivityToolButton(tool.toolName + "Icon", iconPath, tool.toolName, true, tool.tooltip, { "accessibilityLabel": this.context.resources.getString(tool.tooltip) }, this.getNotificationCountForTool(tool.toolControlName), index);
+                    buttonIds.push(`${Constants.PanelControlIdPrefix}${tool.toolName}`)
+                    listItems.push(toolButton);
                 }
             });
 
+            this.productivityToolButtonIds = buttonIds;
             const buttonContainer = this.context.factory.createElement(
                 "LIST",
                 {
-                    id: "productivity-tools-button-container",
+                    id: this.productivityToolButtonContainerId,
                     key: "productivityToolContainer",
-                    role: "list"
+                    role: "list",
                 },
                 listItems);
 
@@ -386,26 +372,39 @@ module MscrmControls.PanelControl {
             }
         }
 
-		/**
-		 * This function will recieve an "Input Bag" containing the values currently assigned to the parameters in your manifest
-		 * It will send down the latest values (static or dynamic) that are assigned as defined by the manifest & customization experience
-		 * as well as resource, client, and theming info (see mscrm.d.ts)
-		 * @params context The "Input Bag" as described above
-		 */
+        private handleKeyDownEventOnToolButton(event: KeyboardEvent, toolIndex: number): void {
+            if (event.keyCode == KeyCodes.DOWN_ARROW_KEY || event.keyCode == KeyCodes.UP_ARROW_KEY) {
+                const indexToFocus = this.getToolButtonsIndexToFocus(event.keyCode, toolIndex);
+                document.getElementById(this.productivityToolButtonIds[indexToFocus]).focus();
+            }
+        }
+
+        private getToolButtonsIndexToFocus(keyCode: number, toolIndex: number): number {
+            const offset = keyCode == KeyCodes.DOWN_ARROW_KEY ? 1 : this.productivityToolButtonIds.length - 1;
+            const indexToFocus = (toolIndex + offset) % this.productivityToolButtonIds.length;
+            return indexToFocus;
+        }
+        
+        /**
+         * This function will recieve an "Input Bag" containing the values currently assigned to the parameters in your manifest
+         * It will send down the latest values (static or dynamic) that are assigned as defined by the manifest & customization experience
+         * as well as resource, client, and theming info (see mscrm.d.ts)
+         * @params context The "Input Bag" as described above
+         */
         public updateView(context: Mscrm.ControlData<IInputBag>): Mscrm.Component {
             let isRTL = context.client.isRTL;
             // fetch data 
             let navbarContainer;
             if (this.isDataFetched) {
                 let sessionData = this.panelState.getState(this.currentSessionId + LocalStorageKeyConstants.sessionData);
-                if(sessionData!=undefined){
+                if (sessionData != undefined) {
                     this.panelToggle = sessionData.panelToggle;
                     this.productivityToolSelected = sessionData.productivityToolSelected;
                 }
                 let paneState = this.productivityPaneConfigData.productivityPaneState;
                 if (paneState == true) {
                     this.controls = [];
-                    if (this.isSessionChanged ) {
+                    if (this.isSessionChanged) {
                         this.controls.push(this.getproductivityToolButtons());
                         this.controls.push(this.getNavBarLastContainer());
                         this.controls.push(this.getToolsContainer());
@@ -454,12 +453,11 @@ module MscrmControls.PanelControl {
         }
 
         private toggleButtonClick(): void {
-            if (this.panelToggle){
+            if (this.panelToggle) {
                 this.eventManager.SelectedTool = Constants.emptyString;
                 this.setSidePanelControlState(SidePanelControlState.Collpase);
             }
-            else
-            {
+            else {
                 if (this.productivityToolSelected === Constants.emptyString) {
                     this.productivityToolSelected = this.productivityPaneConfigData.getDefaultTool().toolName;
                 }
@@ -467,7 +465,7 @@ module MscrmControls.PanelControl {
                 this.setNotificationCountToZero();
                 this.setSidePanelControlState(SidePanelControlState.Expand);
             }
-            
+
             let sessionData = this.panelState.getState(this.currentSessionId + LocalStorageKeyConstants.sessionData);
             sessionData.productivityToolSelected = this.productivityToolSelected;
             sessionData.isCollapsedByUser = this.panelToggle;
@@ -478,16 +476,16 @@ module MscrmControls.PanelControl {
             this.context.utils.requestRender();
         }
 
-        private setNotificationCountToZero(){
-            let _notification = this.panelState.getState(this.currentSessionId+LocalStorageKeyConstants.notificationCount);
-            if(_notification!=undefined){
+        private setNotificationCountToZero() {
+            let _notification = this.panelState.getState(this.currentSessionId + LocalStorageKeyConstants.notificationCount);
+            if (_notification != undefined) {
                 _notification[this.productivityPaneConfigData.getToolByName(this.productivityToolSelected).toolControlName] = 0;
-                this.panelState.SetState(this.currentSessionId+LocalStorageKeyConstants.notificationCount,_notification);
+                this.panelState.SetState(this.currentSessionId + LocalStorageKeyConstants.notificationCount, _notification);
             }
         }
 
         private productivityToolButtonClick(buttonId: string): void {
-            let isCollapsedByUser : boolean = undefined;
+            let isCollapsedByUser: boolean = undefined;
             if (!this.panelToggle) {
                 this.setSidePanelControlState(SidePanelControlState.Expand);
                 this.panelToggle = !this.panelToggle;
@@ -496,7 +494,7 @@ module MscrmControls.PanelControl {
             }
             if (!(this.productivityToolSelected === buttonId)) {
                 this.productivityToolSelected = buttonId;
-            }            
+            }
             this.eventManager.SelectedTool = this.productivityPaneConfigData.getToolByName(this.productivityToolSelected).toolControlName;
             this.setNotificationCountToZero();
 
@@ -504,9 +502,9 @@ module MscrmControls.PanelControl {
             sessionData.productivityToolSelected = this.productivityToolSelected;
             sessionData.panelToggle = this.panelToggle;
             sessionData.isToggledByUser = true;
-            if(isCollapsedByUser != undefined){
-                 sessionData.isCollapsedByUser = isCollapsedByUser;
-            }            
+            if (isCollapsedByUser != undefined) {
+                sessionData.isCollapsedByUser = isCollapsedByUser;
+            }
             this.panelState.SetState(this.currentSessionId + LocalStorageKeyConstants.sessionData, sessionData);
             this.context.utils.requestRender();
         }
@@ -531,24 +529,24 @@ module MscrmControls.PanelControl {
             return icon;
         }
 
-		/** 
-		 * This function will return an "Output Bag" to the Crm Infrastructure
-		 * The ouputs will contain a value for each property marked as "input-output"/"bound" in your manifest 
-		 * i.e. if your manifest has a property "value" that is an "input-output", and you want to set that to the local variable "myvalue" you should return:
-		 * {
-		 *		value: myvalue
-		 * };
-		 * @returns The "Output Bag" containing values to pass to the infrastructure
-		 */
+        /** 
+         * This function will return an "Output Bag" to the Crm Infrastructure
+         * The ouputs will contain a value for each property marked as "input-output"/"bound" in your manifest 
+         * i.e. if your manifest has a property "value" that is an "input-output", and you want to set that to the local variable "myvalue" you should return:
+         * {
+         *		value: myvalue
+         * };
+         * @returns The "Output Bag" containing values to pass to the infrastructure
+         */
         public getOutputs(): IOutputBag {
             // custom code goes here - remove the line below and return the correct output
             return null;
         }
 
-		/**
-		 * This function will be called when the control is destroyed
-		 * It should be used for cleanup and releasing any memory the control is using
-		 */
+        /**
+         * This function will be called when the control is destroyed
+         * It should be used for cleanup and releasing any memory the control is using
+         */
         public destroy(): void {
             this.panelState.deinit();
         }
