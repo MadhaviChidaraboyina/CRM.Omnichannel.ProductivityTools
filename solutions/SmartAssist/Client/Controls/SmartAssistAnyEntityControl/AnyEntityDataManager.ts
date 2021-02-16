@@ -28,7 +28,7 @@
          * @param saConfig: Smart Assist configuration for suggestion.
          * @param recordId: Record id to find the suggestion upon.
          */
-        public async getSuggestionsData(saConfig: SAConfig, recordId: string): Promise<{[key: string]: any} | string > {
+        public async getSuggestionsData(saConfig: SAConfig, recordId: string): Promise<{[key: string]: any}> {
             let eventParameters = new TelemetryLogger.EventParameters();
             try {
                 const suggestionIdsFromSession = this._sessionStateManager.getAllRecords(recordId) || {};
@@ -40,7 +40,7 @@
 
                 // call API if the data is not available in cache.
                 if (!this.Suggestions || fromServer) {
-                    return await this.getSuggestionsDataFromAPI(saConfig, recordId);                
+                    await this.getSuggestionsDataFromAPI(saConfig, recordId);                
                 }
             }
             catch (error) {
@@ -166,7 +166,7 @@
          * @param saConfig: Smart Assist configuration for suggestion.
          * @param RecordId: Record id to find the suggestion upon.
          */
-        public async getSuggestionsDataFromAPI(saConfig: SAConfig, RecordId: string): Promise<{[key: string]: any} | string> {
+        public async getSuggestionsDataFromAPI(saConfig: SAConfig, RecordId: string): Promise<{[key: string]: any}> {
             try {
                 this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.FetchingDataFromAPI, null);
                 const suggestionProvider = this.getSuggestionProvider(saConfig);
@@ -177,81 +177,56 @@
                 }
                 const startTime = Date.now();
                 const param: Microsoft.Smartassist.SuggestionProvider.SuggestionContext = { controlContext: this._controlContext, tabcontext: tabcontext };
-                let suggestionDataFromAPI: any[] | Microsoft.Smartassist.SuggestionProvider.SuggestionError = [];
+                let suggestionDataFromAPI: any[] = [];
                 if (suggestionProvider) {
-                   suggestionDataFromAPI = await suggestionProvider.getSuggestions(param);
+                    suggestionDataFromAPI = await suggestionProvider.getSuggestions(param);
                 }
 
                 this.Suggestions = {};
                 let executionTime = (Date.now() - startTime) + "ms";
-                if (!this.isSuggestionError(suggestionDataFromAPI)) {
-                    if (suggestionDataFromAPI.length < 1) {
-                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoDataFoundFromAPI, [{ name: "ExecutionTime", value: executionTime }]);
-                    }
-                    else {
-
-                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.DataFetchedFromAPI, [
-                            { name: "ExecutionTime", value: executionTime },
-                            { name: "NoOfSuggestions", value: suggestionDataFromAPI.length }
-                        ]);
-                    }
-
-                    let data = suggestionDataFromAPI;
-                    data = data.sort((a, b) => a.ConfidenceScore > b.ConfidenceScore ? -1 : 1);
-                    var slicedData = data.slice(0, parseInt(saConfig.MaxSuggestionCount));
-
-                    for (let item of data) {
-                        // Creating an unique id for UI construct.
-                        let suggestionId = RecordId + item.SuggestionId;
-                        item.SuggestionId = suggestionId;
-                    }
-                    this.Suggestions[saConfig.SmartassistConfigurationId] = slicedData;
-                    this.initializeCacheForSuggestions(saConfig, RecordId);
-
-                    let additionalData = data.slice(parseInt(saConfig.MaxSuggestionCount));
-
-                    this._cachePoolManager.addOrUpdateSuggestionsInCachePool(RecordId, saConfig.SmartassistConfigurationId, additionalData, this.telemetryHelper);
-
-                    // Raise PP notification
-                    var saConfigData = this.Suggestions;
-                    if (saConfigData && this.Suggestions[saConfig.SmartassistConfigurationId]) {
-                        var sessionId = Utility.getCurrentSessionId();
-                        var dataCount = saConfigData[saConfig.SmartassistConfigurationId].length;
-                        Utility.DispatchPanelInboundEvent(dataCount, sessionId);
-                    }
+                if (suggestionDataFromAPI.length < 1) {
+                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoDataFoundFromAPI, [{ name: "ExecutionTime", value: executionTime }]);
                 }
-            
+                else {
+
+                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.DataFetchedFromAPI, [
+                        { name: "ExecutionTime", value: executionTime },
+                        { name: "NoOfSuggestions", value: suggestionDataFromAPI.length }
+                    ]);
+                }
+
+                let data = suggestionDataFromAPI;
+                data = data.sort((a, b) => a.ConfidenceScore > b.ConfidenceScore ? -1 : 1);
+                var slicedData = data.slice(0, parseInt(saConfig.MaxSuggestionCount));
+
+                for (let item of data) {
+                    // Creating an unique id for UI construct.
+                    let suggestionId = RecordId + item.SuggestionId;
+                    item.SuggestionId = suggestionId;
+                }
+                this.Suggestions[saConfig.SmartassistConfigurationId] = slicedData;
+                this.initializeCacheForSuggestions(saConfig, RecordId);
+
+                let additionalData = data.slice(parseInt(saConfig.MaxSuggestionCount));
+
+                this._cachePoolManager.addOrUpdateSuggestionsInCachePool(RecordId, saConfig.SmartassistConfigurationId, additionalData, this.telemetryHelper);
+
+                // Raise PP notification
+                var saConfigData = this.Suggestions;
+                if (saConfigData && this.Suggestions[saConfig.SmartassistConfigurationId]) {
+                    var sessionId = Utility.getCurrentSessionId();
+                    var dataCount = saConfigData[saConfig.SmartassistConfigurationId].length;
+                    Utility.DispatchPanelInboundEvent(dataCount, sessionId);
+                }
+
                 return this.Suggestions;
             }
             catch (error) {
-                if (this.isSuggestionError(error)) {
-                    this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchDataFromAPI, error.exception, null);
-                    // display message returned from suggestionProvider
-                    if (error.displayMessage) {
-                        return error.displayMessage;
-                    }
-                }
                 this.Suggestions = null;
                 this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchDataFromAPI, error, null);
                 return null;
             }
         }
-
-        //Mocked getSuggestions
-        private async getSuggestions(shouldReject: boolean): Promise<Microsoft.Smartassist.SuggestionProvider.SuggestionError> {
-            return new Promise<Microsoft.Smartassist.SuggestionProvider.SuggestionError>((resolve, reject) => {
-                let testReject: Microsoft.Smartassist.SuggestionProvider.SuggestionError = {
-                    displayMessage: "The selected language isn’t supported for AI suggestions. To fully utilize this feature, please select one of the supported languages. Learn more",
-                    exception: "400"
-                }
-                if (shouldReject) {
-                    reject(testReject);
-                } else {
-                    resolve(null);
-                }
-            });
-        }
-
 
         /**
          * Stores API data in local storage and suggestionIds in SessionContext.
@@ -287,10 +262,6 @@
 
             let suggestionIdsToSave = previousSuggestionIds.concat(suggestionIds);
             window.sessionStorage.setItem(sessionId, JSON.stringify(suggestionIdsToSave));
-        }
-
-        isSuggestionError(result: any[] | Microsoft.Smartassist.SuggestionProvider.SuggestionError ): result is Microsoft.Smartassist.SuggestionProvider.SuggestionError {
-            return (result as Microsoft.Smartassist.SuggestionProvider.SuggestionError).exception !== undefined;
         }
     }
 }

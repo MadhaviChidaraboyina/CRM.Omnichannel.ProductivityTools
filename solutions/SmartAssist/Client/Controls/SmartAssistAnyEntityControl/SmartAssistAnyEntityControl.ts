@@ -134,7 +134,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ControlInitializationStarted, null);
 
             //Get Current context
-            await this.getCurrentContext();            
+            await this.getCurrentContext();
             if (this.saConfig.SuggestionType == SuggestionType.BotSuggestion && this.AnyEntityContainerState == AnyEntityContainerState.Enabled) {
                 this.showLoader();
                 //TODO: add telemetry for all the scenarios
@@ -180,36 +180,26 @@ module MscrmControls.SmartAssistAnyEntityControl {
                         this.locString = await this.anyEntityDataManager.getLocalizationData(this.saConfig);
                         // fetch suggestions only when there is locstrings
                         if (this.locString) {
-                            // data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
-                            data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId);
+                            data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
                         }
                     }
-                    // display backend error message
-                    if (typeof data === 'string') {
+                    var dataLength = 0;
+                    if (data && data[this.saConfig.SmartassistConfigurationId]) {
+                        dataLength = data[this.saConfig.SmartassistConfigurationId].length;
+                    }
+
+                    if (dataLength < 1) {
+                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoDataFound, null);
                         var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                         if (!noSuggestionElm) {
-                            var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, undefined, data);
+                            var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
                             $("#" + this.parentDivId).append(emptyRecordElm);
                         }
-                    } else {
-                        var dataLength = 0;
-                        if (data && data[this.saConfig.SmartassistConfigurationId]) {
-                            dataLength = data[this.saConfig.SmartassistConfigurationId].length;
-                        }
-
-                        if (dataLength < 1) {
-                            this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoDataFound, null);
-                            var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
-                            if (!noSuggestionElm) {
-                                var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
-                                $("#" + this.parentDivId).append(emptyRecordElm);
-                            }
-                        }
-                        for (let i = 0; i <= (dataLength - 1); i++) {
-                            var record = data[this.saConfig.SmartassistConfigurationId][i];
-                            //Initiate Suggestion Control
-                            const suggestionControl = this.createAndBindRecommendationControl(record);
-                        }
+                    }
+                    for (let i = 0; i <= (dataLength - 1); i++) {
+                        var record = data[this.saConfig.SmartassistConfigurationId][i];
+                        //Initiate Suggestion Control
+                        const suggestionControl = this.createAndBindRecommendationControl(record);
                     }
                 }
             }

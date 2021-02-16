@@ -28,25 +28,20 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * Gets html template for no suggestions
          * @param suggestionType: SA config type
          */
-        public static getSuggestionTemplate(saConfig: SAConfig, anyEntityContainerState?: AnyEntityContainerState, customError?: string) {
+        public static getSuggestionTemplate(saConfig: SAConfig, anyEntityContainerState?: AnyEntityContainerState) {
             var iconTemp = "";
             var text = ""
             if (!Utility.isNullOrEmptyString(StringConstants.NoRecordDivIconPath))
                 iconTemp = this.NoSugegstionsIconTemplate.Format(StringConstants.NoRecordDivIconPath);
 
-            if (customError) {
-                text = customError;
-            }
-            else {
-                switch (saConfig.SuggestionType) {
-                    case SuggestionType.KnowledgeArticleSuggestion:
-                        text = anyEntityContainerState == AnyEntityContainerState.Disabled ? Utility.getString(LocalizedStrings.NoSettingsText) : Utility.getString(LocalizedStrings.NoKnowledgeArticleText);
-                        break;
-                    case SuggestionType.SimilarCaseSuggestion:
-                        text = anyEntityContainerState == AnyEntityContainerState.Disabled ? Utility.getString(LocalizedStrings.NoSettingsText) : Utility.getString(LocalizedStrings.NoSimilarCaseText);
-                        break;
-                    default:
-                }
+            switch (saConfig.SuggestionType) {
+                case SuggestionType.KnowledgeArticleSuggestion:
+                    text = anyEntityContainerState == AnyEntityContainerState.Disabled ? Utility.getString(LocalizedStrings.NoSettingsText) : Utility.getString(LocalizedStrings.NoKnowledgeArticleText);
+                    break;
+                case SuggestionType.SimilarCaseSuggestion:
+                    text = anyEntityContainerState == AnyEntityContainerState.Disabled ? Utility.getString(LocalizedStrings.NoSettingsText) : Utility.getString(LocalizedStrings.NoSimilarCaseText);
+                    break;
+                default:
             }
             return this.NoSugegstionsTextTemplate.Format(StringConstants.NoSugegstionsDivId + saConfig.SmartassistConfigurationId, iconTemp, text);
         }

@@ -17,20 +17,7 @@
          * Returns data for smartassist suggestions.
          * @param param SuggestionContext
          */
-        getSuggestions(param: SuggestionContext): Promise<Array<any> | SuggestionError>;
+        getSuggestions(param: SuggestionContext): Promise<Array<any>>;
         getSuggestionLocalizationProvider(): Promise<string>;
-    } 
-
-    export interface SuggestionError {
-        /**
-         * display message on rejecting the request
-         * */
-        displayMessage?: string
-
-        
-        /**
-         * Exception if any
-         * */
-        exception?: any
     }
 }
