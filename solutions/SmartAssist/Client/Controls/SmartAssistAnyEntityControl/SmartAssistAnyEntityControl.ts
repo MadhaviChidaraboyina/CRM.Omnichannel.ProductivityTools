@@ -14,7 +14,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private anyEntityContainer: HTMLDivElement = null;
         private initCompleted: boolean;
         private saConfig: SAConfig = null;
-        private locString: { [key: string]: string } = null;
+        private locString: { [key: string]: string };
         private AnyEntityContainerState: AnyEntityContainerState = AnyEntityContainerState.Enabled;
         private recordId: string;
         private anyEntityDataManager: AnyEntityDataManager = null;

@@ -40,7 +40,7 @@
 
                 // call API if the data is not available in cache.
                 if (!this.Suggestions || fromServer) {
-                    await this.getSuggestionsDataFromAPI(saConfig, recordId);                
+                    await this.getSuggestionsDataFromAPI(saConfig, recordId);
                 }
             }
             catch (error) {
