@@ -28,7 +28,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * Gets html template for no suggestions
          * @param suggestionType: SA config type
          */
-        public static getSuggestionTemplate(saConfig: SAConfig, anyEntityContainerState?: AnyEntityContainerState) {
+        public static getSuggestionTemplate(saConfig: SAConfig, anyEntityContainerState: AnyEntityContainerState) {
             var iconTemp = "";
             var text = ""
             if (!Utility.isNullOrEmptyString(StringConstants.NoRecordDivIconPath))
