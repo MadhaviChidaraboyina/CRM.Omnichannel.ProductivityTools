@@ -24,7 +24,7 @@ module MscrmControls.PanelControl {
     }
 
     export enum SidePanelControlState {
-        Collpase = 0,
+        Collapse = 0,
         Expand = 1,
         Hidden = 2
     }

@@ -422,7 +422,7 @@ module MscrmControls.PanelControl {
                         if (this.panelToggle) {
                             this.setSidePanelControlState(SidePanelControlState.Expand);
                         } else {
-                            this.setSidePanelControlState(SidePanelControlState.Collpase);
+                            this.setSidePanelControlState(SidePanelControlState.Collapse);
                         }
                     }
                     else {
@@ -455,7 +455,7 @@ module MscrmControls.PanelControl {
         private toggleButtonClick(): void {
             if (this.panelToggle) {
                 this.eventManager.SelectedTool = Constants.emptyString;
-                this.setSidePanelControlState(SidePanelControlState.Collpase);
+                this.setSidePanelControlState(SidePanelControlState.Collapse);
             }
             else {
                 if (this.productivityToolSelected === Constants.emptyString) {
@@ -552,7 +552,6 @@ module MscrmControls.PanelControl {
         }
 
         public retrieveIntitialData() {
-            let methodName = 'retrieveIntitialData';
             try {
                 //get app config name
                 Microsoft.AppRuntime.Utility.getEnvironment().then(
@@ -592,7 +591,7 @@ module MscrmControls.PanelControl {
             catch (e) {
                 let errorParam = new EventParameters();
                 errorParam.addParameter("errorObj", JSON.stringify(e));
-                this.telemetryLogger.logError(this.telemetryContext, methodName, e.message, errorParam);
+                this.telemetryLogger.logError(this.telemetryContext, 'retrieveIntitialData', e.message, errorParam);
             }
         }
     }
