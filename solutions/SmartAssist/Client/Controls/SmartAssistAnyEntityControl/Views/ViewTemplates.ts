@@ -39,7 +39,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     text = anyEntityContainerState == AnyEntityContainerState.Disabled ? Utility.getString(LocalizedStrings.NoSettingsText) : Utility.getString(LocalizedStrings.NoKnowledgeArticleText);
                     break;
                 case SuggestionType.SimilarCaseSuggestion:
-                    text = anyEntityContainerState == AnyEntityContainerState.Disabled ? Utility.getString(LocalizedStrings.NoSettingsText) : Utility.getString(LocalizedStrings.NoSimilarCaseText);                    
+                    text = anyEntityContainerState == AnyEntityContainerState.Disabled ? Utility.getString(LocalizedStrings.NoSettingsText) : Utility.getString(LocalizedStrings.NoSimilarCaseText);
                     break;
                 default:
             }

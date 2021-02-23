@@ -71,6 +71,7 @@
         public static FailedToFetchDataFromAPI = TelemetryEventTypes.componentName + "FailedToFetchDataFromAPI";
         public static FailedToFetchDataFromCache = TelemetryEventTypes.componentName + "FailedToFetchDataFromCache";
         public static FailedToFetchData = TelemetryEventTypes.componentName + "FailedToFetchData";
+        public static FailedToFetchLocalizationData = TelemetryEventTypes.componentName + "FailedToFetchLocalizationData";
         public static CachePoolAddOrUpdateFailed = TelemetryEventTypes.componentName + "CachePoolAddOrUpdateFailed";
         public static FailedToFetchDataFromCachePool = TelemetryEventTypes.componentName + "FailedToFetchDataFromCachePool";
         public static CachePoolUpdated = TelemetryEventTypes.componentName + "CachePoolUpdated";

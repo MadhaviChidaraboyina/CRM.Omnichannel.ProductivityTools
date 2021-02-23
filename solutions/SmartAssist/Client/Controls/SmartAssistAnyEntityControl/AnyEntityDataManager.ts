@@ -28,7 +28,7 @@
          * @param saConfig: Smart Assist configuration for suggestion.
          * @param recordId: Record id to find the suggestion upon.
          */
-        public async getSuggestionsData(saConfig: SAConfig, recordId: string) {
+        public async getSuggestionsData(saConfig: SAConfig, recordId: string): Promise<{[key: string]: any}> {
             let eventParameters = new TelemetryLogger.EventParameters();
             try {
                 const suggestionIdsFromSession = this._sessionStateManager.getAllRecords(recordId) || {};
@@ -40,7 +40,7 @@
 
                 // call API if the data is not available in cache.
                 if (!this.Suggestions || fromServer) {
-                    await this.getSuggestionsDataFromAPI(saConfig, recordId);                    
+                    await this.getSuggestionsDataFromAPI(saConfig, recordId);
                 }
             }
             catch (error) {
@@ -102,11 +102,71 @@
         }
 
         /**
+         * Gets localization data for the suggestion provider.
+         * @param saConfig: Smart Assist configuration for suggestion.
+         */
+        public async getLocalizationData(saConfig: SAConfig): Promise<{ [key: string]: string }> {
+            let localizationData: { [key: string]: string } = null;
+            let cachedLocData = this._sessionStorageManager.getRecord(saConfig.SmartassistConfigurationId + StringConstants.LocCacheString);
+            if (cachedLocData) {
+                return Utility.getMapObject(cachedLocData);
+            }
+            try {
+                let localizationWebresource: string = await this.getLocalizationProvider(saConfig);
+                if (localizationWebresource) {
+                    // loc strings fetched only once per config for the entire session
+                    let locStrings = await this.loadLocalizationWebResource(localizationWebresource);
+                    this._sessionStorageManager.createRecord(saConfig.SmartassistConfigurationId + StringConstants.LocCacheString, locStrings);
+                    localizationData = Utility.getMapObject(locStrings);
+                } else {
+                    let message = "Couldn't get suggestion provider localization webresource";
+                    throw new Error(message);
+                }
+            }
+            catch (error) {
+                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchLocalizationData, error, null);
+            }
+            return localizationData;
+        }
+
+         /**
+         * Gets localization webresource name for the suggestion provider.
+         * @param saConfig: Smart Assist configuration for suggestion.
+         */
+        public async getLocalizationProvider(saConfig: SAConfig): Promise<string> {
+            const suggestionProvider = this.getSuggestionProvider(saConfig);
+            let locProvider: string;
+            if (suggestionProvider) {
+                locProvider = await suggestionProvider.getSuggestionLocalizationProvider();
+            }
+            return locProvider;
+        }
+
+        /**
+         * Fetch localization strings for the suggestionprovider webresource and UI setting language code.
+         * @param localizationWebresource localization webresource name of suggestion provider
+         */
+        private async loadLocalizationWebResource(localizationWebresource: string): Promise<string> {
+            let locString: string;
+            const languageCode: string = this._controlContext.userSettings.languageId.toString();
+            if (languageCode && localizationWebresource && localizationWebresource.indexOf(StringConstants.EnglishLanguageCode) != -1) {
+                const org = this._controlContext.page.getClientUrl();
+                let locWebresource = localizationWebresource.replace(StringConstants.EnglishLanguageCode, languageCode);
+                let url = `${org}/api/data/v9.0/webresourceset?$filter=name eq '${locWebresource}' and languagecode eq ${languageCode}&$select=contentjson`;
+                let data = await $.getJSON(url);
+                if (data && data.value.length > 0) {
+                    locString = data.value[0].contentjson;
+                }
+            }
+            return locString;
+        }
+
+        /**
          * Gets the suggestion record from provided API.
          * @param saConfig: Smart Assist configuration for suggestion.
          * @param RecordId: Record id to find the suggestion upon.
          */
-        public async getSuggestionsDataFromAPI(saConfig: SAConfig, RecordId: string) {
+        public async getSuggestionsDataFromAPI(saConfig: SAConfig, RecordId: string): Promise<{[key: string]: any}> {
             try {
                 this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.FetchingDataFromAPI, null);
                 const suggestionProvider = this.getSuggestionProvider(saConfig);
@@ -128,10 +188,10 @@
                     this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoDataFoundFromAPI, [{ name: "ExecutionTime", value: executionTime }]);
                 }
                 else {
-                    
+
                     this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.DataFetchedFromAPI, [
                         { name: "ExecutionTime", value: executionTime },
-                        { name: "NoOfSuggestions", value: suggestionDataFromAPI.length}
+                        { name: "NoOfSuggestions", value: suggestionDataFromAPI.length }
                     ]);
                 }
 
@@ -167,7 +227,6 @@
                 return null;
             }
         }
-
 
         /**
          * Stores API data in local storage and suggestionIds in SessionContext.

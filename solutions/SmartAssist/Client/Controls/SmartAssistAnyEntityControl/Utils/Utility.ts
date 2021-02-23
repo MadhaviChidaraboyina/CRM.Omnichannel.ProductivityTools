@@ -120,5 +120,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
             }
             return tabcontext
         }
+
+        /**Parse json string to map object */
+        public static getMapObject(jsonInput: string): { [key: string]: string } {
+            return JSON.parse(jsonInput) as { [key: string]: string };
+        }
     }
 }

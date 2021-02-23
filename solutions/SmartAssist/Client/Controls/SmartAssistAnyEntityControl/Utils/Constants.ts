@@ -12,7 +12,9 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static TPBotUniqueName = "msdyn_sa_oc_thirdpartybot_config";      
         public static isSmartAssistFound = "_isSmartAssistFound";      
         public static UserEntityName = "systemuser";      
-        public static FetchOperator = "?fetchXml=";      
+        public static FetchOperator = "?fetchXml=";
+        public static LocCacheString = "SAlocStrings";
+        public static EnglishLanguageCode = "1033";
 
         //FPBot
         public static ConversatonControlOrigin = "ConversatonControlOrigin";
