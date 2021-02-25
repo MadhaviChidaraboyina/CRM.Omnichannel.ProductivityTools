@@ -1188,4 +1188,20 @@
     <value>Service</value>
     <comment>'Productivity pane configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
+  <data name="50:Title,ProductivityPane.PanelControl" xml:space="preserve">
+    <value>Hulpmiddelen voor productiviteit</value>
+    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl'</comment>
+  </data>
+  <data name="50:Title,ProductivityPane.PanelControl.LabelText" xml:space="preserve">
+    <value>Hulpmiddelen voor productiviteit</value>
+    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.LabelText'</comment>
+  </data>
+  <data name="50:Title,ProductivityPane.PanelControl.ToolTipDescription" xml:space="preserve">
+    <value>Beschrijving van hulpmiddelen voor productiviteit</value>
+    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.ToolTipDescription'</comment>
+  </data>
+  <data name="50:Title,ProductivityPane.PanelControl.ToolTipTitle" xml:space="preserve">
+    <value>Titel van hulpmiddelen voor productiviteit</value>
+    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.ToolTipTitle'</comment>
+  </data>
 </root>

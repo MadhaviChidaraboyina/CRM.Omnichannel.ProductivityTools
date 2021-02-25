@@ -1188,4 +1188,20 @@
     <value>서비스</value>
     <comment>'Productivity pane configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
+  <data name="50:Title,ProductivityPane.PanelControl" xml:space="preserve">
+    <value>생산성 도구</value>
+    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl'</comment>
+  </data>
+  <data name="50:Title,ProductivityPane.PanelControl.LabelText" xml:space="preserve">
+    <value>생산성 도구</value>
+    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.LabelText'</comment>
+  </data>
+  <data name="50:Title,ProductivityPane.PanelControl.ToolTipDescription" xml:space="preserve">
+    <value>생산성 도구 설명</value>
+    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.ToolTipDescription'</comment>
+  </data>
+  <data name="50:Title,ProductivityPane.PanelControl.ToolTipTitle" xml:space="preserve">
+    <value>생산성 도구 제목</value>
+    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.ToolTipTitle'</comment>
+  </data>
 </root>
