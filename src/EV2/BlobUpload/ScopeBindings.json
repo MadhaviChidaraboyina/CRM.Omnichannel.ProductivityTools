@@ -45,7 +45,7 @@
 			"bindings": [
 				{
 					"find": "__CT_NAME__",
-					"replaceWith": "flowcontrolfaizan"
+					"replaceWith": "flowcontrol"
 				},
 				{
 					"find": "__BLOB_FOLDER_NAME__",
