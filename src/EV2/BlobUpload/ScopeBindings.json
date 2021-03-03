@@ -45,11 +45,11 @@
 			"bindings": [
 				{
 					"find": "__CT_NAME__",
-					"replaceWith": "flowcontrol"
+					"replaceWith": "flowcontrolfaizan"
 				},
 				{
 					"find": "__BLOB_FOLDER_NAME__",
-					"replaceWith": "drop/outputs/build/Designer/MacroDesigner"
+					"replaceWith": "drop/outputs/build/Designer/BlobArtifacts"
 				}
 			]
 		}

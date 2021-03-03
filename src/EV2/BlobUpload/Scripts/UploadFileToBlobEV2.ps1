@@ -16,7 +16,7 @@ param(
     [string]$FilePath = $( throw "Missing required parameter file-path"))
   
     Write-Host "File to copy is $FilePath";
-	$RelativePath = "DesignerBlob/" + $FilePath.Replace("$ApplicationPackagePath/","");
+	$RelativePath = $FilePath.Replace("$ApplicationPackagePath/","");
 	Write-Host "Relative Path is $RelativePath";
 	$fileExtension = [System.IO.Path]::GetExtension($FilePath)
 	Write-Host "FileExtension is $fileExtension";
@@ -52,10 +52,8 @@ try
 {
 	$CurrPath = "$(Get-Location)"
 	Write-Host $CurrPath
-
 	$ApplicationPackagePath = "$CurrPath/$blobFolderName"
 	Write-Host "ApplicationPackagePath- $ApplicationPackagePath"
-
 	$PWord = ConvertTo-SecureString -String $spPwd -AsPlainText -Force
 	$PsCred = New-Object System.Management.Automation.PSCredential($spId, $PWord)
 	Login-AzAccount -Credential $PsCred -ServicePrincipal -TenantId $tenantId -SubscriptionId $subscriptionId
