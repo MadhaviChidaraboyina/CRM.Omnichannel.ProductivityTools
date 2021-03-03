@@ -54,6 +54,8 @@
     <AgentScriptHostControlOutputPath>$(AgentScriptOutputPath)\AgentScriptDesigner</AgentScriptHostControlOutputPath>
     <DesignerControlBlobPath>$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Blobs</DesignerControlBlobPath>
     <DesignerControlBlobFolderPath>$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Blobs\MacroDesigner</DesignerControlBlobFolderPath>
+    <!--Do not delete the below line as blob is dependent on this -->
+    <DesignerBlobFolderPath>$(WSRoot)\drop\$(BuildConfiguration)\$(BuildPlatform)\Blobs\BlobArtifacts\DesignerBlob</DesignerBlobFolderPath>
   </PropertyGroup>
   <PropertyGroup>
     <PKG_LOGICAPP_UI_CORE>..\..\..\packages\Microsoft.Azure.Logic.UI.Core.1.50224.1.1</PKG_LOGICAPP_UI_CORE>
@@ -191,6 +193,10 @@
     <Exec Command="PowerShell -command Compress-Archive -Path $(DesignerControlOutputPath) -DestinationPath $(DesignerControlBlobPath)\designer.zip" />
     <MakeDir Condition="!Exists($(DesignerControlBlobFolderPath))" Directories="$(DesignerControlBlobFolderPath)" />
     <Copy SourceFiles="@(DesignerBlobFiles)" DestinationFolder="$(DesignerControlBlobFolderPath)\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
+    <!--Do not delete the below lines as blob is dependent on these -->
+    <Delete Files="$(DesignerBlobFolderPath)\BlobArtifacts" Condition="Exists('$(DesignerBlobFolderPath)\BlobArtifacts')" />
+    <MakeDir Condition="!Exists($(DesignerBlobFolderPath))" Directories="$(DesignerBlobFolderPath)" />
+    <Copy SourceFiles="@(DesignerBlobFiles)" DestinationFolder="$(DesignerBlobFolderPath)\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
   </Target>
   <!-- Copy Macro Designer Web Resources to Solution Path -->
   <Target Name="CopyWebResources" AfterTargets="Build">
