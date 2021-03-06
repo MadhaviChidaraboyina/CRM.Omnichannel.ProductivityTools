@@ -58,14 +58,18 @@ module MscrmControls.Smartassist.Suggestion {
 
 				this._context.reporting.reportSuccess(TelemetryEventTypes.TemplateParsingCompleted, Util.getTelemetryParameter(null, this._suggestionId));
 
-				const cardTemplate = new ACData.Template(templatePayload);
-
+				// double bind template with merged data(loc strings + suggestion data) to support nested dynamic strings
+				// first bind: "${KnowledgeSuggestions_ConfidenceText}" -> "${confidencescore}% confidence"
+				// second bind: "${confidencescore}% confidence" -> "90% confidence"
+				const tempCardTemplate = new ACData.Template(templatePayload);
 				const dataToBind: any = data;
 				var context: ACData.IEvaluationContext = {
 					$root: dataToBind
 				};
-
+				const tempCard = tempCardTemplate.expand(context);
+				const cardTemplate = new ACData.Template(tempCard);
 				const card = cardTemplate.expand(context);
+
 				const suggestionCard: SuggestionCard = { cardId: cardId, cardContent: card, cardState: CardState.New };
 
 				const htmlElement = this.createAdaptiveCard(card);
@@ -78,7 +82,7 @@ module MscrmControls.Smartassist.Suggestion {
 				
 				return suggestionCardElement;
 			} catch (error) {
-				this._context.reporting.reportFailure(TelemetryEventTypes.AdaptiveCardRenderingFailed, error, "TSG-TODO", Util.getTelemetryParameter(null, this._suggestionId));
+				this._context.reporting.reportFailure(TelemetryEventTypes.AdaptiveCardRenderingFailed, error, "TSG-TODO", Util.getTelemetryParameter([{ name: "UserSettingLanguage", value: this._context.userSettings.languageId }], this._suggestionId));
 				return null;
 			}
 		}
@@ -151,7 +155,8 @@ module MscrmControls.Smartassist.Suggestion {
 
 						// log telemetry for custom action invocation
 						this._context.reporting.reportSuccess(TelemetryEventTypes.CustomActionInvocationSuccess, Util.getTelemetryParameter([
-							{ name: "ActionName", value: submitAction.data[Constants.CustomActionName] }
+							{ name: "ActionName", value: submitAction.data[Constants.CustomActionName] },
+							{ name: "UserSettingLanguage", value: this._context.userSettings.languageId }
 						], this._suggestionId));
 
 						actionPromise.then((customActionReturn: CustomActionReturn) => {

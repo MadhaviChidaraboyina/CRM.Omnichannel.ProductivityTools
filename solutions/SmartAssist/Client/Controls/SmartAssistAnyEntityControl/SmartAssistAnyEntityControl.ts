@@ -157,10 +157,21 @@ module MscrmControls.SmartAssistAnyEntityControl {
             else {
                 //TODO: add telemetry for all the scenarios
 
+                // Turn off AI suggestions for non-english user if multi-lingual FCB is off
+                let englishOrgAndEnglishUser = true;
+                if (SmartAssistAnyEntityControl._context.orgSettings && SmartAssistAnyEntityControl._context.userSettings) {
+                    englishOrgAndEnglishUser = SmartAssistAnyEntityControl._context.orgSettings.languageId == 1033 && SmartAssistAnyEntityControl._context.userSettings.languageId == 1033;
+                }
+
                 var data;
-                if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled) {
+                if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled || (!SmartAssistAnyEntityControl._context.utils.isFeatureEnabled("SmartAssistMultilingualSupport") && !englishOrgAndEnglishUser)) {
                     this.showLoader();
-                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ContainerStateIsDisabled, null);
+                    if (!SmartAssistAnyEntityControl._context.utils.isFeatureEnabled("SmartAssistMultilingualSupport") && !englishOrgAndEnglishUser) {
+                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionsNotSupportedForNonEnglishUser, null);
+                    }
+                    else {
+                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ContainerStateIsDisabled, null);
+                    }
                     this.appendTitle();
                     var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                     if (!noSuggestionElm) {
@@ -178,28 +189,35 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     }
                     else {
                         this.locString = await this.anyEntityDataManager.getLocalizationData(this.saConfig);
-                        // fetch suggestions only when there is locstrings
-                        if (this.locString) {
-                            data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId) as { [key: string]: any };
-                        }
-                    }
-                    var dataLength = 0;
-                    if (data && data[this.saConfig.SmartassistConfigurationId]) {
-                        dataLength = data[this.saConfig.SmartassistConfigurationId].length;
+                        data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId);
                     }
 
-                    if (dataLength < 1) {
-                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoDataFound, null);
+                    // display backend error message
+                    if (typeof data === 'string') {
                         var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                         if (!noSuggestionElm) {
-                            var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
+                            var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, undefined, data);
                             $("#" + this.parentDivId).append(emptyRecordElm);
                         }
-                    }
-                    for (let i = 0; i <= (dataLength - 1); i++) {
-                        var record = data[this.saConfig.SmartassistConfigurationId][i];
-                        //Initiate Suggestion Control
-                        const suggestionControl = this.createAndBindRecommendationControl(record);
+                    } else {
+                        var dataLength = 0;
+                        if (data && data[this.saConfig.SmartassistConfigurationId]) {
+                            dataLength = data[this.saConfig.SmartassistConfigurationId].length;
+                        }
+
+                        if (dataLength < 1) {
+                            this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoDataFound, null);
+                            var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
+                            if (!noSuggestionElm) {
+                                var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
+                                $("#" + this.parentDivId).append(emptyRecordElm);
+                            }
+                        }
+                        for (let i = 0; i <= (dataLength - 1); i++) {
+                            var record = data[this.saConfig.SmartassistConfigurationId][i];
+                            //Initiate Suggestion Control
+                            const suggestionControl = this.createAndBindRecommendationControl(record);
+                        }
                     }
                 }
             }

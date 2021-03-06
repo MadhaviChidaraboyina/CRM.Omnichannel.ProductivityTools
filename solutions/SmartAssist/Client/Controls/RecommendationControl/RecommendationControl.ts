@@ -75,7 +75,7 @@ module MscrmControls.Smartassist {
 			const cardHtml = suggestionCardElement.cardHTMLElement;
 			if (cardHtml) {
 				$("#" + cardId).append(cardHtml);
-				this._context.reporting.reportSuccess(Suggestion.TelemetryEventTypes.AdaptiveCardRenderingSucceed, Suggestion.Util.getTelemetryParameter(null, this._suggestionId));
+				this._context.reporting.reportSuccess(Suggestion.TelemetryEventTypes.AdaptiveCardRenderingSucceed, Suggestion.Util.getTelemetryParameter([{ name: "UserSettingLanguage", value: this._context.userSettings.languageId }], this._suggestionId));
 				if (!this._data.IsInteracted) {
 					$("#" + cardId).addClass(Suggestion.Constants.CardNewClass);
                 }
