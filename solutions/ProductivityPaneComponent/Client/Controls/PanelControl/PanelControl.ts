@@ -552,6 +552,7 @@ module MscrmControls.PanelControl {
         }
 
         public retrieveIntitialData() {
+            let methodName = 'retrieveIntitialData';
             try {
                 //get app config name
                 Microsoft.AppRuntime.Utility.getEnvironment().then(
@@ -591,7 +592,7 @@ module MscrmControls.PanelControl {
             catch (e) {
                 let errorParam = new EventParameters();
                 errorParam.addParameter("errorObj", JSON.stringify(e));
-                this.telemetryLogger.logError(this.telemetryContext, 'retrieveIntitialData', e.message, errorParam);
+                this.telemetryLogger.logError(this.telemetryContext, methodName, e.message, errorParam);
             }
         }
     }
