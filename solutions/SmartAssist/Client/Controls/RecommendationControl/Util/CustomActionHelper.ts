@@ -40,7 +40,7 @@ module MscrmControls.Smartassist.Suggestion {
 
 			if (!findFunc || typeof findFunc !== "function") {
 				const e = new Error(`Could not find/invoke ${customActioName}`);
-				context.reporting.reportFailure(TelemetryEventTypes.CustomActionInvocationFailed, e, "TSG-TODO", [{ name: "ActionName", value: customActioName }])
+				context.reporting.reportFailure(TelemetryEventTypes.CustomActionInvocationFailed, e, "TSG-TODO", [{ name: "ActionName", value: customActioName }, { name: "UserSettingLanguage", value: context.userSettings.languageId }]);
 				throw e;
 			}
 			return findFunc;
