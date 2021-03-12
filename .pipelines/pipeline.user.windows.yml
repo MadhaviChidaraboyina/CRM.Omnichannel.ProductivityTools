@@ -137,7 +137,17 @@ package:
                                                                         # in the order they appear here.
                                                                         # We are not doing anything here. In fact, we could have omitted the
                                                                         # package stage entirely.
-            
+    - !!buildcommand
+
+      name: ' ev2 Files'
+      command: 'build.cmd'
+      artifacts:
+
+#Copy Ev2 Files
+        - from: 'src\EV2'
+          to: 'EV2'
+          include:
+            - '**/*'
 
 # An optional, interim user defined stage for performing publishing of the build. Examples include, dropping the files to a network share,
 # pushing packages to a package repository, uploading binaries to blob store etc. 
