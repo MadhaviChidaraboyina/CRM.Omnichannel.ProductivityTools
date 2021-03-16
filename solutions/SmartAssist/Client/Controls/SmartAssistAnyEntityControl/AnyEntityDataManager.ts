@@ -107,16 +107,18 @@
          */
         public async getLocalizationData(saConfig: SAConfig): Promise<{ [key: string]: string }> {
             let localizationData: { [key: string]: string } = null;
-            let cachedLocData = this._sessionStorageManager.getRecord(saConfig.SmartassistConfigurationId + StringConstants.LocCacheString);
+            let languageId: string = this._controlContext.userSettings.languageId.toString();
+            let locCacheKey: string = saConfig.SmartassistConfigurationId + StringConstants.LocCacheString + languageId;
+            let cachedLocData = this._sessionStorageManager.getRecord(locCacheKey);
             if (cachedLocData) {
                 return Utility.getMapObject(cachedLocData);
             }
             try {
                 let localizationWebresource: string = await this.getLocalizationProvider(saConfig);
                 if (localizationWebresource) {
-                    // loc strings fetched only once per config for the entire session
+                    // loc strings fetched only once per config, per loc for the entire session
                     let locStrings = await this.loadLocalizationWebResource(localizationWebresource);
-                    this._sessionStorageManager.createRecord(saConfig.SmartassistConfigurationId + StringConstants.LocCacheString, locStrings);
+                    this._sessionStorageManager.createRecord(locCacheKey, locStrings);
                     localizationData = Utility.getMapObject(locStrings);
                 } else {
                     let message = "Couldn't get suggestion provider localization webresource";
