@@ -139,8 +139,8 @@ package:
                                                                         # package stage entirely.
     - !!buildcommand
 
-      name: ' ev2 Files'
-      command: 'build.cmd'
+      name: 'ev2 Files'
+      command: 'CopyEv2Files.cmd'
       artifacts:
 
 #Copy Ev2 Files
