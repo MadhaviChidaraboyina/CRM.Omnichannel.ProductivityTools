@@ -5,7 +5,7 @@
 			"name": "BlobUpload",
 			"type": "BlobDeployment",
 			"properties": {
-				"maxExecutionTime": "PT1H"
+				"maxExecutionTime": "PT30M"
 			},
 			"package": {
 				"reference": { "path": "BlobUpload\\Scripts\\UploadFileToBlobEV2.zip" }
