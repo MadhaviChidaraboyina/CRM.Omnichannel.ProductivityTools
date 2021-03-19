@@ -42,6 +42,8 @@ module MscrmControls.SmartAssistAnyEntityControl {
 					line-height:16px;
 					align-items:center;
 					margin-right:5px;
+					height:unset;
+					width:unset;
 				}
 				.sa-no-suggestions-label	{
 					font-family:Segoe UI;

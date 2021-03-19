@@ -523,7 +523,9 @@ module MscrmControls.PanelControl {
                 id: iconId,
                 source: iconPath,
                 style: {
-                    verticalAlign: "middle"
+                    verticalAlign: "middle",
+                    width: "unset",
+                    height: "unset",
                 }
             });
             return icon;
