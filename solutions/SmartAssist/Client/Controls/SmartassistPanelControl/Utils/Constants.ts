@@ -131,6 +131,7 @@ module MscrmControls.SmartassistPanelControl {
                 margin-left: 5px;
                 height: 16px;
                 width: 16px;
+                top: unset;
             }
             .popup {
               position: relative;
