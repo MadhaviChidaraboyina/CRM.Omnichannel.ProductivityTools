@@ -9,6 +9,8 @@
 	"compileOnSave": true,
   "compilerOptions": {
     "outFile": "../../Solution/WebResources/msdyn_productivitypane_loader.js",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "module": "amd",
+    "target": "es6"
   }
 }
