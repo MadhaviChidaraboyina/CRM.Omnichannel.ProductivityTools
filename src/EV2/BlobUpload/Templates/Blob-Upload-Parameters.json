@@ -1,0 +1,60 @@
+{
+	"$schema": "https://ev2schema.azure.net/schemas/2020-01-01/rolloutSpecification.json",
+	"shellExtensions": [
+		{
+			"name": "BlobUpload",
+			"type": "BlobDeployment",
+			"properties": {
+				"maxExecutionTime": "PT30M"
+			},
+			"package": {
+				"reference": { "path": "BlobUpload\\Scripts\\UploadFileToBlobEV2.zip" }
+			},
+			"launch": {
+				"command": [
+					"/bin/bash",
+					"-c",
+					"pwsh UploadFileToBlobEV2.ps1"
+				],
+				"environmentVariables": [
+					{
+						"name": "rgName",
+						"value": "__RG_NAME__"
+					},
+					{
+						"name": "sgName",
+						"value": "__SG_NAME__"
+					},
+					{
+						"name": "ctName",
+						"value": "__CT_NAME__"
+					},
+					{
+						"name": "cacheValue",
+						"value": "__CACHE_VALUE__"
+					},
+					{
+						"name": "blobFolderName",
+						"value": "__BLOB_FOLDER_NAME__"
+					},
+					{
+						"name": "spid",
+						"value": "__SP_ID__"
+					},
+					{
+						"name": "sppwd",
+						"value": "__SP_PWD__"
+					},
+					{
+						"name": "tenantId",
+						"value": "__TENANT_ID__"
+					},
+					{
+						"name": "subscriptionId",
+						"value": "__SUBS_ID__"
+					}
+				]
+			}
+		}
+	]
+}

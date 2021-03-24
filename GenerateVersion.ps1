@@ -81,6 +81,10 @@ else{
 	UpdateTag -BuildId $env:BUILD_BUILDID -Tag $applicationVersion -accessToken $accesstoken;
 }
 
+$root = (Resolve-Path "$PSScriptRoot\..").Path
+
+Write-Host "Setting version in buildver.txt file"
+[System.IO.File]::WriteAllText("$root/src/EV2/buildver.txt", "$applicationVersion", [System.Text.UTF8Encoding]::new($False))
 
 # To generate a custom version with "1.0.yyyymmdd.<build_count_of_day>"
 $major = "15"

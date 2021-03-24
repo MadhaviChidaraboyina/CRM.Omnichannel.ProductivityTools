@@ -1,0 +1,53 @@
+{
+	"$schema": "https://ev2schema.azure.net/schemas/2020-01-01/serviceModel.json",
+	"serviceMetadata": {
+		"serviceGroup": "Blob Deployment",
+		"environment": "(CloudType)"
+	},
+	"serviceResourceGroupDefinitions": [
+		{
+			"name": "BlobDeployment",
+			"serviceResourceDefinitions": [
+				{
+					"name": "BlobCustomDeployment",
+					"composedOf": {
+						"extension": {
+							"shell": [
+								{
+									"type": "BlobDeployment",
+									"properties": {
+										"imageName": "(imageName)",
+										"imageVersion": "(imageVersion)"
+									}
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+	],
+	"serviceResourceGroups": [
+		{
+			"azureResourceGroupName": "oc-devops",
+			"name": "flowctrl",
+			"location": "East US",
+			"instanceOf": "BlobDeployment",
+			"azureSubscriptionId": "(SubscriptionId)",
+			"scopeTags": [
+				{ "name": "Geo" },
+				{ "name": "Global" },
+				{ "name": "FlowCtrl" }
+			],
+			"serviceResources": [
+				{
+					"name": "BlobUploadFlowCtrl",
+					"instanceOf": "BlobCustomDeployment",
+					"rolloutParametersPath": "BlobUpload\\Templates\\Blob-Upload-Parameters.json",
+					"scopeTags": [
+					]
+				}
+			]
+		}
+	]
+} 

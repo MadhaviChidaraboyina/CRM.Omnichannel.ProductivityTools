@@ -1,0 +1,57 @@
+{
+	"$schema": "https://ev2schema.azure.net/schemas/2020-01-01/scopeBindings.json",
+	"contentVersion": "0.0.0.1",
+	"scopeBindings": [
+		{
+			"scopeTagName": "Geo",
+			"bindings": [
+				{
+					"find": "__SG_NAME__",
+					"replaceWith": "oc$(CloudType)$(Cloud)$(Geo)gs"
+				},
+				{
+					"find": "__CACHE_VALUE__",
+					"replaceWith": "public"
+				},
+				{
+					"find": "__RG_NAME__",
+					"replaceWith": "oc-$(CloudType)-$(Cloud)-$(Geo)-geogrp"
+				}
+			]
+		},
+		{
+			"scopeTagName": "Global",
+			"bindings": [
+				{
+					"find": "__SUBS_ID__",
+					"replaceWith": "$(SubscriptionId)"
+				},
+				{
+					"find": "__TENANT_ID__",
+					"replaceWith": "$(TenantId)"
+				},
+				{
+					"find": "__SP_ID__",
+					"replaceWith": "$(AdminApplicationId)"
+				},
+				{
+					"find": "__SP_PWD__",
+					"replaceWith": "$(AdminApplicationPassword)"
+				}
+			]
+		},
+		{
+			"scopeTagName": "FlowCtrl",
+			"bindings": [
+				{
+					"find": "__CT_NAME__",
+					"replaceWith": "flowcontrol"
+				},
+				{
+					"find": "__BLOB_FOLDER_NAME__",
+					"replaceWith": "drop/outputs/build/Designer/BlobArtifacts"
+				}
+			]
+		}
+	]
+}

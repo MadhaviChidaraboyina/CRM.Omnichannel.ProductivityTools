@@ -1,0 +1,28 @@
+{
+	"$schema": "https://ev2schema.azure.net/schemas/2020-01-01/rolloutSpecification.json",
+	"rolloutMetadata": {
+		"serviceModelPath": "BlobUpload\\ServiceModel.json",
+		"scopeBindingsPath": "BlobUpload\\ScopeBindings.json",
+		"name": "Blob Deployment",
+		"rolloutType": "Major",
+		"buildSource": {
+			"parameters": {
+				"versionFile": "buildver.txt"
+			}
+		},
+		"notification": {
+			"email": {
+				"to": "(ToEmailTo)"
+			}
+		}
+	},
+	"orchestratedsteps": [
+		{
+			"name": "CustomScriptFlowCtrl",
+			"targetType": "ServiceResource",
+			"targetName": "BlobUploadFlowCtrl",
+			"actions": [ "Shell/BlobUpload" ]
+		}
+	]
+}
+  
