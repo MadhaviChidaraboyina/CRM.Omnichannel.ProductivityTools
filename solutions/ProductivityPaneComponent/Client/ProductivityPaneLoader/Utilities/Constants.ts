@@ -30,6 +30,12 @@ export class AppConfigConstants {
 }
 
 export class ToolConfigConstants {
-    // Entity constants		
-    public static entityName = "msdyn_panetoolconfiguration";
+  // Entity constants
+  public static entityName = "msdyn_panetoolconfiguration";
+}
+
+export class PCFControlConstants {
+  public static pageType = "control";
+  public static controlName = "MscrmControls.PanelControl.PanelControl";
+  public static sidePaneKey = "ProductivityPaneSidePanelId";
 }

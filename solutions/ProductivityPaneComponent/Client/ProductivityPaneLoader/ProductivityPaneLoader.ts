@@ -3,6 +3,7 @@
 
 import { APMConfigExtractor } from "./Data/APMConfigExtractor";
 import { ToolConfig } from "./Models/ProductivityToolConfig";
+import { PCFControlConstants } from "./Utilities/Constants"; 
 
 let loadMacrosComponentInternal = function () {
   try {
@@ -140,7 +141,7 @@ if (isSmartAssistEnabled) {
     .then(function (pane) {
       pane.navigate(
         {
-          pageType: ProductivityPaneLoader.Constants.pageType,
+          pageType: PCFControlConstants.pageType,
           controlName:
             "MscrmControls.SmartassistPanelControl.SmartassistPanelControl",
           data: props.parameters,
@@ -157,7 +158,7 @@ if (isSmartAssistEnabled) {
       function (paneId) {
         console.log("Panel load success " + paneId);
         sessionStorage.setItem(
-          ProductivityPaneLoader.Constants.sidePaneKey,
+          PCFControlConstants.sidePaneKey,
           paneId
         );
       },

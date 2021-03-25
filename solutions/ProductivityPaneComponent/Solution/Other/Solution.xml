@@ -8,7 +8,7 @@
     <Descriptions>
       <Description description="Productivity pane for productivity tools" languagecode="1033" />
     </Descriptions>
-    <Version>9.2.1.414</Version>
+    <Version>9.2.1.415</Version>
     <Managed>2</Managed>
     <Publisher>
       <UniqueName>microsoftdynamics</UniqueName>
