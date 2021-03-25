@@ -3,7 +3,7 @@
  */
 
 export class Utils {
-  public static isNullOrUndefined(obj: any) {
-    return obj === null || obj === undefined;
-  }
+    public static isNullOrUndefined(obj: any) {
+        return obj === null || obj === undefined;
+    }
 }

@@ -1,5 +1,4 @@
 ﻿/// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
-///<reference path="Constants.ts" />
 
 import { APMConfigExtractor } from "./Data/APMConfigExtractor";
 import { ToolConfig } from "./Models/ProductivityToolConfig";
