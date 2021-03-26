@@ -288,6 +288,10 @@
     <value>제안 그룹 컨테이너 아이콘</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_IconURL' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_isDefault" xml:space="preserve">
+    <value>이 필드는 구성이 기본값인지를 나타냅니다.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_isDefault' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_maxsuggestioncount" xml:space="preserve">
     <value>이 숫자는 스마트 지원 컨트롤에 표시할 수 있는 최대 추천 단어 수를 나타냅니다.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_maxsuggestioncount' on Entity</comment>
@@ -303,6 +307,10 @@
   <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfigId" xml:space="preserve">
     <value>엔터티 인스턴스에 대한 고유 식별자</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_smartassistconfigId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfig_msdyn_isdefault" xml:space="preserve">
+    <value>이 필드는 구성이 기본값인지를 나타냅니다.</value>
+    <comment>'msdyn_smartassistconfig' : Description for OptionSet 'msdyn_smartassistconfig_msdyn_isdefault' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfig_statecode" xml:space="preserve">
     <value>Smartassist 구성의 상태</value>
@@ -480,6 +488,10 @@
     <value>아이콘 웹 리소스 URL</value>
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_IconURL' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_isDefault" xml:space="preserve">
+    <value>IsDefault</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_isDefault' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_smartassistconfigmsdyn_maxsuggestioncount" xml:space="preserve">
     <value>최대 제안 수</value>
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_maxsuggestioncount' on Entity</comment>
@@ -495,6 +507,10 @@
   <data name="1:displayname,msdyn_smartassistconfigmsdyn_smartassistconfigId" xml:space="preserve">
     <value>Smartassist 구성</value>
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_smartassistconfigId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_smartassistconfig_msdyn_isdefault" xml:space="preserve">
+    <value>isDefault</value>
+    <comment>'msdyn_smartassistconfig' : displayname for OptionSet 'msdyn_smartassistconfig_msdyn_isdefault' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_smartassistconfigmsdyn_smartassistconfig_statecode" xml:space="preserve">
     <value>상태</value>
@@ -668,6 +684,14 @@
     <value>비활성</value>
     <comment>'msdyn_adaptivecardconfiguration' : label for status '2' on Entity</comment>
   </data>
+  <data name="1:label,msdyn_smartassistconfigmsdyn_smartassistconfig_msdyn_isdefault0" xml:space="preserve">
+    <value>아니요</value>
+    <comment>'msdyn_smartassistconfig' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_smartassistconfigmsdyn_smartassistconfig_msdyn_isdefault1" xml:space="preserve">
+    <value>예</value>
+    <comment>'msdyn_smartassistconfig' : label for option '1' on Entity</comment>
+  </data>
   <data name="1:label,msdyn_smartassistconfigmsdyn_smartassistconfig_statecode0" xml:space="preserve">
     <value>활성</value>
     <comment>'msdyn_smartassistconfig' : label for state '0' on Entity</comment>
@@ -791,6 +815,10 @@
   <data name="1:label,Smartassist configuration{c6407655-7ea1-b549-4b7c-d74c9b69dd3d}" xml:space="preserve">
     <value>최대 제안 수</value>
     <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{c6407655-7ea1-b549-4b7c-d74c9b69dd3d}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{d4760b0c-14d0-d907-791c-01cbd598d7e3}" xml:space="preserve">
+    <value>isDefault</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{d4760b0c-14d0-d907-791c-01cbd598d7e3}'</comment>
   </data>
   <data name="1:label,Smartassist configuration{d495a7bd-c90a-423e-82f2-99062bfd6e9c}" xml:space="preserve">
     <value>세부 정보</value>

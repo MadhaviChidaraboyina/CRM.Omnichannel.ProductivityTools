@@ -288,6 +288,10 @@
     <value>Pasiūlymų grupės konteinerio piktograma</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_IconURL' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_isDefault" xml:space="preserve">
+    <value>Šis laukas nurodo, ar konfigūracija yra numatytoji.</value>
+    <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_isDefault' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_maxsuggestioncount" xml:space="preserve">
     <value>Šis skaičius nurodo didžiausią pasiūlymų, kuriuos galima rodyti išmaniojo pagelbiklio valdiklyje, skaičių</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_maxsuggestioncount' on Entity</comment>
@@ -303,6 +307,10 @@
   <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfigId" xml:space="preserve">
     <value>Unikalusis identifikatorius, skirtas objekto egzemplioriams</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_smartassistconfigId' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfig_msdyn_isdefault" xml:space="preserve">
+    <value>Šis laukas nurodo, ar konfigūracija yra numatytoji.</value>
+    <comment>'msdyn_smartassistconfig' : Description for OptionSet 'msdyn_smartassistconfig_msdyn_isdefault' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfig_statecode" xml:space="preserve">
     <value>Išmaniojo pagelbiklio konfigūracijos būsena</value>
@@ -480,6 +488,10 @@
     <value>Piktogramos žiniatinklio ištekliaus URL</value>
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_IconURL' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_isDefault" xml:space="preserve">
+    <value>IsDefault</value>
+    <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_isDefault' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_smartassistconfigmsdyn_maxsuggestioncount" xml:space="preserve">
     <value>Didžiausias pasiūlymų skaičius</value>
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_maxsuggestioncount' on Entity</comment>
@@ -495,6 +507,10 @@
   <data name="1:displayname,msdyn_smartassistconfigmsdyn_smartassistconfigId" xml:space="preserve">
     <value>Išmaniojo pagelbiklio konfigūracija</value>
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'msdyn_smartassistconfigId' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_smartassistconfigmsdyn_smartassistconfig_msdyn_isdefault" xml:space="preserve">
+    <value>isDefault</value>
+    <comment>'msdyn_smartassistconfig' : displayname for OptionSet 'msdyn_smartassistconfig_msdyn_isdefault' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_smartassistconfigmsdyn_smartassistconfig_statecode" xml:space="preserve">
     <value>Būsena</value>
@@ -668,6 +684,14 @@
     <value>Neaktyvioji</value>
     <comment>'msdyn_adaptivecardconfiguration' : label for status '2' on Entity</comment>
   </data>
+  <data name="1:label,msdyn_smartassistconfigmsdyn_smartassistconfig_msdyn_isdefault0" xml:space="preserve">
+    <value>Ne</value>
+    <comment>'msdyn_smartassistconfig' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_smartassistconfigmsdyn_smartassistconfig_msdyn_isdefault1" xml:space="preserve">
+    <value>Taip</value>
+    <comment>'msdyn_smartassistconfig' : label for option '1' on Entity</comment>
+  </data>
   <data name="1:label,msdyn_smartassistconfigmsdyn_smartassistconfig_statecode0" xml:space="preserve">
     <value>Suaktyvinta</value>
     <comment>'msdyn_smartassistconfig' : label for state '0' on Entity</comment>
@@ -791,6 +815,10 @@
   <data name="1:label,Smartassist configuration{c6407655-7ea1-b549-4b7c-d74c9b69dd3d}" xml:space="preserve">
     <value>Didžiausias pasiūlymų skaičius</value>
     <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{c6407655-7ea1-b549-4b7c-d74c9b69dd3d}'</comment>
+  </data>
+  <data name="1:label,Smartassist configuration{d4760b0c-14d0-d907-791c-01cbd598d7e3}" xml:space="preserve">
+    <value>isDefault</value>
+    <comment>'Smartassist configuration' : label for cell in Entity FormXml ID: '{d4760b0c-14d0-d907-791c-01cbd598d7e3}'</comment>
   </data>
   <data name="1:label,Smartassist configuration{d495a7bd-c90a-423e-82f2-99062bfd6e9c}" xml:space="preserve">
     <value>Informacija</value>
