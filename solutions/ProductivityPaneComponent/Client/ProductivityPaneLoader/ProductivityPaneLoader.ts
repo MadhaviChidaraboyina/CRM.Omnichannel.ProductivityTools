@@ -232,7 +232,7 @@ module ProductivityPaneLoader {
                 _xrmApp.sidePanes
                     .createPane({
                         canClose: true,
-                        title: 'AgentScript',
+                        title: 'KnowledgeSearch',
                         width: 340,
                     })
                     .then(function (pane) {
