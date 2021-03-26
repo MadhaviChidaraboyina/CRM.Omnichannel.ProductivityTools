@@ -304,8 +304,22 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private appendTitle() {
             var titleElm = document.getElementById(StringConstants.TitleDivId + this.saConfig.SmartassistConfigurationId);
             if (!titleElm) {
-                var titleElement = ViewTemplates.getTitleTemplate(StringConstants.TitleDivId + this.saConfig.SmartassistConfigurationId, this.saConfig.TitleIconePath, this.saConfig.SAConfigTitle);
+                const configTitle = this.getLocalizedTitle(this.saConfig)
+                var titleElement = ViewTemplates.getTitleTemplate(StringConstants.TitleDivId + this.saConfig.SmartassistConfigurationId, this.saConfig.TitleIconePath, configTitle);
                 $("#" + this.parentDivId).prepend(titleElement)
+            }
+        }
+        
+        // this is April release workaround
+        // for Bug 2219101: Smart Assist Control shows English headers on localized environments. Also spacing between text and icon is incorrect
+        private getLocalizedTitle(saConfig: SAConfig): string {
+            switch (saConfig.SuggestionType) {
+                case SuggestionType.KnowledgeArticleSuggestion:
+                    return Utility.getString(LocalizedStrings.KnowledgeArticleTitle);
+                case SuggestionType.SimilarCaseSuggestion:
+                    return Utility.getString(LocalizedStrings.SimilarCaseTitle);
+                default:
+                    return saConfig.SAConfigTitle;
             }
         }
 
