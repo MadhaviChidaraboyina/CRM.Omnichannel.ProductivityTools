@@ -1,6 +1,5 @@
 ﻿{
   "include": [
-    "Constants.ts",
     "ProductivityPaneLoader.ts"
   ],
 	"exclude": [

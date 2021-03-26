@@ -1,51 +1,49 @@
 ﻿/// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 
-import { APMConfigExtractor } from "./Data/APMConfigExtractor";
-import { ToolConfig } from "./Models/ProductivityToolConfig";
-import { PCFControlConstants } from "./Utilities/Constants"; 
+import { APMConfigExtractor } from './Data/APMConfigExtractor';
+import { ToolConfig } from './Models/ProductivityToolConfig';
+import { PCFControlConstants } from './Utilities/Constants';
 
 let loadMacrosComponentInternal = function () {
-  try {
-    let macrosLibScript = document.createElement("script");
-    macrosLibScript.src =
-      Xrm.Utility.getGlobalContext().getClientUrl() +
-      "/" +
-      "/WebResources/CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js";
-    document.getElementsByTagName("body")[0].appendChild(macrosLibScript);
-    console.log("Loaded msdyn_ProductivityMacrosComponent_internal_library.js");
-  } catch (error) {
-    console.log(
-      "Failed to load msdyn_ProductivityMacrosComponent_internal_library.js"
-    );
-  }
+    try {
+        let macrosLibScript = document.createElement('script');
+        macrosLibScript.src =
+            Xrm.Utility.getGlobalContext().getClientUrl() +
+            '/' +
+            '/WebResources/CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js';
+        document.getElementsByTagName('body')[0].appendChild(macrosLibScript);
+        console.log('Loaded msdyn_ProductivityMacrosComponent_internal_library.js');
+    } catch (error) {
+        console.log('Failed to load msdyn_ProductivityMacrosComponent_internal_library.js');
+    }
 };
 
 let loadLogicAppExecutor = function () {
-  try {
-    let macrosLibScript = document.createElement("script");
-    macrosLibScript.src =
-      Xrm.Utility.getGlobalContext().getClientUrl() +
-      "/" +
-      "/WebResources/CRMClients/msdyn_LogicAppExecutor_v2.js";
-    document.getElementsByTagName("body")[0].appendChild(macrosLibScript);
-    console.log("Loaded msdyn_LogicAppExecutor_v2.js");
-  } catch (error) {
-    console.log("Failed to load msdyn_LogicAppExecutor_v2.js");
-  }
+    try {
+        let macrosLibScript = document.createElement('script');
+        macrosLibScript.src =
+            Xrm.Utility.getGlobalContext().getClientUrl() +
+            '/' +
+            '/WebResources/CRMClients/msdyn_LogicAppExecutor_v2.js';
+        document.getElementsByTagName('body')[0].appendChild(macrosLibScript);
+        console.log('Loaded msdyn_LogicAppExecutor_v2.js');
+    } catch (error) {
+        console.log('Failed to load msdyn_LogicAppExecutor_v2.js');
+    }
 };
 
 let loadMacrosDataLayer = function () {
-  try {
-    let macrosLibScript = document.createElement("script");
-    macrosLibScript.src =
-      Xrm.Utility.getGlobalContext().getClientUrl() +
-      "/" +
-      "/WebResources/MacrosDataLayer/msdyn_MacrosDataLayer.js";
-    document.getElementsByTagName("body")[0].appendChild(macrosLibScript);
-    console.log("Loaded msdyn_MacrosDataLayer.js");
-  } catch (error) {
-    console.log("Failed to load msdyn_MacrosDataLayer.js");
-  }
+    try {
+        let macrosLibScript = document.createElement('script');
+        macrosLibScript.src =
+            Xrm.Utility.getGlobalContext().getClientUrl() +
+            '/' +
+            '/WebResources/MacrosDataLayer/msdyn_MacrosDataLayer.js';
+        document.getElementsByTagName('body')[0].appendChild(macrosLibScript);
+        console.log('Loaded msdyn_MacrosDataLayer.js');
+    } catch (error) {
+        console.log('Failed to load msdyn_MacrosDataLayer.js');
+    }
 };
 
 loadLogicAppExecutor();
@@ -83,86 +81,77 @@ let _xrmApp: any = Xrm.App;
 let configExtractor = new APMConfigExtractor();
 configExtractor.retrieveIntitialData();
 let isSmartAssistEnabled = false;
-configExtractor.getProductivityPaneConfigData().productivityToolsConfig.ToolsList.forEach(
-  (tool: ToolConfig) => {
-    if (
-      tool.isEnabled &&
-      tool.toolName == "msdyn_csw_productivitypane_sa_tab"
-    ) {
-      isSmartAssistEnabled = true;
+configExtractor.getProductivityPaneConfigData().productivityToolsConfig.ToolsList.forEach((tool: ToolConfig) => {
+    if (tool.isEnabled && tool.toolName == 'msdyn_csw_productivitypane_sa_tab') {
+        isSmartAssistEnabled = true;
     }
-  }
-);
+});
 
 if (isSmartAssistEnabled) {
-  let props = {
-    parameters: {
-      SessionContext: {
-        Usage: 1,
-        Static: true,
-        Value: `{"event":0,"prevSessionId":"Not Available","newSessionId":"session-id-0"}`,
-        Primary: false,
-      },
-      AnchorTabContext: {
-        Usage: 1,
-        Static: true,
-        Value: `{"entityName":"incident","entityId":"{F8219018-DA88-EB11-B1AD-000D3A542497}","pageType":"entityrecord","createFromEntity":null}`,
-        Primary: false,
-      },
-      IsLoadedInPanel: {
-        Usage: 1,
-        Static: true,
-        Value: true,
-        Primary: false,
-      },
-      StaticData: {
-        Usage: 1,
-        Static: true,
-        Value: "{}",
-        Primary: false,
-      },
-      IsSelected: {
-        Usage: 1,
-        Static: true,
-        Value: true,
-        Primary: false,
-      },
-    },
-    key: "roductivitytoolcontrol_child0",
-    id: "productivitytoolcontrol_child0",
-  };
-
-  _xrmApp.sidePanes
-    .createPane({
-      canClose: true,
-      title: "SmartAssist",
-    })
-    .then(function (pane) {
-      pane.navigate(
-        {
-          pageType: PCFControlConstants.pageType,
-          controlName:
-            "MscrmControls.SmartassistPanelControl.SmartassistPanelControl",
-          data: props.parameters,
+    let props = {
+        parameters: {
+            SessionContext: {
+                Usage: 1,
+                Static: true,
+                Value: `{"event":0,"prevSessionId":"Not Available","newSessionId":"session-id-0"}`,
+                Primary: false,
+            },
+            AnchorTabContext: {
+                Usage: 1,
+                Static: true,
+                Value: `{"entityName":"incident","entityId":"{F8219018-DA88-EB11-B1AD-000D3A542497}","pageType":"entityrecord","createFromEntity":null}`,
+                Primary: false,
+            },
+            IsLoadedInPanel: {
+                Usage: 1,
+                Static: true,
+                Value: true,
+                Primary: false,
+            },
+            StaticData: {
+                Usage: 1,
+                Static: true,
+                Value: '{}',
+                Primary: false,
+            },
+            IsSelected: {
+                Usage: 1,
+                Static: true,
+                Value: true,
+                Primary: false,
+            },
         },
-        {
-          replaceState: false, // Not sure about his one. "* If true, a new history entry will not be added, the current one will be replaced. i.e. refresh"
-          resetHistory: false,
-        }
-      );
-      //return 'helloworld';
-      return pane.paneId;
-    })
-    .then(
-      function (paneId) {
-        console.log("Panel load success " + paneId);
-        sessionStorage.setItem(
-          PCFControlConstants.sidePaneKey,
-          paneId
+        key: 'roductivitytoolcontrol_child0',
+        id: 'productivitytoolcontrol_child0',
+    };
+
+    _xrmApp.sidePanes
+        .createPane({
+            canClose: true,
+            title: 'SmartAssist',
+        })
+        .then(function (pane) {
+            pane.navigate(
+                {
+                    pageType: PCFControlConstants.pageType,
+                    controlName: 'MscrmControls.SmartassistPanelControl.SmartassistPanelControl',
+                    data: props.parameters,
+                },
+                {
+                    replaceState: false, // Not sure about his one. "* If true, a new history entry will not be added, the current one will be replaced. i.e. refresh"
+                    resetHistory: false,
+                },
+            );
+            //return 'helloworld';
+            return pane.paneId;
+        })
+        .then(
+            function (paneId) {
+                console.log('Panel load success ' + paneId);
+                sessionStorage.setItem(PCFControlConstants.sidePaneKey, paneId);
+            },
+            function (error) {
+                console.log('Panel load failed', error);
+            },
         );
-      },
-      function (error) {
-        console.log("Panel load failed", error);
-      }
-    );
 }
