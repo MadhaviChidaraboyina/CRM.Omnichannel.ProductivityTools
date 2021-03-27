@@ -306,11 +306,9 @@ module MscrmControls.Callscript {
 			}
 
             if (this.stateManager.scriptDataFetchFailed) {
-                this.DispatchNoDataEvent();
                 callscriptComponents.push(this.getScriptLoadErrorContainer(LocalizedStrings.InitialScriptDataLoadFailure));
             }
             else if (this.stateManager.callscriptsForCurrentSession.length == 0) {
-                this.DispatchNoDataEvent();
                 callscriptComponents.push(this.getScriptLoadErrorContainer(LocalizedStrings.NoDataCallScriptMessage));
             }
 
@@ -321,15 +319,6 @@ module MscrmControls.Callscript {
 					style: controlStyles
 				}, callscriptComponents);
         }
-
-        /**Dispatch No data event to PP */
-        private DispatchNoDataEvent() {
-            var sessionId = Utility.getCurrentSessionId();
-            var ppRerender = new MscrmControls.PanelControl.Rerender(sessionId, true);
-
-            // Dispatch No Data PP event 
-            Utility.DispatchPanelInboundEvent(ppRerender);
-        }   
 
 		/**
 		 * Set focus on script selector
