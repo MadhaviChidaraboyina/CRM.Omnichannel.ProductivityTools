@@ -40,7 +40,10 @@ module ProductivityPaneLoader {
 
     export class PCFControlConstants {
         public static pageType = 'control';
-        public static controlName = 'MscrmControls.PanelControl.PanelControl';
+        public static paneControlName = 'MscrmControls.PanelControl.PanelControl';
         public static sidePaneKey = 'ProductivityPaneSidePanelId';
+        public static smartAssist = 'MscrmControls.SmartassistPanelControl.SmartassistPanelControl';
+        public static agentScript = 'MscrmControls.Callscript.CallscriptControl';
+        public static knowledgeSearch = 'MscrmControls.KnowledgeControl.KnowledgeControl';
     }
 }

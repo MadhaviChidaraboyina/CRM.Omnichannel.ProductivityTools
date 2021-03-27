@@ -48,6 +48,77 @@ module ProductivityPaneLoader {
     loadMacrosDataLayer();
 
     let _xrmApp: any = Xrm.App;
+    let loadAppSidePane = function (toolControlName: string, tooltip: string) {
+        try {
+            let props = {
+                parameters: {
+                    SessionContext: {
+                        Usage: 1,
+                        Static: true,
+                        Value: '{}',
+                        Primary: false,
+                    },
+                    AnchorTabContext: {
+                        Usage: 1,
+                        Static: true,
+                        Value: '{}',
+                        Primary: false,
+                    },
+                    IsLoadedInPanel: {
+                        Usage: 1,
+                        Static: true,
+                        Value: true,
+                        Primary: false,
+                    },
+                    StaticData: {
+                        Usage: 1,
+                        Static: true,
+                        Value: '{}',
+                        Primary: false,
+                    },
+                    IsSelected: {
+                        Usage: 1,
+                        Static: true,
+                        Value: true,
+                        Primary: false,
+                    },
+                },
+            };
+            _xrmApp.sidePanes
+                .createPane({
+                    canClose: true,
+                    title: tooltip,
+                    width: 340,
+                    hidden: true,
+                    alwaysRender: true,
+                })
+                .then(function (pane) {
+                    pane.navigate(
+                        {
+                            pageType: PCFControlConstants.pageType,
+                            controlName: toolControlName,
+                            data: props.parameters,
+                        },
+                        {
+                            replaceState: false,
+                            resetHistory: false,
+                        },
+                    );
+                    return pane.paneId;
+                })
+                .then(
+                    function (paneId) {
+                        console.log('Panel load success ' + paneId);
+                        sessionStorage.setItem(PCFControlConstants.sidePaneKey, paneId);
+                    },
+                    function (error) {
+                        console.log('Panel load failed', error);
+                    },
+                );
+        } catch (error) {
+            console.log('Failed to load' + toolControlName);
+        }
+    };
 
     let configExtractor = new APMConfigExtractor();
     // get app config name
@@ -55,210 +126,12 @@ module ProductivityPaneLoader {
     let appConfigUniqueName = 'msdyn_csw_app_configuration';
 
     configExtractor.getProductivityPaneConfigData(appConfigUniqueName).then((productivityPaneConfig) => {
-        productivityPaneConfig.productivityToolsConfig.ToolsList.forEach((tool: ToolConfig) => {
-            if (tool.isEnabled && tool.toolName == 'msdyn_csw_productivitypane_sa_tab') {
-                let props = {
-                    parameters: {
-                        SessionContext: {
-                            Usage: 1,
-                            Static: true,
-                            Value: '{}',
-                            Primary: false,
-                        },
-                        AnchorTabContext: {
-                            Usage: 1,
-                            Static: true,
-                            Value: '{}',
-                            Primary: false,
-                        },
-                        IsLoadedInPanel: {
-                            Usage: 1,
-                            Static: true,
-                            Value: true,
-                            Primary: false,
-                        },
-                        StaticData: {
-                            Usage: 1,
-                            Static: true,
-                            Value: '{}',
-                            Primary: false,
-                        },
-                        IsSelected: {
-                            Usage: 1,
-                            Static: true,
-                            Value: true,
-                            Primary: false,
-                        },
-                    },
-                    key: 'roductivitytoolcontrol_child0',
-                    id: 'productivitytoolcontrol_child0',
-                };
-
-                _xrmApp.sidePanes
-                    .createPane({
-                        canClose: true,
-                        title: 'SmartAssist',
-                        width: 340,
-                    })
-                    .then(function (pane) {
-                        pane.navigate(
-                            {
-                                pageType: PCFControlConstants.pageType,
-                                controlName: 'MscrmControls.SmartassistPanelControl.SmartassistPanelControl',
-                                data: props.parameters,
-                            },
-                            {
-                                replaceState: false,
-                                resetHistory: false,
-                            },
-                        );
-                        //return 'helloworld';
-                        return pane.paneId;
-                    })
-                    .then(
-                        function (paneId) {
-                            console.log('Panel load success ' + paneId);
-                            sessionStorage.setItem(PCFControlConstants.sidePaneKey, paneId);
-                        },
-                        function (error) {
-                            console.log('Panel load failed', error);
-                        },
-                    );
-            }
-            if (tool.isEnabled && tool.toolName == 'msdyn_csw_productivitypane_cs_tab') {
-                let props1 = {
-                    parameters: {
-                        SessionContext: {
-                            Usage: 1,
-                            Static: true,
-                            Value: '{}',
-                            Primary: false,
-                        },
-                        AnchorTabContext: {
-                            Usage: 1,
-                            Static: true,
-                            Value: '{}',
-                            Primary: false,
-                        },
-                        IsLoadedInPanel: {
-                            Usage: 1,
-                            Static: true,
-                            Value: true,
-                            Primary: false,
-                        },
-                        StaticData: {
-                            Usage: 1,
-                            Static: true,
-                            Value: '{}',
-                            Primary: false,
-                        },
-                        IsSelected: {
-                            Usage: 1,
-                            Static: true,
-                            Value: true,
-                            Primary: false,
-                        },
-                    },
-                    key: 'roductivitytoolcontrol_child1',
-                    id: 'productivitytoolcontrol_child1',
-                };
-                _xrmApp.sidePanes
-                    .createPane({
-                        canClose: true,
-                        title: 'AgentScript',
-                        width: 340,
-                    })
-                    .then(function (pane) {
-                        pane.navigate(
-                            {
-                                pageType: PCFControlConstants.pageType,
-                                controlName: 'MscrmControls.Callscript.CallscriptControl',
-                                data: props1.parameters,
-                            },
-                            {
-                                replaceState: false,
-                                resetHistory: false,
-                            },
-                        );
-                        return pane.paneId;
-                    })
-                    .then(
-                        function (paneId) {
-                            console.log('Panel load success ' + paneId);
-                            sessionStorage.setItem(PCFControlConstants.sidePaneKey, paneId);
-                        },
-                        function (error) {
-                            console.log('Panel load failed', error);
-                        },
-                    );
-            }
-            if (tool.isEnabled && tool.toolName == 'msdyn_csw_productivitypane_ks_tab') {
-                let props2 = {
-                    parameters: {
-                        SessionContext: {
-                            Usage: 1,
-                            Static: true,
-                            Value: '{}',
-                            Primary: false,
-                        },
-                        AnchorTabContext: {
-                            Usage: 1,
-                            Static: true,
-                            Value: '{}',
-                            Primary: false,
-                        },
-                        IsLoadedInPanel: {
-                            Usage: 1,
-                            Static: true,
-                            Value: true,
-                            Primary: false,
-                        },
-                        StaticData: {
-                            Usage: 1,
-                            Static: true,
-                            Value: '{}',
-                            Primary: false,
-                        },
-                        IsSelected: {
-                            Usage: 1,
-                            Static: true,
-                            Value: true,
-                            Primary: false,
-                        },
-                    },
-                    key: 'roductivitytoolcontrol_child1',
-                    id: 'productivitytoolcontrol_child1',
-                };
-                _xrmApp.sidePanes
-                    .createPane({
-                        canClose: true,
-                        title: 'KnowledgeSearch',
-                        width: 340,
-                    })
-                    .then(function (pane) {
-                        pane.navigate(
-                            {
-                                pageType: PCFControlConstants.pageType,
-                                controlName: 'MscrmControls.KnowledgeControl.KnowledgeControl',
-                                data: props2.parameters,
-                            },
-                            {
-                                replaceState: false,
-                                resetHistory: false,
-                            },
-                        );
-                        return pane.paneId;
-                    })
-                    .then(
-                        function (paneId) {
-                            console.log('Panel load success ' + paneId);
-                            sessionStorage.setItem(PCFControlConstants.sidePaneKey, paneId);
-                        },
-                        function (error) {
-                            console.log('Panel load failed', error);
-                        },
-                    );
-            }
-        });
+        if (productivityPaneConfig.productivityPaneState) {
+            productivityPaneConfig.productivityToolsConfig.ToolsList.forEach((tool: ToolConfig) => {
+                if (tool.isEnabled) {
+                    loadAppSidePane(tool.toolControlName, tool.tooltip);
+                }
+            });
+        }
     });
 }
