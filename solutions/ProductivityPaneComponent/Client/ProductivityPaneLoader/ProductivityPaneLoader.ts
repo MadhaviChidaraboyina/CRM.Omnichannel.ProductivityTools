@@ -48,7 +48,7 @@ module ProductivityPaneLoader {
     loadMacrosDataLayer();
 
     let _xrmApp: any = Xrm.App;
-    let loadAppSidePane = function (toolControlName: string, tooltip: string) {
+    let loadAppSidePane = function (toolControlName: string, tooltip: string, toolName: string, toolIcon: string) {
         try {
             let props = {
                 parameters: {
@@ -86,7 +86,9 @@ module ProductivityPaneLoader {
             };
             _xrmApp.sidePanes
                 .createPane({
-                    canClose: true,
+                    paneId: toolName,
+                    canClose: false,
+                    imageSrc: toolIcon,
                     title: tooltip,
                     width: 340,
                     hidden: true,
@@ -129,7 +131,7 @@ module ProductivityPaneLoader {
         if (productivityPaneConfig.productivityPaneState) {
             productivityPaneConfig.productivityToolsConfig.ToolsList.forEach((tool: ToolConfig) => {
                 if (tool.isEnabled) {
-                    loadAppSidePane(tool.toolControlName, tool.tooltip);
+                    loadAppSidePane(tool.toolControlName, tool.tooltip, tool.toolName, tool.toolIcon);
                 }
             });
         }
