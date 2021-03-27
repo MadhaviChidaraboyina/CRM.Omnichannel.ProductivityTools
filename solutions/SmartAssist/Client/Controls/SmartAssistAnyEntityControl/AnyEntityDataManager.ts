@@ -216,9 +216,8 @@
                     // Raise PP notification
                     var saConfigData = this.Suggestions;
                     if (saConfigData && this.Suggestions[saConfig.SmartassistConfigurationId]) {
-                        var sessionId = Utility.getCurrentSessionId();
                         var dataCount = saConfigData[saConfig.SmartassistConfigurationId].length;
-                        Utility.DispatchPanelInboundEvent(dataCount, sessionId);
+                        Utility.updateBadge(dataCount);
                     }
                 }
 

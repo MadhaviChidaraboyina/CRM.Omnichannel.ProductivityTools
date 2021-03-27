@@ -86,13 +86,12 @@ module MscrmControls.SmartAssistAnyEntityControl {
         }
 
         /**
-         * Dispatches Productivity Panel In Bound Event
-         * @param notificationNumber: Notification Number
+         * Dispatch pp notification event
+         * @param notificationNumber: notification count
          */
-        public static DispatchPanelInboundEvent(notificationNumber: number, sesssionId: string) {
-            let eventPayload = new MscrmControls.PanelControl.PanelInboundEventDataModel(StringConstants.PPChildControlId, new MscrmControls.PanelControl.PanelNotification(notificationNumber, sesssionId));
-            let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, { "detail": eventPayload });
-            window.top.dispatchEvent(event);
+        public static updateBadge(notificationNumber: number) {
+            const pane = Xrm.App.sidePanes.getPane(StringConstants.SmartAssistPaneId);
+            notificationNumber == 0 ? pane.clearBadge() : pane.setBadge(notificationNumber);
         }
 
         /**Get live work stream id */

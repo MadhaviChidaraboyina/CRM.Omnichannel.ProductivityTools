@@ -16,6 +16,8 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static LocCacheString = "SAlocStrings";
         public static EnglishLanguageCode = "1033";
 
+        public static SmartAssistPaneId = "msdyn_csw_productivitypane_sa_tab";
+
         //FPBot
         public static ConversatonControlOrigin = "ConversatonControlOrigin";
         public static ServiceEndpointEntity = "serviceendpoint";
