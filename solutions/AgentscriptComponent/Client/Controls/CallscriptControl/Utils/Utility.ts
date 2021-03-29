@@ -45,17 +45,6 @@ module MscrmControls.Callscript {
         }
 
         /**
-        * Dispatches Productivity Panel In Bound Event
-        * @param rerender: PP Rerender obj
-        */
-        public static DispatchPanelInboundEvent(rerender: MscrmControls.PanelControl.Rerender | MscrmControls.PanelControl.PanelNotification) {
-            let eventPayload = new MscrmControls.PanelControl.PanelInboundEventDataModel(Constants.ControlId, rerender);
-            let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, { "detail": eventPayload });
-            window.top.dispatchEvent(event);
-        }
-
-
-        /**
 		 * Replace unresolved slugs with error message
 		 */
         public static replaceUnresolvedSlugs(header: string): string {

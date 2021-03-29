@@ -33,6 +33,8 @@ module MscrmControls.ProductivityPanel.TPBot {
         public static EmptyString = "";
         public static UninitializedString = "UNINITIALIZED";
         
+        public static SmartAssistPaneId = "msdyn_csw_productivitypane_sa_tab";
+
         public static TPBotOuterContainer = "tpbot-outer-container";
         public static ServiceEndpointEntity = "serviceendpoint";
         public static CDNEndpointFilter = "?$filter=name eq 'oc-cdn-endpoint'";

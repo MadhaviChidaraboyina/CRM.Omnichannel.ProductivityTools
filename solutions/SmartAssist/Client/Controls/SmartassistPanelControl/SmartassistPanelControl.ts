@@ -38,7 +38,6 @@ module MscrmControls.SmartassistPanelControl {
         public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary, container: HTMLDivElement): void {
             // Initialize Telemetry Repoter
             SmartassistPanelControl._telemetryReporter = new TelemetryLogger.TelemetryLogger(context, Constants.ControlId);
-            var methodName = "init";
             this.newInstance = true;
             this.previousSessionId = Utility.getCurrentSessionId();
             try {
@@ -46,11 +45,34 @@ module MscrmControls.SmartassistPanelControl {
                 SmartassistPanelControl._context.reporting.reportSuccess(TelemetryEventTypes.InitStarted);
                 this.smartAssistContainer = container;
                 this.smartAssistContainer.setAttribute("style", Constants.SAPanelControlDivCss);
-
-                if (context.parameters.AnchorTabContext && Utility.IsValidJsonString(context.parameters.AnchorTabContext.raw)) {
-                    this.AnchorTabContext = JSON.parse(context.parameters.AnchorTabContext.raw);
+                if (!this.tabSwitchHandlerId) {
+                    //Listen to the CEC context change API
+                    var eventId = Microsoft.AppRuntime.Sessions.addOnContextChange(this.listenCECContextChangeAPI.bind(this));
+                    this.tabSwitchHandlerId = eventId;
                 }
+                this.telemetryHelper = new TelemetryHelper("", "");
 
+            } catch (error) {
+                this.hideLoader();
+            }
+        }
+
+        /** 
+         * This function will recieve an "Input Bag" containing the values currently assigned to the parameters in your manifest
+         * It will send down the latest values (static or dynamic) that are assigned as defined by the manifest & customization experience
+         * as well as resource, client, and theming info (see mscrm.d.ts)
+         * @params context The "Input Bag" as described above
+         */
+        public updateView(context: Mscrm.ControlData<IInputBag>): void {
+            SmartassistPanelControl._context = context;
+            this.updateViewInternal();
+        }
+
+        private async updateViewInternal(): Promise<void> {            
+            await this.updateAnchorTabContext();
+            this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.UpdateViewStarted, null);
+
+            if (this.newInstance) {
                 //Control title
                 this.smartAssistInfoIconElement = document.createElement("div");
                 this.setSmartAssistInfoIconText(this.AnchorTabContext);
@@ -83,40 +105,6 @@ module MscrmControls.SmartassistPanelControl {
                 SuggestionEl.id = Constants.SuggestionOuterContainer;
                 this.smartAssistContainer.appendChild(SuggestionEl);
 
-
-                if (!this.tabSwitchHandlerId) {
-
-                    //Listen to the CEC context change API
-                    var eventId = Microsoft.AppRuntime.Sessions.addOnContextChange(this.listenCECContextChangeAPI.bind(this));
-                    this.tabSwitchHandlerId = eventId;
-                }
-
-                this.telemetryHelper = new TelemetryHelper(Utility.FormatGuid(this.getEntityRecordId(this.AnchorTabContext)), this.AnchorTabContext.entityName);
-                this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.InitCompleted, null);
-            } catch (error) {
-                this.hideLoader();
-                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.InitFailed, error, null);
-            }
-        }
-
-        /** 
-         * This function will recieve an "Input Bag" containing the values currently assigned to the parameters in your manifest
-         * It will send down the latest values (static or dynamic) that are assigned as defined by the manifest & customization experience
-         * as well as resource, client, and theming info (see mscrm.d.ts)
-         * @params context The "Input Bag" as described above
-         */
-        public updateView(context: Mscrm.ControlData<IInputBag>): void {
-            this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.UpdateViewStarted, null);
-            SmartassistPanelControl._context = context;
-            if (context.parameters.AnchorTabContext && Utility.IsValidJsonString(context.parameters.AnchorTabContext.raw)) {
-                this.AnchorTabContext = JSON.parse(context.parameters.AnchorTabContext.raw);
-            }
-            this.telemetryHelper.updateValues(Utility.FormatGuid(this.getEntityRecordId(this.AnchorTabContext)), this.AnchorTabContext.entityName);
-            if (context.parameters.SessionContext && Utility.IsValidJsonString(context.parameters.SessionContext.raw)) {
-                this.ppSessionContext = JSON.parse(context.parameters.SessionContext.raw);
-            }
-
-            if (this.newInstance) {
                 let recordId = this.getEntityRecordId(this.AnchorTabContext);
                 this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SessionInitStarted, null);
                 this.renderSuggestions(false, this.AnchorTabContext.entityName, Utility.FormatGuid(recordId));
@@ -144,6 +132,13 @@ module MscrmControls.SmartassistPanelControl {
          */
         public destroy(): void {
             Microsoft.AppRuntime.Sessions.removeOnContextChange(this.tabSwitchHandlerId);
+        }
+
+        private async updateAnchorTabContext() {
+            this.AnchorTabContext = await Utility.getCurrentAnchorTabContext();
+            if (this.AnchorTabContext) {
+                this.telemetryHelper.updateValues(Utility.FormatGuid(this.getEntityRecordId(this.AnchorTabContext)), this.AnchorTabContext.entityName);
+            }
         }
 
         /**
@@ -206,7 +201,7 @@ module MscrmControls.SmartassistPanelControl {
                         Primary: false,
                         Static: true,
                         Usage: 1, // input
-                        Value: this.ppSessionContext
+                        Value: ""
                     },
                     AnyEntityContainerState: {
                         type: "Multiple",
@@ -244,8 +239,6 @@ module MscrmControls.SmartassistPanelControl {
             var emptyStatus: AnyEntityContainerState = await this.checkEmptyStatus(entityName, recordId, configs);
             if (configs.length < 1 || emptyStatus != AnyEntityContainerState.Enabled) {
                 this.telemetryHelper.logTelemetryError(TelemetryEventTypes.ConfigNotFound, new Error("SA config not found Or AI settings are disabled"), null);
-                // No Data to PP
-                this.DispatchNoDataEvent();
             }
             configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
             for (let i = 0; i <= (configs.length - 1); i++) {
@@ -269,23 +262,30 @@ module MscrmControls.SmartassistPanelControl {
          * @param event: Current tab opened context
          */
         public async listenCECContextChangeAPI(event: any) {
+            // if current session is home session, set app side pane to hidden, otherwise set app side pane to
+            if (Utility.isHomeSession()) {
+                Utility.SetSidePaneHidden(true);
+                return;
+            } else {
+                Utility.SetSidePaneHidden(false);
+            }
+
             var sessionId = Utility.getCurrentSessionId()
-            var context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
+
             //Get anchor context
-            var anchorContext = context.getTabContext("anchor") as any;
+            await this.updateAnchorTabContext();
 
             // update recordId and entityName in telemetry helper;
-            this.telemetryHelper.updateValues(Utility.FormatGuid(this.getEntityRecordId(anchorContext)), anchorContext.entityName);
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SessionSwitchCECEventReceived, null);
             if (!this.isSameSession(sessionId)) {
-                if (anchorContext && anchorContext.entityName) {
+                if (this.AnchorTabContext && this.AnchorTabContext.entityName) {
                     var configs = await SAConfigDataManager.Instance.getSAConfigurations(this.telemetryHelper) as SmartassistPanelControl.SAConfig[];
                     //Unbind all configs- in OC both(lwi and case) configs could be present 
                     this.unbindSAConfigs(configs);
 
                     // to handle the ordering when settings updated
                     $("#" + Constants.SuggestionOuterContainer).empty();
-                    let entityId = this.getEntityRecordId(anchorContext);
+                    let entityId = this.getEntityRecordId(this.AnchorTabContext);
                     this.anchorTabEntityId = Utility.FormatGuid(entityId);
 
                     this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SessionSwitchDetected,
@@ -293,7 +293,7 @@ module MscrmControls.SmartassistPanelControl {
                             { name: "PrevSessionId", value: this.previousSessionId },
                             { name: "CurrentSessionId", value: sessionId }
                         ]);
-                    this.renderSuggestions(true, anchorContext.entityName, this.anchorTabEntityId);
+                    this.renderSuggestions(true, this.AnchorTabContext.entityName, this.anchorTabEntityId);
                 }
             }
             this.previousSessionId = sessionId;
@@ -320,15 +320,6 @@ module MscrmControls.SmartassistPanelControl {
                 return false;
             }
             return true;
-        }
-
-        /**Dispatch No data event to PP */
-        private DispatchNoDataEvent() {
-            var sessionId = Utility.getCurrentSessionId();
-            var ppRerender = new MscrmControls.PanelControl.Rerender(sessionId, true);
-
-            // Dispatch No Data PP event 
-            Utility.DispatchPanelInboundEvent(ppRerender);
         }
 
         /**

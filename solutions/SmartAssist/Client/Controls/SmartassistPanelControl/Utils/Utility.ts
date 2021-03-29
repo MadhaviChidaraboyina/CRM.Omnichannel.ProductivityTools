@@ -66,8 +66,35 @@ module MscrmControls.SmartassistPanelControl {
         /**
         * Get current session id.
         */
-        public static getCurrentSessionId(): string {
+         public static getCurrentSessionId(): string {
             return Microsoft.AppRuntime.Sessions.getFocusedSession().sessionId;
+        }
+
+        /**
+        * Get current session id.
+        */
+         public static async getCurrentAnchorTabContext() {
+            var context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
+
+            //Get anchor context
+            return context.getTabContext("anchor");
+        }
+        
+        public static isHomeSession() {
+            return Utility.getCurrentSessionId() == "session-id-0";
+        }
+
+        /**
+         * Update badge number
+         * @param notificationNumber: notification count
+         */
+        public static UpdateBadge(notificationNumber: number) {
+            const pane = Xrm.App.sidePanes.getPane(Constants.SmartAssistPaneId);
+            notificationNumber == 0 ? pane.clearBadge() : pane.setBadge(notificationNumber);
+        }
+
+        public static SetSidePaneHidden(value: boolean) {
+            Xrm.App.sidePanes.getPane(Constants.SmartAssistPaneId).hidden = value;
         }
 
         /**
@@ -76,16 +103,6 @@ module MscrmControls.SmartassistPanelControl {
          */
         public static getConfigDivId(configId: string): string {
             return "config-" + configId;
-        }
-
-        /**
-         * Dispatches Productivity Panel In Bound Event
-         * @param rerender: PP Rerender obj
-         */
-        public static DispatchPanelInboundEvent(rerender: MscrmControls.PanelControl.Rerender | MscrmControls.PanelControl.PanelNotification) {
-            let eventPayload = new MscrmControls.PanelControl.PanelInboundEventDataModel(Constants.ControlId, rerender);
-            let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, { "detail": eventPayload });
-            window.top.dispatchEvent(event);
         }
 
         /**
