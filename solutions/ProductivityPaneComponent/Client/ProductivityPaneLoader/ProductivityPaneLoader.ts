@@ -53,7 +53,7 @@ module ProductivityPaneLoader {
         tooltip: string,
         toolName: string,
         toolIcon: string,
-        isExtended: boolean,
+        isExpanded: boolean,
     ) {
         try {
             let props = {
@@ -99,7 +99,7 @@ module ProductivityPaneLoader {
                     width: 340,
                     hidden: true,
                     alwaysRender: true,
-                    isSelected: isExtended,
+                    isSelected: isExpanded,
                 })
                 .then(function (pane) {
                     pane.hidden = true;
