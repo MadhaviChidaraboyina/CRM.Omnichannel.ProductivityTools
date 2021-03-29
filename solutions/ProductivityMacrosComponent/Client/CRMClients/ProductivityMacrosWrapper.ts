@@ -271,16 +271,16 @@ namespace Microsoft.ProductivityMacros.Internal {
                 //CIF public API and we are consuming Microsoft.CIFramework.External.CIFExternalUtilityImpl() to create tab
                 //pageInput.pageType = "ThirdPartyWebsite";
                 const url = entityData.Custom_Array.find((element: any) => element.Name === AppTabConstant.Url);
-                if (url && url.value) {
+                if (url && url.Value) {
                     const data = entityData.Custom_Array.find((element: any) => element.Name === AppTabConstant.Data);
-                    let dataString = data.value ? `${data}` : '';
-                    if (url.value.endsWith('/search?') && !dataString.startsWith('q=')) {
+                    let dataString = data.Value ? `${data.Value}` : '';
+                    if (url.Value.endsWith('/search?') && !dataString.startsWith('q=')) {
                         dataString = 'q=' + dataString;
                     }
 
                     pageInput.pageType = AppTabConstant.Webresource;
                     pageInput.webresourceName = "msdyn_ExternalWebPageContainer.html";
-                    pageInput.data = `cif_thirdpartyurl${url.value}${dataString}`;
+                    pageInput.data = `cif_thirdpartyurl${url.Value}${dataString}`;
                 }
                 break;
         }
