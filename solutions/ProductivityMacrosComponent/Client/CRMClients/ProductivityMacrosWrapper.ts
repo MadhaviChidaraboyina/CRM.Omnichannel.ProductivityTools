@@ -270,10 +270,10 @@ namespace Microsoft.ProductivityMacros.Internal {
                 //keeping thirthpartyWebsite as weresource as currently we are not able to access
                 //CIF public API and we are consuming Microsoft.CIFramework.External.CIFExternalUtilityImpl() to create tab
                 //pageInput.pageType = "ThirdPartyWebsite";
-                const url = entityData.Custom_Array.find((element: any) => element.Name === AppTabConstant.Url);
+                const url = entityData.Custom_Array.find((element: any) => element.Name.trim() === AppTabConstant.Url);
                 if (url && url.Value) {
-                    const data = entityData.Custom_Array.find((element: any) => element.Name === AppTabConstant.Data);
-                    let dataString = data.Value ? `${data.Value}` : '';
+                    const data = entityData.Custom_Array.find((element: any) => element.Name.trim() === AppTabConstant.Data);
+                    let dataString = data.Value ?? '';
                     if (url.Value.endsWith('/search?') && !dataString.startsWith('q=')) {
                         dataString = 'q=' + dataString;
                     }
