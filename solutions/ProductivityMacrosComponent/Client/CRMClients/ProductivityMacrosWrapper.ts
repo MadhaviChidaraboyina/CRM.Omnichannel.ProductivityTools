@@ -270,20 +270,17 @@ namespace Microsoft.ProductivityMacros.Internal {
                 //keeping thirthpartyWebsite as weresource as currently we are not able to access
                 //CIF public API and we are consuming Microsoft.CIFramework.External.CIFExternalUtilityImpl() to create tab
                 //pageInput.pageType = "ThirdPartyWebsite";
-                pageInput.pageType = AppTabConstant.Webresource;
-                for (i = 0; i < entityData.Custom_Array.length; i++) {
-                    if (entityData.Custom_Array[i].Value !== undefined) {
-                        switch (entityData.Custom_Array[i].Name) {
-                            case AppTabConstant.Data:
-                                //pageInput.data = entityData.Custom_Array[i].Value;
-                                pageInput.webresourceName = "msdyn_ExternalWebPageContainer.html";
-                                break;
-                            case AppTabConstant.Url:
-                                //pageInput.url = entityData.Custom_Array[i].Value;
-                                pageInput.data = "cif_thirdpartyurl" + entityData.Custom_Array[i].Value;
-                                break;
-                        }
+                const url = entityData.Custom_Array.find((element: any) => element.Name === AppTabConstant.Url);
+                if (url && url.value) {
+                    const data = entityData.Custom_Array.find((element: any) => element.Name === AppTabConstant.Data);
+                    let dataString = data.value ? `${data}` : '';
+                    if (url.value.endsWith('/search?') && !dataString.startsWith('q=')) {
+                        dataString = 'q=' + dataString;
                     }
+
+                    pageInput.pageType = AppTabConstant.Webresource;
+                    pageInput.webresourceName = "msdyn_ExternalWebPageContainer.html";
+                    pageInput.data = `cif_thirdpartyurl${url.value}${dataString}`;
                 }
                 break;
         }
