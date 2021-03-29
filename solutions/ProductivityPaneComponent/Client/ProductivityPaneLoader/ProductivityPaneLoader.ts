@@ -48,7 +48,13 @@ module ProductivityPaneLoader {
     loadMacrosDataLayer();
 
     let _xrmApp: any = Xrm.App;
-    let loadAppSidePane = function (toolControlName: string, tooltip: string, toolName: string, toolIcon: string) {
+    let loadAppSidePane = function (
+        toolControlName: string,
+        tooltip: string,
+        toolName: string,
+        toolIcon: string,
+        isExtended: boolean,
+    ) {
         try {
             let props = {
                 parameters: {
@@ -93,8 +99,10 @@ module ProductivityPaneLoader {
                     width: 340,
                     hidden: true,
                     alwaysRender: true,
+                    isSelected: isExtended,
                 })
                 .then(function (pane) {
+                    pane.hidden = true;
                     pane.navigate(
                         {
                             pageType: PCFControlConstants.pageType,
@@ -111,7 +119,6 @@ module ProductivityPaneLoader {
                 .then(
                     function (paneId) {
                         console.log('Panel load success ' + paneId);
-                        sessionStorage.setItem(PCFControlConstants.sidePaneKey, paneId);
                     },
                     function (error) {
                         console.log('Panel load failed', error);
@@ -129,11 +136,20 @@ module ProductivityPaneLoader {
 
     configExtractor.getProductivityPaneConfigData(appConfigUniqueName).then((productivityPaneConfig) => {
         if (productivityPaneConfig.productivityPaneState) {
-            productivityPaneConfig.productivityToolsConfig.ToolsList.forEach((tool: ToolConfig) => {
-                if (tool.isEnabled) {
-                    loadAppSidePane(tool.toolControlName, tool.tooltip, tool.toolName, tool.toolIcon);
-                }
-            });
+            let toolsList = productivityPaneConfig.productivityToolsConfig.ToolsList;
+            if (!Utils.isNullOrUndefined(toolsList)) {
+                toolsList.forEach((tool: ToolConfig) => {
+                    if (tool.isEnabled) {
+                        loadAppSidePane(
+                            tool.toolControlName,
+                            tool.tooltip,
+                            tool.toolName,
+                            tool.toolIcon,
+                            productivityPaneConfig.productivityPaneMode,
+                        );
+                    }
+                });
+            }
         }
     });
 }
