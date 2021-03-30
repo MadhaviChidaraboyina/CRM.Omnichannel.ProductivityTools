@@ -273,7 +273,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                 const url = entityData.Custom_Array.find((element: any) => element.Name.trim() === AppTabConstant.Url);
                 if (url && url.Value) {
                     const data = entityData.Custom_Array.find((element: any) => element.Name.trim() === AppTabConstant.Data);
-                    let dataString = data.Value ?? '';
+                    let dataString = data?.Value ?? '';
                     if (url.Value.endsWith('/search?') && !dataString.startsWith('q=')) {
                         dataString = 'q=' + dataString;
                     }
