@@ -270,20 +270,21 @@ namespace Microsoft.ProductivityMacros.Internal {
                 //keeping thirthpartyWebsite as weresource as currently we are not able to access
                 //CIF public API and we are consuming Microsoft.CIFramework.External.CIFExternalUtilityImpl() to create tab
                 //pageInput.pageType = "ThirdPartyWebsite";
-                pageInput.pageType = AppTabConstant.Webresource;
-                for (i = 0; i < entityData.Custom_Array.length; i++) {
-                    if (entityData.Custom_Array[i].Value !== undefined) {
-                        switch (entityData.Custom_Array[i].Name) {
-                            case AppTabConstant.Data:
-                                //pageInput.data = entityData.Custom_Array[i].Value;
-                                pageInput.webresourceName = "msdyn_ExternalWebPageContainer.html";
-                                break;
-                            case AppTabConstant.Url:
-                                //pageInput.url = entityData.Custom_Array[i].Value;
-                                pageInput.data = "cif_thirdpartyurl" + entityData.Custom_Array[i].Value;
-                                break;
-                        }
+                const url = entityData.Custom_Array.find((element: any) => element.Name.trim() === AppTabConstant.Url);
+                if (url && url.Value) {
+                    const data = entityData.Custom_Array.find((element: any) => element.Name.trim() === AppTabConstant.Data);
+                    let dataString: string = (data && data.Value) ? data.Value : '';
+
+                    // below dataString check is used to fix issue in current public doc sample
+                    // https://docs.microsoft.com/en-us/dynamics365/app-profile-manager/application-tab-templates#third-party-website
+                    // we should revisit the sample to improve the user experience
+                    if (url.Value.endsWith('/search?') && !dataString.startsWith('q=')) {
+                        dataString = 'q=' + dataString;
                     }
+
+                    pageInput.pageType = AppTabConstant.Webresource;
+                    pageInput.webresourceName = "msdyn_ExternalWebPageContainer.html";
+                    pageInput.data = `cif_thirdpartyurl${url.Value}${dataString}`;
                 }
                 break;
         }
