@@ -273,7 +273,11 @@ namespace Microsoft.ProductivityMacros.Internal {
                 const url = entityData.Custom_Array.find((element: any) => element.Name.trim() === AppTabConstant.Url);
                 if (url && url.Value) {
                     const data = entityData.Custom_Array.find((element: any) => element.Name.trim() === AppTabConstant.Data);
-                    let dataString = data?.Value ?? '';
+                    let dataString: string = (data && data.Value) ? data.Value : '';
+
+                    // below dataString check is used to fix issue in current public doc sample
+                    // https://docs.microsoft.com/en-us/dynamics365/app-profile-manager/application-tab-templates#third-party-website
+                    // we should revisit the sample to improve the user experience
                     if (url.Value.endsWith('/search?') && !dataString.startsWith('q=')) {
                         dataString = 'q=' + dataString;
                     }
