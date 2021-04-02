@@ -1,7 +1,7 @@
 ﻿/**
 * @license Copyright (c) Microsoft Corporation.  All rights reserved.
 */
-
+/// <reference path="../Utils/Utility.ts" />
 module MscrmControls.Callscript {
 	'use strict';
 
@@ -40,6 +40,14 @@ module MscrmControls.Callscript {
 
         // this method reset the required properties when session switch / create
         public async onSessionSwitch(): Promise<void> {
+			// if current session is home session, set app side pane to hidden.
+            if (Utility.isHomeSession()) {
+                Utility.SetSidePaneHidden(true);
+                return;
+            } else {
+                Utility.SetSidePaneHidden(false);
+            }
+
             this.updateControlStateInCEC();
             this.setCurrentUciSessionId();
             await this.initializeControlStateFromCEC();

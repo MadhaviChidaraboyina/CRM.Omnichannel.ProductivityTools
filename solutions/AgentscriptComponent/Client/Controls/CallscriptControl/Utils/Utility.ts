@@ -3,7 +3,6 @@
 */
 
 /// <reference path="../privatereferences.ts"/>
-
 module MscrmControls.Callscript {
 	'use strict';
 
@@ -42,6 +41,14 @@ module MscrmControls.Callscript {
        */
         public static getCurrentSessionId(): string {
             return Microsoft.AppRuntime.Sessions.getFocusedSession().sessionId;
+        }
+
+        public static isHomeSession() {
+            return Utility.getCurrentSessionId() == Constants.HomeSessionId;
+        }
+
+        public static SetSidePaneHidden(value: boolean) {
+            Xrm.App.sidePanes.getPane(Constants.CallScriptPaneId).hidden = value;
         }
 
         /**

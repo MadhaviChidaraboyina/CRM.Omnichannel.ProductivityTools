@@ -36,6 +36,9 @@ module MscrmControls.Callscript {
         public static ControlStateKey = "CallscriptControlState";
         public static OdataError = "ODATA_ERROR";
 
+		public static CallScriptPaneId = "msdyn_csw_productivitypane_cs_tab";
+		public static HomeSessionId = "session-id-0";
+
 		//class names for styling
 		public static AccordionRightArrowClassName = "accordionRightArrow";
 		public static AccordionDownArrowClassName = "accordionDownArrow";

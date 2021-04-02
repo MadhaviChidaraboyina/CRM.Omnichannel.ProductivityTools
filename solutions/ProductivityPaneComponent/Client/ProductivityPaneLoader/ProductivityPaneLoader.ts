@@ -88,6 +88,12 @@ module ProductivityPaneLoader {
                         Value: true,
                         Primary: false,
                     },
+                    IsFromPaneLoader: {
+                        Usage: 1,
+                        Static: true,
+                        Value: true,
+                        Primary: false,
+                    },
                 },
             };
             _xrmApp.sidePanes
@@ -97,7 +103,6 @@ module ProductivityPaneLoader {
                     imageSrc: toolIcon,
                     title: tooltip,
                     width: 340,
-                    hidden: true,
                     alwaysRender: true,
                     isSelected: isExpanded,
                 })
