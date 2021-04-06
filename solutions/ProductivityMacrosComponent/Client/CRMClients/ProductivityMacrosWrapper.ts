@@ -1509,6 +1509,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                         const dialogParams: XrmClientApi.Parameters = populateFlowDialogParams(
                             actionInputs.flowId,
                             actionInputs.entityLogicalName,
+                            actionInputs.entityLogicalCollectionName,
                             actionInputs.entityRecordId,
                             flowEnvId);
 
@@ -1543,7 +1544,11 @@ namespace Microsoft.ProductivityMacros.Internal {
     }
 
 
-    function populateFlowDialogParams(flowId: any, entityLogicalName: any, entityRecordId: any,
+    function populateFlowDialogParams(
+        flowId: any,
+        entityLogicalName: any,
+        entityCollectionName: any,
+        entityRecordId: any,
         flowEnvId: String): XrmClientApi.Parameters {
         const dialogParams: XrmClientApi.Parameters = {};
         const entityIds = [];
@@ -1558,7 +1563,11 @@ namespace Microsoft.ProductivityMacros.Internal {
             Constants.FLOW_DESTINATION_URL
         );
 
+        dialogParams[Constants.DIALOG_DYNAMICS365_ACCESS_TOKEN] = null;
+        dialogParams[Constants.DIALOG_FLOWS_AUTHENTICATION_STRING] = undefined;
+
         dialogParams[Constants.DIALOG_ENTITY_LOGICAL_NAME] = entityLogicalName;
+        dialogParams[Constants.DIALOG_ENTITY_LOGICAL_COLLECTION_NAME] = entityCollectionName;
         dialogParams[Constants.DIALOG_FLOWS_DESTINATION_URL] = destinationUrl;
 
         const flowFpiUrl = Xrm.Utility.getGlobalContext().getAdvancedConfigSetting(Constants.FLOW_FPI_URL);

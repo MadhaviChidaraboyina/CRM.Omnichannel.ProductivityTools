@@ -38,17 +38,25 @@ namespace Microsoft.LogicAppExecutor {
 			return new Promise<any>(
 				function (resolve: (response: any) => void, reject: (error: any) => void) {
 					let result = {};
-					this.resolveParams(actionType, JSON.stringify(actionInputs), macroState, result).then(function (response: any) {
-						this.executeMacroAction(actionType, response, actionName, macroState, runHistoryData).then(function (response: any) {
-
-							resolve(response);
-						}.bind(this), function (error: Error) {
-							reject(error);
-						}
-						);
-					}.bind(this), function (error: Error) {
-						reject(error);
-					});
+					this.resolveParams(actionType, JSON.stringify(actionInputs), macroState, result).then(
+						function (response: any) {
+							this.resolveListFlowsActionParams(actionType, response).then(
+								function (response: any) {
+									this.executeMacroAction(actionType, response, actionName, macroState, runHistoryData).then(
+										function (response: any) {
+											resolve(response);
+										}.bind(this),
+										function (error: Error) {
+											reject(error);
+										}
+									);
+								}.bind(this),
+								function (error: Error) {
+									reject(error);
+								}
+							);
+						}.bind(this)
+					)
 				}.bind(this)
 			);
 		}
@@ -111,6 +119,48 @@ namespace Microsoft.LogicAppExecutor {
 					}
 					);
 				}.bind(this));
+		}
+
+		resolveListFlowsActionParams(actionType: string, inputs: any): Promise<any> {
+			return new Promise<any>((resolve)=> {
+				try {
+					// the entityLogicalName in workflow entity is actually entity's LogicalCollectionName.
+					// it is used to fetch the flows from api.flow.microsoft.com
+					// but flow execution need entity's LogicalName
+					// resolveEntityLogicalName method is used to replace the LogicalCollectionName to LogicalName
+					const entityCollectionName = inputs[Microsoft.ProductivityMacros.Constants.ENTITY_LOGICAL_NAME];
+					if (actionType !== Microsoft.ProductivityMacros.ActionTypes.LIST_FLOWS || !entityCollectionName) {
+						return resolve(inputs);
+					}
+
+					const queryString = `/api/data/v9.0/EntityDefinitions?$filter=LogicalCollectionName%20eq%20%27${entityCollectionName}%27&$select=LogicalName`;
+
+					var req = new XMLHttpRequest();
+					req.open("GET", Xrm.Utility.getGlobalContext().getClientUrl() + queryString, false);
+					req.setRequestHeader("OData-MaxVersion", "4.0");
+					req.setRequestHeader("OData-Version", "4.0");
+					req.setRequestHeader("Accept", "application/json");
+					req.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+
+					req.onreadystatechange = function () {
+						if (req.readyState === 4) {
+							req.onreadystatechange = null;
+							if (req.status === 200) {
+								const entity = JSON.parse(req.response);
+								if (entity && entity.value && entity.value.length == 1) {
+									inputs[Microsoft.ProductivityMacros.Constants.ENTITY_LOGICAL_NAME] = entity.value[0].LogicalName;
+									inputs[Microsoft.ProductivityMacros.Constants.ENTITY_LOGICAL_COLLECTION_NAME] = entityCollectionName;
+								}
+								return resolve(inputs);
+							}
+						}
+					};
+					req.send();
+				}
+				catch (error) {
+					return resolve(inputs);
+				}
+			});
 		}
 
 		private executeMacroAction(actionType: string, actionInputs: any, actionName: string, macroState: any, runHistoryData: executionJSON): Promise<any> {

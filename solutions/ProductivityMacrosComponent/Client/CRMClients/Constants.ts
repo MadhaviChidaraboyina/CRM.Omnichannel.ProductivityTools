@@ -35,6 +35,8 @@ namespace Microsoft.ProductivityMacros {
         public static DIALOG_ORG_UNIQUE_NAME = "org_unique_name";
         public static DIALOG_ENTITY_LOGICAL_COLLECTION_NAME = "entity_logical_collection_name";
         public static DIALOG_ENTITY_LOGICAL_NAME = "entity_logical_name";
+        public static DIALOG_DYNAMICS365_ACCESS_TOKEN = "dynamics365_access_token";
+        public static DIALOG_FLOWS_AUTHENTICATION_STRING = "flows_authentication_string";
         public static DIALOG_DYNAMICS_365_ACCESS_TOKEN = "dynamics365_access_token";
         public static DIALOG_FLOWS_DESTINATION_URL = "flows_destination_url";
         public static DIALOG_FLOWS_FPI_SITE_URL = "flows_fpi_site_url";
@@ -48,6 +50,8 @@ namespace Microsoft.ProductivityMacros {
         public static FLOW_ENV_ID = "Flow_Env_Id";
         public static ENTITIES_ID = "entity_ids";
         public static POST_REQUEST = "POST";
+        public static ENTITY_LOGICAL_NAME = "entityLogicalName";
+        public static ENTITY_LOGICAL_COLLECTION_NAME = "entityLogicalCollectionName";
 	}
 
 	export class ActionTypes {
@@ -64,6 +68,7 @@ namespace Microsoft.ProductivityMacros {
 		public static RESOLVE_INCIDENT = "Resolve_Case";
 		//P2
 		public static OPEN_DASHBOARD = "Open_Dashboard";
+        public static LIST_FLOWS = "List_Flows";
 		
     }
 

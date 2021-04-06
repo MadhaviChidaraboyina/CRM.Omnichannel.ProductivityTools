@@ -533,7 +533,74 @@ async function getEntities() {
             eventType: SharedDefines.TelemetryEventType.Trace,
             exception: error.stack
         };
+        doTelemetry(obj);
         return (JSON.stringify(response));
+    }
+
+}
+
+function getEntityNameFromClientData(clientDataString: string | undefined): string | null {
+    if (clientDataString) {
+        const data = JSON.parse(clientDataString);
+        return data?.properties?.definition?.triggers?.manual?.inputs?.parameters?.table;
+    }
+
+    return null;
+}
+
+// get flows within solution
+// https://.../api/data/V9.1/workflows?$filter=process_processstage/any(ps:%20ps/connector%20eq%20%27commondataservice%27)&$select=workflowidunique,clientdata,name
+async function getFlowsWithinSolution(entityCollectionName: string) {
+    let response: SharedDefines.ListDynamicValuesResponse = { value: [] };
+    let entityList: SharedDefines.ListDynamicValue[] = [];
+    try {
+        var req = new XMLHttpRequest();
+        const queryString = "/api/data/V9.1/workflows?$filter=process_processstage/any(ps:%20ps/connector%20eq%20%27commondataservice%27)&$select=workflowidunique,clientdata,name";
+        req.open("GET", window.top.Xrm.Utility.getGlobalContext().getClientUrl() + queryString, false);
+        req.setRequestHeader("OData-MaxVersion", "4.0");
+        req.setRequestHeader("OData-Version", "4.0");
+        req.setRequestHeader("Accept", "application/json");
+        req.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+
+        req.onreadystatechange = function () {
+            if (req.readyState === 4) {
+                req.onreadystatechange = null;
+                if (req.status === 200) {
+                    for (let entity of JSON.parse(req.response).value) {
+                        try {
+                            const table = getEntityNameFromClientData(entity.clientdata);
+                            if (table === entityCollectionName) {
+                                let entityListItem: SharedDefines.ListDynamicValue = {
+                                    value: entity.workflowidunique,
+                                    displayName: entity.name,
+                                    description: "Flow",
+                                    disabled: false
+                                }
+                                entityList.push(entityListItem);
+                            }
+                        }
+                        catch (error) {
+                            console.log("Error occurred while traversing over flows within solution: " + error);
+                        }
+                    }
+                }
+            }
+        };
+        req.send();
+        response.value = entityList;
+        return (response);
+    }
+    catch (error) {
+        let obj: SharedDefines.LogObject = {
+            level: SharedDefines.LogLevel.Error,
+            eventName: SharedDefines.WrapperEvents.DesignerControlExecutionEvent,
+            message: Utils.Utils.genMsgForTelemetry("Unable to get flows within solution", error),
+            eventTimeStamp: new Date(),
+            eventType: SharedDefines.TelemetryEventType.Trace,
+            exception: error.stack
+        };
+        doTelemetry(obj);
+        return (response);
     }
 
 }
@@ -542,6 +609,7 @@ async function getFlowsData(entityName: any) {
     let response: SharedDefines.ListDynamicValuesResponse = { value: [] };
     let flowsList: SharedDefines.ListDynamicValue[] = [];
     try {
+        // get flows from api.flow.microsoft.com
         let fpiHelper = new FPIHelper.FPIHelper();
         let flows = await fpiHelper.listFlows(entityName);
 
@@ -554,6 +622,10 @@ async function getFlowsData(entityName: any) {
             }
             flowsList.push(flowsListItem);
         }
+
+        const solutionFlows = await getFlowsWithinSolution(entityName);
+        flowsList = flowsList.concat(solutionFlows.value);
+
         response.value = flowsList;
         return (JSON.stringify(response));
     }
@@ -566,6 +638,7 @@ async function getFlowsData(entityName: any) {
             eventType: SharedDefines.TelemetryEventType.Trace,
             exception: error.stack
         };
+        doTelemetry(obj);
         return (JSON.stringify(response));
     }
 
