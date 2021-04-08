@@ -28,6 +28,10 @@
         {
             "file": "WpfBrowserApp451_TemporaryKey.pfx",
             "_justification": "Not a real cert but a sample for testing."
+        },
+        {
+          "file": "aria-webjs-sdk-1.8.3.js",
+          "_justification": "Ignore external lib file"
         }
     ]
 }
