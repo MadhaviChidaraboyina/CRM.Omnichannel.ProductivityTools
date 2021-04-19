@@ -8,36 +8,34 @@
 /// <reference path="../Utilities/Constants.ts"/>
 module ProductivityPaneLoader {
     export class APMConfigExtractor {
-        public getProductivityPaneConfigData(appConfigName: string): Promise<ProductivityPaneConfig> {
-            // let methodName = "GetProductivityPaneConfigData";
+        public retrieveAPMConfig(appConfigName: string): Promise<ProductivityPaneConfig> {
             try {
                 return new Promise<ProductivityPaneConfig>((resolve, reject) => {
                     this.getProductivityPaneUniqueName(appConfigName).then(
-                        // ProductivityPaneUniqueName = "msdyn_csw_productivitypane"
                         (productivityPaneUniqueName: string) => {
-                            let productivityPaneQuery = this.getProductivityPanelandTabsQuery(
-                                productivityPaneUniqueName,
-                            );
-                            let retrieveDataPromise = Xrm.WebApi.retrieveMultipleRecords(
-                                ProductivityPaneConfigConstants.entityName,
-                                productivityPaneQuery,
-                            );
-                            retrieveDataPromise.then(
-                                (response: any) => {
+                            this.getProductivityPaneConfig(productivityPaneUniqueName).then(
+                                (productivityPaneConfig: any) => {
                                     this.getToolsConfigData(
-                                        response.entities[0].msdyn_msdyn_paneconfig_msdyn_tabconfig,
-                                    ).then((toolsConfig) => {
-                                        if (toolsConfig.length > 0) {
-                                            let productivityPane = new ProductivityPaneConfig(
-                                                response.entities[0].msdyn_panestate,
-                                                response.entities[0].msdyn_panemode,
-                                                new ProductivityToolsConfig(toolsConfig),
-                                            );
-                                            resolve(productivityPane);
-                                        } else {
-                                            reject('No tools configured');
-                                        }
-                                    });
+                                        productivityPaneConfig.entities[0].msdyn_msdyn_paneconfig_msdyn_tabconfig,
+                                    ).then(
+                                        (toolsConfig) => {
+                                            if (toolsConfig.length > 0) {
+                                                const productivityPane = new ProductivityPaneConfig(
+                                                    productivityPaneConfig.entities[0].msdyn_panestate,
+                                                    productivityPaneConfig.entities[0].msdyn_panemode,
+                                                    new ProductivityToolsConfig(toolsConfig),
+                                                );
+                                                resolve(productivityPane);
+                                            } else {
+                                                reject('No tools configured');
+                                            }
+                                        },
+                                        (error) => {
+                                            // Telemetry here
+                                            console.log(JSON.stringify(error));
+                                            reject(error);
+                                        },
+                                    );
                                 },
                                 (error) => {
                                     // Telemetry here
@@ -53,35 +51,34 @@ module ProductivityPaneLoader {
                         },
                     );
                 });
-            } catch (e) {
+            } catch (error) {
                 return new Promise<ProductivityPaneConfig>((resolve, reject) => {
                     // Telemetry here
-                    console.log(JSON.stringify(e.message));
-                    reject(e.message);
+                    console.log(JSON.stringify(error.message));
+                    reject(error.message);
                 });
             }
         }
 
-        public validateToolsIconConfigData(tabconfig: ToolConfig[]): Promise<ToolConfig[]> {
-            let methodName = 'getToolsConfigData';
+        public validateToolIconConfigData(toolsConfig: ToolConfig[]): Promise<ToolConfig[]> {
             return new Promise<ToolConfig[]>((resolve, reject) => {
                 let tPromises: Promise<any>[] = [];
-                tabconfig.forEach((tab) => {
-                    tPromises.push(this.isValidIconPath(tab.toolIcon));
-                    tPromises.push(this.isValidIconPath(tab.defaultIcon));
+                toolsConfig.forEach((tool) => {
+                    tPromises.push(this.isValidIconPath(tool.toolIcon));
+                    tPromises.push(this.isValidIconPath(tool.defaultIcon));
                 });
                 Promise.all(tPromises).then(
                     (results: any[]) => {
-                        var pos = 0;
+                        let pos = 0;
                         results.forEach((result: any, index: number) => {
                             if (index % 2 == 0) {
-                                tabconfig[pos].istoolIconValid = result;
+                                toolsConfig[pos].istoolIconValid = result;
                             } else {
-                                tabconfig[pos].isDefaultIconValid = result;
+                                toolsConfig[pos].isDefaultIconValid = result;
                                 pos++;
                             }
                         });
-                        resolve(tabconfig);
+                        resolve(toolsConfig);
                     },
                     (error) => {
                         // Telemetry here
@@ -93,7 +90,6 @@ module ProductivityPaneLoader {
         }
 
         private isValidIconPath(iconPath: string): Promise<boolean> {
-            let methodName = 'isValidIconPath';
             try {
                 return new Promise<boolean>((resolve, reject) => {
                     if (iconPath == null || iconPath.trim() == '') {
@@ -104,14 +100,15 @@ module ProductivityPaneLoader {
                                 ? iconPath.replace('/WebResources/', '')
                                 : iconPath.replace('WebResources/', '')
                             : iconPath;
-                        let webResourceQuery = this.getWebResourceQuery(iconPath);
-                        let getIconPath = Xrm.WebApi.retrieveMultipleRecords('webresource', webResourceQuery);
-                        getIconPath.then(
+                        const webResourceQuery = this.getWebResourceQuery(iconPath);
+                        Xrm.WebApi.retrieveMultipleRecords('webresource', webResourceQuery).then(
                             (response: any) => {
                                 response.entities.length > 0 ? resolve(true) : resolve(false);
                             },
                             (error) => {
-                                resolve(false);
+                                // Telemetry here
+                                console.log(JSON.stringify(error));
+                                reject(error);
                             },
                         );
                     }
@@ -125,34 +122,34 @@ module ProductivityPaneLoader {
             }
         }
 
-        public getWebResourceQuery(WebResourceName: string): string {
-            let query = String.format("?{0}{1} eq '{2}'", QueryDataConstants.FilterOperator, 'name', WebResourceName);
-            return query;
+        private getWebResourceQuery(WebResourceName: string): string {
+            return String.format("?{0}{1} eq '{2}'", QueryDataConstants.FilterOperator, 'name', WebResourceName);
         }
 
-        private getToolsConfigData(tabconfig: any): Promise<ToolConfig[]> {
-            let methodName = "getToolsConfigData";
+        private getToolsConfigData(tabConfig: any): Promise<ToolConfig[]> {
             return new Promise<ToolConfig[]>((resolve, reject) => {
-                var toolsList: ToolConfig[] = [];
+                let toolsList: ToolConfig[] = [];
                 let tPromises: Promise<any>[] = [];
-                tabconfig.forEach((tab) => {
+                tabConfig.forEach((tab) => {
                     tPromises.push(Xrm.WebApi.retrieveRecord(ToolConfigConstants.entityName, tab._msdyn_toolid_value));
                 });
                 Promise.all(tPromises).then(
                     (results: any[]) => {
                         results.forEach((result: any, index: number) => {
-                            toolsList.push(
-                                new ToolConfig(
-                                    result.msdyn_controlname,
-                                    tabconfig[index].msdyn_iconpath,
-                                    tabconfig[index].msdyn_order,
-                                    tabconfig[index].msdyn_isenabled,
-                                    tabconfig[index].msdyn_uniquename,
-                                    tabconfig[index].msdyn_tooltip,
-                                    result.msdyn_data,
-                                    result.msdyn_defaulticon,
-                                ),
-                            );
+                            if (tabConfig[index].msdyn_isenabled) {
+                                toolsList.push(
+                                    new ToolConfig(
+                                        result.msdyn_controlname,
+                                        tabConfig[index].msdyn_iconpath,
+                                        tabConfig[index].msdyn_order,
+                                        tabConfig[index].msdyn_isenabled,
+                                        tabConfig[index].msdyn_uniquename,
+                                        tabConfig[index].msdyn_tooltip,
+                                        result.msdyn_data,
+                                        result.msdyn_defaulticon,
+                                    ),
+                                );
+                            }
                         });
                         resolve(toolsList);
                     },
@@ -166,14 +163,9 @@ module ProductivityPaneLoader {
         }
 
         private getProductivityPaneUniqueName(appConfigName: string): Promise<string> {
-            let methodName = 'GetProductivityPaneUniqueName';
             return new Promise<string>((resolve, reject) => {
-                let productivityPaneUniqueNameQuery = this.getProductivityPaneUniqueNameQuery(appConfigName);
-                let retrieveDataPromise = Xrm.WebApi.retrieveMultipleRecords(
-                    AppConfigConstants.entityName,
-                    productivityPaneUniqueNameQuery,
-                );
-                retrieveDataPromise.then(
+                const productivityPaneUniqueNameQuery = this.getProductivityPaneUniqueNameQuery(appConfigName);
+                Xrm.WebApi.retrieveMultipleRecords(AppConfigConstants.entityName, productivityPaneUniqueNameQuery).then(
                     (response: any) => {
                         if (response.entities[0].msdyn_msdyn_paneconfig_msdyn_appconfig.length > 0) {
                             resolve(response.entities[0].msdyn_msdyn_paneconfig_msdyn_appconfig[0].msdyn_uniquename);
@@ -191,7 +183,7 @@ module ProductivityPaneLoader {
         }
 
         private getProductivityPaneUniqueNameQuery(appConfigName: string) {
-            let query = String.format(
+            return String.format(
                 "?{0}{1}&{2}{3} eq '{4}'&{5}{6}({7}{8})",
                 QueryDataConstants.SelectOperator,
                 AppConfigConstants.msdyn_appmoduleuniquename,
@@ -203,13 +195,29 @@ module ProductivityPaneLoader {
                 QueryDataConstants.SelectOperator,
                 ProductivityPaneConfigConstants.msdyn_uniqueName,
             );
-            return query;
         }
 
-        //This function generates query to fetch productivity pane config data
-        //applicationName is set to static. Need to make dynamic.
+        private getProductivityPaneConfig(productivityPaneUniqueName: string): Promise<any> {
+            return new Promise<any>((resolve, reject) => {
+                const productivityPaneQuery = this.getProductivityPanelandTabsQuery(productivityPaneUniqueName);
+                Xrm.WebApi.retrieveMultipleRecords(
+                    ProductivityPaneConfigConstants.entityName,
+                    productivityPaneQuery,
+                ).then(
+                    (response: any) => {
+                        resolve(response);
+                    },
+                    (error) => {
+                        // Telemetry here
+                        console.log(JSON.stringify(error));
+                        reject(error);
+                    },
+                );
+            });
+        }
+
         private getProductivityPanelandTabsQuery(paneUniqueName: string): string {
-            let query = String.format(
+            return String.format(
                 "?{0}{1} eq '{2}'&{3}{4}",
                 QueryDataConstants.FilterOperator,
                 ProductivityPaneConfigConstants.msdyn_uniqueName,
@@ -217,8 +225,6 @@ module ProductivityPaneLoader {
                 QueryDataConstants.ExpandOperator,
                 ProductivityPaneConfigConstants.paneTabRelationship,
             );
-            return query;
-            // query = "?$filter=msdyn_uniquename eq 'msdyn_csw_productivitypane'&$expand=msdyn_msdyn_paneconfig_msdyn_tabconfig"
         }
     }
 }
