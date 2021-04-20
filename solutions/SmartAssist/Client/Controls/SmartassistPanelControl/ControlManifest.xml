@@ -11,5 +11,8 @@
       <code path="SmartassistPanelControl.js" order="1" />
       <resx path="strings/SmartassistPanelControl.1033.resx" version="1.0.1" />
     </resources>
+		<feature-usage>
+			<uses-feature name="Utility" required="true" />
+		</feature-usage>
   </control>
 </manifest>

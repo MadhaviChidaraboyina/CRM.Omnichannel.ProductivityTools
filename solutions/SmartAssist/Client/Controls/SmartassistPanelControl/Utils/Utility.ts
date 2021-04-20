@@ -71,6 +71,16 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         /**
+        * Get current AnchorTabContext
+        */
+         public static async getCurrentAnchorTabContext() {
+            var context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
+
+            //Get anchor context
+            return context.getTabContext("anchor");
+        }
+
+        /**
          * Returns id for the config div.
          * @param configId
          */
@@ -86,6 +96,23 @@ module MscrmControls.SmartassistPanelControl {
             let eventPayload = new MscrmControls.PanelControl.PanelInboundEventDataModel(Constants.ControlId, rerender);
             let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, { "detail": eventPayload });
             window.top.dispatchEvent(event);
+        }
+
+        /**
+         * Update badge number
+         * @param notificationNumber: notification count
+         */
+         public static UpdateBadge(notificationNumber: number) {
+            const pane = Xrm.App.sidePanes.getPane(Constants.SmartAssistPaneId);
+            notificationNumber == 0 ? pane.clearBadge() : pane.setBadge(notificationNumber);
+        }
+
+        /**
+        * Indicate if Callscript control is rendered in app side pane
+        * @param context: PCF control context
+        */
+         public static isUsingAppSidePane(context: any): boolean {
+            return context.utils.IsFeatureEnabled(Constants.FCB_ProductivityTools_UseAppSidePanes);
         }
 
         /**
