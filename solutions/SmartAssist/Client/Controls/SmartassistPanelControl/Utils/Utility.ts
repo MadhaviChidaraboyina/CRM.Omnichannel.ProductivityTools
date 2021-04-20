@@ -99,15 +99,6 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         /**
-         * Update badge number
-         * @param notificationNumber: notification count
-         */
-         public static UpdateBadge(notificationNumber: number) {
-            const pane = Xrm.App.sidePanes.getPane(Constants.SmartAssistPaneId);
-            notificationNumber == 0 ? pane.clearBadge() : pane.setBadge(notificationNumber);
-        }
-
-        /**
         * Indicate if Callscript control is rendered in app side pane
         * @param context: PCF control context
         */
