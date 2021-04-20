@@ -105,7 +105,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         }
 
         /**
-        * Indicate if Callscript control is rendered in app side pane
+        * Indicate if smart assist control is rendered in app side pane
         * @param context: PCF control context
         */
         public static isUsingAppSidePane(context: any): boolean {
