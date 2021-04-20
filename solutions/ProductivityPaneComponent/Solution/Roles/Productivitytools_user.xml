@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Role id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" name="Productivity tools user">
   <IsCustomizable>0</IsCustomizable>
   <RolePrivileges>
@@ -9,9 +9,11 @@
     <RolePrivilege name="prvReadmsdyn_notificationtemplate" level="Global" />
     <RolePrivilege name="prvReadmsdyn_sessiontemplate" level="Global" />
     <RolePrivilege name="prvReadmsdyn_templateparameter" level="Global" />
-
     <RolePrivilege name="prvReadmsdyn_paneconfiguration" level="Global" />
     <RolePrivilege name="prvReadmsdyn_panetabconfiguration" level="Global" />
     <RolePrivilege name="prvReadmsdyn_panetoolconfiguration" level="Global" />
   </RolePrivileges>
+  <LocalizedNames>
+    <LocalizedName description="Productivity tools user" languagecode="1033" />
+  </LocalizedNames>
 </Role>

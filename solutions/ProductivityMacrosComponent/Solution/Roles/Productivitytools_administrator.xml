@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Role id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" name="Productivity tools administrator">
   <IsCustomizable>0</IsCustomizable>
   <RolePrivileges>
@@ -22,4 +22,7 @@
     <RolePrivilege name="prvAppendTomsdyn_macrosession" level="Global" />
     <RolePrivilege name="prvAppendmsdyn_macrosession" level="Global" />
   </RolePrivileges>
+  <LocalizedNames>
+    <LocalizedName description="Productivity tools administrator" languagecode="1033" />
+  </LocalizedNames>
 </Role>

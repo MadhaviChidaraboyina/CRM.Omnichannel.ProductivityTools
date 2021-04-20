@@ -2,8 +2,6 @@
 <Role id="{4758a2be-ccd8-ea11-a813-000d3a579805}" name="App Profile Manager Administrator">
   <IsCustomizable>0</IsCustomizable>
   <RolePrivileges>
-
-
     <RolePrivilege name="prvReadmsdyn_paneconfiguration" level="Global" />
     <RolePrivilege name="prvWritemsdyn_paneconfiguration" level="Global" />
     <RolePrivilege name="prvCreatemsdyn_paneconfiguration" level="Global" />
@@ -23,4 +21,7 @@
     <RolePrivilege name="prvAppendTomsdyn_panetoolconfiguration" level="Global" />
     <RolePrivilege name="prvDeletemsdyn_panetoolconfiguration" level="Global" />
   </RolePrivileges>
+  <LocalizedNames>
+    <LocalizedName description="App Profile Manager Administrator" languagecode="1033" />
+  </LocalizedNames>
 </Role>

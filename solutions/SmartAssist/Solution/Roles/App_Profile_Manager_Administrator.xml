@@ -15,4 +15,7 @@
     <RolePrivilege name="prvWritemsdyn_smartassistconfig" level="Global" />
     <RolePrivilege name="prvWritemsdyn_suggestionssetting" level="Global" />
   </RolePrivileges>
+  <LocalizedNames>
+    <LocalizedName description="App Profile Manager Administrator" languagecode="1033" />
+  </LocalizedNames>
 </Role>

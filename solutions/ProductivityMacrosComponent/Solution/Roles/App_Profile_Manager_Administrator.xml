@@ -22,4 +22,7 @@
     <RolePrivilege name="prvAppendTomsdyn_macrosession" level="Global" />
     <RolePrivilege name="prvAppendmsdyn_macrosession" level="Global" />
   </RolePrivileges>
+  <LocalizedNames>
+    <LocalizedName description="App Profile Manager Administrator" languagecode="1033" />
+  </LocalizedNames>
 </Role>

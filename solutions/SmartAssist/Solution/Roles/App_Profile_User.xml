@@ -6,4 +6,7 @@
     <RolePrivilege name="prvReadmsdyn_smartassistconfig" level="Global" />
     <RolePrivilege name="prvReadmsdyn_suggestionssetting" level="Global" />
   </RolePrivileges>
+  <LocalizedNames>
+    <LocalizedName description="App Profile User" languagecode="1033" />
+  </LocalizedNames>
 </Role>

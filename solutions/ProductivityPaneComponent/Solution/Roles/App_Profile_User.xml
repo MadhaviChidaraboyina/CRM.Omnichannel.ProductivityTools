@@ -6,4 +6,7 @@
     <RolePrivilege name="prvReadmsdyn_panetabconfiguration" level="Global" />
     <RolePrivilege name="prvReadmsdyn_panetoolconfiguration" level="Global" />
   </RolePrivileges>
+  <LocalizedNames>
+    <LocalizedName description="App Profile User" languagecode="1033" />
+  </LocalizedNames>
 </Role>

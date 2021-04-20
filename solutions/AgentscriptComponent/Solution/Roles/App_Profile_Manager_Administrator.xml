@@ -14,7 +14,6 @@
     <RolePrivilege name="prvDeletemsdyn_productivityagentscriptstep" level="Global" />
     <RolePrivilege name="prvReadmsdyn_productivityagentscriptstep" level="Global" />
     <RolePrivilege name="prvWritemsdyn_productivityagentscriptstep" level="Global" />
-
     <RolePrivilege name="prvAppendToWorkflow" level="Global" />
     <RolePrivilege name="prvAppendWorkflow" level="Global" />
     <RolePrivilege name="prvCreateWorkflow" level="Global" />
@@ -22,4 +21,7 @@
     <RolePrivilege name="prvReadWorkflow" level="Global" />
     <RolePrivilege name="prvWriteWorkflow" level="Global" />
   </RolePrivileges>
+  <LocalizedNames>
+    <LocalizedName description="App Profile Manager Administrator" languagecode="1033" />
+  </LocalizedNames>
 </Role>

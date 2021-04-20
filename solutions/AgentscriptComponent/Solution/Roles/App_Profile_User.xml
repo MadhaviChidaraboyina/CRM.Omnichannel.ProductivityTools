@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Role id="{61649654-ced8-ea11-a813-000d3a579805}" name="App Profile User" >
+<Role id="{61649654-ced8-ea11-a813-000d3a579805}" name="App Profile User">
   <IsCustomizable>0</IsCustomizable>
   <RolePrivileges>
     <RolePrivilege name="prvReadmsdyn_productivityagentscript" level="Global" />
     <RolePrivilege name="prvReadmsdyn_productivityagentscriptstep" level="Global" />
     <RolePrivilege name="prvReadWorkflow" level="Global" />
   </RolePrivileges>
+  <LocalizedNames>
+    <LocalizedName description="App Profile User" languagecode="1033" />
+  </LocalizedNames>
 </Role>

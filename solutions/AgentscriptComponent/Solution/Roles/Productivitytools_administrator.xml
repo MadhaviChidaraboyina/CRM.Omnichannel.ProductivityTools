@@ -1,8 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Role id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" name="Productivity tools administrator">
   <IsCustomizable>0</IsCustomizable>
   <RolePrivileges>
-
     <RolePrivilege name="prvAppendmsdyn_productivityagentscript" level="Global" />
     <RolePrivilege name="prvAppendTomsdyn_productivityagentscript" level="Global" />
     <RolePrivilege name="prvCreatemsdyn_productivityagentscript" level="Global" />
@@ -15,13 +14,14 @@
     <RolePrivilege name="prvDeletemsdyn_productivityagentscriptstep" level="Global" />
     <RolePrivilege name="prvReadmsdyn_productivityagentscriptstep" level="Global" />
     <RolePrivilege name="prvWritemsdyn_productivityagentscriptstep" level="Global" />
-    
     <RolePrivilege name="prvAppendToWorkflow" level="Global" />
     <RolePrivilege name="prvAppendWorkflow" level="Global" />
     <RolePrivilege name="prvCreateWorkflow" level="Global" />
     <RolePrivilege name="prvDeleteWorkflow" level="Global" />
     <RolePrivilege name="prvReadWorkflow" level="Global" />
     <RolePrivilege name="prvWriteWorkflow" level="Global" />
-
   </RolePrivileges>
+  <LocalizedNames>
+    <LocalizedName description="Productivity tools administrator" languagecode="1033" />
+  </LocalizedNames>
 </Role>
