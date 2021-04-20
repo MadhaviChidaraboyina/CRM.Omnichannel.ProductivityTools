@@ -47,10 +47,6 @@ module MscrmControls.SmartassistPanelControl {
                 this.smartAssistContainer = container;
                 this.smartAssistContainer.setAttribute("style", Constants.SAPanelControlDivCss);
 
-                if (context.parameters.AnchorTabContext && Utility.IsValidJsonString(context.parameters.AnchorTabContext.raw)) {
-                    this.AnchorTabContext = JSON.parse(context.parameters.AnchorTabContext.raw);
-                }
-
                 if (!this.tabSwitchHandlerId) {
                     //Listen to the CEC context change API
                     var eventId = Microsoft.AppRuntime.Sessions.addOnContextChange(this.listenCECContextChangeAPI.bind(this));
@@ -113,8 +109,9 @@ module MscrmControls.SmartassistPanelControl {
                 let recordId = this.getEntityRecordId(this.AnchorTabContext);
                 this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SessionInitStarted, null);
                 this.renderSuggestions(false, this.AnchorTabContext.entityName, Utility.FormatGuid(recordId));
+                
+                this.newInstance = false;
             }
-            this.newInstance = false;
         }
 
         /** 
