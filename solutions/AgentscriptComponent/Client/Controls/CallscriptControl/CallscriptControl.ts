@@ -326,7 +326,7 @@ module MscrmControls.Callscript {
         private DispatchNoDataEvent() {
 			// do nothing if the tool is rendered in app side pane as PP doesn't exist
 			// we should remove this method and all the invoke after Oct 2021 release
-			if (Utility.isUsingAppSidePane()) {
+			if (Utility.isUsingAppSidePane(this.context as any)) {
 				return;
 			}
 
