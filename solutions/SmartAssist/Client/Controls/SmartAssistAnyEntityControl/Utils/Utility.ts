@@ -109,7 +109,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         * @param context: PCF control context
         */
         public static isUsingAppSidePane(context: any): boolean {
-            return context.utils.IsFeatureEnabled(StringConstants.FCB_ProductivityTools_UseAppSidePanes);
+            return context.utils.isFeatureEnabled(StringConstants.FCB_ProductivityTools_UseAppSidePanes);
         }
 
         /**Get live work stream id */

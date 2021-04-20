@@ -59,7 +59,7 @@ module MscrmControls.Callscript {
         * @param context: PCF control context
         */
         public static isUsingAppSidePane(context: any): boolean {
-            return context.utils.IsFeatureEnabled(Constants.FCB_ProductivityTools_UseAppSidePanes);
+            return context.utils.isFeatureEnabled(Constants.FCB_ProductivityTools_UseAppSidePanes);
         }
 
         /**
