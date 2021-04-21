@@ -4,7 +4,7 @@
 /// <reference path="../../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 /// <reference path="./Constants.ts" />
 module ProductivityPaneLoader {
-    export class InvokePowerPlatformApi {
+    export class LoadAppSidePanes {
         /*
          * Load productivity tools via app side panes APIs.
          */

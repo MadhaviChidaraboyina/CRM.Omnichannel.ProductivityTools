@@ -3,7 +3,7 @@
  */
 /// <reference path="./Utilities/LoadScripts.ts" />
 /// <reference path="./Utilities/Utils.ts" />
-/// <reference path="./Utilities/InvokePowerPlatformApi.ts" />
+/// <reference path="./Utilities/LoadAppSidePanes.ts" />
 /// <reference path="./Data/APMConfigExtractor.ts" />
 /// <reference path="../TypeDefinitions/AppRuntimeClientSdk.d.ts" />
 module ProductivityPaneLoader {
@@ -32,7 +32,7 @@ module ProductivityPaneLoader {
                                     if (productivityPaneConfig.productivityPaneState) {
                                         // toolsList incorporates only enabled tools; it may be empty but it can't be undefined.
                                         toolsList.forEach((tool: ToolConfig) => {
-                                            InvokePowerPlatformApi.loadAppSidePane(
+                                            LoadAppSidePanes.loadAppSidePane(
                                                 tool.toolControlName,
                                                 tool.tooltip,
                                                 tool.toolName,
@@ -49,6 +49,6 @@ module ProductivityPaneLoader {
             console.log('Failed to load app side panes: ' + error);
         }
     } else {
-        InvokePowerPlatformApi.loadLegacyProductivityPane();
+        LoadAppSidePanes.loadLegacyProductivityPane();
     }
 }
