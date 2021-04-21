@@ -2,10 +2,8 @@
  * @license Copyright (c) Microsoft Corporation.  All rights reserved.
  */
 /// <reference path="../../../../../references/external/TypeDefinitions/microsoft.ajax.d.ts" />
-/// <reference path="../../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 /// <reference path="../Models/ProductivityPaneConfig.ts"/>
 /// <reference path="../Models/ProductivityToolsConfig.ts"/>
-/// <reference path="../Utilities/Constants.ts"/>
 module ProductivityPaneLoader {
     export class APMConfigExtractor {
         public retrieveAPMConfig(appConfigName: string): Promise<ProductivityPaneConfig> {
@@ -60,7 +58,7 @@ module ProductivityPaneLoader {
             }
         }
 
-        public validateToolIconConfigData(toolsConfig: ToolConfig[]): Promise<ToolConfig[]> {
+        public validateToolIconConfigAndReturn(toolsConfig: ToolConfig[]): Promise<ToolConfig[]> {
             return new Promise<ToolConfig[]>((resolve, reject) => {
                 let tPromises: Promise<any>[] = [];
                 toolsConfig.forEach((tool) => {
