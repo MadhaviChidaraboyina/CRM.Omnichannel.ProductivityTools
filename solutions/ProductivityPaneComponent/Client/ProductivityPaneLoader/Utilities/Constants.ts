@@ -35,7 +35,7 @@ module ProductivityPaneLoader {
         public static entityName = 'msdyn_panetoolconfiguration';
     }
 
-    export class PCFControlConstants {
+    export class PcfControlConstants {
         public static pageType = 'control';
         public static sidePaneKey = 'ProductivityPaneSidePanelId';
 
@@ -44,7 +44,7 @@ module ProductivityPaneLoader {
         public static agentScript = 'MscrmControls.Callscript.CallscriptControl';
         public static knowledgeSearch = 'MscrmControls.KnowledgeControl.KnowledgeControl';
 
-        public static PCFControlProps = {
+        public static PcfControlProps = {
             parameters: {
                 SessionContext: {
                     Usage: 1,
@@ -80,7 +80,7 @@ module ProductivityPaneLoader {
         };
     }
 
-    export class FCBConstants {
+    export class FcbConstants {
         public static useAppSidePanes = 'FCB.ProductivityTools.UseAppSidePanes';
     }
 

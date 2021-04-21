@@ -4,7 +4,7 @@
 /// <reference path="../../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 /// <reference path="./Constants.ts" />
 module ProductivityPaneLoader {
-    export class InvokePowerPlatformAPIs {
+    export class InvokePowerPlatformApi {
         /*
          * Load productivity tools via app side panes APIs.
          */
@@ -25,9 +25,9 @@ module ProductivityPaneLoader {
                     })
                     .then((pane) => {
                         pane.navigate({
-                            pageType: PCFControlConstants.pageType,
+                            pageType: PcfControlConstants.pageType,
                             controlName: toolControlName,
-                            data: PCFControlConstants.PCFControlProps.parameters,
+                            data: PcfControlConstants.PcfControlProps.parameters,
                         });
                         return pane.paneId;
                     })
@@ -53,8 +53,8 @@ module ProductivityPaneLoader {
             _xrmApp.panels
                 .loadPanel({
                     pageInput: {
-                        pageType: PCFControlConstants.pageType,
-                        controlName: PCFControlConstants.paneControlName,
+                        pageType: PcfControlConstants.pageType,
+                        controlName: PcfControlConstants.paneControlName,
                     },
                     // =True: If already have sidepanel with pageInput at target position, will auto replace with new content.
                     // =false: will create new sidepanel at position, event have another sidepanel alredy
@@ -70,7 +70,7 @@ module ProductivityPaneLoader {
                 })
                 .then((paneId: string) => {
                     console.log('Panel load success ' + paneId);
-                    sessionStorage.setItem(PCFControlConstants.sidePaneKey, paneId);
+                    sessionStorage.setItem(PcfControlConstants.sidePaneKey, paneId);
                 }),
                 (error: any) => {
                     console.log('Panel load failed: ' + error);
