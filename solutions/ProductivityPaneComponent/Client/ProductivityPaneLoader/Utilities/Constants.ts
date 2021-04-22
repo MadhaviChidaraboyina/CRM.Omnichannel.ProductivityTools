@@ -37,9 +37,7 @@ module ProductivityPaneLoader {
 
     export class PcfControlConstants {
         public static pageType = 'control';
-        public static sidePaneKey = 'ProductivityPaneSidePanelId';
 
-        public static paneControlName = 'MscrmControls.PanelControl.PanelControl';
         public static smartAssist = 'MscrmControls.SmartassistPanelControl.SmartassistPanelControl';
         public static agentScript = 'MscrmControls.Callscript.CallscriptControl';
         public static knowledgeSearch = 'MscrmControls.KnowledgeControl.KnowledgeControl';
@@ -78,13 +76,25 @@ module ProductivityPaneLoader {
                 },
             },
         };
+
+        // Serve legacy productivity pane. Will be removed post Oct 2021 release
+        public static sidePaneKey = 'ProductivityPaneSidePanelId';
+        public static paneControlName = 'MscrmControls.PanelControl.PanelControl';
     }
 
-    export class FcbConstants {
+    export class Constants {
+        // FCB
         public static useAppSidePanes = 'FCB.ProductivityTools.UseAppSidePanes';
-    }
 
-    export class StyleConstants {
+        // Style
         public static appSidePaneWidth = 296;
+
+        // Session storage
+        public static productivityToolsSessionState = 'ProductivityToolsSessionState';
+        public static selectedTool = 'SelectedTool';
+        public static emptyString = '';
+
+        // Numbers
+        public static firstEnabledTool = 0;
     }
 }

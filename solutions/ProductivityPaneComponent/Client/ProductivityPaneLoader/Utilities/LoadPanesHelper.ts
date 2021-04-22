@@ -4,7 +4,7 @@
 /// <reference path="../../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 /// <reference path="./Constants.ts" />
 module ProductivityPaneLoader {
-    export class LoadAppSidePanes {
+    export class LoadPanesHelper {
         /*
          * Load productivity tools via app side panes APIs.
          */
@@ -19,7 +19,7 @@ module ProductivityPaneLoader {
                         isSelected: false,
                         imageSrc: toolIcon,
                         title: tooltip,
-                        width: StyleConstants.appSidePaneWidth,
+                        width: Constants.appSidePaneWidth,
                         hidden: true,
                         alwaysRender: true,
                     })

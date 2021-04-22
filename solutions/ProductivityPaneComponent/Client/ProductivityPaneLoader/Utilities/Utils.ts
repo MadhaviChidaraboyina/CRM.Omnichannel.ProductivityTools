@@ -17,7 +17,7 @@ module ProductivityPaneLoader {
          * Indicate if the control is loaded via app side panes
          */
         public static isUsingAppSidePanes(): boolean {
-            return Xrm.Internal.isFeatureEnabled(FcbConstants.useAppSidePanes);
+            return Xrm.Internal.isFeatureEnabled(Constants.useAppSidePanes);
         }
     }
 }

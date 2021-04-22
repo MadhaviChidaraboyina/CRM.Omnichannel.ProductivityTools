@@ -3,8 +3,9 @@
  */
 /// <reference path="./Utilities/LoadScripts.ts" />
 /// <reference path="./Utilities/Utils.ts" />
-/// <reference path="./Utilities/LoadAppSidePanes.ts" />
+/// <reference path="./Utilities/LoadPanesHelper.ts" />
 /// <reference path="./Data/APMConfigExtractor.ts" />
+/// <reference path="./SessionChangeManager/SessionChangeManager.ts" />
 /// <reference path="../TypeDefinitions/AppRuntimeClientSdk.d.ts" />
 module ProductivityPaneLoader {
     LoadScripts.loadLogicAppExecutor();
@@ -17,7 +18,8 @@ module ProductivityPaneLoader {
             const configExtractor = new APMConfigExtractor();
 
             Microsoft.AppRuntime.Utility.getEnvironment().then((environmentData) => {
-                // environmentData and AppCongigName can't be null or undefined, while the latter can be empty.
+                // environmentData and AppCongigName can't be null
+                // or undefined, while the latter can be empty.
                 const appConfigUniqueName = environmentData.AppConfigName;
                 if (!Utils.isEmpty(appConfigUniqueName)) {
                     configExtractor
@@ -28,11 +30,17 @@ module ProductivityPaneLoader {
                                     productivityPaneConfig.productivityToolsConfig.ToolsList,
                                 )
                                 .then((toolsList: ToolConfig[]) => {
-                                    // If pane state is false, it means that user turn off all the tools and no tools will be loaded subsequently.
+                                    // If pane state is false, it means that user turn off all
+                                    // the tools and no tools will be loaded subsequently.
                                     if (productivityPaneConfig.productivityPaneState) {
-                                        // toolsList incorporates only enabled tools; it may be empty but it can't be undefined.
+                                        new SessionChangeManager(
+                                            productivityPaneConfig.productivityPaneMode,
+                                            toolsList[Constants.firstEnabledTool].toolControlName,
+                                        );
+                                        // toolsList incorporates only enabled tools; it won't be
+                                        // empty after validateToolIconConfigAndReturn() is resolved
                                         toolsList.forEach((tool: ToolConfig) => {
-                                            LoadAppSidePanes.loadAppSidePane(
+                                            LoadPanesHelper.loadAppSidePane(
                                                 tool.toolControlName,
                                                 tool.tooltip,
                                                 tool.toolName,
@@ -49,6 +57,6 @@ module ProductivityPaneLoader {
             console.log('Failed to load app side panes: ' + error);
         }
     } else {
-        LoadAppSidePanes.loadLegacyProductivityPane();
+        LoadPanesHelper.loadLegacyProductivityPane();
     }
 }
