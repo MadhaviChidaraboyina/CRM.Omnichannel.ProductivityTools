@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-	<control namespace="MscrmControls.ProductivityPanel" constructor="TPBotControl" version="1.0.3" display-name-key="CC_TPBotControl_Control">
+	<control namespace="MscrmControls.ProductivityPanel" constructor="TPBotControl" version="1.0.5" display-name-key="CC_TPBotControl_Control">
 		<property name="FieldControl" display-name-key="CC_FieldControl" description-key="CC_FieldControl_Desc" usage="bound" of-type="SingleLine.Text" hidden="false"/>
 		<modes>
 		</modes>

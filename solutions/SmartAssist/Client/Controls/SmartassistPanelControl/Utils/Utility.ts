@@ -71,6 +71,16 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         /**
+        * Get current AnchorTabContext
+        */
+         public static async getCurrentAnchorTabContext() {
+            var context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
+
+            //Get anchor context
+            return context.getTabContext("anchor");
+        }
+
+        /**
          * Returns id for the config div.
          * @param configId
          */
@@ -86,6 +96,14 @@ module MscrmControls.SmartassistPanelControl {
             let eventPayload = new MscrmControls.PanelControl.PanelInboundEventDataModel(Constants.ControlId, rerender);
             let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, { "detail": eventPayload });
             window.top.dispatchEvent(event);
+        }
+
+        /**
+        * Indicate if smart assist control is rendered in app side pane
+        * @param context: PCF control context
+        */
+         public static isUsingAppSidePane(context: any): boolean {
+            return context.utils.isFeatureEnabled(Constants.FCB_ProductivityTools_UseAppSidePanes);
         }
 
         /**

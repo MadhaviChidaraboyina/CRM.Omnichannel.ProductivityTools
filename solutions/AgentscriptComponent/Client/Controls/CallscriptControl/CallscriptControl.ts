@@ -324,6 +324,12 @@ module MscrmControls.Callscript {
 
         /**Dispatch No data event to PP */
         private DispatchNoDataEvent() {
+			// do nothing if the tool is rendered in app side pane as PP doesn't exist
+			// we should remove this method and all the invoke after Oct 2021 release
+			if (this.context && Utility.isUsingAppSidePane(this.context as any)) {
+				return;
+			}
+
             var sessionId = Utility.getCurrentSessionId();
             var ppRerender = new MscrmControls.PanelControl.Rerender(sessionId, true);
 

@@ -34,5 +34,22 @@ module MscrmControls.ProductivityPanel.TPBot {
             let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, { "detail": eventPayload });
             window.top.dispatchEvent(event);
         }
+
+        /**
+         * Update app side pane badge
+         * @param notificationNumber: notification count
+         */
+         public static updateBadge(notificationNumber: number) {
+            const pane = Xrm.App.sidePanes.getPane(Constants.SmartAssistPaneId);
+            notificationNumber == 0 ? pane.clearBadge() : pane.setBadge(notificationNumber);
+        }
+
+        /**
+        * Indicate if smart assist control is rendered in app side pane
+        * @param context: PCF control context
+        */
+        public static isUsingAppSidePane(context: any): boolean {
+            return context.utils.isFeatureEnabled(Constants.FCB_ProductivityTools_UseAppSidePanes);
+        }
     }
 }

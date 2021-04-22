@@ -216,9 +216,15 @@
                     // Raise PP notification
                     var saConfigData = this.Suggestions;
                     if (saConfigData && this.Suggestions[saConfig.SmartassistConfigurationId]) {
-                        var sessionId = Utility.getCurrentSessionId();
                         var dataCount = saConfigData[saConfig.SmartassistConfigurationId].length;
-                        Utility.DispatchPanelInboundEvent(dataCount, sessionId);
+                        var isUsingAppSidePane = this._controlContext && Utility.isUsingAppSidePane(this._controlContext as any);
+                        if (isUsingAppSidePane) {
+                            Utility.updateBadge(dataCount);
+                        } else {
+                            // we should remove the isUsingAppSidePane check and "else" section after Oct 2021 release
+                            var sessionId = Utility.getCurrentSessionId();
+                            Utility.DispatchPanelInboundEvent(dataCount, sessionId);
+                        }
                     }
                 }
 
