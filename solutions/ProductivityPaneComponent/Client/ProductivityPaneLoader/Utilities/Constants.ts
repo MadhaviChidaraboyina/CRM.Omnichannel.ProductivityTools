@@ -90,11 +90,14 @@ module ProductivityPaneLoader {
         public static appSidePaneWidth = 296;
 
         // Session storage
-        public static productivityToolsSessionState = 'ProductivityToolsSessionState';
-        public static selectedTool = 'SelectedTool';
+        public static productivityToolsSessionState = 'productivityToolsSessionState_';
+        public static selectedAppSidePaneId = 'selectedPaneId';
         public static emptyString = '';
 
         // Numbers
         public static firstEnabledTool = 0;
+
+        // Session id
+        public static homeSessionId = 'session-id-0';
     }
 }

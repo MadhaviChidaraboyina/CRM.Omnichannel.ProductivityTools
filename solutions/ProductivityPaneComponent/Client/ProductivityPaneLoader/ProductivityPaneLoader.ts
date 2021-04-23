@@ -35,7 +35,7 @@ module ProductivityPaneLoader {
                                     if (productivityPaneConfig.productivityPaneState) {
                                         new SessionChangeManager(
                                             productivityPaneConfig.productivityPaneMode,
-                                            toolsList[Constants.firstEnabledTool].toolControlName,
+                                            toolsList[Constants.firstEnabledTool].toolName,
                                         );
                                         // toolsList incorporates only enabled tools; it won't be
                                         // empty after validateToolIconConfigAndReturn() is resolved
