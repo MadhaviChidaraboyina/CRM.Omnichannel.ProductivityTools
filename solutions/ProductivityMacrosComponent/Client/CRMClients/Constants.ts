@@ -113,6 +113,7 @@ namespace Microsoft.ProductivityMacros {
         public static Search = "search";
         public static Webresource = "webresource";
         public static ThirdPartyWebsite = "webresource"; //ThirdPartyWebsite
+        public static Custom = "custom";
 
     }
 

@@ -287,6 +287,14 @@ namespace Microsoft.ProductivityMacros.Internal {
                     pageInput.data = `cif_thirdpartyurl${url.Value}${dataString}`;
                 }
                 break;
+            case AppTabConstant.Custom:
+                pageInput.pageType = AppTabConstant.Custom;
+                for (i = 0; i < entityData.Custom_Array.length; i++) {
+                    if (entityData.Custom_Array[i].Value !== undefined) {
+                        pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
+                    }
+                }
+                break;
         }
         return pageInput;
     }
