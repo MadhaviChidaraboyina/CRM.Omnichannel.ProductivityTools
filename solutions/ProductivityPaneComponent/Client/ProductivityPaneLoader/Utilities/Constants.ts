@@ -84,18 +84,20 @@ module ProductivityPaneLoader {
 
     export class Constants {
         // FCB
-        public static useAppSidePanes = 'FCB.ProductivityTools.UseAppSidePanes';
+        public static fcbProductivityToolsUseAppSidePanes = 'FCB.ProductivityTools.UseAppSidePanes';
 
         // Style
         public static appSidePaneWidth = 296;
 
         // Session storage
-        public static productivityToolsSessionState = 'productivityToolsSessionState_';
+        public static appSidePaneSessionState = 'appSidePaneSessionState_';
         public static selectedAppSidePaneId = 'selectedPaneId';
         public static emptyString = '';
 
         // Numbers
-        public static firstEnabledTool = 0;
+        public static firstElement = 0;
+        public static collapseAppSidePane = 0;
+        public static expandAppSidePane = 1;
 
         // Session id
         public static homeSessionId = 'session-id-0';

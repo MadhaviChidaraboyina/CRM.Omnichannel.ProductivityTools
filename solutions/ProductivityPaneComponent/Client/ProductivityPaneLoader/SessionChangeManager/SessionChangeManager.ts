@@ -1,54 +1,30 @@
 /**
  * @license Copyright (c) Microsoft Corporation.  All rights reserved.
  */
-/// <reference path="../../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 /// <reference path="../SessionStateManager/SessionStateManager.ts"/>
 /// <reference path="../utilities/Constants.ts"/>
 /// <reference path="../utilities/utils.ts"/>
+/// <reference path="./SessionChangeHelper.ts"/>
 module ProductivityPaneLoader {
     export class SessionChangeManager {
-        private paneMode: boolean;
-        private firstEnabledToolName: string;
+        private isDefaultExpanded: boolean;
+        private ProductivityToolList: ToolConfig[];
 
-        constructor(paneMode: boolean, firstEnabledToolName: string) {
-            this.paneMode = paneMode;
-            this.firstEnabledToolName = firstEnabledToolName;
-            this.registerEventHandler();
+        constructor(isDefaultExpanded: boolean, toolList: ToolConfig[]) {
+            this.isDefaultExpanded = isDefaultExpanded;
+            this.ProductivityToolList = toolList;
+            this.registerEventHandlers();
         }
 
-        private registerEventHandler(): void {
+        private registerEventHandlers(): void {
             try {
-                const windowObject = this.getWindowObject();
+                const windowObject = SessionChangeHelper.getWindowObject();
 
-                windowObject.Xrm.App.sessions.addOnAfterSessionCreate(this.onSessionCreate.bind(this));
                 windowObject.Xrm.App.sessions.addOnBeforeSessionSwitch(this.onBeforeSessionSwitch.bind(this));
-                // windowObject.Xrm.App.sessions.addOnAftereSessionSwitch(this.onAfterSessionSwitch.bind(this));
+                windowObject.Xrm.App.sessions.addOnAfterSessionSwitch(this.onAfterSessionSwitch.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClose.bind(this));
             } catch (error) {
-                console.log('error occured' + error);
-                // Telemetry here
-            }
-        }
-
-        /*
-         * Init session storage data for each newly created session.
-         * Home sesson init happens in onBeforeSessionSwitch().
-         */
-        private onSessionCreate(event: any): void {
-            try {
-                const createdSessionId = event.getEventArgs()._inputArguments.sessionId;
-
-                let sessionStateData = {};
-                this.paneMode
-                    ? (sessionStateData[Constants.selectedAppSidePaneId] = this.firstEnabledToolName)
-                    : (sessionStateData[Constants.selectedAppSidePaneId] = Constants.emptyString);
-
-                SessionStateManager.setState(
-                    Constants.productivityToolsSessionState + createdSessionId,
-                    sessionStateData,
-                );
-            } catch (error) {
-                console.log('Error occured on session create: ' + error);
+                console.log(SessionChangeHelper.errorMessagesOnRegisterEventHandlers(error));
                 // Telemetry here
             }
         }
@@ -59,16 +35,15 @@ module ProductivityPaneLoader {
          */
         private onBeforeSessionSwitch(event: any): void {
             try {
-                const previousSessionId = event.getEventArgs()._inputArguments.previousSessionId;
-                const xrmApp = this.getXrmAppApis();
+                const previousSessionId = SessionChangeHelper.getPreviousSessionId(event);
 
-                const currentSelectedAppSidePane = xrmApp.sidePanes.getSelectedPane();
+                const currentSelectedAppSidePane = SessionChangeHelper.getSelectedAppSidePane();
                 const currentSelectedAppSidePaneId = currentSelectedAppSidePane
                     ? currentSelectedAppSidePane.paneId
                     : Constants.emptyString;
 
                 let sessionStateData = SessionStateManager.getState(
-                    Constants.productivityToolsSessionState + previousSessionId,
+                    Constants.appSidePaneSessionState + previousSessionId,
                 );
 
                 // Handle home session init. This only happens once.
@@ -78,37 +53,58 @@ module ProductivityPaneLoader {
                 }
 
                 sessionStateData[Constants.selectedAppSidePaneId] = currentSelectedAppSidePaneId;
-                SessionStateManager.setState(
-                    Constants.productivityToolsSessionState + previousSessionId,
-                    sessionStateData,
-                );
+                SessionStateManager.setState(Constants.appSidePaneSessionState + previousSessionId, sessionStateData);
             } catch (error) {
-                console.log('Error occured on before session switch: ' + error);
+                console.log(SessionChangeHelper.errorMessagesOnBeforeSessionSwitch(error));
                 // Telemetry here
             }
         }
 
-        // private onAfterSessionSwitch() {}
+        /*
+         * Set pane.hidden accordingly. Productivity tools are hidden in home session and not hidden in other sessions.
+         * Init session storage if it is null. And Select or collapse app side pane based on session storage data.
+         */
+        private onAfterSessionSwitch(event: any): void {
+            try {
+                const newSessionId = SessionChangeHelper.getNewSessionId(event);
+                Utils.isEqual(newSessionId, Constants.homeSessionId)
+                    ? SessionChangeHelper.setProductivityToolsHidden(this.ProductivityToolList)
+                    : SessionChangeHelper.setProductivityToolsNotHidden(this.ProductivityToolList);
+
+                // Init session storage if sessionStateData is null, which only happens when creating a new session.
+                let sessionStateData = SessionStateManager.getState(Constants.appSidePaneSessionState + newSessionId);
+                let selectedAppSidePaneId = sessionStateData ? sessionStateData[Constants.selectedAppSidePaneId] : null;
+                if (Utils.isNullOrUndefined(selectedAppSidePaneId)) {
+                    selectedAppSidePaneId = this.isDefaultExpanded
+                        ? this.ProductivityToolList[Constants.firstElement].toolName
+                        : Constants.emptyString;
+                    sessionStateData = {};
+                    sessionStateData[Constants.selectedAppSidePaneId] = selectedAppSidePaneId;
+                    SessionStateManager.setState(Constants.appSidePaneSessionState + newSessionId, sessionStateData);
+                }
+
+                if (!Utils.isEmpty(selectedAppSidePaneId)) {
+                    SessionChangeHelper.setSelectedAppSidePane(selectedAppSidePaneId);
+                } else if (SessionChangeHelper.isProductivityToolSelected(this.ProductivityToolList)) {
+                    SessionChangeHelper.collapseSelectedAppSidePane();
+                }
+            } catch (error) {
+                console.log(SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error));
+                // Telemetry here
+            }
+        }
 
         /*
          * Remove session storage data associated with session id.
          */
         private onSessionClose(event: any): void {
             try {
-                const closedSessionId = event.getEventArgs()._inputArguments.sessionId;
-                SessionStateManager.deleteState(Constants.productivityToolsSessionState + closedSessionId);
+                const closedSessionId = SessionChangeHelper.getSessionId(event);
+                SessionStateManager.deleteState(Constants.appSidePaneSessionState + closedSessionId);
             } catch (error) {
-                console.log('Error occured on session close: ' + error);
+                console.log(SessionChangeHelper.errorMessagesOnSessionClose(error));
                 // Telemetry here
             }
-        }
-
-        private getWindowObject(): any {
-            return window.top;
-        }
-
-        private getXrmAppApis(): any {
-            return Xrm.App;
         }
     }
 }

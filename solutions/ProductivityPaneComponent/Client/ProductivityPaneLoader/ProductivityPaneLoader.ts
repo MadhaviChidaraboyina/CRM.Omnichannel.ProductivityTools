@@ -29,17 +29,20 @@ module ProductivityPaneLoader {
                                 .validateToolIconConfigAndReturn(
                                     productivityPaneConfig.productivityToolsConfig.ToolsList,
                                 )
-                                .then((toolsList: ToolConfig[]) => {
+                                .then((toolList: ToolConfig[]) => {
                                     // If pane state is false, it means that user turn off all
                                     // the tools and no tools will be loaded subsequently.
                                     if (productivityPaneConfig.productivityPaneState) {
                                         new SessionChangeManager(
+                                            // productivityPaneMode indicates whether or not user 
+                                            // want to expand all productivity tools. true: expand 
+                                            // all tools by default; false: collapse all tools. 
                                             productivityPaneConfig.productivityPaneMode,
-                                            toolsList[Constants.firstEnabledTool].toolName,
+                                            toolList,
                                         );
                                         // toolsList incorporates only enabled tools; it won't be
                                         // empty after validateToolIconConfigAndReturn() is resolved
-                                        toolsList.forEach((tool: ToolConfig) => {
+                                        toolList.forEach((tool: ToolConfig) => {
                                             LoadPanesHelper.loadAppSidePane(
                                                 tool.toolControlName,
                                                 tool.tooltip,
