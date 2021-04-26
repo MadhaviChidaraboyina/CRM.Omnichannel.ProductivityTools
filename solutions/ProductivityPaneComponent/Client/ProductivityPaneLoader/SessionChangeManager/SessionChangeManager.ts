@@ -78,7 +78,7 @@ module ProductivityPaneLoader {
                 let sessionStorageData = SessionStateManager.getSessionStorageData(
                     Constants.appSidePaneSessionState + newSessionId,
                 );
-                // Init session storage if sessionStateData is null, which only happens when creating a new session.
+                // Init session storage if sessionStorageData is null, which only happens when creating a new session.
                 if (Utils.isNullOrUndefined(sessionStorageData)) {
                     const appSidePanesState = this.isDefaultExpanded
                         ? Constants.appSidePanesExpanded

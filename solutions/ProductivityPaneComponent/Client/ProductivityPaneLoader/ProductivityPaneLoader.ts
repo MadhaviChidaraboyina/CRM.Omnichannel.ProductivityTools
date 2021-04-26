@@ -39,7 +39,7 @@ module ProductivityPaneLoader {
                                             productivityPaneConfig.productivityPaneMode,
                                             toolList,
                                         );
-                                        // toolsList incorporates only enabled tools; it won't be
+                                        // toolList incorporates only enabled tools; it won't be
                                         // empty after validateToolIconConfigAndReturn() is resolved
                                         toolList.forEach((tool: ToolConfig) => {
                                             LoadPanesHelper.loadAppSidePane(
