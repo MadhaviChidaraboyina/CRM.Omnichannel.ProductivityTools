@@ -30,8 +30,8 @@ module ProductivityPaneLoader {
         }
 
         /*
-         * Update current selected app side pane in session storage before switching a session,
-         * including caching the selected app side pane in home sesion.
+         * Update current selected app side pane and AppSidePanesState in session storage before switching a session.
+         * AppSidePanesState = 0: collapsed; AppSidePanesState = 1: expanded. Additionally, init home session.
          */
         private onBeforeSessionSwitch(event: any): void {
             try {
@@ -41,19 +41,23 @@ module ProductivityPaneLoader {
                 const currentSelectedAppSidePaneId = currentSelectedAppSidePane
                     ? currentSelectedAppSidePane.paneId
                     : Constants.emptyString;
-
-                let sessionStateData = SessionStateManager.getState(
+                const appSidePanesState = SessionChangeHelper.getAppSidePanesState();
+                let sessionStorageData = SessionStateManager.getSessionStorageData(
                     Constants.appSidePaneSessionState + previousSessionId,
                 );
 
                 // Handle home session init. This only happens once.
                 // Notes: addOnBeforeSessionSwitch happens prior to addOnAfterSessionCreate.
-                if (Utils.isNullOrUndefined(sessionStateData)) {
-                    sessionStateData = {};
+                if (Utils.isNullOrUndefined(sessionStorageData)) {
+                    sessionStorageData = {};
                 }
 
-                sessionStateData[Constants.selectedAppSidePaneId] = currentSelectedAppSidePaneId;
-                SessionStateManager.setState(Constants.appSidePaneSessionState + previousSessionId, sessionStateData);
+                sessionStorageData[Constants.selectedAppSidePaneId] = currentSelectedAppSidePaneId;
+                sessionStorageData[Constants.appSidePanesState] = appSidePanesState;
+                SessionStateManager.setSessionStorageData(
+                    Constants.appSidePaneSessionState + previousSessionId,
+                    sessionStorageData,
+                );
             } catch (error) {
                 console.log(SessionChangeHelper.errorMessagesOnBeforeSessionSwitch(error));
                 // Telemetry here
@@ -62,7 +66,7 @@ module ProductivityPaneLoader {
 
         /*
          * Set pane.hidden accordingly. Productivity tools are hidden in home session and not hidden in other sessions.
-         * Init session storage if it is null. And Select or collapse app side pane based on session storage data.
+         * Init session storage if it is null. Select and collapse/expande app side pane based on session storage data.
          */
         private onAfterSessionSwitch(event: any): void {
             try {
@@ -71,22 +75,27 @@ module ProductivityPaneLoader {
                     ? SessionChangeHelper.setProductivityToolsHidden(this.ProductivityToolList)
                     : SessionChangeHelper.setProductivityToolsNotHidden(this.ProductivityToolList);
 
+                let sessionStorageData = SessionStateManager.getSessionStorageData(
+                    Constants.appSidePaneSessionState + newSessionId,
+                );
                 // Init session storage if sessionStateData is null, which only happens when creating a new session.
-                let sessionStateData = SessionStateManager.getState(Constants.appSidePaneSessionState + newSessionId);
-                let selectedAppSidePaneId = sessionStateData ? sessionStateData[Constants.selectedAppSidePaneId] : null;
-                if (Utils.isNullOrUndefined(selectedAppSidePaneId)) {
-                    selectedAppSidePaneId = this.isDefaultExpanded
-                        ? this.ProductivityToolList[Constants.firstElement].toolName
-                        : Constants.emptyString;
-                    sessionStateData = {};
-                    sessionStateData[Constants.selectedAppSidePaneId] = selectedAppSidePaneId;
-                    SessionStateManager.setState(Constants.appSidePaneSessionState + newSessionId, sessionStateData);
+                if (Utils.isNullOrUndefined(sessionStorageData)) {
+                    const appSidePanesState = this.isDefaultExpanded
+                        ? Constants.appSidePanesExpanded
+                        : Constants.appSidePanesCollapsed;
+                    const selectedAppSidePaneId = this.ProductivityToolList[Constants.firstElement].toolName;
+                    sessionStorageData = {};
+                    sessionStorageData[Constants.selectedAppSidePaneId] = selectedAppSidePaneId;
+                    sessionStorageData[Constants.appSidePanesState] = appSidePanesState;
+                    SessionStateManager.setSessionStorageData(
+                        Constants.appSidePaneSessionState + newSessionId,
+                        sessionStorageData,
+                    );
                 }
 
-                if (!Utils.isEmpty(selectedAppSidePaneId)) {
-                    SessionChangeHelper.setSelectedAppSidePane(selectedAppSidePaneId);
-                } else if (SessionChangeHelper.isProductivityToolSelected(this.ProductivityToolList)) {
-                    SessionChangeHelper.collapseSelectedAppSidePane();
+                if (!Utils.isEmpty(sessionStorageData.selectedAppSidePaneId)) {
+                    SessionChangeHelper.setSelectedAppSidePane(sessionStorageData.selectedAppSidePaneId);
+                    SessionChangeHelper.setAppSidePanesState(sessionStorageData.appSidePanesState);
                 }
             } catch (error) {
                 console.log(SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error));
@@ -100,7 +109,7 @@ module ProductivityPaneLoader {
         private onSessionClose(event: any): void {
             try {
                 const closedSessionId = SessionChangeHelper.getSessionId(event);
-                SessionStateManager.deleteState(Constants.appSidePaneSessionState + closedSessionId);
+                SessionStateManager.deleteSessionStorageData(Constants.appSidePaneSessionState + closedSessionId);
             } catch (error) {
                 console.log(SessionChangeHelper.errorMessagesOnSessionClose(error));
                 // Telemetry here

@@ -3,15 +3,15 @@
  */
 module ProductivityPaneLoader {
     export class SessionStateManager {
-        public static setState(key: string, value: any): void {
+        public static setSessionStorageData(key: string, value: any): void {
             sessionStorage.setItem(key, JSON.stringify(value));
         }
 
-        public static getState(key: string): any {
+        public static getSessionStorageData(key: string): any {
             return JSON.parse(sessionStorage.getItem(key));
         }
 
-        public static deleteState(key: string): void {
+        public static deleteSessionStorageData(key: string): void {
             sessionStorage.removeItem(key);
         }
     }

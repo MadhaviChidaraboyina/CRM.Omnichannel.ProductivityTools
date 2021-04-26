@@ -38,8 +38,13 @@ module ProductivityPaneLoader {
             });
         }
 
-        public static collapseSelectedAppSidePane(): void {
-            SessionChangeHelper.getSelectedAppSidePane().state = Constants.collapseAppSidePane;
+        public static getAppSidePanesState(): number {
+            // 0: collapsed; 1: expanded.
+            return SessionChangeHelper.getXrmAppApis().sidePanes.state;
+        }
+
+        public static setAppSidePanesState(state: number): void {
+            SessionChangeHelper.getXrmAppApis().sidePanes.state = state;
         }
 
         public static getSessionId(event: any): string {
@@ -68,15 +73,6 @@ module ProductivityPaneLoader {
 
         public static errorMessagesOnSessionClose(errorMessages: any): string {
             return 'Error occured on session close: ' + errorMessages;
-        }
-
-        public static isProductivityToolSelected(toolList: ToolConfig[]): boolean {
-            toolList.forEach((tool: ToolConfig) => {
-                if (Utils.isEqual(tool.toolName, SessionChangeHelper.getSelectedAppSidePane().paneId)) {
-                    return true;
-                }
-            });
-            return false;
         }
     }
 }

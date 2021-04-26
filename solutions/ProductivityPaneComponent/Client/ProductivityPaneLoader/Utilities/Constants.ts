@@ -91,13 +91,17 @@ module ProductivityPaneLoader {
 
         // Session storage
         public static appSidePaneSessionState = 'appSidePaneSessionState_';
-        public static selectedAppSidePaneId = 'selectedPaneId';
+        public static selectedAppSidePaneId = 'selectedAppSidePaneId';
+        public static appSidePanesState= 'appSidePanesState';
         public static emptyString = '';
 
         // Numbers
         public static firstElement = 0;
         public static collapseAppSidePane = 0;
         public static expandAppSidePane = 1;
+        public static appSidePanesCollapsed = 0;        
+        public static appSidePanesExpanded = 1;        
+
 
         // Session id
         public static homeSessionId = 'session-id-0';
