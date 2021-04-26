@@ -5,7 +5,6 @@
 /// <reference path="./Utilities/Utils.ts" />
 /// <reference path="./Utilities/LoadPanesHelper.ts" />
 /// <reference path="./Data/APMConfigExtractor.ts" />
-/// <reference path="./SessionChangeManager/SessionChangeManager.ts" />
 /// <reference path="../TypeDefinitions/AppRuntimeClientSdk.d.ts" />
 module ProductivityPaneLoader {
     LoadScripts.loadLogicAppExecutor();
@@ -33,10 +32,10 @@ module ProductivityPaneLoader {
                                     // If pane state is false, it means that user turn off all
                                     // the tools and no tools will be loaded subsequently.
                                     if (productivityPaneConfig.productivityPaneState) {
-                                        new SessionChangeManager(
-                                            // productivityPaneMode indicates whether or not user 
-                                            // want to expand all productivity tools. true: expand 
-                                            // all tools by default; false: collapse all tools. 
+                                        LoadPanesHelper.initSessionChangeManager(
+                                            // productivityPaneMode indicates whether or not user
+                                            // want to expand all productivity tools. true: expand
+                                            // all tools by default; false: collapse all tools.
                                             productivityPaneConfig.productivityPaneMode,
                                             toolList,
                                         );
