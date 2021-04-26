@@ -17,8 +17,8 @@ module ProductivityPaneLoader {
             const configExtractor = new APMConfigExtractor();
 
             Microsoft.AppRuntime.Utility.getEnvironment().then((environmentData) => {
-                // environmentData and AppCongigName can't be null
-                // or undefined, while the latter can be empty.
+                // environmentData and appConfigUniqueName cannot be null
+                // or undefined, but appConfigUniqueName may be empty.
                 const appConfigUniqueName = environmentData.AppConfigName;
                 if (!Utils.isEmpty(appConfigUniqueName)) {
                     configExtractor
