@@ -3,6 +3,7 @@
  */
 /// <reference path="../SessionStateManager/SessionStateManager.ts"/>
 /// <reference path="../utilities/Constants.ts"/>
+/// <reference path="../utilities/XrmAppProxy.ts"/>
 /// <reference path="../utilities/utils.ts"/>
 /// <reference path="./SessionChangeHelper.ts"/>
 module ProductivityPaneLoader {
@@ -37,11 +38,11 @@ module ProductivityPaneLoader {
             try {
                 const previousSessionId = SessionChangeHelper.getPreviousSessionId(event);
 
-                const currentSelectedAppSidePane = SessionChangeHelper.getSelectedAppSidePane();
+                const currentSelectedAppSidePane = XrmAppProxy.getSelectedAppSidePane();
                 const currentSelectedAppSidePaneId = currentSelectedAppSidePane
                     ? currentSelectedAppSidePane.paneId
                     : Constants.emptyString;
-                const appSidePanesState = SessionChangeHelper.getAppSidePanesState();
+                const appSidePanesState = XrmAppProxy.getAppSidePanesState();
                 let sessionStorageData = SessionStateManager.getSessionStorageData(
                     Constants.appSidePaneSessionState + previousSessionId,
                 );
@@ -72,8 +73,8 @@ module ProductivityPaneLoader {
             try {
                 const newSessionId = SessionChangeHelper.getNewSessionId(event);
                 Utils.isEqual(newSessionId, Constants.homeSessionId)
-                    ? SessionChangeHelper.setProductivityToolsHidden(this.ProductivityToolList)
-                    : SessionChangeHelper.setProductivityToolsNotHidden(this.ProductivityToolList);
+                    ? SessionChangeHelper.hideAllProductivityTools(this.ProductivityToolList)
+                    : SessionChangeHelper.showAllProductivityTools(this.ProductivityToolList);
 
                 let sessionStorageData = SessionStateManager.getSessionStorageData(
                     Constants.appSidePaneSessionState + newSessionId,
@@ -94,8 +95,8 @@ module ProductivityPaneLoader {
                 }
 
                 if (!Utils.isEmpty(sessionStorageData.selectedAppSidePaneId)) {
-                    SessionChangeHelper.setSelectedAppSidePane(sessionStorageData.selectedAppSidePaneId);
-                    SessionChangeHelper.setAppSidePanesState(sessionStorageData.appSidePanesState);
+                    XrmAppProxy.setSelectedAppSidePane(sessionStorageData.selectedAppSidePaneId);
+                    XrmAppProxy.setAppSidePanesState(sessionStorageData.appSidePanesState);
                 }
             } catch (error) {
                 console.log(SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error));

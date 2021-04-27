@@ -1,7 +1,7 @@
 /**
  * @license Copyright (c) Microsoft Corporation.  All rights reserved.
  */
-/// <reference path="../../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
+/// <reference path="./XrmAppProxy.ts" />
 /// <reference path="../SessionChangeManager/SessionChangeManager.ts" />
 /// <reference path="./Constants.ts" />
 module ProductivityPaneLoader {
@@ -20,10 +20,8 @@ module ProductivityPaneLoader {
          * Load productivity tools via app side panes APIs.
          */
         public static loadAppSidePane(toolControlName: string, tooltip: string, toolName: string, toolIcon: string) {
-            const _xrmApp: any = Xrm.App;
-
             try {
-                _xrmApp.sidePanes
+                XrmAppProxy.getXrmAppApis().sidePanes
                     .createPane({
                         paneId: toolName,
                         canClose: false,
@@ -59,9 +57,7 @@ module ProductivityPaneLoader {
          * This method will be removed post Oct 2021 release, along with the invokers.
          */
         public static loadLegacyProductivityPane() {
-            const _xrmApp: any = Xrm.App;
-
-            _xrmApp.panels
+            XrmAppProxy.getXrmAppApis().panels
                 .loadPanel({
                     pageInput: {
                         pageType: PcfControlConstants.pageType,

@@ -24,14 +24,14 @@ module ProductivityPaneLoader {
                     configExtractor
                         .retrieveAPMConfig(appConfigUniqueName)
                         .then((productivityPaneConfig: ProductivityPaneConfig) => {
-                            configExtractor
-                                .validateToolIconConfigAndReturn(
-                                    productivityPaneConfig.productivityToolsConfig.ToolsList,
-                                )
-                                .then((toolList: ToolConfig[]) => {
-                                    // If pane state is false, it means that user turn off all
-                                    // the tools and no tools will be loaded subsequently.
-                                    if (productivityPaneConfig.productivityPaneState) {
+                            // If pane state is false, it means that user turn off all
+                            // the tools and no tools will be loaded subsequently.
+                            if (productivityPaneConfig.productivityPaneState) {
+                                configExtractor
+                                    .validateToolIconConfigAndReturn(
+                                        productivityPaneConfig.productivityToolsConfig.ToolsList,
+                                    )
+                                    .then((toolList: ToolConfig[]) => {
                                         LoadPanesHelper.initSessionChangeManager(
                                             // productivityPaneMode indicates whether or not user
                                             // want to expand all productivity tools. true: expand
@@ -49,8 +49,8 @@ module ProductivityPaneLoader {
                                                 tool.toolIcon,
                                             );
                                         });
-                                    }
-                                });
+                                    });
+                            }
                         });
                 }
             });
