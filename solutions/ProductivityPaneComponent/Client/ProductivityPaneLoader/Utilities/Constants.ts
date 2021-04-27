@@ -37,9 +37,7 @@ module ProductivityPaneLoader {
 
     export class PcfControlConstants {
         public static pageType = 'control';
-        public static sidePaneKey = 'ProductivityPaneSidePanelId';
 
-        public static paneControlName = 'MscrmControls.PanelControl.PanelControl';
         public static smartAssist = 'MscrmControls.SmartassistPanelControl.SmartassistPanelControl';
         public static agentScript = 'MscrmControls.Callscript.CallscriptControl';
         public static knowledgeSearch = 'MscrmControls.KnowledgeControl.KnowledgeControl';
@@ -78,13 +76,34 @@ module ProductivityPaneLoader {
                 },
             },
         };
+
+        // Serve legacy productivity pane. Will be removed post Oct 2021 release
+        public static sidePaneKey = 'ProductivityPaneSidePanelId';
+        public static paneControlName = 'MscrmControls.PanelControl.PanelControl';
     }
 
-    export class FcbConstants {
-        public static useAppSidePanes = 'FCB.ProductivityTools.UseAppSidePanes';
-    }
+    export class Constants {
+        // FCB
+        public static fcbProductivityToolsUseAppSidePanes = 'FCB.ProductivityTools.UseAppSidePanes';
 
-    export class StyleConstants {
+        // Style
         public static appSidePaneWidth = 296;
+
+        // Session storage
+        public static appSidePaneSessionState = 'appSidePaneSessionState_';
+        public static selectedAppSidePaneId = 'selectedAppSidePaneId';
+        public static appSidePanesState= 'appSidePanesState';
+        public static emptyString = '';
+
+        // Numbers
+        public static firstElement = 0;
+        public static collapseAppSidePane = 0;
+        public static expandAppSidePane = 1;
+        public static appSidePanesCollapsed = 0;        
+        public static appSidePanesExpanded = 1;        
+
+
+        // Session id
+        public static homeSessionId = 'session-id-0';
     }
 }

@@ -13,11 +13,14 @@ module ProductivityPaneLoader {
             return str === '';
         }
 
+        public static isEqual(str1: string, str2: string): boolean {
+            return str1 === str2;
+        }
         /**
          * Indicate if the control is loaded via app side panes
          */
         public static isUsingAppSidePanes(): boolean {
-            return Xrm.Internal.isFeatureEnabled(FcbConstants.useAppSidePanes);
+            return Xrm.Internal.isFeatureEnabled(Constants.fcbProductivityToolsUseAppSidePanes);
         }
     }
 }

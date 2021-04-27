@@ -1,15 +1,11 @@
 ﻿{
-  "include": [
-    "ProductivityPaneLoader.ts"
-  ],
-	"exclude": [
-		"node_modules"
-	],
-	"compileOnSave": true,
-  "compilerOptions": {
-    "outFile": "../../Solution/WebResources/msdyn_productivitypane_loader.js",
-    "skipLibCheck": true,
-    "module": "amd",
-    "target": "es6"
-  }
+    "include": ["ProductivityPaneLoader.ts"],
+    "exclude": ["node_modules"],
+    "compileOnSave": true,
+    "compilerOptions": {
+        "outFile": "../../Solution/WebResources/msdyn_productivitypane_loader.js",
+        "skipLibCheck": true,
+        "module": "amd",
+        "target": "es6"
+    }
 }
