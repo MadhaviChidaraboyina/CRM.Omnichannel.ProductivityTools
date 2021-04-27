@@ -21,8 +21,8 @@ module ProductivityPaneLoader {
          */
         public static loadAppSidePane(toolControlName: string, tooltip: string, toolName: string, toolIcon: string) {
             try {
-                XrmAppProxy.getXrmAppApis().sidePanes
-                    .createPane({
+                XrmAppProxy.getXrmAppApis()
+                    .sidePanes.createPane({
                         paneId: toolName,
                         canClose: false,
                         isSelected: false,
@@ -33,6 +33,7 @@ module ProductivityPaneLoader {
                         alwaysRender: true,
                     })
                     .then((pane) => {
+                        pane.hidden = true;
                         pane.navigate({
                             pageType: PcfControlConstants.pageType,
                             controlName: toolControlName,
@@ -57,8 +58,8 @@ module ProductivityPaneLoader {
          * This method will be removed post Oct 2021 release, along with the invokers.
          */
         public static loadLegacyProductivityPane() {
-            XrmAppProxy.getXrmAppApis().panels
-                .loadPanel({
+            XrmAppProxy.getXrmAppApis()
+                .panels.loadPanel({
                     pageInput: {
                         pageType: PcfControlConstants.pageType,
                         controlName: PcfControlConstants.paneControlName,
