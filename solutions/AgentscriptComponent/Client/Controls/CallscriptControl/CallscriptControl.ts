@@ -279,7 +279,9 @@ module MscrmControls.Callscript {
 
 			let callscriptComponents: Mscrm.Component[] = [];
 
-			callscriptComponents.push(this.getControlHeader());
+			if (!Utility.isUsingAppSidePane(context as any)) {
+				callscriptComponents.push(this.getControlHeader());
+			}
 
             if (!this.stateManager.scriptDataFetchFailed) {
                 callscriptComponents.push(this.getScriptsDropdown());
@@ -303,6 +305,10 @@ module MscrmControls.Callscript {
 					for (let i in styleProps)
 						controlStyles[i] = styleProps[i];
 				}
+			}
+
+			if (Utility.isUsingAppSidePane(context as any)) {
+				controlStyles["background-color"] = "white";
 			}
 
             if (this.stateManager.scriptDataFetchFailed) {

@@ -45,8 +45,10 @@ module MscrmControls.SmartassistPanelControl {
                 SmartassistPanelControl._context = context;
                 SmartassistPanelControl._context.reporting.reportSuccess(TelemetryEventTypes.InitStarted);
                 this.smartAssistContainer = container;
-                this.smartAssistContainer.setAttribute("style", Constants.SAPanelControlDivCss);
-
+                (Utility.isUsingAppSidePane(context as any))
+                    ? this.smartAssistContainer.setAttribute("style", Constants.SAPanelControlDivCssWithWhiteBackground)
+                    : this.smartAssistContainer.setAttribute("style", Constants.SAPanelControlDivCss);
+                
                 if (!this.tabSwitchHandlerId) {
                     //Listen to the CEC context change API
                     var eventId = Microsoft.AppRuntime.Sessions.addOnContextChange(this.listenCECContextChangeAPI.bind(this));
@@ -66,37 +68,39 @@ module MscrmControls.SmartassistPanelControl {
          */
         public updateView(context: Mscrm.ControlData<IInputBag>): void {
             SmartassistPanelControl._context = context;
-            this.updateViewInternal();
+            this.updateViewInternal(context);
         }
 
-        private async updateViewInternal(): Promise<void> {            
+        private async updateViewInternal(context: Mscrm.ControlData<IInputBag>): Promise<void> {            
             await this.updateAnchorTabContext();
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.UpdateViewStarted, null);
 
             if (this.newInstance) {
-                //Control title
-                this.smartAssistInfoIconElement = document.createElement("div");
-                this.setSmartAssistInfoIconText(this.AnchorTabContext);
-                this.smartAssistContainer.appendChild(this.smartAssistInfoIconElement);
+                if (!Utility.isUsingAppSidePane(context as any)) {
+                    //Control title
+                    this.smartAssistInfoIconElement = document.createElement("div");
+                    this.setSmartAssistInfoIconText(this.AnchorTabContext);
+                    this.smartAssistContainer.appendChild(this.smartAssistInfoIconElement);
 
-                var panelInfoIcon = document.getElementById(Constants.SAPanelInfoIcon);
-                panelInfoIcon.onclick = (e) => {
-                    Utility.toggleTooltip();
-                }
-                panelInfoIcon.onkeydown = (e: KeyboardEvent) => {
-                    switch (e.keyCode) {
-                        case KeyCodes.ENTER_KEY:
-                            Utility.toggleTooltip();
-                            break;
-                        case KeyCodes.ESCAPE_KEY:
-                            var popup = document.getElementById('IconPopOutId');
-                            if (popup.classList.contains('show')) {
+                    var panelInfoIcon = document.getElementById(Constants.SAPanelInfoIcon);
+                    panelInfoIcon.onclick = (e) => {
+                        Utility.toggleTooltip();
+                    }
+                    panelInfoIcon.onkeydown = (e: KeyboardEvent) => {
+                        switch (e.keyCode) {
+                            case KeyCodes.ENTER_KEY:
                                 Utility.toggleTooltip();
-                            }
-                            break;
+                                break;
+                            case KeyCodes.ESCAPE_KEY:
+                                var popup = document.getElementById('IconPopOutId');
+                                if (popup.classList.contains('show')) {
+                                    Utility.toggleTooltip();
+                                }
+                                break;
+                        }
                     }
                 }
-
+                
                 // Loader Element
                 var loaderElement: HTMLDivElement = document.createElement("div");
                 loaderElement.innerHTML = Constants.SAPanelLoaderDiv.Format(Utility.getString(LocalizedStrings.LoadingText));
