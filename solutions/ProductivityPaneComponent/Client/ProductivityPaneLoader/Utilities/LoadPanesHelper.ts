@@ -33,6 +33,8 @@ module ProductivityPaneLoader {
                         alwaysRender: true,
                     })
                     .then((pane) => {
+                        // In case hidden property passed to createPane() does not get
+                        // consumed, which is a known bug fixed previously by the platform.
                         pane.hidden = true;
                         pane.navigate({
                             pageType: PcfControlConstants.pageType,
