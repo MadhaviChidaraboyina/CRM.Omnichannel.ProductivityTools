@@ -3280,6 +3280,22 @@
     <value>नया</value>
     <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.ToolTipTitle'</comment>
   </data>
+  <data name="20:LocalizedName,App Profile Manager Administrator" xml:space="preserve">
+    <value>ऐप प्रोफ़ाइल मैनेजर व्यवस्थापक</value>
+    <comment>'App Profile Manager Administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,App Profile User" xml:space="preserve">
+    <value>ऐप प्रोफ़ाइल उपयोगकर्ता</value>
+    <comment>'App Profile User' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools administrator" xml:space="preserve">
+    <value>उत्पादकता उपकरण व्यवस्थापक</value>
+    <comment>'Productivity tools administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools user" xml:space="preserve">
+    <value>उत्पादकता उपकरण उपयोगकर्ता</value>
+    <comment>'Productivity tools user' : LocalizedName for Role</comment>
+  </data>
   <data name="68:Description,{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}" xml:space="preserve">
     <value>आपको मैक्रो मॉनीटर दृश्य देखने की अनुमति देता है</value>
     <comment> '{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}' : Description for Dialog</comment>

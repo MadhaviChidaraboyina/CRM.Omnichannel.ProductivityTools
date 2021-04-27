@@ -1188,20 +1188,20 @@
     <value>Service</value>
     <comment>'Productivity pane configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl" xml:space="preserve">
-    <value>Produktivitetsverktyg</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl'</comment>
+  <data name="20:LocalizedName,App Profile Manager Administrator" xml:space="preserve">
+    <value>Administratör för appens profilhanterare</value>
+    <comment>'App Profile Manager Administrator' : LocalizedName for Role</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl.LabelText" xml:space="preserve">
-    <value>Produktivitetsverktyg</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.LabelText'</comment>
+  <data name="20:LocalizedName,App Profile User" xml:space="preserve">
+    <value>Användare av appens profil</value>
+    <comment>'App Profile User' : LocalizedName for Role</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl.ToolTipDescription" xml:space="preserve">
-    <value>Beskrivning av produktivitetsverktyg</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.ToolTipDescription'</comment>
+  <data name="20:LocalizedName,Productivity tools administrator" xml:space="preserve">
+    <value>Administratör av produktivitetsverktyg</value>
+    <comment>'Productivity tools administrator' : LocalizedName for Role</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl.ToolTipTitle" xml:space="preserve">
-    <value>Rubrik för produktivitetsverktyg</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.ToolTipTitle'</comment>
+  <data name="20:LocalizedName,Productivity tools user" xml:space="preserve">
+    <value>Användare av produktivitetsverktyg</value>
+    <comment>'Productivity tools user' : LocalizedName for Role</comment>
   </data>
 </root>

@@ -1200,6 +1200,22 @@
     <value>服務</value>
     <comment>'Agent script' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
+  <data name="20:LocalizedName,App Profile Manager Administrator" xml:space="preserve">
+    <value>應用程式設定檔管理員系統管理員</value>
+    <comment>'App Profile Manager Administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,App Profile User" xml:space="preserve">
+    <value>應用程式設定檔使用者</value>
+    <comment>'App Profile User' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools administrator" xml:space="preserve">
+    <value>生產力工具管理員</value>
+    <comment>'Productivity tools administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools user" xml:space="preserve">
+    <value>生產力工具使用者</value>
+    <comment>'Productivity tools user' : LocalizedName for Role</comment>
+  </data>
   <data name="68:Description,{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}" xml:space="preserve">
     <value>預設專員指令碼的運算式產生器</value>
     <comment> '{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}' : Description for Dialog</comment>

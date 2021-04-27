@@ -972,6 +972,22 @@
     <value>Servicio</value>
     <comment>'Smartassist configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
+  <data name="20:LocalizedName,App Profile Manager Administrator" xml:space="preserve">
+    <value>Administrador de perfiles de aplicación</value>
+    <comment>'App Profile Manager Administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,App Profile User" xml:space="preserve">
+    <value>Usuario de perfil de aplicación</value>
+    <comment>'App Profile User' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools administrator" xml:space="preserve">
+    <value>Administrador de herramientas de productividad</value>
+    <comment>'Productivity tools administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools user" xml:space="preserve">
+    <value>Usuario de herramientas de productividad</value>
+    <comment>'Productivity tools user' : LocalizedName for Role</comment>
+  </data>
   <data name="9:Description,msdyn_suggestioncontroltype" xml:space="preserve">
     <value />
     <comment>'msdyn_suggestioncontroltype' : Description for OptionSet</comment>

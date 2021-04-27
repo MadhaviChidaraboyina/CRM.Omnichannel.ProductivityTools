@@ -1200,6 +1200,22 @@
     <value>Služba</value>
     <comment>'Agent script' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
+  <data name="20:LocalizedName,App Profile Manager Administrator" xml:space="preserve">
+    <value>Správca správcu profilu aplikácie</value>
+    <comment>'App Profile Manager Administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,App Profile User" xml:space="preserve">
+    <value>Používateľ profilu aplikácie</value>
+    <comment>'App Profile User' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools administrator" xml:space="preserve">
+    <value>Správca nástrojov na zvýšenie produktivity</value>
+    <comment>'Productivity tools administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools user" xml:space="preserve">
+    <value>Používateľ nástrojov na zvýšenie produktivity</value>
+    <comment>'Productivity tools user' : LocalizedName for Role</comment>
+  </data>
   <data name="68:Description,{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}" xml:space="preserve">
     <value>Zostavovať výrazov pre predvolený skript agenta</value>
     <comment> '{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}' : Description for Dialog</comment>

@@ -1188,20 +1188,20 @@
     <value>שירות</value>
     <comment>'Productivity pane configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl" xml:space="preserve">
-    <value>כלי פרודוקטיביות</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl'</comment>
+  <data name="20:LocalizedName,App Profile Manager Administrator" xml:space="preserve">
+    <value>מנהל מערכת של מנהל פרופיל יישום</value>
+    <comment>'App Profile Manager Administrator' : LocalizedName for Role</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl.LabelText" xml:space="preserve">
-    <value>כלי פרודוקטיביות</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.LabelText'</comment>
+  <data name="20:LocalizedName,App Profile User" xml:space="preserve">
+    <value>משתמש פרופיל יישום</value>
+    <comment>'App Profile User' : LocalizedName for Role</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl.ToolTipDescription" xml:space="preserve">
-    <value>תיאור כלי פרודוקטיביות</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.ToolTipDescription'</comment>
+  <data name="20:LocalizedName,Productivity tools administrator" xml:space="preserve">
+    <value>מנהל כלי פרודוקטיביות</value>
+    <comment>'Productivity tools administrator' : LocalizedName for Role</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl.ToolTipTitle" xml:space="preserve">
-    <value>כותרת כלי פרודוקטיביות</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.ToolTipTitle'</comment>
+  <data name="20:LocalizedName,Productivity tools user" xml:space="preserve">
+    <value>משתמש בכלי פרודוקטיביות</value>
+    <comment>'Productivity tools user' : LocalizedName for Role</comment>
   </data>
 </root>

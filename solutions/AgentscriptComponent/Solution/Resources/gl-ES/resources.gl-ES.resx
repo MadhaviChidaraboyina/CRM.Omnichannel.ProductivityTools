@@ -1200,6 +1200,22 @@
     <value>Servizo</value>
     <comment>'Agent script' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
+  <data name="20:LocalizedName,App Profile Manager Administrator" xml:space="preserve">
+    <value>Administrador do xestor de perfís de aplicación</value>
+    <comment>'App Profile Manager Administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,App Profile User" xml:space="preserve">
+    <value>Usuario do perfil da aplicación</value>
+    <comment>'App Profile User' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools administrator" xml:space="preserve">
+    <value>Administrador de ferramentas de produtividade</value>
+    <comment>'Productivity tools administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools user" xml:space="preserve">
+    <value>Usuario de ferramentas de produtividade</value>
+    <comment>'Productivity tools user' : LocalizedName for Role</comment>
+  </data>
   <data name="68:Description,{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}" xml:space="preserve">
     <value>Xerador de expresións para o script de axente predefinido</value>
     <comment> '{E99FA2C8-DE6B-4C33-9F51-27B3AD3963CE}' : Description for Dialog</comment>

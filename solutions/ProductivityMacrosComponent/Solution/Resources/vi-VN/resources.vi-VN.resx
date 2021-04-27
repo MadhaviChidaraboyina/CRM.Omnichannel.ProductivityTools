@@ -3280,6 +3280,22 @@
     <value>Mới</value>
     <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.ToolTipTitle'</comment>
   </data>
+  <data name="20:LocalizedName,App Profile Manager Administrator" xml:space="preserve">
+    <value>Quản trị viên Trình quản lý hồ sơ ứng dụng</value>
+    <comment>'App Profile Manager Administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,App Profile User" xml:space="preserve">
+    <value>Người dùng hồ sơ ứng dụng</value>
+    <comment>'App Profile User' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools administrator" xml:space="preserve">
+    <value>Quản trị viên công cụ tăng năng suất</value>
+    <comment>'Productivity tools administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools user" xml:space="preserve">
+    <value>Người dùng công cụ tăng năng suất</value>
+    <comment>'Productivity tools user' : LocalizedName for Role</comment>
+  </data>
   <data name="68:Description,{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}" xml:space="preserve">
     <value>Cho phép bạn xem Dạng xem trình giám sát macro</value>
     <comment> '{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}' : Description for Dialog</comment>

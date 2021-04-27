@@ -1188,20 +1188,20 @@
     <value>Serviss</value>
     <comment>'Productivity pane configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl" xml:space="preserve">
-    <value>Produktivitātes rīki</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl'</comment>
+  <data name="20:LocalizedName,App Profile Manager Administrator" xml:space="preserve">
+    <value>Programmas profila pārvaldnieka administrators</value>
+    <comment>'App Profile Manager Administrator' : LocalizedName for Role</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl.LabelText" xml:space="preserve">
-    <value>Produktivitātes rīki</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.LabelText'</comment>
+  <data name="20:LocalizedName,App Profile User" xml:space="preserve">
+    <value>Programmas profila lietotājs</value>
+    <comment>'App Profile User' : LocalizedName for Role</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl.ToolTipDescription" xml:space="preserve">
-    <value>Produktivitātes rīku apraksts</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.ToolTipDescription'</comment>
+  <data name="20:LocalizedName,Productivity tools administrator" xml:space="preserve">
+    <value>Produktivitātes rīku administrators</value>
+    <comment>'Productivity tools administrator' : LocalizedName for Role</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl.ToolTipTitle" xml:space="preserve">
-    <value>Produktivitātes rīku virsraksts</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.ToolTipTitle'</comment>
+  <data name="20:LocalizedName,Productivity tools user" xml:space="preserve">
+    <value>Produktivitātes rīku lietotājs</value>
+    <comment>'Productivity tools user' : LocalizedName for Role</comment>
   </data>
 </root>

@@ -1188,20 +1188,20 @@
     <value>服务</value>
     <comment>'Productivity pane configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl" xml:space="preserve">
-    <value>高效办公工具</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl'</comment>
+  <data name="20:LocalizedName,App Profile Manager Administrator" xml:space="preserve">
+    <value>应用配置文件管理器管理员</value>
+    <comment>'App Profile Manager Administrator' : LocalizedName for Role</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl.LabelText" xml:space="preserve">
-    <value>高效办公工具</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.LabelText'</comment>
+  <data name="20:LocalizedName,App Profile User" xml:space="preserve">
+    <value>应用配置文件用户</value>
+    <comment>'App Profile User' : LocalizedName for Role</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl.ToolTipDescription" xml:space="preserve">
-    <value>高效办公工具说明</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.ToolTipDescription'</comment>
+  <data name="20:LocalizedName,Productivity tools administrator" xml:space="preserve">
+    <value>高效办公工具管理员</value>
+    <comment>'Productivity tools administrator' : LocalizedName for Role</comment>
   </data>
-  <data name="50:Title,ProductivityPane.PanelControl.ToolTipTitle" xml:space="preserve">
-    <value>高效办公工具标题</value>
-    <comment>Title for Ribbon LocLabel 'ProductivityPane.PanelControl.ToolTipTitle'</comment>
+  <data name="20:LocalizedName,Productivity tools user" xml:space="preserve">
+    <value>高效办公工具用户</value>
+    <comment>'Productivity tools user' : LocalizedName for Role</comment>
   </data>
 </root>

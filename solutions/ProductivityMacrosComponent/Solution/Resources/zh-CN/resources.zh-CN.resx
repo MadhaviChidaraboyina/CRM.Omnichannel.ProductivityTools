@@ -3280,6 +3280,22 @@
     <value>新建</value>
     <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.ToolTipTitle'</comment>
   </data>
+  <data name="20:LocalizedName,App Profile Manager Administrator" xml:space="preserve">
+    <value>应用配置文件管理器管理员</value>
+    <comment>'App Profile Manager Administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,App Profile User" xml:space="preserve">
+    <value>应用配置文件用户</value>
+    <comment>'App Profile User' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools administrator" xml:space="preserve">
+    <value>高效办公工具管理员</value>
+    <comment>'Productivity tools administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools user" xml:space="preserve">
+    <value>高效办公工具用户</value>
+    <comment>'Productivity tools user' : LocalizedName for Role</comment>
+  </data>
   <data name="68:Description,{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}" xml:space="preserve">
     <value>使您能够查看宏监视器视图</value>
     <comment> '{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}' : Description for Dialog</comment>

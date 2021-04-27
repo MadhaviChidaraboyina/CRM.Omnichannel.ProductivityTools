@@ -3280,6 +3280,22 @@
     <value>Crear</value>
     <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.ToolTipTitle'</comment>
   </data>
+  <data name="20:LocalizedName,App Profile Manager Administrator" xml:space="preserve">
+    <value>Administrador de perfiles de aplicación</value>
+    <comment>'App Profile Manager Administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,App Profile User" xml:space="preserve">
+    <value>Usuario de perfil de aplicación</value>
+    <comment>'App Profile User' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools administrator" xml:space="preserve">
+    <value>Administrador de herramientas de productividad</value>
+    <comment>'Productivity tools administrator' : LocalizedName for Role</comment>
+  </data>
+  <data name="20:LocalizedName,Productivity tools user" xml:space="preserve">
+    <value>Usuario de herramientas de productividad</value>
+    <comment>'Productivity tools user' : LocalizedName for Role</comment>
+  </data>
   <data name="68:Description,{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}" xml:space="preserve">
     <value>Le permite ver la vista Monitor de macros</value>
     <comment> '{328F1CC4-C84D-412A-B4F2-D6C560FB1DC9}' : Description for Dialog</comment>
