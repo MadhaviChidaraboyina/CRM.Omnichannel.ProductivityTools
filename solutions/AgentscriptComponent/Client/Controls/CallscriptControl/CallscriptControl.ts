@@ -279,6 +279,7 @@ module MscrmControls.Callscript {
 
 			let callscriptComponents: Mscrm.Component[] = [];
 
+			// Will be removed post Oct 2021 release. The header will be redundant post realse.
 			if (!Utility.isUsingAppSidePane(context as any)) {
 				callscriptComponents.push(this.getControlHeader());
 			}
@@ -305,10 +306,6 @@ module MscrmControls.Callscript {
 					for (let i in styleProps)
 						controlStyles[i] = styleProps[i];
 				}
-			}
-
-			if (Utility.isUsingAppSidePane(context as any)) {
-				controlStyles["background-color"] = "white";
 			}
 
             if (this.stateManager.scriptDataFetchFailed) {

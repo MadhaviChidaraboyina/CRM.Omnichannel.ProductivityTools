@@ -197,8 +197,7 @@ module MscrmControls.SmartassistPanelControl {
               to {opacity:1 ;}
             }
         </style>`;
-        public static SAPanelControlDivCss = "overflow:auto;max-height:100%;width:100%;";
-        public static SAPanelControlDivCssWithWhiteBackground = "overflow:auto;max-height:100%;width:100%;background-color:white;";
+        public static SAPanelControlDivCss = "overflow:auto;max-height:100%;width:100%;background-color:white;";
     }
 
 	/**

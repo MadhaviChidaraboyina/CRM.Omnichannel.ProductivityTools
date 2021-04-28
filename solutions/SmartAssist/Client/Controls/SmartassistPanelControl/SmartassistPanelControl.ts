@@ -45,9 +45,7 @@ module MscrmControls.SmartassistPanelControl {
                 SmartassistPanelControl._context = context;
                 SmartassistPanelControl._context.reporting.reportSuccess(TelemetryEventTypes.InitStarted);
                 this.smartAssistContainer = container;
-                (Utility.isUsingAppSidePane(context as any))
-                    ? this.smartAssistContainer.setAttribute("style", Constants.SAPanelControlDivCssWithWhiteBackground)
-                    : this.smartAssistContainer.setAttribute("style", Constants.SAPanelControlDivCss);
+                this.smartAssistContainer.setAttribute("style", Constants.SAPanelControlDivCss);
                 
                 if (!this.tabSwitchHandlerId) {
                     //Listen to the CEC context change API
@@ -76,6 +74,7 @@ module MscrmControls.SmartassistPanelControl {
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.UpdateViewStarted, null);
 
             if (this.newInstance) {
+                // Will be removed post Oct 2021 release. The header will be redundant post realse.
                 if (!Utility.isUsingAppSidePane(context as any)) {
                     //Control title
                     this.smartAssistInfoIconElement = document.createElement("div");
