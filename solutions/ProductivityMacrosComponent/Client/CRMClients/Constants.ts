@@ -52,6 +52,7 @@ namespace Microsoft.ProductivityMacros {
         public static POST_REQUEST = "POST";
         public static ENTITY_LOGICAL_NAME = "entityLogicalName";
         public static ENTITY_LOGICAL_COLLECTION_NAME = "entityLogicalCollectionName";
+        public static FLOW_ID = "flowId";
 	}
 
 	export class ActionTypes {
@@ -113,6 +114,7 @@ namespace Microsoft.ProductivityMacros {
         public static Search = "search";
         public static Webresource = "webresource";
         public static ThirdPartyWebsite = "webresource"; //ThirdPartyWebsite
+        public static Custom = "custom";
 
     }
 

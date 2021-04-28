@@ -549,13 +549,13 @@ function getEntityNameFromClientData(clientDataString: string | undefined): stri
 }
 
 // get flows within solution
-// https://.../api/data/V9.1/workflows?$filter=process_processstage/any(ps:%20ps/connector%20eq%20%27commondataservice%27)&$select=workflowidunique,clientdata,name
+// https://.../api/data/V9.1/workflows?$filter=process_processstage/any(ps:%20ps/connector%20eq%20%27commondataservice%27)&$select=workflowid,clientdata,name
 async function getFlowsWithinSolution(entityCollectionName: string) {
     let response: SharedDefines.ListDynamicValuesResponse = { value: [] };
     let entityList: SharedDefines.ListDynamicValue[] = [];
     try {
         var req = new XMLHttpRequest();
-        const queryString = "/api/data/V9.1/workflows?$filter=process_processstage/any(ps:%20ps/connector%20eq%20%27commondataservice%27)&$select=workflowidunique,clientdata,name";
+        const queryString = "/api/data/V9.1/workflows?$filter=process_processstage/any(ps:%20ps/connector%20eq%20%27commondataservice%27)&$select=workflowid,clientdata,name";
         req.open("GET", window.top.Xrm.Utility.getGlobalContext().getClientUrl() + queryString, false);
         req.setRequestHeader("OData-MaxVersion", "4.0");
         req.setRequestHeader("OData-Version", "4.0");
@@ -571,7 +571,7 @@ async function getFlowsWithinSolution(entityCollectionName: string) {
                             const table = getEntityNameFromClientData(entity.clientdata);
                             if (table === entityCollectionName) {
                                 let entityListItem: SharedDefines.ListDynamicValue = {
-                                    value: entity.workflowidunique,
+                                    value: entity.workflowid,
                                     displayName: entity.name,
                                     description: "Flow",
                                     disabled: false

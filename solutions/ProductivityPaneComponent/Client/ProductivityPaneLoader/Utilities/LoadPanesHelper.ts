@@ -1,29 +1,41 @@
 /**
  * @license Copyright (c) Microsoft Corporation.  All rights reserved.
  */
-/// <reference path="../../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
+/// <reference path="./XrmAppProxy.ts" />
+/// <reference path="../SessionChangeManager/SessionChangeManager.ts" />
 /// <reference path="./Constants.ts" />
 module ProductivityPaneLoader {
-    export class LoadAppSidePanes {
+    export class LoadPanesHelper {
+        /*
+         * Init session change manager with pane mode and enabled tool list.
+         */
+        public static initSessionChangeManager(
+            productivityPaneMode: boolean,
+            productivityToolList: ToolConfig[],
+        ): SessionChangeManager {
+            return new SessionChangeManager(productivityPaneMode, productivityToolList);
+        }
+
         /*
          * Load productivity tools via app side panes APIs.
          */
         public static loadAppSidePane(toolControlName: string, tooltip: string, toolName: string, toolIcon: string) {
-            const _xrmApp: any = Xrm.App;
-
             try {
-                _xrmApp.sidePanes
-                    .createPane({
+                XrmAppProxy.getXrmAppApis()
+                    .sidePanes.createPane({
                         paneId: toolName,
                         canClose: false,
                         isSelected: false,
                         imageSrc: toolIcon,
                         title: tooltip,
-                        width: StyleConstants.appSidePaneWidth,
+                        width: Constants.appSidePaneWidth,
                         hidden: true,
                         alwaysRender: true,
                     })
                     .then((pane) => {
+                        // In case hidden property passed to createPane() does not get
+                        // consumed, which is a known bug fixed previously by the platform.
+                        pane.hidden = true;
                         pane.navigate({
                             pageType: PcfControlConstants.pageType,
                             controlName: toolControlName,
@@ -48,10 +60,8 @@ module ProductivityPaneLoader {
          * This method will be removed post Oct 2021 release, along with the invokers.
          */
         public static loadLegacyProductivityPane() {
-            const _xrmApp: any = Xrm.App;
-
-            _xrmApp.panels
-                .loadPanel({
+            XrmAppProxy.getXrmAppApis()
+                .panels.loadPanel({
                     pageInput: {
                         pageType: PcfControlConstants.pageType,
                         controlName: PcfControlConstants.paneControlName,
