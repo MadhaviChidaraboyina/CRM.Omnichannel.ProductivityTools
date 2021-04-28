@@ -66,16 +66,16 @@ module MscrmControls.SmartassistPanelControl {
          */
         public updateView(context: Mscrm.ControlData<IInputBag>): void {
             SmartassistPanelControl._context = context;
-            this.updateViewInternal(context);
+            this.updateViewInternal();
         }
 
-        private async updateViewInternal(context: Mscrm.ControlData<IInputBag>): Promise<void> {            
+        private async updateViewInternal(): Promise<void> {            
             await this.updateAnchorTabContext();
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.UpdateViewStarted, null);
 
             if (this.newInstance) {
                 // Will be removed post Oct 2021 release. The header will be redundant post realse.
-                if (!Utility.isUsingAppSidePane(context as any)) {
+                if (!Utility.isUsingAppSidePane(SmartassistPanelControl._context as any)) {
                     //Control title
                     this.smartAssistInfoIconElement = document.createElement("div");
                     this.setSmartAssistInfoIconText(this.AnchorTabContext);
