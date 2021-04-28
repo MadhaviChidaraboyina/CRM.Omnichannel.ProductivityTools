@@ -66,7 +66,7 @@ module MscrmControls.ProductivityPanel.TPBot {
         public static PPChildControlId = "MscrmControls.SmartassistPanelControl.SmartassistPanelControl"
 
         public static SmartAssistPaneId = "msdyn_csw_productivitypane_sa_tab";
-		public static FCB_ProductivityTools_UseAppSidePanes = "FCB.ProductivityTools.UseAppSidePanes";
+		public static FCB_ProductivityTools_UseAppSidePanes = "ProductivityTools.UseAppSidePanes";
     }
 
 	/**

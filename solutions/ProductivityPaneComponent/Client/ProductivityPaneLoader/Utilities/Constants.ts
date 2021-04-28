@@ -84,7 +84,7 @@ module ProductivityPaneLoader {
 
     export class Constants {
         // FCB
-        public static fcbProductivityToolsUseAppSidePanes = 'FCB.ProductivityTools.UseAppSidePanes';
+        public static fcbProductivityToolsUseAppSidePanes = 'ProductivityTools.UseAppSidePanes';
 
         // Style
         public static appSidePaneWidth = 296;
