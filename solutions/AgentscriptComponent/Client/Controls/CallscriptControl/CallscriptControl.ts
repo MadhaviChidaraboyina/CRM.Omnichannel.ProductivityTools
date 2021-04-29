@@ -279,7 +279,10 @@ module MscrmControls.Callscript {
 
 			let callscriptComponents: Mscrm.Component[] = [];
 
-			callscriptComponents.push(this.getControlHeader());
+			// Will be removed post Oct 2021 release. The header will be redundant post realse.
+			if (!Utility.isUsingAppSidePane(context as any)) {
+				callscriptComponents.push(this.getControlHeader());
+			}
 
             if (!this.stateManager.scriptDataFetchFailed) {
                 callscriptComponents.push(this.getScriptsDropdown());

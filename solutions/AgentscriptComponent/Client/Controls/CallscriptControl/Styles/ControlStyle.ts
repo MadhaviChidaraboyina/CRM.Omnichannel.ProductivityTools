@@ -16,10 +16,11 @@ module MscrmControls.Callscript {
                 "overflow-x": "hidden",
                 "overflow-y": "auto",
 				minHeight: "auto",
-				marginTop: "16px",
+				paddingTop: "16px",
 				marginBottom: "10px",
 				paddingLeft: "14px",
 				paddingRight: "14px",
+				backgroundColor: "#FFFFFF",
 				"::-webkit-scrollbar": {
 					width: "7px",
 					visibility: "hidden"
