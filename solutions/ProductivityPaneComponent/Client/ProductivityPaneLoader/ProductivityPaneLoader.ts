@@ -42,7 +42,7 @@ module ProductivityPaneLoader {
                                                 toolList,
                                             ).then(() => {
                                                 // Below handles the scenario where user create the first session
-                                                // so quick that initSessionChangeManager() has not finished yet.
+                                                // so quickly that initSessionChangeManager() has not finished yet.
                                                 const focusedSessionId = XrmAppProxy.getFocusedSessionId();
                                                 if (!Utils.isHomeSession(focusedSessionId)) {
                                                     LoadPanesHelper.mockOnBeforeAfterSessionSwitch(

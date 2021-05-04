@@ -49,7 +49,7 @@ module ProductivityPaneLoader {
                                     console.log('App side pane load succeeded: ' + paneId);
                                 },
                                 (error) => {
-                                    console.log('App side pane load failed: ', error);
+                                    console.log('App side pane ' + tool.toolName + ' load failed: ', error);
                                 },
                             );
                     });
@@ -62,7 +62,7 @@ module ProductivityPaneLoader {
 
         /*
          * Mock the expected behaviors on after session create/switch to handle the scenario where user
-         * create the first session so quick that SessionChangeManager has not been initialized yet.
+         * create the first session so quickly that SessionChangeManager has not been initialized yet.
          */
         public static mockOnBeforeAfterSessionSwitch(
             sessionId: string,
@@ -71,23 +71,28 @@ module ProductivityPaneLoader {
         ) {
             SessionChangeHelper.showAllProductivityTools(productivityToolList);
 
-            const valueAppSidePanesState = isDefaultExpanded
+            const appSidePanesState = isDefaultExpanded
                 ? Constants.appSidePanesExpanded
                 : Constants.appSidePanesCollapsed;
-            const valueSelectedAppSidePaneId = productivityToolList[Constants.firstElement].toolName;
+            const selectedAppSidePaneIdNewSession = productivityToolList[Constants.firstElement].toolName;
 
             let sessionStorageDataForNewSession = {
-                appSidePanesState: valueAppSidePanesState,
-                selectedAppSidePaneId: valueSelectedAppSidePaneId,
+                appSidePanesState: appSidePanesState,
+                selectedAppSidePaneId: selectedAppSidePaneIdNewSession,
             };
             SessionStateManager.setSessionStorageData(
                 Constants.appSidePaneSessionState + sessionId,
                 sessionStorageDataForNewSession,
             );
 
+            // Selected app side pane will carry over from home session
+            // to session one if there is one loaded in home session.
+            const selectedAppSidePaneInHomeSeesion = XrmAppProxy.getSelectedAppSidePane();
             let sessionStorageDataForHomeSession = {
-                appSidePanesState: valueAppSidePanesState,
-                selectedAppSidePaneId: Constants.emptyString,
+                appSidePanesState: appSidePanesState,
+                selectedAppSidePaneId: selectedAppSidePaneInHomeSeesion
+                    ? selectedAppSidePaneInHomeSeesion.paneId
+                    : Constants.emptyString,
             };
             SessionStateManager.setSessionStorageData(
                 Constants.appSidePaneSessionState + Constants.homeSessionId,

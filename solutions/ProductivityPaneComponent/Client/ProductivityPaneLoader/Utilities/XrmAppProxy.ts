@@ -8,7 +8,7 @@ module ProductivityPaneLoader {
             return Xrm.App;
         }
 
-        public static getFocusedSessionId(): any {
+        public static getFocusedSessionId(): string {
             return XrmAppProxy.getXrmAppApis().sessions.getFocusedSession().sessionId;
         }
 
