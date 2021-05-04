@@ -341,7 +341,7 @@ module MscrmControls.SmartassistPanelControl {
          * @param anchorContext: anchor tab context
          */
         private getEntityRecordId(anchorContext: any): string {
-            if (!anchorContext || !anchorContext.entityId) {
+            if (!anchorContext) {
                 return "";
             }
 
@@ -349,7 +349,7 @@ module MscrmControls.SmartassistPanelControl {
             if (anchorContext.entityName == Constants.LWIEntityName && anchorContext.data != null) {
                 recordId = anchorContext.data.ocContext.config.sessionParams.LiveWorkItemId;
             }
-            return recordId;
+            return recordId || "";
         }
 
         /**
