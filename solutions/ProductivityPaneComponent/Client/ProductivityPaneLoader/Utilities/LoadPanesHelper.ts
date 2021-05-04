@@ -9,50 +9,94 @@ module ProductivityPaneLoader {
         /*
          * Init session change manager with pane mode and enabled tool list.
          */
-        public static initSessionChangeManager(
+        public static async initSessionChangeManager(
             productivityPaneMode: boolean,
             productivityToolList: ToolConfig[],
-        ): SessionChangeManager {
-            return new SessionChangeManager(productivityPaneMode, productivityToolList);
+        ): Promise<SessionChangeManager> {
+            return new Promise<SessionChangeManager>((resolve) => {
+                resolve(new SessionChangeManager(productivityPaneMode, productivityToolList));
+            });
         }
 
         /*
          * Load productivity tools via app side panes APIs.
          */
-        public static loadAppSidePane(toolControlName: string, tooltip: string, toolName: string, toolIcon: string) {
+        public static async loadAppSidePane(toolList: ToolConfig[]): Promise<void> {
             try {
-                XrmAppProxy.getXrmAppApis()
-                    .sidePanes.createPane({
-                        paneId: toolName,
-                        canClose: false,
-                        isSelected: false,
-                        imageSrc: toolIcon,
-                        title: tooltip,
-                        width: Constants.appSidePaneWidth,
-                        hidden: true,
-                        alwaysRender: true,
-                    })
-                    .then((pane) => {
-                        // In case hidden property passed to createPane() does not get
-                        // consumed, which is a known bug fixed previously by the platform.
-                        pane.hidden = true;
-                        pane.navigate({
-                            pageType: PcfControlConstants.pageType,
-                            controlName: toolControlName,
-                            data: PcfControlConstants.PcfControlProps.parameters,
-                        });
-                        return pane.paneId;
-                    })
-                    .then(
-                        (paneId) => {
-                            console.log('Panel load success ' + paneId);
-                        },
-                        (error) => {
-                            console.log('Panel load failed: ', error);
-                        },
-                    );
+                return new Promise<void>((resolve) => {
+                    toolList.forEach((tool: ToolConfig) => {
+                        XrmAppProxy.getXrmAppApis()
+                            .sidePanes.createPane({
+                                paneId: tool.toolName,
+                                canClose: false,
+                                isSelected: false,
+                                imageSrc: tool.toolIcon,
+                                title: tool.tooltip,
+                                width: Constants.appSidePaneWidth,
+                                hidden: true,
+                                alwaysRender: true,
+                            })
+                            .then((pane) => {
+                                pane.navigate({
+                                    pageType: PcfControlConstants.pageType,
+                                    controlName: tool.toolControlName,
+                                    data: PcfControlConstants.PcfControlProps.parameters,
+                                });
+                                return pane.paneId;
+                            })
+                            .then(
+                                (paneId) => {
+                                    console.log('App side pane load succeeded: ' + paneId);
+                                },
+                                (error) => {
+                                    console.log('App side pane load failed: ', error);
+                                },
+                            );
+                    });
+                    resolve();
+                });
             } catch (error) {
-                console.log('Failed to load ' + toolControlName + '. Error message: ' + error);
+                console.log('Failed to load app side panes: ' + error);
+            }
+        }
+
+        /*
+         * Mock the expected behaviors on after session create/switch to handle the scenario where user
+         * create the first session so quick that SessionChangeManager has not been initialized yet.
+         */
+        public static mockOnBeforeAfterSessionSwitch(
+            sessionId: string,
+            productivityToolList: ToolConfig[],
+            isDefaultExpanded: boolean,
+        ) {
+            SessionChangeHelper.showAllProductivityTools(productivityToolList);
+
+            const valueAppSidePanesState = isDefaultExpanded
+                ? Constants.appSidePanesExpanded
+                : Constants.appSidePanesCollapsed;
+            const valueSelectedAppSidePaneId = productivityToolList[Constants.firstElement].toolName;
+
+            let sessionStorageDataForNewSession = {
+                appSidePanesState: valueAppSidePanesState,
+                selectedAppSidePaneId: valueSelectedAppSidePaneId,
+            };
+            SessionStateManager.setSessionStorageData(
+                Constants.appSidePaneSessionState + sessionId,
+                sessionStorageDataForNewSession,
+            );
+
+            let sessionStorageDataForHomeSession = {
+                appSidePanesState: valueAppSidePanesState,
+                selectedAppSidePaneId: Constants.emptyString,
+            };
+            SessionStateManager.setSessionStorageData(
+                Constants.appSidePaneSessionState + Constants.homeSessionId,
+                sessionStorageDataForHomeSession,
+            );
+
+            if (!Utils.isEmpty(sessionStorageDataForNewSession.selectedAppSidePaneId)) {
+                XrmAppProxy.setSelectedAppSidePane(sessionStorageDataForNewSession.selectedAppSidePaneId);
+                XrmAppProxy.setAppSidePanesState(sessionStorageDataForNewSession.appSidePanesState);
             }
         }
 

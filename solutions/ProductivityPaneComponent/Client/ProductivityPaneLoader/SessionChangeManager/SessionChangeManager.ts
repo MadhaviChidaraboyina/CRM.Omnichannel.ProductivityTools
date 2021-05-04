@@ -53,8 +53,8 @@ module ProductivityPaneLoader {
                     sessionStorageData = {};
                 }
 
-                sessionStorageData[Constants.selectedAppSidePaneId] = currentSelectedAppSidePaneId;
                 sessionStorageData[Constants.appSidePanesState] = appSidePanesState;
+                sessionStorageData[Constants.selectedAppSidePaneId] = currentSelectedAppSidePaneId;
                 SessionStateManager.setSessionStorageData(
                     Constants.appSidePaneSessionState + previousSessionId,
                     sessionStorageData,
@@ -72,7 +72,7 @@ module ProductivityPaneLoader {
         private onAfterSessionSwitch(event: any): void {
             try {
                 const newSessionId = SessionChangeHelper.getNewSessionId(event);
-                Utils.isEqual(newSessionId, Constants.homeSessionId)
+                Utils.isHomeSession(newSessionId)
                     ? SessionChangeHelper.hideAllProductivityTools(this.ProductivityToolList)
                     : SessionChangeHelper.showAllProductivityTools(this.ProductivityToolList);
 
@@ -85,9 +85,10 @@ module ProductivityPaneLoader {
                         ? Constants.appSidePanesExpanded
                         : Constants.appSidePanesCollapsed;
                     const selectedAppSidePaneId = this.ProductivityToolList[Constants.firstElement].toolName;
-                    sessionStorageData = {};
-                    sessionStorageData[Constants.selectedAppSidePaneId] = selectedAppSidePaneId;
-                    sessionStorageData[Constants.appSidePanesState] = appSidePanesState;
+                    sessionStorageData = {
+                        appSidePanesState: appSidePanesState,
+                        selectedAppSidePaneId: selectedAppSidePaneId,
+                    };
                     SessionStateManager.setSessionStorageData(
                         Constants.appSidePaneSessionState + newSessionId,
                         sessionStorageData,
