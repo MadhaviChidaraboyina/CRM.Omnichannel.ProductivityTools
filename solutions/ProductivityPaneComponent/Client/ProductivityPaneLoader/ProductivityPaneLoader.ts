@@ -40,18 +40,17 @@ module ProductivityPaneLoader {
                                                 // all tools by default; false: collapse all tools.
                                                 productivityPaneConfig.productivityPaneMode,
                                                 toolList,
-                                            ).then(() => {
-                                                // Below handles the scenario where user create the first session
-                                                // so quickly that initSessionChangeManager() has not finished yet.
-                                                const focusedSessionId = XrmAppProxy.getFocusedSessionId();
-                                                if (!Utils.isHomeSession(focusedSessionId)) {
-                                                    LoadPanesHelper.initSessionStorageAndRefreshPanes(
-                                                        focusedSessionId,
-                                                        toolList,
-                                                        productivityPaneConfig.productivityPaneMode,
-                                                    );
-                                                }
-                                            });
+                                            );
+                                            // Below handles the scenario where user create the first session
+                                            // so quickly that initSessionChangeManager() has not finished yet.
+                                            const focusedSessionId = XrmAppProxy.getFocusedSessionId();
+                                            if (!Utils.isHomeSession(focusedSessionId)) {
+                                                LoadPanesHelper.initSessionStorageAndRefreshPanes(
+                                                    focusedSessionId,
+                                                    toolList,
+                                                    productivityPaneConfig.productivityPaneMode,
+                                                );
+                                            }
                                         });
                                     });
                             }

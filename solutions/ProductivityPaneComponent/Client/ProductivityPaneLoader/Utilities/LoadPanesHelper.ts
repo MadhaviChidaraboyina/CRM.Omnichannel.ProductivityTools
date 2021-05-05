@@ -3,19 +3,18 @@
  */
 /// <reference path="./XrmAppProxy.ts" />
 /// <reference path="../SessionChangeManager/SessionChangeManager.ts" />
+/// <reference path="../SessionStateManager/SessionStateManager.ts" />
 /// <reference path="./Constants.ts" />
 module ProductivityPaneLoader {
     export class LoadPanesHelper {
         /*
          * Init session change manager with pane mode and enabled tool list.
          */
-        public static async initSessionChangeManager(
+        public static initSessionChangeManager(
             productivityPaneMode: boolean,
             productivityToolList: ToolConfig[],
-        ): Promise<SessionChangeManager> {
-            return new Promise<SessionChangeManager>((resolve) => {
-                resolve(new SessionChangeManager(productivityPaneMode, productivityToolList));
-            });
+        ): void {
+            new SessionChangeManager(productivityPaneMode, productivityToolList);
         }
 
         /*
@@ -61,9 +60,8 @@ module ProductivityPaneLoader {
         }
 
         /*
-         * Mock the expected behaviors on before & on after session switch to handle the scenario where user create the first
-         * session so quickly that SessionChangeManager has not been initialized yet. If the logics of the callbacks in 
-         * SessionChangeManager are modified in the future, please remeber to refine the implementation below as well.
+         * Mock the expected behaviors on before & on after session switch to handle the scenario where
+         * user create the first session so quickly that SessionChangeManager has not been initialized yet.
          */
         public static initSessionStorageAndRefreshPanes(
             sessionId: string,
@@ -72,38 +70,11 @@ module ProductivityPaneLoader {
         ) {
             SessionChangeHelper.showAllProductivityTools(productivityToolList);
 
-            const appSidePanesState = isDefaultExpanded
-                ? Constants.appSidePanesExpanded
-                : Constants.appSidePanesCollapsed;
-            const selectedAppSidePaneIdNewSession = productivityToolList[Constants.firstElement].toolName;
+            SessionStateManager.updateSessionState(Constants.homeSessionId);
 
-            let sessionStorageDataForNewSession = {
-                appSidePanesState: appSidePanesState,
-                selectedAppSidePaneId: selectedAppSidePaneIdNewSession,
-            };
-            SessionStateManager.setSessionStorageData(
-                Constants.appSidePaneSessionState + sessionId,
-                sessionStorageDataForNewSession,
-            );
-
-            // Selected app side pane will carry over from home session
-            // to session one if there is one loaded in home session.
-            const selectedAppSidePaneInHomeSeesion = XrmAppProxy.getSelectedAppSidePane();
-            let sessionStorageDataForHomeSession = {
-                appSidePanesState: appSidePanesState,
-                selectedAppSidePaneId: selectedAppSidePaneInHomeSeesion
-                    ? selectedAppSidePaneInHomeSeesion.paneId
-                    : Constants.emptyString,
-            };
-            SessionStateManager.setSessionStorageData(
-                Constants.appSidePaneSessionState + Constants.homeSessionId,
-                sessionStorageDataForHomeSession,
-            );
-
-            if (!Utils.isEmpty(sessionStorageDataForNewSession.selectedAppSidePaneId)) {
-                XrmAppProxy.setSelectedAppSidePane(sessionStorageDataForNewSession.selectedAppSidePaneId);
-                XrmAppProxy.setAppSidePanesState(sessionStorageDataForNewSession.appSidePanesState);
-            }
+            SessionStateManager.initSessionState(isDefaultExpanded, productivityToolList, sessionId).then(() => {
+                SessionStateManager.restoreSessionState(sessionId);
+            });
         }
 
         /*
