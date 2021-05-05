@@ -21,7 +21,7 @@ module ProductivityPaneLoader {
         /*
          * Load productivity tools via app side panes APIs.
          */
-        public static async loadAppSidePane(toolList: ToolConfig[]): Promise<void> {
+        public static async loadAppSidePanes(toolList: ToolConfig[]): Promise<void> {
             try {
                 return new Promise<void>((resolve) => {
                     toolList.forEach((tool: ToolConfig) => {
@@ -61,10 +61,11 @@ module ProductivityPaneLoader {
         }
 
         /*
-         * Mock the expected behaviors on after session create/switch to handle the scenario where user
-         * create the first session so quickly that SessionChangeManager has not been initialized yet.
+         * Mock the expected behaviors on before & on after session switch to handle the scenario where user create the first
+         * session so quickly that SessionChangeManager has not been initialized yet. If the logics of the callbacks in 
+         * SessionChangeManager are modified in the future, please remeber to refine the implementation below as well.
          */
-        public static mockOnBeforeAfterSessionSwitch(
+        public static initSessionStorageAndRefreshPanes(
             sessionId: string,
             productivityToolList: ToolConfig[],
             isDefaultExpanded: boolean,

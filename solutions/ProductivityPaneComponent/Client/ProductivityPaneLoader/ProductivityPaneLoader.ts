@@ -33,7 +33,7 @@ module ProductivityPaneLoader {
                                         productivityPaneConfig.productivityToolsConfig.ToolsList,
                                     )
                                     .then((toolList: ToolConfig[]) => {
-                                        LoadPanesHelper.loadAppSidePane(toolList).then(() => {
+                                        LoadPanesHelper.loadAppSidePanes(toolList).then(() => {
                                             LoadPanesHelper.initSessionChangeManager(
                                                 // productivityPaneMode indicates whether or not user
                                                 // want to expand all productivity tools. true: expand
@@ -45,7 +45,7 @@ module ProductivityPaneLoader {
                                                 // so quickly that initSessionChangeManager() has not finished yet.
                                                 const focusedSessionId = XrmAppProxy.getFocusedSessionId();
                                                 if (!Utils.isHomeSession(focusedSessionId)) {
-                                                    LoadPanesHelper.mockOnBeforeAfterSessionSwitch(
+                                                    LoadPanesHelper.initSessionStorageAndRefreshPanes(
                                                         focusedSessionId,
                                                         toolList,
                                                         productivityPaneConfig.productivityPaneMode,
