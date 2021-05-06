@@ -93,6 +93,8 @@ module MscrmControls.Callscript {
 			["FailedTextStep_AccessibilityLabel", "FailedMacroStep_AccessibilityLabel", "FailedScriptStep_AccessibilityLabel"];
 		public static Accessibility_StartedStepLabel = "StepExecutionBtn_LabelForStepInProgress";
 
+		public static SelectAgentScriptComboboxLabel = "SelectAgentScript_ComboboxLabel";
+
 		public static TextActionLabel = "StepExeutionBtn_LabelForTextAction";
 		public static RouteActionLabel = "StepExeutionBtn_LabelForRouteAction";
 		public static NotExecutedStepButtonLabel = "StepExecutionBtn_LabelForNotExecutedStep";
