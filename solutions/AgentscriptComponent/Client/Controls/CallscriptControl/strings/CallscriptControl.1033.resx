@@ -255,6 +255,6 @@
   </data>
   <data name="SelectAgentScript_ComboboxLabel" xml:space="preserve">
     <value>Select Agent Script</value>
-    <comment>Text to be define the select agent script combobox name</comment>
+    <comment>Text to define the combobox name as select agent script</comment>
   </data>
 </root>
