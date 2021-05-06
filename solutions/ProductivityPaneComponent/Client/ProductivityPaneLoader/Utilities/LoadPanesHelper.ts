@@ -70,11 +70,12 @@ module ProductivityPaneLoader {
         ) {
             SessionChangeHelper.showAllProductivityTools(productivityToolList);
 
+            // Init session state for home session.
             SessionStateManager.updateSessionState(Constants.homeSessionId);
 
-            SessionStateManager.initSessionState(isDefaultExpanded, productivityToolList, sessionId).then(() => {
-                SessionStateManager.restoreSessionState(sessionId);
-            });
+            SessionStateManager.initSessionState(isDefaultExpanded, productivityToolList, sessionId);
+
+            SessionStateManager.restoreSessionState(sessionId);
         }
 
         /*

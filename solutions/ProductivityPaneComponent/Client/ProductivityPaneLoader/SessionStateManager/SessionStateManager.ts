@@ -24,26 +24,36 @@ module ProductivityPaneLoader {
             sessionStorage.removeItem(key);
         }
 
-        public static async initSessionState(
+        public static async cleanSessionState(): Promise<void> {
+            return new Promise<void>((resolve) => {
+                Object.keys(sessionStorage)
+                    .filter((sessionStorageKey: string) => {
+                        return sessionStorageKey.startsWith(Constants.appSidePaneSessionState);
+                    })
+                    .forEach((appSidePaneSessionStateKey) => {
+                        SessionStateManager.deleteSessionStorageData(appSidePaneSessionStateKey);
+                    });
+                resolve();
+            });
+        }
+
+        public static initSessionState(
             isDefaultExpanded: boolean,
             productivityToolList: ToolConfig[],
             newSessionId: string,
-        ): Promise<void> {
-            return new Promise<void>((resolve) => {
-                const defaultAppSidePanesState = isDefaultExpanded
-                    ? Constants.appSidePanesExpanded
-                    : Constants.appSidePanesCollapsed;
-                const defaultSelectedAppSidePaneId = productivityToolList[Constants.firstElement].toolName;
-                const defaultSessionStorageData = {
-                    appSidePanesState: defaultAppSidePanesState,
-                    selectedAppSidePaneId: defaultSelectedAppSidePaneId,
-                };
-                SessionStateManager.setSessionStorageData(
-                    Constants.appSidePaneSessionState + newSessionId,
-                    defaultSessionStorageData,
-                );
-                resolve();
-            });
+        ): void {
+            const defaultAppSidePanesState = isDefaultExpanded
+                ? Constants.appSidePanesExpanded
+                : Constants.appSidePanesCollapsed;
+            const defaultSelectedAppSidePaneId = productivityToolList[Constants.firstElement].toolName;
+            const defaultSessionStorageData = {
+                appSidePanesState: defaultAppSidePanesState,
+                selectedAppSidePaneId: defaultSelectedAppSidePaneId,
+            };
+            SessionStateManager.setSessionStorageData(
+                Constants.appSidePaneSessionState + newSessionId,
+                defaultSessionStorageData,
+            );
         }
 
         public static updateSessionState(sessionId: string): void {

@@ -63,9 +63,8 @@ module ProductivityPaneLoader {
                         this.isDefaultExpanded,
                         this.ProductivityToolList,
                         newSessionId,
-                    ).then(() => {});
+                    );
                 }
-
                 SessionStateManager.restoreSessionState(newSessionId);
             } catch (error) {
                 console.log(SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error));
