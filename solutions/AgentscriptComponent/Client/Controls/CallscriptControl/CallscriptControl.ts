@@ -142,7 +142,7 @@ module MscrmControls.Callscript {
 				{
 					id: "callscriptCombobox",
 					key: "callscriptCombobox",
-					accessibilityLabel: currentOption.Label,
+					accessibilityLabel: this.context.resources.getString(LocalizedStrings.SelectAgentScriptComboboxLabel),
 					value: currentOption,
 					options: scriptOptions,
 					style: ControlStyle.getSelectStyle(this.context),
@@ -156,7 +156,7 @@ module MscrmControls.Callscript {
 				id: "dropDownContainerId",
 				className: AgentscriptCssClassNames.SelectorElementParentDiv,
 				style: ControlStyle.getDropDownComponentStyle(),
-				title: currentOption.Label
+				title: this.context.resources.getString(LocalizedStrings.SelectAgentScriptComboboxLabel)
 			}, [callscriptComboBox, dropDownArrowComponent]);
 
 			return dropDownComponent;
