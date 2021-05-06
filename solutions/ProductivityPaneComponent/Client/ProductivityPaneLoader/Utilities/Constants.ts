@@ -105,5 +105,8 @@ module ProductivityPaneLoader {
 
         // Session id
         public static homeSessionId = 'session-id-0';
+
+        // Log
+        public static toolsLog = '[ProductivityToolsLog] ';
     }
 }

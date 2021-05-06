@@ -24,8 +24,12 @@ module ProductivityPaneLoader {
                 windowObject.Xrm.App.sessions.addOnBeforeSessionSwitch(this.onBeforeSessionSwitch.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionSwitch(this.onAfterSessionSwitch.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClose.bind(this));
+                console.info(
+                    Constants.toolsLog +
+                        'Success: registered event handlers for on before/after session switch and on after session close',
+                );
             } catch (error) {
-                console.log(SessionChangeHelper.errorMessagesOnRegisterEventHandlers(error));
+                console.error(SessionChangeHelper.errorMessagesOnRegisterEventHandlers(error));
                 // Telemetry here
             }
         }
@@ -39,7 +43,7 @@ module ProductivityPaneLoader {
                 const previousSessionId = SessionChangeHelper.getPreviousSessionId(event);
                 SessionStateManager.updateSessionState(previousSessionId);
             } catch (error) {
-                console.log(SessionChangeHelper.errorMessagesOnBeforeSessionSwitch(error));
+                console.error(SessionChangeHelper.errorMessagesOnBeforeSessionSwitch(error));
                 // Telemetry here
             }
         }
@@ -67,7 +71,7 @@ module ProductivityPaneLoader {
                 }
                 SessionStateManager.restoreSessionState(newSessionId);
             } catch (error) {
-                console.log(SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error));
+                console.error(SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error));
                 // Telemetry here
             }
         }
@@ -80,7 +84,7 @@ module ProductivityPaneLoader {
                 const closedSessionId = SessionChangeHelper.getSessionId(event);
                 SessionStateManager.deleteSessionStorageData(Constants.appSidePaneSessionState + closedSessionId);
             } catch (error) {
-                console.log(SessionChangeHelper.errorMessagesOnSessionClose(error));
+                console.error(SessionChangeHelper.errorMessagesOnSessionClose(error));
                 // Telemetry here
             }
         }

@@ -11,7 +11,7 @@ module ProductivityPaneLoader {
                 sessionStorage.setItem(key, JSON.stringify(value));
             } catch (error) {
                 // setItem() may throw an exception if the storage is full. Particularly, in Mobile Safari.
-                console.log('Failed to set item in session storage: ' + error);
+                console.error(Constants.toolsLog + 'Failed to set item in session storage: ' + error);
                 // Telemetry
             }
         }
@@ -24,17 +24,15 @@ module ProductivityPaneLoader {
             sessionStorage.removeItem(key);
         }
 
-        public static async cleanSessionState(): Promise<void> {
-            return new Promise<void>((resolve) => {
-                Object.keys(sessionStorage)
-                    .filter((sessionStorageKey: string) => {
-                        return sessionStorageKey.startsWith(Constants.appSidePaneSessionState);
-                    })
-                    .forEach((appSidePaneSessionStateKey) => {
-                        SessionStateManager.deleteSessionStorageData(appSidePaneSessionStateKey);
-                    });
-                resolve();
-            });
+        public static cleanSessionState(): void {
+            Object.keys(sessionStorage)
+                .filter((sessionStorageKey: string) => {
+                    return sessionStorageKey.startsWith(Constants.appSidePaneSessionState);
+                })
+                .forEach((appSidePaneSessionStateKey) => {
+                    SessionStateManager.deleteSessionStorageData(appSidePaneSessionStateKey);
+                });
+            console.info(Constants.toolsLog + 'Success: cleared session storage data related to app side panes.');
         }
 
         public static initSessionState(
@@ -54,6 +52,7 @@ module ProductivityPaneLoader {
                 Constants.appSidePaneSessionState + newSessionId,
                 defaultSessionStorageData,
             );
+            console.info(Constants.toolsLog + 'Success: initialized session state of ' + newSessionId);
         }
 
         public static updateSessionState(sessionId: string): void {
@@ -71,6 +70,7 @@ module ProductivityPaneLoader {
                 Constants.appSidePaneSessionState + sessionId,
                 sessionStorageData,
             );
+            console.info(Constants.toolsLog + 'Success: updated session state of ' + sessionId);
         }
 
         public static restoreSessionState(sessionId: string): void {
@@ -82,6 +82,7 @@ module ProductivityPaneLoader {
                 XrmAppProxy.setSelectedAppSidePane(sessionStorageData.selectedAppSidePaneId);
                 XrmAppProxy.setAppSidePanesState(sessionStorageData.appSidePanesState);
             }
+            console.info(Constants.toolsLog + 'Success: restored session state of ' + sessionId);
         }
     }
 }

@@ -34,26 +34,24 @@ module ProductivityPaneLoader {
                                     )
                                     .then((toolList: ToolConfig[]) => {
                                         LoadPanesHelper.loadAppSidePanes(toolList).then(() => {
-                                            // Clean up session storage data related to app side panes.
-                                            SessionStateManager.cleanSessionState().then(() => {
-                                                LoadPanesHelper.initSessionChangeManager(
-                                                    // productivityPaneMode indicates whether or not user
-                                                    // want to expand all productivity tools. true: expand
-                                                    // all tools by default; false: collapse all tools.
-                                                    productivityPaneConfig.productivityPaneMode,
+                                            LoadPanesHelper.initSessionChangeManager(
+                                                // productivityPaneMode indicates whether or not user
+                                                // want to expand all productivity tools. true: expand
+                                                // all tools by default; false: collapse all tools.
+                                                productivityPaneConfig.productivityPaneMode,
+                                                toolList,
+                                            );
+                                            // Below handles the scenario where user create the first session
+                                            // so quickly that initSessionChangeManager() has not finished yet.
+                                            const focusedSessionId = XrmAppProxy.getFocusedSessionId();
+                                            if (!Utils.isHomeSession(focusedSessionId)) {
+                                                LoadPanesHelper.initSessionStorageAndRefreshPanes(
+                                                    focusedSessionId,
                                                     toolList,
+                                                    productivityPaneConfig.productivityPaneMode,
                                                 );
-                                                // Below handles the scenario where user create the first session
-                                                // so quickly that initSessionChangeManager() has not finished yet.
-                                                const focusedSessionId = XrmAppProxy.getFocusedSessionId();
-                                                if (!Utils.isHomeSession(focusedSessionId)) {
-                                                    LoadPanesHelper.initSessionStorageAndRefreshPanes(
-                                                        focusedSessionId,
-                                                        toolList,
-                                                        productivityPaneConfig.productivityPaneMode,
-                                                    );
-                                                }
-                                            });
+                                            }
+                                            console.info(Constants.toolsLog + 'Success: productivity tools loaded');
                                         });
                                     });
                             }
@@ -62,7 +60,7 @@ module ProductivityPaneLoader {
             });
         } catch (error) {
             // Add telemetry
-            console.log('Failed to load app side panes: ' + error);
+            console.error(Constants.toolsLog + 'Failed to load app side panes: ' + error);
         }
     } else {
         LoadPanesHelper.loadLegacyProductivityPane();

@@ -11,9 +11,11 @@ module ProductivityPaneLoader {
                     '/' +
                     '/WebResources/CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js';
                 document.getElementsByTagName('body')[0].appendChild(macrosLibScript);
-                console.log('Loaded msdyn_ProductivityMacrosComponent_internal_library.js');
+                console.info(
+                    Constants.toolsLog + 'Success: loaded msdyn_ProductivityMacrosComponent_internal_library.js',
+                );
             } catch (error) {
-                console.log('Failed to load msdyn_ProductivityMacrosComponent_internal_library.js');
+                console.error(Constants.toolsLog + 'Failed to load msdyn_ProductivityMacrosComponent_internal_library.js');
             }
         }
         public static loadLogicAppExecutor() {
@@ -24,9 +26,9 @@ module ProductivityPaneLoader {
                     '/' +
                     '/WebResources/CRMClients/msdyn_LogicAppExecutor_v2.js';
                 document.getElementsByTagName('body')[0].appendChild(macrosLibScript);
-                console.log('Loaded msdyn_LogicAppExecutor_v2.js');
+                console.info(Constants.toolsLog + 'Success: loaded msdyn_LogicAppExecutor_v2.js');
             } catch (error) {
-                console.log('Failed to load msdyn_LogicAppExecutor_v2.js');
+                console.error(Constants.toolsLog + 'Failed to load msdyn_LogicAppExecutor_v2.js');
             }
         }
 
@@ -38,9 +40,9 @@ module ProductivityPaneLoader {
                     '/' +
                     '/WebResources/MacrosDataLayer/msdyn_MacrosDataLayer.js';
                 document.getElementsByTagName('body')[0].appendChild(macrosLibScript);
-                console.log('Loaded msdyn_MacrosDataLayer.js');
+                console.info(Constants.toolsLog + 'Success: loaded msdyn_MacrosDataLayer.js');
             } catch (error) {
-                console.log('Failed to load msdyn_MacrosDataLayer.js');
+                console.error(Constants.toolsLog + 'Failed to load msdyn_MacrosDataLayer.js');
             }
         }
     }

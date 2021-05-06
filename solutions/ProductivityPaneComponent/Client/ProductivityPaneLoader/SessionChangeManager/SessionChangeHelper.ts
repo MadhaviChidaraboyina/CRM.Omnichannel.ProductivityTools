@@ -35,19 +35,19 @@ module ProductivityPaneLoader {
         }
 
         public static errorMessagesOnRegisterEventHandlers(errorMessages: any): string {
-            return 'Error occured on register event handlers: ' + errorMessages;
+            return Constants.toolsLog + 'Error occured on registering event handlers: ' + errorMessages;
         }
 
         public static errorMessagesOnBeforeSessionSwitch(errorMessages: any): string {
-            return 'Error occured on before session switch: ' + errorMessages;
+            return Constants.toolsLog + 'Error occured on before session switch: ' + errorMessages;
         }
 
         public static errorMessagesOnAfterSessionSwitch(errorMessages: any): string {
-            return 'Error occured on after session switch: ' + errorMessages;
+            return Constants.toolsLog + 'Error occured on after session switch: ' + errorMessages;
         }
 
         public static errorMessagesOnSessionClose(errorMessages: any): string {
-            return 'Error occured on session close: ' + errorMessages;
+            return Constants.toolsLog + 'Error occured on session close: ' + errorMessages;
         }
     }
 }

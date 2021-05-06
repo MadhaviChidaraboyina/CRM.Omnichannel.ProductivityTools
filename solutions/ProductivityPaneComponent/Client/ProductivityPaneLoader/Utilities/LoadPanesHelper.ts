@@ -14,15 +14,17 @@ module ProductivityPaneLoader {
             productivityPaneMode: boolean,
             productivityToolList: ToolConfig[],
         ): void {
+            // Clean up session storage data related to app side panes.
+            SessionStateManager.cleanSessionState();
             new SessionChangeManager(productivityPaneMode, productivityToolList);
         }
 
         /*
          * Load productivity tools via app side panes APIs.
          */
-        public static async loadAppSidePanes(toolList: ToolConfig[]): Promise<void> {
+        public static loadAppSidePanes(toolList: ToolConfig[]): Promise<void> {
             try {
-                return new Promise<void>((resolve) => {
+                return new Promise<void>((resolve, reject) => {
                     toolList.forEach((tool: ToolConfig) => {
                         XrmAppProxy.getXrmAppApis()
                             .sidePanes.createPane({
@@ -45,17 +47,24 @@ module ProductivityPaneLoader {
                             })
                             .then(
                                 (paneId) => {
-                                    console.log('App side pane load succeeded: ' + paneId);
+                                    console.info(Constants.toolsLog + 'Success: app side pane loaded ' + paneId);
+                                    resolve();
                                 },
                                 (error) => {
-                                    console.log('App side pane ' + tool.toolName + ' load failed: ', error);
+                                    console.error(
+                                        Constants.toolsLog +
+                                            'Failed to laod app side pane ' +
+                                            tool.toolName +
+                                            ': ' +
+                                            error,
+                                    );
+                                    reject(error);
                                 },
                             );
                     });
-                    resolve();
                 });
             } catch (error) {
-                console.log('Failed to load app side panes: ' + error);
+                console.error(Constants.toolsLog + 'Failed to load app side panes: ' + error);
             }
         }
 
@@ -101,11 +110,11 @@ module ProductivityPaneLoader {
                     isTitleStatic: true,
                 })
                 .then((paneId: string) => {
-                    console.log('Panel load success ' + paneId);
+                    console.info(Constants.toolsLog + 'Success: legacy pane loaded ' + paneId);
                     sessionStorage.setItem(PcfControlConstants.sidePaneKey, paneId);
                 }),
                 (error: any) => {
-                    console.log('Panel load failed: ' + error);
+                    console.error(Constants.toolsLog + 'Panel load failed: ' + error);
                 };
         }
     }
