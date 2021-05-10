@@ -156,18 +156,6 @@ module MscrmControls.Callscript {
 
 
 			try {
-				// Adjust tab index
-				newStepDomElement.tabIndex = 0;
-
-				if (!this.context.utils.isNullOrUndefined(newStepActionDomElement)) {
-					newStepActionDomElement.tabIndex = 0;
-				}
-				
-				currStepDomElement.tabIndex = -1;
-
-				if (!this.context.utils.isNullOrUndefined(currStepActionDomElement)) {
-					currStepActionDomElement.tabIndex = -1;
-				}
 
 				// Set focus
 				this.context.accessibility.focusElementById(newStepElementId);
@@ -281,7 +269,7 @@ module MscrmControls.Callscript {
 		 * @param step step whose list item is returned
 		 * @param tabIndexValue tab index value for elements in the header
 		 */
-		private getStepHeaderContainer(step: CallScriptStep, tabIndexValue: number): Mscrm.Component {
+		private getStepHeaderContainer(step: CallScriptStep): Mscrm.Component {
 			let isExpandedStep = (step.id === this.expandedStepId);
             var listItemBlock: Mscrm.Component[] = [];
             let hasHeaderSlugResolutionFailed = false;
@@ -334,7 +322,7 @@ module MscrmControls.Callscript {
 				className: this.getActionTypeIconClassName(step),
 				onClick: this.stepDetailsManager.getActionButtonClickHandler(step),
 				onKeyDown: this.stepDetailsManager.getActionButtonKeyDownHandler(step),
-				tabIndex: tabIndexValue,
+				tabIndex: 0,
 				role: "button"
 			}, []);
 
@@ -379,18 +367,18 @@ module MscrmControls.Callscript {
 		 */
 		public getStepListItemComponent(step: CallScriptStep, currentStepIndex: number, prevStepId: string, nextStepId: string): Mscrm.Component {
 			let isExpandedStep = (step.id === this.expandedStepId);
-			let tabIndexValue = (currentStepIndex == 0) ? 0 : -1;
 
 			return this.context.factory.createElement("LISTITEM", {
 				key: "CallscriptStepsListItem-" + step.id + "-Key",
 				id: "CallscriptStepsListItem-" + step.id + "-Id",
 				style: ControlStyle.getListItemStyle(this.context.client.isRTL, isExpandedStep, step.executionStatus),
-				tabIndex: tabIndexValue,
+				tabIndex: 0,
 				onClick: this.handleStepListItemClick.bind(this, step),
 				onKeyDown: this.handleStepListItemKeyDown.bind(this, step, currentStepIndex, prevStepId, nextStepId),
 				accessibilityLabel: step.getAccessibilityLabel(),
-				accessibilityExpanded: isExpandedStep
-			}, [this.getStepHeaderContainer(step, tabIndexValue), this.getStepDetailsContainer(step)]);
+				accessibilityExpanded: isExpandedStep,
+				accessibilityHidden: false
+			}, [this.getStepHeaderContainer(step), this.getStepDetailsContainer(step)]);
 		}
 	}
 }
