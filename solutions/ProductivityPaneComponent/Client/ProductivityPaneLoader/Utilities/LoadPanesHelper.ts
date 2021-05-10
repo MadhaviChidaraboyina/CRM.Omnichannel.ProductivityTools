@@ -3,6 +3,7 @@
  */
 /// <reference path="./XrmAppProxy.ts" />
 /// <reference path="../SessionChangeManager/SessionChangeManager.ts" />
+/// <reference path="../SessionStateManager/SessionStateManager.ts" />
 /// <reference path="./Constants.ts" />
 module ProductivityPaneLoader {
     export class LoadPanesHelper {
@@ -12,48 +13,76 @@ module ProductivityPaneLoader {
         public static initSessionChangeManager(
             productivityPaneMode: boolean,
             productivityToolList: ToolConfig[],
-        ): SessionChangeManager {
-            return new SessionChangeManager(productivityPaneMode, productivityToolList);
+        ): void {
+            // Clean up session storage data related to app side panes.
+            SessionStateManager.cleanSessionState();
+            new SessionChangeManager(productivityPaneMode, productivityToolList);
         }
 
         /*
          * Load productivity tools via app side panes APIs.
          */
-        public static loadAppSidePane(toolControlName: string, tooltip: string, toolName: string, toolIcon: string) {
+        public static loadAppSidePanes(toolList: ToolConfig[]): Promise<void> {
             try {
-                XrmAppProxy.getXrmAppApis()
-                    .sidePanes.createPane({
-                        paneId: toolName,
-                        canClose: false,
-                        isSelected: false,
-                        imageSrc: toolIcon,
-                        title: tooltip,
-                        width: Constants.appSidePaneWidth,
-                        hidden: true,
-                        alwaysRender: true,
-                    })
-                    .then((pane) => {
-                        // In case hidden property passed to createPane() does not get
-                        // consumed, which is a known bug fixed previously by the platform.
-                        pane.hidden = true;
-                        pane.navigate({
-                            pageType: PcfControlConstants.pageType,
-                            controlName: toolControlName,
-                            data: PcfControlConstants.PcfControlProps.parameters,
-                        });
-                        return pane.paneId;
-                    })
-                    .then(
-                        (paneId) => {
-                            console.log('Panel load success ' + paneId);
-                        },
-                        (error) => {
-                            console.log('Panel load failed: ', error);
-                        },
-                    );
+                return new Promise<void>((resolve, reject) => {
+                    toolList.forEach((tool: ToolConfig) => {
+                        XrmAppProxy.getXrmAppApis()
+                            .sidePanes.createPane({
+                                paneId: tool.toolName,
+                                canClose: false,
+                                isSelected: false,
+                                imageSrc: tool.toolIcon,
+                                title: tool.tooltip,
+                                width: Constants.appSidePaneWidth,
+                                hidden: true,
+                                alwaysRender: true,
+                            })
+                            .then((pane) => {
+                                pane.navigate({
+                                    pageType: PcfControlConstants.pageType,
+                                    controlName: tool.toolControlName,
+                                    data: PcfControlConstants.PcfControlProps.parameters,
+                                });
+                                return pane.paneId;
+                            })
+                            .then(
+                                (paneId) => {
+                                    console.info(
+                                        `${Constants.productivityToolsLogPrefix} Success: app side pane loaded ${paneId}`,
+                                    );
+                                    resolve();
+                                },
+                                (error) => {
+                                    console.error(
+                                        `${Constants.productivityToolsLogPrefix} Failed to laod app side pane ${tool.toolName}: ${error}`,
+                                    );
+                                    reject(error);
+                                },
+                            );
+                    });
+                });
             } catch (error) {
-                console.log('Failed to load ' + toolControlName + '. Error message: ' + error);
+                console.error(`${Constants.productivityToolsLogPrefix} Failed to load app side panes: ${error}`);
             }
+        }
+
+        /*
+         * Mock the expected behaviors on before & on after session switch to handle the scenario where
+         * user create the first session so quickly that SessionChangeManager has not been initialized yet.
+         */
+        public static initSessionStorageAndRefreshPanes(
+            sessionId: string,
+            productivityToolList: ToolConfig[],
+            isDefaultExpanded: boolean,
+        ) {
+            SessionChangeHelper.showAllProductivityTools(productivityToolList);
+
+            // Init session state for home session.
+            SessionStateManager.updateSessionState(Constants.homeSessionId);
+
+            SessionStateManager.initSessionState(isDefaultExpanded, productivityToolList, sessionId);
+
+            SessionStateManager.restoreSessionState(sessionId);
         }
 
         /*
@@ -79,11 +108,11 @@ module ProductivityPaneLoader {
                     isTitleStatic: true,
                 })
                 .then((paneId: string) => {
-                    console.log('Panel load success ' + paneId);
+                    console.info(`${Constants.productivityToolsLogPrefix} Success: legacy pane loaded: ${paneId}`);
                     sessionStorage.setItem(PcfControlConstants.sidePaneKey, paneId);
                 }),
                 (error: any) => {
-                    console.log('Panel load failed: ' + error);
+                    console.error(`${Constants.productivityToolsLogPrefix} Lagacy pane load failed: ${error}`);
                 };
         }
     }

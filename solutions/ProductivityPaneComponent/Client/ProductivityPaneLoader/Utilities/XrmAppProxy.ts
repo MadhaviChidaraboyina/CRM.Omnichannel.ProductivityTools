@@ -8,6 +8,10 @@ module ProductivityPaneLoader {
             return Xrm.App;
         }
 
+        public static getFocusedSessionId(): string {
+            return XrmAppProxy.getXrmAppApis().sessions.getFocusedSession().sessionId;
+        }
+
         public static getSelectedAppSidePane(): any {
             return XrmAppProxy.getXrmAppApis().sidePanes.getSelectedPane();
         }
@@ -21,7 +25,7 @@ module ProductivityPaneLoader {
         }
 
         public static getAppSidePanesState(): number {
-            // 0: collapsed; 1: expanded.
+            // 0: collapsed; 1: expanded ( dafault value).
             return XrmAppProxy.getXrmAppApis().sidePanes.state;
         }
 

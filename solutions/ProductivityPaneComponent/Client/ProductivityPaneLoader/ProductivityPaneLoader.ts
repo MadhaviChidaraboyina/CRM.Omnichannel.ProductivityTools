@@ -6,6 +6,7 @@
 /// <reference path="./Utilities/LoadPanesHelper.ts" />
 /// <reference path="./Data/APMConfigExtractor.ts" />
 /// <reference path="../TypeDefinitions/AppRuntimeClientSdk.d.ts" />
+/// <reference path="./Utilities/XrmAppProxy.ts" />
 module ProductivityPaneLoader {
     LoadScripts.loadLogicAppExecutor();
     LoadScripts.loadMacrosComponentInternal();
@@ -32,21 +33,26 @@ module ProductivityPaneLoader {
                                         productivityPaneConfig.productivityToolsConfig.ToolsList,
                                     )
                                     .then((toolList: ToolConfig[]) => {
-                                        LoadPanesHelper.initSessionChangeManager(
-                                            // productivityPaneMode indicates whether or not user
-                                            // want to expand all productivity tools. true: expand
-                                            // all tools by default; false: collapse all tools.
-                                            productivityPaneConfig.productivityPaneMode,
-                                            toolList,
-                                        );
-                                        // toolList incorporates only enabled tools; it won't be
-                                        // empty after validateToolIconConfigAndReturn() is resolved
-                                        toolList.forEach((tool: ToolConfig) => {
-                                            LoadPanesHelper.loadAppSidePane(
-                                                tool.toolControlName,
-                                                tool.tooltip,
-                                                tool.toolName,
-                                                tool.toolIcon,
+                                        LoadPanesHelper.loadAppSidePanes(toolList).then(() => {
+                                            LoadPanesHelper.initSessionChangeManager(
+                                                // productivityPaneMode indicates whether or not user
+                                                // want to expand all productivity tools. true: expand
+                                                // all tools by default; false: collapse all tools.
+                                                productivityPaneConfig.productivityPaneMode,
+                                                toolList,
+                                            );
+                                            // Below handles the scenario where user create the first session
+                                            // so quickly that initSessionChangeManager() has not finished yet.
+                                            const focusedSessionId = XrmAppProxy.getFocusedSessionId();
+                                            if (!Utils.isHomeSession(focusedSessionId)) {
+                                                LoadPanesHelper.initSessionStorageAndRefreshPanes(
+                                                    focusedSessionId,
+                                                    toolList,
+                                                    productivityPaneConfig.productivityPaneMode,
+                                                );
+                                            }
+                                            console.info(
+                                                `${Constants.productivityToolsLogPrefix} Success: productivity tools loaded`,
                                             );
                                         });
                                     });
@@ -56,7 +62,7 @@ module ProductivityPaneLoader {
             });
         } catch (error) {
             // Add telemetry
-            console.log('Failed to load app side panes: ' + error);
+            console.error(`${Constants.productivityToolsLogPrefix} Failed to load app side panes: ${error}`);
         }
     } else {
         LoadPanesHelper.loadLegacyProductivityPane();
