@@ -47,16 +47,14 @@ module ProductivityPaneLoader {
                             })
                             .then(
                                 (paneId) => {
-                                    console.info(Constants.toolsLog + 'Success: app side pane loaded ' + paneId);
+                                    console.info(
+                                        `${Constants.productivityToolsLogPrefix} Success: app side pane loaded ${paneId}`,
+                                    );
                                     resolve();
                                 },
                                 (error) => {
                                     console.error(
-                                        Constants.toolsLog +
-                                            'Failed to laod app side pane ' +
-                                            tool.toolName +
-                                            ': ' +
-                                            error,
+                                        `${Constants.productivityToolsLogPrefix} Failed to laod app side pane ${tool.toolName}: ${error}`,
                                     );
                                     reject(error);
                                 },
@@ -64,7 +62,7 @@ module ProductivityPaneLoader {
                     });
                 });
             } catch (error) {
-                console.error(Constants.toolsLog + 'Failed to load app side panes: ' + error);
+                console.error(`${Constants.productivityToolsLogPrefix} Failed to load app side panes: ${error}`);
             }
         }
 
@@ -110,11 +108,11 @@ module ProductivityPaneLoader {
                     isTitleStatic: true,
                 })
                 .then((paneId: string) => {
-                    console.info(Constants.toolsLog + 'Success: legacy pane loaded ' + paneId);
+                    console.info(`${Constants.productivityToolsLogPrefix} Success: legacy pane loaded: ${paneId}`);
                     sessionStorage.setItem(PcfControlConstants.sidePaneKey, paneId);
                 }),
                 (error: any) => {
-                    console.error(Constants.toolsLog + 'Panel load failed: ' + error);
+                    console.error(`${Constants.productivityToolsLogPrefix} Lagacy pane load failed: ${error}`);
                 };
         }
     }

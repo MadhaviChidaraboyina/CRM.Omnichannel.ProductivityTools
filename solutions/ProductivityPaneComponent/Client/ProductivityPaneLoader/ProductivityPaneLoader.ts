@@ -51,7 +51,9 @@ module ProductivityPaneLoader {
                                                     productivityPaneConfig.productivityPaneMode,
                                                 );
                                             }
-                                            console.info(Constants.toolsLog + 'Success: productivity tools loaded');
+                                            console.info(
+                                                `${Constants.productivityToolsLogPrefix} Success: productivity tools loaded`,
+                                            );
                                         });
                                     });
                             }
@@ -60,7 +62,7 @@ module ProductivityPaneLoader {
             });
         } catch (error) {
             // Add telemetry
-            console.error(Constants.toolsLog + 'Failed to load app side panes: ' + error);
+            console.error(`${Constants.productivityToolsLogPrefix} Failed to load app side panes: ${error}`);
         }
     } else {
         LoadPanesHelper.loadLegacyProductivityPane();

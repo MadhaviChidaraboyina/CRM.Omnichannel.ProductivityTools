@@ -25,8 +25,7 @@ module ProductivityPaneLoader {
                 windowObject.Xrm.App.sessions.addOnAfterSessionSwitch(this.onAfterSessionSwitch.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClose.bind(this));
                 console.info(
-                    Constants.toolsLog +
-                        'Success: registered event handlers for on before/after session switch and on after session close',
+                    `${Constants.productivityToolsLogPrefix} Success: registered event handlers for on before/after session switch and on after session close`,
                 );
             } catch (error) {
                 console.error(SessionChangeHelper.errorMessagesOnRegisterEventHandlers(error));

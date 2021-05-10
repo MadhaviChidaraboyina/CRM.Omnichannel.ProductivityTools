@@ -30,21 +30,21 @@ module ProductivityPaneLoader {
                                         },
                                         (error) => {
                                             // Telemetry here
-                                            console.error(Constants.toolsLog + JSON.stringify(error));
+                                            console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
                                             reject(error);
                                         },
                                     );
                                 },
                                 (error) => {
                                     // Telemetry here
-                                    console.error(Constants.toolsLog + JSON.stringify(error));
+                                    console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
                                     reject(error);
                                 },
                             );
                         },
                         (error) => {
                             // Telemetry here
-                            console.error(Constants.toolsLog + JSON.stringify(error));
+                            console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
                             reject(error);
                         },
                     );
@@ -52,7 +52,7 @@ module ProductivityPaneLoader {
             } catch (error) {
                 return new Promise<ProductivityPaneConfig>((resolve, reject) => {
                     // Telemetry here
-                    console.error(Constants.toolsLog + JSON.stringify(error.message));
+                    console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error.message));
                     reject(error.message);
                 });
             }
@@ -80,7 +80,7 @@ module ProductivityPaneLoader {
                     },
                     (error) => {
                         // Telemetry here
-                        console.error(Constants.toolsLog + JSON.stringify(error));
+                        console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
                         reject(error);
                     },
                 );
@@ -105,7 +105,7 @@ module ProductivityPaneLoader {
                             },
                             (error) => {
                                 // Telemetry here
-                                console.error(Constants.toolsLog + JSON.stringify(error));
+                                console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
                                 reject(error);
                             },
                         );
@@ -114,7 +114,7 @@ module ProductivityPaneLoader {
             } catch (error) {
                 return new Promise<boolean>((resolve, reject) => {
                     // Telemetry here
-                    console.error(Constants.toolsLog + JSON.stringify(error));
+                    console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
                     resolve(false);
                 });
             }
@@ -153,7 +153,7 @@ module ProductivityPaneLoader {
                     },
                     (error) => {
                         // Telemetry here
-                        console.error(Constants.toolsLog + JSON.stringify(error));
+                        console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
                         reject(error);
                     },
                 );
@@ -173,7 +173,7 @@ module ProductivityPaneLoader {
                     },
                     (error) => {
                         // Telemetry here
-                        console.error(Constants.toolsLog + JSON.stringify(error));
+                        console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
                         reject(error);
                     },
                 );
@@ -207,7 +207,7 @@ module ProductivityPaneLoader {
                     },
                     (error) => {
                         // Telemetry here
-                        console.error(Constants.toolsLog + JSON.stringify(error));
+                        console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
                         reject(error);
                     },
                 );
