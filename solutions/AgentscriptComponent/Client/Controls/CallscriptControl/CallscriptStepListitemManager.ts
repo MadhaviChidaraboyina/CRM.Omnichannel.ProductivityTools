@@ -376,8 +376,7 @@ module MscrmControls.Callscript {
 				onClick: this.handleStepListItemClick.bind(this, step),
 				onKeyDown: this.handleStepListItemKeyDown.bind(this, step, currentStepIndex, prevStepId, nextStepId),
 				accessibilityLabel: step.getAccessibilityLabel(),
-				accessibilityExpanded: isExpandedStep,
-				accessibilityHidden: false
+				accessibilityExpanded: isExpandedStep
 			}, [this.getStepHeaderContainer(step), this.getStepDetailsContainer(step)]);
 		}
 	}
