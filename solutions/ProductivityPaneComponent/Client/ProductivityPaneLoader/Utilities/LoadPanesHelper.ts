@@ -33,7 +33,6 @@ module ProductivityPaneLoader {
                                 isSelected: false,
                                 imageSrc: tool.toolIcon,
                                 title: tool.tooltip,
-                                width: Constants.appSidePaneWidth,
                                 hidden: true,
                                 alwaysRender: true,
                             })
