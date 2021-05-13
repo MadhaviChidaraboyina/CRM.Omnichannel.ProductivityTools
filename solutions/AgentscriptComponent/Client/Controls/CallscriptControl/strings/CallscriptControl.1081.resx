@@ -253,4 +253,8 @@
     <value>क्वेरी में निकाय ID अनुपलब्ध है</value>
     <comment>Error message when there is a slug resolution error</comment>
   </data>
+  <data name="SelectAgentScript_ComboboxLabel" xml:space="preserve">
+    <value>एजेंट स्क्रिप्ट चुनें</value>
+    <comment>Text to define the combobox name as select agent script and it will only be read by screen-reader on combobox focus</comment>
+  </data>
 </root>

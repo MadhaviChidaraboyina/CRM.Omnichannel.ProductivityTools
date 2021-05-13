@@ -253,4 +253,8 @@
     <value>ไม่มีรหัสเอนทิตีในการสอบถาม</value>
     <comment>Error message when there is a slug resolution error</comment>
   </data>
+  <data name="SelectAgentScript_ComboboxLabel" xml:space="preserve">
+    <value>เลือกสคริปต์ตัวแทน</value>
+    <comment>Text to define the combobox name as select agent script and it will only be read by screen-reader on combobox focus</comment>
+  </data>
 </root>

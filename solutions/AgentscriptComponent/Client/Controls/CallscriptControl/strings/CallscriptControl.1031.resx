@@ -253,4 +253,8 @@
     <value>Keine Entitäts-ID in Abfrage</value>
     <comment>Error message when there is a slug resolution error</comment>
   </data>
+  <data name="SelectAgentScript_ComboboxLabel" xml:space="preserve">
+    <value>Agent-Skript auswählen</value>
+    <comment>Text to define the combobox name as select agent script and it will only be read by screen-reader on combobox focus</comment>
+  </data>
 </root>

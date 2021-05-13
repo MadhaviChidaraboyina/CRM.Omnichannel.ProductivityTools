@@ -24,8 +24,11 @@ module ProductivityPaneLoader {
                 windowObject.Xrm.App.sessions.addOnBeforeSessionSwitch(this.onBeforeSessionSwitch.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionSwitch(this.onAfterSessionSwitch.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClose.bind(this));
+                console.info(
+                    `${Constants.productivityToolsLogPrefix} Success: registered event handlers for on before/after session switch and on after session close`,
+                );
             } catch (error) {
-                console.log(SessionChangeHelper.errorMessagesOnRegisterEventHandlers(error));
+                console.error(SessionChangeHelper.errorMessagesOnRegisterEventHandlers(error));
                 // Telemetry here
             }
         }
@@ -37,30 +40,9 @@ module ProductivityPaneLoader {
         private onBeforeSessionSwitch(event: any): void {
             try {
                 const previousSessionId = SessionChangeHelper.getPreviousSessionId(event);
-
-                const currentSelectedAppSidePane = XrmAppProxy.getSelectedAppSidePane();
-                const currentSelectedAppSidePaneId = currentSelectedAppSidePane
-                    ? currentSelectedAppSidePane.paneId
-                    : Constants.emptyString;
-                const appSidePanesState = XrmAppProxy.getAppSidePanesState();
-                let sessionStorageData = SessionStateManager.getSessionStorageData(
-                    Constants.appSidePaneSessionState + previousSessionId,
-                );
-
-                // Handle home session init. This only happens once.
-                // Notes: addOnBeforeSessionSwitch happens prior to addOnAfterSessionCreate.
-                if (Utils.isNullOrUndefined(sessionStorageData)) {
-                    sessionStorageData = {};
-                }
-
-                sessionStorageData[Constants.selectedAppSidePaneId] = currentSelectedAppSidePaneId;
-                sessionStorageData[Constants.appSidePanesState] = appSidePanesState;
-                SessionStateManager.setSessionStorageData(
-                    Constants.appSidePaneSessionState + previousSessionId,
-                    sessionStorageData,
-                );
+                SessionStateManager.updateSessionState(previousSessionId);
             } catch (error) {
-                console.log(SessionChangeHelper.errorMessagesOnBeforeSessionSwitch(error));
+                console.error(SessionChangeHelper.errorMessagesOnBeforeSessionSwitch(error));
                 // Telemetry here
             }
         }
@@ -72,34 +54,23 @@ module ProductivityPaneLoader {
         private onAfterSessionSwitch(event: any): void {
             try {
                 const newSessionId = SessionChangeHelper.getNewSessionId(event);
-                Utils.isEqual(newSessionId, Constants.homeSessionId)
+                Utils.isHomeSession(newSessionId)
                     ? SessionChangeHelper.hideAllProductivityTools(this.ProductivityToolList)
                     : SessionChangeHelper.showAllProductivityTools(this.ProductivityToolList);
 
-                let sessionStorageData = SessionStateManager.getSessionStorageData(
+                const sessionStorageData = SessionStateManager.getSessionStorageData(
                     Constants.appSidePaneSessionState + newSessionId,
                 );
-                // Init session storage if sessionStorageData is null, which only happens when creating a new session.
                 if (Utils.isNullOrUndefined(sessionStorageData)) {
-                    const appSidePanesState = this.isDefaultExpanded
-                        ? Constants.appSidePanesExpanded
-                        : Constants.appSidePanesCollapsed;
-                    const selectedAppSidePaneId = this.ProductivityToolList[Constants.firstElement].toolName;
-                    sessionStorageData = {};
-                    sessionStorageData[Constants.selectedAppSidePaneId] = selectedAppSidePaneId;
-                    sessionStorageData[Constants.appSidePanesState] = appSidePanesState;
-                    SessionStateManager.setSessionStorageData(
-                        Constants.appSidePaneSessionState + newSessionId,
-                        sessionStorageData,
+                    SessionStateManager.initSessionState(
+                        this.isDefaultExpanded,
+                        this.ProductivityToolList,
+                        newSessionId,
                     );
                 }
-
-                if (!Utils.isEmpty(sessionStorageData.selectedAppSidePaneId)) {
-                    XrmAppProxy.setSelectedAppSidePane(sessionStorageData.selectedAppSidePaneId);
-                    XrmAppProxy.setAppSidePanesState(sessionStorageData.appSidePanesState);
-                }
+                SessionStateManager.restoreSessionState(newSessionId);
             } catch (error) {
-                console.log(SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error));
+                console.error(SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error));
                 // Telemetry here
             }
         }
@@ -112,7 +83,7 @@ module ProductivityPaneLoader {
                 const closedSessionId = SessionChangeHelper.getSessionId(event);
                 SessionStateManager.deleteSessionStorageData(Constants.appSidePaneSessionState + closedSessionId);
             } catch (error) {
-                console.log(SessionChangeHelper.errorMessagesOnSessionClose(error));
+                console.error(SessionChangeHelper.errorMessagesOnSessionClose(error));
                 // Telemetry here
             }
         }
