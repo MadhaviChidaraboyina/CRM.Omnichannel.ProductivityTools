@@ -89,6 +89,9 @@ module ProductivityPaneLoader {
         // Style
         public static appSidePaneWidth = 296;
 
+        // App side pane ID
+        public static teamsCollabAppSidePaneId = 'msdyn_csw_productivitypane_tc_tab';
+
         // Session storage
         public static appSidePaneSessionState = 'appSidePaneSessionState_';
         public static selectedAppSidePaneId = 'selectedAppSidePaneId';

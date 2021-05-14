@@ -12,7 +12,10 @@ module ProductivityPaneLoader {
 
         public static hideAllProductivityTools(toolList: ToolConfig[]): void {
             toolList.forEach((tool: ToolConfig) => {
-                XrmAppProxy.getAppSidePane(tool.toolName).hidden = true;
+                // Do not hide Teams Collaboration on home session.
+                if (!Utils.isTeamsCollab(tool.toolName)) {
+                    XrmAppProxy.getAppSidePane(tool.toolName).hidden = true;
+                }
             });
         }
 

@@ -20,6 +20,11 @@ module ProductivityPaneLoader {
         public static isHomeSession(sessionId: string) {
             return Utils.isEqual(sessionId, Constants.homeSessionId);
         }
+
+        public static isTeamsCollab(paneId: string): boolean {
+            return Utils.isEqual(paneId, Constants.teamsCollabAppSidePaneId);
+        }
+
         /**
          * Indicate if the control is loaded via app side panes
          */
