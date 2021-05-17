@@ -34,7 +34,7 @@ module ProductivityPaneLoader {
                                 imageSrc: tool.toolIcon,
                                 title: tool.tooltip,
                                 width: Constants.appSidePaneWidth,
-                                // Do no hide Teams Collaboration on home session.
+                                // Do not hide Teams Collaboration on home session.
                                 hidden: Utils.isTeamsCollab(tool.toolName) ? false : true,
                                 alwaysRender: true,
                             })

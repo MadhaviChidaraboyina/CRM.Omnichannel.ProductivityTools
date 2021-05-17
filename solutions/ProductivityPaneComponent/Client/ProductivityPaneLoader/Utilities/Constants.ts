@@ -90,7 +90,7 @@ module ProductivityPaneLoader {
         public static appSidePaneWidth = 296;
 
         // App side pane ID
-        public static teamsCollabAppSidePaneId = 'msdyn_csw_productivitypane_tc_tab';
+        public static teamsCollabAppSidePaneId = 'MscrmControls.OfficeProductivity.CollabControl';
 
         // Session storage
         public static appSidePaneSessionState = 'appSidePaneSessionState_';
