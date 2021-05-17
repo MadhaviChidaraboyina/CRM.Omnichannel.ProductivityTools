@@ -28,7 +28,7 @@ module ProductivityPaneLoader {
                     toolList.forEach((tool: ToolConfig) => {
                         XrmAppProxy.getXrmAppApis()
                             .sidePanes.createPane({
-                                paneId: tool.toolName,
+                                paneId: tool.toolControlName,
                                 canClose: false,
                                 isSelected: false,
                                 imageSrc: tool.toolIcon,
@@ -53,7 +53,7 @@ module ProductivityPaneLoader {
                                 },
                                 (error) => {
                                     console.error(
-                                        `${Constants.productivityToolsLogPrefix} Failed to laod app side pane ${tool.toolName}: ${error}`,
+                                        `${Constants.productivityToolsLogPrefix} Failed to laod app side pane ${tool.toolControlName}: ${error}`,
                                     );
                                     reject(error);
                                 },
