@@ -55,7 +55,6 @@ module MscrmControls.SmartassistPanelControl {
         public static UserEntityName = "systemuser";
         public static FetchOperator = "?fetchXml=";
 
-        public static SmartAssistPaneId = "MscrmControls.SmartassistPanelControl.SmartassistPanelControl";
         public static FCB_ProductivityTools_UseAppSidePanes = "ProductivityTools.UseAppSidePanes";
 
         //AppConfig

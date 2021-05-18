@@ -1,6 +1,7 @@
 ﻿/**
  * @license Copyright (c) Microsoft Corporation. All rights reserved.
  */
+/// <reference path="../PrivateReferences.ts"/>
 
 module MscrmControls.ProductivityPanel.TPBot {
     export class Utility {
@@ -41,7 +42,10 @@ module MscrmControls.ProductivityPanel.TPBot {
          */
          public static updateBadge(notificationNumber: number) {
             const pane = Xrm.App.sidePanes.getPane(Constants.SmartAssistPaneId);
-            notificationNumber == 0 ? pane.clearBadge() : pane.setBadge(notificationNumber);
+            // If app side pane ID does not exist, getPane() returns undefined. 
+            if (pane) {
+                notificationNumber == 0 ? pane.clearBadge() : pane.setBadge(notificationNumber);
+            }
         }
 
         /**

@@ -100,13 +100,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * @param notificationNumber: notification count
          */
          public static updateBadge(notificationNumber: number) {
-            let eventParameters = new TelemetryLogger.EventParameters();
-            try {
-                const pane = Xrm.App.sidePanes.getPane(StringConstants.SmartAssistPaneId);
+            const pane = Xrm.App.sidePanes.getPane(StringConstants.SmartAssistPaneId);
+            // If app side pane ID does not exist, getPane() returns undefined. 
+            if (pane) {
                 notificationNumber == 0 ? pane.clearBadge() : pane.setBadge(notificationNumber);
-            } catch (error) {
-                eventParameters.addParameter("Exception Details", error.message);
-                SmartAssistAnyEntityControl._telemetryReporter.logError("SmartAssistAnyEntity Component", "UpdateBadge", "Failed to update badge", eventParameters);
             }
         }
 
