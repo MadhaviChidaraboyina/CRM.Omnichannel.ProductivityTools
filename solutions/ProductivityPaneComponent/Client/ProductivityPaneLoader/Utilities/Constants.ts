@@ -86,9 +86,6 @@ module ProductivityPaneLoader {
         // FCB
         public static fcbProductivityToolsUseAppSidePanes = 'ProductivityTools.UseAppSidePanes';
 
-        // Style
-        public static appSidePaneWidth = 296;
-
         // Session storage
         public static appSidePaneSessionState = 'appSidePaneSessionState_';
         public static selectedAppSidePaneId = 'selectedAppSidePaneId';
