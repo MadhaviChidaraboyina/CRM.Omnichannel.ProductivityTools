@@ -24,12 +24,14 @@ module ProductivityPaneLoader {
                 windowObject.Xrm.App.sessions.addOnBeforeSessionSwitch(this.onBeforeSessionSwitch.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionSwitch(this.onAfterSessionSwitch.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClose.bind(this));
+                TelemetryLogger.logInfo(`Success: registered event handlers for on before/after session switch and on after session close`);
                 console.info(
                     `${Constants.productivityToolsLogPrefix} Success: registered event handlers for on before/after session switch and on after session close`,
                 );
             } catch (error) {
-                console.error(SessionChangeHelper.errorMessagesOnRegisterEventHandlers(error));
-                // Telemetry here
+                const errorMesg = SessionChangeHelper.errorMessagesOnRegisterEventHandlers(error);
+                TelemetryLogger.logError(`${Constants.productivityToolsLogPrefix} Failure: registered event handlers for on before/after session switch and on after session close`, errorMesg);
+                console.error(errorMesg);
             }
         }
 
@@ -42,8 +44,9 @@ module ProductivityPaneLoader {
                 const previousSessionId = SessionChangeHelper.getPreviousSessionId(event);
                 SessionStateManager.updateSessionState(previousSessionId);
             } catch (error) {
-                console.error(SessionChangeHelper.errorMessagesOnBeforeSessionSwitch(error));
-                // Telemetry here
+                const errorMesg = SessionChangeHelper.errorMessagesOnBeforeSessionSwitch(error);
+                TelemetryLogger.logError(`${Constants.productivityToolsLogPrefix} Failed to update session state before session switch`, errorMesg);
+                console.error(errorMesg);
             }
         }
 
@@ -70,8 +73,9 @@ module ProductivityPaneLoader {
                 }
                 SessionStateManager.restoreSessionState(newSessionId);
             } catch (error) {
-                console.error(SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error));
-                // Telemetry here
+                const errorMesg = SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error);
+                TelemetryLogger.logError(`${Constants.productivityToolsLogPrefix} Failed to restore session state after session switch`, errorMesg);
+                console.error(errorMesg);
             }
         }
 
@@ -83,8 +87,9 @@ module ProductivityPaneLoader {
                 const closedSessionId = SessionChangeHelper.getSessionId(event);
                 SessionStateManager.deleteSessionStorageData(Constants.appSidePaneSessionState + closedSessionId);
             } catch (error) {
-                console.error(SessionChangeHelper.errorMessagesOnSessionClose(error));
-                // Telemetry here
+                const errorMesg = SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error);
+                TelemetryLogger.logError(`${Constants.productivityToolsLogPrefix} Failed to clean up session state after session close`, errorMesg);
+                console.error(errorMesg);
             }
         }
     }

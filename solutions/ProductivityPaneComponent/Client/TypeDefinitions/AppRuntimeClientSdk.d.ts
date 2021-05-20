@@ -16,10 +16,76 @@ declare namespace AppRuntimeClientSdk {
 		* Returns the Notification object
 		*/
 		Notification: Notification;
+
 		/**
 		* Returns the Utility object 
 		*/
 		Utility: Utility;
+
+		/**
+		* Returns the Internal object
+		*/
+		Internal: Internal;
+	}
+
+	export interface Internal {
+		/**
+		 * Creates a new tab
+		 * @param input properties of the tab to be created
+		 */
+		createTab(input: TabInput): Promise<string>;
+
+		/**
+		 * Registers handler for detecting window visibility change
+		 * @param handler handler to fire on window visibility change
+		 */
+		addOnWindowVisibilityStateChangeHandler(handler: Function): string;
+
+		/**
+		 * Remove a window visibility state change handler.
+		 * @param handlerId Identifier of handler to remove
+		 */
+		removeOnWindowVisibilityStateChangeHandler(handlerId: string): void;
+
+		/**
+		 * Gets the list of channel providers associated with the current App config
+		 */
+		getChannelProviders(): Promise<Array<IChannelProvider>>;
+
+		/**
+		 * Returns the session template object
+		 * @param sessionId ID of the session to return session template
+		 */
+		getSessionTemplate(sessionId: string): Promise<ISessionTemplate>;
+
+		/**
+		 * Returns the template object based on template type and template name passed
+		 * @param templateType Type of the template i.e., Session | Notification | ApplicationTab
+		 * @param templateName Unique name of the template
+		 */
+		getTemplate(templateType: TemplateType, templateName: string): Promise<INotificationTemplate | IApplicationTemplate | ISessionTemplate>;
+
+		/**
+		 * Telemetry log information
+		 * @param message Telemetry information message
+		 * @param telemetryData Additional telemetry data
+		 */
+		telemetryLogInfo(message: string, telemetryData?: any): void;
+
+		/**
+		 * Telemetry log warning
+		 * @param message Telemetry Warning message
+		 * @param telemetryData Additional telemetry data
+		 */
+		telemetryLogWarning(message: string, telemetryData?: any): void;
+
+		/**
+		 * Telemetry log error
+		 * @param message Telemetry Error message
+		 * @param telemetryData Additional telemetry data
+		 * @param shouldBubbletoHost set to true if we should bubble to host
+		 */
+		telemetryLogError(message: string, telemetryData?: any, shouldBubbletoHost?: boolean): void;
 	}
 
 	/**

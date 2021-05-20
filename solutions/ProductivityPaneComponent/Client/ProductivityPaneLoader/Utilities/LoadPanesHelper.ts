@@ -62,6 +62,7 @@ module ProductivityPaneLoader {
                     });
                 });
             } catch (error) {
+                TelemetryLogger.logError(`${Constants.productivityToolsLogPrefix} Failed to load app side panes`, error);
                 console.error(`${Constants.productivityToolsLogPrefix} Failed to load app side panes: ${error}`);
             }
         }
@@ -108,10 +109,12 @@ module ProductivityPaneLoader {
                     isTitleStatic: true,
                 })
                 .then((paneId: string) => {
+                    TelemetryLogger.logInfo(`${Constants.productivityToolsLogPrefix} Success: legacy pane loaded`, `paneId: ${paneId}`);
                     console.info(`${Constants.productivityToolsLogPrefix} Success: legacy pane loaded: ${paneId}`);
                     sessionStorage.setItem(PcfControlConstants.sidePaneKey, paneId);
                 }),
                 (error: any) => {
+                    TelemetryLogger.logWarning(`${Constants.productivityToolsLogPrefix} Lagacy pane load failed`, error);
                     console.error(`${Constants.productivityToolsLogPrefix} Lagacy pane load failed: ${error}`);
                 };
         }

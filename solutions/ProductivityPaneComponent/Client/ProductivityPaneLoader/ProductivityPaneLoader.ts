@@ -4,6 +4,7 @@
 /// <reference path="./Utilities/LoadScripts.ts" />
 /// <reference path="./Utilities/Utils.ts" />
 /// <reference path="./Utilities/LoadPanesHelper.ts" />
+/// <reference path="./Utilities/TelemetryLogger.ts" />
 /// <reference path="./Data/APMConfigExtractor.ts" />
 /// <reference path="../TypeDefinitions/AppRuntimeClientSdk.d.ts" />
 /// <reference path="./Utilities/XrmAppProxy.ts" />
@@ -51,6 +52,7 @@ module ProductivityPaneLoader {
                                                     productivityPaneConfig.productivityPaneMode,
                                                 );
                                             }
+                                            TelemetryLogger.logInfo(`${Constants.productivityToolsLogPrefix} Success: productivity tools loaded`);
                                             console.info(
                                                 `${Constants.productivityToolsLogPrefix} Success: productivity tools loaded`,
                                             );
@@ -61,7 +63,7 @@ module ProductivityPaneLoader {
                 }
             });
         } catch (error) {
-            // Add telemetry
+            TelemetryLogger.logError(`${Constants.productivityToolsLogPrefix} Failed to load app side panes`, error);
             console.error(`${Constants.productivityToolsLogPrefix} Failed to load app side panes: ${error}`);
         }
     } else {
