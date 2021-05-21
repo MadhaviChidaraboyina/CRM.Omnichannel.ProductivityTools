@@ -4,8 +4,8 @@
   <msdyn_controlname>MscrmControls.Callscript.CallscriptControl</msdyn_controlname>
   <msdyn_data>{}</msdyn_data>
   <msdyn_isconfigurable>1</msdyn_isconfigurable>
-  <msdyn_name default="Call script tool configuration">
-	<label description="Call script tool configuration" languagecode="1033" />
+  <msdyn_name default="Agent scripts">
+	<label description="Agent scripts" languagecode="1033" />
   </msdyn_name>
   <msdyn_toolconfigurationentity>msdyn_productivityagentscript</msdyn_toolconfigurationentity>
   <msdyn_learnmorelink>https://go.microsoft.com/fwlink/p/?linkid=2138866</msdyn_learnmorelink>
