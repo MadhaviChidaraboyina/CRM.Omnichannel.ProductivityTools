@@ -42,7 +42,7 @@ declare namespace AppRuntimeClientSdk {
 		addOnWindowVisibilityStateChangeHandler(handler: Function): string;
 
 		/**
-		 * Remove a window visibility state change handler.
+		 * Removes a window visibility state change handler.
 		 * @param handlerId Identifier of handler to remove
 		 */
 		removeOnWindowVisibilityStateChangeHandler(handlerId: string): void;
