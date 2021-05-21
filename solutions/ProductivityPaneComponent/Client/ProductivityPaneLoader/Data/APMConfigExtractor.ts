@@ -29,19 +29,28 @@ module ProductivityPaneLoader {
                                             }
                                         },
                                         (error) => {
-                                            Logger.logError(`${Constants.productivityToolsLogPrefix} Failed to get tools config Data`, error);
+                                            Logger.logError(
+                                                `${Constants.productivityToolsLogPrefix} Failed to get tools config Data`,
+                                                error,
+                                            );
                                             reject(error);
                                         },
                                     );
                                 },
                                 (error) => {
-                                    Logger.logError(`${Constants.productivityToolsLogPrefix} Failed to get Productivity Pane config`, error);
+                                    Logger.logError(
+                                        `${Constants.productivityToolsLogPrefix} Failed to get Productivity Pane config`,
+                                        error,
+                                    );
                                     reject(error);
                                 },
                             );
                         },
                         (error) => {
-                            Logger.logError(`${Constants.productivityToolsLogPrefix} Failed to get Productivity Pane unique name`, error);
+                            Logger.logError(
+                                `${Constants.productivityToolsLogPrefix} Failed to get Productivity Pane unique name`,
+                                error,
+                            );
                             reject(error);
                         },
                     );
@@ -75,7 +84,10 @@ module ProductivityPaneLoader {
                         resolve(toolsConfig);
                     },
                     (error) => {
-                        Logger.logError(`${Constants.productivityToolsLogPrefix} Failed to validate tool icon config`, error);
+                        Logger.logError(
+                            `${Constants.productivityToolsLogPrefix} Failed to validate tool icon config`,
+                            error,
+                        );
                         reject(error);
                     },
                 );
@@ -99,7 +111,10 @@ module ProductivityPaneLoader {
                                 response.entities.length > 0 ? resolve(true) : resolve(false);
                             },
                             (error) => {
-                                Logger.logError(`${Constants.productivityToolsLogPrefix} Failed to retrieve record from webresource`, error);
+                                Logger.logError(
+                                    `${Constants.productivityToolsLogPrefix} Failed to retrieve record from webresource`,
+                                    error,
+                                );
                                 reject(error);
                             },
                         );
@@ -107,7 +122,10 @@ module ProductivityPaneLoader {
                 });
             } catch (error) {
                 return new Promise<boolean>((resolve, reject) => {
-                    Logger.logError(`${Constants.productivityToolsLogPrefix} Failed to get Icon from webresources`, error);
+                    Logger.logError(
+                        `${Constants.productivityToolsLogPrefix} Failed to get Icon from webresources`,
+                        error,
+                    );
                     resolve(false);
                 });
             }
@@ -145,7 +163,10 @@ module ProductivityPaneLoader {
                         resolve(toolsList);
                     },
                     (error) => {
-                        Logger.logError(`${Constants.productivityToolsLogPrefix} Failed to retrieve tools config data from XrmApi`, error);
+                        Logger.logError(
+                            `${Constants.productivityToolsLogPrefix} Failed to retrieve tools config data from XrmApi`,
+                            error,
+                        );
                         reject(error);
                     },
                 );
@@ -164,7 +185,10 @@ module ProductivityPaneLoader {
                         }
                     },
                     (error) => {
-                        Logger.logError(`${Constants.productivityToolsLogPrefix} Failed to retrieve Productivity Pane unique name from XrmApi`, error);
+                        Logger.logError(
+                            `${Constants.productivityToolsLogPrefix} Failed to retrieve Productivity Pane unique name from XrmApi`,
+                            error,
+                        );
                         reject(error);
                     },
                 );
@@ -197,7 +221,10 @@ module ProductivityPaneLoader {
                         resolve(response);
                     },
                     (error) => {
-                        Logger.logError(`${Constants.productivityToolsLogPrefix} Failed to retrieve Productivity Pane config from XrmApi`, error);
+                        Logger.logError(
+                            `${Constants.productivityToolsLogPrefix} Failed to retrieve Productivity Pane config from XrmApi`,
+                            error,
+                        );
                         reject(error);
                     },
                 );

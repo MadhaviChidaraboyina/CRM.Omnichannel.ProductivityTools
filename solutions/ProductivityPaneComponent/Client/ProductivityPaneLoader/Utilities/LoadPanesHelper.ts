@@ -53,7 +53,8 @@ module ProductivityPaneLoader {
                                 },
                                 (error) => {
                                     Logger.logError(
-                                        `${Constants.productivityToolsLogPrefix} Failed to laod app side pane ${tool.toolControlName}`, error
+                                        `${Constants.productivityToolsLogPrefix} Failed to laod app side pane ${tool.toolControlName}`,
+                                        error,
                                     );
                                     reject(error);
                                 },
@@ -61,10 +62,7 @@ module ProductivityPaneLoader {
                     });
                 });
             } catch (error) {
-                Logger.logError(
-                    `${Constants.productivityToolsLogPrefix} Failed to load app side panes`,
-                    error,
-                );
+                Logger.logError(`${Constants.productivityToolsLogPrefix} Failed to load app side panes`, error);
             }
         }
 
@@ -118,10 +116,7 @@ module ProductivityPaneLoader {
                     sessionStorage.setItem(PcfControlConstants.sidePaneKey, paneId);
                 }),
                 (error: any) => {
-                    Logger.logWarning(
-                        `${Constants.productivityToolsLogPrefix} Lagacy pane load failed`,
-                        error,
-                    );
+                    Logger.logWarning(`${Constants.productivityToolsLogPrefix} Lagacy pane load failed`, error);
                     Logger.logError(`${Constants.productivityToolsLogPrefix} Lagacy pane load failed:`, error);
                 };
         }

@@ -24,9 +24,12 @@ module ProductivityPaneLoader {
                 windowObject.Xrm.App.sessions.addOnBeforeSessionSwitch(this.onBeforeSessionSwitch.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionSwitch(this.onAfterSessionSwitch.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClose.bind(this));
-                Logger.logInfo(`${Constants.productivityToolsLogPrefix} Success: registered event handlers for on before/after session switch and on after session close`);
+                Logger.logInfo(
+                    `${Constants.productivityToolsLogPrefix} Success: registered event handlers for on before/after session switch and on after session close`,
+                );
             } catch (error) {
-                Logger.logError(SessionChangeHelper.errorMessagesOnRegisterEventHandlers(error));            }
+                Logger.logError(SessionChangeHelper.errorMessagesOnRegisterEventHandlers(error));
+            }
         }
 
         /*
@@ -66,7 +69,6 @@ module ProductivityPaneLoader {
                 SessionStateManager.restoreSessionState(newSessionId);
             } catch (error) {
                 Logger.logError(SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error));
-
             }
         }
 

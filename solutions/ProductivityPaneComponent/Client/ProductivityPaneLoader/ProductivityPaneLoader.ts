@@ -52,7 +52,9 @@ module ProductivityPaneLoader {
                                                     productivityPaneConfig.productivityPaneMode,
                                                 );
                                             }
-                                            Logger.logInfo(`${Constants.productivityToolsLogPrefix} Success: productivity tools loaded`);
+                                            Logger.logInfo(
+                                                `${Constants.productivityToolsLogPrefix} Success: productivity tools loaded`,
+                                            );
                                         });
                                     });
                             }
