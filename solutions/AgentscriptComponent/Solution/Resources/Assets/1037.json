@@ -1,4 +1,4 @@
 {
-  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_name.label": "תצורת כלי קובץ Script של שיחה",
+  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_name.label": "קבצי Script של סוכן",
   "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_description.label": "תן הוראות שלב אחר שלב שיעזרו לצמצם את טעויות האנוש למינימום ולספק שירות עקבי."
 }

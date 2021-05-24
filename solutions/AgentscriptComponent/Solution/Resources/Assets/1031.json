@@ -1,4 +1,4 @@
 {
-  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_name.label": "Konfiguration des Anrufskript-Tools",
+  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_name.label": "Agent-Skripte",
   "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_description.label": "Geben Sie Schritt-für-Schritt-Anweisungen, um menschliche Fehler zu minimieren und konsistenten Service bereitzustellen."
 }
