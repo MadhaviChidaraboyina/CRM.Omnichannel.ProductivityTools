@@ -53,6 +53,7 @@ module ProductivityPaneLoader {
                                                 );
                                             }
                                             Logger.logInfo(
+                                                EventType.PRODUCTIVITY_TOOLS_LOAD_SUCCESS,
                                                 `${Constants.productivityToolsLogPrefix} Success: productivity tools loaded`,
                                             );
                                         });
@@ -62,7 +63,11 @@ module ProductivityPaneLoader {
                 }
             });
         } catch (error) {
-            Logger.logError(`${Constants.productivityToolsLogPrefix} Failed to load app side panes`, error);
+            Logger.logError(
+                EventType.PRODUCTIVITY_TOOLS_LOAD_FAILURE,
+                `${Constants.productivityToolsLogPrefix} Failed to load app side panes`,
+                error,
+            );
         }
     } else {
         LoadPanesHelper.loadLegacyProductivityPane();

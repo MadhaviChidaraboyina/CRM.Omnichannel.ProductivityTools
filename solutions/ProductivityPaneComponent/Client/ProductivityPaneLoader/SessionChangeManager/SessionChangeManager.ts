@@ -25,10 +25,14 @@ module ProductivityPaneLoader {
                 windowObject.Xrm.App.sessions.addOnAfterSessionSwitch(this.onAfterSessionSwitch.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClose.bind(this));
                 Logger.logInfo(
+                    EventType.REGIST_EVENT_HANDLER_SUCCESS,
                     `${Constants.productivityToolsLogPrefix} Success: registered event handlers for on before/after session switch and on after session close`,
                 );
             } catch (error) {
-                Logger.logError(SessionChangeHelper.errorMessagesOnRegisterEventHandlers(error));
+                Logger.logError(
+                    EventType.REGIST_EVENT_HANDLER_FAILURE,
+                    SessionChangeHelper.errorMessagesOnRegisterEventHandlers(error),
+                );
             }
         }
 
@@ -41,7 +45,10 @@ module ProductivityPaneLoader {
                 const previousSessionId = SessionChangeHelper.getPreviousSessionId(event);
                 SessionStateManager.updateSessionState(previousSessionId);
             } catch (error) {
-                Logger.logError(SessionChangeHelper.errorMessagesOnBeforeSessionSwitch(error));
+                Logger.logError(
+                    EventType.REGIST_EVENT_HANDLER_FAILURE,
+                    SessionChangeHelper.errorMessagesOnBeforeSessionSwitch(error),
+                );
             }
         }
 
@@ -68,7 +75,10 @@ module ProductivityPaneLoader {
                 }
                 SessionStateManager.restoreSessionState(newSessionId);
             } catch (error) {
-                Logger.logError(SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error));
+                Logger.logError(
+                    EventType.REGIST_EVENT_HANDLER_FAILURE,
+                    SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error),
+                );
             }
         }
 
@@ -80,7 +90,10 @@ module ProductivityPaneLoader {
                 const closedSessionId = SessionChangeHelper.getSessionId(event);
                 SessionStateManager.deleteSessionStorageData(Constants.appSidePaneSessionState + closedSessionId);
             } catch (error) {
-                Logger.logError(SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error));
+                Logger.logError(
+                    EventType.REGIST_EVENT_HANDLER_FAILURE,
+                    SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error),
+                );
             }
         }
     }

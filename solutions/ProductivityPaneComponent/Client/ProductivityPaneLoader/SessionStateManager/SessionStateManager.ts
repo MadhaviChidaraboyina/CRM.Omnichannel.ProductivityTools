@@ -11,7 +11,11 @@ module ProductivityPaneLoader {
                 sessionStorage.setItem(key, JSON.stringify(value));
             } catch (error) {
                 // setItem() may throw an exception if the storage is full. Particularly, in Mobile Safari.
-                Logger.logError(`${Constants.productivityToolsLogPrefix} Failed to set item in session storage`, error);
+                Logger.logError(
+                    EventType.SET_SESSION_STORAGE_FAILURE,
+                    `${Constants.productivityToolsLogPrefix} Failed to set item in session storage`,
+                    error,
+                );
             }
         }
 
