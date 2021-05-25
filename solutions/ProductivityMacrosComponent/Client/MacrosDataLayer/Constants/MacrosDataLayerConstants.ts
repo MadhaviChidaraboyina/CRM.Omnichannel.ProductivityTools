@@ -6,16 +6,15 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 {
 	export class FPIConstants
 	{
-		public static IFRAMEID = "OCFPIIframe";
+		public static IFRAMEID = "CCAFPIIframe";
 		public static EMPTYGUID = "00000000-0000-0000-0000-000000000000";
 		public static FPIMESSAGE_EVENTNAME = "message";
-		public static IFRAMETITLE = "OmniChannelFPI_IFrame";
-		public static IFRAME_APPNAME = "OCApp";
-		public static OCBASEURLFIELD = "ocBaseUrl";
-		public static OCFPIURLFIELD = "ocFPIUrl";
+		public static IFRAMETITLE = "CCAFPI_IFrame";
+		public static IFRAME_APPNAME = "CCAApp";
 		public static AUTH_FAILED_STATUS_MESSAGE = "Authentication failure";
 		public static AUTH_FAILED_STATUS_CODE = 401;
-		public static FPI_COMPONENT_URL_PARAMETER = "&componentId=" + FPIConstants.IFRAMEID;
+		public static QUERY_FPI_STATUS = "QueryFpiStatus";
+		public static EXTERNAL_REST_ODATA_API = "ExternalRESTOdataApi";
 	}
 
 	export class RequestTypes
@@ -27,69 +26,31 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 		public static STATUS = "STATUS";
 	}
 
-	export class EndpointConstants 
-	{
-		public static endpointEntityName = "serviceendpoint";
-		public static ocEndpointRecordId = "8af92c33-e748-4b5a-b772-46cba89bb7ac";
-		public static pathPropertyKey = "path";
-		public static namePropertyKey = "name";
-		public static descriptionPropertyKey = "description";
-		public static telemetryContext = "OmniChannelEndpoint";
-		public static emptyString = "";
-		public static publicString = "public";
-		public static fairfaxString = "fairfax";
-		public static PRODEnvKey = "PROD";
-		public static namespaceDeploymentKey = "solutionnamespace"
-		public static PublicDeploymentTypeKey = "default";
-
-		// Service endpoint Map Keys
-		public static ocBaseUrlKey = "ocBaseUrl";
-		public static ocFPIUrlKey = "ocFPIUrl";
-		public static ocDeploymentTypeKey = "ocDeploymentType";
-		public static ocEndpointNameKey = "ocEndpointName";
-
-        private static readonly publicFPIUrlMap = new Map();
-
-        public static setPublicFPIUrlMap() {
-            EndpointConstants.publicFPIUrlMap.set("DEV", "https://fpi-dev.oc.crmlivetie.com/fpi/OmniChannel/9.0/Runtime.html?");
-            EndpointConstants.publicFPIUrlMap.set("INT", "https://fpi.oc.crmlivetie.com/fpi/OmniChannel/9.0/Runtime.html?");
-            EndpointConstants.publicFPIUrlMap.set("TEST", "https://fpi.oc.crmlivetie.com/fpi/OmniChannel/9.0/Runtime.html?");
-            EndpointConstants.publicFPIUrlMap.set("PPE", "https://fpi.omnichannelengagementhub.com/fpi/OmniChannel/9.0/Runtime.html?");
-            EndpointConstants.publicFPIUrlMap.set("PROD", "https://fpi.omnichannelengagementhub.com/fpi/OmniChannel/9.0/Runtime.html?");
-        }
-
-        private static readonly fairfaxFPIUrlMap = new Map();
-
-        public static setFairfaxFPIUrlMap() {
-            EndpointConstants.fairfaxFPIUrlMap.set("DEV", "https://omnichanneltestauthservice.azurewebsites.us/OmniChannel/9.0/Runtime.html?");
-            EndpointConstants.fairfaxFPIUrlMap.set("INT", "https://omnichanneltestauthservice.azurewebsites.us/OmniChannel/9.0/Runtime.html?");
-            EndpointConstants.fairfaxFPIUrlMap.set("TEST", "https://omnichanneltestauthservice.azurewebsites.us/OmniChannel/9.0/Runtime.html?");
-            EndpointConstants.fairfaxFPIUrlMap.set("PPE", "https://oc-auth.azurewebsites.us/OmniChannel/9.0/Runtime.html?");
-            EndpointConstants.fairfaxFPIUrlMap.set("PROD", "https://oc-auth.azurewebsites.us/OmniChannel/9.0/Runtime.html?");
-        }
-
-		//public static readonly mooncakeFPIUrlMap = new Map()  //Not deployed yet, to be updated after deployment. If common deployment for all GCC, will be a copy of fairfaxFPIUrlMap
-
-		public static getFPIURLMap(cloudType: string)
-        {
-            if (this.publicFPIUrlMap.size == 0) {
-                this.setPublicFPIUrlMap();
-            }
-            if (this.fairfaxFPIUrlMap.size == 0) {
-                this.setFairfaxFPIUrlMap();
-            }
-			if(cloudType === null || cloudType === undefined)
-            {
-				return this.publicFPIUrlMap;
-			}
-			switch (cloudType.toLowerCase())
-			{
-				case EndpointConstants.fairfaxString:
-					return this.fairfaxFPIUrlMap;
-				case EndpointConstants.publicString:
-				default:
-					return this.publicFPIUrlMap;
-			}
-		}
+	export class GeoNames{
+		public static TIP = "TIP";
+		public static GCC = "GCC";
+		public static USG = "USG";
+		public static CHN = "CHN";
+		public static DEFAULT = "";
 	}
+
+	export const FpiGeoSettings = {
+		[GeoNames.TIP]: { endpoint: "https://www.d365ccafpi-dev.com" },
+		[GeoNames.GCC]: { endpoint: "https://www.d365ccafpi-gcc.com" },
+		[GeoNames.USG]: { endpoint: "https://www.d365ccafpi-gcc.com" },
+		[GeoNames.CHN]: { endpoint: "https://www.d365ccafpi.chn" },
+		[GeoNames.DEFAULT]: { endpoint: "https://www.d365ccafpi.com" },
+	}
+
+	/**
+	 * https://dynamicscrm.visualstudio.com/First%20Party%20Integrations/_git/First%20Party%20Integrations?path=%2Fsrc%2FIntegrations%2FIntegrations%2FMicrosoftFlows%2F9.0%2FFlowApp.js&_a=contents&version=GBv2
+	 */
+	export const FlowGeoSettings = {
+		[GeoNames.TIP]: { endpoint: "https://tip1.api.flow.microsoft.com", resource: "https://service.flow.microsoft.com/" },
+		[GeoNames.GCC]: { endpoint: "https://gov.api.flow.microsoft.us", resource: "https://gov.service.flow.microsoft.us/" },
+		[GeoNames.USG]: { endpoint: "https://high.api.flow.microsoft.us", resource: "https://high.service.flow.microsoft.us/" },
+		[GeoNames.CHN]: { endpoint: "https://api.powerautomate.cn", resource: "https://service.powerautomate.cn/" },
+		[GeoNames.DEFAULT]: { endpoint: "https://api.flow.microsoft.com", resource: "https://service.flow.microsoft.com/" },
+	}
+
 }
