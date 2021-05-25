@@ -103,7 +103,9 @@ module MscrmControls.SmartAssistAnyEntityControl {
             const pane = Xrm.App.sidePanes.getPane(StringConstants.SmartAssistPaneId);
             // If app side pane ID does not exist, getPane() returns undefined. 
             if (pane) {
-                notificationNumber == 0 ? pane.clearBadge() : pane.setBadge(notificationNumber);
+                const badge = pane.badge && typeof(pane.badge) == 'number' ?
+                    pane.badge  + notificationNumber : notificationNumber;
+                pane.badge = badge <= 0 ? false : badge;
             }
         }
 
