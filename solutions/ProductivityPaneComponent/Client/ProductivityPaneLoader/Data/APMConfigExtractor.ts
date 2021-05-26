@@ -30,8 +30,8 @@ module ProductivityPaneLoader {
                                         },
                                         (error) => {
                                             Logger.logError(
-                                                EventType.GET_PRODUCTIVITY_PANE_DATA_FAILURE,
-                                                `${Constants.productivityToolsLogPrefix} Failed to get tools config Data`,
+                                                EventType.APM_CONFIG_EXTRACTOR_FAILURE,
+                                                `${Constants.productivityToolsLogPrefix} Failed to get pane tools config Data`,
                                                 error,
                                             );
                                             reject(error);
@@ -40,8 +40,8 @@ module ProductivityPaneLoader {
                                 },
                                 (error) => {
                                     Logger.logError(
-                                        EventType.GET_PRODUCTIVITY_PANE_DATA_FAILURE,
-                                        `${Constants.productivityToolsLogPrefix} Failed to get Productivity Pane config`,
+                                        EventType.APM_CONFIG_EXTRACTOR_FAILURE,
+                                        `${Constants.productivityToolsLogPrefix} Failed to get pane config data`,
                                         error,
                                     );
                                     reject(error);
@@ -50,8 +50,8 @@ module ProductivityPaneLoader {
                         },
                         (error) => {
                             Logger.logError(
-                                EventType.GET_PRODUCTIVITY_PANE_DATA_FAILURE,
-                                `${Constants.productivityToolsLogPrefix} Failed to get Productivity Pane unique name`,
+                                EventType.APM_CONFIG_EXTRACTOR_FAILURE,
+                                `${Constants.productivityToolsLogPrefix} Failed to get pane unique name`,
                                 error,
                             );
                             reject(error);
@@ -61,7 +61,7 @@ module ProductivityPaneLoader {
             } catch (error) {
                 return new Promise<ProductivityPaneConfig>((resolve, reject) => {
                     Logger.logError(
-                        EventType.PRODUCTIVITY_PANE_XRM_RETRIEVAL_FAILURE,
+                        EventType.APM_CONFIG_EXTRACTOR_XRM_API_FAILURE,
                         `${Constants.productivityToolsLogPrefix} Failed to retrieve APM config`,
                         error,
                     );
@@ -92,7 +92,7 @@ module ProductivityPaneLoader {
                     },
                     (error) => {
                         Logger.logError(
-                            EventType.GET_PRODUCTIVITY_PANE_DATA_FAILURE,
+                            EventType.APM_CONFIG_EXTRACTOR_FAILURE,
                             `${Constants.productivityToolsLogPrefix} Failed to validate tool icon config`,
                             error,
                         );
@@ -120,8 +120,8 @@ module ProductivityPaneLoader {
                             },
                             (error) => {
                                 Logger.logError(
-                                    EventType.PRODUCTIVITY_PANE_XRM_RETRIEVAL_FAILURE,
-                                    `${Constants.productivityToolsLogPrefix} Failed to retrieve record from webresource`,
+                                    EventType.APM_CONFIG_EXTRACTOR_XRM_API_FAILURE,
+                                    `${Constants.productivityToolsLogPrefix} Failed to retrieve icon path from webresource`,
                                     error,
                                 );
                                 reject(error);
@@ -132,8 +132,8 @@ module ProductivityPaneLoader {
             } catch (error) {
                 return new Promise<boolean>((resolve, reject) => {
                     Logger.logError(
-                        EventType.GET_PRODUCTIVITY_PANE_DATA_FAILURE,
-                        `${Constants.productivityToolsLogPrefix} Failed to get Icon from webresources`,
+                        EventType.APM_CONFIG_EXTRACTOR_FAILURE,
+                        `${Constants.productivityToolsLogPrefix} Failed to get icon from webresources`,
                         error,
                     );
                     resolve(false);
@@ -174,8 +174,8 @@ module ProductivityPaneLoader {
                     },
                     (error) => {
                         Logger.logError(
-                            EventType.PRODUCTIVITY_PANE_XRM_RETRIEVAL_FAILURE,
-                            `${Constants.productivityToolsLogPrefix} Failed to retrieve tools config data from XrmApi`,
+                            EventType.APM_CONFIG_EXTRACTOR_XRM_API_FAILURE,
+                            `${Constants.productivityToolsLogPrefix} Failed to retrieve pane tool config data from XrmApi`,
                             error,
                         );
                         reject(error);
@@ -197,8 +197,8 @@ module ProductivityPaneLoader {
                     },
                     (error) => {
                         Logger.logError(
-                            EventType.PRODUCTIVITY_PANE_XRM_RETRIEVAL_FAILURE,
-                            `${Constants.productivityToolsLogPrefix} Failed to retrieve Productivity Pane unique name from XrmApi`,
+                            EventType.APM_CONFIG_EXTRACTOR_XRM_API_FAILURE,
+                            `${Constants.productivityToolsLogPrefix} Failed to retrieve pane unique name from XrmApi`,
                             error,
                         );
                         reject(error);
@@ -234,8 +234,8 @@ module ProductivityPaneLoader {
                     },
                     (error) => {
                         Logger.logError(
-                            EventType.PRODUCTIVITY_PANE_XRM_RETRIEVAL_FAILURE,
-                            `${Constants.productivityToolsLogPrefix} Failed to retrieve Productivity Pane config from XrmApi`,
+                            EventType.APM_CONFIG_EXTRACTOR_XRM_API_FAILURE,
+                            `${Constants.productivityToolsLogPrefix} Failed to retrieve pane config from XrmApi`,
                             error,
                         );
                         reject(error);
