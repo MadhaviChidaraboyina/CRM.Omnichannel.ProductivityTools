@@ -100,6 +100,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * @param notificationNumber: notification count
          */
          public static updateBadge(notificationNumber: number) {
+            if (Xrm.App.sidePanes.getSelectedPane().paneId === StringConstants.SmartAssistPaneId) {
+                return;
+            }
+
             const pane = Xrm.App.sidePanes.getPane(StringConstants.SmartAssistPaneId);
             // If app side pane ID does not exist, getPane() returns undefined. 
             if (pane) {

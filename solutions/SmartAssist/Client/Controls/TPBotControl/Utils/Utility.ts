@@ -41,6 +41,10 @@ module MscrmControls.ProductivityPanel.TPBot {
          * @param notificationNumber: notification count
          */
          public static updateBadge(notificationNumber: number) {
+            if (Xrm.App.sidePanes.getSelectedPane().paneId === Constants.SmartAssistPaneId) {
+                return;
+            }
+
             const pane = Xrm.App.sidePanes.getPane(Constants.SmartAssistPaneId);
             // If app side pane ID does not exist, getPane() returns undefined. 
             if (pane) {
