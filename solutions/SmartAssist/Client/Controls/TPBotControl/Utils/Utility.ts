@@ -48,7 +48,7 @@ module MscrmControls.ProductivityPanel.TPBot {
             const pane = Xrm.App.sidePanes.getPane(Constants.SmartAssistPaneId);
             // If app side pane ID does not exist, getPane() returns undefined. 
             if (pane) {
-                let badge = pane.badge && typeof(pane.badge) == 'number' ?
+                const badge = pane.badge && typeof(pane.badge) == 'number' ?
                     pane.badge + notificationNumber : notificationNumber;
                 pane.badge = badge <= 0 ? false : badge;
             }
