@@ -41,7 +41,9 @@ module MscrmControls.ProductivityPanel.TPBot {
          * @param notificationNumber: notification count
          */
          public static updateBadge(notificationNumber: number) {
-            if (Xrm.App.sidePanes.getSelectedPane().paneId === Constants.SmartAssistPaneId) {
+            // Don't update badge if current pane is smart assist and is expanded
+            if (Xrm.App.sidePanes.getSelectedPane().paneId === Constants.SmartAssistPaneId &&
+                Xrm.App.sidePanes.state == XrmClientApi.Constants.SidePanesState.Expanded) {
                 return;
             }
 

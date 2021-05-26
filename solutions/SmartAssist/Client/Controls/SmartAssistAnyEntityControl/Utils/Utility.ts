@@ -100,7 +100,9 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * @param notificationNumber: notification count
          */
          public static updateBadge(notificationNumber: number) {
-            if (Xrm.App.sidePanes.getSelectedPane().paneId === StringConstants.SmartAssistPaneId) {
+            // Don't update badge if current pane is smart assist and is expanded
+            if (Xrm.App.sidePanes.getSelectedPane().paneId === StringConstants.SmartAssistPaneId &&
+                Xrm.App.sidePanes.state == XrmClientApi.Constants.SidePanesState.Expanded) {
                 return;
             }
 
