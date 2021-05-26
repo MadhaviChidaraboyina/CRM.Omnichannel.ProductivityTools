@@ -35,11 +35,11 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 	}
 
 	export const FpiGeoSettings = {
-		[GeoNames.TIP]: { endpoint: "https://www.d365ccafpi-dev.com" },
-		[GeoNames.GCC]: { endpoint: "https://www.d365ccafpi-gcc.com" },
-		[GeoNames.USG]: { endpoint: "https://www.d365ccafpi-gcc.com" },
-		[GeoNames.CHN]: { endpoint: "https://www.d365ccafpi.chn" },
-		[GeoNames.DEFAULT]: { endpoint: "https://www.d365ccafpi.com" },
+		[GeoNames.TIP]: { endpoint: "https://www.d365ccafpi-dev.com/macro/index.html" },
+		[GeoNames.GCC]: { endpoint: "https://www.d365ccafpi-gcc.com/macro/index.html" },
+		[GeoNames.USG]: { endpoint: "https://www.d365ccafpi-gcc.com/macro/index.html" },
+		[GeoNames.CHN]: { endpoint: "https://www.d365ccafpi.chn/macro/index.html" },
+		[GeoNames.DEFAULT]: { endpoint: "https://www.d365ccafpi.com/macro/index.html" },
 	}
 
 	/**
