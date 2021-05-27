@@ -80,9 +80,9 @@
 		 */
 		title?: string;
 		/**
-		 * Allow SidePane title to be updated as navigations occur, default = true
+		 * Hides the pane header, including title and close button, default = false
 		 */
-		//isTitleStatic?: boolean;
+		hideHeader?: boolean;
 		/**
 		 * Will focus after Pane is created. Defaults to true.
 		 */
@@ -95,6 +95,14 @@
 		 * Hides the pane and the tab
 		 */
 		hidden?: boolean;
+		/**
+		 * Prevents panel from unmounting when it's hidden.
+		 */
+		alwaysRender?: boolean;
+		/**
+		 * 	Prevents the badge from getting cleared when the pane becomes selected.
+		 */
+		keepBadgeOnSelect?: boolean;
 	}
 
 	/**
@@ -130,11 +138,11 @@
 		/**
 		 * If true, a new history entry will not be added, the current one will be replaced. i.e. refresh
 		 */
-		replaceState: boolean;
+		replaceState?: boolean;
 		/**
 		 * Whether the history stack should be cleared during the navigation.
 		 */
-		resetHistory: boolean;
+		resetHistory?: boolean;
 	}
 
 	/**
@@ -171,7 +179,7 @@
 		 */
 		getAllPanes(): Collection.ItemCollection<AppSidePane>;
 		/**
-		 * Returns the Pane corresponding to the input ID.
+		 * Returns the Pane corresponding to the input ID. If Pane does not exist, undefined is returned.
 		 * @param id ID of the pane
 		 */
 		getPane(id: string): AppSidePane;
@@ -194,14 +202,12 @@
 		 */
 		select(): void;
 		/**
-		 * Set the badge count. Will render an indicator icon and count over the tab icon.
-		 * @param countOrImageSrc Count to use use in badge, or custom badge image.
+		 * The badge of the pane.
+		 * Set to true to show a dot badge; false to clear it.
+		 * When a number value is assigned, the count will be displayed in the badge.
+		 * When an imageSrc value is assigned, the image will be rendered in the badge.
 		 */
-		setBadge(countOrImageSrc?: number | string): void; // todo: is imageSrc needed?
-		/**
-		 * Clear the badge.
-		 */
-		clearBadge(): void;
+		badge: boolean | number | string;
 		/**
 		 * ID of this pane.
 		 */
@@ -226,6 +232,14 @@
 		 * Width of the pane in pixels.
 		 */
 		width: number;
+		/**
+		 * Prevents panel from unmounting when it's hidden.
+		 */
+		alwaysRender?: boolean;
+		/**
+		 * 	Prevents the badge from getting cleared when the pane becomes selected.
+		 */
+		keepBadgeOnSelect?: boolean;
 	}
 
 	/**
@@ -1035,33 +1049,9 @@
 		initiateOfflineDataSync(entities: string[]): Promise<void>;
 
 		/**
-		 * Returns Feature Control Setting
-		 * @param namespaceValue nameSpace of feature control setting
-		 * @param featureFCBName The name of the feature control setting
-		 * @returns Feature Control Setting
+		 * Returns the organization's BAP environment id.
 		 */
-		getFeatureControlSetting(namespaceValue: string, featureName: string): IFeatureControlSetting;
-	}
-
-	/**
-	 * Interface to represent Feature Control Setting in state.
-	 * This maps to IFeatureControlSetting that is defined in src\features\featurecontrolsetting\src\FeatureControlSetting\States\FeatureControlSettingState.ts
-	 */
-	interface IFeatureControlSetting {
-		/**
-		 * Feature Control Setting name.
-		 */
-		featureName: string;
-
-		/**
-		 * Feature Control Setting Data Type.
-		 */
-		type: string;
-
-		/**
-		 * Feature Control Setting value.
-		 */
-		value: string | number | boolean;
+		getBAPEnvironmentId(): Promise<string>;
 	}
 
 	/**
@@ -2000,9 +1990,9 @@
 	 */
 	export interface GlobalNotificationOptions {
 		/**
-		 * Name of the web resource to display in place of icon.
+		 * Path of image to use in notification.
 		 */
-		iconResource?: string;
+		imageSrc?: string;
 	}
 }
 

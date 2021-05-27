@@ -4854,6 +4854,20 @@ declare namespace XrmClientApi {
 			collapsed: "collapsed";
 		}
 
+		/**
+		 * Enum indicating desired SidePanes state
+		 */
+		export const enum SidePanesState {
+			/**
+			 * Indicates collapsed state.
+			 */
+			Collapsed = 0,
+			/**
+			 *  Indicates expanded state
+			 */
+			Expanded = 1,
+		}
+
 		export type TabDisplayState = "expanded" | "collapsed";
 
 		/**
