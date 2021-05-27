@@ -10,7 +10,7 @@
     <SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
     <PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
     <ProjectGuid>{4848F16D-75E2-4190-BD50-BBEF3C089F57}</ProjectGuid>
-	<SkipArtifactVersioning>True</SkipArtifactVersioning>
+    <SkipArtifactVersioning>True</SkipArtifactVersioning>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,14 +34,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="msdyn_productivityactioninputparameters\msdyn_Link_record_to_conversation_Input_Params_Mandatory\msdyn_productivityactioninputparameter.xml" />
-    <Content Include="msdyn_productivityactioninputparameters\msdyn_Unlink_record_from_conversation_Input_Params_Mandatory\msdyn_productivityactioninputparameter.xml" />   
-    <Folder Include="msdyn_productivityactionoutputparameters\" />
+    <Content Include="msdyn_productivityactioninputparameters\msdyn_Unlink_record_from_conversation_Input_Params_Mandatory\msdyn_productivityactioninputparameter.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Link_record_to_conversation\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Send_KB\msdyn_productivitymacroactiontemplate.xml" />
-    <Content Include="msdyn_productivitymacroactiontemplates\msdyn_List_Flows\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Unlink_record_from_conversation\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroconnectors\msdyn_OmnichannelConnector\msdyn_productivitymacroconnector.xml" />
-    <Content Include="msdyn_productivitymacroconnectors\msdyn_FlowConnector\msdyn_productivitymacroconnector.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_EntityId\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_EntityName\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_PrimaryNameAttributeValue\msdyn_productivityparameterdefinition.xml" />
@@ -57,6 +54,9 @@
   <ItemGroup>
     <Content Include="Resources\en-US\resources.en-US.resx" />
     <Content Include="Resources\template_resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="msdyn_productivityactionoutputparameters\" />
   </ItemGroup>
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
