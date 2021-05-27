@@ -10,7 +10,7 @@
     <SolutionFolder>$(ApplicationFolder)\Solution</SolutionFolder>
     <PluginMapFile>$(ApplicationFolder)\packageMap.xml</PluginMapFile>
     <ProjectGuid>{E2AF167D-085E-437D-BB5A-83578E689914}</ProjectGuid>
-	<SkipArtifactVersioning>True</SkipArtifactVersioning>
+    <SkipArtifactVersioning>True</SkipArtifactVersioning>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,7 +57,6 @@
     <Content Include="msdyn_productivityactioninputparameters\msdyn_update_form_attributes_params_mandatory\msdyn_productivityactioninputparameter.xml" />
     <Content Include="msdyn_productivityactioninputparameters\msdyn_Update_record_input_params_advanced\msdyn_productivityactioninputparameter.xml" />
     <Content Include="msdyn_productivityactioninputparameters\msdyn_Update_record_input_params_mandatory\msdyn_productivityactioninputparameter.xml" />
-
     <Content Include="msdyn_productivityactionoutputparameters\msdyn_Clone_focused_Record_Output_Params\msdyn_productivityactionoutputparameter.xml" />
     <Content Include="msdyn_productivityactionoutputparameters\msdyn_Clone_Input_Record_Output_Params\msdyn_productivityactionoutputparameter.xml" />
     <Content Include="msdyn_productivityactionoutputparameters\msdyn_Create_New_Output_Params\msdyn_productivityactionoutputparameter.xml" />
@@ -73,13 +72,13 @@
     <Content Include="msdyn_productivityactionoutputparameters\msdyn_Search_kb_output_params\msdyn_productivityactionoutputparameter.xml" />
     <Content Include="msdyn_productivityactionoutputparameters\msdyn_update_form_attribute_output_param\msdyn_productivityactionoutputparameter.xml" />
     <Content Include="msdyn_productivityactionoutputparameters\msdyn_Update_record_output_params\msdyn_productivityactionoutputparameter.xml" />
-
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Clone_focused_Record\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Clone_Input_Record\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Create_New\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Draft_Email\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Focus_tab\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Get_current_page\msdyn_productivitymacroactiontemplate.xml" />
+    <Content Include="msdyn_productivitymacroactiontemplates\msdyn_List_Flows\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Open_Application_Tab\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Open_Form\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Open_Grid\msdyn_productivitymacroactiontemplate.xml" />
@@ -92,12 +91,10 @@
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Start\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_update_form_attributes\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Update_Record\msdyn_productivitymacroactiontemplate.xml" />
-
+    <Content Include="msdyn_productivitymacroconnectors\msdyn_FlowConnector\msdyn_productivitymacroconnector.xml" />
     <Content Include="msdyn_productivitymacroconnectors\msdyn_ProductivityAutomation\msdyn_productivitymacroconnector.xml" />
     <Content Include="msdyn_productivitymacroconnectors\msdyn_SessionConnector\msdyn_productivitymacroconnector.xml" />
-
     <Content Include="msdyn_productivitymacrosolutionconfigurations\msdyn_DefaultDesignerConfig\msdyn_productivitymacrosolutionconfiguration.xml" />
-    
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_ApplicationTemplateId\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_BillableTime\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_Custom_Array\msdyn_productivityparameterdefinition.xml" />
@@ -118,8 +115,12 @@
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_UpdateData\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_ViewId\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_ViewType\msdyn_productivityparameterdefinition.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_run_flow.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_run_flow.svg.data.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="WebResources\MacroDesigner\msdyn_flowConnector_macro_connector.svg" />
+    <Content Include="WebResources\MacroDesigner\msdyn_flowConnector_macro_connector.svg.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_macro_connector.svg" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_macro_connector.svg.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_associated.svg" />
@@ -156,7 +157,7 @@
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_create_session.svg.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_email.svg" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_email.svg.data.xml" />
-    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_kb_article.svg"/>
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_kb_article.svg" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosApplication_open_kb_article.svg.data.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +172,7 @@
     <Content Include="Resources\en-US\resources.en-US.resx" />
     <Content Include="Resources\template_resources.resx" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\NoTarget.targets" />
   <Import Project="$(PKG_XRMAPP_TOOLS)\build\include\SolutionPackager.targets" />
 </Project>
