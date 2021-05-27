@@ -1,4 +1,4 @@
 {
-  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_name.label": "Konfigurasi alat skrip panggilan",
+  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_name.label": "Skrip agen",
   "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_description.label": "Berikan petunjuk langkah demi langkah untuk membantu meminimalkan kesalahan manusia dan memberikan layanan yang konsisten."
 }

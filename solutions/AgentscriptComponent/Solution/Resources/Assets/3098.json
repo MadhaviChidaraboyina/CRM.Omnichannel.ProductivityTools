@@ -1,4 +1,4 @@
 {
-  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_name.label": "Конфигурација алатке скрипте позива",
+  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_name.label": "Скрипте агента",
   "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_description.label": "Дајте детаљна упутства како бисте смањили људске грешке и пружили доследну услугу."
 }

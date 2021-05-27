@@ -35,6 +35,7 @@ module ProductivityPaneLoader {
                                 title: tool.tooltip,
                                 hidden: true,
                                 alwaysRender: true,
+                                keepBadgeOnSelect: false,
                             })
                             .then((pane) => {
                                 pane.navigate({

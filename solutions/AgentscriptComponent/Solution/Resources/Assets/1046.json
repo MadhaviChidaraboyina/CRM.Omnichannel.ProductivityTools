@@ -1,4 +1,4 @@
 {
-  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_name.label": "Configuração da ferramenta de script de chamada",
+  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_name.label": "Scripts do agente",
   "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_description.label": "Forneça instruções passo a passo para ajudar a minimizar erros humanos e fornecer serviços consistentes."
 }

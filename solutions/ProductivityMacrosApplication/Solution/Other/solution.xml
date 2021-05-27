@@ -81,7 +81,7 @@
       </Addresses>
     </Publisher>
     <RootComponents>
-	  <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosApplication_clone_record.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosApplication_clone_record.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosApplication_close_session.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosApplication_close_all_sessions.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosApplication_create_session.svg" behavior="0" />
@@ -102,6 +102,8 @@
 	    <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosApplication_update_form_attribute.svg" behavior="0" />
 	    <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosApplication_open_kb_article.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_sessionConnector_macro_connector.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_flowConnector_macro_connector.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_run_flow.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosApplication_focus_tab.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosApplication_get_current_page.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosApplication_open_app_tab.svg" behavior="0" />

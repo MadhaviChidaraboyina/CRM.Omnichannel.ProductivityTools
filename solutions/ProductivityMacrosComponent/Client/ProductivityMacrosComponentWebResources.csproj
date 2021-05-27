@@ -25,12 +25,13 @@
     <Content Include="UnitTests\SpecRunner.html" />
     <TypeScriptCompile Include="@(TypeScriptCommonFile)" />
     <TypeScriptCompile Include="Constants.ts" />
+    <TypeScriptCompile Include="MacrosDataLayer\Libraries\FlowClient.ts" />
     <TypeScriptCompile Include="MacrosDataLayer\MacrosDataLayer.ts" />
     <TypeScriptCompile Include="MacrosDataLayer\Constants\MacrosDataLayerConstants.ts" />
     <TypeScriptCompile Include="MacrosDataLayer\Libraries\FPIHelper.ts" />
     <TypeScriptCompile Include="MacrosDataLayer\Models\FPIRequestMessage.ts" />
     <TypeScriptCompile Include="MacrosDataLayer\Models\RequestMap.ts" />
-    <TypeScriptCompile Include="MacrosDataLayer\Utils\OCEndPoint.ts" />
+    <TypeScriptCompile Include="MacrosDataLayer\Utils\OrganizationSettings.ts" />
     <TypeScriptCompile Include="MacrosDataLayer\Utils\Utils.ts" />
     <TypeScriptCompile Include="CRMClients\LogicAppExecutor\Actions\IfAction.ts" />
     <TypeScriptCompile Include="CRMClients\LogicAppExecutor\Actions\MacroAction.ts" />

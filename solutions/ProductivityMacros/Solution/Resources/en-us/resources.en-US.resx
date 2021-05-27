@@ -188,37 +188,37 @@
     <value>Macros</value>
     <comment> 'ProductivityMacros' : LocalizedName for Solution</comment>
   </data>
-  <data name="1:Description,Action Input Parameter{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+  <data name="1:Description,Action Input Parameter (Deprecated){15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
     <value>A form for this entity.</value>
-    <comment>'Action Input Parameter' : Description for systemform in Entity FormXml ID: '{15079f0d-d34e-4cad-9fa3-a1fab0783eac}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : Description for systemform in Entity FormXml ID: '{15079f0d-d34e-4cad-9fa3-a1fab0783eac}'</comment>
   </data>
-  <data name="1:Description,Action Input Parameter{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+  <data name="1:Description,Action Input Parameter (Deprecated){26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
     <value>Active Action Input Parameters owned by me</value>
-    <comment>'Action Input Parameter' : Description for SavedQuery on Entity QueryId: '{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : Description for SavedQuery on Entity QueryId: '{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}'</comment>
   </data>
-  <data name="1:Description,Action Output Parameter{be58538e-d1d2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+  <data name="1:Description,Action Output Parameter (Deprecated){be58538e-d1d2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
     <value>Active Action Output Parameters owned by me</value>
-    <comment>'Action Output Parameter' : Description for SavedQuery on Entity QueryId: '{be58538e-d1d2-e911-a81f-000d3a6d6cb7}'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : Description for SavedQuery on Entity QueryId: '{be58538e-d1d2-e911-a81f-000d3a6d6cb7}'</comment>
   </data>
-  <data name="1:Description,Action Output Parameter{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+  <data name="1:Description,Action Output Parameter (Deprecated){d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
     <value>A form for this entity.</value>
-    <comment>'Action Output Parameter' : Description for systemform in Entity FormXml ID: '{d4000272-4cda-436a-a678-cd3fe08ea2f6}'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : Description for systemform in Entity FormXml ID: '{d4000272-4cda-436a-a678-cd3fe08ea2f6}'</comment>
   </data>
-  <data name="1:Description,Macro Action Template{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}" xml:space="preserve">
+  <data name="1:Description,Macro Action Template (Deprecated){6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}" xml:space="preserve">
     <value>A form for this entity.</value>
-    <comment>'Macro Action Template' : Description for systemform in Entity FormXml ID: '{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : Description for systemform in Entity FormXml ID: '{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}'</comment>
   </data>
-  <data name="1:Description,Macro Action Template{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}" xml:space="preserve">
+  <data name="1:Description,Macro Action Template (Deprecated){ab5fc48b-29ce-e911-a81c-000d3afdb6f8}" xml:space="preserve">
     <value>Active Macro Action Templates owned by me</value>
-    <comment>'Macro Action Template' : Description for SavedQuery on Entity QueryId: '{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : Description for SavedQuery on Entity QueryId: '{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}'</comment>
   </data>
-  <data name="1:Description,Macro Connector{8c945d63-c3dd-e911-a81e-000d3af9c0c2}" xml:space="preserve">
+  <data name="1:Description,Macro Connector (Deprecated){8c945d63-c3dd-e911-a81e-000d3af9c0c2}" xml:space="preserve">
     <value>Active macroconnectors owned by me</value>
-    <comment>'Macro Connector' : Description for SavedQuery on Entity QueryId: '{8c945d63-c3dd-e911-a81e-000d3af9c0c2}'</comment>
+    <comment>'Macro Connector (Deprecated)' : Description for SavedQuery on Entity QueryId: '{8c945d63-c3dd-e911-a81e-000d3af9c0c2}'</comment>
   </data>
-  <data name="1:Description,Macro Connector{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+  <data name="1:Description,Macro Connector (Deprecated){d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
     <value>A form for this entity.</value>
-    <comment>'Macro Connector' : Description for systemform in Entity FormXml ID: '{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}'</comment>
+    <comment>'Macro Connector (Deprecated)' : Description for systemform in Entity FormXml ID: '{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}'</comment>
   </data>
   <data name="1:Description,Macro Run History{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}" xml:space="preserve">
     <value>A card form for this entity.</value>
@@ -228,13 +228,13 @@
     <value>A form for this entity.</value>
     <comment>'Macro Run History' : Description for systemform in Entity FormXml ID: '{47492cdb-57ca-4667-a741-35c34491b4f6}'</comment>
   </data>
-  <data name="1:Description,Macro Solution Configuration{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+  <data name="1:Description,Macro Solution Configuration (Deprecated){4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
     <value>A form for this entity.</value>
-    <comment>'Macro Solution Configuration' : Description for systemform in Entity FormXml ID: '{4c0f7a89-7e67-4972-828e-1244f593a422}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : Description for systemform in Entity FormXml ID: '{4c0f7a89-7e67-4972-828e-1244f593a422}'</comment>
   </data>
-  <data name="1:Description,Macro Solution Configuration{fe7078c7-dae0-e911-a81f-000d3af9c0c2}" xml:space="preserve">
+  <data name="1:Description,Macro Solution Configuration (Deprecated){fe7078c7-dae0-e911-a81f-000d3af9c0c2}" xml:space="preserve">
     <value>Active Macro Solution Configurations owned by me</value>
-    <comment>'Macro Solution Configuration' : Description for SavedQuery on Entity QueryId: '{fe7078c7-dae0-e911-a81f-000d3af9c0c2}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : Description for SavedQuery on Entity QueryId: '{fe7078c7-dae0-e911-a81f-000d3af9c0c2}'</comment>
   </data>
   <data name="1:Description,msdyn_actioninputparameterCreatedBy" xml:space="preserve">
     <value>Unique identifier of the user who created the record.</value>
@@ -1012,13 +1012,13 @@
     <value>Time zone code that was in use when the record was created.</value>
     <comment>'msdyn_parameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
-  <data name="1:Description,Parameter definition{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+  <data name="1:Description,Parameter definition (Deprecated){8c7626d7-ced2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
     <value>Active Parameter definitions owned by me</value>
-    <comment>'Parameter definition' : Description for SavedQuery on Entity QueryId: '{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}'</comment>
+    <comment>'Parameter definition (Deprecated)' : Description for SavedQuery on Entity QueryId: '{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}'</comment>
   </data>
-  <data name="1:Description,Parameter definition{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+  <data name="1:Description,Parameter definition (Deprecated){a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
     <value>A form for this entity.</value>
-    <comment>'Parameter definition' : Description for systemform in Entity FormXml ID: '{a1b84754-82c8-4d2e-afe6-bceae91df1ca}'</comment>
+    <comment>'Parameter definition (Deprecated)' : Description for systemform in Entity FormXml ID: '{a1b84754-82c8-4d2e-afe6-bceae91df1ca}'</comment>
   </data>
   <data name="1:Description,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
     <value>Lists down all the macros</value>
@@ -1780,165 +1780,165 @@
     <value>UTC Conversion Time Zone Code</value>
     <comment>'msdyn_parameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
-  <data name="1:label,Action Input Parameter{0bd71d1c-37a0-dc49-8c25-824416047271}" xml:space="preserve">
+  <data name="1:label,Action Input Parameter (Deprecated){0bd71d1c-37a0-dc49-8c25-824416047271}" xml:space="preserve">
     <value />
-    <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{0bd71d1c-37a0-dc49-8c25-824416047271}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : label for cell in Entity FormXml ID: '{0bd71d1c-37a0-dc49-8c25-824416047271}'</comment>
   </data>
-  <data name="1:label,Action Input Parameter{1db09e91-87dd-4114-9211-ec8dc43882c2}" xml:space="preserve">
+  <data name="1:label,Action Input Parameter (Deprecated){1db09e91-87dd-4114-9211-ec8dc43882c2}" xml:space="preserve">
     <value />
-    <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{1db09e91-87dd-4114-9211-ec8dc43882c2}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : label for cell in Entity FormXml ID: '{1db09e91-87dd-4114-9211-ec8dc43882c2}'</comment>
   </data>
-  <data name="1:label,Action Input Parameter{59f79de4-9448-47dc-957a-108da2c131e1}" xml:space="preserve">
+  <data name="1:label,Action Input Parameter (Deprecated){59f79de4-9448-47dc-957a-108da2c131e1}" xml:space="preserve">
     <value>General</value>
-    <comment>'Action Input Parameter' : label for tab in Entity FormXml ID: '{59f79de4-9448-47dc-957a-108da2c131e1}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : label for tab in Entity FormXml ID: '{59f79de4-9448-47dc-957a-108da2c131e1}'</comment>
   </data>
-  <data name="1:label,Action Input Parameter{8716236a-d69e-6a70-e474-5431a2c3a7a1}" xml:space="preserve">
+  <data name="1:label,Action Input Parameter (Deprecated){8716236a-d69e-6a70-e474-5431a2c3a7a1}" xml:space="preserve">
     <value />
-    <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{8716236a-d69e-6a70-e474-5431a2c3a7a1}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : label for cell in Entity FormXml ID: '{8716236a-d69e-6a70-e474-5431a2c3a7a1}'</comment>
   </data>
-  <data name="1:label,Action Input Parameter{a6c376e8-1a97-45f1-856f-fa3dbd5de8ef}" xml:space="preserve">
+  <data name="1:label,Action Input Parameter (Deprecated){a6c376e8-1a97-45f1-856f-fa3dbd5de8ef}" xml:space="preserve">
     <value>General</value>
-    <comment>'Action Input Parameter' : label for section in Entity FormXml ID: '{a6c376e8-1a97-45f1-856f-fa3dbd5de8ef}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : label for section in Entity FormXml ID: '{a6c376e8-1a97-45f1-856f-fa3dbd5de8ef}'</comment>
   </data>
-  <data name="1:label,Action Input Parameter{eca182a2-7198-417d-8c54-04fba492cd15}" xml:space="preserve">
+  <data name="1:label,Action Input Parameter (Deprecated){eca182a2-7198-417d-8c54-04fba492cd15}" xml:space="preserve">
     <value />
-    <comment>'Action Input Parameter' : label for cell in Entity FormXml ID: '{eca182a2-7198-417d-8c54-04fba492cd15}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : label for cell in Entity FormXml ID: '{eca182a2-7198-417d-8c54-04fba492cd15}'</comment>
   </data>
-  <data name="1:label,Action Output Parameter{85343452-c484-1dc3-6d73-32567eb03177}" xml:space="preserve">
+  <data name="1:label,Action Output Parameter (Deprecated){85343452-c484-1dc3-6d73-32567eb03177}" xml:space="preserve">
     <value />
-    <comment>'Action Output Parameter' : label for cell in Entity FormXml ID: '{85343452-c484-1dc3-6d73-32567eb03177}'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : label for cell in Entity FormXml ID: '{85343452-c484-1dc3-6d73-32567eb03177}'</comment>
   </data>
-  <data name="1:label,Action Output Parameter{c0fa2c66-22a1-4681-ae21-6d8441a2ab6e}" xml:space="preserve">
+  <data name="1:label,Action Output Parameter (Deprecated){c0fa2c66-22a1-4681-ae21-6d8441a2ab6e}" xml:space="preserve">
     <value>General</value>
-    <comment>'Action Output Parameter' : label for tab in Entity FormXml ID: '{c0fa2c66-22a1-4681-ae21-6d8441a2ab6e}'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : label for tab in Entity FormXml ID: '{c0fa2c66-22a1-4681-ae21-6d8441a2ab6e}'</comment>
   </data>
-  <data name="1:label,Action Output Parameter{c30d42c3-4d26-4042-8ed4-c811fd2cbd22}" xml:space="preserve">
+  <data name="1:label,Action Output Parameter (Deprecated){c30d42c3-4d26-4042-8ed4-c811fd2cbd22}" xml:space="preserve">
     <value />
-    <comment>'Action Output Parameter' : label for cell in Entity FormXml ID: '{c30d42c3-4d26-4042-8ed4-c811fd2cbd22}'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : label for cell in Entity FormXml ID: '{c30d42c3-4d26-4042-8ed4-c811fd2cbd22}'</comment>
   </data>
-  <data name="1:label,Action Output Parameter{f34c8ea0-1c79-4f91-b7e8-0a559dd875b1}" xml:space="preserve">
+  <data name="1:label,Action Output Parameter (Deprecated){f34c8ea0-1c79-4f91-b7e8-0a559dd875b1}" xml:space="preserve">
     <value />
-    <comment>'Action Output Parameter' : label for cell in Entity FormXml ID: '{f34c8ea0-1c79-4f91-b7e8-0a559dd875b1}'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : label for cell in Entity FormXml ID: '{f34c8ea0-1c79-4f91-b7e8-0a559dd875b1}'</comment>
   </data>
-  <data name="1:label,Action Output Parameter{f46781d7-e36b-43b2-9c10-f210b21462e2}" xml:space="preserve">
+  <data name="1:label,Action Output Parameter (Deprecated){f46781d7-e36b-43b2-9c10-f210b21462e2}" xml:space="preserve">
     <value>General</value>
-    <comment>'Action Output Parameter' : label for section in Entity FormXml ID: '{f46781d7-e36b-43b2-9c10-f210b21462e2}'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : label for section in Entity FormXml ID: '{f46781d7-e36b-43b2-9c10-f210b21462e2}'</comment>
   </data>
-  <data name="1:label,Macro Action Template{293c9227-65a0-41d0-ba6f-b4b875af8484}" xml:space="preserve">
+  <data name="1:label,Macro Action Template (Deprecated){293c9227-65a0-41d0-ba6f-b4b875af8484}" xml:space="preserve">
     <value>Kind</value>
-    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{293c9227-65a0-41d0-ba6f-b4b875af8484}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : label for cell in Entity FormXml ID: '{293c9227-65a0-41d0-ba6f-b4b875af8484}'</comment>
   </data>
-  <data name="1:label,Macro Action Template{3505e37b-e0e0-4ee6-833a-8607177c16aa}" xml:space="preserve">
+  <data name="1:label,Macro Action Template (Deprecated){3505e37b-e0e0-4ee6-833a-8607177c16aa}" xml:space="preserve">
     <value />
-    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{3505e37b-e0e0-4ee6-833a-8607177c16aa}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : label for cell in Entity FormXml ID: '{3505e37b-e0e0-4ee6-833a-8607177c16aa}'</comment>
   </data>
-  <data name="1:label,Macro Action Template{4cb0cce6-d65c-3822-3bb0-91b73c25cd0b}" xml:space="preserve">
+  <data name="1:label,Macro Action Template (Deprecated){4cb0cce6-d65c-3822-3bb0-91b73c25cd0b}" xml:space="preserve">
     <value />
-    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{4cb0cce6-d65c-3822-3bb0-91b73c25cd0b}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : label for cell in Entity FormXml ID: '{4cb0cce6-d65c-3822-3bb0-91b73c25cd0b}'</comment>
   </data>
-  <data name="1:label,Macro Action Template{745b027e-644b-4c55-4260-c8c4eac84cc6}" xml:space="preserve">
+  <data name="1:label,Macro Action Template (Deprecated){745b027e-644b-4c55-4260-c8c4eac84cc6}" xml:space="preserve">
     <value />
-    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{745b027e-644b-4c55-4260-c8c4eac84cc6}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : label for cell in Entity FormXml ID: '{745b027e-644b-4c55-4260-c8c4eac84cc6}'</comment>
   </data>
-  <data name="1:label,Macro Action Template{842e8684-f6c1-4495-9c20-679734e10d10}" xml:space="preserve">
+  <data name="1:label,Macro Action Template (Deprecated){842e8684-f6c1-4495-9c20-679734e10d10}" xml:space="preserve">
     <value>General</value>
-    <comment>'Macro Action Template' : label for tab in Entity FormXml ID: '{842e8684-f6c1-4495-9c20-679734e10d10}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : label for tab in Entity FormXml ID: '{842e8684-f6c1-4495-9c20-679734e10d10}'</comment>
   </data>
-  <data name="1:label,Macro Action Template{8a8ddc6a-b153-ce74-1256-8cea656447e3}" xml:space="preserve">
+  <data name="1:label,Macro Action Template (Deprecated){8a8ddc6a-b153-ce74-1256-8cea656447e3}" xml:space="preserve">
     <value />
-    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{8a8ddc6a-b153-ce74-1256-8cea656447e3}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : label for cell in Entity FormXml ID: '{8a8ddc6a-b153-ce74-1256-8cea656447e3}'</comment>
   </data>
-  <data name="1:label,Macro Action Template{a4341c8f-be9d-4e30-b2dd-a98c437f943a}" xml:space="preserve">
+  <data name="1:label,Macro Action Template (Deprecated){a4341c8f-be9d-4e30-b2dd-a98c437f943a}" xml:space="preserve">
     <value>General</value>
-    <comment>'Macro Action Template' : label for section in Entity FormXml ID: '{a4341c8f-be9d-4e30-b2dd-a98c437f943a}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : label for section in Entity FormXml ID: '{a4341c8f-be9d-4e30-b2dd-a98c437f943a}'</comment>
   </data>
-  <data name="1:label,Macro Action Template{ae619791-7ccc-6c47-2469-50d422be151c}" xml:space="preserve">
+  <data name="1:label,Macro Action Template (Deprecated){ae619791-7ccc-6c47-2469-50d422be151c}" xml:space="preserve">
     <value />
-    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{ae619791-7ccc-6c47-2469-50d422be151c}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : label for cell in Entity FormXml ID: '{ae619791-7ccc-6c47-2469-50d422be151c}'</comment>
   </data>
-  <data name="1:label,Macro Action Template{c6bbb736-1759-6d58-508d-c277bdcb1209}" xml:space="preserve">
+  <data name="1:label,Macro Action Template (Deprecated){c6bbb736-1759-6d58-508d-c277bdcb1209}" xml:space="preserve">
     <value />
-    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{c6bbb736-1759-6d58-508d-c277bdcb1209}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : label for cell in Entity FormXml ID: '{c6bbb736-1759-6d58-508d-c277bdcb1209}'</comment>
   </data>
-  <data name="1:label,Macro Action Template{d431e2bb-2356-1dba-9638-676b3902e396}" xml:space="preserve">
+  <data name="1:label,Macro Action Template (Deprecated){d431e2bb-2356-1dba-9638-676b3902e396}" xml:space="preserve">
     <value />
-    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{d431e2bb-2356-1dba-9638-676b3902e396}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : label for cell in Entity FormXml ID: '{d431e2bb-2356-1dba-9638-676b3902e396}'</comment>
   </data>
-  <data name="1:label,Macro Action Template{dffe237b-b08c-41d6-a59d-2dd80d65bca9}" xml:space="preserve">
+  <data name="1:label,Macro Action Template (Deprecated){dffe237b-b08c-41d6-a59d-2dd80d65bca9}" xml:space="preserve">
     <value />
-    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{dffe237b-b08c-41d6-a59d-2dd80d65bca9}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : label for cell in Entity FormXml ID: '{dffe237b-b08c-41d6-a59d-2dd80d65bca9}'</comment>
   </data>
-  <data name="1:label,Macro Action Template{e4ea49e5-4d75-7ee6-e6da-e06e74bab620}" xml:space="preserve">
+  <data name="1:label,Macro Action Template (Deprecated){e4ea49e5-4d75-7ee6-e6da-e06e74bab620}" xml:space="preserve">
     <value />
-    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{e4ea49e5-4d75-7ee6-e6da-e06e74bab620}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : label for cell in Entity FormXml ID: '{e4ea49e5-4d75-7ee6-e6da-e06e74bab620}'</comment>
   </data>
-  <data name="1:label,Macro Action Template{e6413e3c-d426-4c99-be2f-9241f99c4122}" xml:space="preserve">
+  <data name="1:label,Macro Action Template (Deprecated){e6413e3c-d426-4c99-be2f-9241f99c4122}" xml:space="preserve">
     <value />
-    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{e6413e3c-d426-4c99-be2f-9241f99c4122}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : label for cell in Entity FormXml ID: '{e6413e3c-d426-4c99-be2f-9241f99c4122}'</comment>
   </data>
-  <data name="1:label,Macro Action Template{f5ea473e-8d09-4798-b801-b56fbbbe1238}" xml:space="preserve">
+  <data name="1:label,Macro Action Template (Deprecated){f5ea473e-8d09-4798-b801-b56fbbbe1238}" xml:space="preserve">
     <value />
-    <comment>'Macro Action Template' : label for cell in Entity FormXml ID: '{f5ea473e-8d09-4798-b801-b56fbbbe1238}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : label for cell in Entity FormXml ID: '{f5ea473e-8d09-4798-b801-b56fbbbe1238}'</comment>
   </data>
-  <data name="1:label,Macro Connector{099062b1-cd1c-47a7-7c27-1803b509cb3e}" xml:space="preserve">
+  <data name="1:label,Macro Connector (Deprecated){099062b1-cd1c-47a7-7c27-1803b509cb3e}" xml:space="preserve">
     <value />
-    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{099062b1-cd1c-47a7-7c27-1803b509cb3e}'</comment>
+    <comment>'Macro Connector (Deprecated)' : label for cell in Entity FormXml ID: '{099062b1-cd1c-47a7-7c27-1803b509cb3e}'</comment>
   </data>
-  <data name="1:label,Macro Connector{33deeba5-04ad-d3a9-5ae4-9674d18831b1}" xml:space="preserve">
+  <data name="1:label,Macro Connector (Deprecated){33deeba5-04ad-d3a9-5ae4-9674d18831b1}" xml:space="preserve">
     <value />
-    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{33deeba5-04ad-d3a9-5ae4-9674d18831b1}'</comment>
+    <comment>'Macro Connector (Deprecated)' : label for cell in Entity FormXml ID: '{33deeba5-04ad-d3a9-5ae4-9674d18831b1}'</comment>
   </data>
-  <data name="1:label,Macro Connector{3bb2ebc7-c568-e709-200b-c879d3c071c1}" xml:space="preserve">
+  <data name="1:label,Macro Connector (Deprecated){3bb2ebc7-c568-e709-200b-c879d3c071c1}" xml:space="preserve">
     <value>Prefix</value>
-    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{3bb2ebc7-c568-e709-200b-c879d3c071c1}'</comment>
+    <comment>'Macro Connector (Deprecated)' : label for cell in Entity FormXml ID: '{3bb2ebc7-c568-e709-200b-c879d3c071c1}'</comment>
   </data>
-  <data name="1:label,Macro Connector{40ed711e-a9da-457e-a3cb-2b6ead26a421}" xml:space="preserve">
+  <data name="1:label,Macro Connector (Deprecated){40ed711e-a9da-457e-a3cb-2b6ead26a421}" xml:space="preserve">
     <value />
-    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{40ed711e-a9da-457e-a3cb-2b6ead26a421}'</comment>
+    <comment>'Macro Connector (Deprecated)' : label for cell in Entity FormXml ID: '{40ed711e-a9da-457e-a3cb-2b6ead26a421}'</comment>
   </data>
-  <data name="1:label,Macro Connector{45a6d044-27d6-9ac7-b8a2-5ba21c4d0d98}" xml:space="preserve">
+  <data name="1:label,Macro Connector (Deprecated){45a6d044-27d6-9ac7-b8a2-5ba21c4d0d98}" xml:space="preserve">
     <value />
-    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{45a6d044-27d6-9ac7-b8a2-5ba21c4d0d98}'</comment>
+    <comment>'Macro Connector (Deprecated)' : label for cell in Entity FormXml ID: '{45a6d044-27d6-9ac7-b8a2-5ba21c4d0d98}'</comment>
   </data>
-  <data name="1:label,Macro Connector{4e98b137-b949-441b-5210-9170ac39c993}" xml:space="preserve">
+  <data name="1:label,Macro Connector (Deprecated){4e98b137-b949-441b-5210-9170ac39c993}" xml:space="preserve">
     <value />
-    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{4e98b137-b949-441b-5210-9170ac39c993}'</comment>
+    <comment>'Macro Connector (Deprecated)' : label for cell in Entity FormXml ID: '{4e98b137-b949-441b-5210-9170ac39c993}'</comment>
   </data>
-  <data name="1:label,Macro Connector{51892293-3a82-8a72-e0c8-3bcbdb879cea}" xml:space="preserve">
+  <data name="1:label,Macro Connector (Deprecated){51892293-3a82-8a72-e0c8-3bcbdb879cea}" xml:space="preserve">
     <value />
-    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{51892293-3a82-8a72-e0c8-3bcbdb879cea}'</comment>
+    <comment>'Macro Connector (Deprecated)' : label for cell in Entity FormXml ID: '{51892293-3a82-8a72-e0c8-3bcbdb879cea}'</comment>
   </data>
-  <data name="1:label,Macro Connector{52ce6d0e-b08b-6392-c615-2712d1dacbb6}" xml:space="preserve">
+  <data name="1:label,Macro Connector (Deprecated){52ce6d0e-b08b-6392-c615-2712d1dacbb6}" xml:space="preserve">
     <value />
-    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{52ce6d0e-b08b-6392-c615-2712d1dacbb6}'</comment>
+    <comment>'Macro Connector (Deprecated)' : label for cell in Entity FormXml ID: '{52ce6d0e-b08b-6392-c615-2712d1dacbb6}'</comment>
   </data>
-  <data name="1:label,Macro Connector{670bc1ee-710d-1194-6e55-9046523de5d6}" xml:space="preserve">
+  <data name="1:label,Macro Connector (Deprecated){670bc1ee-710d-1194-6e55-9046523de5d6}" xml:space="preserve">
     <value />
-    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{670bc1ee-710d-1194-6e55-9046523de5d6}'</comment>
+    <comment>'Macro Connector (Deprecated)' : label for cell in Entity FormXml ID: '{670bc1ee-710d-1194-6e55-9046523de5d6}'</comment>
   </data>
-  <data name="1:label,Macro Connector{6b36ba6e-da05-5b44-41c4-546aa45e317d}" xml:space="preserve">
+  <data name="1:label,Macro Connector (Deprecated){6b36ba6e-da05-5b44-41c4-546aa45e317d}" xml:space="preserve">
     <value>Callback</value>
-    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{6b36ba6e-da05-5b44-41c4-546aa45e317d}'</comment>
+    <comment>'Macro Connector (Deprecated)' : label for cell in Entity FormXml ID: '{6b36ba6e-da05-5b44-41c4-546aa45e317d}'</comment>
   </data>
-  <data name="1:label,Macro Connector{8eac758a-1050-11ea-8d71-362b9e155667}" xml:space="preserve">
+  <data name="1:label,Macro Connector (Deprecated){8eac758a-1050-11ea-8d71-362b9e155667}" xml:space="preserve">
     <value>Webresource Name</value>
-    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{8eac758a-1050-11ea-8d71-362b9e155667}'</comment>
+    <comment>'Macro Connector (Deprecated)' : label for cell in Entity FormXml ID: '{8eac758a-1050-11ea-8d71-362b9e155667}'</comment>
   </data>
-  <data name="1:label,Macro Connector{c53f9008-ccce-483f-9bd3-136ff1967976}" xml:space="preserve">
+  <data name="1:label,Macro Connector (Deprecated){c53f9008-ccce-483f-9bd3-136ff1967976}" xml:space="preserve">
     <value>General</value>
-    <comment>'Macro Connector' : label for section in Entity FormXml ID: '{c53f9008-ccce-483f-9bd3-136ff1967976}'</comment>
+    <comment>'Macro Connector (Deprecated)' : label for section in Entity FormXml ID: '{c53f9008-ccce-483f-9bd3-136ff1967976}'</comment>
   </data>
-  <data name="1:label,Macro Connector{dd8fc39a-56dd-4b2c-bb8e-e2cc4a1f21e7}" xml:space="preserve">
+  <data name="1:label,Macro Connector (Deprecated){dd8fc39a-56dd-4b2c-bb8e-e2cc4a1f21e7}" xml:space="preserve">
     <value />
-    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{dd8fc39a-56dd-4b2c-bb8e-e2cc4a1f21e7}'</comment>
+    <comment>'Macro Connector (Deprecated)' : label for cell in Entity FormXml ID: '{dd8fc39a-56dd-4b2c-bb8e-e2cc4a1f21e7}'</comment>
   </data>
-  <data name="1:label,Macro Connector{e3149089-9571-4482-abfc-231d6899cee1}" xml:space="preserve">
+  <data name="1:label,Macro Connector (Deprecated){e3149089-9571-4482-abfc-231d6899cee1}" xml:space="preserve">
     <value>General</value>
-    <comment>'Macro Connector' : label for tab in Entity FormXml ID: '{e3149089-9571-4482-abfc-231d6899cee1}'</comment>
+    <comment>'Macro Connector (Deprecated)' : label for tab in Entity FormXml ID: '{e3149089-9571-4482-abfc-231d6899cee1}'</comment>
   </data>
-  <data name="1:label,Macro Connector{e487c9e3-6bee-dd35-ca00-1d3189b95bc5}" xml:space="preserve">
+  <data name="1:label,Macro Connector (Deprecated){e487c9e3-6bee-dd35-ca00-1d3189b95bc5}" xml:space="preserve">
     <value />
-    <comment>'Macro Connector' : label for cell in Entity FormXml ID: '{e487c9e3-6bee-dd35-ca00-1d3189b95bc5}'</comment>
+    <comment>'Macro Connector (Deprecated)' : label for cell in Entity FormXml ID: '{e487c9e3-6bee-dd35-ca00-1d3189b95bc5}'</comment>
   </data>
   <data name="1:label,Macro Run History{050e1060-85ad-433d-b8b4-408f646d9d46}" xml:space="preserve">
     <value>Footer</value>
@@ -2024,57 +2024,57 @@
     <value>Name</value>
     <comment>'Macro Run History' : label for cell in Entity FormXml ID: '{fe6efbe2-c00a-4b1e-8b40-dc639a12e9c6}'</comment>
   </data>
-  <data name="1:label,Macro Solution Configuration{10fd4277-739b-47a9-9b1f-5db4d467a93e}" xml:space="preserve">
+  <data name="1:label,Macro Solution Configuration (Deprecated){10fd4277-739b-47a9-9b1f-5db4d467a93e}" xml:space="preserve">
     <value />
-    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{10fd4277-739b-47a9-9b1f-5db4d467a93e}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : label for cell in Entity FormXml ID: '{10fd4277-739b-47a9-9b1f-5db4d467a93e}'</comment>
   </data>
-  <data name="1:label,Macro Solution Configuration{21ea3c85-489b-4dcf-9ac6-b5bede827eb2}" xml:space="preserve">
+  <data name="1:label,Macro Solution Configuration (Deprecated){21ea3c85-489b-4dcf-9ac6-b5bede827eb2}" xml:space="preserve">
     <value>General</value>
-    <comment>'Macro Solution Configuration' : label for section in Entity FormXml ID: '{21ea3c85-489b-4dcf-9ac6-b5bede827eb2}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : label for section in Entity FormXml ID: '{21ea3c85-489b-4dcf-9ac6-b5bede827eb2}'</comment>
   </data>
-  <data name="1:label,Macro Solution Configuration{430e9a47-ba6c-9b31-911d-20de9a6d9da0}" xml:space="preserve">
+  <data name="1:label,Macro Solution Configuration (Deprecated){430e9a47-ba6c-9b31-911d-20de9a6d9da0}" xml:space="preserve">
     <value />
-    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{430e9a47-ba6c-9b31-911d-20de9a6d9da0}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : label for cell in Entity FormXml ID: '{430e9a47-ba6c-9b31-911d-20de9a6d9da0}'</comment>
   </data>
-  <data name="1:label,Macro Solution Configuration{478527c1-1de8-7686-c613-0260ca951521}" xml:space="preserve">
+  <data name="1:label,Macro Solution Configuration (Deprecated){478527c1-1de8-7686-c613-0260ca951521}" xml:space="preserve">
     <value />
-    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{478527c1-1de8-7686-c613-0260ca951521}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : label for cell in Entity FormXml ID: '{478527c1-1de8-7686-c613-0260ca951521}'</comment>
   </data>
-  <data name="1:label,Macro Solution Configuration{73979e36-2019-d539-699c-1c307b1e6e74}" xml:space="preserve">
+  <data name="1:label,Macro Solution Configuration (Deprecated){73979e36-2019-d539-699c-1c307b1e6e74}" xml:space="preserve">
     <value />
-    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{73979e36-2019-d539-699c-1c307b1e6e74}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : label for cell in Entity FormXml ID: '{73979e36-2019-d539-699c-1c307b1e6e74}'</comment>
   </data>
-  <data name="1:label,Macro Solution Configuration{960171e4-d16e-4638-b6c5-6efff843081a}" xml:space="preserve">
+  <data name="1:label,Macro Solution Configuration (Deprecated){960171e4-d16e-4638-b6c5-6efff843081a}" xml:space="preserve">
     <value />
-    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{960171e4-d16e-4638-b6c5-6efff843081a}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : label for cell in Entity FormXml ID: '{960171e4-d16e-4638-b6c5-6efff843081a}'</comment>
   </data>
-  <data name="1:label,Macro Solution Configuration{a8f02afc-4385-49e2-a304-196d5fae8ebb}" xml:space="preserve">
+  <data name="1:label,Macro Solution Configuration (Deprecated){a8f02afc-4385-49e2-a304-196d5fae8ebb}" xml:space="preserve">
     <value />
-    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{a8f02afc-4385-49e2-a304-196d5fae8ebb}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : label for cell in Entity FormXml ID: '{a8f02afc-4385-49e2-a304-196d5fae8ebb}'</comment>
   </data>
-  <data name="1:label,Macro Solution Configuration{b2ce2821-bb29-1777-b8a8-d6c78ec06959}" xml:space="preserve">
+  <data name="1:label,Macro Solution Configuration (Deprecated){b2ce2821-bb29-1777-b8a8-d6c78ec06959}" xml:space="preserve">
     <value />
-    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{b2ce2821-bb29-1777-b8a8-d6c78ec06959}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : label for cell in Entity FormXml ID: '{b2ce2821-bb29-1777-b8a8-d6c78ec06959}'</comment>
   </data>
-  <data name="1:label,Macro Solution Configuration{ba5af261-d010-4e61-8524-6bcd6abe5a50}" xml:space="preserve">
+  <data name="1:label,Macro Solution Configuration (Deprecated){ba5af261-d010-4e61-8524-6bcd6abe5a50}" xml:space="preserve">
     <value />
-    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{ba5af261-d010-4e61-8524-6bcd6abe5a50}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : label for cell in Entity FormXml ID: '{ba5af261-d010-4e61-8524-6bcd6abe5a50}'</comment>
   </data>
-  <data name="1:label,Macro Solution Configuration{c36ecd71-699d-4768-ae15-d805513a0731}" xml:space="preserve">
+  <data name="1:label,Macro Solution Configuration (Deprecated){c36ecd71-699d-4768-ae15-d805513a0731}" xml:space="preserve">
     <value />
-    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{c36ecd71-699d-4768-ae15-d805513a0731}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : label for cell in Entity FormXml ID: '{c36ecd71-699d-4768-ae15-d805513a0731}'</comment>
   </data>
-  <data name="1:label,Macro Solution Configuration{c68ca0e7-905f-44f9-b782-41b98c85cff3}" xml:space="preserve">
+  <data name="1:label,Macro Solution Configuration (Deprecated){c68ca0e7-905f-44f9-b782-41b98c85cff3}" xml:space="preserve">
     <value />
-    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{c68ca0e7-905f-44f9-b782-41b98c85cff3}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : label for cell in Entity FormXml ID: '{c68ca0e7-905f-44f9-b782-41b98c85cff3}'</comment>
   </data>
-  <data name="1:label,Macro Solution Configuration{d5997eca-5e6d-4b94-b8a2-ba31f6bdab73}" xml:space="preserve">
+  <data name="1:label,Macro Solution Configuration (Deprecated){d5997eca-5e6d-4b94-b8a2-ba31f6bdab73}" xml:space="preserve">
     <value />
-    <comment>'Macro Solution Configuration' : label for cell in Entity FormXml ID: '{d5997eca-5e6d-4b94-b8a2-ba31f6bdab73}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : label for cell in Entity FormXml ID: '{d5997eca-5e6d-4b94-b8a2-ba31f6bdab73}'</comment>
   </data>
-  <data name="1:label,Macro Solution Configuration{def751e7-13fb-4ae7-a5b9-12030a58e054}" xml:space="preserve">
+  <data name="1:label,Macro Solution Configuration (Deprecated){def751e7-13fb-4ae7-a5b9-12030a58e054}" xml:space="preserve">
     <value>General</value>
-    <comment>'Macro Solution Configuration' : label for tab in Entity FormXml ID: '{def751e7-13fb-4ae7-a5b9-12030a58e054}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : label for tab in Entity FormXml ID: '{def751e7-13fb-4ae7-a5b9-12030a58e054}'</comment>
   </data>
   <data name="1:label,msdyn_actioninputparametermsdyn_actioninputparameter_msdyn_parametertype0" xml:space="preserve">
     <value>Optional</value>
@@ -2196,56 +2196,56 @@
     <value>Inactive</value>
     <comment>'msdyn_parameterdefinition' : label for status '2' on Entity</comment>
   </data>
-  <data name="1:label,Parameter definition{24d326cb-c8c9-48d3-852d-18543ba33602}" xml:space="preserve">
+  <data name="1:label,Parameter definition (Deprecated){24d326cb-c8c9-48d3-852d-18543ba33602}" xml:space="preserve">
     <value>General</value>
-    <comment>'Parameter definition' : label for tab in Entity FormXml ID: '{24d326cb-c8c9-48d3-852d-18543ba33602}'</comment>
+    <comment>'Parameter definition (Deprecated)' : label for tab in Entity FormXml ID: '{24d326cb-c8c9-48d3-852d-18543ba33602}'</comment>
   </data>
-  <data name="1:label,Parameter definition{35e27720-bc40-55a5-1cb0-2a91121ee4ae}" xml:space="preserve">
+  <data name="1:label,Parameter definition (Deprecated){35e27720-bc40-55a5-1cb0-2a91121ee4ae}" xml:space="preserve">
     <value />
-    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{35e27720-bc40-55a5-1cb0-2a91121ee4ae}'</comment>
+    <comment>'Parameter definition (Deprecated)' : label for cell in Entity FormXml ID: '{35e27720-bc40-55a5-1cb0-2a91121ee4ae}'</comment>
   </data>
-  <data name="1:label,Parameter definition{4efc7cfa-2742-4026-b4b1-ee517663dcb6}" xml:space="preserve">
+  <data name="1:label,Parameter definition (Deprecated){4efc7cfa-2742-4026-b4b1-ee517663dcb6}" xml:space="preserve">
     <value />
-    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{4efc7cfa-2742-4026-b4b1-ee517663dcb6}'</comment>
+    <comment>'Parameter definition (Deprecated)' : label for cell in Entity FormXml ID: '{4efc7cfa-2742-4026-b4b1-ee517663dcb6}'</comment>
   </data>
-  <data name="1:label,Parameter definition{61aea276-465a-b471-4133-acad2b8644cc}" xml:space="preserve">
+  <data name="1:label,Parameter definition (Deprecated){61aea276-465a-b471-4133-acad2b8644cc}" xml:space="preserve">
     <value />
-    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{61aea276-465a-b471-4133-acad2b8644cc}'</comment>
+    <comment>'Parameter definition (Deprecated)' : label for cell in Entity FormXml ID: '{61aea276-465a-b471-4133-acad2b8644cc}'</comment>
   </data>
-  <data name="1:label,Parameter definition{65474f61-b687-41c1-aa88-34e4cc02431f}" xml:space="preserve">
+  <data name="1:label,Parameter definition (Deprecated){65474f61-b687-41c1-aa88-34e4cc02431f}" xml:space="preserve">
     <value />
-    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{65474f61-b687-41c1-aa88-34e4cc02431f}'</comment>
+    <comment>'Parameter definition (Deprecated)' : label for cell in Entity FormXml ID: '{65474f61-b687-41c1-aa88-34e4cc02431f}'</comment>
   </data>
-  <data name="1:label,Parameter definition{672695b5-9003-4ef2-b2c0-fc9c15663ae2}" xml:space="preserve">
+  <data name="1:label,Parameter definition (Deprecated){672695b5-9003-4ef2-b2c0-fc9c15663ae2}" xml:space="preserve">
     <value>General</value>
-    <comment>'Parameter definition' : label for section in Entity FormXml ID: '{672695b5-9003-4ef2-b2c0-fc9c15663ae2}'</comment>
+    <comment>'Parameter definition (Deprecated)' : label for section in Entity FormXml ID: '{672695b5-9003-4ef2-b2c0-fc9c15663ae2}'</comment>
   </data>
-  <data name="1:label,Parameter definition{e3574eb9-e537-76ed-c9ea-378b0402deda}" xml:space="preserve">
+  <data name="1:label,Parameter definition (Deprecated){e3574eb9-e537-76ed-c9ea-378b0402deda}" xml:space="preserve">
     <value />
-    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{e3574eb9-e537-76ed-c9ea-378b0402deda}'</comment>
+    <comment>'Parameter definition (Deprecated)' : label for cell in Entity FormXml ID: '{e3574eb9-e537-76ed-c9ea-378b0402deda}'</comment>
   </data>
-  <data name="1:label,Parameter definition{e4d19051-6d96-43b5-84b4-dd8b8f7524d5}" xml:space="preserve">
+  <data name="1:label,Parameter definition (Deprecated){e4d19051-6d96-43b5-84b4-dd8b8f7524d5}" xml:space="preserve">
     <value />
-    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{e4d19051-6d96-43b5-84b4-dd8b8f7524d5}'</comment>
+    <comment>'Parameter definition (Deprecated)' : label for cell in Entity FormXml ID: '{e4d19051-6d96-43b5-84b4-dd8b8f7524d5}'</comment>
   </data>
-  <data name="1:label,Parameter definition{e78b8199-d1cd-2311-5e67-a36565a7494a}" xml:space="preserve">
+  <data name="1:label,Parameter definition (Deprecated){e78b8199-d1cd-2311-5e67-a36565a7494a}" xml:space="preserve">
     <value />
-    <comment>'Parameter definition' : label for cell in Entity FormXml ID: '{e78b8199-d1cd-2311-5e67-a36565a7494a}'</comment>
+    <comment>'Parameter definition (Deprecated)' : label for cell in Entity FormXml ID: '{e78b8199-d1cd-2311-5e67-a36565a7494a}'</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
-    <value>Action Input Parameters</value>
+    <value>Action Input Parameters (Deprecated)</value>
     <comment> 'msdyn_actioninputparameter' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_actionoutputparameterentitymsdyn_actionoutputparameter" xml:space="preserve">
-    <value>Action Output Parameters</value>
+    <value>Action Output Parameters (Deprecated)</value>
     <comment> 'msdyn_actionoutputparameter' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" xml:space="preserve">
-    <value>Macro Action Templates</value>
+    <value>Macro Action Templates (Deprecated)</value>
     <comment> 'msdyn_macroactiontemplate' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_macroconnectorentitymsdyn_macroconnector" xml:space="preserve">
-    <value>macroconnectors</value>
+    <value>macroconnectors (Deprecated)</value>
     <comment> 'msdyn_macroconnector' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_macrosessionentitymsdyn_macrosession" xml:space="preserve">
@@ -2253,140 +2253,140 @@
     <comment> 'msdyn_macrosession' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" xml:space="preserve">
-    <value>Macro Solution Configurations</value>
+    <value>Macro Solution Configurations (Deprecated)</value>
     <comment> 'msdyn_macrosolutionconfiguration' : LocalizedCollectionName for Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_parameterdefinitionentitymsdyn_parameterdefinition" xml:space="preserve">
-    <value>Parameter definitions</value>
+    <value>Parameter definitions (Deprecated)</value>
     <comment> 'msdyn_parameterdefinition' : LocalizedCollectionName for Entity</comment>
   </data>
-  <data name="1:LocalizedName,Action Input Parameter{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Input Parameter (Deprecated){15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
     <value>Information</value>
-    <comment>'Action Input Parameter' : LocalizedName for systemform in Entity FormXml ID: '{15079f0d-d34e-4cad-9fa3-a1fab0783eac}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : LocalizedName for systemform in Entity FormXml ID: '{15079f0d-d34e-4cad-9fa3-a1fab0783eac}'</comment>
   </data>
-  <data name="1:LocalizedName,Action Input Parameter{220c95e7-e853-4196-bcf5-0195392aae41}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Input Parameter (Deprecated){220c95e7-e853-4196-bcf5-0195392aae41}" xml:space="preserve">
     <value>Action Input Parameter Lookup View</value>
-    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{220c95e7-e853-4196-bcf5-0195392aae41}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{220c95e7-e853-4196-bcf5-0195392aae41}'</comment>
   </data>
-  <data name="1:LocalizedName,Action Input Parameter{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Input Parameter (Deprecated){26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
     <value>My Action Input Parameters</value>
-    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{26a3aefa-ccd2-e911-a81f-000d3a6d6cb7}'</comment>
   </data>
-  <data name="1:LocalizedName,Action Input Parameter{5b965e27-ff23-48cc-9fa8-5f870282d801}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Input Parameter (Deprecated){5b965e27-ff23-48cc-9fa8-5f870282d801}" xml:space="preserve">
     <value>Inactive Action Input Parameters</value>
-    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{5b965e27-ff23-48cc-9fa8-5f870282d801}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{5b965e27-ff23-48cc-9fa8-5f870282d801}'</comment>
   </data>
-  <data name="1:LocalizedName,Action Input Parameter{641c26b7-2180-4bd6-86e0-ae67d20f87be}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Input Parameter (Deprecated){641c26b7-2180-4bd6-86e0-ae67d20f87be}" xml:space="preserve">
     <value>Action Input Parameter Associated View</value>
-    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{641c26b7-2180-4bd6-86e0-ae67d20f87be}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{641c26b7-2180-4bd6-86e0-ae67d20f87be}'</comment>
   </data>
-  <data name="1:LocalizedName,Action Input Parameter{68335c03-9c8e-4941-b3de-3117bba3e5fb}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Input Parameter (Deprecated){68335c03-9c8e-4941-b3de-3117bba3e5fb}" xml:space="preserve">
     <value>Active Action Input Parameters</value>
-    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{68335c03-9c8e-4941-b3de-3117bba3e5fb}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{68335c03-9c8e-4941-b3de-3117bba3e5fb}'</comment>
   </data>
-  <data name="1:LocalizedName,Action Input Parameter{a3cd66c8-212c-4117-a9ec-fe905795224a}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Input Parameter (Deprecated){a3cd66c8-212c-4117-a9ec-fe905795224a}" xml:space="preserve">
     <value>Quick Find Active Action Input Parameters</value>
-    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{a3cd66c8-212c-4117-a9ec-fe905795224a}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{a3cd66c8-212c-4117-a9ec-fe905795224a}'</comment>
   </data>
-  <data name="1:LocalizedName,Action Input Parameter{b3c85675-a1cb-4508-a0b8-bc9c15eaa6f9}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Input Parameter (Deprecated){b3c85675-a1cb-4508-a0b8-bc9c15eaa6f9}" xml:space="preserve">
     <value>Action Input Parameter Advanced Find View</value>
-    <comment>'Action Input Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{b3c85675-a1cb-4508-a0b8-bc9c15eaa6f9}'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{b3c85675-a1cb-4508-a0b8-bc9c15eaa6f9}'</comment>
   </data>
-  <data name="1:LocalizedName,Action Output Parameter{358d764d-f167-46f4-864c-f147de16f5a4}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Output Parameter (Deprecated){358d764d-f167-46f4-864c-f147de16f5a4}" xml:space="preserve">
     <value>Action Output Parameter Associated View</value>
-    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{358d764d-f167-46f4-864c-f147de16f5a4}'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{358d764d-f167-46f4-864c-f147de16f5a4}'</comment>
   </data>
-  <data name="1:LocalizedName,Action Output Parameter{5557f657-0457-4b1b-bef5-b3a20a701cd6}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Output Parameter (Deprecated){5557f657-0457-4b1b-bef5-b3a20a701cd6}" xml:space="preserve">
     <value>Active Action Output Parameters</value>
-    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{5557f657-0457-4b1b-bef5-b3a20a701cd6}'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{5557f657-0457-4b1b-bef5-b3a20a701cd6}'</comment>
   </data>
-  <data name="1:LocalizedName,Action Output Parameter{81a129b3-29df-4bbb-827b-37b6747f8e9b}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Output Parameter (Deprecated){81a129b3-29df-4bbb-827b-37b6747f8e9b}" xml:space="preserve">
     <value>Quick Find Active Action Output Parameters</value>
-    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{81a129b3-29df-4bbb-827b-37b6747f8e9b}'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{81a129b3-29df-4bbb-827b-37b6747f8e9b}'</comment>
   </data>
-  <data name="1:LocalizedName,Action Output Parameter{9d540704-b34f-4ecc-b9d8-412acae74cf8}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Output Parameter (Deprecated){9d540704-b34f-4ecc-b9d8-412acae74cf8}" xml:space="preserve">
     <value>Inactive Action Output Parameters</value>
-    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{9d540704-b34f-4ecc-b9d8-412acae74cf8}'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{9d540704-b34f-4ecc-b9d8-412acae74cf8}'</comment>
   </data>
-  <data name="1:LocalizedName,Action Output Parameter{a61a1c8d-3d95-4a5c-aa4b-9528f33bcbea}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Output Parameter (Deprecated){a61a1c8d-3d95-4a5c-aa4b-9528f33bcbea}" xml:space="preserve">
     <value>Action Output Parameter Lookup View</value>
-    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{a61a1c8d-3d95-4a5c-aa4b-9528f33bcbea}'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{a61a1c8d-3d95-4a5c-aa4b-9528f33bcbea}'</comment>
   </data>
-  <data name="1:LocalizedName,Action Output Parameter{be58538e-d1d2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Output Parameter (Deprecated){be58538e-d1d2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
     <value>My Action Output Parameters</value>
-    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{be58538e-d1d2-e911-a81f-000d3a6d6cb7}'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{be58538e-d1d2-e911-a81f-000d3a6d6cb7}'</comment>
   </data>
-  <data name="1:LocalizedName,Action Output Parameter{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Output Parameter (Deprecated){d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
     <value>Information</value>
-    <comment>'Action Output Parameter' : LocalizedName for systemform in Entity FormXml ID: '{d4000272-4cda-436a-a678-cd3fe08ea2f6}'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : LocalizedName for systemform in Entity FormXml ID: '{d4000272-4cda-436a-a678-cd3fe08ea2f6}'</comment>
   </data>
-  <data name="1:LocalizedName,Action Output Parameter{de3156ab-1834-4782-a0d8-97869badb58b}" xml:space="preserve">
+  <data name="1:LocalizedName,Action Output Parameter (Deprecated){de3156ab-1834-4782-a0d8-97869badb58b}" xml:space="preserve">
     <value>Action Output Parameter Advanced Find View</value>
-    <comment>'Action Output Parameter' : LocalizedName for SavedQuery on Entity QueryId: '{de3156ab-1834-4782-a0d8-97869badb58b}'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{de3156ab-1834-4782-a0d8-97869badb58b}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Action Template{2fc6654b-0626-475b-ba71-dba1a5b84ddd}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Action Template (Deprecated){2fc6654b-0626-475b-ba71-dba1a5b84ddd}" xml:space="preserve">
     <value>Inactive Macro Action Templates</value>
-    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{2fc6654b-0626-475b-ba71-dba1a5b84ddd}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{2fc6654b-0626-475b-ba71-dba1a5b84ddd}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Action Template{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Action Template (Deprecated){6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}" xml:space="preserve">
     <value>Information</value>
-    <comment>'Macro Action Template' : LocalizedName for systemform in Entity FormXml ID: '{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : LocalizedName for systemform in Entity FormXml ID: '{6fe8dd4f-bcd0-4392-9eb2-21b476d3d91f}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Action Template{728594b5-08ae-442b-b4c5-36baa67c2e52}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Action Template (Deprecated){728594b5-08ae-442b-b4c5-36baa67c2e52}" xml:space="preserve">
     <value>Macro Action Template Lookup View</value>
-    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{728594b5-08ae-442b-b4c5-36baa67c2e52}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{728594b5-08ae-442b-b4c5-36baa67c2e52}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Action Template{7edfc44b-9171-4b03-b3fa-8f98c144543c}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Action Template (Deprecated){7edfc44b-9171-4b03-b3fa-8f98c144543c}" xml:space="preserve">
     <value>Quick Find Active Macro Action Templates</value>
-    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{7edfc44b-9171-4b03-b3fa-8f98c144543c}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{7edfc44b-9171-4b03-b3fa-8f98c144543c}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Action Template{7f5fe5c8-3347-4bc1-8405-5de72484fc7f}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Action Template (Deprecated){7f5fe5c8-3347-4bc1-8405-5de72484fc7f}" xml:space="preserve">
     <value>Macro Action Template Associated View</value>
-    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{7f5fe5c8-3347-4bc1-8405-5de72484fc7f}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{7f5fe5c8-3347-4bc1-8405-5de72484fc7f}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Action Template{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Action Template (Deprecated){ab5fc48b-29ce-e911-a81c-000d3afdb6f8}" xml:space="preserve">
     <value>My Macro Action Templates</value>
-    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{ab5fc48b-29ce-e911-a81c-000d3afdb6f8}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Action Template{bf39a940-48f0-4dea-b6f9-dfcabbb647d5}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Action Template (Deprecated){bf39a940-48f0-4dea-b6f9-dfcabbb647d5}" xml:space="preserve">
     <value>Active Macro Action Templates</value>
-    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{bf39a940-48f0-4dea-b6f9-dfcabbb647d5}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{bf39a940-48f0-4dea-b6f9-dfcabbb647d5}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Action Template{ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Action Template (Deprecated){ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}" xml:space="preserve">
     <value>Macro Action Template Advanced Find View</value>
-    <comment>'Macro Action Template' : LocalizedName for SavedQuery on Entity QueryId: '{ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}'</comment>
+    <comment>'Macro Action Template (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{ce4e6b5d-536b-4f3d-8034-2e1d5d03e978}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Connector{0f6f72d4-17ca-4f0e-8301-7ffa21c231cb}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Connector (Deprecated){0f6f72d4-17ca-4f0e-8301-7ffa21c231cb}" xml:space="preserve">
     <value>Macro Connector Lookup View</value>
-    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{0f6f72d4-17ca-4f0e-8301-7ffa21c231cb}'</comment>
+    <comment>'Macro Connector (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{0f6f72d4-17ca-4f0e-8301-7ffa21c231cb}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Connector{5f76bbd9-6db0-47e3-b819-e8e181a69ef8}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Connector (Deprecated){5f76bbd9-6db0-47e3-b819-e8e181a69ef8}" xml:space="preserve">
     <value>Macro Connector Advanced Find View</value>
-    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{5f76bbd9-6db0-47e3-b819-e8e181a69ef8}'</comment>
+    <comment>'Macro Connector (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{5f76bbd9-6db0-47e3-b819-e8e181a69ef8}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Connector{6879ad1e-f3d8-436b-af1d-40219e693010}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Connector (Deprecated){6879ad1e-f3d8-436b-af1d-40219e693010}" xml:space="preserve">
     <value>Inactive macroconnectors</value>
-    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{6879ad1e-f3d8-436b-af1d-40219e693010}'</comment>
+    <comment>'Macro Connector (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{6879ad1e-f3d8-436b-af1d-40219e693010}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Connector{8c945d63-c3dd-e911-a81e-000d3af9c0c2}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Connector (Deprecated){8c945d63-c3dd-e911-a81e-000d3af9c0c2}" xml:space="preserve">
     <value>My macroconnectors</value>
-    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{8c945d63-c3dd-e911-a81e-000d3af9c0c2}'</comment>
+    <comment>'Macro Connector (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{8c945d63-c3dd-e911-a81e-000d3af9c0c2}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Connector{8eab9af9-f1b0-41b2-8eac-217db6b0346a}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Connector (Deprecated){8eab9af9-f1b0-41b2-8eac-217db6b0346a}" xml:space="preserve">
     <value>Active macroconnectors</value>
-    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{8eab9af9-f1b0-41b2-8eac-217db6b0346a}'</comment>
+    <comment>'Macro Connector (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{8eab9af9-f1b0-41b2-8eac-217db6b0346a}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Connector{b8136d24-03a6-4453-b1d6-f6e96cc59762}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Connector (Deprecated){b8136d24-03a6-4453-b1d6-f6e96cc59762}" xml:space="preserve">
     <value>Quick Find Active macroconnectors</value>
-    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{b8136d24-03a6-4453-b1d6-f6e96cc59762}'</comment>
+    <comment>'Macro Connector (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{b8136d24-03a6-4453-b1d6-f6e96cc59762}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Connector{d238ec0d-ead6-4558-964d-e92e17c8aa42}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Connector (Deprecated){d238ec0d-ead6-4558-964d-e92e17c8aa42}" xml:space="preserve">
     <value>Macro Connector Associated View</value>
-    <comment>'Macro Connector' : LocalizedName for SavedQuery on Entity QueryId: '{d238ec0d-ead6-4558-964d-e92e17c8aa42}'</comment>
+    <comment>'Macro Connector (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{d238ec0d-ead6-4558-964d-e92e17c8aa42}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Connector{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Connector (Deprecated){d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
     <value>Information</value>
-    <comment>'Macro Connector' : LocalizedName for systemform in Entity FormXml ID: '{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}'</comment>
+    <comment>'Macro Connector (Deprecated)' : LocalizedName for systemform in Entity FormXml ID: '{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}'</comment>
   </data>
   <data name="1:LocalizedName,Macro Run History{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}" xml:space="preserve">
     <value>Information</value>
@@ -2416,52 +2416,52 @@
     <value>Macro Runs Associated View</value>
     <comment>'Macro Run History' : LocalizedName for SavedQuery on Entity QueryId: '{80ed4f96-7878-4274-9838-ad14e562c789}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Solution Configuration{02e0444a-3d8c-4b32-b98c-2152c5ee16b8}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Solution Configuration (Deprecated){02e0444a-3d8c-4b32-b98c-2152c5ee16b8}" xml:space="preserve">
     <value>Macro Solution Configuration Associated View</value>
-    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{02e0444a-3d8c-4b32-b98c-2152c5ee16b8}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{02e0444a-3d8c-4b32-b98c-2152c5ee16b8}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Solution Configuration{2512f971-7ada-435b-a487-ce8bc79ef734}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Solution Configuration (Deprecated){2512f971-7ada-435b-a487-ce8bc79ef734}" xml:space="preserve">
     <value>Active Macro Solution Configurations</value>
-    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{2512f971-7ada-435b-a487-ce8bc79ef734}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{2512f971-7ada-435b-a487-ce8bc79ef734}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Solution Configuration{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Solution Configuration (Deprecated){4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
     <value>Information</value>
-    <comment>'Macro Solution Configuration' : LocalizedName for systemform in Entity FormXml ID: '{4c0f7a89-7e67-4972-828e-1244f593a422}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : LocalizedName for systemform in Entity FormXml ID: '{4c0f7a89-7e67-4972-828e-1244f593a422}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Solution Configuration{709f8c74-0e07-41f2-ab20-157f309ba509}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Solution Configuration (Deprecated){709f8c74-0e07-41f2-ab20-157f309ba509}" xml:space="preserve">
     <value>Macro Solution Configuration Advanced Find View</value>
-    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{709f8c74-0e07-41f2-ab20-157f309ba509}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{709f8c74-0e07-41f2-ab20-157f309ba509}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Solution Configuration{b2f2a22e-0f44-4767-a77f-b6d5d7776bc5}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Solution Configuration (Deprecated){b2f2a22e-0f44-4767-a77f-b6d5d7776bc5}" xml:space="preserve">
     <value>Quick Find Active Macro Solution Configurations</value>
-    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{b2f2a22e-0f44-4767-a77f-b6d5d7776bc5}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{b2f2a22e-0f44-4767-a77f-b6d5d7776bc5}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Solution Configuration{b33bb17c-9d07-4514-b073-165721b935e9}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Solution Configuration (Deprecated){b33bb17c-9d07-4514-b073-165721b935e9}" xml:space="preserve">
     <value>Inactive Macro Solution Configurations</value>
-    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{b33bb17c-9d07-4514-b073-165721b935e9}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{b33bb17c-9d07-4514-b073-165721b935e9}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Solution Configuration{ebaf11b8-04bc-4e5e-9ba2-ee58fc3590d0}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Solution Configuration (Deprecated){ebaf11b8-04bc-4e5e-9ba2-ee58fc3590d0}" xml:space="preserve">
     <value>Macro Solution Configuration Lookup View</value>
-    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{ebaf11b8-04bc-4e5e-9ba2-ee58fc3590d0}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{ebaf11b8-04bc-4e5e-9ba2-ee58fc3590d0}'</comment>
   </data>
-  <data name="1:LocalizedName,Macro Solution Configuration{fe7078c7-dae0-e911-a81f-000d3af9c0c2}" xml:space="preserve">
+  <data name="1:LocalizedName,Macro Solution Configuration (Deprecated){fe7078c7-dae0-e911-a81f-000d3af9c0c2}" xml:space="preserve">
     <value>My Macro Solution Configurations</value>
-    <comment>'Macro Solution Configuration' : LocalizedName for SavedQuery on Entity QueryId: '{fe7078c7-dae0-e911-a81f-000d3af9c0c2}'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{fe7078c7-dae0-e911-a81f-000d3af9c0c2}'</comment>
   </data>
   <data name="1:LocalizedName,msdyn_actioninputparameterentitymsdyn_actioninputparameter" xml:space="preserve">
-    <value>Action Input Parameter</value>
+    <value>Action Input Parameter (Deprecated)</value>
     <comment> 'msdyn_actioninputparameter' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_actionoutputparameterentitymsdyn_actionoutputparameter" xml:space="preserve">
-    <value>Action Output Parameter</value>
+    <value>Action Output Parameter (Deprecated)</value>
     <comment> 'msdyn_actionoutputparameter' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_macroactiontemplateentitymsdyn_macroactiontemplate" xml:space="preserve">
-    <value>Macro Action Template</value>
+    <value>Macro Action Template (Deprecated)</value>
     <comment> 'msdyn_macroactiontemplate' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_macroconnectorentitymsdyn_macroconnector" xml:space="preserve">
-    <value>Macro Connector</value>
+    <value>Macro Connector (Deprecated)</value>
     <comment> 'msdyn_macroconnector' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_macrosessionentitymsdyn_macrosession" xml:space="preserve">
@@ -2469,44 +2469,44 @@
     <comment> 'msdyn_macrosession' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_macrosolutionconfigurationentitymsdyn_macrosolutionconfiguration" xml:space="preserve">
-    <value>Macro Solution Configuration</value>
+    <value>Macro Solution Configuration (Deprecated)</value>
     <comment> 'msdyn_macrosolutionconfiguration' : LocalizedName for Entity</comment>
   </data>
   <data name="1:LocalizedName,msdyn_parameterdefinitionentitymsdyn_parameterdefinition" xml:space="preserve">
-    <value>Parameter definition</value>
+    <value>Parameter definition (Deprecated)</value>
     <comment> 'msdyn_parameterdefinition' : LocalizedName for Entity</comment>
   </data>
-  <data name="1:LocalizedName,Parameter definition{07a33cec-34c5-447a-b091-76a54ea8dcc0}" xml:space="preserve">
+  <data name="1:LocalizedName,Parameter definition (Deprecated){07a33cec-34c5-447a-b091-76a54ea8dcc0}" xml:space="preserve">
     <value>Active Parameter definitions</value>
-    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{07a33cec-34c5-447a-b091-76a54ea8dcc0}'</comment>
+    <comment>'Parameter definition (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{07a33cec-34c5-447a-b091-76a54ea8dcc0}'</comment>
   </data>
-  <data name="1:LocalizedName,Parameter definition{324a018c-ee56-4a9f-9d64-73f5bbb3c4ab}" xml:space="preserve">
+  <data name="1:LocalizedName,Parameter definition (Deprecated){324a018c-ee56-4a9f-9d64-73f5bbb3c4ab}" xml:space="preserve">
     <value>Quick Find Active Parameter definitions</value>
-    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{324a018c-ee56-4a9f-9d64-73f5bbb3c4ab}'</comment>
+    <comment>'Parameter definition (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{324a018c-ee56-4a9f-9d64-73f5bbb3c4ab}'</comment>
   </data>
-  <data name="1:LocalizedName,Parameter definition{52db0469-ff43-48fb-af2f-69f8355a174c}" xml:space="preserve">
+  <data name="1:LocalizedName,Parameter definition (Deprecated){52db0469-ff43-48fb-af2f-69f8355a174c}" xml:space="preserve">
     <value>Parameter definition Lookup View</value>
-    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{52db0469-ff43-48fb-af2f-69f8355a174c}'</comment>
+    <comment>'Parameter definition (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{52db0469-ff43-48fb-af2f-69f8355a174c}'</comment>
   </data>
-  <data name="1:LocalizedName,Parameter definition{57347866-53ad-4011-9024-d5161ce8391e}" xml:space="preserve">
+  <data name="1:LocalizedName,Parameter definition (Deprecated){57347866-53ad-4011-9024-d5161ce8391e}" xml:space="preserve">
     <value>Inactive Parameter definitions</value>
-    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{57347866-53ad-4011-9024-d5161ce8391e}'</comment>
+    <comment>'Parameter definition (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{57347866-53ad-4011-9024-d5161ce8391e}'</comment>
   </data>
-  <data name="1:LocalizedName,Parameter definition{5811f646-830b-4439-aecd-0b1eb4c4910f}" xml:space="preserve">
+  <data name="1:LocalizedName,Parameter definition (Deprecated){5811f646-830b-4439-aecd-0b1eb4c4910f}" xml:space="preserve">
     <value>Parameter definition Associated View</value>
-    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{5811f646-830b-4439-aecd-0b1eb4c4910f}'</comment>
+    <comment>'Parameter definition (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{5811f646-830b-4439-aecd-0b1eb4c4910f}'</comment>
   </data>
-  <data name="1:LocalizedName,Parameter definition{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
+  <data name="1:LocalizedName,Parameter definition (Deprecated){8c7626d7-ced2-e911-a81f-000d3a6d6cb7}" xml:space="preserve">
     <value>My Parameter definitions</value>
-    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}'</comment>
+    <comment>'Parameter definition (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{8c7626d7-ced2-e911-a81f-000d3a6d6cb7}'</comment>
   </data>
-  <data name="1:LocalizedName,Parameter definition{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+  <data name="1:LocalizedName,Parameter definition (Deprecated){a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
     <value>Information</value>
-    <comment>'Parameter definition' : LocalizedName for systemform in Entity FormXml ID: '{a1b84754-82c8-4d2e-afe6-bceae91df1ca}'</comment>
+    <comment>'Parameter definition (Deprecated)' : LocalizedName for systemform in Entity FormXml ID: '{a1b84754-82c8-4d2e-afe6-bceae91df1ca}'</comment>
   </data>
-  <data name="1:LocalizedName,Parameter definition{ea0d2a7c-47e7-4a08-a2d2-466e0d02d097}" xml:space="preserve">
+  <data name="1:LocalizedName,Parameter definition (Deprecated){ea0d2a7c-47e7-4a08-a2d2-466e0d02d097}" xml:space="preserve">
     <value>Parameter definition Advanced Find View</value>
-    <comment>'Parameter definition' : LocalizedName for SavedQuery on Entity QueryId: '{ea0d2a7c-47e7-4a08-a2d2-466e0d02d097}'</comment>
+    <comment>'Parameter definition (Deprecated)' : LocalizedName for SavedQuery on Entity QueryId: '{ea0d2a7c-47e7-4a08-a2d2-466e0d02d097}'</comment>
   </data>
   <data name="1:LocalizedName,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
     <value>All macros</value>
@@ -2520,105 +2520,105 @@
     <value>Draft macros</value>
     <comment>'Process' : LocalizedName for SavedQuery on Entity QueryId: '{97a5e446-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
-  <data name="1:Title,Action Input ParameterInfo{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+  <data name="1:Title,Action Input Parameter (Deprecated)Info{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
     <value>Common</value>
-    <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
-  <data name="1:Title,Action Input ParameterMarketing{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+  <data name="1:Title,Action Input Parameter (Deprecated)Marketing{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
     <value>Marketing</value>
-    <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
-  <data name="1:Title,Action Input ParameterProcessCenter{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+  <data name="1:Title,Action Input Parameter (Deprecated)ProcessCenter{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
     <value>Process Sessions</value>
-    <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
-  <data name="1:Title,Action Input ParameterSales{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+  <data name="1:Title,Action Input Parameter (Deprecated)Sales{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
     <value>Sales</value>
-    <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
-  <data name="1:Title,Action Input ParameterService{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
+  <data name="1:Title,Action Input Parameter (Deprecated)Service{15079f0d-d34e-4cad-9fa3-a1fab0783eac}" xml:space="preserve">
     <value>Service</value>
-    <comment>'Action Input Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+    <comment>'Action Input Parameter (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
-  <data name="1:Title,Action Output ParameterInfo{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+  <data name="1:Title,Action Output Parameter (Deprecated)Info{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
     <value>Common</value>
-    <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
-  <data name="1:Title,Action Output ParameterMarketing{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+  <data name="1:Title,Action Output Parameter (Deprecated)Marketing{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
     <value>Marketing</value>
-    <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
-  <data name="1:Title,Action Output ParameterProcessCenter{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+  <data name="1:Title,Action Output Parameter (Deprecated)ProcessCenter{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
     <value>Process Sessions</value>
-    <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
-  <data name="1:Title,Action Output ParameterSales{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+  <data name="1:Title,Action Output Parameter (Deprecated)Sales{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
     <value>Sales</value>
-    <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
-  <data name="1:Title,Action Output ParameterService{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
+  <data name="1:Title,Action Output Parameter (Deprecated)Service{d4000272-4cda-436a-a678-cd3fe08ea2f6}" xml:space="preserve">
     <value>Service</value>
-    <comment>'Action Output Parameter' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+    <comment>'Action Output Parameter (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
-  <data name="1:Title,Macro ConnectorInfo{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+  <data name="1:Title,Macro Connector (Deprecated)Info{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
     <value>Common</value>
-    <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+    <comment>'Macro Connector (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
-  <data name="1:Title,Macro ConnectorMarketing{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+  <data name="1:Title,Macro Connector (Deprecated)Marketing{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
     <value>Marketing</value>
-    <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+    <comment>'Macro Connector (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
-  <data name="1:Title,Macro ConnectorProcessCenter{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+  <data name="1:Title,Macro Connector (Deprecated)ProcessCenter{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
     <value>Process Sessions</value>
-    <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+    <comment>'Macro Connector (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
-  <data name="1:Title,Macro ConnectorSales{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+  <data name="1:Title,Macro Connector (Deprecated)Sales{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
     <value>Sales</value>
-    <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+    <comment>'Macro Connector (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
-  <data name="1:Title,Macro ConnectorService{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
+  <data name="1:Title,Macro Connector (Deprecated)Service{d3d17e8d-2d32-4667-a3a8-c98c9da2a3f4}" xml:space="preserve">
     <value>Service</value>
-    <comment>'Macro Connector' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+    <comment>'Macro Connector (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
-  <data name="1:Title,Macro Solution ConfigurationInfo{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+  <data name="1:Title,Macro Solution Configuration (Deprecated)Info{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
     <value>Common</value>
-    <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
-  <data name="1:Title,Macro Solution ConfigurationMarketing{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+  <data name="1:Title,Macro Solution Configuration (Deprecated)Marketing{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
     <value>Marketing</value>
-    <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
-  <data name="1:Title,Macro Solution ConfigurationProcessCenter{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+  <data name="1:Title,Macro Solution Configuration (Deprecated)ProcessCenter{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
     <value>Process Sessions</value>
-    <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
-  <data name="1:Title,Macro Solution ConfigurationSales{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+  <data name="1:Title,Macro Solution Configuration (Deprecated)Sales{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
     <value>Sales</value>
-    <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
-  <data name="1:Title,Macro Solution ConfigurationService{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
+  <data name="1:Title,Macro Solution Configuration (Deprecated)Service{4c0f7a89-7e67-4972-828e-1244f593a422}" xml:space="preserve">
     <value>Service</value>
-    <comment>'Macro Solution Configuration' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+    <comment>'Macro Solution Configuration (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
-  <data name="1:Title,Parameter definitionInfo{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+  <data name="1:Title,Parameter definition (Deprecated)Info{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
     <value>Common</value>
-    <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
+    <comment>'Parameter definition (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Info'</comment>
   </data>
-  <data name="1:Title,Parameter definitionMarketing{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+  <data name="1:Title,Parameter definition (Deprecated)Marketing{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
     <value>Marketing</value>
-    <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
+    <comment>'Parameter definition (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Marketing'</comment>
   </data>
-  <data name="1:Title,Parameter definitionProcessCenter{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+  <data name="1:Title,Parameter definition (Deprecated)ProcessCenter{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
     <value>Process Sessions</value>
-    <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
+    <comment>'Parameter definition (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'ProcessCenter'</comment>
   </data>
-  <data name="1:Title,Parameter definitionSales{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+  <data name="1:Title,Parameter definition (Deprecated)Sales{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
     <value>Sales</value>
-    <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
+    <comment>'Parameter definition (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Sales'</comment>
   </data>
-  <data name="1:Title,Parameter definitionService{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
+  <data name="1:Title,Parameter definition (Deprecated)Service{a1b84754-82c8-4d2e-afe6-bceae91df1ca}" xml:space="preserve">
     <value>Service</value>
-    <comment>'Parameter definition' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
+    <comment>'Parameter definition (Deprecated)' : Title for NavBarArea in Entity FormXml ID: 'Service'</comment>
   </data>
   <data name="1:Title,Processworkflow.HomePageGrid.New.Button.LabelText" xml:space="preserve">
     <value>New</value>

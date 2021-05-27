@@ -9,11 +9,10 @@ declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
         static FPIMESSAGE_EVENTNAME: string;
         static IFRAMETITLE: string;
         static IFRAME_APPNAME: string;
-        static OCBASEURLFIELD: string;
-        static OCFPIURLFIELD: string;
         static AUTH_FAILED_STATUS_MESSAGE: string;
         static AUTH_FAILED_STATUS_CODE: number;
-        static FPI_COMPONENT_URL_PARAMETER: string;
+        static QUERY_FPI_STATUS: string;
+        static EXTERNAL_REST_ODATA_API: string;
     }
     class RequestTypes {
         static GET: string;
@@ -22,26 +21,50 @@ declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
         static DELETE: string;
         static STATUS: string;
     }
-    class EndpointConstants {
-        static endpointEntityName: string;
-        static ocEndpointRecordId: string;
-        static pathPropertyKey: string;
-        static namePropertyKey: string;
-        static descriptionPropertyKey: string;
-        static telemetryContext: string;
-        static emptyString: string;
-        static publicString: string;
-        static fairfaxString: string;
-        static PRODEnvKey: string;
-        static namespaceDeploymentKey: string;
-        static PublicDeploymentTypeKey: string;
-        static ocBaseUrlKey: string;
-        static ocFPIUrlKey: string;
-        static ocDeploymentTypeKey: string;
-        static ocEndpointNameKey: string;
-        static readonly publicFPIUrlMap: Map<any, any>;
-        static readonly fairfaxFPIUrlMap: Map<any, any>;
-        static getFPIURLMap(cloudType: string): Map<any, any>;
+    class GeoNames {
+        static TIP: string;
+        static GCC: string;
+        static USG: string;
+        static CHN: string;
+        static DEFAULT: string;
+    }
+    const FpiGeoSettings: {
+        [x: string]: {
+            endpoint: string;
+        };
+    };
+    /**
+     * https://dynamicscrm.visualstudio.com/First%20Party%20Integrations/_git/First%20Party%20Integrations?path=%2Fsrc%2FIntegrations%2FIntegrations%2FMicrosoftFlows%2F9.0%2FFlowApp.js&_a=contents&version=GBv2
+     */
+    const FlowGeoSettings: {
+        [x: string]: {
+            endpoint: string;
+            resource: string;
+        };
+    };
+}
+/**
+* @license Copyright (c) Microsoft Corporation. All rights reserved.
+*/
+declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
+    class FlowClient {
+        private readonly fpiHelper;
+        private readonly environmentContext;
+        private static readonly defaultHeader;
+        private static readonly apiVersion;
+        /**
+         *
+         * @param fpiHelper FPI Helper
+         */
+        constructor();
+        private setFlowApiConfiguration(geoName);
+        getEnvironment(requestContext: FlowRequestContext): Promise<any>;
+        getFlows(entityName: string, requestContext: FlowRequestContext): Promise<any>;
+    }
+    class FlowRequestContext {
+        consumerId: string;
+        requestId: string;
+        constructor(consumerId: string, requestId: string);
     }
 }
 /**
@@ -52,20 +75,16 @@ declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
         private static instance;
         private static isAuthenticated;
         private static iFrameExists;
-        private static svcMap;
-        private static OCEndPoint;
-        private static ocBaseURL;
         private static fpiURL;
+        private static fpiOrigin;
         private static authenticationFailure;
         private static authenticationQuery;
         private static HelperID;
         private static requestMap;
         private static orgId;
         private static pendingRequests;
-        private static isMock;
-        private constructor(isMock);
-        private static getTenantId();
-        private static getAgentId();
+        private constructor();
+        private setFpiConfiguration(geoName);
         private static getOrgId();
         /**
          * Creates iframe if it does not exist, and queries it using STATUS message if it does to authenticate
@@ -76,7 +95,6 @@ declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
          * Event listener for messages from FPI iframe
          */
         private static addEventListener();
-        private static getFPIUrlQueryParams();
         /**
          * Adds FPI Iframe to DOM
          */
@@ -113,7 +131,7 @@ declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
         /**
          * Ensures constructor has been called and instance available
          */
-        static getInstance(isMock: boolean): FPIHelper;
+        static getInstance(): FPIHelper;
         /**
          * Creates FPI request message
          * @param method method name of the request
@@ -133,14 +151,16 @@ declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
          * Returns a promise that resolved to true if authenticated and false if auth failure
          */
         static authenticate(): Promise<boolean>;
-        static addOCBaseURL(message: FPIRequestMessage): FPIRequestMessage;
-        static addOrgIDHeader(message: FPIRequestMessage): FPIRequestMessage;
         /**
          * Makes a request via FPI iframe
          * @param message FPIRequestMessage object - does not need organization ID in headers or base URL in URL
          * @param requestId For logging - needs to match staticData.requestId
          */
-        static makeFPIRequest(message: FPIRequestMessage, requestId: string): Promise<any>;
+        makeFPIRequest(message: FPIRequestMessage, requestId: string): Promise<any>;
+        private static convertRequestMessage(message);
+        private static convertResponseMessage(messageEvent);
+        private static isStatusResponse(data);
+        private static verifyMessageEventOrigin(origin);
     }
 }
 /**
@@ -149,12 +169,9 @@ declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
 declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
     class DataHelper {
         private static instance;
-        private static FPIHelper;
-        private static isAuthenticated;
         private static consumersList;
-        private static isMock;
-        private static entityMetadataMap;
-        private constructor(isMock);
+        private readonly flowClient;
+        private constructor();
         /**
          * To be called when a new consumer initializes itself
          * @param consumerId Preferably unique identification of consumer in telemetry
@@ -168,8 +185,8 @@ declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
         /**
          * Initializes DataHelper and returns instance reference
          */
-        static getInstance(isMock?: boolean): DataHelper;
-        static sendFinishedMessage(message: FPIRequestMessage): Promise<any>;
+        static getInstance(): DataHelper;
+        readonly FlowClient: FlowClient;
     }
 }
 /**
@@ -182,6 +199,7 @@ declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
         header: any;
         payload: any;
         staticData: any;
+        resource: string;
     }
     class AdditionalRequestHeaders {
         headerName: string;
@@ -235,6 +253,28 @@ declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
             };
         };
     }
+    class FpiRequestMessageEventDataData {
+        apiUrl: string;
+        resourceUri: string;
+        methodType: string;
+        postdata: any;
+        additionalHeaders: any;
+    }
+    class FpiRequestMessageEventData {
+        method: string;
+        windowPostMessageProxy: any;
+        data: FpiRequestMessageEventDataData;
+    }
+    class FpiResponseMessageEventData {
+        data: any;
+        error: any | null;
+        key: string;
+        windowPostMessageProxy: any;
+        responseData: {
+            status: number;
+            statusText: string;
+        } | null;
+    }
 }
 declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
     class RequestMap {
@@ -261,30 +301,17 @@ declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
 * @license Copyright (c) Microsoft Corporation. All rights reserved.
 */
 declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
-    class OCEndpoint {
-        svcMap: Map<string, string>;
-        isMock: boolean;
-        /**
-         * Default constructor
-         * @param context Control context
-         * @param controlName Name of the Omnichannel custom control - Will be used in telemetry
-         */
-        constructor(isMock?: boolean);
-        appendParamterstoURL(url: string, env: string, cloudtype: string, isMock: boolean): string;
-        /**
-         * Getter for Service endpoint Map
-         */
-        getSvcMap(): Map<string, string>;
-        getValue(val: string): string;
-        /**
-         * Hepler method to set FPI url based on environment type.
-         * @param env Environment type DEV, INT, PPE, PROD.
-         */
-        private setOcFPIUrl();
-        /**
-         * Retrieve oc endpoint Url
-         */
-        retrieveOcEndpoint(): Promise<Map<string, string>>;
+    class OrganizationSettings {
+        private static singletoneInstance;
+        private organizationSettings;
+        private constructor();
+        static readonly instance: OrganizationSettings;
+        readonly geoName: string;
+        readonly originalOrganizationSettings: XrmClientApi.OrganizationSettings;
+    }
+    interface IOrganizationSettings extends XrmClientApi.OrganizationSettings {
+        isSovereignCloud: boolean;
+        organizationGeo: string;
     }
 }
 /**
