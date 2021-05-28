@@ -13,6 +13,9 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-minify": "^0.4.3",
-    "babel-preset-es2015": "^6.24.1"
+    "babel-preset-es2015": "^6.24.1",
+    "minist": "^1.2.3",
+    "yargs-parser": "^15.0.1",
+    "lodash": "^4.17.20"
   }
 }
