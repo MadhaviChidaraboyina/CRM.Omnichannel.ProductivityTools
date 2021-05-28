@@ -11,7 +11,7 @@
   <msdyn_displayname default="Flow Connector">
     <label description="Flow Connector" languagecode="1033" />
   </msdyn_displayname>
-  <msdyn_icon>WebResources/msdyn_OmnichannelBase/_imgs/Macros/msdyn_flowConnector_macro_connector.svg</msdyn_icon>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_flowConnector_macro_connector.svg</msdyn_icon>
   <msdyn_name>Flow Connector</msdyn_name>
   <msdyn_prefix>FLOW</msdyn_prefix>
   <msdyn_title default="Flow Connector">

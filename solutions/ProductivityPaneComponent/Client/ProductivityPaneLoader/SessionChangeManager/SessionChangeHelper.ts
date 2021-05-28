@@ -21,7 +21,7 @@ module ProductivityPaneLoader {
 
         public static showAllProductivityTools(toolList: ToolConfig[]): void {
             toolList.forEach((tool: ToolConfig) => {
-                XrmAppProxy.getAppSidePane(tool.toolName).hidden = false;
+                XrmAppProxy.getAppSidePane(tool.toolControlName).hidden = false;
             });
         }
 

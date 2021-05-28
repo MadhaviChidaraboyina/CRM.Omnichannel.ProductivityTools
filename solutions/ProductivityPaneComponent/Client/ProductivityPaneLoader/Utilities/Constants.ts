@@ -86,9 +86,6 @@ module ProductivityPaneLoader {
         // FCB
         public static fcbProductivityToolsUseAppSidePanes = 'ProductivityTools.UseAppSidePanes';
 
-        // Style
-        public static appSidePaneWidth = 296;
-
         // App side pane ID
         public static teamsCollabAppSidePaneId = 'MscrmControls.OfficeProductivity.CollabControl';
 

@@ -100,8 +100,20 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * @param notificationNumber: notification count
          */
          public static updateBadge(notificationNumber: number) {
+            // Don't update badge if current pane is smart assist and is expanded
+            if (Xrm.App.sidePanes.getSelectedPane().paneId === StringConstants.SmartAssistPaneId &&
+                Xrm.App.sidePanes.state == XrmClientApi.Constants.SidePanesState.Expanded) {
+                return;
+            }
+
             const pane = Xrm.App.sidePanes.getPane(StringConstants.SmartAssistPaneId);
-            notificationNumber == 0 ? pane.clearBadge() : pane.setBadge(notificationNumber);
+            // If app side pane ID does not exist, getPane() returns undefined. 
+            if (pane) {
+                const badge = pane.badge && typeof(pane.badge) == 'number'
+                    ? pane.badge + notificationNumber
+                    : notificationNumber;
+                pane.badge = badge <= 0 ? false : badge;
+            }
         }
 
         /**

@@ -7,7 +7,7 @@
   <msdyn_displayname default="List_Flows">
     <label description="List_Flows" languagecode="1033" />
   </msdyn_displayname>
-  <msdyn_icon>WebResources/msdyn_OmnichannelBase/_imgs/Macros/msdyn_ProductivityMacros_run_flow.svg</msdyn_icon>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacros_run_flow.svg</msdyn_icon>
   <msdyn_kind>ACTIONS</msdyn_kind>
   <msdyn_macroconnector>
     <msdyn_uniquename>msdyn_FlowConnector</msdyn_uniquename>

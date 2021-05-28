@@ -1,4 +1,4 @@
 {
-  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_name.label": "Konfigurasjon av samtaleskriptverktøy",
+  "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_name.label": "Agentskripter",
   "(msdyn_uniquename=msdyn_callscript_tool_config).msdyn_description.label": "Gi trinnvise instruksjoner som hjelper deg med å redusere menneskelige feil og levere en konsekvent tjeneste."
 }

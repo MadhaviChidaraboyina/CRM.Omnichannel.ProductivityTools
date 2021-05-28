@@ -28,15 +28,15 @@ module ProductivityPaneLoader {
                     toolList.forEach((tool: ToolConfig) => {
                         XrmAppProxy.getXrmAppApis()
                             .sidePanes.createPane({
-                                paneId: tool.toolName,
+                                paneId: tool.toolControlName,
                                 canClose: false,
                                 isSelected: false,
                                 imageSrc: tool.toolIcon,
                                 title: tool.tooltip,
-                                width: Constants.appSidePaneWidth,
                                 // Do not hide Teams Collaboration on home session.
                                 hidden: Utils.isTeamsCollab(tool.toolName) ? false : true,
                                 alwaysRender: true,
+                                keepBadgeOnSelect: false,
                             })
                             .then((pane) => {
                                 pane.navigate({
@@ -55,7 +55,7 @@ module ProductivityPaneLoader {
                                 },
                                 (error) => {
                                     console.error(
-                                        `${Constants.productivityToolsLogPrefix} Failed to laod app side pane ${tool.toolName}: ${error}`,
+                                        `${Constants.productivityToolsLogPrefix} Failed to laod app side pane ${tool.toolControlName}: ${error}`,
                                     );
                                     reject(error);
                                 },
