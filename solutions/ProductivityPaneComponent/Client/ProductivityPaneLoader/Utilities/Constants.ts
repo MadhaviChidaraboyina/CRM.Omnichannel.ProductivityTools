@@ -105,4 +105,20 @@ module ProductivityPaneLoader {
         // Log prefix
         public static productivityToolsLogPrefix = '[ProductivityToolsLog]';
     }
+
+    export enum EventType {
+        PRODUCTIVITY_TOOLS_LOAD_SUCCESS,
+        PRODUCTIVITY_TOOLS_LOAD_FAILURE,
+        APP_SIDE_PANE_LOAD_SUCCESS,
+        APP_SIDE_PANE_LOAD_FAILURE,
+        LEGACY_PANE_LOAD_SUCCESS,
+        LEGACY_PANE_LOAD_FAILURE,
+        SESSION_CHANGE_MANAGER_SUCCESS,
+        SESSION_CHANGE_MANAGER_ERROR,
+        SCRIPT_LOAD_SUCCESS,
+        SCRIPT_LOAD_FAILURE,
+        SET_SESSION_STORAGE_FAILURE,
+        APM_CONFIG_EXTRACTOR_FAILURE,
+        APM_CONFIG_EXTRACTOR_XRM_API_FAILURE,
+    }
 }

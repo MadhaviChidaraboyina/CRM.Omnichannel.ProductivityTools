@@ -29,30 +29,42 @@ module ProductivityPaneLoader {
                                             }
                                         },
                                         (error) => {
-                                            // Telemetry here
-                                            console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
+                                            Logger.logError(
+                                                EventType.APM_CONFIG_EXTRACTOR_FAILURE,
+                                                `${Constants.productivityToolsLogPrefix} Failed to get pane tools config Data`,
+                                                error,
+                                            );
                                             reject(error);
                                         },
                                     );
                                 },
                                 (error) => {
-                                    // Telemetry here
-                                    console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
+                                    Logger.logError(
+                                        EventType.APM_CONFIG_EXTRACTOR_FAILURE,
+                                        `${Constants.productivityToolsLogPrefix} Failed to get pane config data`,
+                                        error,
+                                    );
                                     reject(error);
                                 },
                             );
                         },
                         (error) => {
-                            // Telemetry here
-                            console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
+                            Logger.logError(
+                                EventType.APM_CONFIG_EXTRACTOR_FAILURE,
+                                `${Constants.productivityToolsLogPrefix} Failed to get pane unique name`,
+                                error,
+                            );
                             reject(error);
                         },
                     );
                 });
             } catch (error) {
                 return new Promise<ProductivityPaneConfig>((resolve, reject) => {
-                    // Telemetry here
-                    console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error.message));
+                    Logger.logError(
+                        EventType.APM_CONFIG_EXTRACTOR_XRM_API_FAILURE,
+                        `${Constants.productivityToolsLogPrefix} Failed to retrieve APM config`,
+                        error,
+                    );
                     reject(error.message);
                 });
             }
@@ -79,8 +91,11 @@ module ProductivityPaneLoader {
                         resolve(toolsConfig);
                     },
                     (error) => {
-                        // Telemetry here
-                        console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
+                        Logger.logError(
+                            EventType.APM_CONFIG_EXTRACTOR_FAILURE,
+                            `${Constants.productivityToolsLogPrefix} Failed to validate tool icon config`,
+                            error,
+                        );
                         reject(error);
                     },
                 );
@@ -104,8 +119,11 @@ module ProductivityPaneLoader {
                                 response.entities.length > 0 ? resolve(true) : resolve(false);
                             },
                             (error) => {
-                                // Telemetry here
-                                console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
+                                Logger.logError(
+                                    EventType.APM_CONFIG_EXTRACTOR_XRM_API_FAILURE,
+                                    `${Constants.productivityToolsLogPrefix} Failed to retrieve icon path from webresource`,
+                                    error,
+                                );
                                 reject(error);
                             },
                         );
@@ -113,8 +131,11 @@ module ProductivityPaneLoader {
                 });
             } catch (error) {
                 return new Promise<boolean>((resolve, reject) => {
-                    // Telemetry here
-                    console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
+                    Logger.logError(
+                        EventType.APM_CONFIG_EXTRACTOR_FAILURE,
+                        `${Constants.productivityToolsLogPrefix} Failed to get icon from webresources`,
+                        error,
+                    );
                     resolve(false);
                 });
             }
@@ -152,8 +173,11 @@ module ProductivityPaneLoader {
                         resolve(toolsList);
                     },
                     (error) => {
-                        // Telemetry here
-                        console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
+                        Logger.logError(
+                            EventType.APM_CONFIG_EXTRACTOR_XRM_API_FAILURE,
+                            `${Constants.productivityToolsLogPrefix} Failed to retrieve pane tool config data from XrmApi`,
+                            error,
+                        );
                         reject(error);
                     },
                 );
@@ -172,8 +196,11 @@ module ProductivityPaneLoader {
                         }
                     },
                     (error) => {
-                        // Telemetry here
-                        console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
+                        Logger.logError(
+                            EventType.APM_CONFIG_EXTRACTOR_XRM_API_FAILURE,
+                            `${Constants.productivityToolsLogPrefix} Failed to retrieve pane unique name from XrmApi`,
+                            error,
+                        );
                         reject(error);
                     },
                 );
@@ -206,8 +233,11 @@ module ProductivityPaneLoader {
                         resolve(response);
                     },
                     (error) => {
-                        // Telemetry here
-                        console.error(Constants.productivityToolsLogPrefix + JSON.stringify(error));
+                        Logger.logError(
+                            EventType.APM_CONFIG_EXTRACTOR_XRM_API_FAILURE,
+                            `${Constants.productivityToolsLogPrefix} Failed to retrieve pane config from XrmApi`,
+                            error,
+                        );
                         reject(error);
                     },
                 );

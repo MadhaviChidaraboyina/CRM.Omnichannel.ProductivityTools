@@ -24,12 +24,15 @@ module ProductivityPaneLoader {
                 windowObject.Xrm.App.sessions.addOnBeforeSessionSwitch(this.onBeforeSessionSwitch.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionSwitch(this.onAfterSessionSwitch.bind(this));
                 windowObject.Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClose.bind(this));
-                console.info(
+                Logger.logInfo(
+                    EventType.SESSION_CHANGE_MANAGER_SUCCESS,
                     `${Constants.productivityToolsLogPrefix} Success: registered event handlers for on before/after session switch and on after session close`,
                 );
             } catch (error) {
-                console.error(SessionChangeHelper.errorMessagesOnRegisterEventHandlers(error));
-                // Telemetry here
+                Logger.logError(
+                    EventType.SESSION_CHANGE_MANAGER_ERROR,
+                    SessionChangeHelper.errorMessagesOnRegisterEventHandlers(error),
+                );
             }
         }
 
@@ -42,8 +45,10 @@ module ProductivityPaneLoader {
                 const previousSessionId = SessionChangeHelper.getPreviousSessionId(event);
                 SessionStateManager.updateSessionState(previousSessionId);
             } catch (error) {
-                console.error(SessionChangeHelper.errorMessagesOnBeforeSessionSwitch(error));
-                // Telemetry here
+                Logger.logError(
+                    EventType.SESSION_CHANGE_MANAGER_ERROR,
+                    SessionChangeHelper.errorMessagesOnBeforeSessionSwitch(error),
+                );
             }
         }
 
@@ -70,8 +75,10 @@ module ProductivityPaneLoader {
                 }
                 SessionStateManager.restoreSessionState(newSessionId);
             } catch (error) {
-                console.error(SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error));
-                // Telemetry here
+                Logger.logError(
+                    EventType.SESSION_CHANGE_MANAGER_ERROR,
+                    SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error),
+                );
             }
         }
 
@@ -83,8 +90,10 @@ module ProductivityPaneLoader {
                 const closedSessionId = SessionChangeHelper.getSessionId(event);
                 SessionStateManager.deleteSessionStorageData(Constants.appSidePaneSessionState + closedSessionId);
             } catch (error) {
-                console.error(SessionChangeHelper.errorMessagesOnSessionClose(error));
-                // Telemetry here
+                Logger.logError(
+                    EventType.SESSION_CHANGE_MANAGER_ERROR,
+                    SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error),
+                );
             }
         }
     }
