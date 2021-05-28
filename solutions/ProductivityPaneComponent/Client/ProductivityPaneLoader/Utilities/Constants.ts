@@ -107,6 +107,7 @@ module ProductivityPaneLoader {
     }
 
     export enum EventType {
+        PRODUCTIVITY_PANE_GENERIC,
         PRODUCTIVITY_TOOLS_LOAD_SUCCESS,
         PRODUCTIVITY_TOOLS_LOAD_FAILURE,
         APP_SIDE_PANE_LOAD_SUCCESS,
