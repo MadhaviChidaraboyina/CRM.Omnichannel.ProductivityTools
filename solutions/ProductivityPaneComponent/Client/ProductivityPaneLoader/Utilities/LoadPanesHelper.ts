@@ -22,7 +22,7 @@ module ProductivityPaneLoader {
         /*
          * Load productivity tools via app side panes APIs.
          */
-        public static loadAppSidePanes(toolList: ToolConfig[]): Promise<void> {
+        public static loadAppSidePanes(toolList: ToolConfig[], productivityPaneMode: boolean): Promise<void> {
             try {
                 return new Promise<void>((resolve, reject) => {
                     toolList.forEach((tool: ToolConfig) => {
@@ -30,7 +30,7 @@ module ProductivityPaneLoader {
                             .sidePanes.createPane({
                                 paneId: Constants.appSidePaneIdPrefix + tool.toolControlName,
                                 canClose: false,
-                                isSelected: false,
+                                isSelected: Utils.isShownOnHomeSession(tool.toolControlName) && productivityPaneMode,
                                 imageSrc: tool.toolIcon,
                                 title: tool.tooltip,
                                 hidden: !Utils.isShownOnHomeSession(tool.toolControlName),
