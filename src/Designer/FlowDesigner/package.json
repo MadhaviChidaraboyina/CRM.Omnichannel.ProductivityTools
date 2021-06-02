@@ -32,18 +32,19 @@
 		"@uifabric/merge-styles": "^7.4.0",
 		"@uifabric/styling": "^7.6.0",
 		"@uifabric/utilities": "^7.0.7",
-		"draft-js": "0.10.5",
+		"draft-js": "^0.11.7",
 		"fuse.js": "2.2.0",
 		"immutable": "3.8.1",
 		"localforage": "1.5.0",
 		"monaco-editor": "0.18.1",
+		"node-fetch": "^2.6.1",
 		"office-ui-fabric-react": "6.195.5",
+		"re-reselect": "2.1.0",
 		"react": "16.8.3",
 		"react-dom": "16.8.3",
-		"react-draft-wysiwyg": "1.12.13",
+		"react-draft-wysiwyg": "^1.14.7",
 		"requirejs": "2.3.3",
-		"swagger-parser": "^8.0.0",
 		"reselect": "3.0.1",
-		"re-reselect": "2.1.0"
+		"swagger-parser": "^8.0.0"
 	}
 }
