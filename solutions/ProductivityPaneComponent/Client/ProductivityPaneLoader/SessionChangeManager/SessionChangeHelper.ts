@@ -12,16 +12,15 @@ module ProductivityPaneLoader {
 
         public static hideAllProductivityTools(toolList: ToolConfig[]): void {
             toolList.forEach((tool: ToolConfig) => {
-                // Do not hide Teams Collaboration on home session.
-                if (!Utils.isTeamsCollab(tool.toolControlName)) {
-                    XrmAppProxy.getAppSidePane(tool.toolControlName).hidden = true;
+                if (!Utils.isShownOnHomeSession(tool.toolControlName)) {
+                    XrmAppProxy.getAppSidePane(Constants.appSidePaneIdPrefix + tool.toolControlName).hidden = true;
                 }
             });
         }
 
         public static showAllProductivityTools(toolList: ToolConfig[]): void {
             toolList.forEach((tool: ToolConfig) => {
-                XrmAppProxy.getAppSidePane(tool.toolControlName).hidden = false;
+                XrmAppProxy.getAppSidePane(Constants.appSidePaneIdPrefix + tool.toolControlName).hidden = false;
             });
         }
 

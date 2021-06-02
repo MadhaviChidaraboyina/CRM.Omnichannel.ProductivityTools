@@ -28,13 +28,12 @@ module ProductivityPaneLoader {
                     toolList.forEach((tool: ToolConfig) => {
                         XrmAppProxy.getXrmAppApis()
                             .sidePanes.createPane({
-                                paneId: tool.toolControlName,
+                                paneId: Constants.appSidePaneIdPrefix + tool.toolControlName,
                                 canClose: false,
                                 isSelected: false,
                                 imageSrc: tool.toolIcon,
                                 title: tool.tooltip,
-                                // Do not hide Teams Collaboration on home session.
-                                hidden: Utils.isTeamsCollab(tool.toolControlName) ? false : true,
+                                hidden: !Utils.isShownOnHomeSession(tool.toolControlName),
                                 alwaysRender: true,
                                 keepBadgeOnSelect: false,
                             })

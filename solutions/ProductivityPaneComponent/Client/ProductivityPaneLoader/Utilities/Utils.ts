@@ -21,8 +21,10 @@ module ProductivityPaneLoader {
             return Utils.isEqual(sessionId, Constants.homeSessionId);
         }
 
-        public static isTeamsCollab(paneId: string): boolean {
-            return Utils.isEqual(paneId, Constants.teamsCollabAppSidePaneId);
+        public static isShownOnHomeSession(controlName: string): boolean {
+            // Add OR condition here if there is another tool to be shown on
+            // home session. Currently there is only Teams Collab control. 
+            return Utils.isEqual(controlName, Constants.teamsCollabControlName);
         }
 
         /**
