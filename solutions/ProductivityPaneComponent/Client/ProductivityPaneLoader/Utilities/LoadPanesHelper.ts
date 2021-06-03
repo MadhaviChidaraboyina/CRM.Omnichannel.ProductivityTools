@@ -56,7 +56,7 @@ module ProductivityPaneLoader {
                                 (error) => {
                                     Logger.logError(
                                         EventType.APP_SIDE_PANE_LOAD_FAILURE,
-                                        `${Constants.productivityToolsLogPrefix} Failed to laod app side pane ${tool.toolControlName}`,
+                                        `${Constants.productivityToolsLogPrefix} Failed to load app side pane for control ${tool.toolControlName}`,
                                         error,
                                     );
                                     reject(error);

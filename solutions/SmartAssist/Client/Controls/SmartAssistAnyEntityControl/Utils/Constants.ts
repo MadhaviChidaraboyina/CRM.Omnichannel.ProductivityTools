@@ -15,7 +15,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static FetchOperator = "?fetchXml=";
         public static LocCacheString = "SAlocStrings";
         public static EnglishLanguageCode = "1033";
-        public static SmartAssistPaneId = "MscrmControls.SmartassistPanelControl.SmartassistPanelControl";
+        public static SmartAssistPaneId = "AppSidePane_MscrmControls.SmartassistPanelControl.SmartassistPanelControl";
 		public static FCB_ProductivityTools_UseAppSidePanes = "ProductivityTools.UseAppSidePanes";
 
         //FPBot

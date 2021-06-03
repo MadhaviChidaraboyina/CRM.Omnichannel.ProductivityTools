@@ -48,7 +48,8 @@ module ProductivityPaneLoader {
             const defaultAppSidePanesState = isDefaultExpanded
                 ? Constants.appSidePanesExpanded
                 : Constants.appSidePanesCollapsed;
-            const defaultSelectedAppSidePaneId = productivityToolList[Constants.firstElement].toolControlName;
+            const defaultSelectedAppSidePaneId =
+                Constants.appSidePaneIdPrefix + productivityToolList[Constants.firstElement].toolControlName;
             const defaultSessionStorageData = {
                 appSidePanesState: defaultAppSidePanesState,
                 selectedAppSidePaneId: defaultSelectedAppSidePaneId,
