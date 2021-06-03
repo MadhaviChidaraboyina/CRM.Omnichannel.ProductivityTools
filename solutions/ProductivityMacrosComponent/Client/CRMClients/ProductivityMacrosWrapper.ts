@@ -283,7 +283,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                     }
 
                     pageInput.pageType = AppTabConstant.Webresource;
-                    pageInput.webresourceName = "msdyn_ExternalWebPageContainer.html";
+                    pageInput.webresourceName = "msdyn_CECExternalWebPageContainer.html";
                     pageInput.data = `cif_thirdpartyurl${url.Value}${dataString}`;
                 }
                 break;
