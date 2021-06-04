@@ -32,7 +32,7 @@ module ProductivityPaneLoader {
                                 canClose: false,
                                 isSelected: Utils.isShownOnAllSessions(tool.toolControlName) && productivityPaneMode,
                                 imageSrc: tool.toolIcon,
-                                title: tool.tooltip,
+                                title: tool.toolTip,
                                 hidden: !Utils.isShownOnAllSessions(tool.toolControlName),
                                 alwaysRender: true,
                                 keepBadgeOnSelect: false,
