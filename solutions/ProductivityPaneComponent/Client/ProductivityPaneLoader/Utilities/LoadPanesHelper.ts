@@ -28,12 +28,12 @@ module ProductivityPaneLoader {
                     toolList.forEach((tool: ToolConfig) => {
                         XrmAppProxy.getXrmAppApis()
                             .sidePanes.createPane({
-                                paneId: Constants.appSidePaneIdPrefix + tool.toolControlName,
+                                paneId: tool.paneId,
                                 canClose: false,
-                                isSelected: Utils.isShownOnHomeSession(tool.toolControlName) && productivityPaneMode,
+                                isSelected: Utils.isShownOnAllSessions(tool.toolControlName) && productivityPaneMode,
                                 imageSrc: tool.toolIcon,
                                 title: tool.tooltip,
-                                hidden: !Utils.isShownOnHomeSession(tool.toolControlName),
+                                hidden: !Utils.isShownOnAllSessions(tool.toolControlName),
                                 alwaysRender: true,
                                 keepBadgeOnSelect: false,
                             })
