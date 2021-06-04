@@ -80,8 +80,15 @@ module MscrmControls.PanelControl {
         private isBeethovenChatWidgetSession(sessionId: string): boolean {
             // Temporary workaround for disabling legacy pane control in chat widget session.
             // Legacy pane control will be removed after Oct release
-            const session = Xrm.App.sessions.getSession(sessionId);
-            return (session as any).anchorTab?.currentPageInput?.controlName === "Microsoft.FirstRunExperienceControl";
+            try {
+                const session = Xrm.App.sessions.getSession(sessionId) as any;
+                if (session && session.anchorTab && session.anchorTab.currentPageInput && session.anchorTab.currentPageInput.data) {
+                    return JSON.parse(session.anchorTab.currentPageInput.data).pageType === "chatDemo";
+                }
+            }
+            catch (e) {
+            }
+            return false;
         }
 
         private onSessionContextChanged(sessionContextData: SessionChangeEventData, actionType: string): void {
