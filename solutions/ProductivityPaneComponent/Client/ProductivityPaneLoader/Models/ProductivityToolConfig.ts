@@ -12,7 +12,7 @@ module ProductivityPaneLoader {
         public tooltip: string;
         public staticData: string;
         public defaultIcon: string;
-        public istoolIconValid: boolean;
+        public isToolIconValid: boolean;
         public isDefaultIconValid: boolean;
 
         constructor(
@@ -36,7 +36,7 @@ module ProductivityPaneLoader {
             this.tooltip = toolTip;
             this.staticData = staticData;
             this.defaultIcon = defaultIcon;
-            this.istoolIconValid = istoolIconValid;
+            this.isToolIconValid = istoolIconValid;
             this.isDefaultIconValid = isDefaultIconValid;
         }
     }

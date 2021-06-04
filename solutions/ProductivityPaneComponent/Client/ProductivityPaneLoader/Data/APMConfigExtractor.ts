@@ -82,7 +82,7 @@ module ProductivityPaneLoader {
                         let pos = 0;
                         results.forEach((result: any, index: number) => {
                             if (index % 2 == 0) {
-                                toolsConfig[pos].istoolIconValid = result;
+                                toolsConfig[pos].isToolIconValid = result;
                             } else {
                                 toolsConfig[pos].isDefaultIconValid = result;
                                 pos++;
