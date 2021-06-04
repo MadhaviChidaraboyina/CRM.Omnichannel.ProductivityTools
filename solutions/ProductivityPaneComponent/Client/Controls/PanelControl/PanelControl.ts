@@ -77,11 +77,27 @@ module MscrmControls.PanelControl {
             }
         }
 
+        private isBeethovenChatWidgetSession(sessionId: string): boolean {
+            // Temporary workaround for disabling legacy pane control in chat widget session.
+            // Legacy pane control will be removed after Oct release
+            try {
+                const session = Xrm.App.sessions.getSession(sessionId) as any;
+                if (session && session.anchorTab && session.anchorTab.currentPageInput && session.anchorTab.currentPageInput.data) {
+                    return JSON.parse(session.anchorTab.currentPageInput.data).pageType === "chatDemo";
+                }
+            }
+            catch (e) {
+            }
+            return false;
+        }
+
         private onSessionContextChanged(sessionContextData: SessionChangeEventData, actionType: string): void {
             this.isSessionChanged = true;
             this.currentSessionId = sessionContextData.newSessionId;
 
-            if (this.currentSessionId == Constants.homeSessionId || this.isDataFetched == false) {
+            if (this.currentSessionId == Constants.homeSessionId ||
+                this.isDataFetched == false ||
+                this.isBeethovenChatWidgetSession(this.currentSessionId)) {
                 this.isSessionChanged = false;
                 this.currentSessionId = Constants.emptyString;
                 sessionContextData.newSessionId = Constants.emptyString;
