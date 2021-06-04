@@ -81,7 +81,7 @@ module MscrmControls.PanelControl {
             // Temporary workaround for disabling legacy pane control in chat widget session.
             // Legacy pane control will be removed after Oct release
             const session = Xrm.App.sessions.getSession(sessionId);
-            return (session as any).anchorTab.currentPageInput.controlName === "Microsoft.FirstRunExperienceControl";
+            return (session as any).anchorTab?.currentPageInput?.controlName === "Microsoft.FirstRunExperienceControl";
         }
 
         private onSessionContextChanged(sessionContextData: SessionChangeEventData, actionType: string): void {
