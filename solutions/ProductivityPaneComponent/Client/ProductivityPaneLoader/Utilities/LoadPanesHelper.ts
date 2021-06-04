@@ -22,18 +22,18 @@ module ProductivityPaneLoader {
         /*
          * Load productivity tools via app side panes APIs.
          */
-        public static loadAppSidePanes(toolList: ToolConfig[]): Promise<void> {
+        public static loadAppSidePanes(toolList: ToolConfig[], productivityPaneMode: boolean): Promise<void> {
             try {
                 return new Promise<void>((resolve, reject) => {
                     toolList.forEach((tool: ToolConfig) => {
                         XrmAppProxy.getXrmAppApis()
                             .sidePanes.createPane({
-                                paneId: tool.toolControlName,
+                                paneId: tool.paneId,
                                 canClose: false,
-                                isSelected: false,
+                                isSelected: Utils.isShownOnAllSessions(tool.toolControlName) && productivityPaneMode,
                                 imageSrc: tool.toolIcon,
-                                title: tool.tooltip,
-                                hidden: true,
+                                title: tool.toolTip,
+                                hidden: !Utils.isShownOnAllSessions(tool.toolControlName),
                                 alwaysRender: true,
                                 keepBadgeOnSelect: false,
                             })
@@ -56,7 +56,7 @@ module ProductivityPaneLoader {
                                 (error) => {
                                     Logger.logError(
                                         EventType.APP_SIDE_PANE_LOAD_FAILURE,
-                                        `${Constants.productivityToolsLogPrefix} Failed to laod app side pane ${tool.toolControlName}`,
+                                        `${Constants.productivityToolsLogPrefix} Failed to load app side pane for control ${tool.toolControlName}`,
                                         error,
                                     );
                                     reject(error);

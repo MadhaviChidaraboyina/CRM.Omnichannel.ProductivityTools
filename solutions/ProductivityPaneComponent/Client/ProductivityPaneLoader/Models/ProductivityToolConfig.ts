@@ -4,14 +4,15 @@
 module ProductivityPaneLoader {
     export class ToolConfig {
         public toolControlName: string;
+        public paneId: string;
         public toolIcon: string;
         public toolPosition: number;
         public isEnabled: boolean;
         public toolName: string;
-        public tooltip: string;
+        public toolTip: string;
         public staticData: string;
         public defaultIcon: string;
-        public istoolIconValid: boolean;
+        public isToolIconValid: boolean;
         public isDefaultIconValid: boolean;
 
         constructor(
@@ -23,18 +24,19 @@ module ProductivityPaneLoader {
             toolTip: string,
             staticData: string,
             defaultIcon: string,
-            istoolIconValid: boolean = false,
+            isToolIconValid: boolean = false,
             isDefaultIconValid: boolean = false,
         ) {
             this.toolControlName = toolControlName;
+            this.paneId = Constants.appSidePaneIdPrefix + toolControlName;
             this.toolIcon = toolIcon;
             this.toolPosition = toolPosition;
             this.isEnabled = isEnabled;
             this.toolName = toolName;
-            this.tooltip = toolTip;
+            this.toolTip = toolTip;
             this.staticData = staticData;
             this.defaultIcon = defaultIcon;
-            this.istoolIconValid = istoolIconValid;
+            this.isToolIconValid = isToolIconValid;
             this.isDefaultIconValid = isDefaultIconValid;
         }
     }

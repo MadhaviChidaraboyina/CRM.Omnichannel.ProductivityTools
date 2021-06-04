@@ -34,11 +34,14 @@ module ProductivityPaneLoader {
                                         productivityPaneConfig.productivityToolsConfig.ToolsList,
                                     )
                                     .then((toolList: ToolConfig[]) => {
-                                        LoadPanesHelper.loadAppSidePanes(toolList).then(() => {
+                                        // productivityPaneMode indicates whether or not user
+                                        // want to expand all productivity tools. true: expand
+                                        // all tools by default; false: collapse all tools.
+                                        LoadPanesHelper.loadAppSidePanes(
+                                            toolList,
+                                            productivityPaneConfig.productivityPaneMode,
+                                        ).then(() => {
                                             LoadPanesHelper.initSessionChangeManager(
-                                                // productivityPaneMode indicates whether or not user
-                                                // want to expand all productivity tools. true: expand
-                                                // all tools by default; false: collapse all tools.
                                                 productivityPaneConfig.productivityPaneMode,
                                                 toolList,
                                             );

@@ -12,13 +12,15 @@ module ProductivityPaneLoader {
 
         public static hideAllProductivityTools(toolList: ToolConfig[]): void {
             toolList.forEach((tool: ToolConfig) => {
-                XrmAppProxy.getAppSidePane(tool.toolControlName).hidden = true;
+                if (!Utils.isShownOnAllSessions(tool.toolControlName)) {
+                    XrmAppProxy.getAppSidePane(tool.paneId).hidden = true;
+                }
             });
         }
 
         public static showAllProductivityTools(toolList: ToolConfig[]): void {
             toolList.forEach((tool: ToolConfig) => {
-                XrmAppProxy.getAppSidePane(tool.toolControlName).hidden = false;
+                XrmAppProxy.getAppSidePane(tool.paneId).hidden = false;
             });
         }
 

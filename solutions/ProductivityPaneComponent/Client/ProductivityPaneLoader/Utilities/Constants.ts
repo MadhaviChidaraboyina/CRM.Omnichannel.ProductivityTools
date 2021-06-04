@@ -86,6 +86,10 @@ module ProductivityPaneLoader {
         // FCB
         public static fcbProductivityToolsUseAppSidePanes = 'ProductivityTools.UseAppSidePanes';
 
+        // App side pane
+        public static teamsCollabControlName = 'MscrmControls.OfficeProductivity.CollabControl';
+        public static appSidePaneIdPrefix = 'AppSidePane_';
+
         // Session storage
         public static appSidePaneSessionState = 'appSidePaneSessionState_';
         public static selectedAppSidePaneId = 'selectedAppSidePaneId';

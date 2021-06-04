@@ -20,6 +20,13 @@ module ProductivityPaneLoader {
         public static isHomeSession(sessionId: string) {
             return Utils.isEqual(sessionId, Constants.homeSessionId);
         }
+
+        public static isShownOnAllSessions(controlName: string): boolean {
+            // Add OR condition here if there is another tool to be shown on
+            // home session. Currently there is only Teams Collab control.
+            return Utils.isEqual(controlName, Constants.teamsCollabControlName);
+        }
+
         /**
          * Indicate if the control is loaded via app side panes
          */
