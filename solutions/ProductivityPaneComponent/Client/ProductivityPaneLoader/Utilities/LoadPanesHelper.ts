@@ -35,7 +35,7 @@ module ProductivityPaneLoader {
                                 title: tool.toolTip,
                                 hidden: !Utils.isShownOnAllSessions(tool.toolControlName),
                                 alwaysRender: true,
-                                keepBadgeOnSelect: false,
+                                keepBadgeOnSelect: Utils.keepBadgeOnSelect(tool.toolControlName),
                             })
                             .then((pane) => {
                                 pane.navigate({

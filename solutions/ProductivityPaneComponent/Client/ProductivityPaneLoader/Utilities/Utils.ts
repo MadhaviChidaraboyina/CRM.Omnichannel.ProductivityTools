@@ -23,7 +23,13 @@ module ProductivityPaneLoader {
 
         public static isShownOnAllSessions(controlName: string): boolean {
             // Add OR condition here if there is another tool to be shown on
-            // home session. Currently there is only Teams Collab control.
+            // all sessions. Currently there is only Teams Collab control.
+            return Utils.isEqual(controlName, Constants.teamsCollabControlName);
+        }
+
+        public static keepBadgeOnSelect(controlName: string): boolean {
+            // The badge on app side pane will be cleared automatically if the pane is selected and
+            // keepBadgeOnSelect is passed false. Teams Collab control wants to keep badge on select.
             return Utils.isEqual(controlName, Constants.teamsCollabControlName);
         }
 
