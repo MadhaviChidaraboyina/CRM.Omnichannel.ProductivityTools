@@ -13,9 +13,6 @@ namespace Microsoft.ProductivityMacros.Internal {
 
 	export function resolveTemplateString(input: string, templateParams: any, scope: string): Promise<string> {
         return new Promise<string>(function (resolve, reject) {
-            if (isJsonString(input)) {
-                return resolve(input);
-            }
             if (isNullOrUndefined(input)) {
                 return resolve(input);
             }
@@ -26,9 +23,33 @@ namespace Microsoft.ProductivityMacros.Internal {
                 input = input.substr(1, input.length - 1);   
             } 
 
-            //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions : "?" character
+            // Regex has 4 variants (seperated by "|" in regex):
 
-            let matches = input.match(new RegExp("\\{[^{]*?\\}|\\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}|\\$\{[^{]*?\\}|\\$\{(?:[^{]*?\\{[^}]*?\\}[^{}]*)*?\\}", "g")); // "\\{.*?\\}" (non -greedy) allows to resolve "{qp}{param1}" as qp and param1 whereas "\\{.*\\}" (greedy) resolve "{qp}{param1}" as {qp}{param1} itself.
+            // Regular slug matching
+            // 		(Start '{')	|		(slug name string - no special char like {}'")	|	(End '}')
+            // Reg:	\{			|		[^{}\"\']*										|	\\}
+            // Ex:	{			|		anchor.customerId								|	}
+
+            // Odata format matching
+            //		(Start '{$')	|	('odata' string - no special char like {})	    |	({Slug} string if any)				|	(End '}')
+            // Reg:	\{$				|	[^{}]*				                            |	((\{[^{}]*\})+[^{}]*)*				|	\}
+            // Ex:	{$				|	odata				                            |	...entityid eq '{slug}'&$select...	|	}
+
+            // Regular slug matching, but with proceeding "$"
+            // 		(Start '${')	|		(slug name string - no special char like {}'")	|	(End '}')
+            // Reg:	$\{			    |		[^{}\"\']*										|	\\}
+            // Ex:	${			    |		anchor.customerId								|	}
+
+            // Odata format matching, but with proceeding "$"
+            //		(Start '${$')	|	('odata' string - no special char like {})	    |	({Slug} string if any)				|	(End '}')
+            // Reg:	$\{$			|	[^{}]*				                            |	((\{[^{}]*\})+[^{}]*)*				|	\}
+            // Ex:	${$				|	odata				                            |	...entityid eq '{slug}'&$select...	|	}
+            
+            // Use cases mentioned in document: 
+            // ${anchor.<attribute_name>}
+            // ${ReconnectUrl{ReconnectID}}
+            // ${$session.visitorDevice}
+            let matches = input.match(new RegExp("\\{[^{}\"\']*\\}|\\{\\$[^{}]*((\\{[^{}]*\\})+[^{}]*)*\\}|\\$\{[^{}\"\']*\\}|\\$\{\\$[^{}]*((\\{[^{}]*\\})+[^{}]*)*\\}", "g"));
             let slugCallbacks: string[] = [];
 
             for (let index in matches) {
