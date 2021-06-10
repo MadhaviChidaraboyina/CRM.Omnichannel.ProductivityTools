@@ -92,7 +92,7 @@ module MscrmControls.Smartassist {
 	}
 
     .style-positive {
-        background: #1AAD4B;
+        background: #107C10;
         color: white;
      }
 
