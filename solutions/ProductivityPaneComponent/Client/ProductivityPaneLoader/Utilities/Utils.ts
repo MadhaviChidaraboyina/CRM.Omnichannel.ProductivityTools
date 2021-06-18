@@ -39,5 +39,22 @@ module ProductivityPaneLoader {
         public static isUsingAppSidePanes(): boolean {
             return Xrm.Internal.isFeatureEnabled(Constants.fcbProductivityToolsUseAppSidePanes);
         }
+
+        public static convertMapToJsonString(map: Map<string, string>): string {
+            let jsonObject = {};
+            map.forEach((value, key) => {
+                jsonObject[key] = value;
+            });
+            return JSON.stringify(jsonObject);
+        }
+
+        public static convertJsonStringToMap(jsonString: string): Map<string, string> {
+            const map = new Map<string, string>();
+            const jsonObj = JSON.parse(jsonString);
+            for (var key in jsonObj) {
+                map.set(key, jsonObj[key]);
+            }
+            return map;
+        }
     }
 }

@@ -68,10 +68,13 @@ module ProductivityPaneLoader {
             const currentSelectedAppSidePaneId = currentSelectedAppSidePane
                 ? currentSelectedAppSidePane.paneId
                 : Constants.emptyString;
+
+            const sessionState: Map<string, string> = Microsoft.AppRuntime.Sessions.getSessionState();
             const appSidePanesState = XrmAppProxy.getAppSidePanesState();
             const sessionStorageData = {
                 appSidePanesState: appSidePanesState,
                 selectedAppSidePaneId: currentSelectedAppSidePaneId,
+                persistenceState: Utils.convertMapToJsonString(sessionState),
             };
             SessionStateManager.setSessionStorageData(
                 Constants.appSidePaneSessionState + sessionId,
@@ -88,6 +91,11 @@ module ProductivityPaneLoader {
             if (!Utils.isEmpty(sessionStorageData.selectedAppSidePaneId)) {
                 XrmAppProxy.setSelectedAppSidePane(sessionStorageData.selectedAppSidePaneId);
                 XrmAppProxy.setAppSidePanesState(sessionStorageData.appSidePanesState);
+            }
+
+            if (sessionStorageData.persistenceState) {
+                const sessionPersistenceState = Utils.convertJsonStringToMap(sessionStorageData.persistenceState);
+                Microsoft.AppRuntime.Sessions.restoreSessionState(sessionPersistenceState)
             }
             console.info(`${Constants.productivityToolsLogPrefix} Success: restored session state of ${sessionId}`);
         }
