@@ -1,5 +1,6 @@
 ﻿import { isNullOrUndefined } from "util";
 import * as SharedDefines from "./sharedDefines";
+import * as DesignerConstants from "../constants/DesignerConstants"
 
 export class Utils {
     public static serialize(message, source, destination) {
@@ -18,7 +19,7 @@ export class Utils {
         //console.log("Received msg from " + source + " for " + destination + " " + ret);
         return ret;
     }
-    private static _urlParams = new URLSearchParams(window.location.search);
+    private static _urlParams = new URLSearchParams(window.location.search || window.location.hash.replace(/^#/, '?'));
     public static genMsgForTelemetry(message?: string, error?: Error): string {
         let msg = message || "";
         let err = error && error.message || "";
@@ -85,5 +86,24 @@ export class Utils {
     }
     public static closeDesigner(event?: Event) {
         (window.top.Xrm.Page.ui as XrmClientApi.FormUi).close();
+    }
+
+    public static getGeoName(): string {
+        let organizationGeoName = "";
+        let organizationSettings = ((window.top as any).Xrm.Utility as XrmClientApi.Utility)
+        .getGlobalContext()
+        .organizationSettings;
+
+        if (organizationSettings) {
+            organizationGeoName = (organizationSettings as any).organizationGeo;
+            if (organizationGeoName && organizationGeoName.toUpperCase() === "NA") {
+                organizationGeoName = (organizationSettings as any).isSovereignCloud ? "GCC" : organizationGeoName;
+            }
+        }
+        return organizationGeoName;
+    }
+
+    public static getCdnBase(): string {
+        return DesignerConstants.CdnGeoSettings[Utils.getGeoName()] || DesignerConstants.CdnGeoSettings[DesignerConstants.GeoNames.DEFAULT];
     }
 };

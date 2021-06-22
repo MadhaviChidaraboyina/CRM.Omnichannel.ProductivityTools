@@ -151,6 +151,10 @@
 	  <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroMonitor.bundle.js" behavior="0" />
 	  <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroMonitor.html" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_spinner.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroDesigner/app.bundle.js" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroDesigner/iframedesigner.html" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroMonitor/appMon.bundle.js" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroMonitor/iframemonitor.html" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_macros_icon.svg" behavior="0" />
       <RootComponent type="66" schemaName="MscrmControls.Grid.MacroSessionAssociatedGridControl" behavior="0" />
 	  <RootComponent type="66" schemaName="MscrmControls.RunLink.RunLinkControl" behavior="0" />

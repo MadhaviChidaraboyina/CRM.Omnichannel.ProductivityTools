@@ -115,9 +115,12 @@
     <Content Include="Other\Relationships\SystemUser.xml" />
     <Content Include="Other\Relationships\Team.xml" />
     <Content Include="Other\Relationships\Workflow.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosComponent_macroMonitor\appMon.bundle.js.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosComponent_macroDesigner\app.bundle.js.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosComponent_macroMonitor\iframemonitor.html.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosComponent_macroDesigner\iframedesigner.html.data.xml" />
     <Content Include="WebResources\MacrosDataLayer\msdyn_MacrosDataLayer.js.data.xml" />
     <Content Include="WebResources\CRMClients\msdyn_ProductivityMacrosComponent_internal_library.js.data.xml" />
-   
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosComponent_spinner.svg" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosComponent_macroDesigner.bundle.js.data.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacrosComponent_macroDesigner.html.data.xml" />
@@ -133,7 +136,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="WebResources\CRMClients\msdyn_LogicAppExecutor_v2.js.data.xml" />
-     <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1025.resx.data.xml" />
+    <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1025.resx.data.xml" />
     <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1026.resx.data.xml" />
     <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1027.resx.data.xml" />
     <Content Include="WebResources\Localization\ProductivityMacrosComponent_webresource_strings.1028.resx.data.xml" />

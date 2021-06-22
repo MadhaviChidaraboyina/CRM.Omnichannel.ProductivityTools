@@ -45,107 +45,31 @@ async function getDesignerBlobConfig(): Promise<SharedDefines.MacroDesignerConfi
 	let _designerConfigPromise: Promise<SharedDefines.MacroDesignerConfig> = new Promise<SharedDefines.MacroDesignerConfig>(async function (resolve, reject) {
 		let lcid = window.top.Xrm.Utility.getGlobalContext().getOrgLcid();
 		let locale = SharedDefines.LOCALE_MAP[lcid] || "en";
-		let baseUrl: string = "";
-		let path: string = "";
+		let baseUrl: string = window.origin;
+		let path: string = SharedDefines.Constants.MACROS_DESIGNER_PATH;
 		let designerConfig: SharedDefines.MacroDesignerConfig = {
 			DesignerInstanceId: Utils.Utils.GenGuid()
 		};
 		let macroCDSConfig = await window.top.Xrm.WebApi.retrieveMultipleRecords(SharedDefines.Constants.MACRO_CONFIG_ENTITY, "?$select=msdyn_designerfallbackurl,msdyn_designerurlrelativepath,msdyn_designerurlconfigentity,msdyn_designerurlconfigentityid,msdyn_designerurlconfigentityattrib,msdyn_designerurlconfigentityquery,msdyn_name,msdyn_uservoicelink,msdyn_searchhint,msdyn_uservoicetext,msdyn_macrosversion");
 		if (macroCDSConfig.entities.length > 0) {
 			let config = macroCDSConfig.entities[0];
-			path = config.msdyn_designerurlrelativepath;
 			designerConfig.UserVoiceText = Utils.Utils.getResourceString(config.msdyn_uservoicetext);
 			designerConfig.UserVoiceLink = config.msdyn_uservoicelink;
 			designerConfig.SearchHint = Utils.Utils.getResourceString(config.msdyn_searchhint);
 			designerConfig.DesignerSolutionVersion = config.msdyn_macrosversion;
-			if (config.msdyn_designerurlconfigentity && config.msdyn_designerurlconfigentityattrib) {
-				if (config.msdyn_designerurlconfigentityid) {
-					try {
-						let designerConfig = await window.top.Xrm.WebApi.retrieveRecord(config.msdyn_designerurlconfigentity, config.msdyn_designerurlconfigentityid, "?$select=" + config.msdyn_designerurlconfigentityattrib);
-						baseUrl = designerConfig[config.msdyn_designerurlconfigentityattrib];
-					}
-					catch (error) {
-						let obj: SharedDefines.LogObject = {
-							level: SharedDefines.LogLevel.Warning,
-							eventName: WrapperEvents.WrapperConfigErrorEvent,
-							message: Utils.Utils.genMsgForTelemetry("Config entity id configured but unable to read designer URL", error),
-							eventTimeStamp: new Date(),
-							eventType: SharedDefines.TelemetryEventType.Trace,
-							exception: error.stack
-						};
-						doTelemetry(obj);
-					}
-				}
-				if (config.msdyn_designerurlconfigentityquery && !baseUrl) {
-					try {
-						let designerConfig = await window.top.Xrm.WebApi.retrieveMultipleRecords(config.msdyn_designerurlconfigentity, config.msdyn_designerurlconfigentityquery);
-						if (designerConfig.entities.length > 0) {
-							baseUrl = designerConfig.entities[0][config.msdyn_designerurlconfigentityattrib];
-						}
-					}
-					catch (error) {
-						let obj: SharedDefines.LogObject = {
-							level: SharedDefines.LogLevel.Warning,
-							eventName: WrapperEvents.WrapperConfigErrorEvent,
-							message: Utils.Utils.genMsgForTelemetry("Config entity query configured but unable to read designer URL", error),
-							eventTimeStamp: new Date(),
-							eventType: SharedDefines.TelemetryEventType.Trace,
-							exception: error.stack
-						};
-						doTelemetry(obj);
-					}
-				}
-			}
-            if (!baseUrl) {
-                if (!isNullOrUndefined(config.msdyn_designerfallbackurl)) {
-                    baseUrl = config.msdyn_designerfallbackurl;
-                } else {
-                    try {
-                        //falling back to NAM endpoint
-                        let crmDataCenter = window.top.Xrm.Utility.getGlobalContext().getClientUrl().split(".")[1];
-                        if (Constants.gccDataCenter.indexOf(crmDataCenter) != -1) {
-                            baseUrl = Constants.fairfaxFallbackURL;
-                        } else {
-                            baseUrl = Constants.publicFallbackURL;
-                        }
-                    } catch (error) {
-                        let obj: SharedDefines.LogObject = {
-                            level: SharedDefines.LogLevel.Warning,
-                            eventName: WrapperEvents.WrapperConfigErrorEvent,
-                            message: Utils.Utils.genMsgForTelemetry("Error in setting fallback designer URL", error),
-                            eventTimeStamp: new Date(),
-                            eventType: SharedDefines.TelemetryEventType.Trace,
-                            exception: error.stack
-                        };
-                        doTelemetry(obj);
-                    }
-                }
-			}
 		}
-		if (!baseUrl || !path) {
-			let obj: SharedDefines.LogObject = {
-				level: SharedDefines.LogLevel.Error,
-				eventName: WrapperEvents.WrapperConfigErrorEvent,
-				message: Utils.Utils.genMsgForTelemetry("No valid designer URL configured"),
-				eventTimeStamp: new Date(),
-				eventType: SharedDefines.TelemetryEventType.Trace,
-			};
-			doTelemetry(obj, "DESIGNER_CONFIG_ERROR_URL_NOT_FOUND", true);
-			reject(new Error("Unable to find designer config"));
-		}
-		else {
-			designerConfig.DesignerBaseURL = new URL(path + "?locale=" + locale + "&base=" + encodeURIComponent(window.top.Xrm.Utility.getGlobalContext().getClientUrl()), baseUrl).toString();
-			let obj: SharedDefines.LogObject = {
-				level: SharedDefines.LogLevel.Info,
-				eventName: WrapperEvents.WrapperConfigLoadEvent,
-				message: Utils.Utils.genMsgForTelemetry("Designer config loaded"),
-				eventTimeStamp: new Date(),
-				eventType: SharedDefines.TelemetryEventType.Trace,
-				eventData: { data: designerConfig }
-			};
-			doTelemetry(obj);
-			resolve(designerConfig);
-		}
+		designerConfig.DesignerBaseURL = new URL(path + "#locale=" + locale + "&base=" + encodeURIComponent(window.top.Xrm.Utility.getGlobalContext().getClientUrl()) 
+		+ "&cdn=" + encodeURIComponent(Utils.Utils.getCdnBase()) , baseUrl).toString();
+		let obj: SharedDefines.LogObject = {
+			level: SharedDefines.LogLevel.Info,
+			eventName: WrapperEvents.WrapperConfigLoadEvent,
+			message: Utils.Utils.genMsgForTelemetry("Designer config loaded"),
+			eventTimeStamp: new Date(),
+			eventType: SharedDefines.TelemetryEventType.Trace,
+			eventData: { data: designerConfig }
+		};
+		doTelemetry(obj);
+		resolve(designerConfig);
 	});
 	return _designerConfigPromise;
 }
@@ -646,7 +570,7 @@ async function getFlowsData(entityName: any) {
 
 require(["LogicApps/rpc/Scripts/logicappdesigner/libs/rpc/rpc.standalone"], async function (Rpc) {
 	let designerIframe = (document.getElementById("designerIframe") as HTMLIFrameElement);
-	let targetOrigin = (await initOperations[RequiredCDSOpersForInit.DesignerConfig] as SharedDefines.MacroDesignerConfig).DesignerBaseURL || "*";
+	let targetOrigin = window.origin;
 	let rpc = new Rpc.Rpc({
 		signature: SharedDefines.Constants.WRAPPER_CONTROL_SIGNATURE,
 		targetOrigin: targetOrigin,

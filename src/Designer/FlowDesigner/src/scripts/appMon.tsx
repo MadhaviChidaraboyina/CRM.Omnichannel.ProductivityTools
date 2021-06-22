@@ -3,6 +3,13 @@ import * as Utils from "./sharedUtils";
 import * as OAuth from "./oAuthService";
 import * as HostService from "./hostService";
 
+
+(window as any).requirejs.config({
+	context: 'designer',
+	baseUrl: (window as any)._DesignerBlobCdnBase + 'flowcontrol/DesignerBlob/'
+});
+
+
 function getMonacoLocale(editorLocaleName) {
 	// Mapping of the languages Monaco editor supports. Default to english for non-supported languages.
 	let monacoLocalesMap = {
@@ -76,7 +83,7 @@ let FeaturesToEnable = {
 };
 
 function startInit() {
-	(window as any).publicPath = "LogicApps/core/scripts/";
+	(window as any).publicPath = (window as any)._DesignerBlobCdnBase + "flowcontrol/DesignerBlob/" + "LogicApps/core/scripts/";
 	var req = (window as any).requirejs.config({
 		context: 'designer',
 		paths: {

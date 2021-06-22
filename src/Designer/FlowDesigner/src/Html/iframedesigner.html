@@ -6,14 +6,42 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Macro Designer</title>
-    <link rel="stylesheet" href="./node_modules/office-ui-fabric-react/dist/css/fabric.min.css" />
-    <link rel="stylesheet" href="./node_modules/draft-js/dist/Draft.css" />
-    <link rel="stylesheet" href="./node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css" />
-    <link rel="stylesheet" href="./LogicApps/core/content/logicapps.min.css" />
 </head>
 <body>
     <div id="app" class="msla-container msla-clearfix msla-host-portalfx"></div>
-    <script data-main="app.bundle.js" src="node_modules/requirejs/require.js"></script>
-    <script src="./node_modules/monaco-editor/min/vs/loader.js"></script>
+    <script type="text/javascript">
+        function getCdnBase() {
+            var match = (window.location.search || window.location.hash).match(/(?:cdn=)(?<cdn>[^&]+)/);
+            if(match){
+                return decodeURIComponent(match.groups["cdn"]);
+            }
+        }
+        function addCss(url) {
+            var link = document.createElement("link");
+            link.type = "text/css";
+            link.rel = "stylesheet";
+            link.href = url;
+            document.getElementsByTagName("head")[0].appendChild(link);
+        }
+        function addScript(url, callback) {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = url;
+            document.getElementsByTagName("head")[0].appendChild(script);
+            if (callback) {
+                script.addEventListener("load", callback);
+            }
+        }
+        var cdnBase = getCdnBase();
+        window._DesignerBlobCdnBase = cdnBase;
+        addCss(cdnBase + "flowcontrol/DesignerBlob/node_modules/office-ui-fabric-react/dist/css/fabric.min.css");
+        addCss(cdnBase + "flowcontrol/DesignerBlob/node_modules/draft-js/dist/Draft.css");
+        addCss(cdnBase + "flowcontrol/DesignerBlob/node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css");
+        addCss(cdnBase + "flowcontrol/DesignerBlob/LogicApps/core/content/logicapps.min.css");
+        addScript(cdnBase + "flowcontrol/DesignerBlob/node_modules/requirejs/require.js", function () {
+            addScript(cdnBase + "flowcontrol/DesignerBlob/node_modules/monaco-editor/min/vs/loader.js");
+            addScript("app.bundle.js");
+        });
+    </script>
 </body>
 </html>
