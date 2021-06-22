@@ -121,7 +121,7 @@ module ProductivityPaneLoader {
                             (error) => {
                                 Logger.logError(
                                     EventType.APM_CONFIG_EXTRACTOR_XRM_API_FAILURE,
-                                    `${Constants.productivityToolsLogPrefix} Failed to retrieve icon path from webresource`,
+                                    `${Constants.productivityToolsLogPrefix} Failed to retrieve icon path from web resources`,
                                     error,
                                 );
                                 reject(error);
@@ -133,7 +133,7 @@ module ProductivityPaneLoader {
                 return new Promise<boolean>((resolve, reject) => {
                     Logger.logError(
                         EventType.APM_CONFIG_EXTRACTOR_FAILURE,
-                        `${Constants.productivityToolsLogPrefix} Failed to get icon from webresources`,
+                        `${Constants.productivityToolsLogPrefix} Failed to get icon from web resources`,
                         error,
                     );
                     resolve(false);
@@ -166,6 +166,7 @@ module ProductivityPaneLoader {
                                         tabConfig[index].msdyn_tooltip,
                                         result.msdyn_data,
                                         result.msdyn_defaulticon,
+                                        result.statecode,
                                     ),
                                 );
                             }

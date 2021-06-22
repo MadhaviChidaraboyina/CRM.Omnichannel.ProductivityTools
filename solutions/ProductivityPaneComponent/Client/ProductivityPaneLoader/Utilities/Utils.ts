@@ -13,8 +13,8 @@ module ProductivityPaneLoader {
             return str === '';
         }
 
-        public static isEqual(str1: string, str2: string): boolean {
-            return str1 === str2;
+        public static isEqual(objOne: any, objTwo: any): boolean {
+            return objOne === objTwo;
         }
 
         public static isHomeSession(sessionId: string) {
@@ -34,10 +34,18 @@ module ProductivityPaneLoader {
         }
 
         /**
-         * Indicate if the control is loaded via app side panes
+         * Indicate if the control is loaded via app side panes.
          */
         public static isUsingAppSidePanes(): boolean {
             return Xrm.Internal.isFeatureEnabled(Constants.fcbProductivityToolsUseAppSidePanes);
+        }
+
+        /**
+         * Indicate if the state code of the productivity tool configuration is active.
+         * StateCode: system required. 0: active; 1: inactive.
+         */
+        public static isProductivityToolStateCodeActive(stateCode: number): boolean {
+            return Utils.isEqual(stateCode, Constants.stateCodeActive);
         }
     }
 }
