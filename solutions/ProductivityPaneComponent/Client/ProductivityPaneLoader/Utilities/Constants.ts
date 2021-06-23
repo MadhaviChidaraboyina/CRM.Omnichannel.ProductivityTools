@@ -98,10 +98,9 @@ module ProductivityPaneLoader {
 
         // Numbers
         public static firstElement = 0;
-        public static collapseAppSidePane = 0;
-        public static expandAppSidePane = 1;
         public static appSidePanesCollapsed = 0;
         public static appSidePanesExpanded = 1;
+        public static stateCodeActive = 0;
 
         // Session id
         public static homeSessionId = 'session-id-0';
