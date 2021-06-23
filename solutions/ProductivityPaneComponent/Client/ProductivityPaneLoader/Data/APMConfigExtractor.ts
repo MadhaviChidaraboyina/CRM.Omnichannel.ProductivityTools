@@ -171,6 +171,7 @@ module ProductivityPaneLoader {
                                         tabConfig[index].msdyn_tooltip,
                                         result.msdyn_data,
                                         result.msdyn_defaulticon,
+                                        result.statecode,
                                     ),
                                 );
                             }
