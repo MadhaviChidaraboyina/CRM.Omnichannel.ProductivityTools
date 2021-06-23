@@ -156,21 +156,20 @@ module ProductivityPaneLoader {
                 });
                 Promise.all(tPromises).then(
                     (results: any[]) => {
-                        results.forEach((result: any, index: number) => {
+                        results.forEach((toolConfig: any, index: number) => {
                             if (
                                 tabConfig[index].msdyn_isenabled &&
-                                Utils.isEqual(result.statecode, Constants.stateCodeActive)
+                                Utils.isEqual(toolConfig.statecode, Constants.stateCodeActive)
                             ) {
                                 toolsList.push(
                                     new ToolConfig(
-                                        result.msdyn_controlname,
+                                        toolConfig.msdyn_controlname,
                                         tabConfig[index].msdyn_iconpath,
                                         tabConfig[index].msdyn_order,
-                                        tabConfig[index].msdyn_isenabled,
                                         tabConfig[index].msdyn_uniquename,
                                         tabConfig[index].msdyn_tooltip,
-                                        result.msdyn_data,
-                                        result.msdyn_defaulticon,
+                                        toolConfig.msdyn_data,
+                                        toolConfig.msdyn_defaulticon,
                                     ),
                                 );
                             }
