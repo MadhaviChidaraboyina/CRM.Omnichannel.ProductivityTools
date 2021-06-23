@@ -39,13 +39,5 @@ module ProductivityPaneLoader {
         public static isUsingAppSidePanes(): boolean {
             return Xrm.Internal.isFeatureEnabled(Constants.fcbProductivityToolsUseAppSidePanes);
         }
-
-        /**
-         * Indicate if the state code of the productivity tool configuration is active.
-         * StateCode: system required. 0: active; 1: inactive.
-         */
-        public static isProductivityToolStateCodeActive(stateCode: number): boolean {
-            return Utils.isEqual(stateCode, Constants.stateCodeActive);
-        }
     }
 }

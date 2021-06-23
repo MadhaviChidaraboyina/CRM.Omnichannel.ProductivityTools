@@ -26,45 +26,42 @@ module ProductivityPaneLoader {
             try {
                 return new Promise<void>((resolve, reject) => {
                     toolList.forEach((tool: ToolConfig) => {
-                        if (Utils.isProductivityToolStateCodeActive(tool.stateCode)) {
-                            XrmAppProxy.getXrmAppApis()
-                                .sidePanes.createPane({
-                                    paneId: tool.paneId,
-                                    canClose: false,
-                                    isSelected:
-                                        Utils.isShownOnAllSessions(tool.toolControlName) && productivityPaneMode,
-                                    imageSrc: tool.toolIcon,
-                                    title: tool.toolTip,
-                                    hidden: !Utils.isShownOnAllSessions(tool.toolControlName),
-                                    alwaysRender: true,
-                                    keepBadgeOnSelect: Utils.keepBadgeOnSelect(tool.toolControlName),
-                                })
-                                .then((pane) => {
-                                    pane.navigate({
-                                        pageType: PcfControlConstants.pageType,
-                                        controlName: tool.toolControlName,
-                                        data: PcfControlConstants.PcfControlProps.parameters,
-                                    });
-                                    return pane.paneId;
-                                })
-                                .then(
-                                    (paneId) => {
-                                        Logger.logInfo(
-                                            EventType.APP_SIDE_PANE_LOAD_SUCCESS,
-                                            `${Constants.productivityToolsLogPrefix} Success: app side pane loaded ${paneId}`,
-                                        );
-                                        resolve();
-                                    },
-                                    (error) => {
-                                        Logger.logError(
-                                            EventType.APP_SIDE_PANE_LOAD_FAILURE,
-                                            `${Constants.productivityToolsLogPrefix} Failed to load app side pane for control ${tool.toolControlName}`,
-                                            error,
-                                        );
-                                        reject(error);
-                                    },
-                                );
-                        }
+                        XrmAppProxy.getXrmAppApis()
+                            .sidePanes.createPane({
+                                paneId: tool.paneId,
+                                canClose: false,
+                                isSelected: Utils.isShownOnAllSessions(tool.toolControlName) && productivityPaneMode,
+                                imageSrc: tool.toolIcon,
+                                title: tool.toolTip,
+                                hidden: !Utils.isShownOnAllSessions(tool.toolControlName),
+                                alwaysRender: true,
+                                keepBadgeOnSelect: Utils.keepBadgeOnSelect(tool.toolControlName),
+                            })
+                            .then((pane) => {
+                                pane.navigate({
+                                    pageType: PcfControlConstants.pageType,
+                                    controlName: tool.toolControlName,
+                                    data: PcfControlConstants.PcfControlProps.parameters,
+                                });
+                                return pane.paneId;
+                            })
+                            .then(
+                                (paneId) => {
+                                    Logger.logInfo(
+                                        EventType.APP_SIDE_PANE_LOAD_SUCCESS,
+                                        `${Constants.productivityToolsLogPrefix} Success: app side pane loaded ${paneId}`,
+                                    );
+                                    resolve();
+                                },
+                                (error) => {
+                                    Logger.logError(
+                                        EventType.APP_SIDE_PANE_LOAD_FAILURE,
+                                        `${Constants.productivityToolsLogPrefix} Failed to load app side pane for control ${tool.toolControlName}`,
+                                        error,
+                                    );
+                                    reject(error);
+                                },
+                            );
                     });
                 });
             } catch (error) {

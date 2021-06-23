@@ -4,7 +4,6 @@
 module ProductivityPaneLoader {
     export class ToolConfig {
         public toolControlName: string;
-        public stateCode: number;
         public paneId: string;
         public toolIcon: string;
         public toolPosition: number;
@@ -18,7 +17,6 @@ module ProductivityPaneLoader {
 
         constructor(
             toolControlName: string,
-            stateCode: number,
             toolIcon: string,
             toolPosition: number,
             isEnabled: boolean,
@@ -30,7 +28,6 @@ module ProductivityPaneLoader {
             isDefaultIconValid: boolean = false,
         ) {
             this.toolControlName = toolControlName;
-            this.stateCode = stateCode;
             this.paneId = Constants.appSidePaneIdPrefix + toolControlName;
             this.toolIcon = toolIcon;
             this.toolPosition = toolPosition;
