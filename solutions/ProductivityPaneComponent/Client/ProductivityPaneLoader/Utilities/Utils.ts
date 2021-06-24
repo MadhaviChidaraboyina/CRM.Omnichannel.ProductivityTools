@@ -37,7 +37,8 @@ module ProductivityPaneLoader {
          * Indicate if the control is loaded via app side panes.
          */
         public static isUsingAppSidePanes(): boolean {
-            return Xrm.Internal.isFeatureEnabled(Constants.fcbProductivityToolsUseAppSidePanes);
+            return Xrm.Internal.isFeatureEnabled(Constants.FCB_ProductivityTools_UseAppSidePanes) ||
+                Xrm.Internal.isFeatureEnabled(Constants.FCB_October2021Update);
         }
     }
 }
