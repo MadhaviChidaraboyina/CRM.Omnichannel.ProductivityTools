@@ -122,7 +122,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         */
         public static isUsingAppSidePane(context: any): boolean {
             return context.utils.isFeatureEnabled(StringConstants.FCB_ProductivityTools_UseAppSidePanes) ||
-                context.utils.isFeatureEnabled(Constants.FCB_October2021Update);
+                context.utils.isFeatureEnabled(StringConstants.FCB_October2021Update);
         }
 
         /**Get live work stream id */
