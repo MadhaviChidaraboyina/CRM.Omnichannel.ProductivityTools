@@ -103,7 +103,8 @@ module MscrmControls.SmartassistPanelControl {
         * @param context: PCF control context
         */
          public static isUsingAppSidePane(context: any): boolean {
-            return context.utils.isFeatureEnabled(Constants.FCB_ProductivityTools_UseAppSidePanes);
+            return context.utils.isFeatureEnabled(Constants.FCB_ProductivityTools_UseAppSidePanes) ||
+                context.utils.isFeatureEnabled(Constants.FCB_October2021Update);
         }
 
         /**

@@ -84,7 +84,8 @@ module ProductivityPaneLoader {
 
     export class Constants {
         // FCB
-        public static fcbProductivityToolsUseAppSidePanes = 'ProductivityTools.UseAppSidePanes';
+		public static FCB_ProductivityTools_UseAppSidePanes = "ProductivityTools.UseAppSidePanes";
+		public static FCB_October2021Update = "October2021Update";
 
         // App side pane
         public static teamsCollabControlName = 'MscrmControls.OfficeProductivity.CollabControl';
