@@ -4,6 +4,8 @@
 /// <reference path="../../../../../references/external/TypeDefinitions/microsoft.ajax.d.ts" />
 /// <reference path="../Models/ProductivityPaneConfig.ts"/>
 /// <reference path="../Models/ProductivityToolsConfig.ts"/>
+/// <reference path="../Utilities/Constants.ts"/>
+/// <reference path="../Utilities/Utils.ts"/>
 module ProductivityPaneLoader {
     export class APMConfigExtractor {
         public retrieveAPMConfig(appConfigName: string): Promise<ProductivityPaneConfig> {
@@ -121,7 +123,7 @@ module ProductivityPaneLoader {
                             (error) => {
                                 Logger.logError(
                                     EventType.APM_CONFIG_EXTRACTOR_XRM_API_FAILURE,
-                                    `${Constants.productivityToolsLogPrefix} Failed to retrieve icon path from webresource`,
+                                    `${Constants.productivityToolsLogPrefix} Failed to retrieve icon path from web resources`,
                                     error,
                                 );
                                 reject(error);
@@ -133,7 +135,7 @@ module ProductivityPaneLoader {
                 return new Promise<boolean>((resolve, reject) => {
                     Logger.logError(
                         EventType.APM_CONFIG_EXTRACTOR_FAILURE,
-                        `${Constants.productivityToolsLogPrefix} Failed to get icon from webresources`,
+                        `${Constants.productivityToolsLogPrefix} Failed to get icon from web resources`,
                         error,
                     );
                     resolve(false);
@@ -154,18 +156,20 @@ module ProductivityPaneLoader {
                 });
                 Promise.all(tPromises).then(
                     (results: any[]) => {
-                        results.forEach((result: any, index: number) => {
-                            if (tabConfig[index].msdyn_isenabled) {
+                        results.forEach((toolConfig: any, index: number) => {
+                            if (
+                                tabConfig[index].msdyn_isenabled &&
+                                Utils.isEqual(toolConfig.statecode, Constants.stateCodeActive)
+                            ) {
                                 toolsList.push(
                                     new ToolConfig(
-                                        result.msdyn_controlname,
+                                        toolConfig.msdyn_controlname,
                                         tabConfig[index].msdyn_iconpath,
                                         tabConfig[index].msdyn_order,
-                                        tabConfig[index].msdyn_isenabled,
                                         tabConfig[index].msdyn_uniquename,
                                         tabConfig[index].msdyn_tooltip,
-                                        result.msdyn_data,
-                                        result.msdyn_defaulticon,
+                                        toolConfig.msdyn_data,
+                                        toolConfig.msdyn_defaulticon,
                                     ),
                                 );
                             }
