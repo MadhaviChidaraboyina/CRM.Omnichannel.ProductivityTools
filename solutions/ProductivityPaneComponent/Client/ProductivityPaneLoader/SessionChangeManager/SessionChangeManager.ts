@@ -59,7 +59,7 @@ module ProductivityPaneLoader {
         private onAfterSessionSwitch(event: any): void {
             try {
                 const newSessionId = SessionChangeHelper.getNewSessionId(event);
-                Utils.isHomeSession(newSessionId)
+                Utils.isHomeSession(newSessionId) || Utils.isBeethovenChatWidgetSession(newSessionId)
                     ? SessionChangeHelper.hideAllProductivityTools(this.ProductivityToolList)
                     : SessionChangeHelper.showAllProductivityTools(this.ProductivityToolList);
 

@@ -48,7 +48,7 @@ module ProductivityPaneLoader {
                                             // Below handles the scenario where user create the first session
                                             // so quickly that initSessionChangeManager() has not finished yet.
                                             const focusedSessionId = XrmAppProxy.getFocusedSessionId();
-                                            if (!Utils.isHomeSession(focusedSessionId)) {
+                                            if (!Utils.isHomeSession(focusedSessionId) || !Utils.isBeethovenChatWidgetSession(focusedSessionId)) {
                                                 LoadPanesHelper.initSessionStorageAndRefreshPanes(
                                                     focusedSessionId,
                                                     toolList,
