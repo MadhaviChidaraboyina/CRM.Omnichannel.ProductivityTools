@@ -53,15 +53,18 @@ module MscrmControls.SmartassistPanelControl {
                     this.tabSwitchHandlerId = eventId;
                 }
 
-                Microsoft.AppRuntime.Sessions.registrySessionStatePersistence(
-                    "smartAssistBadge",
-                    () => {
-                        return (Xrm.App as any).sidePanes.getPane(Constants.SmartAssistPaneId).badge;
-                    },
-                    (value) => {
-                        (Xrm.App as any).sidePanes.getPane(Constants.SmartAssistPaneId).badge = value;
-                    }
-                );
+                if (Utility.isUsingAppSidePane(context)) {
+                    Microsoft.AppRuntime.Sessions.registrySessionStatePersistence(
+                        "smartAssistBadge",
+                        () => {
+                            return (Xrm.App as any).sidePanes.getPane(Constants.SmartAssistPaneId).badge;
+                        },
+                        (value) => {
+                            (Xrm.App as any).sidePanes.getPane(Constants.SmartAssistPaneId).badge = value;
+                        }
+                    );
+                }
+                
                 this.telemetryHelper = new TelemetryHelper("", "");
             } catch (error) {
                 this.hideLoader();

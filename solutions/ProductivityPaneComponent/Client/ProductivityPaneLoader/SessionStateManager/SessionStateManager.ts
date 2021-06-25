@@ -80,6 +80,11 @@ module ProductivityPaneLoader {
                 Constants.appSidePaneSessionState + sessionId,
                 sessionStorageData,
             );
+            // Clear all the badge before session switch to avoid badge carry over except
+            // those tools that do not require session state persistence for badging.
+            XrmAppProxy.getAllAppSidePanes().forEach((pane) => {
+                pane.badge = false;
+            });
             console.info(`${Constants.productivityToolsLogPrefix} Success: updated session state of ${sessionId}`);
         }
 
@@ -95,7 +100,7 @@ module ProductivityPaneLoader {
 
             if (sessionStorageData.persistenceState) {
                 const sessionPersistenceState = Utils.convertJsonStringToMap(sessionStorageData.persistenceState);
-                Microsoft.AppRuntime.Sessions.restoreSessionState(sessionPersistenceState)
+                Microsoft.AppRuntime.Sessions.restoreSessionState(sessionPersistenceState);
             }
             console.info(`${Constants.productivityToolsLogPrefix} Success: restored session state of ${sessionId}`);
         }
