@@ -24,8 +24,9 @@
 				<entity name="workflow">
 					<attribute name="name" />
 					<order attribute="name" descending="false" />
-					<filter type="and">
+					<filter type="or">
 						<condition attribute="category" operator="eq" value="6" />
+						<condition attribute="category" operator="eq" value="9000" />
 					</filter>
 					<attribute name="statecode" />
 					<attribute name="modifiedon" />

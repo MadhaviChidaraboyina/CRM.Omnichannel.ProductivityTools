@@ -315,7 +315,7 @@ async function startDesigner(rpc) {
 					}
 					else {
 						try {
-							let rec = await window.top.Xrm.WebApi.createRecord(SharedDefines.Constants.WORKFLOW_ENTITY, { name: name, description: description, clientdata: JSON.stringify(clientData), businessprocesstype: 0, category: 6, type: 1, primaryentity: "systemuser" });
+							let rec = await window.top.Xrm.WebApi.createRecord(SharedDefines.Constants.WORKFLOW_ENTITY, { name: name, description: description, clientdata: JSON.stringify(clientData), businessprocesstype: 0, category: 9000, type: 1, primaryentity: "systemuser" });
 							let obj: SharedDefines.LogObject = {
 								level: SharedDefines.LogLevel.Info,
 								eventName: WrapperEvents.DesignerControlExecutionEvent,

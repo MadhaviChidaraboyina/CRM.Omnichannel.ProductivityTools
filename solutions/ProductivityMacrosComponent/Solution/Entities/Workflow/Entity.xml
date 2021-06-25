@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity>
-	<Name LocalizedName="Process" OriginalName="">Workflow</Name>
-	<SavedQueries />
-	<RibbonDiffXml />
+  <Name LocalizedName="Process" OriginalName="">Workflow</Name>
+  <EntityInfo>
+    <entity Name="Workflow">
+      <attributes>
+        <attribute PhysicalName="Category">
+          <Type>picklist</Type>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <Descriptions>
+            <Description description="Category of the process." languagecode="1033" />
+          </Descriptions>
+          <RequiredLevel>systemrequired</RequiredLevel>
+          <displaynames>
+            <displayname description="Category" languagecode="1033" />
+          </displaynames>
+          <IntroducedVersion>5.0.0.0</IntroducedVersion>
+          <IsRetrievable>1</IsRetrievable>
+          <optionset Name="workflow_category">
+            <OptionSetType>picklist</OptionSetType>
+            <IsCustomOptionSet>0</IsCustomOptionSet>
+            <options>
+              <option id="571ac1de-b25f-417d-9a1a-a67fb9cca9ad" value="9000">
+                <labels>
+                  <label id="84825a1a-a096-4330-9bd3-6939dbed25de" description="Web Client API Flow" languagecode="1033" />
+                </labels>
+              </option>
+            </options>
+          </optionset>
+        </attribute>
+	  </attributes>
+	</entity>
+  </EntityInfo>
+  <SavedQueries />
+  <RibbonDiffXml />
 </Entity>
