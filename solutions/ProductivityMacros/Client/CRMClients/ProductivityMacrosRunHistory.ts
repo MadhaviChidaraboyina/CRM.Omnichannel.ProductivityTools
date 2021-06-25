@@ -125,7 +125,7 @@ namespace Microsoft.ProductivityMacros.RunHistory {
 		data.status = status;
 		let entityLogicalName = Microsoft.ProductivityMacros.EntityName.RunHistoryEntity;
 		var workflowid;
-		Xrm.WebApi.retrieveMultipleRecords(Microsoft.ProductivityMacros.EntityName.WorkflowEntity, "?$select=workflowid" + "&$filter=name eq '" + macroName + "' and category eq 6").then(function success(result) {
+		Xrm.WebApi.retrieveMultipleRecords(Microsoft.ProductivityMacros.EntityName.WorkflowEntity, "?$select=workflowid" + "&$filter=name eq '" + macroName + "' and (category eq 6 or category eq 9000)").then(function success(result) {
 			workflowid = result.entities[0]["workflowid"]; 
 			data.macroid = workflowid;
 			let finalData = {
