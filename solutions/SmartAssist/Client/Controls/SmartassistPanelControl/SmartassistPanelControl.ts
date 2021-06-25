@@ -52,6 +52,19 @@ module MscrmControls.SmartassistPanelControl {
                     var eventId = Microsoft.AppRuntime.Sessions.addOnContextChange(this.listenCECContextChangeAPI.bind(this));
                     this.tabSwitchHandlerId = eventId;
                 }
+
+                if (Utility.isUsingAppSidePane(context)) {
+                    Microsoft.AppRuntime.Sessions.registrySessionStatePersistence(
+                        "smartAssistBadge",
+                        () => {
+                            return (Xrm.App as any).sidePanes.getPane(Constants.SmartAssistPaneId).badge;
+                        },
+                        (value) => {
+                            (Xrm.App as any).sidePanes.getPane(Constants.SmartAssistPaneId).badge = value;
+                        }
+                    );
+                }
+                
                 this.telemetryHelper = new TelemetryHelper("", "");
             } catch (error) {
                 this.hideLoader();

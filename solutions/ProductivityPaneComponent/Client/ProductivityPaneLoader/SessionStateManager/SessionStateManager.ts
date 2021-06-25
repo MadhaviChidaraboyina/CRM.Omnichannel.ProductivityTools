@@ -68,15 +68,22 @@ module ProductivityPaneLoader {
             const currentSelectedAppSidePaneId = currentSelectedAppSidePane
                 ? currentSelectedAppSidePane.paneId
                 : Constants.emptyString;
+
+            const sessionState: Map<string, string> = Microsoft.AppRuntime.Sessions.getSessionState();
             const appSidePanesState = XrmAppProxy.getAppSidePanesState();
             const sessionStorageData = {
                 appSidePanesState: appSidePanesState,
                 selectedAppSidePaneId: currentSelectedAppSidePaneId,
+                persistenceState: Utils.convertMapToJsonString(sessionState),
             };
             SessionStateManager.setSessionStorageData(
                 Constants.appSidePaneSessionState + sessionId,
                 sessionStorageData,
             );
+            // Clear the badge for tools that requires session state persistence before session switch to avoid badge carry over.
+            Utils.getSessionSidePanes().forEach((pane) => {
+                pane.badge = false;
+            });
             console.info(`${Constants.productivityToolsLogPrefix} Success: updated session state of ${sessionId}`);
         }
 
@@ -88,6 +95,11 @@ module ProductivityPaneLoader {
             if (!Utils.isEmpty(sessionStorageData.selectedAppSidePaneId)) {
                 XrmAppProxy.setSelectedAppSidePane(sessionStorageData.selectedAppSidePaneId);
                 XrmAppProxy.setAppSidePanesState(sessionStorageData.appSidePanesState);
+            }
+
+            if (sessionStorageData.persistenceState) {
+                const sessionPersistenceState = Utils.convertJsonStringToMap(sessionStorageData.persistenceState);
+                Microsoft.AppRuntime.Sessions.restoreSessionState(sessionPersistenceState);
             }
             console.info(`${Constants.productivityToolsLogPrefix} Success: restored session state of ${sessionId}`);
         }

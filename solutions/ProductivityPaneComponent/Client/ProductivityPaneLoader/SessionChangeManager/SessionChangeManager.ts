@@ -54,7 +54,7 @@ module ProductivityPaneLoader {
 
         /*
          * Set pane.hidden accordingly. Productivity tools are hidden in home session and not hidden in other sessions.
-         * Init session storage if it is null. Select and collapse/expande app side pane based on session storage data.
+         * Init session storage if it is null. Select and collapse/expand app side pane based on session storage data.
          */
         private onAfterSessionSwitch(event: any): void {
             try {
