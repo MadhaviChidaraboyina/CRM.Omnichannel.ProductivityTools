@@ -80,9 +80,8 @@ module ProductivityPaneLoader {
                 Constants.appSidePaneSessionState + sessionId,
                 sessionStorageData,
             );
-            // Clear all the badge before session switch to avoid badge carry over except
-            // those tools that do not require session state persistence for badging.
-            XrmAppProxy.getAllAppSidePanes().forEach((pane) => {
+            // Clear the badge for tools that requires session state persistence before session switch to avoid badge carry over.
+            Utils.getSessionSidePanes().forEach((pane) => {
                 pane.badge = false;
             });
             console.info(`${Constants.productivityToolsLogPrefix} Success: updated session state of ${sessionId}`);

@@ -17,9 +17,11 @@ module ProductivityPaneLoader {
             return objOne === objTwo;
         }
 
+        /**
+         * Temporary workaround for disabling app side pane control in chat widget session for early access.
+         * This check will be removed after we have solid setVisibility API released.
+         */
         public static isBeethovenChatWidgetSession(sessionId: string): boolean {
-            // Temporary workaround for disabling app side pane control in chat widget session for early access.
-            // This check will be removed after we have solid setVisibility API released.
             try {
                 const session = Xrm.App.sessions.getSession(sessionId) as any;
                 if (
@@ -38,15 +40,19 @@ module ProductivityPaneLoader {
             return Utils.isEqual(sessionId, Constants.homeSessionId);
         }
 
+        /**
+         * Add OR condition here if there is another tool to be shown on
+         * all sessions. Currently there is only Teams Collab control.
+         */
         public static isShownOnAllSessions(controlName: string): boolean {
-            // Add OR condition here if there is another tool to be shown on
-            // all sessions. Currently there is only Teams Collab control.
             return Utils.isEqual(controlName, Constants.teamsCollabControlName);
         }
 
+        /**
+         * The badge on app side pane will be cleared automatically if the pane is selected and
+         * keepBadgeOnSelect is passed false. Teams Collab control wants to keep badge on select.
+         */
         public static keepBadgeOnSelect(controlName: string): boolean {
-            // The badge on app side pane will be cleared automatically if the pane is selected and
-            // keepBadgeOnSelect is passed false. Teams Collab control wants to keep badge on select.
             return Utils.isEqual(controlName, Constants.teamsCollabControlName);
         }
 
@@ -75,6 +81,16 @@ module ProductivityPaneLoader {
                 map.set(key, jsonObj[key]);
             }
             return map;
+        }
+
+        /**
+         * Push more pane here if it requires session state persistence.
+         * @returns An Array that consist of panes that requires session state persistence.
+         */
+        public static getSessionSidePanes(): any {
+            let sessionSidePanes = new Array();
+            sessionSidePanes.push(XrmAppProxy.getAppSidePane(Constants.SmartAssistPaneId));
+            return sessionSidePanes;
         }
     }
 }

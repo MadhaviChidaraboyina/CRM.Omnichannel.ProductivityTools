@@ -32,9 +32,5 @@ module ProductivityPaneLoader {
         public static setAppSidePanesState(state: number): void {
             XrmAppProxy.getXrmAppApis().sidePanes.state = state;
         }
-
-        public static getAllAppSidePanes(): any {
-            return XrmAppProxy.getXrmAppApis().sidePanes.getAllPanes();
-        }
     }
 }
