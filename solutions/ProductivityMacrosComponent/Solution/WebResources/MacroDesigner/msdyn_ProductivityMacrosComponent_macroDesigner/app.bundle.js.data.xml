@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource>
+	<WebResourceId>{CFC013CE-3AF9-4932-A360-602730CE95EE}</WebResourceId>
+	<Name>MacroDesigner/msdyn_ProductivityMacrosComponent_macroDesigner/app.bundle.js</Name>
+	<DisplayName>MacroDesigner/msdyn_ProductivityMacrosComponent_macroDesigner/app.bundle.js</DisplayName>
+	<WebResourceType>3</WebResourceType>
+	<IntroducedVersion>1.0</IntroducedVersion>
+	<IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+	<IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+	<IsCustomizable>0</IsCustomizable>
+	<CanBeDeleted>0</CanBeDeleted>
+	<IsHidden>0</IsHidden>
+	<FileName>/WebResources/MacroDesigner/msdyn_ProductivityMacrosComponent_macroDesigner/app.bundle.js</FileName>
+</WebResource>

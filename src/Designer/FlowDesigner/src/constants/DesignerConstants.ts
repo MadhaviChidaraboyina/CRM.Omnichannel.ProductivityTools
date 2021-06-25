@@ -9,6 +9,22 @@ export class Constants {
     public static gccDataCenter: string[] = ["crm9"];
 }
 
+export class GeoNames{
+    public static TIP = "TIP";
+    public static GCC = "GCC";
+    public static USG = "USG";
+    public static CHN = "CHN";
+    public static DEFAULT = "";
+}
+
+export const CdnGeoSettings = {
+    [GeoNames.TIP]: Constants.publicFallbackURL,
+    [GeoNames.GCC]: Constants.publicFallbackURL,
+    [GeoNames.USG]: Constants.fairfaxFallbackURL,
+    [GeoNames.CHN]: Constants.publicFallbackURL,
+    [GeoNames.DEFAULT]: Constants.publicFallbackURL,
+}
+
 let globalContext: XrmClientApi.GlobalContext = (window.top as any).Xrm.Utility.getGlobalContext();
 
 export function getIconUrl(icon: string): string {

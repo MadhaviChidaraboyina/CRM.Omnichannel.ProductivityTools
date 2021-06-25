@@ -13,8 +13,25 @@ module ProductivityPaneLoader {
             return str === '';
         }
 
-        public static isEqual(str1: string, str2: string): boolean {
-            return str1 === str2;
+        public static isEqual(objOne: any, objTwo: any): boolean {
+            return objOne === objTwo;
+        }
+
+        public static isBeethovenChatWidgetSession(sessionId: string): boolean {
+            // Temporary workaround for disabling app side pane control in chat widget session for early access.
+            // This check will be removed after we have solid setVisibility API released.
+            try {
+                const session = Xrm.App.sessions.getSession(sessionId) as any;
+                if (
+                    session &&
+                    session.anchorTab &&
+                    session.anchorTab.currentPageInput &&
+                    session.anchorTab.currentPageInput.data
+                ) {
+                    return JSON.parse(session.anchorTab.currentPageInput.data).pageType === 'chatDemo';
+                }
+            } catch (e) {}
+            return false;
         }
 
         public static isHomeSession(sessionId: string) {
@@ -34,10 +51,13 @@ module ProductivityPaneLoader {
         }
 
         /**
-         * Indicate if the control is loaded via app side panes
+         * Indicate if the control is loaded via app side panes.
          */
         public static isUsingAppSidePanes(): boolean {
-            return Xrm.Internal.isFeatureEnabled(Constants.fcbProductivityToolsUseAppSidePanes);
+            return (
+                Xrm.Internal.isFeatureEnabled(Constants.FCB_ProductivityTools_UseAppSidePanes) ||
+                Xrm.Internal.isFeatureEnabled(Constants.FCB_October2021Update)
+            );
         }
 
         public static convertMapToJsonString(map: Map<string, string>): string {

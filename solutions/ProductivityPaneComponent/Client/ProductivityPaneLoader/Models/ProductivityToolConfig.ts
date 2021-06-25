@@ -7,7 +7,6 @@ module ProductivityPaneLoader {
         public paneId: string;
         public toolIcon: string;
         public toolPosition: number;
-        public isEnabled: boolean;
         public toolName: string;
         public toolTip: string;
         public staticData: string;
@@ -19,7 +18,6 @@ module ProductivityPaneLoader {
             toolControlName: string,
             toolIcon: string,
             toolPosition: number,
-            isEnabled: boolean,
             toolName: string,
             toolTip: string,
             staticData: string,
@@ -31,7 +29,6 @@ module ProductivityPaneLoader {
             this.paneId = Constants.appSidePaneIdPrefix + toolControlName;
             this.toolIcon = toolIcon;
             this.toolPosition = toolPosition;
-            this.isEnabled = isEnabled;
             this.toolName = toolName;
             this.toolTip = toolTip;
             this.staticData = staticData;

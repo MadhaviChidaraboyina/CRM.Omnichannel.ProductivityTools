@@ -34,107 +34,31 @@ async function getMonitorBlobConfig(): Promise<SharedDefines.MacroMonitorConfig>
 	let _monitorConfigPromise: Promise<SharedDefines.MacroMonitorConfig> = new Promise<SharedDefines.MacroMonitorConfig>(async function (resolve, reject) {
 		let lcid = window.top.Xrm.Utility.getGlobalContext().getOrgLcid();
 		let locale = SharedDefines.LOCALE_MAP[lcid] || "en";
-		let baseUrl: string = "";
-		let path: string = "";
+		let baseUrl: string = window.origin;
+		let path: string = SharedDefines.Constants.MACROS_MONITOR_PATH;
 		let monitorConfig: SharedDefines.MacroMonitorConfig = {
 			MonitorInstanceId: Utils.Utils.GenGuid()
 		};
 		let macroCDSConfig = await window.top.Xrm.WebApi.retrieveMultipleRecords(SharedDefines.Constants.MACRO_CONFIG_ENTITY, "?$select=msdyn_designerfallbackurl,msdyn_designerurlconfigentity,msdyn_designerurlconfigentityid,msdyn_designerurlconfigentityattrib,msdyn_designerurlconfigentityquery,msdyn_name,msdyn_uservoicelink,msdyn_searchhint,msdyn_uservoicetext,msdyn_macrosversion");
 		if (macroCDSConfig.entities.length > 0) {
 			let config = macroCDSConfig.entities[0];
-			path = SharedDefines.Constants.MACROS_MONITOR_PATH;
 			monitorConfig.UserVoiceText = config.msdyn_uservoicetext;
 			monitorConfig.UserVoiceLink = config.msdyn_uservoicelink;
 			monitorConfig.SearchHint = config.msdyn_searchhint;
 			monitorConfig.MonitorSolutionVersion = config.msdyn_macrosversion;
-			if (config.msdyn_designerurlconfigentity && config.msdyn_designerurlconfigentityattrib) {
-				if (config.msdyn_designerurlconfigentityid) {
-					try {
-						let monitorConfig = await window.top.Xrm.WebApi.retrieveRecord(config.msdyn_designerurlconfigentity, config.msdyn_designerurlconfigentityid, "?$select=" + config.msdyn_designerurlconfigentityattrib);
-						baseUrl = monitorConfig[config.msdyn_designerurlconfigentityattrib];
-					}
-					catch (error) {
-						let obj: SharedDefines.LogObject = {
-							level: SharedDefines.LogLevel.Warning,
-							eventName: WrapperEvents.WrapperConfigErrorEvent,
-							message: Utils.Utils.genMsgForTelemetry("Config entity id configured but unable to read designer URL", error),
-							eventTimeStamp: new Date(),
-							eventType: SharedDefines.TelemetryEventType.Trace,
-							exception: error.stack
-						};
-						doTelemetry(obj);
-					}
-				}
-				if (config.msdyn_designerurlconfigentityquery && !baseUrl) {
-					try {
-						let monitorConfig = await window.top.Xrm.WebApi.retrieveMultipleRecords(config.msdyn_designerurlconfigentity, config.msdyn_designerurlconfigentityquery);
-						if (monitorConfig.entities.length > 0) {
-							baseUrl = monitorConfig.entities[0][config.msdyn_designerurlconfigentityattrib];
-						}
-					}
-					catch (error) {
-						let obj: SharedDefines.LogObject = {
-							level: SharedDefines.LogLevel.Warning,
-							eventName: WrapperEvents.WrapperConfigErrorEvent,
-							message: Utils.Utils.genMsgForTelemetry("Config entity query configured but unable to read monitor URL", error),
-							eventTimeStamp: new Date(),
-							eventType: SharedDefines.TelemetryEventType.Trace,
-							exception: error.stack
-						};
-						doTelemetry(obj);
-					}
-				}
-			}
-			if (!baseUrl) {
-                if (!isNullOrUndefined(config.msdyn_designerfallbackurl)) {
-                    baseUrl = config.msdyn_designerfallbackurl;
-                } else {
-                    try {
-                        //falling back to NAM endpoint
-                        let crmDataCenter = window.top.Xrm.Utility.getGlobalContext().getClientUrl().split(".")[1];
-                        if (Constants.gccDataCenter.indexOf(crmDataCenter) != -1) {
-                            baseUrl = Constants.fairfaxFallbackURL;
-                        } else {
-                            baseUrl = Constants.publicFallbackURL;
-                        }
-                    } catch (error) {
-                        let obj: SharedDefines.LogObject = {
-                            level: SharedDefines.LogLevel.Warning,
-                            eventName: WrapperEvents.WrapperConfigErrorEvent,
-                            message: Utils.Utils.genMsgForTelemetry("Error in setting fallback designer URL", error),
-                            eventTimeStamp: new Date(),
-                            eventType: SharedDefines.TelemetryEventType.Trace,
-                            exception: error.stack
-                        };
-                        doTelemetry(obj);
-                    }
-                }
-			}
 		}
-		if (!baseUrl || !path) {
-			let obj: SharedDefines.LogObject = {
-				level: SharedDefines.LogLevel.Error,
-				eventName: WrapperEvents.WrapperConfigErrorEvent,
-				message: Utils.Utils.genMsgForTelemetry("No valid monitor URL configured"),
-				eventTimeStamp: new Date(),
-				eventType: SharedDefines.TelemetryEventType.Trace,
-			};
-			doTelemetry(obj, "MONITOR_CONFIG_ERROR_URL_NOT_FOUND", true);
-			reject(new Error("Unable to find monitor config"));
-		}
-		else {
-			monitorConfig.MonitorBaseURL = new URL(path + "?locale=" + locale + "&base=" + encodeURIComponent(window.top.Xrm.Utility.getGlobalContext().getClientUrl()), baseUrl).toString();
-			let obj: SharedDefines.LogObject = {
-				level: SharedDefines.LogLevel.Info,
-				eventName: WrapperEvents.WrapperConfigLoadEvent,
-				message: Utils.Utils.genMsgForTelemetry("Monitor config loaded"),
-				eventTimeStamp: new Date(),
-				eventType: SharedDefines.TelemetryEventType.Trace,
-				eventData: { data: monitorConfig }
-			};
-			doTelemetry(obj);
-			resolve(monitorConfig);
-		}
+		monitorConfig.MonitorBaseURL = new URL(path + "#locale=" + locale + "&base=" + encodeURIComponent(window.top.Xrm.Utility.getGlobalContext().getClientUrl()) 
+		+ "&cdn=" + encodeURIComponent(Utils.Utils.getCdnBase()) , baseUrl).toString();
+		let obj: SharedDefines.LogObject = {
+			level: SharedDefines.LogLevel.Info,
+			eventName: WrapperEvents.WrapperConfigLoadEvent,
+			message: Utils.Utils.genMsgForTelemetry("Monitor config loaded"),
+			eventTimeStamp: new Date(),
+			eventType: SharedDefines.TelemetryEventType.Trace,
+			eventData: { data: monitorConfig }
+		};
+		doTelemetry(obj);
+		resolve(monitorConfig);
 	});
 	return _monitorConfigPromise;
 }
@@ -311,7 +235,7 @@ function doTelemetry(msg: SharedDefines.LogObject, userVisibleError?: string, to
 
 require(["LogicApps/rpc/Scripts/logicappdesigner/libs/rpc/rpc.standalone"], async function (Rpc) {
 	let monitorIframe = (document.getElementById("monitorIframe") as HTMLIFrameElement);
-	let targetOrigin = (await initOperations[RequiredCDSOpersForInit.MonitorConfig] as SharedDefines.MacroMonitorConfig).MonitorBaseURL || "*";
+	let targetOrigin = window.origin;
 	let rpc = new Rpc.Rpc({
 		signature: SharedDefines.Constants.MWRAPPER_CONTROL_SIGNATURE,
 		targetOrigin: targetOrigin,

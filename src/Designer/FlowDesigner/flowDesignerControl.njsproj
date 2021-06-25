@@ -206,6 +206,12 @@
     </ItemGroup>
     <Copy SourceFiles="@(MacroDesignerResources)" DestinationFolder="$(MacroDesignerPath)\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
     <Copy SourceFiles="@(AgentScriptDesignerResources)" DestinationFolder="$(AgentScriptDesignerPath)\%(RecursiveDir)" Retries="3" RetryDelayMilliseconds="300" />
+    <!-- Copy Macro iframe Designer assets to ProductivityMacrosComponent Web Resources-->
+    <Copy SourceFiles="$(DesignerControlOutputPath)\app.bundle.js" DestinationFolder="$(MacroDesignerPath)\msdyn_ProductivityMacrosComponent_macroDesigner" Retries="3" RetryDelayMilliseconds="300" />
+    <Copy SourceFiles="$(DesignerControlOutputPath)\iframedesigner.html" DestinationFolder="$(MacroDesignerPath)\msdyn_ProductivityMacrosComponent_macroDesigner" Retries="3" RetryDelayMilliseconds="300" />
+    <!-- Copy Macro iframe Monitor assets to ProductivityMacrosComponent Web Resources-->
+    <Copy SourceFiles="$(DesignerControlOutputPath)\appMon.bundle.js" DestinationFolder="$(MacroDesignerPath)\msdyn_ProductivityMacrosComponent_macroMonitor" Retries="3" RetryDelayMilliseconds="300" />
+    <Copy SourceFiles="$(DesignerControlOutputPath)\iframemonitor.html" DestinationFolder="$(MacroDesignerPath)\msdyn_ProductivityMacrosComponent_macroMonitor" Retries="3" RetryDelayMilliseconds="300" />
   </Target>
   <!-- Target Name="VerifyAlteredTargetsUsed" / -->
   <ProjectExtensions>

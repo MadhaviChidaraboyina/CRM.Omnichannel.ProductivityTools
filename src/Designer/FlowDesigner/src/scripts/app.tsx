@@ -4,6 +4,11 @@ import * as OAuth from "./oAuthService";
 import * as HostService from "./hostService";
 import { ConnectorV2Service } from "./LogicAppDesigner/ConnectorV2";
 
+(window as any).requirejs.config({
+	context: 'designer',
+	baseUrl: (window as any)._DesignerBlobCdnBase + 'flowcontrol/DesignerBlob/'
+});
+
 function getMonacoLocale(editorLocaleName) {
 	// Mapping of the languages Monaco editor supports. Default to english for non-supported languages.
 	let monacoLocalesMap = {
@@ -85,7 +90,7 @@ function disposeDesigner() {
 }
 
 function startInit() {
-	(window as any).publicPath = "LogicApps/core/scripts/";
+	(window as any).publicPath = (window as any)._DesignerBlobCdnBase + "flowcontrol/DesignerBlob/" + "LogicApps/core/scripts/";
 	var req = (window as any).requirejs.config({
 		context: 'designer',
 		paths: {

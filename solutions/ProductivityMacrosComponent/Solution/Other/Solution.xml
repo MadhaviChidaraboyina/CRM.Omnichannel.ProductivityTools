@@ -95,9 +95,9 @@
       <RootComponent type="60" id="{b520abfd-79f7-44e8-80bd-430d66619828}" behavior="0" />
       <RootComponent type="60" id="{d9f3060d-a09b-4966-a1d0-aba226880a1d}" behavior="0" />
       <RootComponent type="1" schemaName="workflow" behavior="0" />
-	  <RootComponent type="1" schemaName="msdyn_macrosession" behavior="0" />
+	    <RootComponent type="1" schemaName="msdyn_macrosession" behavior="0" />
       <RootComponent type="60" id="{6de78dfd-c198-4ab9-85e8-0e1bd20f5542}" behavior="0" />
-	  <RootComponent type="60" id="{328f1cc4-c84d-412a-b4f2-d6c560fb1dc9}" behavior="0" />
+	    <RootComponent type="60" id="{328f1cc4-c84d-412a-b4f2-d6c560fb1dc9}" behavior="0" />
       <RootComponent type="61" schemaName="Localization/ProductivityMacrosComponent_webresource_strings.1025.resx" behavior="0" />
       <RootComponent type="61" schemaName="Localization/ProductivityMacrosComponent_webresource_strings.1026.resx" behavior="0" />
       <RootComponent type="61" schemaName="Localization/ProductivityMacrosComponent_webresource_strings.1027.resx" behavior="0" />
@@ -145,15 +145,19 @@
       <RootComponent type="61" schemaName="Localization/ProductivityMacrosComponent_webresource_strings.3082.resx" behavior="0" />
       <RootComponent type="61" schemaName="Localization/ProductivityMacrosComponent_webresource_strings.3098.resx" behavior="0" />
       <RootComponent type="61" schemaName="CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js" behavior="0" />
-	  <RootComponent type="61" schemaName="CRMClients/msdyn_LogicAppExecutor_v2.js" behavior="0" />
+	    <RootComponent type="61" schemaName="CRMClients/msdyn_LogicAppExecutor_v2.js" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroDesigner.bundle.js" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroDesigner.html" behavior="0" />
-	  <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroMonitor.bundle.js" behavior="0" />
-	  <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroMonitor.html" behavior="0" />
+	    <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroMonitor.bundle.js" behavior="0" />
+	    <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroMonitor.html" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_spinner.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroDesigner/app.bundle.js" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroDesigner/iframedesigner.html" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroMonitor/appMon.bundle.js" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosComponent_macroMonitor/iframemonitor.html" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_macros_icon.svg" behavior="0" />
       <RootComponent type="66" schemaName="MscrmControls.Grid.MacroSessionAssociatedGridControl" behavior="0" />
-	  <RootComponent type="66" schemaName="MscrmControls.RunLink.RunLinkControl" behavior="0" />
+	    <RootComponent type="66" schemaName="MscrmControls.RunLink.RunLinkControl" behavior="0" />
       <RootComponent type="20" id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" behavior="0" />
       <RootComponent type="20" id="{c49aae0a-0fda-e911-a81c-000d3af75d63}" behavior="0" />
       <RootComponent type="20" id="{61649654-ced8-ea11-a813-000d3a579805}" behavior="0" />
