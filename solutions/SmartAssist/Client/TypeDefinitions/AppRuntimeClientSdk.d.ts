@@ -122,7 +122,19 @@ declare namespace AppRuntimeClientSdk {
 		 * @param sessionStateMap State map returned from @getSessionState
 		 */
 		restoreSessionState(sessionStateMap: Map<string, string>): void;
-    }
+
+		/**
+		 * Add a session refresh handler. Will be fired when the refreshSession API call is made and changes the session context.
+		 * @param handler Handler to fire on context change.
+		 */
+		addOnSessionRefresh(handler: Function): string;
+
+		/**
+		* remove a SessionRefresh handler
+		* @param handlerId Identifier of handler to remove
+		*/
+		removeOnSessionRefresh(handlerId: string): void;
+	}
 
 	/**
 	 * Interface for SessionInput

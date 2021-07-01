@@ -102,7 +102,7 @@ declare namespace AppRuntimeClientSdk {
 		 * @param handlerId Identifier of handler to remove
 		 */
 		removeOnContextChange(handlerId: string): void;
-
+		
     }
 
 	/**

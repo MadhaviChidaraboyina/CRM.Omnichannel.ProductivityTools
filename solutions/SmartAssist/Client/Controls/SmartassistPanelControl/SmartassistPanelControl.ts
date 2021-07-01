@@ -18,6 +18,7 @@ module MscrmControls.SmartassistPanelControl {
         private previousSessionId: any = null;
         private anchorTabEntityId: string = null;
         private tabSwitchHandlerId: string = null;
+        private sessionRefreshHandlerId: string = null;
         private telemetryHelper: TelemetryHelper;
         private smartAssistInfoIconElement: HTMLDivElement;
 
@@ -52,7 +53,11 @@ module MscrmControls.SmartassistPanelControl {
                     var eventId = Microsoft.AppRuntime.Sessions.addOnContextChange(this.listenCECContextChangeAPI.bind(this));
                     this.tabSwitchHandlerId = eventId;
                 }
-
+                if (!this.sessionRefreshHandlerId) {
+                    //Listen to the refreshSession context update API
+                    var eventId = Microsoft.AppRuntime.Sessions.addOnSessionRefresh(this.listenCECContextChangeAPI.bind(this));
+                    this.sessionRefreshHandlerId = eventId;
+                }
                 if (Utility.isUsingAppSidePane(context)) {
                     Microsoft.AppRuntime.Sessions.registrySessionStatePersistence(
                         "smartAssistBadge",
@@ -150,6 +155,7 @@ module MscrmControls.SmartassistPanelControl {
          */
         public destroy(): void {
             Microsoft.AppRuntime.Sessions.removeOnContextChange(this.tabSwitchHandlerId);
+            Microsoft.AppRuntime.Sessions.removeOnSessionRefresh(this.sessionRefreshHandlerId);
         }
 
         private async updateAnchorTabContext() {
@@ -278,8 +284,8 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         /**
-         * CEC AddOnContextChange callback
-         * @param event: Current tab opened context
+         * CEC AddOnContextChange and addOnSessionRefresh callback
+         * @param event: Current tab opened context, or SessionRefresh eventType
          */
         public async listenCECContextChangeAPI(event: any) {
             var sessionId = Utility.getCurrentSessionId()
@@ -289,7 +295,7 @@ module MscrmControls.SmartassistPanelControl {
 
             // update recordId and entityName in telemetry helper;
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SessionSwitchCECEventReceived, null);
-            if (!this.isSameSession(sessionId)) {
+            if (!this.isSameSession(sessionId) || event.eventType == "SessionRefresh") {
                 if (this.AnchorTabContext && this.AnchorTabContext.entityName) {
                     var configs = await SAConfigDataManager.Instance.getSAConfigurations(this.telemetryHelper) as SmartassistPanelControl.SAConfig[];
                     //Unbind all configs- in OC both(lwi and case) configs could be present 
@@ -299,7 +305,6 @@ module MscrmControls.SmartassistPanelControl {
                     $("#" + Constants.SuggestionOuterContainer).empty();
                     let entityId = this.getEntityRecordId(this.AnchorTabContext);
                     this.anchorTabEntityId = Utility.FormatGuid(entityId);
-
                     this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SessionSwitchDetected,
                         [
                             { name: "PrevSessionId", value: this.previousSessionId },
