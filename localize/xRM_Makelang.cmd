@@ -171,11 +171,11 @@ if Exist "%xRM_TMPPATH%\target.txt" (
                 REM Get parser id based on file extention
                 REM Default to RESX Parser
                 set xRM_PARSER=211
-                if /i "%%~xo"==".json" ( set xRM_PARSER=306 )
+                if /i "%%~xo"==".json" (set xRM_PARSER=306)
 
                 REM Does 'basepath' has a trailing slash? if so remove it 
                 set xRM_SOURCE_BASEPATH=%%~dpo
-                if !xRM_SOURCE_BASEPATH:~-1!==\ ( set xRM_SOURCE_BASEPATH=!xRM_SOURCE_BASEPATH:~0,-1! )
+                if !xRM_SOURCE_BASEPATH:~-1!==\ (set xRM_SOURCE_BASEPATH=!xRM_SOURCE_BASEPATH:~0,-1!)
 
                 REM Genereate base lcl
                 echo *** call %PKG_LSBUILD%\lsbuild parse /p !xRM_PARSER! /o "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /s "%xRM_LOCPATH%\Base\%xRM_PNAME%\LSS\lss.lss" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE!
@@ -188,8 +188,8 @@ if Exist "%xRM_TMPPATH%\target.txt" (
                     set LL-CC=%%j
 
                     REM replace 'sr-Latn-RS', 'sr-Cyrl-RS' with 'sr-Latn-CS', 'sr-Cyrl-CS' respectively since D635_CE has only CS based locales
-                    if "%%j"=="sr-Latn-RS" ( set LL-CC=sr-Latn-CS )
-                    if "%%j"=="sr-Cyrl-RS" ( set LL-CC=sr-Cyrl-CS )
+                    if "%%j"=="sr-Latn-RS" (set LL-CC=sr-Latn-CS)
+                    if "%%j"=="sr-Cyrl-RS" (set LL-CC=sr-Cyrl-CS)
 
                     REM generate twice
                     REM 1. under 'Localize\Temp\[ll-cc]' to copy to 'D365_CE' repo
@@ -217,7 +217,7 @@ if Exist "%xRM_TMPPATH%\target.txt" (
             REM Set LSBuild Parser and Target file name
             REM Default to RESX Parser
             set xRM_PARSER=211
-            if /i "%%~xo"==".json" ( set xRM_PARSER=306 )
+            if /i "%%~xo"==".json" (set xRM_PARSER=306)
 
             if not "!xRM_PATH:CmtDataFiles\data_1033=!"=="!xRM_PATH!" (
                 REM from: \solutions\ProductivityMacros\PVSPackage\ProductivityMacros\CmtDataFiles\data_1033\

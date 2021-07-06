@@ -1176,6 +1176,10 @@
     <value>Liste des brouillons de macros</value>
     <comment>'Process' : Description for SavedQuery on Entity QueryId: '{97a5e446-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
+  <data name="1:Description,WorkflowCategory" xml:space="preserve">
+    <value>Catégorie du processus.</value>
+    <comment>'Workflow' : Description for Attribute 'Category' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_macrosessionCreatedBy" xml:space="preserve">
     <value>Créé(e) par</value>
     <comment>'msdyn_macrosession' : displayname for Attribute 'CreatedBy' on Entity</comment>
@@ -1923,6 +1927,10 @@
   <data name="1:displayname,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
     <value>Code de fuseau horaire pour la conversion UTC</value>
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
+  </data>
+  <data name="1:displayname,WorkflowCategory" xml:space="preserve">
+    <value>Catégorie</value>
+    <comment>'Workflow' : displayname for Attribute 'Category' on Entity</comment>
   </data>
   <data name="1:label,Action Input Parameter{023e9761-7039-4fdb-bc4e-a0f4dcc63058}" xml:space="preserve">
     <value>Propriétaire</value>
@@ -2811,6 +2819,10 @@
   <data name="1:label,Parameter definition{f600fd6c-75ad-4b21-b4c8-afb6a10b680d}" xml:space="preserve">
     <value>Général</value>
     <comment>'Parameter definition' : label for section in Entity FormXml ID: '{f600fd6c-75ad-4b21-b4c8-afb6a10b680d}'</comment>
+  </data>
+  <data name="1:label,Workflowworkflow_category9000" xml:space="preserve">
+    <value>Flux de l’API de client Web</value>
+    <comment>'Workflow' : label for option '9000' on Entity</comment>
   </data>
   <data name="1:LocalizedCollectionName,msdyn_macrosessionentitymsdyn_macrosession" xml:space="preserve">
     <value>Historiques d'exécution de macros</value>
