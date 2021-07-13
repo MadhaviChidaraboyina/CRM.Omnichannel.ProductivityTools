@@ -38,9 +38,16 @@ module MscrmControls.Callscript {
 			this.initializeControlStateFromCEC();
         }
 
-        // this method reset the required properties when session switch / create
-        public async onSessionSwitch(): Promise<void> {
-            this.updateControlStateInCEC();
+        public async onSessionRefresh(): Promise<void> {
+			// setting to null removes the previously stored callscripts
+			// needed since the sessionID remains the same on SessionRefresh event
+			this.callscriptsForCurrentSession = null;
+			await this.onSessionSwitch();
+        }
+
+		// this method reset the required properties when session switch / create
+		public async onSessionSwitch(): Promise<void> {
+			this.updateControlStateInCEC();
             this.setCurrentUciSessionId();
             await this.initializeControlStateFromCEC();
             if (this.context.utils.isNullOrUndefined(this.callscriptsForCurrentSession)) {
@@ -54,7 +61,7 @@ module MscrmControls.Callscript {
                 this.scriptDataFetchFailed = false;
             }
             this.context.utils.requestRender();
-        }
+		}
 
 		/**
 		 * Sets the value of sessionId to id of focussed session for this control instance

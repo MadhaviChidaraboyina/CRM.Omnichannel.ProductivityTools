@@ -103,6 +103,7 @@ declare namespace AppRuntimeClientSdk {
 		 */
 		removeOnContextChange(handlerId: string): void;
 
+
 		/**
 		 * Registry session state persistence functions.
 		 * @param id Identifier of the component that requires session state persistence.

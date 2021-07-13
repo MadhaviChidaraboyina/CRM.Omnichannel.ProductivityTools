@@ -56,6 +56,7 @@ module MscrmControls.Callscript {
             }
             let windowObject = this.getWindowObject();
             Microsoft.AppRuntime.Sessions.addOnAfterSessionSwitch(this.handleSessionSwitch.bind(this));
+			Microsoft.AppRuntime.Sessions.addOnSessionRefresh(this.handleSessionRefresh.bind(this));
 		}
 
         private getWindowObject(): any {
@@ -65,6 +66,11 @@ module MscrmControls.Callscript {
         //This method is registered as a handler for session switch
         private handleSessionSwitch(context: XrmClientApi.EventContext) {
             this.stateManager.onSessionSwitch();
+        }
+
+		//This method is registered as a handler for session refresh event
+        private handleSessionRefresh() {
+            this.stateManager.onSessionRefresh();
         }
 
 		/**
