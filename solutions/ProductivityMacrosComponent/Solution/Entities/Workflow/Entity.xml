@@ -24,7 +24,7 @@
             <options>
               <option id="571ac1de-b25f-417d-9a1a-a67fb9cca9ad" value="9000">
                 <labels>
-                  <label id="84825a1a-a096-4330-9bd3-6939dbed25de" description="Web Client API Flow" languagecode="1033" />
+                  <label description="Web Client API Flow" languagecode="1033" />
                 </labels>
               </option>
             </options>
