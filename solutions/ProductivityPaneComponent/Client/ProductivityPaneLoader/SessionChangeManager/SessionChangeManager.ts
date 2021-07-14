@@ -8,13 +8,18 @@
 /// <reference path="./SessionChangeHelper.ts"/>
 module ProductivityPaneLoader {
     export class SessionChangeManager {
-        private isDefaultExpanded: boolean;
-        private ProductivityToolList: ToolConfig[];
+        private productivityToolList: ToolConfig[];
+        private static instance: SessionChangeManager;
 
-        constructor(isDefaultExpanded: boolean, toolList: ToolConfig[]) {
-            this.isDefaultExpanded = isDefaultExpanded;
-            this.ProductivityToolList = toolList;
+        private constructor(toolList: ToolConfig[]) {
+            this.productivityToolList = toolList;
             this.registerEventHandlers();
+        }
+
+        public static Instantiate(toolList: ToolConfig[]): void {
+            if (!SessionChangeManager.instance) {
+                SessionChangeManager.instance = new SessionChangeManager(toolList);
+            }
         }
 
         private registerEventHandlers(): void {
@@ -53,27 +58,22 @@ module ProductivityPaneLoader {
         }
 
         /*
-         * Set pane.hidden accordingly. Productivity tools are hidden in home session and not hidden in other sessions.
-         * Init session storage if it is null. Select and collapse/expand app side pane based on session storage data.
+         * Set pane.hidden accordingly. Productivity tools are hidden in home session and Beethoven chat widget session, and not hidden
+         * in other sessions. Init session storage if it is null. Select and collapse/expand app side pane based on session storage data.
          */
         private onAfterSessionSwitch(event: any): void {
             try {
                 const newSessionId = SessionChangeHelper.getNewSessionId(event);
-                Utils.isHomeSession(newSessionId) || Utils.isBeethovenChatWidgetSession(newSessionId)
-                    ? SessionChangeHelper.hideAllProductivityTools(this.ProductivityToolList)
-                    : SessionChangeHelper.showAllProductivityTools(this.ProductivityToolList);
-
                 const sessionStorageData = SessionStateManager.getSessionStorageData(
                     Constants.appSidePaneSessionState + newSessionId,
                 );
                 if (Utils.isNullOrUndefined(sessionStorageData)) {
-                    SessionStateManager.initSessionState(
-                        this.isDefaultExpanded,
-                        this.ProductivityToolList,
-                        newSessionId,
-                    );
+                    SessionStateManager.initSessionState(newSessionId);
                 }
                 SessionStateManager.restoreSessionState(newSessionId);
+                Utils.isHomeSession(newSessionId) || Utils.isBeethovenChatWidgetSession(newSessionId)
+                    ? SessionChangeHelper.hideAllProductivityTools(this.productivityToolList)
+                    : SessionChangeHelper.showAllProductivityTools(this.productivityToolList);
             } catch (error) {
                 Logger.logError(
                     EventType.SESSION_CHANGE_MANAGER_ERROR,

@@ -25,7 +25,7 @@ module ProductivityPaneLoader {
         }
 
         public static getAppSidePanesState(): number {
-            // 0: collapsed; 1: expanded ( dafault value).
+            // 0: collapsed; 1: expanded (default value).
             return XrmAppProxy.getXrmAppApis().sidePanes.state;
         }
 

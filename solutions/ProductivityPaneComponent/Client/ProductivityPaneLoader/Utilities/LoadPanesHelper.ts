@@ -7,16 +7,34 @@
 /// <reference path="./Constants.ts" />
 module ProductivityPaneLoader {
     export class LoadPanesHelper {
-        /*
-         * Init session change manager with pane mode and enabled tool list.
-         */
-        public static initSessionChangeManager(
-            productivityPaneMode: boolean,
-            productivityToolList: ToolConfig[],
-        ): void {
-            // Clean up session storage data related to app side panes.
+        public static afterProductivityToolLoad(productivityPaneMode: boolean, toolList: ToolConfig[]): void {
+            // Step 1: if there is no selected app side pane, select the first productivity tool by default and set the app side panes states
+            // based on APM config. If there is one app side pane loaded already, the selection and panes state will remain the same.
+            const currentSelectedAppSidePane = XrmAppProxy.getSelectedAppSidePane();
+            if (!currentSelectedAppSidePane) {
+                XrmAppProxy.getAppSidePane(toolList[Constants.firstElement].paneId).select();
+                XrmAppProxy.setAppSidePanesState(
+                    productivityPaneMode ? Constants.appSidePanesExpanded : Constants.appSidePanesCollapsed,
+                );
+            }
+
+            // Step 2: clean up session storage data related to app side panes and instantiate session change manager.
             SessionStateManager.cleanSessionState();
-            new SessionChangeManager(productivityPaneMode, productivityToolList);
+            SessionChangeManager.Instantiate(toolList);
+
+            // Step 3: Below handles the scenario where user create the first session so quickly that SessionChangeManager.Instantiate()
+            // has not finished yet. It mocks the expected behaviors on before & on after session switch.
+            const focusedSessionId = XrmAppProxy.getFocusedSessionId();
+            if (!Utils.isHomeSession(focusedSessionId) && !Utils.isBeethovenChatWidgetSession(focusedSessionId)) {
+                // Cache home session state to handle the app side panes that are shown on home session.
+                SessionStateManager.updateSessionState(Constants.homeSessionId);
+
+                SessionStateManager.initSessionState(focusedSessionId);
+
+                SessionStateManager.restoreSessionState(focusedSessionId);
+
+                SessionChangeHelper.showAllProductivityTools(toolList);
+            }
         }
 
         /*
@@ -71,25 +89,6 @@ module ProductivityPaneLoader {
                     error,
                 );
             }
-        }
-
-        /*
-         * Mock the expected behaviors on before & on after session switch to handle the scenario where
-         * user create the first session so quickly that SessionChangeManager has not been initialized yet.
-         */
-        public static initSessionStorageAndRefreshPanes(
-            sessionId: string,
-            productivityToolList: ToolConfig[],
-            isDefaultExpanded: boolean,
-        ) {
-            SessionChangeHelper.showAllProductivityTools(productivityToolList);
-
-            // Init session state for home session.
-            SessionStateManager.updateSessionState(Constants.homeSessionId);
-
-            SessionStateManager.initSessionState(isDefaultExpanded, productivityToolList, sessionId);
-
-            SessionStateManager.restoreSessionState(sessionId);
         }
 
         /*

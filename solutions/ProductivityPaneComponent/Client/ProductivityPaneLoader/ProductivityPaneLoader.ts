@@ -37,24 +37,9 @@ module ProductivityPaneLoader {
                                         // productivityPaneMode indicates whether or not user
                                         // want to expand all productivity tools. true: expand
                                         // all tools by default; false: collapse all tools.
-                                        LoadPanesHelper.loadAppSidePanes(
-                                            toolList,
-                                            productivityPaneConfig.productivityPaneMode,
-                                        ).then(() => {
-                                            LoadPanesHelper.initSessionChangeManager(
-                                                productivityPaneConfig.productivityPaneMode,
-                                                toolList,
-                                            );
-                                            // Below handles the scenario where user create the first session
-                                            // so quickly that initSessionChangeManager() has not finished yet.
-                                            const focusedSessionId = XrmAppProxy.getFocusedSessionId();
-                                            if (!Utils.isHomeSession(focusedSessionId) && !Utils.isBeethovenChatWidgetSession(focusedSessionId)) {
-                                                LoadPanesHelper.initSessionStorageAndRefreshPanes(
-                                                    focusedSessionId,
-                                                    toolList,
-                                                    productivityPaneConfig.productivityPaneMode,
-                                                );
-                                            }
+                                        const paneMode = productivityPaneConfig.productivityPaneMode;
+                                        LoadPanesHelper.loadAppSidePanes(toolList, paneMode).then(() => {
+                                            LoadPanesHelper.afterProductivityToolLoad(paneMode, toolList);
                                             Logger.logInfo(
                                                 EventType.PRODUCTIVITY_TOOLS_LOAD_SUCCESS,
                                                 `${Constants.productivityToolsLogPrefix} Success: productivity tools loaded`,

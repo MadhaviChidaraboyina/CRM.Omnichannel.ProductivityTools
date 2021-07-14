@@ -40,18 +40,12 @@ module ProductivityPaneLoader {
             );
         }
 
-        public static initSessionState(
-            isDefaultExpanded: boolean,
-            productivityToolList: ToolConfig[],
-            newSessionId: string,
-        ): void {
-            const defaultAppSidePanesState = isDefaultExpanded
-                ? Constants.appSidePanesExpanded
-                : Constants.appSidePanesCollapsed;
-            const defaultSelectedAppSidePaneId = productivityToolList[Constants.firstElement].paneId;
+        public static initSessionState(newSessionId: string): void {
+            // Respect the preceding app side panes state and selection when initiating a new session.
+            // Pane selection won't be null here because productivity tools cannot be closed.
             const defaultSessionStorageData = {
-                appSidePanesState: defaultAppSidePanesState,
-                selectedAppSidePaneId: defaultSelectedAppSidePaneId,
+                appSidePanesState: XrmAppProxy.getAppSidePanesState(),
+                selectedAppSidePaneId: XrmAppProxy.getSelectedAppSidePane().paneId,
             };
             SessionStateManager.setSessionStorageData(
                 Constants.appSidePaneSessionState + newSessionId,

@@ -6,24 +6,24 @@
 module ProductivityPaneLoader {
     export class Logger {
         public static logInfo(eventType: EventType, message: string, additionalData?: any) {
-            const telemetryData = Logger.addParamer(eventType, additionalData);
+            const telemetryData = Logger.addParameter(eventType, additionalData);
             Microsoft.AppRuntime.Internal.telemetryLogInfo(message, telemetryData);
             console.info(message);
         }
 
         public static logWarning(eventType: EventType, message: string, additionalData?: any) {
-            const telemetryData = Logger.addParamer(eventType, additionalData);
+            const telemetryData = Logger.addParameter(eventType, additionalData);
             Microsoft.AppRuntime.Internal.telemetryLogWarning(message, telemetryData);
             console.warn(message);
         }
 
         public static logError(eventType: EventType, message: string, additionalData?: any) {
-            const telemetryData = Logger.addParamer(eventType, additionalData);
+            const telemetryData = Logger.addParameter(eventType, additionalData);
             Microsoft.AppRuntime.Internal.telemetryLogError(message, telemetryData);
             console.error(message + ': ' + JSON.stringify(telemetryData));
         }
 
-        private static addParamer(eventType: EventType, telemetryData: any) {
+        private static addParameter(eventType: EventType, telemetryData: any) {
             return {
                 eventType: eventType,
                 telemetryData: telemetryData,
