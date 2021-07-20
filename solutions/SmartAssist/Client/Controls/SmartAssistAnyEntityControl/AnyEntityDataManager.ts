@@ -231,22 +231,25 @@
                 return this.Suggestions;
             }
             catch (error) {
-                if (SmartAssistAnyEntityControl._context.utils.isFeatureEnabled("SmartAssistMultilingualSupport") && this.isSuggestionError(error)) {
-                    if (error.displayMessage) {
-                        if (error.exception) {
-                            this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchDataFromAPI, error.exception, null);
-                        }
-                        return error.displayMessage;
+                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchDataFromAPI, error, null);
+                if (this.isSuggestionError(error)) {
+                    const errorMessage = error.displayMessage ? error.displayMessage : this.getErrorMessageFromException(error.exception);
+                    if (errorMessage) {
+                        return errorMessage;
                     }
                 }
                 this.Suggestions = null;
-                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchDataFromAPI, error, null);
                 return null;
             }
         }
 
-        isSuggestionError(result: any[] | Microsoft.Smartassist.SuggestionProvider.SuggestionError ): result is Microsoft.Smartassist.SuggestionProvider.SuggestionError {
-            return result && ((result as Microsoft.Smartassist.SuggestionProvider.SuggestionError).exception !== undefined || (result as Microsoft.Smartassist.SuggestionProvider.SuggestionError).displayMessage !== undefined);
+        private getErrorMessageFromException(exception: any): string {
+            return Utility.getMapObject(exception.message)['message'];
+        }
+
+        private isSuggestionError(result: any[] | Microsoft.Smartassist.SuggestionProvider.SuggestionError ): result is Microsoft.Smartassist.SuggestionProvider.SuggestionError {
+            // Return true if the returned error has either truthy displayMessage or exception object.
+            return result && ((result as Microsoft.Smartassist.SuggestionProvider.SuggestionError).exception || (result as Microsoft.Smartassist.SuggestionProvider.SuggestionError).displayMessage);
         }
 
         /**
