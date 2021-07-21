@@ -37,7 +37,7 @@ module MscrmControls.Smartassist.Suggestion {
             imageBox.url = this._imageUrl;
             imageBox.size = AdaptiveCards.Size.Small;
             imageBox.pixelWidth = 16;
-            imageBox.altText = "popup button";
+            imageBox.altText = "more options button";
             imageBox.horizontalAlignment = AdaptiveCards.HorizontalAlignment.Right;
             this._popupOwner = imageBox.render();
             (<HTMLElement>this._popupOwner.children[0]).style.cursor = "pointer";
