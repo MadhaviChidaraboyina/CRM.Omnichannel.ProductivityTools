@@ -1,12 +1,5 @@
 [
   {
-    "SolutionName": "ProductivityPaneControl",
-    "SolutionNameShort": "ProductivityPaneControl",
-    "SolutionPatchName": "ProductivityPaneControlPatch",
-    "PackageCombinations": {},
-    "EnvironmentVariableForPatching": "ProductivityPaneControlEnablePatchGenerator"
-  },
-    {
     "SolutionName": "ProductivityPaneComponent",
     "SolutionNameShort": "ProductivityPaneComponent",
     "SolutionPatchName": "ProductivityPaneComponentPatch",

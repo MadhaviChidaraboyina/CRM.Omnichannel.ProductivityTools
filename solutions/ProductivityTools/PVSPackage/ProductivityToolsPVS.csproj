@@ -81,10 +81,6 @@
       <Link>ProductivityTools\msdyn_Agentscript_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityPaneControl_managed.cab">
-      <Link>ProductivityTools\msdyn_ProductivityPaneControl_managed.cab</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_AgentGuidance_managed.cab">
       <Link>ProductivityTools\msdyn_AgentGuidance_managed.cab</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
