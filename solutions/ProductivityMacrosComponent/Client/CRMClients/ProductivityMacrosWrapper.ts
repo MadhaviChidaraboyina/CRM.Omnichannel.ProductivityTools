@@ -1128,14 +1128,17 @@ namespace Microsoft.ProductivityMacros.Internal {
                                 windowXrm.Page.getAttribute(key).setValue(parseFloat(data[key]));
                                 break;
                             case "datetime":
-                                windowXrm.Page.getAttribute(key).setValue(new Date(data[key]));
+                                windowXrm.Page.getAttribute(key).setValue(Date.parse(data[key]) || undefined);
                                 break;
                             case "multiselectoptionset":
-                                let tempArray = data[key].split(",");
                                 let multiOptionSet: number[] = new Array();
-                                tempArray.forEach(function (item : string) {
-                                    multiOptionSet.push(parseInt(item));
-                                })
+                                if (!isNullOrUndefined(data[key]))
+                                {
+                                    let tempArray = data[key].split(",");
+                                    tempArray.forEach(function (item : string) {
+                                        multiOptionSet.push(parseInt(item));
+                                    })
+                                }                                
                                 windowXrm.Page.getAttribute(key).setValue(multiOptionSet);
                                 break;
                             case "lookup":
