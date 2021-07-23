@@ -21,13 +21,6 @@
     "EnvironmentVariableForPatching": "AgentscriptComponentEnablePatchGenerator"
   },
   {
-    "SolutionName": "Agentscript",
-    "SolutionNameShort": "Agentscript",
-    "SolutionPatchName": "AgentscriptPatch",
-    "PackageCombinations": {},
-    "EnvironmentVariableForPatching": "AgentscriptEnablePatchGenerator"
-  },
-  {
     "SolutionName": "OmnichannelProductivityToolsSettings",
     "SolutionNameShort": "OmnichannelProductivityToolsSettings",
     "SolutionPatchName": "OmnichannelProductivityToolsSettingsPatch",
@@ -84,14 +77,6 @@
     "SolutionPatchName": "SmartAssistPatch",
     "PackageCombinations": {},
     "EnvironmentVariableForPatching": "SmartAssistEnablePatchGenerator"
-  },
-  {
-    "SolutionName": "ProductivityTools",
-    "SolutionNameShort": "ProductivityTools",
-    "SolutionPatchName": "ProductivityToolsPatch",
-    "PackageCombinations": {},
-    "EnvironmentVariableForPatching": "ProductivityToolsEnablePatchGenerator"
   }
-
 ]
 

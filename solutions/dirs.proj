@@ -1,19 +1,16 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<ProjectToBuild Include="Anchors\ProductivityTools\dirs.proj" />
 		<ProjectToBuild Include="Anchors\AgentProductivityTools\dirs.proj" />
 		<ProjectToBuild Include="ProductivityMacros\dirs.proj" />
 		<ProjectToBuild Include="..\src\Designer\FlowDesigner\flowDesignerControl.njsproj" />
 		<ProjectToBuild Include="ProductivityMacrosComponent\dirs.proj" />
 		<ProjectToBuild Include="ProductivityMacrosApplication\dirs.proj" />
 		<ProjectToBuild Include="ProductivityMacrosApplicationOC\dirs.proj" />
-		<ProjectToBuild Include="Agentscript\dirs.proj" />
 		<ProjectToBuild Include="AgentscriptComponent\dirs.proj" />
 		<ProjectToBuild Include="SmartAssist\dirs.proj" />
 		<ProjectToBuild Include="OmnichannelProductivityToolsSettings\dirs.proj" />
 		<ProjectToBuild Include="ProductivityPaneComponent\dirs.proj" />
 		<ProjectToBuild Include="AgentGuidance\dirs.proj" />
-		<ProjectToBuild Include="ProductivityTools\dirs.proj" />
   </ItemGroup>
 	<Target Name="Clean">
 		<MSBuild Projects="@(ProjectToBuild)" Targets="Clean" />

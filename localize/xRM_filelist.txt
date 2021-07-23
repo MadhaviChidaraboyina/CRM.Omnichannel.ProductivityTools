@@ -20,7 +20,6 @@ solutions\AgentscriptComponent\Client\Localization\Languages\msdyn_AgentscriptCo
 solutions\AgentscriptComponent\Solution\Resources\Assets\1033.json,AgentscriptComponent
 solutions\AgentscriptComponent\Solution\Resources\en-US\resources.en-US.resx,AgentscriptComponent
 solutions\Anchors\AgentProductivityTools\Solution\Resources\en-US\resources.en-US.resx,Anchors\AgentProductivityTools
-solutions\Anchors\ProductivityTools\Solution\Resources\en-US\resources.en-US.resx,Anchors
 solutions\OmnichannelProductivityToolsSettings\Solution\Resources\en-us\resources.en-US.resx,OmnichannelProductivityToolsSettings
 solutions\ProductivityMacrosApplication\Solution\Resources\Assets\1033.json,ProductivityMacrosApplication
 solutions\ProductivityMacrosApplication\Solution\Resources\en-US\resources.en-US.resx,ProductivityMacrosApplication
@@ -33,8 +32,6 @@ solutions\ProductivityPaneComponent\Client\Controls\PanelControl\strings\Product
 solutions\ProductivityPaneComponent\Client\Localization\Languages\ProductivityPaneComponent.1033.resx,ProductivityPaneComponent
 solutions\ProductivityPaneComponent\Solution\Resources\en-us\resources.en-US.resx,ProductivityPaneComponent
 solutions\ProductivityPaneComponent\Solution\WebResources\msdyn_ProductivityPaneComponent.1033.resx,ProductivityPaneComponent
-!solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.xml,ProductivityTools
-solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.json,ProductivityTools
 solutions\SmartAssist\Client\Controls\RecommendationControl\strings\RecommendationControl.1033.resx,SmartAssist
 solutions\SmartAssist\Client\Controls\SmartAssistAnyEntityControl\strings\SmartAssistAnyEntityControl.1033.resx,SmartAssist
 solutions\SmartAssist\Client\Controls\SmartassistControl\strings\SmartassistControl.1033.resx,SmartAssist

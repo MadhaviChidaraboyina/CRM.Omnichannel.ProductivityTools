@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
-		<ProjectToBuild Include="Anchors\ProductivityTools\solutions.proj" />
 		<ProjectToBuild Include="Anchors\AgentProductivityTools\solutions.proj" />
 		<ProjectToBuild Include="AgentGuidance\solutions.proj" />
-		<ProjectToBuild Include="Agentscript\solutions.proj" />
   		<ProjectToBuild Include="AgentscriptComponent\solutions.proj" />
   		<ProjectToBuild Include="OmnichannelProductivityToolsSettings\solutions.proj" />
 		<ProjectToBuild Include="ProductivityMacros\solutions.proj" />
@@ -13,7 +11,6 @@
 		<ProjectToBuild Include="ProductivityMacrosApplicationOC\solutions.proj" />
 		<ProjectToBuild Include="ProductivityPaneComponent\solutions.proj" />
 		<ProjectToBuild Include="SmartAssist\solutions.proj" />
-		<ProjectToBuild Include="ProductivityTools\solutions.proj" />
   	</ItemGroup>
 	<Target Name="Clean">
 		<MSBuild Projects="@(ProjectToBuild)" Targets="Clean" />
