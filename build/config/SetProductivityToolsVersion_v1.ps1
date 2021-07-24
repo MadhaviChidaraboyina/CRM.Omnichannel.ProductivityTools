@@ -220,8 +220,8 @@ function Create-VersionTxtFile {
 	}
 }
 
-# Commandlet Handle_Vesion_For_ProductivityToolAchor handles version for ProductivityToolAchor
-function Handle_Vesion_For_ProductivityToolAchor {
+# Commandlet Handle_Vesion_For_AgentProductivityToolAchor handles version for AgentProductivityToolAchor
+function Handle_Vesion_For_AgentProductivityToolAchor {
 	[CmdletBinding()]
 	param(
 		[int] $commit,
@@ -229,7 +229,7 @@ function Handle_Vesion_For_ProductivityToolAchor {
 		[string] $AnchorSolutionName,
 		[Object] $versionFile = ""
 	)
-		# this portion of code is written to handle version for ProductivityToolAchor - its version will be increased if there are any changes in (wsroot)/solutions/ProductivityTools
+		# Version will be increased if there are any changes in (wsroot)/solutions/
 		$baseSln= New-Object Solution
 		$baseSln.Name = $AnchorSolutionName
 		$baseSln.Folder = $solutionsFolder + $AnchorSolutionName
@@ -259,8 +259,9 @@ $versionFileName = "version.txt"
 $tempVersionFolder = "tempVersion"
 $packages = @()
 $solutionObjects = @()
-$zero = 0
-$TotalCommits = $zero
+# Increased the based number since we removed deprecated projects hence decreased the total commits number
+$commitBased = 120
+$TotalCommits = $commitBased
 
 $latestTag = Get-LatestGitTag
 
@@ -305,14 +306,12 @@ foreach ($record in $solutionDependencies) {
 		# Add the packages to an array and set the version
 		$packages = ($record.PackageCombinations | Get-Member -Type NoteProperty).Name
 
-		if($baseSln.Name -ne "ProductivityTools")
-		{
-			# Add the solution object to an array 
-			$solutionObjects += $baseSln
 		
-			Set-SolutionVersion -solutionObj $baseSln -derivedVersion $derivedBaseVersion -versionFile $versionFilePath
-		}
-		 $TotalCommits += $baseSln.Commits 
+		# Add the solution object to an array 
+		$solutionObjects += $baseSln
+		Set-SolutionVersion -solutionObj $baseSln -derivedVersion $derivedBaseVersion -versionFile $versionFilePath
+		
+		$TotalCommits += $baseSln.Commits 
 			
 	<#	foreach ($pkg in $packages) {
 		# Anchor/Package version handling
@@ -346,8 +345,8 @@ foreach ($record in $solutionDependencies) {
 	} #>		
 }
 
-Handle_Vesion_For_ProductivityToolAchor -commit $TotalCommits -derivedVersion $derivedBaseVersion -AnchorSolutionName "ProductivityTools" -versionFile $versionFilePath
-Handle_Vesion_For_ProductivityToolAchor -commit $TotalCommits -derivedVersion $derivedBaseVersion -AnchorSolutionName "AgentProductivityTools" -versionFile $versionFilePath
+# Set the Agent productivity tool anchor version by the total commits under (wsroot)\Solutions
+Handle_Vesion_For_AgentProductivityToolAchor -commit $TotalCommits -derivedVersion $derivedBaseVersion -AnchorSolutionName "AgentProductivityTools" -versionFile $versionFilePath
 
 	foreach($obj in $solutionObjects) {
 		Write-Host $obj.Name":" $obj.Version

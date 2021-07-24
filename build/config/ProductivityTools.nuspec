@@ -24,7 +24,6 @@
     <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityMacrosApplication_*.*" target="Solutions" />
     <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityMacrosApplicationOC_*.*" target="Solutions" />
     <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_smartassist_*.*" target="Solutions" />
-    <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityToolsAnchor_*.*" target="Solutions" />
     <file src="..\..\drop\retail\AnyCPU\PDPackages\ProductivityToolsComponent.PackageDeployer.zip" target="PDPackages" />
     <file src="..\..\drop\retail\AnyCPU\PVSPackages\ProductivityToolsComponent.zip" target="PVSPackages" />
   </files>
