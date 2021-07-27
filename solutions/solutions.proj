@@ -5,7 +5,6 @@
 		<ProjectToBuild Include="AgentGuidance\solutions.proj" />
   		<ProjectToBuild Include="AgentscriptComponent\solutions.proj" />
   		<ProjectToBuild Include="OmnichannelProductivityToolsSettings\solutions.proj" />
-		<ProjectToBuild Include="ProductivityMacros\solutions.proj" />
 		<ProjectToBuild Include="ProductivityMacrosComponent\solutions.proj" />
 		<ProjectToBuild Include="ProductivityMacrosApplication\solutions.proj" />
 		<ProjectToBuild Include="ProductivityMacrosApplicationOC\solutions.proj" />

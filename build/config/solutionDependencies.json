@@ -39,17 +39,6 @@
     "EnvironmentVariableForPatching": "ProductivityMacrosComponentEnablePatchGenerator"
   },
   {
-    "SolutionName": "ProductivityMacros",
-    "SolutionNameShort": "ProductivityMacros",
-    "SolutionPatchName": "ProductivityMacrosPatch",
-    "PackageCombinations": {
-      "ProductivityMacros": [
-        "ProductivityMacros"
-      ]
-    },
-    "EnvironmentVariableForPatching": "ProductivityMacrosEnablePatchGenerator"
-  },
-  {
     "SolutionName": "ProductivityMacrosApplication",
     "SolutionNameShort": "ProductivityMacrosApplication",
     "SolutionPatchName": "ProductivityMacrosApplicationPatch",

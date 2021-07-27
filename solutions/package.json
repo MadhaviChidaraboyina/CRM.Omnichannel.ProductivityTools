@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "minifyClient": "minify CIFramework/Solution/WebResources/CRMClients -d CIFramework/Solution/WebResources/CRMClients",
-    "minifyWidget": "minify CIFramework/Solution/WebResources/Widget -d CIFramework/Solution/WebResources/Widget",
-    "minifyMacrosClient": "minify ProductivityMacros/Solution/WebResources/CRMClients -d ProductivityMacros/Solution/WebResources/CRMClients"
+    "minifyMacrosClient": "minify ProductivityMacrosComponent/Solution/WebResources/CRMClients -d ProductivityMacrosComponent/Solution/WebResources/CRMClients"
   },
   "author": "",
   "license": "ISC",

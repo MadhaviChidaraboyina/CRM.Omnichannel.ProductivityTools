@@ -1,7 +1,6 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
 		<ProjectToBuild Include="Anchors\AgentProductivityTools\dirs.proj" />
-		<ProjectToBuild Include="ProductivityMacros\dirs.proj" />
 		<ProjectToBuild Include="..\src\Designer\FlowDesigner\flowDesignerControl.njsproj" />
 		<ProjectToBuild Include="ProductivityMacrosComponent\dirs.proj" />
 		<ProjectToBuild Include="ProductivityMacrosApplication\dirs.proj" />

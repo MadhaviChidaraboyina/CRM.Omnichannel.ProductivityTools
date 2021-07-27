@@ -260,7 +260,7 @@ $tempVersionFolder = "tempVersion"
 $packages = @()
 $solutionObjects = @()
 # Increased the based number since we removed deprecated projects hence decreased the total commits number
-$commitBased = 120
+$commitBased = 230
 $TotalCommits = $commitBased
 
 $latestTag = Get-LatestGitTag
