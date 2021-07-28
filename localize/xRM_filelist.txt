@@ -12,15 +12,12 @@
 !        !solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.xml,ProductivityTools
 !        solutions\ProductivityTools\PVSPackage\ProductivityTools\CmtDataFiles\data_1033\data.json,ProductivityTools
 !
-solutions\AgentGuidance\Client\Controls\AgentGuidance\strings\AgentGuidance.1033.resx,AgentGuidance
-solutions\AgentGuidance\Solution\Resources\en-US\resources.en-US.resx,AgentGuidance
 solutions\AgentscriptComponent\Client\Controls\ButtonControl\strings\ButtonControl.1033.resx,AgentscriptComponent
 solutions\AgentscriptComponent\Client\Controls\CallscriptControl\strings\CallscriptControl.1033.resx,AgentscriptComponent
 solutions\AgentscriptComponent\Client\Localization\Languages\msdyn_AgentscriptComponent.1033.resx,AgentscriptComponent
 solutions\AgentscriptComponent\Solution\Resources\Assets\1033.json,AgentscriptComponent
 solutions\AgentscriptComponent\Solution\Resources\en-US\resources.en-US.resx,AgentscriptComponent
 solutions\Anchors\AgentProductivityTools\Solution\Resources\en-US\resources.en-US.resx,Anchors\AgentProductivityTools
-solutions\OmnichannelProductivityToolsSettings\Solution\Resources\en-us\resources.en-US.resx,OmnichannelProductivityToolsSettings
 solutions\ProductivityMacrosApplication\Solution\Resources\Assets\1033.json,ProductivityMacrosApplication
 solutions\ProductivityMacrosApplication\Solution\Resources\en-US\resources.en-US.resx,ProductivityMacrosApplication
 solutions\ProductivityMacrosApplicationOC\Solution\Resources\Assets\1033.json,ProductivityMacrosApplicationOC

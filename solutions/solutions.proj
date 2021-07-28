@@ -2,9 +2,7 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup>
 		<ProjectToBuild Include="Anchors\AgentProductivityTools\solutions.proj" />
-		<ProjectToBuild Include="AgentGuidance\solutions.proj" />
   		<ProjectToBuild Include="AgentscriptComponent\solutions.proj" />
-  		<ProjectToBuild Include="OmnichannelProductivityToolsSettings\solutions.proj" />
 		<ProjectToBuild Include="ProductivityMacrosComponent\solutions.proj" />
 		<ProjectToBuild Include="ProductivityMacrosApplication\solutions.proj" />
 		<ProjectToBuild Include="ProductivityMacrosApplicationOC\solutions.proj" />

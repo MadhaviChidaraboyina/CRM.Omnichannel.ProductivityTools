@@ -102,3 +102,6 @@ SolutionPackage/
 
 #ignore Template resx file
 **/Resources/template_resources.resx
+
+# Node modules
+/solutions/node_modules

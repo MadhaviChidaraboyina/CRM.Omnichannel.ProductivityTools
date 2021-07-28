@@ -6,26 +6,12 @@
     "PackageCombinations": {},
     "EnvironmentVariableForPatching": "ProductivityPaneComponentEnablePatchGenerator"
   },
-  {
-    "SolutionName": "AgentGuidance",
-    "SolutionNameShort": "AgentGuidance",
-    "SolutionPatchName": "AgentGuidancePatch",
-    "PackageCombinations": {},
-    "EnvironmentVariableForPatching": "AgentGuidanceEnablePatchGenerator"
-  },
    {
     "SolutionName": "AgentscriptComponent",
     "SolutionNameShort": "AgentscriptComponent",
     "SolutionPatchName": "AgentscriptComponentPatch",
     "PackageCombinations": {},
     "EnvironmentVariableForPatching": "AgentscriptComponentEnablePatchGenerator"
-  },
-  {
-    "SolutionName": "OmnichannelProductivityToolsSettings",
-    "SolutionNameShort": "OmnichannelProductivityToolsSettings",
-    "SolutionPatchName": "OmnichannelProductivityToolsSettingsPatch",
-    "PackageCombinations": {},
-    "EnvironmentVariableForPatching": "OmnichannelProductivityToolsSettingsEnablePatchGenerator"
   },
   {
     "SolutionName": "ProductivityMacrosComponent",

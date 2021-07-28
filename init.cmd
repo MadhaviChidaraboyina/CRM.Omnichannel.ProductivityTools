@@ -281,6 +281,15 @@ echo scenConfigEnablePatchGenerator = %scenConfigEnablePatchGenerator%
 echo proToolsEnablePatchGenerator = %proToolsEnablePatchGenerator%
 @echo.
 
+echo Install npm dependencies for solutions
+==========================================================
+if exist ./solutions/package.json (
+	cd ./solutions
+	call npm install
+	cd ..
+)
+@echo.
+
 :eof
 echo Done!
 @echo on
