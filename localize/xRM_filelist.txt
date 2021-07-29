@@ -31,7 +31,6 @@ solutions\ProductivityPaneComponent\Solution\Resources\en-us\resources.en-US.res
 solutions\ProductivityPaneComponent\Solution\WebResources\msdyn_ProductivityPaneComponent.1033.resx,ProductivityPaneComponent
 solutions\SmartAssist\Client\Controls\RecommendationControl\strings\RecommendationControl.1033.resx,SmartAssist
 solutions\SmartAssist\Client\Controls\SmartAssistAnyEntityControl\strings\SmartAssistAnyEntityControl.1033.resx,SmartAssist
-solutions\SmartAssist\Client\Controls\SmartassistControl\strings\SmartassistControl.1033.resx,SmartAssist
 solutions\SmartAssist\Client\Controls\SmartassistPanelControl\strings\SmartassistPanelControl.1033.resx,SmartAssist
 solutions\SmartAssist\Client\Controls\TPBotControl\strings\TPBotControl.1033.resx,SmartAssist
 solutions\SmartAssist\Solution\Resources\Assets\1033.json,SmartAssist
