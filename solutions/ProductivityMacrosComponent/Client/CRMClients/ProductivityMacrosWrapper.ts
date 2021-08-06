@@ -243,6 +243,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                 }
                 break;
             case AppTabConstant.EntitySearchInputString:
+            case AppTabConstant.SearchInputString:
                 pageInput.pageType = AppTabConstant.Search;
                 for (i = 0; i < entityData.Custom_Array.length; i++) {
                     try {

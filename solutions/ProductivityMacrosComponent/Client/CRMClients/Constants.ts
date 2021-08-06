@@ -105,6 +105,7 @@ namespace Microsoft.ProductivityMacros {
         public static DashboardInputString = "dashboard";
         public static EntityRecordInputString = "entityrecord";
         public static EntitySearchInputString = "entitysearch";
+        public static SearchInputString = "search";
         public static WebResourceInputString = "webresource";
 
         public static Control = "control";
