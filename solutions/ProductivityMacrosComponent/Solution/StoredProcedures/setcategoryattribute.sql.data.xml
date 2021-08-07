@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<procedure name="setcategoryattribute">
+  <database>mscrm</database>
+  <target>Server</target>
+  <file>/StoredProcedures/setcategoryattribute.sql</file>
+  <description>Update category of macros records from Desktop Flow category (6) to Web Client API Flow category (9000)</description>
+</procedure>

@@ -10,6 +10,7 @@
 	<OrganizationSettings />
 	<optionsets />
 	<Dialogs />
+	<StoredProcedures />
 	<WebResources />
 	<SolutionPluginAssemblies />
 	<SdkMessageProcessingSteps />
