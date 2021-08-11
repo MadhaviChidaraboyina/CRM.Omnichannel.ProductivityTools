@@ -174,16 +174,9 @@ module MscrmControls.Callscript {
 				buttonLabel = this.context.resources.getString(LocalizedStrings.RouteActionLabel);
 			}
 			else {
-				buttonLabel = this.context.resources.getString(LocalizedStrings.NotExecutedStepButtonLabel); //default
-				if (step.executionStatus === ExecutionStatus.Completed) {
-					buttonLabel = this.context.resources.getString(LocalizedStrings.CompletedStepButtonLabel);
-				}
-				else if (step.executionStatus === ExecutionStatus.Failed) {
-					buttonLabel = this.context.resources.getString(LocalizedStrings.FailedStepButtonLabel);
-				}
-				else if (step.executionStatus === ExecutionStatus.Started) {
-					buttonLabel = this.context.resources.getString(LocalizedStrings.Accessibility_StartedStepLabel);
-				}
+				buttonLabel = step.executionStatus === ExecutionStatus.Started ?
+					this.context.resources.getString(LocalizedStrings.Accessibility_StartedStepLabel) :
+					this.context.resources.getString(LocalizedStrings.NotExecutedStepButtonLabel);
 			}
 			return buttonLabel;
 		}

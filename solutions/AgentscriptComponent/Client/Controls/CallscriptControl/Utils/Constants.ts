@@ -99,8 +99,6 @@ module MscrmControls.Callscript {
 		public static TextActionLabel = "StepExeutionBtn_LabelForTextAction";
 		public static RouteActionLabel = "StepExeutionBtn_LabelForRouteAction";
 		public static NotExecutedStepButtonLabel = "StepExecutionBtn_LabelForNotExecutedStep";
-		public static CompletedStepButtonLabel = "StepExecutionBtn_LabelForCompletedStep";
-		public static FailedStepButtonLabel = "StepExecutionBtn_LabelForFailedStep";
 
 		//Error Strings
 		public static InitialScriptDataLoadFailure = "InitialScriptDataLoadFailure";
