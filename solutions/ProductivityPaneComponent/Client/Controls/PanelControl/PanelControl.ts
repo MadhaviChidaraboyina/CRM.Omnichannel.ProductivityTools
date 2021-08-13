@@ -95,6 +95,12 @@ module MscrmControls.PanelControl {
             this.isSessionChanged = true;
             this.currentSessionId = sessionContextData.newSessionId;
 
+            if (actionType === Constants.sessionClosed) {
+                this.panelState.DeleteState(sessionContextData.prevSessionId + LocalStorageKeyConstants.sessionData);
+                this.panelState.DeleteState(sessionContextData.prevSessionId + LocalStorageKeyConstants.notificationCount);
+                this.currentSessionId = this.sessionChangeManager.getCurrentFocusedSessionId();
+            }
+
             if (this.currentSessionId == Constants.homeSessionId ||
                 this.isDataFetched == false ||
                 this.isBeethovenChatWidgetSession(this.currentSessionId)) {
@@ -124,15 +130,6 @@ module MscrmControls.PanelControl {
                         this.setNotificationCountToZero();
                     }
                     this.context.utils.requestRender();
-                }
-                if (actionType === Constants.sessionClosed) {
-                    this.panelState.DeleteState(sessionContextData.newSessionId + LocalStorageKeyConstants.sessionData);
-                    this.panelState.DeleteState(sessionContextData.newSessionId + LocalStorageKeyConstants.notificationCount);
-                    this.currentSessionId = this.sessionChangeManager.getCurrentFocusedSessionId();
-                    if (this.currentSessionId == Constants.homeSessionId) {
-                        this.isSessionChanged = false;
-                        this.currentSessionId = Constants.emptyString;
-                    }
                 }
             }
         }

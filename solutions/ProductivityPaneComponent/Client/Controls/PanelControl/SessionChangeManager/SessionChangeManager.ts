@@ -110,8 +110,8 @@ module MscrmControls.PanelControl
                 let closedSessionId = event.getEventArgs()._inputArguments.sessionId;
 
                 this.sessionChangeEventData.event = SessionEvent.SessionClose;
-                this.sessionChangeEventData.prevSessionId = "Not Available";
-                this.sessionChangeEventData.newSessionId = closedSessionId;
+                this.sessionChangeEventData.prevSessionId = closedSessionId;
+                this.sessionChangeEventData.newSessionId = null;
 
                 this.anchorTabContext = {};
 
