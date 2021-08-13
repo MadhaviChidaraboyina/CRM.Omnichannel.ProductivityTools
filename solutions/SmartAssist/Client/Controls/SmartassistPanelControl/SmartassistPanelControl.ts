@@ -47,7 +47,11 @@ module MscrmControls.SmartassistPanelControl {
                 SmartassistPanelControl._context.reporting.reportSuccess(TelemetryEventTypes.InitStarted);
                 this.smartAssistContainer = container;
                 this.smartAssistContainer.setAttribute("style", Constants.SAPanelControlDivCss);
-                
+                this.telemetryHelper = new TelemetryHelper("", "");
+                if (!this.telemetryHelper) {
+                    throw 'telemetry is not successfully initialized';
+                }
+
                 if (!this.tabSwitchHandlerId) {
                     //Listen to the CEC context change API
                     var eventId = Microsoft.AppRuntime.Sessions.addOnContextChange(this.listenCECContextChangeAPI.bind(this));
@@ -69,8 +73,6 @@ module MscrmControls.SmartassistPanelControl {
                         }
                     );
                 }
-                
-                this.telemetryHelper = new TelemetryHelper("", "");
             } catch (error) {
                 this.hideLoader();
             }
