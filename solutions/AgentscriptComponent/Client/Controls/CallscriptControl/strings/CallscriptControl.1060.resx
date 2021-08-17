@@ -209,14 +209,6 @@
     <value>V koraku {0} ni bilo mogoče razrešiti nadomestljivega parametra. Obrnite se na skrbnika.</value>
     <comment>Error message when slug resolution fails</comment>
   </data>
-  <data name="StepExecutionBtn_LabelForCompletedStep" xml:space="preserve">
-    <value>Znova zaženi</value>
-    <comment>Button text to prompt user to execute a completed step again</comment>
-  </data>
-  <data name="StepExecutionBtn_LabelForFailedStep" xml:space="preserve">
-    <value>Poskusi znova</value>
-    <comment>Button text to prompt user to retry a failed step</comment>
-  </data>
   <data name="StepExecutionBtn_LabelForNotExecutedStep" xml:space="preserve">
     <value>Zaženi</value>
     <comment>Button text to prompt user to execute a step</comment>

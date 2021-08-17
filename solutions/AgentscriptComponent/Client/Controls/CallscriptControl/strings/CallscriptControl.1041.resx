@@ -209,14 +209,6 @@
     <value>ステップ {0} で置き換え可能なパラメーターを解決できませんでした。管理者にお問い合わせください。</value>
     <comment>Error message when slug resolution fails</comment>
   </data>
-  <data name="StepExecutionBtn_LabelForCompletedStep" xml:space="preserve">
-    <value>再実行します</value>
-    <comment>Button text to prompt user to execute a completed step again</comment>
-  </data>
-  <data name="StepExecutionBtn_LabelForFailedStep" xml:space="preserve">
-    <value>再試行</value>
-    <comment>Button text to prompt user to retry a failed step</comment>
-  </data>
   <data name="StepExecutionBtn_LabelForNotExecutedStep" xml:space="preserve">
     <value>実行</value>
     <comment>Button text to prompt user to execute a step</comment>

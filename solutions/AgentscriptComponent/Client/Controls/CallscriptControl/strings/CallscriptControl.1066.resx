@@ -209,14 +209,6 @@
     <value>Không thể giải quyết tham số có thể thay thế trong bước {0}. Vui lòng liên hệ với quản trị viên của bạn.</value>
     <comment>Error message when slug resolution fails</comment>
   </data>
-  <data name="StepExecutionBtn_LabelForCompletedStep" xml:space="preserve">
-    <value>Chạy lại</value>
-    <comment>Button text to prompt user to execute a completed step again</comment>
-  </data>
-  <data name="StepExecutionBtn_LabelForFailedStep" xml:space="preserve">
-    <value>Thử lại</value>
-    <comment>Button text to prompt user to retry a failed step</comment>
-  </data>
   <data name="StepExecutionBtn_LabelForNotExecutedStep" xml:space="preserve">
     <value>Chạy</value>
     <comment>Button text to prompt user to execute a step</comment>

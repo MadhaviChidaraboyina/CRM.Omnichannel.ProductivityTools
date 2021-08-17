@@ -209,14 +209,6 @@
     <value>Не вдалося закрити змінний параметр у кроці {0}. Зверніться до адміністратора.</value>
     <comment>Error message when slug resolution fails</comment>
   </data>
-  <data name="StepExecutionBtn_LabelForCompletedStep" xml:space="preserve">
-    <value>Виконати ще раз</value>
-    <comment>Button text to prompt user to execute a completed step again</comment>
-  </data>
-  <data name="StepExecutionBtn_LabelForFailedStep" xml:space="preserve">
-    <value>Повторити</value>
-    <comment>Button text to prompt user to retry a failed step</comment>
-  </data>
   <data name="StepExecutionBtn_LabelForNotExecutedStep" xml:space="preserve">
     <value>Виконати</value>
     <comment>Button text to prompt user to execute a step</comment>

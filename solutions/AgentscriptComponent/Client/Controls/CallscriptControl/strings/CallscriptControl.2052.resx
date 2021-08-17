@@ -209,14 +209,6 @@
     <value>无法解析步骤 {0} 中的可替换参数。请与您的管理员联系。</value>
     <comment>Error message when slug resolution fails</comment>
   </data>
-  <data name="StepExecutionBtn_LabelForCompletedStep" xml:space="preserve">
-    <value>重新运行</value>
-    <comment>Button text to prompt user to execute a completed step again</comment>
-  </data>
-  <data name="StepExecutionBtn_LabelForFailedStep" xml:space="preserve">
-    <value>重试</value>
-    <comment>Button text to prompt user to retry a failed step</comment>
-  </data>
   <data name="StepExecutionBtn_LabelForNotExecutedStep" xml:space="preserve">
     <value>运行</value>
     <comment>Button text to prompt user to execute a step</comment>

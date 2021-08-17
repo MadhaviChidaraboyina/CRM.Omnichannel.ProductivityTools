@@ -209,14 +209,6 @@
     <value>Den udskiftelige parameter i trinnet {0} kunne ikke fortolkes. Kontakt din administrator.</value>
     <comment>Error message when slug resolution fails</comment>
   </data>
-  <data name="StepExecutionBtn_LabelForCompletedStep" xml:space="preserve">
-    <value>Kør igen</value>
-    <comment>Button text to prompt user to execute a completed step again</comment>
-  </data>
-  <data name="StepExecutionBtn_LabelForFailedStep" xml:space="preserve">
-    <value>Prøv igen</value>
-    <comment>Button text to prompt user to retry a failed step</comment>
-  </data>
   <data name="StepExecutionBtn_LabelForNotExecutedStep" xml:space="preserve">
     <value>Kør</value>
     <comment>Button text to prompt user to execute a step</comment>

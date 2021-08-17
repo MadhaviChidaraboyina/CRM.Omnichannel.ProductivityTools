@@ -209,14 +209,6 @@
     <value>{0} қадамындағы ауыстыруға болатын параметрді шешу сәтсіз аяқталды. Әкімшіге хабарласыңыз.</value>
     <comment>Error message when slug resolution fails</comment>
   </data>
-  <data name="StepExecutionBtn_LabelForCompletedStep" xml:space="preserve">
-    <value>Қайта орындаңыз</value>
-    <comment>Button text to prompt user to execute a completed step again</comment>
-  </data>
-  <data name="StepExecutionBtn_LabelForFailedStep" xml:space="preserve">
-    <value>Қайталау</value>
-    <comment>Button text to prompt user to retry a failed step</comment>
-  </data>
   <data name="StepExecutionBtn_LabelForNotExecutedStep" xml:space="preserve">
     <value>Іске қосу</value>
     <comment>Button text to prompt user to execute a step</comment>

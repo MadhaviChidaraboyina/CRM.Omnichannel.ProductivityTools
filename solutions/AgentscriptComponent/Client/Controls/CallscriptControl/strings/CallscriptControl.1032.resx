@@ -209,14 +209,6 @@
     <value>Απέτυχε η επίλυση της παραμέτρου με δυνατότητα αντικατάστασης στο βήμα {0}. Επικοινωνήστε με τον διαχειριστή σας.</value>
     <comment>Error message when slug resolution fails</comment>
   </data>
-  <data name="StepExecutionBtn_LabelForCompletedStep" xml:space="preserve">
-    <value>Εκτέλεση ξανά</value>
-    <comment>Button text to prompt user to execute a completed step again</comment>
-  </data>
-  <data name="StepExecutionBtn_LabelForFailedStep" xml:space="preserve">
-    <value>Επανάληψη</value>
-    <comment>Button text to prompt user to retry a failed step</comment>
-  </data>
   <data name="StepExecutionBtn_LabelForNotExecutedStep" xml:space="preserve">
     <value>Εκτέλεση</value>
     <comment>Button text to prompt user to execute a step</comment>

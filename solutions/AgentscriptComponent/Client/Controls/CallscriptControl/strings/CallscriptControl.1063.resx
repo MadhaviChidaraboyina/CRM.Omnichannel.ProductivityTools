@@ -209,14 +209,6 @@
     <value>Nepavyko išspręsti {0} veiksmo keičiamo parametro. Kreipkitės į administratorių.</value>
     <comment>Error message when slug resolution fails</comment>
   </data>
-  <data name="StepExecutionBtn_LabelForCompletedStep" xml:space="preserve">
-    <value>Vykdyti dar kartą</value>
-    <comment>Button text to prompt user to execute a completed step again</comment>
-  </data>
-  <data name="StepExecutionBtn_LabelForFailedStep" xml:space="preserve">
-    <value>Bandyti dar kartą</value>
-    <comment>Button text to prompt user to retry a failed step</comment>
-  </data>
   <data name="StepExecutionBtn_LabelForNotExecutedStep" xml:space="preserve">
     <value>Vykdyti</value>
     <comment>Button text to prompt user to execute a step</comment>

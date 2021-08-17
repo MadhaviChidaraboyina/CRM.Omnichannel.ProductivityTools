@@ -209,14 +209,6 @@
     <value>चरण {0} में बदलने योग्य पैरामीटर को हल करना विफल रहा. कृपया अपने व्‍यवस्थापक से संपर्क करें.</value>
     <comment>Error message when slug resolution fails</comment>
   </data>
-  <data name="StepExecutionBtn_LabelForCompletedStep" xml:space="preserve">
-    <value>दोबारा चलाएँ</value>
-    <comment>Button text to prompt user to execute a completed step again</comment>
-  </data>
-  <data name="StepExecutionBtn_LabelForFailedStep" xml:space="preserve">
-    <value>पुनः प्रयास करें</value>
-    <comment>Button text to prompt user to retry a failed step</comment>
-  </data>
   <data name="StepExecutionBtn_LabelForNotExecutedStep" xml:space="preserve">
     <value>चलाएँ</value>
     <comment>Button text to prompt user to execute a step</comment>

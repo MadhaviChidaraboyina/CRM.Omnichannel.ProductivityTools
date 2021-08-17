@@ -209,14 +209,6 @@
     <value>단계 {0}에서 교체 가능한 매개 변수를 해결하지 못했습니다. 관리자에게 문의하십시오.</value>
     <comment>Error message when slug resolution fails</comment>
   </data>
-  <data name="StepExecutionBtn_LabelForCompletedStep" xml:space="preserve">
-    <value>다시 실행</value>
-    <comment>Button text to prompt user to execute a completed step again</comment>
-  </data>
-  <data name="StepExecutionBtn_LabelForFailedStep" xml:space="preserve">
-    <value>다시 시도</value>
-    <comment>Button text to prompt user to retry a failed step</comment>
-  </data>
   <data name="StepExecutionBtn_LabelForNotExecutedStep" xml:space="preserve">
     <value>실행</value>
     <comment>Button text to prompt user to execute a step</comment>

@@ -209,14 +209,6 @@
     <value>Fehler beim Auflösen des austauschbaren Parameters aus Schritt {0}. Wenden Sie sich an den Administrator.</value>
     <comment>Error message when slug resolution fails</comment>
   </data>
-  <data name="StepExecutionBtn_LabelForCompletedStep" xml:space="preserve">
-    <value>Erneut ausführen</value>
-    <comment>Button text to prompt user to execute a completed step again</comment>
-  </data>
-  <data name="StepExecutionBtn_LabelForFailedStep" xml:space="preserve">
-    <value>Wiederholen</value>
-    <comment>Button text to prompt user to retry a failed step</comment>
-  </data>
   <data name="StepExecutionBtn_LabelForNotExecutedStep" xml:space="preserve">
     <value>Ausführen</value>
     <comment>Button text to prompt user to execute a step</comment>
