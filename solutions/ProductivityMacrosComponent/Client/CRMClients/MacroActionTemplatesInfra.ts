@@ -125,13 +125,13 @@ namespace Microsoft.ProductivityMacros.Internal {
                     Object.keys(webresources).forEach(function (key) {
                         resources.push(serverUrl + "/webresources/" + key);
                     });
-
-                    require(resources, function (library: any) {
-                        return resolve("success");
-                    });
+                    requirejs.config({waitSeconds: 0});
                     requirejs.onError = function (err: any) {
                         return reject(err);
                     }
+                    require(resources, function (library: any) {
+                        return resolve("success");
+                    });
                 },
                 function (error) {
                     return reject(error);
