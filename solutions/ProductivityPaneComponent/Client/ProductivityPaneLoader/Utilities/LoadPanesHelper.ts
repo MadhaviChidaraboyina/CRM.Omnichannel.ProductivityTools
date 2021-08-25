@@ -51,6 +51,7 @@ module ProductivityPaneLoader {
                                 isSelected: Utils.isShownOnAllSessions(tool.toolControlName) && productivityPaneMode,
                                 imageSrc: tool.toolIcon,
                                 title: tool.toolTip,
+                                hideHeader: Utils.hideHeader(tool.toolControlName),
                                 hidden: !Utils.isShownOnAllSessions(tool.toolControlName),
                                 alwaysRender: true,
                                 keepBadgeOnSelect: Utils.keepBadgeOnSelect(tool.toolControlName),

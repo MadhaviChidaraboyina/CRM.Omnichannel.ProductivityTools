@@ -57,6 +57,13 @@ module ProductivityPaneLoader {
         }
 
         /**
+         * Return true if the app side pane header needs to be removed for certain controls.
+         */
+        public static hideHeader(controlName: string): boolean {
+            return Utils.isEqual(controlName, Constants.teamsCollabControlName);
+        }
+
+        /**
          * Indicate if the control is loaded via app side panes.
          */
         public static isUsingAppSidePanes(): boolean {
