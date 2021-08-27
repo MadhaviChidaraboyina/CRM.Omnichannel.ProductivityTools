@@ -44,31 +44,7 @@ module ProductivityPaneLoader {
 
         public static PcfControlProps = {
             parameters: {
-                SessionContext: {
-                    Usage: 1,
-                    Static: true,
-                    Value: '{}',
-                    Primary: false,
-                },
-                AnchorTabContext: {
-                    Usage: 1,
-                    Static: true,
-                    Value: null,
-                    Primary: false,
-                },
                 IsLoadedInPanel: {
-                    Usage: 1,
-                    Static: true,
-                    Value: true,
-                    Primary: false,
-                },
-                StaticData: {
-                    Usage: 1,
-                    Static: true,
-                    Value: '{}',
-                    Primary: false,
-                },
-                IsSelected: {
                     Usage: 1,
                     Static: true,
                     Value: true,
