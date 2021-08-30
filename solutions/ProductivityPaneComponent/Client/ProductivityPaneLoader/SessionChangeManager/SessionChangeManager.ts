@@ -63,7 +63,7 @@ module ProductivityPaneLoader {
          */
         private onAfterSessionSwitch(event: any): void {
             try {
-                const newSessionId = SessionChangeHelper.getNewSessionId(event);
+                const newSessionId = XrmAppProxy.getFocusedSessionId();
                 const sessionStorageData = SessionStateManager.getSessionStorageData(
                     Constants.appSidePaneSessionState + newSessionId,
                 );
