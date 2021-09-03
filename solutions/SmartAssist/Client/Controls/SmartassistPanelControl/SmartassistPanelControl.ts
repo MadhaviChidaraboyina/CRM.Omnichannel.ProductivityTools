@@ -298,7 +298,7 @@ module MscrmControls.SmartassistPanelControl {
             // update recordId and entityName in telemetry helper;
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SessionSwitchCECEventReceived, null);
             if (!this.isSameSession(sessionId) || event.eventType == "SessionRefresh") {
-                if (this.AnchorTabContext && this.AnchorTabContext.entityName) {
+                if (this.AnchorTabContext) {
                     var configs = await SAConfigDataManager.Instance.getSAConfigurations(this.telemetryHelper) as SmartassistPanelControl.SAConfig[];
                     //Unbind all configs- in OC both(lwi and case) configs could be present 
                     this.unbindSAConfigs(configs);
