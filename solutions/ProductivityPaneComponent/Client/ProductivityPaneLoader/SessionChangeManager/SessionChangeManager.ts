@@ -24,11 +24,10 @@ module ProductivityPaneLoader {
 
         private registerEventHandlers(): void {
             try {
-                const windowObject = SessionChangeHelper.getWindowObject();
+                (window as any).Xrm.App.sessions.addOnBeforeSessionSwitch(this.onBeforeSessionSwitch.bind(this));
+                (window as any).Xrm.App.sessions.addOnAfterSessionSwitch(this.onAfterSessionSwitch.bind(this));
+                (window as any).Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClose.bind(this));
 
-                windowObject.Xrm.App.sessions.addOnBeforeSessionSwitch(this.onBeforeSessionSwitch.bind(this));
-                windowObject.Xrm.App.sessions.addOnAfterSessionSwitch(this.onAfterSessionSwitch.bind(this));
-                windowObject.Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClose.bind(this));
                 Logger.logInfo(
                     EventType.SESSION_CHANGE_MANAGER_SUCCESS,
                     `${Constants.productivityToolsLogPrefix} Success: registered event handlers for on before/after session switch and on after session close`,

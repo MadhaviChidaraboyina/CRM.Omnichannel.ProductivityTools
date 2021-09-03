@@ -6,10 +6,6 @@
 /// <reference path="../Utilities/XrmAppProxy.ts"/>
 module ProductivityPaneLoader {
     export class SessionChangeHelper {
-        public static getWindowObject(): any {
-            return window.top;
-        }
-
         public static hideAllProductivityTools(toolList: ToolConfig[]): void {
             toolList.forEach((tool: ToolConfig) => {
                 if (!Utils.isShownOnAllSessions(tool.toolControlName)) {
