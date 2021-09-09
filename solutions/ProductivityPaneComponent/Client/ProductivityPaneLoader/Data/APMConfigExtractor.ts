@@ -167,7 +167,7 @@ module ProductivityPaneLoader {
                                         tabConfig[index].msdyn_iconpath,
                                         tabConfig[index].msdyn_order,
                                         tabConfig[index].msdyn_uniquename,
-                                        tabConfig[index].msdyn_tooltip,
+                                        toolConfig.msdyn_name,
                                         toolConfig.msdyn_data,
                                         toolConfig.msdyn_defaulticon,
                                     ),
