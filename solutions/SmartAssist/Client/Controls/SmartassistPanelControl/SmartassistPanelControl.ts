@@ -312,10 +312,25 @@ module MscrmControls.SmartassistPanelControl {
                             { name: "PrevSessionId", value: this.previousSessionId },
                             { name: "CurrentSessionId", value: sessionId }
                         ]);
+
+                    // This is to handle the inbox session, when item switching happens, badge will be cleared and
+                    // anyEntityControl will reset the badge number after it retrieves the suggestions again from API.
+                    if (event.eventType === "SessionRefresh") {
+                        SmartassistPanelControl.clearBadge();
+                    }
                     this.renderSuggestions(true, this.AnchorTabContext.entityName, this.anchorTabEntityId);
                 }
             }
             this.previousSessionId = sessionId;
+        }
+
+        /**Clear smart assist badge */
+        private static clearBadge() {
+            const pane = Xrm.App.sidePanes.getPane(Constants.SmartAssistPaneId);
+            // If app side pane ID does not exist, getPane() returns undefined. 
+            if (pane) {
+                pane.badge = false;
+            }
         }
 
         /**Show loader component */
