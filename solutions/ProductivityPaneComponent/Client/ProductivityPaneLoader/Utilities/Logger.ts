@@ -24,10 +24,16 @@ module ProductivityPaneLoader {
         }
 
         private static addParameter(eventType: EventType, telemetryData: any) {
-            return {
-                eventType: eventType,
-                telemetryData: telemetryData,
-            };
+            if (telemetryData) {
+                return {
+                    eventType: EventType[eventType],
+                    telemetryData: telemetryData,
+                };
+            } else {
+                return {
+                    eventType: EventType[eventType],
+                };
+            }
         }
     }
 }
