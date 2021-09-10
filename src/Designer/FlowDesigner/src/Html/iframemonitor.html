@@ -11,10 +11,7 @@
     <div id="app" class="msla-container msla-clearfix msla-host-portalfx"></div>
     <script type="text/javascript">
         function getCdnBase() {
-            var match = (window.location.search || window.location.hash).match(/(?:cdn=)(?<cdn>[^&]+)/);
-            if(match){
-                return decodeURIComponent(match.groups["cdn"]);
-            }
+            return parent._macro_monitor_cdn;
         }
         function addCss(url) {
             var link = document.createElement("link");

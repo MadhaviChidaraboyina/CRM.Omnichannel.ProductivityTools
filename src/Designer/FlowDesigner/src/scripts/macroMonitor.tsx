@@ -47,8 +47,8 @@ async function getMonitorBlobConfig(): Promise<SharedDefines.MacroMonitorConfig>
 			monitorConfig.SearchHint = config.msdyn_searchhint;
 			monitorConfig.MonitorSolutionVersion = config.msdyn_macrosversion;
 		}
-		monitorConfig.MonitorBaseURL = new URL(path + "#locale=" + locale + "&base=" + encodeURIComponent(window.top.Xrm.Utility.getGlobalContext().getClientUrl()) 
-		+ "&cdn=" + encodeURIComponent(Utils.Utils.getCdnBase()) , baseUrl).toString();
+		monitorConfig.MonitorBaseURL = new URL(path + "#locale=" + locale + "&base=" + encodeURIComponent(window.top.Xrm.Utility.getGlobalContext().getClientUrl()), baseUrl).toString();
+		(window as any)._macro_monitor_cdn = Utils.Utils.getCdnBase();
 		let obj: SharedDefines.LogObject = {
 			level: SharedDefines.LogLevel.Info,
 			eventName: WrapperEvents.WrapperConfigLoadEvent,

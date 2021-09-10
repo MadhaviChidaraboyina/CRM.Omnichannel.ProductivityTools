@@ -58,8 +58,8 @@ async function getDesignerBlobConfig(): Promise<SharedDefines.MacroDesignerConfi
 			designerConfig.SearchHint = Utils.Utils.getResourceString(config.msdyn_searchhint);
 			designerConfig.DesignerSolutionVersion = config.msdyn_macrosversion;
 		}
-		designerConfig.DesignerBaseURL = new URL(path + "#locale=" + locale + "&base=" + encodeURIComponent(window.top.Xrm.Utility.getGlobalContext().getClientUrl()) 
-		+ "&cdn=" + encodeURIComponent(Utils.Utils.getCdnBase()) , baseUrl).toString();
+		designerConfig.DesignerBaseURL = new URL(path + "#locale=" + locale + "&base=" + encodeURIComponent(window.top.Xrm.Utility.getGlobalContext().getClientUrl()), baseUrl).toString();
+		(window as any)._macro_designer_cdn = Utils.Utils.getCdnBase();
 		let obj: SharedDefines.LogObject = {
 			level: SharedDefines.LogLevel.Info,
 			eventName: WrapperEvents.WrapperConfigLoadEvent,
