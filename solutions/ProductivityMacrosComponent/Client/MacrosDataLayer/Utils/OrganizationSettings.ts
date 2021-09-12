@@ -39,6 +39,10 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer {
         public get originalOrganizationSettings(): XrmClientApi.OrganizationSettings {
             return this.organizationSettings;
         }
+
+        public get isSovereignCloud(): boolean {
+            return this.organizationSettings.isSovereignCloud;
+        }
     }
 
     export interface IOrganizationSettings extends XrmClientApi.OrganizationSettings {

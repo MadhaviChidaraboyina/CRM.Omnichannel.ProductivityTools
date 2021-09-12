@@ -8,15 +8,11 @@ namespace Microsoft.ProductivityMacros.Internal {
     export class FPIHelper {
         private instanceIdentifier: string;
 
-        private MacrosDataLayer: typeof Microsoft.ProductivityMacros.MacrosDataLayer;
-        private static dataHelper: Microsoft.ProductivityMacros.MacrosDataLayer.DataHelper | null = null;
-
         //Fpi helper library reference      
         public static isFpiHelperInitialized: boolean = false;
 
         public constructor() {
             this.instanceIdentifier = Date.now().toString();
-            this.MacrosDataLayer = (window.top as any).Microsoft.ProductivityMacros.MacrosDataLayer;
         }
 
         public isNullUndefinedorEmpty(variable: any) {
@@ -33,17 +29,31 @@ namespace Microsoft.ProductivityMacros.Internal {
             if (FPIHelper.isFpiHelperInitialized) {
                 return;
             }
-            FPIHelper.dataHelper = this.MacrosDataLayer.DataHelper.getInstance();
-            this.MacrosDataLayer.DataHelper.registerConsumer(this.instanceIdentifier);
+            let fpiLibHelper = (window.top as any).Microsoft.ProductivityMacros.MacrosDataLayer.DataHelper.getInstance();
+            (window.top as any).Microsoft.ProductivityMacros.MacrosDataLayer.DataHelper.registerConsumer(this.instanceIdentifier);
             FPIHelper.isFpiHelperInitialized = true;
         }
 
-        public async fetchFlowsEnvId(): Promise<any> {
+
+        public fetchFlowsEnvId(): Promise<any> {
+            let message = this.createFPIRequestMessage();
             if (FPIHelper.isFpiHelperInitialized == false) {
                 this.initializeFpiHelper();
             }
-            const requestContent = new this.MacrosDataLayer.FlowRequestContext(this.instanceIdentifier, this.getRandomString());
-            return FPIHelper.dataHelper.FlowClient.getEnvironment(requestContent);
+            return (window.top as any).Microsoft.ProductivityMacros.MacrosDataLayer.DataHelper.sendFinishedMessage(message);
+        }
+
+
+        /*
+            * Returns the FPI static data for GET request
+            * This will be sent back to the control along with its response
+            */
+        private getFPIStaticDataGET() {
+            return {
+                consumerId: this.instanceIdentifier,
+                requestId: this.getRandomString(),
+                isFlowEnvIdRequest: true
+            };
         }
 
         /**
@@ -51,6 +61,31 @@ namespace Microsoft.ProductivityMacros.Internal {
             */
         private getRandomString(): string {
             return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+        }
+
+
+        /**
+            * Creates FPI request message
+            * @param method method name of the request
+            * @param url url for the request
+            * @param payload payload for the request
+            * @param orgId orgId
+            * @param staticData staticData to be included in message
+            */
+        private createFPIRequestMessage() {
+            let message = new (window.top as any).Microsoft.ProductivityMacros.MacrosDataLayer.FPIRequestMessage();
+            message.payload = this.createPayload();
+            message.requestType = Constants.POST_REQUEST;
+            message.staticData = this.getFPIStaticDataGET();
+            message.header = { "Content-type": "application/json", "cache-control": "no-cache", "pragma": "no-cache" }
+            return message;
+        }
+
+
+        public createPayload() {
+            return {
+                orgId: (window.top as any).Xrm.Utility.getGlobalContext().organizationSettings.organizationId
+            };
         }
     }
 }

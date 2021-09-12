@@ -10,39 +10,91 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 		private static instance: FPIHelper = null;
 		private static isAuthenticated: boolean;
 		private static iFrameExists: boolean;
+		private static svcMap: Map<string, string>;
+		private static OCEndPoint: OCEndpoint;
+		private static ocBaseURL: string;
 		private static fpiURL: string;
-		private static fpiOrigin: string;
 		private static authenticationFailure: boolean;
 		private static authenticationQuery: any;
 		private static HelperID: string;
 		private static requestMap: RequestMap;
 		private static orgId: string;
 		private static pendingRequests: FPIRequestMessage[];
+		private static isMock: boolean;
 
-		private constructor()
+		private constructor(isMock: boolean)
 		{
 			FPIHelper.isAuthenticated = false;
+			FPIHelper.isMock = isMock;
 			FPIHelper.iFrameExists = false;
 			FPIHelper.authenticationFailure = false;
 			FPIHelper.requestMap = new RequestMap();
 			FPIHelper.HelperID = Utils.newGuid();
+			FPIHelper.OCEndPoint = new OCEndpoint(isMock);
 			FPIHelper.orgId = FPIHelper.getOrgId();
 			FPIHelper.pendingRequests = new Array<FPIRequestMessage>();
 			if(Utils.isNullUndefinedorEmpty((window as any).omnichannelRequestStatus))
 			{
 				(window as any).omnichannelRequestStatus = {};
 			}
-			this.setFpiConfiguration(OrganizationSettings.instance.geoName);
-			FPIHelper.fpiOrigin = new URL(FPIHelper.fpiURL).origin;
-			FPIHelper.startAuthentication();
+			if(Utils.isNullUndefinedorEmpty(FPIHelper.svcMap))
+			{
+				FPIHelper.OCEndPoint.retrieveOcEndpoint().then(
+					(endpoints: Map<string, string>) =>
+					{
+						FPIHelper.svcMap = endpoints;
+						FPIHelper.ocBaseURL = endpoints.get(FPIConstants.OCBASEURLFIELD);
+						FPIHelper.fpiURL = endpoints.get(FPIConstants.OCFPIURLFIELD);
+						FPIHelper.startAuthentication();
+					},
+					(error: any) =>
+					{
+                        //TODO: add telemetry.
+                        console.log("Error retrieving OcEndpoint: " + error)
+					}
+				);
+			}
+			else
+			{
+				FPIHelper.startAuthentication();
+			}
 		}
 
-		private setFpiConfiguration(geoName: string) {
-            const setting = FpiGeoSettings[geoName.toUpperCase()] || FpiGeoSettings[GeoNames.DEFAULT];
-            FPIHelper.fpiURL = setting.endpoint;
-        }
+		private static getTenantId(): string
+		{
+			try
+			{
+				let tenantId: string = (window.top as any).Xrm.Utility.getGlobalContext().organizationSettings.organizationTenant;
+				if(!Utils.isNullUndefinedorEmpty(tenantId))
+				{
+					return tenantId;
+				}
+			}
+			catch(error)
+			{
+				return Utils.EMPTY_GUID
+			}
+			return Utils.EMPTY_GUID;
+		}
 
-        private static getOrgId(): string
+		private static getAgentId(): string
+		{
+			try
+			{
+				let agentId: string = (window.top as any).Xrm.Utility.getGlobalContext().userSettings.userId;
+				if(!Utils.isNullUndefinedorEmpty(agentId))
+				{
+					return agentId;
+				}
+			}
+			catch(error)
+			{
+				return Utils.EMPTY_GUID
+			}
+			return Utils.EMPTY_GUID;
+		}
+
+		private static getOrgId(): string
 		{
 			try
 			{
@@ -94,6 +146,15 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 			window.top.addEventListener(FPIConstants.FPIMESSAGE_EVENTNAME, FPIHelper.fpiCallBack.bind(this));
 		}
 
+		private static getFPIUrlQueryParams()
+		{
+			let queryParams = FPIConstants.FPI_COMPONENT_URL_PARAMETER;
+			queryParams = queryParams + "&orgId=" + FPIHelper.orgId;
+			queryParams = queryParams + "&tenantId="+ FPIHelper.getTenantId();
+			queryParams = queryParams + "&agentId=" + FPIHelper.getAgentId();
+			return queryParams;
+		}
+
 		/**
 		 * Adds FPI Iframe to DOM
 		 */
@@ -101,11 +162,10 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 		{
 			let FpiIframe = window.top.document.createElement("iframe");
 			FpiIframe.id = FPIConstants.IFRAMEID;
-			FpiIframe.name = FPIConstants.IFRAMEID;
 			FpiIframe.title = FPIConstants.IFRAMETITLE;
-			FpiIframe.src = FPIHelper.fpiURL;
-			FpiIframe.style.display = "none";
-			FpiIframe.onload = FPIHelper.fpiIframeExistsVerify.bind(this);
+            FpiIframe.src = FPIHelper.fpiURL + this.getFPIUrlQueryParams();
+            FpiIframe.style.display = "none";
+            FpiIframe.onload = FPIHelper.fpiIframeExistsVerify.bind(this);
 			window.top.document.body.appendChild(FpiIframe);
 			FPIHelper.iFrameExists = true;
 		}
@@ -239,6 +299,8 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 			while(FPIHelper.pendingRequests.length > 0)
 			{
 				let message = FPIHelper.pendingRequests.pop();
+				message = FPIHelper.addOCBaseURL(message);
+				message = FPIHelper.addOrgIDHeader(message);
 				FPIHelper.sendMessage(message);
 			}
 		}
@@ -272,13 +334,8 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 		 * Callback method for message event
 		 * @param event Message sent by FPI Iframe
 		 */
-		private static fpiCallBack(event: MessageEvent): void
-		{
-			if(!FPIHelper.verifyMessageEventOrigin(event.origin)){
-				console.debug(`Unexpected origin: ${event.origin}.`);
-				return;
-			}
-			FPIHelper.convertResponseMessage(event);
+		private static fpiCallBack(event: any): void
+        {  
 			if (Utils.isNullUndefinedorEmpty(event.data) || !Utils.isOmniChannelFPIApp(event))
 			{
 				return;
@@ -306,11 +363,11 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 		/**
 		 * Ensures constructor has been called and instance available
 		 */
-		public static getInstance()
+		public static getInstance(isMock: boolean)
 		{
 			if(Utils.isNullUndefinedorEmpty(FPIHelper.instance))
 			{
-				FPIHelper.instance = new FPIHelper();
+				FPIHelper.instance = new FPIHelper(isMock);
 			}
 			return FPIHelper.instance;
 		}
@@ -364,7 +421,7 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 			{
 				// Post message on FPI Iframe
                 console.log("Message sent to FPI");
-                (<HTMLIFrameElement>fpiFrame).contentWindow.postMessage(FPIHelper.convertRequestMessage(message), FPIHelper.fpiOrigin);
+                (<HTMLIFrameElement>fpiFrame).contentWindow.postMessage(message, "*");
 			}
 			else
 			{
@@ -397,12 +454,42 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 			return FPIHelper.authenticationQuery;
 		}
 
+		public static addOCBaseURL(message: FPIRequestMessage): FPIRequestMessage
+		{
+			if(FPIHelper.isMock === true)
+			{
+				return message;
+			}
+			if(!Utils.isNullUndefinedorEmpty(FPIHelper.ocBaseURL))
+			{
+				message.url = FPIHelper.ocBaseURL + message.url;
+				return message;
+			}
+			return message;
+		}
+
+		public static addOrgIDHeader(message: FPIRequestMessage): FPIRequestMessage
+		{
+			if(Utils.isNullUndefinedorEmpty(message.header))
+			{
+				message.header = { "OrganizationId": FPIHelper.orgId };
+			}
+			else
+			{
+				if(typeof message.header === "object")
+				{
+					message.header.OrganizationId = FPIHelper.orgId;
+				}
+			}
+			return message;
+		}
+
 		/**
 		 * Makes a request via FPI iframe
 		 * @param message FPIRequestMessage object - does not need organization ID in headers or base URL in URL
 		 * @param requestId For logging - needs to match staticData.requestId
 		 */
-		public makeFPIRequest(message: FPIRequestMessage, requestId: string): Promise<any>
+		public static makeFPIRequest(message: FPIRequestMessage, requestId: string): Promise<any>
 		{
 			let dataPromise;
 			if (Utils.isNullUndefinedorEmpty((<any>window).$) || Utils.isNullUndefinedorEmpty((<any>window).$.Deferred)) {
@@ -418,6 +505,8 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 
 				if(FPIHelper.isAuthenticated)
 				{
+					message = FPIHelper.addOCBaseURL(message);
+					message = FPIHelper.addOrgIDHeader(message);
 					FPIHelper.sendMessage(message);
 				}
 				else
@@ -436,67 +525,5 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 				return dataPromise.reject(authFailureResponse);
 			}
 		}
-
-		private static convertRequestMessage(message: FPIRequestMessage): FpiRequestMessageEventData {
-			const data = new FpiRequestMessageEventDataData();
-			data.apiUrl = message.url;
-			data.resourceUri = message.resource;
-			data.methodType = message.requestType;
-			data.postdata = message.payload;
-			data.additionalHeaders = message.header;
-            const eventData = new FpiRequestMessageEventData();
-            eventData.method = message.requestType === RequestTypes.STATUS
-                ? FPIConstants.QUERY_FPI_STATUS
-                : FPIConstants.EXTERNAL_REST_ODATA_API;
-			eventData.windowPostMessageProxy = message.staticData;
-			eventData.data = data;
-			return eventData;
-		}
-
-		private static convertResponseMessage(messageEvent: MessageEvent): void {
-			const data = messageEvent.data as FpiResponseMessageEventData;
-			if (!data) {
-				return;
-			}
-
-			if (FPIHelper.isStatusResponse(data)) {
-				const authenticationMessage = (messageEvent as IFPIAuthenticationMessage).data;
-				authenticationMessage.isFailure = !!data.error;
-				authenticationMessage.senderApp = FPIConstants.IFRAME_APPNAME;
-				authenticationMessage.responseData = { tokenAcquired: true, componentId: FPIConstants.IFRAMEID, responseText: "" };
-				return;
-			}
-
-			if (data.error) {
-				const failureResponseMessage = (messageEvent as IFPIFailureResponseMessage).data;
-				failureResponseMessage.staticData = data.windowPostMessageProxy;
-				failureResponseMessage.isFailure = !!data.error;
-				failureResponseMessage.statusCode = data.responseData && data.responseData.status;
-				failureResponseMessage.senderApp = FPIConstants.IFRAME_APPNAME;
-				failureResponseMessage.statusText = data.responseData && data.responseData.statusText;
-				failureResponseMessage.transactionid = null;
-				failureResponseMessage.responseData = { responseText: data.error };
-			}
-			else {
-				const successResponseMessage = (messageEvent as IFPISuccessResponseMessage).data;
-				successResponseMessage.staticData = data.windowPostMessageProxy;
-				successResponseMessage.senderApp = FPIConstants.IFRAME_APPNAME;
-				successResponseMessage.statusText = data.responseData && data.responseData.statusText;
-				successResponseMessage.transactionid = null;
-				successResponseMessage.isFailure = !!data.error;
-				successResponseMessage.statusCode = data.responseData && data.responseData.status;
-				successResponseMessage.responseData = data.data;
-			}
-		}
-
-		private static isStatusResponse(data: FpiResponseMessageEventData): boolean{
-			return data.key === FPIConstants.QUERY_FPI_STATUS;
-		}
-
-		private static verifyMessageEventOrigin(origin: string): boolean {
-			const url = new URL(origin);
-			return url.origin === FPIHelper.fpiOrigin;
-		}
-
 	}
 }

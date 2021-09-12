@@ -11,8 +11,7 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 		public header: any;
 		public payload: any;
 		public staticData: any;
-		public resource: string;
-	}
+    }
 
     export class AdditionalRequestHeaders {
         headerName: string;
@@ -73,27 +72,5 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
                 responseText: string,
             }
         };
-    }
-
-    export class FpiRequestMessageEventDataData{
-        public apiUrl: string;
-        public resourceUri: string;
-        public methodType: string;
-        public postdata: any;
-        public additionalHeaders: any;
-    }
-
-    export class FpiRequestMessageEventData {
-        public method: string;
-        public windowPostMessageProxy: any;
-        public data: FpiRequestMessageEventDataData;
-    }
-
-    export class FpiResponseMessageEventData {
-        public data: any;
-        public error: any | null;
-        public key: string;
-        public windowPostMessageProxy: any;
-        public responseData: {status: number, statusText: string} | null;
     }
 }

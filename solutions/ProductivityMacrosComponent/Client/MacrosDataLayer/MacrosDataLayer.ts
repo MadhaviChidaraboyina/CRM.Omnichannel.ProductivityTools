@@ -9,13 +9,25 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 	export class DataHelper
 	{
 		private static instance: DataHelper;
+		private static FPIHelper: FPIHelper;
+		private static isAuthenticated: boolean;
 		private static consumersList: string[];
-		private readonly flowClient: FlowClient;
+		private static isMock: boolean;
+		private static entityMetadataMap: { [entityLogicalName: string]: XrmClientApi.EntityMetadata };
 
-		private constructor()
+		private constructor(isMock: boolean)
 		{
+			DataHelper.isMock = isMock ? isMock : false;
+			DataHelper.FPIHelper = FPIHelper.getInstance(isMock);
+			DataHelper.isAuthenticated = false;
 			DataHelper.consumersList = new Array();
-			this.flowClient = new FlowClient();
+			DataHelper.entityMetadataMap = {};
+			FPIHelper.authenticate().then(
+				(status) =>
+				{
+					DataHelper.isAuthenticated = status;
+				}
+			);
 		}
 
 		/**
@@ -54,17 +66,26 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 		/**
 		 * Initializes DataHelper and returns instance reference
 		 */
-		public static getInstance(): DataHelper
+		public static getInstance(isMock?: boolean)
 		{
 			if(Utils.isNullUndefinedorEmpty(DataHelper.instance))
 			{
-				DataHelper.instance = new DataHelper();
+				DataHelper.instance = new DataHelper(isMock);
 			}
 			return DataHelper.instance;
 		}
 
-		public get FlowClient(): FlowClient{
-			return this.flowClient;
+		
+		public static sendFinishedMessage(message: FPIRequestMessage)
+		{
+			if(message.staticData && message.staticData.consumerId && message.staticData.requestId)
+			{
+				if(DataHelper.consumersList.indexOf(message.staticData.consumerId) === -1)
+				{
+					DataHelper.registerConsumer(message.staticData.consumerId);
+				}
+				return FPIHelper.makeFPIRequest(message, message.staticData.requestId);
+			}
 		}
 
 	}

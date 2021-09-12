@@ -2,18 +2,18 @@
 	"extends": "../../../tsconfig/tsconfig.base.uciandclassicweb.json",
   "include": [
     "Libraries/FPIHelper.ts",
-    "Libraries/FlowClient.ts",
     "Models/FPIRequestMessage.ts",
     "MacrosDataLayer.ts",
     "Models/RequestMap.ts",
     "Constants/MacrosDataLayerConstants.ts",
     "Utils/Utils.ts",
-    "Utils/OrganizationSettings.ts"
+    "Utils/OrganizationSettings.ts",
+    "Utils/OCEndPoint.ts"
   ],
 	"compileOnSave": true,
-  "compilerOptions": {
-    "outFile": "../../Solution/WebResources/MacrosDataLayer/msdyn_MacrosDataLayer.js",
-    "declaration": true,
-    "target": "ES5"
-  }
+	"compilerOptions": {
+		"outFile": "../../Solution/WebResources/MacrosDataLayer/msdyn_MacrosDataLayer.js",
+		"declaration": true,
+		"target": "ES5"
+	}
 }
