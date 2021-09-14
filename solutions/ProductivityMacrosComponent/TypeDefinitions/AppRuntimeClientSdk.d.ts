@@ -109,6 +109,16 @@ declare namespace AppRuntimeClientSdk {
 		 */
 		removeOnContextChange(handlerId: string): void;
 
+		/**
+		 * Refreshes the session context and corresponding anchor tab to reflect changes from in-page navigation.
+		 * @param skipCreateAdditionalTabs optional parameter to indicate that the session context will be updated but additional
+		 * tabs from the session template will not be created
+		 * @param sessionTemplate optional parameter to give on custom element types
+		 * @param templateParameters optional parameter for give the session template
+		 * @param skipUpdateTitle optional parameter to indicate whether to update the session's title
+		 */
+		refreshSession(skipCreateAdditionalTabs?: boolean, sessionTemplateName?: string, templateParameters?: Map<string, string>, skipUpdateTitle?: boolean): Promise<string>;
+
     }
 
 	export interface Internal {

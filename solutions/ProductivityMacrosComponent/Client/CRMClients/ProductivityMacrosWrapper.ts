@@ -1592,4 +1592,27 @@ namespace Microsoft.ProductivityMacros.Internal {
         return dialogParams;
     }
 
+    export function refreshSessionContext(actionName: string): Promise<any> {        
+        return new Promise<any>((resolve, reject) => {
+            const skipCreateAdditionalTabs: boolean = true;
+            const skipUpdateTitle: boolean = true;
+            const sessionId: string = getFocusedSessionId();
+            
+            Microsoft.AppRuntime.Sessions.refreshSession(skipCreateAdditionalTabs, undefined, undefined, skipUpdateTitle).then(
+                () => {
+                    let outputResponse: any = {};
+                    let sessionContextParams: any = {};
+                    sessionContextParams[actionName + ".SessionId"] = sessionId;
+                    outputResponse[Constants.OutputResult] = sessionContextParams;
+                    logSuccess("ProductivityMacrosWrapper - refreshSessionContext", sessionId);
+                    resolve(outputResponse);
+                },
+                (error: Error) => {
+                    let errorData = generateErrorObject(error, "ProductivityMacrosWrapper - refreshSessionContext", errorTypes.XrmApiError);
+                    logFailure("refreshSessionContext", errorData, sessionId);
+                    reject(error);
+                });
+        })
+    }
+
 }

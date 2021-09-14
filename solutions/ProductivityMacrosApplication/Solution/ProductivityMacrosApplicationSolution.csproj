@@ -84,6 +84,7 @@
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Open_Grid\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Open_KB_Article\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Refresh\msdyn_productivitymacroactiontemplate.xml" />
+    <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Refresh_Session\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Resolve_Case\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Save\msdyn_productivitymacroactiontemplate.xml" />
     <Content Include="msdyn_productivitymacroactiontemplates\msdyn_Search_by_relevance\msdyn_productivitymacroactiontemplate.xml" />
@@ -114,9 +115,9 @@
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_TemplateId\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_UpdateData\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_ViewId\msdyn_productivityparameterdefinition.xml" />
-    <Content Include="msdyn_productivityparameterdefinitions\msdyn_ViewType\msdyn_productivityparameterdefinition.xml" />
+    <Content Include="msdyn_productivityparameterdefinitions\msdyn_ViewType\msdyn_productivityparameterdefinition.xml" />    
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_run_flow.svg" />
-    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_run_flow.svg.data.xml" />
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_run_flow.svg.data.xml" />    
   </ItemGroup>
   <ItemGroup>
     <Content Include="WebResources\MacroDesigner\msdyn_flowConnector_macro_connector.svg" />
