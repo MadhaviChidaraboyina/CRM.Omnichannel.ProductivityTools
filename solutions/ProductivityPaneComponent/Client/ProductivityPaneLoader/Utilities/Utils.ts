@@ -18,10 +18,10 @@ module ProductivityPaneLoader {
         }
 
         /**
-         * Temporary workaround for disabling app side pane control in chat widget session for early access.
+         * Temporary workaround for disabling app side pane control in chat widget session or voice demo session for early access.
          * This check will be removed after we have solid setVisibility API released.
          */
-        public static isBeethovenChatWidgetSession(sessionId: string): boolean {
+        public static isBeethovenDemoSession(sessionId: string): boolean {
             try {
                 const session = Xrm.App.sessions.getSession(sessionId) as any;
                 if (
@@ -30,7 +30,8 @@ module ProductivityPaneLoader {
                     session.anchorTab.currentPageInput &&
                     session.anchorTab.currentPageInput.data
                 ) {
-                    return JSON.parse(session.anchorTab.currentPageInput.data).pageType === 'chatDemo';
+                    let pageType = JSON.parse(session.anchorTab.currentPageInput.data).pageType;
+                    return pageType === 'chatDemo' || pageType === 'voiceDemo';
                 }
             } catch (e) {}
             return false;

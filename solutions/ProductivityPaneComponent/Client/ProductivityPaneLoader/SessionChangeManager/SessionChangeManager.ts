@@ -70,7 +70,7 @@ module ProductivityPaneLoader {
                     SessionStateManager.initSessionState(newSessionId);
                 }
                 SessionStateManager.restoreSessionState(newSessionId);
-                Utils.isHomeSession(newSessionId) || Utils.isBeethovenChatWidgetSession(newSessionId)
+                Utils.isHomeSession(newSessionId) || Utils.isBeethovenDemoSession(newSessionId)
                     ? SessionChangeHelper.hideAllProductivityTools(this.productivityToolList)
                     : SessionChangeHelper.showAllProductivityTools(this.productivityToolList);
             } catch (error) {

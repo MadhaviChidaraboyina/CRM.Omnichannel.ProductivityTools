@@ -25,7 +25,7 @@ module ProductivityPaneLoader {
             // Step 3: Below handles the scenario where user create the first session so quickly that SessionChangeManager.Instantiate()
             // has not finished yet. It mocks the expected behaviors on before & on after session switch.
             const focusedSessionId = XrmAppProxy.getFocusedSessionId();
-            if (!Utils.isHomeSession(focusedSessionId) && !Utils.isBeethovenChatWidgetSession(focusedSessionId)) {
+            if (!Utils.isHomeSession(focusedSessionId) && !Utils.isBeethovenDemoSession(focusedSessionId)) {
                 // Cache home session state to handle the app side panes that are shown on home session.
                 SessionStateManager.updateSessionState(Constants.homeSessionId);
 
