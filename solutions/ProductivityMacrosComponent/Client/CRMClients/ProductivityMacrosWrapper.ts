@@ -1598,7 +1598,7 @@ namespace Microsoft.ProductivityMacros.Internal {
             const skipUpdateTitle: boolean = true;
             const sessionId: string = getFocusedSessionId();
             
-            Microsoft.AppRuntime.Sessions.refreshSession(skipCreateAdditionalTabs, undefined, undefined, skipUpdateTitle).then(
+            Microsoft.AppRuntime.Sessions.refreshSession(skipCreateAdditionalTabs, undefined, undefined, skipUpdateTitle, Constants.EVENTSOURCE_MACROS).then(
                 () => {
                     let outputResponse: any = {};
                     let sessionContextParams: any = {};

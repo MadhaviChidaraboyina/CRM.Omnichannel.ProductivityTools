@@ -74,6 +74,9 @@ module MscrmControls.Callscript {
 		public static stepIdPrefix = "CallscriptStepsListItem-";
 		public static stepActionIdPrefix = "CallScriptRunActionIcon-";
 		public static idSuffix = "-Id";
+
+		// Source of calling refreshSession API
+		public static EVENTSOURCE_MACROS = "Macros";
 	}
 
 	/**

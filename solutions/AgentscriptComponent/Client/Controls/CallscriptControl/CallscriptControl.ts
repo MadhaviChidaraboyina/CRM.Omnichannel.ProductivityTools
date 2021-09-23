@@ -69,8 +69,12 @@ module MscrmControls.Callscript {
         }
 
 		//This method is registered as a handler for session refresh event
-        private handleSessionRefresh() {
-            this.stateManager.onSessionRefresh();
+        private handleSessionRefresh(context: XrmClientApi.EventContext) {
+			// If eventSource is specified as Macros, skip refreshing callscript
+			if (context["eventSource"] !== Constants.EVENTSOURCE_MACROS)
+			{
+				this.stateManager.onSessionRefresh();
+			}           
         }
 
 		/**

@@ -116,8 +116,9 @@ declare namespace AppRuntimeClientSdk {
 		 * @param sessionTemplate optional parameter to give on custom element types
 		 * @param templateParameters optional parameter for give the session template
 		 * @param skipUpdateTitle optional parameter to indicate whether to update the session's title
+		 * @param eventSource from where the refreshSession is called
 		 */
-		refreshSession(skipCreateAdditionalTabs?: boolean, sessionTemplateName?: string, templateParameters?: Map<string, string>, skipUpdateTitle?: boolean): Promise<string>;
+		refreshSession(skipCreateAdditionalTabs?: boolean, sessionTemplateName?: string, templateParameters?: Map<string, string>, skipUpdateTitle?: boolean, eventSource?: string): Promise<string>;
 
     }
 
