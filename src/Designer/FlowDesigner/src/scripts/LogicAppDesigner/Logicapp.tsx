@@ -5,20 +5,10 @@ import * as HostService from "./hostService";
 import { OperationManifestServiceImpl } from "./OperationManifest";
 import { ConnectorV2Service } from "./ConnectorV2";
 
-function getUrlParams() {
-    let urlParams = {},
-        match,
-        pl = /\+/g,  // Regex for replacing addition symbol with a space
-        search = /([^&=]+)=?([^&]*)/g,
-        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")).toLowerCase(); },
-        query = window.location.search.substring(1);
-
-    while (match = search.exec(query)) {
-        urlParams[decode(match[1])] = decode(match[2]);
-    }
-
-    return urlParams;
-}
+(window as any).requirejs.config({
+	context: 'designer',
+	baseUrl: (window as any)._DesignerBlobCdnBase + 'flowcontrol/DesignerBlob/'
+});
 
 function getMonacoLocale(editorLocaleName) {
     // Mapping of the languages Monaco editor supports. Default to english for non-supported languages.
@@ -102,7 +92,7 @@ function disposeDesigner() {
 }
 
 function startInit() {
-    (window as any).publicPath = "LogicApps/core/scripts/";
+    (window as any).publicPath = (window as any)._DesignerBlobCdnBase + "flowcontrol/DesignerBlob/" + "LogicApps/core/scripts/";
     var req = (window as any).requirejs.config({
         context: 'designer',
         paths: {

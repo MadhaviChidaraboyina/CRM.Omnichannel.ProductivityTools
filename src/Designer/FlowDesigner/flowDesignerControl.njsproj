@@ -212,6 +212,9 @@
     <!-- Copy Macro iframe Monitor assets to ProductivityMacrosComponent Web Resources-->
     <Copy SourceFiles="$(DesignerControlOutputPath)\appMon.bundle.js" DestinationFolder="$(MacroDesignerPath)\msdyn_ProductivityMacrosComponent_macroMonitor" Retries="3" RetryDelayMilliseconds="300" />
     <Copy SourceFiles="$(DesignerControlOutputPath)\iframemonitor.html" DestinationFolder="$(MacroDesignerPath)\msdyn_ProductivityMacrosComponent_macroMonitor" Retries="3" RetryDelayMilliseconds="300" />
+    <!-- Copy Agent Script iframe Designer assets to AgentscriptComponent Web Resources-->
+    <Copy SourceFiles="$(DesignerControlOutputPath)\logicapp.bundle.js" DestinationFolder="$(AgentScriptDesignerPath)\msdyn_AgentscriptComponent_agentscriptdesigner" Retries="3" RetryDelayMilliseconds="300" />
+    <Copy SourceFiles="$(DesignerControlOutputPath)\iframeLogicappDesigner.html" DestinationFolder="$(AgentScriptDesignerPath)\msdyn_AgentscriptComponent_agentscriptdesigner" Retries="3" RetryDelayMilliseconds="300" />
   </Target>
   <!-- Target Name="VerifyAlteredTargetsUsed" / -->
   <ProjectExtensions>

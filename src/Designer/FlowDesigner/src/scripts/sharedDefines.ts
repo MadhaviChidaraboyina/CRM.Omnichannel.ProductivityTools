@@ -35,6 +35,7 @@ export class Constants {
 	public static MACROS_SESSION_ENTITY = "msdyn_macrosession";
 	public static MACROS_DESIGNER_PATH = "/WebResources/MacroDesigner/msdyn_ProductivityMacrosComponent_macroDesigner/iframedesigner.html";
 	public static MACROS_MONITOR_PATH = "/WebResources/MacroDesigner/msdyn_ProductivityMacrosComponent_macroMonitor/iframemonitor.html";
+	public static AGENT_SCRIPT_DESIGNER_PATH = "/WebResources/AgentScriptDesigner/msdyn_AgentscriptComponent_agentscriptdesigner/iframeLogicappDesigner.html";
 	public static SESSION_TEMPLATE_ENTITY = "msdyn_sessiontemplate";
 	public static EXPRESSION_DATA = "msdyn_expressiondata";
 	public static BUILTIN_CATEGORY = "LOGIC_APPS_BUILTIN";
