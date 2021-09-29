@@ -308,6 +308,7 @@ declare namespace AppRuntimeClientSdk {
 		 *  
 		 */
         appContext: Map<string, string>;
+		isFocused?: boolean;
     }
 
 	/**

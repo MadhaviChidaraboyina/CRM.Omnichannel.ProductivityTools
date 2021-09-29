@@ -132,36 +132,11 @@ namespace Microsoft.ProductivityMacros.Internal {
         });
     }
 
-    function getApplicationTemplate(guid: string): Promise<any> { // update consoleapplication
-        return new Promise<any>(function (resolve, reject) {
-            let xml = `<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
-                          <entity name="msdyn_templateparameter">
-                            <attribute name='msdyn_name' />
-                            <attribute name='msdyn_value' />
-                            <order attribute="msdyn_name" descending="false" />
-                            <filter type="and">
-                                <condition attribute='msdyn_applicationtabtemplateid' operator='eq' uitype='msdyn_applicationtabtemplate' value='{` + guid + `}' />
-                            </filter>
-                          </entity>
-                        </fetch>`;
-
-            Xrm.WebApi.retrieveMultipleRecords("msdyn_templateparameter", "?fetchXml=" + encodeURIComponent(xml)).then(function (result) {
-                if (result.entities.length > 0)
-                    resolve(result);
-                else
-                    reject("No Parameter found for given Applicate Tab Template - openApplicationTamplate");
-            },
-                function (error) {
-                    reject(error)
-                });
-        });
-    }
-
     function getApplicationTemplateRecord(guid: string): Promise<any> { 
         return new Promise<any>(function (resolve, reject) {
             let xml = `<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
                           <entity name="msdyn_applicationtabtemplate">
-                            <attribute name='msdyn_title' />
+                            <attribute name='msdyn_uniquename' />
                             <filter type="and">
                                 <condition attribute='msdyn_applicationtabtemplateid' operator='eq' uitype='msdyn_applicationtabtemplate' value='{` + guid + `}' />
                             </filter>
@@ -179,125 +154,101 @@ namespace Microsoft.ProductivityMacros.Internal {
         });
     }
 
-    function getPageInput(entityData: any): XrmClientApi.PageInput {
-        var pageInput: any = {};
+    function getAppContext(entityData: any): Map<string, string> {
+        let appContext = new Map<string, string>();
         let i: number;
         let AppTabConstant = OpenAppTabType;
+        let convertFunc = () => {
+            if (entityData.Custom_Array) {
+                for (i = 0; i < entityData.Custom_Array.length; i++) {
+                    if (entityData.Custom_Array[i].Value !== undefined) {
+                        appContext.set(entityData.Custom_Array[i].Name, entityData.Custom_Array[i].Value);
+                    }
+                }
+            }
+        }
+
         switch (entityData.PageType.replace(/\s/g, "").toLowerCase()) {
             case AppTabConstant.CustomControlInputString:
             case AppTabConstant.Control:
-                pageInput.pageType = AppTabConstant.Control;
-                for (i = 0; i < entityData.Custom_Array.length; i++) {
-                    try {
-                        if (entityData.Custom_Array[i].Value !== undefined) {
-                            pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
-                            if (entityData.Custom_Array[i].Name.toLowerCase() == AppTabConstant.Data)
-                                pageInput[entityData.Custom_Array[i].Name] = JSON.parse(entityData.Custom_Array[i].Value);
-                        }
-                    }
-                    catch (e) {
-                        continue;
-                    }
-                }
+                appContext.set(Constants.PAGE_TYPE, AppTabConstant.Control);
+                convertFunc();
                 break;
             case AppTabConstant.DashboardInputString:
-                pageInput.pageType = AppTabConstant.Dashboard;
-                for (i = 0; i < entityData.Custom_Array.length; i++) {
-                    if (entityData.Custom_Array[i].Value !== undefined) {
-                        pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
-                    }
-                }
+                appContext.set(Constants.PAGE_TYPE, AppTabConstant.Dashboard);
+                convertFunc();
                 break;
             case AppTabConstant.EntityViewInputString:
             case AppTabConstant.Entitylist:
-                pageInput.pageType = AppTabConstant.Entitylist;
-                for (i = 0; i < entityData.Custom_Array.length; i++) {
-                    if (entityData.Custom_Array[i].Value !== undefined) {
-                        pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
-                    }
-                }
+                appContext.set(Constants.PAGE_TYPE, AppTabConstant.Entitylist);
+                convertFunc();
                 break;
             case AppTabConstant.EntityRecordInputString:
-                pageInput.pageType = AppTabConstant.Entityrecord;
-                for (i = 0; i < entityData.Custom_Array.length; i++) {
-                    try {
-                        if (entityData.Custom_Array[i].Value !== undefined) {
-                            switch (entityData.Custom_Array[i].Name.toLowerCase()) {
-                                case AppTabConstant.Relationship:
-                                    pageInput.relationship = JSON.parse(entityData.Custom_Array[i].Value);
-                                    break;
-                                case AppTabConstant.CreateFromEntity:
-                                    pageInput.processInstanceId = JSON.parse(entityData.Custom_Array[i].Value);
-                                    break;
-                                case AppTabConstant.Data:
-                                    pageInput.data = JSON.parse(entityData.Custom_Array[i].Value);
-                                    break;
-                                default:
-                                    pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
+                appContext.set(Constants.PAGE_TYPE, AppTabConstant.Entityrecord);
+                if (entityData.Custom_Array) {
+                    for (i = 0; i < entityData.Custom_Array.length; i++) {
+                        try {
+                            if (entityData.Custom_Array[i].Value !== undefined) {
+                                switch (entityData.Custom_Array[i].Name.toLowerCase()) {
+                                    case AppTabConstant.Relationship:
+                                        appContext.set("relationship", entityData.Custom_Array[i].Value);
+                                        break;
+                                    case AppTabConstant.CreateFromEntity:
+                                        appContext.set("processInstanceId", entityData.Custom_Array[i].Value);
+                                        break;
+                                    case AppTabConstant.Data:
+                                        appContext.set("data", entityData.Custom_Array[i].Value);
+                                        break;
+                                    default:
+                                        appContext.set(entityData.Custom_Array[i].Name, entityData.Custom_Array[i].Value);
+                                }
                             }
                         }
-                    }
-                    catch (e) {
-                        continue;
+                        catch (e) {
+                            continue;
+                        }
                     }
                 }
                 break;
             case AppTabConstant.EntitySearchInputString:
             case AppTabConstant.SearchInputString:
-                pageInput.pageType = AppTabConstant.Search;
-                for (i = 0; i < entityData.Custom_Array.length; i++) {
-                    try {
-                        if (entityData.Custom_Array[i].Value !== undefined) {
-                            pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
-                            if (entityData.Custom_Array[i].Name == AppTabConstant.SearchType)
-                                pageInput[entityData.Custom_Array[i].Name] = parseInt(entityData.Custom_Array[i].Value);
-                        }
-                    }
-                    catch (e) {
-                        continue;
-                    }
-                }
+                appContext.set(Constants.PAGE_TYPE, AppTabConstant.Search);
+                convertFunc();
                 break;
             case AppTabConstant.WebResourceInputString:
-                pageInput.pageType = AppTabConstant.Webresource;
-                for (i = 0; i < entityData.Custom_Array.length; i++) {
-                    if (entityData.Custom_Array[i].Value !== undefined) {
-                        pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
-                    }
-                }
+                appContext.set(Constants.PAGE_TYPE, AppTabConstant.Webresource);
+                convertFunc();
                 break;
             case AppTabConstant.ThirdPartyWebsiteInputString:
             case AppTabConstant.ThirdPartyWebsiteInputString1:
                 //keeping thirthpartyWebsite as weresource as currently we are not able to access
                 //CIF public API and we are consuming Microsoft.CIFramework.External.CIFExternalUtilityImpl() to create tab
-                //pageInput.pageType = "ThirdPartyWebsite";
-                const url = entityData.Custom_Array.find((element: any) => element.Name.trim() === AppTabConstant.Url);
-                if (url && url.Value) {
-                    const data = entityData.Custom_Array.find((element: any) => element.Name.trim() === AppTabConstant.Data);
-                    let dataString: string = (data && data.Value) ? data.Value : '';
+                //appContext.pageType = "ThirdPartyWebsite";
+                appContext.set(Constants.PAGE_TYPE, AppTabConstant.Webresource);
+                appContext.set("webresourceName", "msdyn_CECExternalWebPageContainer.html");
+                if (entityData.Custom_Array) {
+                    const url = entityData.Custom_Array.find((element: any) => element.Name.trim() === AppTabConstant.Url);
+                    if (url && url.Value) {
+                        const data = entityData.Custom_Array.find((element: any) => element.Name.trim() === AppTabConstant.Data);
+                        let dataString: string = (data && data.Value) ? data.Value : '';
 
-                    // below dataString check is used to fix issue in current public doc sample
-                    // https://docs.microsoft.com/en-us/dynamics365/app-profile-manager/application-tab-templates#third-party-website
-                    // we should revisit the sample to improve the user experience
-                    if (url.Value.endsWith('/search?') && !dataString.startsWith('q=')) {
-                        dataString = 'q=' + dataString;
+                        // below dataString check is used to fix issue in current public doc sample
+                        // https://docs.microsoft.com/en-us/dynamics365/app-profile-manager/application-tab-templates#third-party-website
+                        // we should revisit the sample to improve the user experience
+                        if (url.Value.endsWith('/search?') && !dataString.startsWith('q=')) {
+                            dataString = 'q=' + dataString;
+                        }
+
+                        appContext.set("data", `cif_thirdpartyurl${url.Value}${dataString}`);
                     }
-
-                    pageInput.pageType = AppTabConstant.Webresource;
-                    pageInput.webresourceName = "msdyn_CECExternalWebPageContainer.html";
-                    pageInput.data = `cif_thirdpartyurl${url.Value}${dataString}`;
                 }
                 break;
             case AppTabConstant.Custom:
-                pageInput.pageType = AppTabConstant.Custom;
-                for (i = 0; i < entityData.Custom_Array.length; i++) {
-                    if (entityData.Custom_Array[i].Value !== undefined) {
-                        pageInput[entityData.Custom_Array[i].Name] = entityData.Custom_Array[i].Value;
-                    }
-                }
+                appContext.set(Constants.PAGE_TYPE, AppTabConstant.Custom);
+                convertFunc();
                 break;
         }
-        return pageInput;
+        return appContext;
     }
 
     function getFocusedSessionId() {
@@ -1268,29 +1219,31 @@ namespace Microsoft.ProductivityMacros.Internal {
         }
 
         return new Promise<string>((resolve, reject) => {
-            let pageInput: XrmClientApi.PageInput;
-            let options: XrmClientApi.TabOptions = { isFocused: true };
-            if (entityData.Custom_Array == undefined) {
-                let promises = [];
-                promises.push(getApplicationTemplate(entityData.ApplicationTemplateId));
-                promises.push(getApplicationTemplateRecord(entityData.ApplicationTemplateId));
-                Promise.all(promises).then(function (result) {
-                    entityData.Custom_Array = getCustomArrayFromEntityCollection(result[0].entities);
-                    pageInput = getPageInput(entityData);
-                    var title = result[1].entities[0].msdyn_title;
-                    if (!isNullOrUndefined(title)) {
-                        options.title = title;
+            getApplicationTemplateRecord(entityData.ApplicationTemplateId).then(function (result) {
+                const appContext = getAppContext(entityData);
+                let tabInput: AppRuntimeClientSdk.AppTabInput = {
+                    templateName: result.entities[0].msdyn_uniquename,
+                    appContext: appContext,
+                    isFocused: true,
+                };
+                Microsoft.AppRuntime.Sessions.getFocusedSession().createTab(tabInput).then(
+                    function (tabId: string) {
+                        var ouputResponse: any = {};
+                        var sessionContextParams: any = {};
+                        sessionContextParams[actionName + ".TabId"] = tabId;
+                        sessionContextParams[actionName + ".PageType"] = appContext.get(Constants.PAGE_TYPE);
+                        ouputResponse["result"] = sessionContextParams;
+                        resolve(ouputResponse);
+                    },
+                    function (error: Error) {
+                        reject(error.message);
                     }
-                    resolve(openTab(actionName, pageInput, options));
-                },
-                function (error) {
-                    reject(error.message);
-                });
-            }
-            else {
-                pageInput = getPageInput(entityData);
-                resolve(openTab(actionName, pageInput, options));
-            }
+                );
+            },
+            function (error) {
+                reject(error.message);
+            });
+            
         });
     }
 

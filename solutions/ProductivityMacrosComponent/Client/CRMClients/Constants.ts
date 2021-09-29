@@ -54,6 +54,7 @@ namespace Microsoft.ProductivityMacros {
         public static ENTITY_LOGICAL_COLLECTION_NAME = "entityLogicalCollectionName";
         public static FLOW_ID = "flowId";
         public static EVENTSOURCE_MACROS = "Macros"
+        public static PAGE_TYPE = "pageType";
 	}
 
 	export class ActionTypes {
