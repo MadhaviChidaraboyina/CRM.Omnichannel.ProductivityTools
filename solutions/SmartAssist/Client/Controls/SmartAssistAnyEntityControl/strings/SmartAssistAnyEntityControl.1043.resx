@@ -130,7 +130,7 @@
     <value>SA-configuratie</value>
   </data>
   <data name="CC_SmartAssist_Any_Entity_Control" xml:space="preserve">
-    <value>Besturingselement voor willekeurige entiteit van Smart Assist</value>
+    <value>Besturingselement voor willekeurige entiteit van Slimme assistent</value>
     <comment>Control Name</comment>
   </data>
   <data name="KnowledgeArticleSuggestionTitle" xml:space="preserve">

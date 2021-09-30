@@ -293,7 +293,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_isDefault' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_maxsuggestioncount" xml:space="preserve">
-    <value>Dette tal angiver det maksimale antal forslag, der kan vises i Smartassist-kontrolelementet</value>
+    <value>Dette tal angiver det maksimale antal forslag, der kan vises i det intelligente hjælpekontrolelement</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_maxsuggestioncount' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_name" xml:space="preserve">
@@ -301,7 +301,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_Order" xml:space="preserve">
-    <value>Den rækkefølge, objekterne er grupperet i i Smartassist.</value>
+    <value>Den rækkefølge, objekterne er grupperet i, i intelligent hjælp.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfigId" xml:space="preserve">
@@ -345,7 +345,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Suggestiontype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_SuggestionWebresourceURL" xml:space="preserve">
-    <value>Forslag til webressource, der får Smartassist-handlinger eller API'en til at hente forslag</value>
+    <value>Forslag til webressource, der får intelligente hjælpehandlinger eller API'en til at hente forslag</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_SuggestionWebresourceURL' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_UniqueName" xml:space="preserve">

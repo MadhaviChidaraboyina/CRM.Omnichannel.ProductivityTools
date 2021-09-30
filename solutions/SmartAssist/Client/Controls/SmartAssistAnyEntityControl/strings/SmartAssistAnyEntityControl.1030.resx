@@ -130,7 +130,7 @@
     <value>SA-konfiguration</value>
   </data>
   <data name="CC_SmartAssist_Any_Entity_Control" xml:space="preserve">
-    <value>Smart Assist til ethvert objektkontrolelement</value>
+    <value>Intelligent hjælp til ethvert objektkontrolelement</value>
     <comment>Control Name</comment>
   </data>
   <data name="KnowledgeArticleSuggestionTitle" xml:space="preserve">

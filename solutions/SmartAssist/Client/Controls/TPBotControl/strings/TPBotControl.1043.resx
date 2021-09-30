@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CC_TPBotControl_Control" xml:space="preserve">
-    <value>Besturingselement voor Smart Assist</value>
+    <value>Besturingselement voor Slimme assistent</value>
     <comment>Control name</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Smart Assist</value>
+    <value>Slimme assistent</value>
     <comment>Header value for smartassist control</comment>
   </data>
   <data name="EmptyMessage" xml:space="preserve">

@@ -157,7 +157,7 @@
     <comment>msdyn_smartassistconfig Description for EntityRelationship 'organization_msdyn_smartassistconfig'</comment>
   </data>
   <data name="15062:Description,msdyn_smartassist" xml:space="preserve">
-    <value>Deze oplossing maakt de slimme assistentiefunctionaliteit voor agents mogelijk. </value>
+    <value>Deze oplossing maakt de functie Slimme assistent voor agenten mogelijk. </value>
     <comment> 'msdyn_smartassist' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">
@@ -165,7 +165,7 @@
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,msdyn_smartassist" xml:space="preserve">
-    <value>Smart Assist</value>
+    <value>Slimme assistent</value>
     <comment> 'msdyn_smartassist' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,Adaptive Card Configuration{3919736b-aeab-ea11-a81b-000d3ac622d1}" xml:space="preserve">
@@ -293,7 +293,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_isDefault' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_maxsuggestioncount" xml:space="preserve">
-    <value>Dit nummer geeft het maximumaantal suggesties aan dat kan worden weergegeven in het besturingselement voor Smart Assist</value>
+    <value>Dit nummer geeft het maximumaantal suggesties aan dat kan worden weergegeven in het besturingselement voor Slimme assistent</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_maxsuggestioncount' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_name" xml:space="preserve">
@@ -301,7 +301,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_Order" xml:space="preserve">
-    <value>Volgorde waarin de entiteiten zijn gegroepeerd in Smart Assist.</value>
+    <value>Volgorde waarin de entiteiten zijn gegroepeerd in Slimme assistent.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfigId" xml:space="preserve">
@@ -345,7 +345,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Suggestiontype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_SuggestionWebresourceURL" xml:space="preserve">
-    <value>Webresource voor suggesties die acties of API voor Smart Assist aanbiedt voor het ophalen van suggesties</value>
+    <value>Webresource voor suggesties die acties of API voor Slimme assistent aanbiedt voor het ophalen van suggesties</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_SuggestionWebresourceURL' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_UniqueName" xml:space="preserve">

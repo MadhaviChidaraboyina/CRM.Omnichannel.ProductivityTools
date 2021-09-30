@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CC_Smartassist_Control" xml:space="preserve">
-    <value>Smart Assist-kontrolelement</value>
+    <value>Intelligent hjælpekontrolelement</value>
     <comment>Control name</comment>
   </data>
   <data name="ControlHeader" xml:space="preserve">
-    <value>Smart Assist</value>
+    <value>Intelligent hjælp</value>
     <comment>Header value for smartassist control</comment>
   </data>
   <data name="EmptyMessage" xml:space="preserve">
@@ -142,7 +142,7 @@
     <comment>Success Message</comment>
   </data>
   <data name="SuggestionControlTitle" xml:space="preserve">
-    <value>Smart Assist</value>
+    <value>Intelligent hjælp</value>
     <comment>Suggestions parent control title</comment>
   </data>
   <data name="SuggestionControlTitleIconText" xml:space="preserve">
@@ -154,7 +154,7 @@
     <comment>Title Icon text</comment>
   </data>
   <data name="SmartAssistInformationIcon" xml:space="preserve">
-    <value>Ikon for Smart Assist-oplysninger</value>
+    <value>Ikon for intelligente hjælpeoplysninger</value>
     <comment>Information icon</comment>
   </data>
 </root>

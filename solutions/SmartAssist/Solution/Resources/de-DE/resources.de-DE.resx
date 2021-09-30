@@ -157,7 +157,7 @@
     <comment>msdyn_smartassistconfig Description for EntityRelationship 'organization_msdyn_smartassistconfig'</comment>
   </data>
   <data name="15062:Description,msdyn_smartassist" xml:space="preserve">
-    <value>Diese Lösung ermöglicht die Smart-Assist-Funktionalität für Agents. </value>
+    <value>Diese Lösung ermöglicht die Smart Assist-Funktionalität für Agents. </value>
     <comment> 'msdyn_smartassist' : Description for Solution</comment>
   </data>
   <data name="15062:LocalizedName,microsoftdynamicsmsdyn19235" xml:space="preserve">
@@ -165,7 +165,7 @@
     <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
   </data>
   <data name="15062:LocalizedName,msdyn_smartassist" xml:space="preserve">
-    <value>Smart-Assist</value>
+    <value>Smart Assist</value>
     <comment> 'msdyn_smartassist' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,Adaptive Card Configuration{3919736b-aeab-ea11-a81b-000d3ac622d1}" xml:space="preserve">
@@ -345,7 +345,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Suggestiontype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_SuggestionWebresourceURL" xml:space="preserve">
-    <value>Vorschlag-Webressource, die Smart Assist-Aktionen oder API für die Abfrage von Vorschlägen bietet</value>
+    <value>Vorschlag-Webressource, die Smart Assist-Aktionen oder die API für die Abfrage von Vorschlägen bereitstellt</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_SuggestionWebresourceURL' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_UniqueName" xml:space="preserve">
