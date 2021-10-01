@@ -177,17 +177,23 @@ declare namespace AppRuntimeClientSdk {
 		 */
 		registrySessionStatePersistence(id: string, getValueFunc: Function, restoreValueFunc: Function): void;
 
-		 /**
-		  * Get session state.
-		  * @return A map that maps component id to its state value.
-		  */
-		getSessionState(): Map<string, string>;
+		/**
+		 * Cache and update session state.
+		 * @param sessionId indicates the session that requires state caching. 
+		 */
+		cacheSessionState(sessionId: string): void;
+
+		/**
+		 * Restore session state.
+		 * @param sessionId indicates the session that needs to restore cached state. 
+		 */
+		restoreSessionState(sessionId: string): void;
  
-		 /**
-		  * Restore session state based on state map.
-		  * @param sessionStateMap State map returned from @getSessionState
-		  */
-		restoreSessionState(sessionStateMap: Map<string, string>): void;
+		/**
+		 * Remove session state. If session id is undefined, remove session state for all sessions, otherwise, only remove the specified session state.
+		 * @param sessionId indicates the session that needs to remove cached state.
+		 */
+		removeSessionState(sessionId?: string): void;
     }
 
 	/**

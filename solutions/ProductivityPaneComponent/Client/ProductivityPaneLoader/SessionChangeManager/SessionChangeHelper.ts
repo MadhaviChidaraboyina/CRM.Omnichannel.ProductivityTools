@@ -27,11 +27,6 @@ module ProductivityPaneLoader {
         public static getPreviousSessionId(event: any): string {
             return event.getEventArgs()._inputArguments.previousSessionId;
         }
-
-        public static getNewSessionId(event: any): string {
-            return event.getEventArgs()._inputArguments.newSessionId;
-        }
-
         public static errorMessagesOnRegisterEventHandlers(errorMessages: any): string {
             return `${Constants.productivityToolsLogPrefix} Error occurred on registering event handlers: ${errorMessages}`;
         }

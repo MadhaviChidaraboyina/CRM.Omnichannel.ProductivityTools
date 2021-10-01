@@ -62,14 +62,24 @@ module MscrmControls.SmartassistPanelControl {
                     var eventId = Microsoft.AppRuntime.Sessions.addOnSessionRefresh(this.listenCECContextChangeAPI.bind(this));
                     this.sessionRefreshHandlerId = eventId;
                 }
-                if (Utility.isUsingAppSidePane(context)) {
+                if (Utility.isUsingAppSidePane(context) && Microsoft.AppRuntime.Sessions.registrySessionStatePersistence) {
                     Microsoft.AppRuntime.Sessions.registrySessionStatePersistence(
                         "smartAssistBadge",
                         () => {
-                            return (Xrm.App as any).sidePanes.getPane(Constants.SmartAssistPaneId).badge;
+                            let appSidePane = (Xrm.App as any).sidePanes && (Xrm.App as any).sidePanes.getPane(Constants.SmartAssistPaneId);
+                            if (appSidePane) {
+                                const retValue = appSidePane.badge;
+                                // Remove badge after caching to prevent badge number from carrying over to a new session. 
+                                appSidePane.badge = false;
+                                return retValue;
+                            }
+                            return null;
                         },
                         (value) => {
-                            (Xrm.App as any).sidePanes.getPane(Constants.SmartAssistPaneId).badge = value;
+                            let appSidePane = (Xrm.App as any).sidePanes && (Xrm.App as any).sidePanes.getPane(Constants.SmartAssistPaneId);
+                            if (appSidePane) {
+                                appSidePane.badge = value;
+                            }
                         }
                     );
                 }

@@ -100,5 +100,42 @@ module ProductivityPaneLoader {
             sessionSidePanes.push(XrmAppProxy.getAppSidePane(Constants.SmartAssistPaneId));
             return sessionSidePanes;
         }
+
+        /**
+         * Register the getFunc and restoreFunc for the selected app side pane id.
+         */
+        public static registerSelectedAppSidePaneId(): void {
+            if (Microsoft.AppRuntime.Sessions.registrySessionStatePersistence) {
+                Microsoft.AppRuntime.Sessions.registrySessionStatePersistence(
+                    'selectedAppSidePaneId',
+                    () => {
+                        const currentSelectedAppSidePane = XrmAppProxy.getSelectedAppSidePane();
+                        return currentSelectedAppSidePane ? currentSelectedAppSidePane.paneId : null;
+                    },
+                    (value) => {
+                        if (value) {
+                            XrmAppProxy.setSelectedAppSidePane(value);
+                        }
+                    },
+                );
+            }
+        }
+
+        /**
+         * Registers the getFunc and restoreFunc for the app side panes state (collapsed/expanded).
+         */
+        public static registerAppSidePanesState(): void {
+            if (Microsoft.AppRuntime.Sessions.registrySessionStatePersistence) {
+                Microsoft.AppRuntime.Sessions.registrySessionStatePersistence(
+                    'appSidePanesState',
+                    () => {
+                        return XrmAppProxy.getAppSidePanesState();
+                    },
+                    (value) => {
+                        XrmAppProxy.setAppSidePanesState(value);
+                    },
+                );
+            }
+        }
     }
 }

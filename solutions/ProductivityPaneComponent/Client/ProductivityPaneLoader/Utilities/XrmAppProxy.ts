@@ -21,7 +21,10 @@ module ProductivityPaneLoader {
         }
 
         public static setSelectedAppSidePane(paneId: string): void {
-            XrmAppProxy.getAppSidePane(paneId).select();
+            const appSidePane = XrmAppProxy.getAppSidePane(paneId);
+            if (appSidePane) {
+                appSidePane.select();
+            }
         }
 
         public static getAppSidePanesState(): number {

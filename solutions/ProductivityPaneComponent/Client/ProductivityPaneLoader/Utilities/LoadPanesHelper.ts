@@ -3,11 +3,14 @@
  */
 /// <reference path="./XrmAppProxy.ts" />
 /// <reference path="../SessionChangeManager/SessionChangeManager.ts" />
-/// <reference path="../SessionStateManager/SessionStateManager.ts" />
 /// <reference path="./Constants.ts" />
 module ProductivityPaneLoader {
     export class LoadPanesHelper {
         public static afterProductivityToolLoad(productivityPaneMode: boolean, toolList: ToolConfig[]): void {
+            // Step 0: Register state persistence for pane selection and panes state.
+            Utils.registerSelectedAppSidePaneId();
+            Utils.registerAppSidePanesState();
+
             // Step 1: if there is no selected app side pane, select the first productivity tool by default and set the app side panes states
             // based on APM config. If there is one app side pane loaded already, the selection and panes state will remain the same.
             const currentSelectedAppSidePane = XrmAppProxy.getSelectedAppSidePane();
@@ -18,8 +21,10 @@ module ProductivityPaneLoader {
                 );
             }
 
-            // Step 2: clean up session storage data related to app side panes and instantiate session change manager.
-            SessionStateManager.cleanSessionState();
+            // Step 2: remove cached session state data after UCI reboots; instantiate session change manager.
+            if (Microsoft.AppRuntime.Sessions.removeSessionState) {
+                Microsoft.AppRuntime.Sessions.removeSessionState();
+            }
             SessionChangeManager.Instantiate(toolList);
 
             // Step 3: Below handles the scenario where user create the first session so quickly that SessionChangeManager.Instantiate()
@@ -27,12 +32,9 @@ module ProductivityPaneLoader {
             const focusedSessionId = XrmAppProxy.getFocusedSessionId();
             if (!Utils.isHomeSession(focusedSessionId) && !Utils.isBeethovenDemoSession(focusedSessionId)) {
                 // Cache home session state to handle the app side panes that are shown on home session.
-                SessionStateManager.updateSessionState(Constants.homeSessionId);
-
-                SessionStateManager.initSessionState(focusedSessionId);
-
-                SessionStateManager.restoreSessionState(focusedSessionId);
-
+                if (Microsoft.AppRuntime.Sessions.cacheSessionState) {
+                    Microsoft.AppRuntime.Sessions.cacheSessionState(Constants.homeSessionId);
+                }
                 SessionChangeHelper.showAllProductivityTools(toolList);
             }
         }
