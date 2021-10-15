@@ -112,7 +112,7 @@ module MscrmControls.Callscript
 		private telemetryContext: string;
         private telemetryLogger: TelemetryLogger;
         private static isInitMacroActionTemplates: boolean;
-        private initMacroActionTemplatesPromise: Promise<boolean>;
+        private static initMacroActionTemplatesPromise: Promise<boolean>;
 
 		constructor(context: Mscrm.ControlData<IInputBag>)
 		{
@@ -120,7 +120,9 @@ module MscrmControls.Callscript
 			this.telemetryContext = TelemetryComponents.MacroUtil;
             this.telemetryLogger = new TelemetryLogger(this.context);
             
-            this.initMacroActionTemplatesPromise= Microsoft.ProductivityMacros.Internal.ProductivityMacroOperation.InitMacroActionTemplates();
+            if (!MacroUtil.initMacroActionTemplatesPromise) {
+                MacroUtil.initMacroActionTemplatesPromise = Microsoft.ProductivityMacros.Internal.ProductivityMacroOperation.InitMacroActionTemplates();
+            }
             this.resolveInitMacroTemplate();
         }
 
@@ -149,7 +151,7 @@ module MscrmControls.Callscript
         }
 
         public async resolveInitMacroTemplate() {
-            await this.initMacroActionTemplatesPromise.then(
+            await MacroUtil.initMacroActionTemplatesPromise.then(
                 function (value) {
                     MacroUtil.isInitMacroActionTemplates = value;
                 },

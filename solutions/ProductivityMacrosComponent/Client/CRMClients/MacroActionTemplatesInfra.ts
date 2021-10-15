@@ -194,13 +194,17 @@ namespace Microsoft.ProductivityMacros.Internal {
 
     function getDependendency(dependencyxml: string): string[] {
         var dependentResources: string[] = [];
-        var parsedXml = (window.top as any).$.parseXML(dependencyxml);
+        var topWindow = (window.top as any);
+        var parsedXml = topWindow.$.parseXML(dependencyxml);
+        var userLanguageCode = topWindow.Xrm.Utility.getGlobalContext().userSettings.languageId.toString();
         var dependencyElement = parsedXml.documentElement.getElementsByTagName("Dependency")
         for (var i = 0; i < dependencyElement.length; i++) {
             var libraries = dependencyElement[i].getElementsByTagName("Library");
             for (var l = 0; l < libraries.length; l++) {
-                var webresourceName = libraries[l].getAttribute("name");
-                if (!isNullOrUndefined(webresourceName)) {
+                const library = libraries[l];
+                var webresourceName = library.getAttribute("name");
+                var languageCode = library.getAttribute("languagecode");
+                if (!isNullOrUndefined(webresourceName) && (isNullOrUndefined(languageCode) || languageCode == userLanguageCode || languageCode == "1033" )) {
                     dependentResources.push(webresourceName);
                 }
             }
