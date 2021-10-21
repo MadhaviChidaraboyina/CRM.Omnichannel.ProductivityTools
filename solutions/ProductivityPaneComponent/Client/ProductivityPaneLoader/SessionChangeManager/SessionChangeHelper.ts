@@ -7,6 +7,7 @@
 module ProductivityPaneLoader {
     export class SessionChangeHelper {
         public static hideAllProductivityTools(toolList: ToolConfig[]): void {
+            // Note: if all side panes are hidden, Xrm API getSelectedPane() will return null.
             toolList.forEach((tool: ToolConfig) => {
                 if (!Utils.isShownOnAllSessions(tool.toolControlName)) {
                     XrmAppProxy.getAppSidePane(tool.paneId).hidden = true;

@@ -62,13 +62,15 @@ module ProductivityPaneLoader {
         private onAfterSessionSwitch(): void {
             try {
                 const newSessionId = XrmAppProxy.getFocusedSessionId();
-                if (Microsoft.AppRuntime.Sessions.restoreSessionState) {
-                    Microsoft.AppRuntime.Sessions.restoreSessionState(newSessionId);
-                }
 
                 Utils.isHomeSession(newSessionId) || Utils.isBeethovenDemoSession(newSessionId)
                     ? SessionChangeHelper.hideAllProductivityTools(this.productivityToolList)
                     : SessionChangeHelper.showAllProductivityTools(this.productivityToolList);
+
+                // Restore pane selection after hiding all tools in case hiding all tools makes the selected pane null.
+                if (Microsoft.AppRuntime.Sessions.restoreSessionState) {
+                    Microsoft.AppRuntime.Sessions.restoreSessionState(newSessionId);
+                }
             } catch (error) {
                 Logger.logError(
                     EventType.SESSION_CHANGE_MANAGER_ERROR,
