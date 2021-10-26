@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>Microsoft.Dynamics.XrmSolutions.ProductivityTools</id>
-    <version>9.2.1.359</version>
+    <version>9.2.1.0360</version>
     <authors>Microsoft Dynamics 365 </authors>
     <owners>Microsoft Dynamics 365</owners>
     <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
@@ -16,8 +16,8 @@
     <dependencies>
     </dependencies>
   </metadata>
-	<files>
-		<!-- retail artifacts -->
+  <files>
+    <!-- retail artifacts -->
     <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityPaneComponent_*.*" target="Solutions" />
     <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_AgentscriptComponent_*.*" target="Solutions" />
     <file src="..\..\drop\retail\AnyCPU\Solutions\msdyn_ProductivityMacrosComponent_*.*" target="Solutions" />
