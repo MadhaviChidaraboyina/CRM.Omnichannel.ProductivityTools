@@ -16,6 +16,10 @@ module ProductivityPaneLoader {
             return XrmAppProxy.getXrmAppApis().sidePanes.getSelectedPane();
         }
 
+        public static getAllPanes(): any {
+            return XrmAppProxy.getXrmAppApis().sidePanes.getAllPanes();
+        }
+
         public static getAppSidePane(paneId: string): any {
             return XrmAppProxy.getXrmAppApis().sidePanes.getPane(paneId);
         }

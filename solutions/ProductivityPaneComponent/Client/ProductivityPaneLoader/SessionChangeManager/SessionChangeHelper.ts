@@ -40,6 +40,10 @@ module ProductivityPaneLoader {
             return `${Constants.productivityToolsLogPrefix} Error occurred on after session switch: ${errorMessages}`;
         }
 
+        public static errorMessagesOnAfterSessionCreate(errorMessages: any): string {
+            return `${Constants.productivityToolsLogPrefix} Error occurred on after session create: ${errorMessages}`;
+        }
+
         public static errorMessagesOnSessionClose(errorMessages: any): string {
             return `${Constants.productivityToolsLogPrefix} Error occurred on session close: ${errorMessages}`;
         }

@@ -26,6 +26,7 @@ module ProductivityPaneLoader {
                 (window as any).Xrm.App.sessions.addOnBeforeSessionSwitch(this.onBeforeSessionSwitch.bind(this));
                 (window as any).Xrm.App.sessions.addOnAfterSessionSwitch(this.onAfterSessionSwitch.bind(this));
                 (window as any).Xrm.App.sessions.addOnAfterSessionClose(this.onSessionClose.bind(this));
+                (window as any).Xrm.App.sessions.addOnAfterSessionCreate(this.onAfterSessionCreate.bind(this));
 
                 Logger.logInfo(
                     EventType.SESSION_CHANGE_MANAGER_SUCCESS,
@@ -67,7 +68,6 @@ module ProductivityPaneLoader {
                     ? SessionChangeHelper.hideAllProductivityTools(this.productivityToolList)
                     : SessionChangeHelper.showAllProductivityTools(this.productivityToolList);
 
-                // Restore pane selection after hiding all tools in case hiding all tools makes the selected pane null.
                 if (Microsoft.AppRuntime.Sessions.restoreSessionState) {
                     Microsoft.AppRuntime.Sessions.restoreSessionState(newSessionId);
                 }
@@ -75,6 +75,26 @@ module ProductivityPaneLoader {
                 Logger.logError(
                     EventType.SESSION_CHANGE_MANAGER_ERROR,
                     SessionChangeHelper.errorMessagesOnAfterSessionSwitch(error),
+                );
+            }
+        }
+
+        /**
+         * Select the first app side pane if there are side panes loaded but no side panes selected. For example, in home session,
+         * Beethoven chat/voice widget session, hiding all side panes will make current selected pane undefined.
+         */
+        private onAfterSessionCreate(): void {
+            try {
+                if (!XrmAppProxy.getSelectedAppSidePane()) {
+                    const allPanes = XrmAppProxy.getAllPanes();
+                    if (allPanes && allPanes.getByIndex(0)) {
+                        allPanes.getByIndex(0).select();
+                    }
+                }
+            } catch (error) {
+                Logger.logError(
+                    EventType.SESSION_CHANGE_MANAGER_ERROR,
+                    SessionChangeHelper.errorMessagesOnAfterSessionCreate(error),
                 );
             }
         }
