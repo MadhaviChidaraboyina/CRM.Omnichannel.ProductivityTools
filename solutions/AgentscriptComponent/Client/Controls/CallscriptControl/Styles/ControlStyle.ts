@@ -125,7 +125,6 @@ module MscrmControls.Callscript {
 		public static getSelectStyle(context: Mscrm.ControlData<IInputBag>): Mscrm.Dictionary {
 			const selectStyle: Mscrm.Dictionary =
 			{
-				"border-color": context.theming.colors.base.white,
 				"-webkit-appearance": "none",
 				'::-ms-expand': { display: "none" },
 				position: "relative",
