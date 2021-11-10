@@ -36,6 +36,8 @@ module MscrmControls.Smartassist.Suggestion {
 		public static FilterExpression = "$when";
 		public static AdaptiveCardActionSetClassName = "ac-actionSet";
 		public static AdaptiveCardActionButtonClassName = "ac-pushButton";
+		public static AdaptiveCardActionImageClassName = ".ac-image.ac-selectable";
+		public static ScreenReaderClassId = 'ms-sa-screenReader';
 		public static PositiveFeedback = "yes";
 		public static NegativeFeedback = "no";
 		public static DissmissCardAction = "dismissCard";
@@ -106,6 +108,12 @@ module MscrmControls.Smartassist.Suggestion {
 				};
 			}
 			return {};
+		}
+
+		public static cleanUpContext(element : HTMLElement) {
+			while(element.hasChildNodes()) {
+				element.removeChild(element.firstChild);
+			}
 		}
 	}
 

@@ -74,6 +74,10 @@ module MscrmControls.Smartassist {
 			$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).append(cardContainer);
 			const cardHtml = suggestionCardElement.cardHTMLElement;
 			if (cardHtml) {
+				// Add altText for LinkToCase/UnlinkToCase Image by searching the div className
+				let imageIcon = cardHtml.querySelector(Suggestion.Constants.AdaptiveCardActionImageClassName);
+				imageIcon.setAttribute('alt', imageIcon.getAttribute('aria-label'));
+				imageIcon.setAttribute('title', imageIcon.getAttribute('aria-label'));
 				$("#" + cardId).append(cardHtml);
 				this._context.reporting.reportSuccess(Suggestion.TelemetryEventTypes.AdaptiveCardRenderingSucceed, Suggestion.Util.getTelemetryParameter([{ name: "UserSettingLanguage", value: this._context.userSettings.languageId }], this._suggestionId));
 				if (!this._data.IsInteracted) {
@@ -133,12 +137,20 @@ module MscrmControls.Smartassist {
 						if (args.actionType == Suggestion.CustomActionType.PopupAction) {
 							this._adaptiveCardRenderer.popupAction._popupOwner.focus();
 						}
+						// Focus to LinkToCase/UnlinkToCase and make the screenreader announce the change.
+						// The first element will include text of LinkToCase/UnlinkToCase
 						else if (this._adaptiveCardRenderer.previousActionClicked) {
 							const uiElement = (<AdaptiveCards.ColumnSet>this._adaptiveCardRenderer.adaptivecardRoot.getElementById(this._adaptiveCardRenderer.previousActionClicked)).getItemAt(0);
 							if (uiElement) {
 								let focusable = uiElement.renderedElement.querySelectorAll("button, img");
 								if (focusable.length > 0) {
 									(<HTMLElement>focusable[0]).focus();
+									let notification = document.getElementById(Suggestion.Constants.ScreenReaderClassId);
+									if (notification) {
+										Suggestion.Util.cleanUpContext(notification);
+										let theText = document.createTextNode(focusable[0].getAttribute('aria-label'));
+										notification.appendChild(theText);
+									}
 								}
 							}
 						}	

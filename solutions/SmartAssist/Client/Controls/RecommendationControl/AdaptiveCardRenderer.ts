@@ -110,6 +110,19 @@ module MscrmControls.Smartassist.Suggestion {
 				$("#" + cardId).removeClass(Suggestion.Constants.CardNewClass);
 				this._refreshCardCallback({ type: Smartassist.Suggestion.Action.CacheUpdate, data: { IsInteracted: true } });
 			}
+			// Validate if it is the info paragram is updated. If it is we update the screenreader section to announce the change.
+			// We take the second paragraph as the information context while the first one for title.
+			if (element && element.renderedElement) {
+				let text = element.renderedElement.querySelectorAll('p');
+				if (text.length >= 2) {
+					let notification = document.getElementById(Suggestion.Constants.ScreenReaderClassId);
+					if (notification) {
+						Suggestion.Util.cleanUpContext(notification);
+						let theText = document.createTextNode(text[1].textContent);
+						notification.appendChild(theText);
+					}
+				}
+			}
 		}
 
 		/**

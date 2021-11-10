@@ -151,14 +151,14 @@ module MscrmControls.Callscript
         }
 
         public async resolveInitMacroTemplate() {
-            await MacroUtil.initMacroActionTemplatesPromise.then(
-                function (value) {
-                    MacroUtil.isInitMacroActionTemplates = value;
-                },
-                function (error) {
-                    MacroUtil.isInitMacroActionTemplates = false;
-                }
-            );
+			await MacroUtil.initMacroActionTemplatesPromise.then(
+				function (value) {
+					MacroUtil.isInitMacroActionTemplates = value;
+				},
+				function (error) {
+					MacroUtil.isInitMacroActionTemplates = false;
+				}
+			);
         }
 
         /**

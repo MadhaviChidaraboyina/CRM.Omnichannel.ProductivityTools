@@ -99,7 +99,7 @@ module MscrmControls.SmartassistPanelControl {
             this.updateViewInternal();
         }
 
-        private async updateViewInternal(): Promise<void> {            
+        private async updateViewInternal(): Promise<void> {
             await this.updateAnchorTabContext();
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.UpdateViewStarted, null);
 
@@ -129,7 +129,17 @@ module MscrmControls.SmartassistPanelControl {
                         }
                     }
                 }
-                
+
+
+				// Not visible div which is used for screen reader only
+				var screenReaderOnly = document.createElement("div");
+				screenReaderOnly.style.position = 'absolute';
+				screenReaderOnly.style.overflow = 'hidden';
+				screenReaderOnly.style.left = '-10000px';
+				screenReaderOnly.setAttribute('id', Constants.ScreenReaderClassId);
+				screenReaderOnly.setAttribute("aria-live", "assertive");
+				this.smartAssistContainer.appendChild(screenReaderOnly);
+
                 // Loader Element
                 var loaderElement: HTMLDivElement = document.createElement("div");
                 loaderElement.innerHTML = Constants.SAPanelLoaderDiv.Format(Utility.getString(LocalizedStrings.LoadingText));
@@ -142,7 +152,7 @@ module MscrmControls.SmartassistPanelControl {
                 let recordId = this.getEntityRecordId(this.AnchorTabContext);
                 this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SessionInitStarted, null);
                 this.renderSuggestions(false, this.AnchorTabContext.entityName, Utility.FormatGuid(recordId));
-                
+
                 this.newInstance = false;
             }
         }
@@ -369,7 +379,7 @@ module MscrmControls.SmartassistPanelControl {
         /**Dispatch No data event to PP */
         private DispatchNoDataEvent() {
             // do nothing if the tool is rendered in app side pane as PP doesn't exist
-			// we should remove this method and all the invoke after Oct 2021 release
+            // we should remove this method and all the invoke after Oct 2021 release
             if (SmartassistPanelControl._context && Utility.isUsingAppSidePane(SmartassistPanelControl._context as any)) {
                 return;
             }
@@ -454,7 +464,7 @@ module MscrmControls.SmartassistPanelControl {
          * @param anchorContext
          */
         private setSmartAssistInfoIconText(anchorContext: any) {
-            this.smartAssistInfoIconElement.innerHTML= "";
+            this.smartAssistInfoIconElement.innerHTML = "";
             const infoIconString = anchorContext && anchorContext.entityName === Constants.LWIEntityName ? LocalizedStrings.LWITitleIconInfoText : LocalizedStrings.TitleIconInfoText;
             this.smartAssistInfoIconElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelTitleDiv.Format(Utility.getString(LocalizedStrings.SuggestionControlTitle), Utility.getString(infoIconString), Utility.getString(LocalizedStrings.InfoIcon));
         }

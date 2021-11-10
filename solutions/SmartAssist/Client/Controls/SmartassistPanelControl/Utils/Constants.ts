@@ -74,6 +74,7 @@ module MscrmControls.SmartassistPanelControl {
         public static ValidSourceEntities = [Constants.LWIEntityName, Constants.IncidentEntityName];
 
         // CSS
+        public static ScreenReaderClassId = 'ms-sa-screenReader';
         public static SAPanelLoaderCss = "sa-panel-loader";
         public static SAPanelLoaderParentCss = "sa-panel-loader-parent";
         public static SAPanelLoaderId = "sa-panel-loader-id";

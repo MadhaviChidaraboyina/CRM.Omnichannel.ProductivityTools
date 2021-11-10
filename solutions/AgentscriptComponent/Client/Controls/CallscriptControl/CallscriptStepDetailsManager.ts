@@ -53,16 +53,19 @@ module MscrmControls.Callscript {
 			return this.handleActionButtonKeydown.bind(this, step);
 		}
 
-		/**
-		 * Updates the content of live region on step execution status update
-		 */
-		public updateLiveRegionContent(step: CallScriptStep): void {
-			const liveRegion = document.getElementById(this.context.accessibility.getUniqueId(LiveRegion.LiveRegionId));
-			if (liveRegion) {
-				liveRegion.innerHTML = "";
-				liveRegion.innerHTML = step.getAccessibilityLabel();
-			}
-		}
+
+		// /**
+		//  * Updates the content of live region on step execution status update
+		//  * Comment out this function as for now narrator/NVDA screen reader will announce the complete status twice.
+		//  * If we need any further alert content/liveregion update, we can uncomment and make use of this function.
+		//  */
+		// public updateLiveRegionContent(step: CallScriptStep): void {
+		// 	const liveRegion = document.getElementById(this.context.accessibility.getUniqueId(LiveRegion.LiveRegionId));
+		// 	if (liveRegion) {
+		// 		liveRegion.innerHTML = "";
+		// 		liveRegion.innerHTML = step.getAccessibilityLabel();
+		// 	}
+		// }
 
 		/**
 		 * Onclick handler for button on step details
@@ -77,7 +80,6 @@ module MscrmControls.Callscript {
 
 				step.executionStatus = ExecutionStatus.Started;
 
-				this.updateLiveRegionContent(step);
 				$(event.target).closest("li").focus();
 
 				let executeActionPromise = this.getExecuteActionPromise(step);
@@ -85,7 +87,6 @@ module MscrmControls.Callscript {
 					(response) => {
 						step.executionStatus = ExecutionStatus.Completed;
 						step.isExecuted = true;
-						this.updateLiveRegionContent(step);
 						if (step.action.actionType == CallscriptActionType.ReRouteAction) {
 							let comboboxId = this.context.accessibility.getUniqueId("callscriptCombobox");
 							$(document.getElementById(comboboxId)).focus();
@@ -100,7 +101,6 @@ module MscrmControls.Callscript {
 					},
 					(error) => {
 						step.executionStatus = ExecutionStatus.Failed;
-						this.updateLiveRegionContent(step);
 
 						if (step.action.actionType == CallscriptActionType.MacroAction) {
 							step.action.errorText = this.context.resources.getString(LocalizedStrings.MacroStepFailureMessage);
