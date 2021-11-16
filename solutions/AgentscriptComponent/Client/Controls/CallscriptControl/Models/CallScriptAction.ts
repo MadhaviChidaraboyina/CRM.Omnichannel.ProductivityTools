@@ -69,7 +69,6 @@ module MscrmControls.Callscript {
 		}
 
         public resolveInstructionText(macroUtil: MacroUtil): Promise<string> {
-            macroUtil.resolveInitMacroTemplate();
             return macroUtil.resolveReplaceableParameters(this.configuredTextInstruction);
 		}
 
@@ -104,7 +103,6 @@ module MscrmControls.Callscript {
         }
 
         public resolveInstructionText(macroUtil: MacroUtil): Promise<string> {
-            macroUtil.resolveInitMacroTemplate();
             return macroUtil.resolveReplaceableParameters(this.configuredTextInstruction);
         }
 
@@ -196,7 +194,6 @@ module MscrmControls.Callscript {
         }
 
         public resolveInstructionText(macroUtil: MacroUtil): Promise<string> {
-            macroUtil.resolveInitMacroTemplate();
             return macroUtil.resolveReplaceableParameters(this.configuredTextInstruction);
         }
 

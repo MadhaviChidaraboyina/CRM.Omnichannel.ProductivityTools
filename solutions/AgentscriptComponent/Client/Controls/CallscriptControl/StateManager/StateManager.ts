@@ -10,6 +10,7 @@ module MscrmControls.Callscript {
 		private context: Mscrm.ControlData<IInputBag>;
 		private dataManager: DataManager;
 		private cecUtil: CECUtil;
+		private macroUtil: MacroUtil;
 		private telemetryContext: string;
 		private telemetryLogger: TelemetryLogger;
 
@@ -23,16 +24,17 @@ module MscrmControls.Callscript {
 		 * Constructor
 		 * @param context control's input bag
 		 */
-		constructor(context: Mscrm.ControlData<IInputBag>) {
+		constructor(context: Mscrm.ControlData<IInputBag>, logger: TelemetryLogger, cec: CECUtil, macro: MacroUtil) {
 			this.context = context;
-			this.dataManager = new DataManager(context);
-			this.cecUtil = new CECUtil(context);
+			this.cecUtil = cec;
+			this.macroUtil = macro;
 			this.callscriptsForCurrentSession = null;
 			this.selectedScriptForCurrentSession = null;
 			this.telemetryContext = TelemetryComponents.StateManager;
-			this.telemetryLogger = new TelemetryLogger(this.context);
+			this.telemetryLogger = logger;
 			this.isScriptsDataRequested = false;
 			this.scriptDataFetchFailed = false;
+			this.dataManager = new DataManager(context, logger, cec, macro);
 
 			this.setCurrentUciSessionId();
 			this.initializeControlStateFromCEC();

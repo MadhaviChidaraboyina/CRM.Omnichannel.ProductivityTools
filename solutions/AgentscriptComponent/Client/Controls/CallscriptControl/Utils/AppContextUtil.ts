@@ -16,11 +16,11 @@ module MscrmControls.Callscript
 		private telemetryContext: string;
         private telemetryLogger: TelemetryLogger;
 
-		constructor(context: Mscrm.ControlData<IInputBag>)
+		constructor(context: Mscrm.ControlData<IInputBag>, logger: TelemetryLogger)
 		{
             this.context = context;
 			this.telemetryContext = TelemetryComponents.CIFUtil;
-            this.telemetryLogger = new TelemetryLogger(this.context);
+            this.telemetryLogger = logger;
         }
 
 		/**
@@ -114,26 +114,30 @@ module MscrmControls.Callscript
         private static isInitMacroActionTemplates: boolean;
         private static initMacroActionTemplatesPromise: Promise<boolean>;
 
-		constructor(context: Mscrm.ControlData<IInputBag>)
+		constructor(context: Mscrm.ControlData<IInputBag>, logger: TelemetryLogger)
 		{
 			this.context = context;
 			this.telemetryContext = TelemetryComponents.MacroUtil;
-            this.telemetryLogger = new TelemetryLogger(this.context);
+            this.telemetryLogger = logger;
             
             if (!MacroUtil.initMacroActionTemplatesPromise) {
                 MacroUtil.initMacroActionTemplatesPromise = Microsoft.ProductivityMacros.Internal.ProductivityMacroOperation.InitMacroActionTemplates();
             }
-            this.resolveInitMacroTemplate();
         }
+
+		public async init() {
+			await this.resolveInitMacroTemplate();
+		}
 
 		/**
 		 * Execute macro using macro api
 		 * @param macroName macro name
 		 * @param macroParam macro parameter
 		 */
-		public executeMacro(macroName: string, macroId: string, macroParam?: any): Promise<string>
+		public async executeMacro(macroName: string, macroId: string, macroParam?: any): Promise<string>
 		{
 			let methodName = "executeMacro";
+			await this.resolveInitMacroTemplate();
 			try {
 				return Microsoft.ProductivityMacros.runMacro(macroName);
 			}
@@ -151,14 +155,21 @@ module MscrmControls.Callscript
         }
 
         public async resolveInitMacroTemplate() {
-			await MacroUtil.initMacroActionTemplatesPromise.then(
-				function (value) {
-					MacroUtil.isInitMacroActionTemplates = value;
-				},
-				function (error) {
-					MacroUtil.isInitMacroActionTemplates = false;
-				}
-			);
+			let methodName = "resolveInitMacroTemplate";
+            if (!MacroUtil.isInitMacroActionTemplates) {
+				await MacroUtil.initMacroActionTemplatesPromise.then(
+					function (value) {
+						MacroUtil.isInitMacroActionTemplates = value;
+					},
+					function (error) {
+						MacroUtil.isInitMacroActionTemplates = false;
+						let errorMessage = "Failed to initiate macro template";
+						let errorParam = new EventParameters();
+						errorParam.addParameter("errorDetails", error);
+						this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, errorParam);
+					}
+				);
+			}
         }
 
         /**
@@ -166,8 +177,9 @@ module MscrmControls.Callscript
          * @param inputParam input parameter string
          * @returns Resolved replaceable parameter
          */
-        public resolveReplaceableParameters(inputParam: string): Promise<string> {
+        public async resolveReplaceableParameters(inputParam: string): Promise<string> {
             let methodName = "resolveReplaceableParameters";
+			await this.resolveInitMacroTemplate();
             try {
                 if (MacroUtil.isInitMacroActionTemplates) {
                     return Microsoft.ProductivityMacros.Internal.resolveTemplateString(inputParam, null, "");

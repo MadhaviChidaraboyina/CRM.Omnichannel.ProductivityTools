@@ -19,12 +19,12 @@ module MscrmControls.Callscript
 		private isInitialDataFetchCompleted: boolean;
 
 		// Default constructor
-		constructor(context: Mscrm.ControlData<IInputBag>) {
+		constructor(context: Mscrm.ControlData<IInputBag>, logger: TelemetryLogger, cec: CECUtil, macro: MacroUtil) {
 			this.context = context;
 			this.telemetryContext = TelemetryComponents.DataManager;
-			this.telemetryLogger = new TelemetryLogger(context);
-            this.cecUtil = new CECUtil(context);
-            this.macroUtil = new MacroUtil(context);
+			this.telemetryLogger = logger;
+			this.cecUtil = cec;
+			this.macroUtil = macro;
 			this.languageId = context.userSettings.languageId;
 			this.isInitialDataFetchCompleted = false;
 		}
@@ -284,7 +284,6 @@ module MscrmControls.Callscript
 		}
 
         public async resolveSlugValues(callScriptString: string, methodName: string): Promise<string> {
-                await this.macroUtil.resolveInitMacroTemplate();
                 await this.macroUtil.resolveReplaceableParameters(callScriptString).then(
                     (resolvedText) => {
                         callScriptString = resolvedText;

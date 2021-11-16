@@ -21,15 +21,15 @@ module MscrmControls.Callscript {
 		/**
 		 * Constructor.
 		 */
-		constructor(context: Mscrm.ControlData<IInputBag>, stateManager: StateManager, stepDetailsManager: CallscriptStepDetailsManager) {
+		constructor(context: Mscrm.ControlData<IInputBag>, stateManager: StateManager, stepDetailsManager: CallscriptStepDetailsManager, logger: TelemetryLogger, cec: CECUtil, macro: MacroUtil) {
 			this.context = context;
 			this.expandedStepId = Constants.EmptyString;
 			this.stateManager = stateManager;
 			this.stepDetailsManager = stepDetailsManager;
-            this.cecUtil = new CECUtil(this.context);
-            this.macroUtil = new MacroUtil(this.context);
+            this.cecUtil = cec;
+            this.macroUtil = macro;
 			this.telemetryContext = TelemetryComponents.CallscriptStepListitemManager;
-			this.telemetryLogger = new TelemetryLogger(this.context);
+			this.telemetryLogger = logger;
 		}
 
 		/**

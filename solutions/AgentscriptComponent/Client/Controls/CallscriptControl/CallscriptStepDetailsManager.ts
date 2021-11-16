@@ -18,12 +18,12 @@ module MscrmControls.Callscript {
 		/**
 		 * Constructor.
 		 */
-		constructor(context: Mscrm.ControlData<IInputBag>, stateManager: StateManager) {
+		constructor(context: Mscrm.ControlData<IInputBag>, stateManager: StateManager, logger: TelemetryLogger, macro: MacroUtil) {
 			this.context = context;
 			this.stateManager = stateManager;
 			this.telemetryContext = TelemetryComponents.CallscriptStepListitemManager;
-			this.telemetryLogger = new TelemetryLogger(this.context);
-			this.macroUtil = new MacroUtil(context);
+			this.telemetryLogger = logger;
+			this.macroUtil = macro;
 		}
 
 		private getExecuteActionPromise(step: CallScriptStep) {

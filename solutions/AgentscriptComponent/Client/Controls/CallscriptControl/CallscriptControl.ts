@@ -11,6 +11,7 @@ module MscrmControls.Callscript {
 
 		private context: Mscrm.ControlData<IInputBag>;
 		public stateManager: StateManager;
+		public macroUtil: MacroUtil;
 		public cecUtil: CECUtil;
 		public stepsListManager: CallscriptStepsListManager;
 		public stepListitemManager: CallscriptStepListitemManager;
@@ -42,11 +43,14 @@ module MscrmControls.Callscript {
 			{
 				this.context = context;
 				this.telemetryLogger = new TelemetryLogger(context);
-				this.cecUtil = new CECUtil(context);
-				this.stateManager = new StateManager(context);
+				this.cecUtil = new CECUtil(context, this.telemetryLogger);
+				// Initialize the static value in macroUtil
+				this.macroUtil = new MacroUtil(context, this.telemetryLogger);
+				this.macroUtil.init();
+				this.stateManager = new StateManager(context, this.telemetryLogger, this.cecUtil, this.macroUtil);
 
-				this.stepDetailsManager = new CallscriptStepDetailsManager(context, this.stateManager);
-				this.stepListitemManager = new CallscriptStepListitemManager(context, this.stateManager, this.stepDetailsManager);
+				this.stepDetailsManager = new CallscriptStepDetailsManager(context, this.stateManager, this.telemetryLogger, this.macroUtil);
+				this.stepListitemManager = new CallscriptStepListitemManager(context, this.stateManager, this.stepDetailsManager, this.telemetryLogger, this.cecUtil, this.macroUtil);
 				this.stepsListManager = new CallscriptStepsListManager(context, this.stepListitemManager);
 
 				this.initCompleted = true;
