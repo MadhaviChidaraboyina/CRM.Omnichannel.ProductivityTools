@@ -105,8 +105,7 @@ module MscrmControls.RunLink {
 						marginLeft: "8px",
 						width: "100px",
 						height: "20px"
-					},
-					tabIndex: 0
+					}
 				},
 				this.getRunHistoryLink(context)
 			);
@@ -126,6 +125,7 @@ module MscrmControls.RunLink {
 							lineHeight: "20px",
 							color: this.color
 						},
+						tabIndex: -1,
 					},
 					this.getResourceString(this._context, Constants.linkLabel)
 				);
@@ -143,6 +143,7 @@ module MscrmControls.RunLink {
 						cursor: "pointer",
 						color: this.color
 					},
+					tabIndex: 0,
 					role: "link",
 					onClick: this.navigateToRunHistoryGrid.bind(this)
 				},
