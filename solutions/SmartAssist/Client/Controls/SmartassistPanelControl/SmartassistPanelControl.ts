@@ -142,8 +142,13 @@ module MscrmControls.SmartassistPanelControl {
 
                 // Loader Element
                 var loaderElement: HTMLDivElement = document.createElement("div");
-                loaderElement.innerHTML = Constants.SAPanelLoaderDiv.Format(Utility.getString(LocalizedStrings.LoadingText));
+                loaderElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelLoaderDiv.Format(Utility.getString(LocalizedStrings.LoadingText));
                 this.smartAssistContainer.appendChild(loaderElement);
+
+                // No Permission Element
+                var noPermissionElement: HTMLDivElement = document.createElement("div");
+                noPermissionElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelNoPermissionDiv.Format(Utility.getString(LocalizedStrings.SmartAssistNoPermissionMessage));
+                this.smartAssistContainer.appendChild(noPermissionElement);
 
                 var SuggestionEl: HTMLDivElement = document.createElement("div");
                 SuggestionEl.id = Constants.SuggestionOuterContainer;
@@ -280,19 +285,23 @@ module MscrmControls.SmartassistPanelControl {
             this.showLoader();
 
             // Get Configs to display suggestions
-            var configs: SAConfig[] = await SAConfigDataManager.Instance.getFilteredSAConfig(entityName, this.telemetryHelper);
-
+            var configs: SAConfig[] = await SAConfigDataManager.Instance.getFilteredSAConfig(entityName, this.telemetryHelper);  
+            
+            if(configs.length < 1){
+                this.showNoPermission();
+                return;
+            }
             var emptyStatus: AnyEntityContainerState = await this.checkEmptyStatus(entityName, recordId, configs);
-            if (configs.length < 1 || emptyStatus != AnyEntityContainerState.Enabled) {
+            if (configs.length < 1 || emptyStatus != AnyEntityContainerState.Enabled) {            
                 this.telemetryHelper.logTelemetryError(TelemetryEventTypes.ConfigNotFound, new Error("SA config not found Or AI settings are disabled"), null);
                 // No Data to PP
-                this.DispatchNoDataEvent();
+                this.DispatchNoDataEvent();       
             }
             configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
             for (let i = 0; i <= (configs.length - 1); i++) {
                 this.addDivForSmartAssistConfig(configs[i]);
                 this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), emptyStatus, recordId, update, this.telemetryHelper);
-            }
+            }                     
             this.hideLoader();
         }
 
@@ -356,12 +365,25 @@ module MscrmControls.SmartassistPanelControl {
         /**Show loader component */
         private showLoader() {
             $("#" + Constants.SAPanelLoaderId).removeClass(Constants.hideElementCss);
+            this.hideNoPermission();
         }
 
         /**Hide loader component */
         private hideLoader() {
             $("#" + Constants.SAPanelLoaderId).addClass(Constants.hideElementCss);
         }
+
+        /**Show NoPermission component */
+        private showNoPermission() {
+            $("#" + Constants.SAPanelNoPermissionId).removeClass(Constants.hideElementCss);
+            this.hideLoader();
+        }
+
+        /**Hide NoPermission component */
+        private hideNoPermission() {
+            $("#" + Constants.SAPanelNoPermissionId).addClass(Constants.hideElementCss);
+        }
+        
 
         /**
          * Check for same session comparing session id

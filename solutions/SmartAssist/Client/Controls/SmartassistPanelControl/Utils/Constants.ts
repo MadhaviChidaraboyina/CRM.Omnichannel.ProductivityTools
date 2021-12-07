@@ -24,6 +24,7 @@ module MscrmControls.SmartassistPanelControl {
         public static SmartAssistControlHeader = "ControlHeader";
         public static SmartAssistSuccessMessage = "SuccessMessage";
         public static SmartAssistFailureMessage = "FailureMessage";
+        public static SmartAssistNoPermissionMessage = "NoPermissionMessage"
         public static LoadingText = "LoadingText";
         public static SuggestionControlTitle = "SuggestionControlTitle";
         public static TitleIconInfoText = "SuggestionControlTitleIconText";
@@ -78,8 +79,12 @@ module MscrmControls.SmartassistPanelControl {
         public static SAPanelLoaderCss = "sa-panel-loader";
         public static SAPanelLoaderParentCss = "sa-panel-loader-parent";
         public static SAPanelLoaderId = "sa-panel-loader-id";
+        public static SAPanelNoPermissionCss = "sa-panel-nopermission";
+        public static SAPanelNoPermissionParentCss = "sa-panel-nopermission-parent";
+        public static SAPanelNoPermissionId = "sa-panel-nopermission-id";
         public static hideElementCss = "hide-element";
         public static SAPanelLoaderDiv = '<div id="' + Constants.SAPanelLoaderId + '" class="hide-element ' + Constants.SAPanelLoaderParentCss + '"><div class="' + Constants.SAPanelLoaderCss + '"></div><label>{0}</label></div>';
+        public static SAPanelNoPermissionDiv = '<div id="' + Constants.SAPanelNoPermissionId + '" class="hide-element ' + Constants.SAPanelNoPermissionParentCss + '"><div class="' + Constants.SAPanelNoPermissionCss + '"></div><label>{0}</label></div>';
         public static TitleDivCss = "sapanel-title-div";
         public static TitleLabelCss = "sapanel-title-label";
         public static TitleImgCss = "sapanel-title-img";
