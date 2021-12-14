@@ -137,6 +137,10 @@
     <value>Chargement...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Une autorisation est nécessaire pour afficher les suggestions. Contactez votre administrateur pour demander l’accès.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Terminé !</value>
     <comment>Success Message</comment>

@@ -137,6 +137,10 @@
     <value>Laster inn ...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Du må ha tillatelse til å vise forslag. Kontakt administratoren for å be om tilgang.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Ferdig!</value>
     <comment>Success Message</comment>

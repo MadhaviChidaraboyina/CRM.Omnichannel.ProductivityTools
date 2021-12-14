@@ -137,6 +137,10 @@
     <value>جار التحميل...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>أنت تحتاج إلى إذن لعرض الاقتراحات. اتصل بالمسؤول لطلب الوصول.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>تم!</value>
     <comment>Success Message</comment>

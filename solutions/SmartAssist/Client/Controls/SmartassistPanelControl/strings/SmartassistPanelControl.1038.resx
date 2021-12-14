@@ -137,6 +137,10 @@
     <value>Betöltés...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Csak megfelelő jogosultság birtokában tekintheti meg a javaslatokat. Kérjen hozzáférést a rendszergazdától.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Kész!</value>
     <comment>Success Message</comment>

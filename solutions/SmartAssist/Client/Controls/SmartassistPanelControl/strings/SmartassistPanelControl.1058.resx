@@ -137,6 +137,10 @@
     <value>Завантаження…</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Для перегляду пропозицій потрібен дозвіл. Зверніться до адміністратора, щоб отримати його.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Готово!</value>
     <comment>Success Message</comment>

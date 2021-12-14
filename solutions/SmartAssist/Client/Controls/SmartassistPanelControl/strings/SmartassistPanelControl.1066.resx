@@ -137,6 +137,10 @@
     <value>Đang tải...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Bạn cần phải có quyền xem các đề xuất. Liên hệ với quản trị viên của bạn để yêu cầu quyền truy cập.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Hoàn tất!</value>
     <comment>Success Message</comment>

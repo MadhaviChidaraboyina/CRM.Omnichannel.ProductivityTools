@@ -137,6 +137,10 @@
     <value>กำลังโหลด...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>คุณต้องมีสิทธิ์ในการดูข้อเสนอแนะ ติดต่อผู้ดูแลระบบของคุณเพื่อขอการเข้าถึง</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>เสร็จสิ้น</value>
     <comment>Success Message</comment>

@@ -137,6 +137,10 @@
     <value>Bezig met laden...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>U moet gemachtigd zijn om suggesties te kunnen bekijken. Neem contact op met uw beheerder om toegang aan te vragen.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Gereed!</value>
     <comment>Success Message</comment>

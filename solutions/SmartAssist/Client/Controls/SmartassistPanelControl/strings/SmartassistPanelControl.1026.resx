@@ -137,6 +137,10 @@
     <value>Зареждане...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Имате нужда от разрешение за преглед на предложения. За да заявите достъп, се свържете с администратора си.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Готово!</value>
     <comment>Success Message</comment>

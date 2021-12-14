@@ -137,6 +137,10 @@
     <value>Nalaganje ...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Za ogled predlogov potrebujete dovoljenje. Če želite zahtevati dostop, se obrnite na skrbnika.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Končano.</value>
     <comment>Success Message</comment>

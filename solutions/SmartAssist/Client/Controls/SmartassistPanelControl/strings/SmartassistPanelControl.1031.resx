@@ -137,6 +137,10 @@
     <value>Wird geladen ...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Sie benötigen die Berechtigung zum Anzeigen von Vorschlägen. Wenden Sie sich an den Administrator, um sie zu erhalten.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Fertig!</value>
     <comment>Success Message</comment>

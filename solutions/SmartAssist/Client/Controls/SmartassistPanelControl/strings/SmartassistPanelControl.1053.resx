@@ -137,6 +137,10 @@
     <value>Läser in ...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Du måste ha behörighet att visa förslag. Kontakta administratören och begär åtkomst.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Klart!</value>
     <comment>Success Message</comment>

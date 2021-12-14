@@ -137,6 +137,10 @@
     <value>Yükleniyor...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Önerileri görüntülemek için izniniz gerekiyor. Erişim istemek için yöneticinize başvurun.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Bitti!</value>
     <comment>Success Message</comment>

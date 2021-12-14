@@ -137,6 +137,10 @@
     <value>Carregando...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Você precisa de permissão para ver sugestões. Entre em contato com o administrador para solicitar acesso.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Concluído!</value>
     <comment>Success Message</comment>

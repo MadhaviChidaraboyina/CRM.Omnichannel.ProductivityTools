@@ -137,6 +137,10 @@
     <value>Notiek ielāde...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Lai skatītu ieteikumus, ir nepieciešama atļauja. Lai pieprasītu piekļuvi, sazinieties ar administratoru.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Gatavs!</value>
     <comment>Success Message</comment>

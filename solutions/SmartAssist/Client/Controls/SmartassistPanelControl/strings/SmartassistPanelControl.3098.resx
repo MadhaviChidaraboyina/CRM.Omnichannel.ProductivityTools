@@ -137,6 +137,10 @@
     <value>Учитавање...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Потребна вам је дозвола да бисте видели предлоге. Обратите се администратору да бисте затражили приступ.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Готово!</value>
     <comment>Success Message</comment>

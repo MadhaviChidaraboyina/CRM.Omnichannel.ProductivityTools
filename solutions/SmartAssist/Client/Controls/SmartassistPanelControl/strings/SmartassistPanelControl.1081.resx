@@ -137,6 +137,10 @@
     <value>लोड की जा रही है...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>सुझाव देखने के लिए आपको अनुमति चाहिए. पहुँच का अनुरोध करने के लिए अपने व्यवस्थापक से संपर्क करें.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>हो गया!</value>
     <comment>Success Message</comment>

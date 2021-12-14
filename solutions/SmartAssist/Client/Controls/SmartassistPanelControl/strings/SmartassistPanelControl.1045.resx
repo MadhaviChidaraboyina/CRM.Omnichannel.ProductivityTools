@@ -137,6 +137,10 @@
     <value>Trwa ładowanie...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Musisz mieć uprawnienie umożliwiające wyświetlanie sugestii. Skontaktuj się z administratorem, aby zażądać dostępu.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Gotowe!</value>
     <comment>Success Message</comment>

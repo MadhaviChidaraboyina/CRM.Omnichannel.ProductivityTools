@@ -137,6 +137,10 @@
     <value>Įkeliama...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Norėdami peržiūrėti pasiūlymus, turite turėti teisę. Norėdami pateikti prieigos užklausą, kreipkitės į administratorių.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Atlikta!</value>
     <comment>Success Message</comment>

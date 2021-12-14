@@ -137,6 +137,10 @@
     <value>로드 중...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>제안을 볼 수 있는 권한이 필요합니다. 액세스 권한을 요청하려면 관리자에게 문의하세요.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>완료되었습니다!</value>
     <comment>Success Message</comment>

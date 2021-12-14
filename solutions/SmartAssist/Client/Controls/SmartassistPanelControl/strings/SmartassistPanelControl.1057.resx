@@ -137,6 +137,10 @@
     <value>Memuat...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Anda memerlukan izin untuk melihat saran. Hubungi admin untuk meminta akses.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Selesai!</value>
     <comment>Success Message</comment>

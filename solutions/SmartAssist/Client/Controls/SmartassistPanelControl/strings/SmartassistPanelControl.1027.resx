@@ -137,6 +137,10 @@
     <value>S’està carregant...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Necessiteu permís per visualitzar suggeriments. Poseu-vos en contacte amb l'administrador per sol·licitar accés.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Fet!</value>
     <comment>Success Message</comment>

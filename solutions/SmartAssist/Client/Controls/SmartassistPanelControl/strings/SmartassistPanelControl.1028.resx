@@ -137,6 +137,10 @@
     <value>載入中...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>您需要檢視建議的權限。請連絡您的管理員以要求存取權。</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>完成!</value>
     <comment>Success Message</comment>

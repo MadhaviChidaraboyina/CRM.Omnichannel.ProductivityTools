@@ -137,6 +137,10 @@
     <value>Cargando...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Precisa permiso para ver as suxestións. Contacte co administrador para solicitar acceso.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Feito.</value>
     <comment>Success Message</comment>

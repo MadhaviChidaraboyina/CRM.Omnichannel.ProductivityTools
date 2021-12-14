@@ -137,6 +137,10 @@
     <value>Жүктеп салынуда...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Ұсыныстарды көру үшін сізге рұқсат қажет. Рұқсат алу сұрау үшін әкімшіңізге хабарласыңыз.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Дайын!</value>
     <comment>Success Message</comment>

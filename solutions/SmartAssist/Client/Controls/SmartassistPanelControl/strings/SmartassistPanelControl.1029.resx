@@ -137,6 +137,10 @@
     <value>Načítání...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>K zobrazení návrhů potřebujete oprávnění. Požádejte o přístup správce.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Hotovo.</value>
     <comment>Success Message</comment>

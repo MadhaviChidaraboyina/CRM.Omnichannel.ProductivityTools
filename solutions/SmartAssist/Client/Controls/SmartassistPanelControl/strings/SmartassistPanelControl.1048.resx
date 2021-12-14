@@ -137,6 +137,10 @@
     <value>Se încarcă...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Aveți nevoie de permisiune pentru a vizualiza sugestii. Pentru a solicita acces, contactați administratorul.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Gata!</value>
     <comment>Success Message</comment>

@@ -137,6 +137,10 @@
     <value>טוען...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>אתה זקוק להרשאה כדי להציג הצעות. פנה למנהל המערכת כדי לבקש גישה.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>בוצע!</value>
     <comment>Success Message</comment>

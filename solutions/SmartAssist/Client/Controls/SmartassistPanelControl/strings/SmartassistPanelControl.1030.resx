@@ -137,6 +137,10 @@
     <value>Indlæser...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Du skal have tilladelse til at få vist forslag. Kontakt administratoren for at anmode om adgang.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Udført!</value>
     <comment>Success Message</comment>

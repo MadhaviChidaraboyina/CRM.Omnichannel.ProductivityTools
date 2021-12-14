@@ -137,6 +137,10 @@
     <value>Kargatzen…</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>Iradokizunak ikusteko baimena behar duzu. Jarri harremanetan administratzailearekin sarbidea eskatzeko.</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Eginda!</value>
     <comment>Success Message</comment>

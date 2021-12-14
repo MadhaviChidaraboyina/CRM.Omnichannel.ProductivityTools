@@ -137,6 +137,10 @@
     <value>読み込み中です...</value>
     <comment>Loading</comment>
   </data>
+  <data name="NoPermissionMessage" xml:space="preserve">
+    <value>提案を表示するにはアクセス許可が必要です。管理者に問い合わせてアクセス許可を要求してください。</value>
+    <comment>No Permission message</comment>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>完了しました。</value>
     <comment>Success Message</comment>
