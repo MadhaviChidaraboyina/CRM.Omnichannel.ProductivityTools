@@ -3,6 +3,7 @@
 module MscrmControls.Smartassist.Suggestion {
     export class PopupAction extends AdaptiveCards.CardElement {
 
+        public static onExecuteAction: (action: AdaptiveCards.Action) => void;
         public _popupOwner: HTMLElement; // Ellipse Icon
         private _renderedItems: HTMLElement;
         private _overlayElement: HTMLElement;
@@ -13,9 +14,9 @@ module MscrmControls.Smartassist.Suggestion {
         private onExecuteAdaptiveCardAction: (action: AdaptiveCards.Action) => void;
         private hasAction: boolean;
 
-        constructor(onExecuteAction: (action: AdaptiveCards.Action) => void) {
+        constructor() {
             super();
-            this.onExecuteAdaptiveCardAction = onExecuteAction;
+            this.onExecuteAdaptiveCardAction = PopupAction.onExecuteAction;
             this._popupActionContainer = new AdaptiveCards.Container();
             this.onExecuteAction.bind(this);
         }
@@ -40,6 +41,7 @@ module MscrmControls.Smartassist.Suggestion {
             imageBox.altText = "more options button";
             imageBox.horizontalAlignment = AdaptiveCards.HorizontalAlignment.Right;
             this._popupOwner = imageBox.render();
+            this._popupOwner.className = Suggestion.Constants.PopupOwnerClassName;
             (<HTMLElement>this._popupOwner.children[0]).style.cursor = "pointer";
 
             this._popupContainerActionElement = this._popupActionContainer.render();

@@ -10,7 +10,6 @@ module MscrmControls.Smartassist {
 	export class RecommendationControl implements Mscrm.StandardControl<IInputBag, IOutputBag> {
 
 		private _recommendationContainer: HTMLDivElement = null;
-		public static _telemetryReporter: TelemetryLogger.TelemetryLogger = null;
 		public _context: Mscrm.ControlData<IInputBag> = null;
 		private _template: string;
 		private _data: any;
@@ -44,7 +43,6 @@ module MscrmControls.Smartassist {
 				this._data = context.parameters.data.raw;
 				this._template = context.parameters.Template.raw;
 
-				RecommendationControl._telemetryReporter = new TelemetryLogger.TelemetryLogger(context, "MscrmControls.Smartassist.RecommendationControl")
 				this._suggestionId = this._data.SuggestionId;
 				this._adaptiveCardRenderer.SetContext(context);
 				this._adaptiveCardRenderer.SetSuggestionId(this._suggestionId);
@@ -71,7 +69,7 @@ module MscrmControls.Smartassist {
 			const suggestionCardElement: Suggestion.SuggestionCardElement = this._adaptiveCardRenderer.createCardFromTemplateAndData(this._suggestionId, this._template, this._data);
 			const cardId = suggestionCardElement.card.cardId;
 			var cardContainer = Smartassist.Suggestion.ViewTemplates.CardContainerTemplate.Format(cardId);
-			$("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId).append(cardContainer);
+			this.getSuggestionJQueryObj().append(cardContainer);
 			const cardHtml = suggestionCardElement.cardHTMLElement;
 			if (cardHtml) {
 				// Add altText for LinkToCase/UnlinkToCase Image by searching the div className
@@ -117,6 +115,7 @@ module MscrmControls.Smartassist {
 		public destroy(): void {
 			this._context = null;
 			this._adaptiveCardRenderer = null;
+			this.getSuggestionJQueryObj().remove();
 		}
 
 		public handleCardRefresh(args: Suggestion.CardRefreshArgs) {
@@ -135,7 +134,7 @@ module MscrmControls.Smartassist {
 						this.renderRecommendation();
 						// After the card is refreshed, the focus should be on previous action element.
 						if (args.actionType == Suggestion.CustomActionType.PopupAction) {
-							this._adaptiveCardRenderer.popupAction._popupOwner.focus();
+							this.getSuggestionJQueryObj().find("." + Smartassist.Suggestion.Constants.PopupOwnerClassName).get(0).focus();
 						}
 						// Focus to LinkToCase/UnlinkToCase and make the screenreader announce the change.
 						// The first element will include text of LinkToCase/UnlinkToCase
@@ -165,6 +164,10 @@ module MscrmControls.Smartassist {
 			} catch (error) {
 				this._context.reporting.reportFailure(Suggestion.TelemetryEventTypes.HandleCardRefreshOrDismissFailed, error, "TSG-TODO", Suggestion.Util.getTelemetryParameter(null, this._suggestionId));
 			}
+		}
+
+		private getSuggestionJQueryObj(){
+			return $("#" + Suggestion.Constants.RecommendationOuterContainer + this._suggestionId);
 		}
 	}
 }

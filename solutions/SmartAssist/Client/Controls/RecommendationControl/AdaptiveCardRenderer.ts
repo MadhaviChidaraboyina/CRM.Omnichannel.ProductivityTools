@@ -29,7 +29,6 @@ module MscrmControls.Smartassist.Suggestion {
 		private _refreshCardCallback: (args: Suggestion.CardRefreshArgs) => void;
 		private _sessionStorageManager: Suggestion.SessionStorageManager;
 		public adaptivecardRoot: AdaptiveCards.AdaptiveCard;
-		public popupAction: PopupAction;
 		public previousActionClicked: string;
 
 		constructor(refreshCallback: (args: Suggestion.CardRefreshArgs) => void) {
@@ -90,12 +89,13 @@ module MscrmControls.Smartassist.Suggestion {
 		createAdaptiveCard(cardContent: any): HTMLElement {
 			const adaptiveCard = new AdaptiveCards.AdaptiveCard();
 			this.initializeAdaptiveCardsHostConfig(adaptiveCard);
-			this.popupAction = new PopupAction(this.onExecuteAction.bind(this));
-			AdaptiveCards.AdaptiveCard.elementTypeRegistry.registerType(Suggestion.Constants.PopupActionName, () => { return this.popupAction });
+			Suggestion.PopupAction.onExecuteAction = this.onExecuteAction.bind(this);
+			AdaptiveCards.AdaptiveCard.elementTypeRegistry.registerType(Suggestion.Constants.PopupActionName, () => { return new Suggestion.PopupAction(); });
 			adaptiveCard.parse(cardContent);
 			adaptiveCard.onExecuteAction = this.onExecuteAction.bind(this);
 			adaptiveCard.onElementVisibilityChanged = this.onVisibilityChanged.bind(this);
 			const htmlElement = adaptiveCard.render();
+			Suggestion.PopupAction.onExecuteAction = null;
 			this.adaptivecardRoot = adaptiveCard;
 			return htmlElement;
 		}

@@ -32,6 +32,7 @@ module MscrmControls.Smartassist.Suggestion {
 		public static PopupOverlayClassName = "ms-ctrl-overlay";
 		public static PopupContainerId = "ac-popupAction";
 		public static PopupContainerClassName = "ms-ctrl ms-ctrl-popup-container";
+		public static PopupOwnerClassName = "ms-ctrl-popup-Owner";
 		public static CardNewClass = "new-card";
 		public static FilterExpression = "$when";
 		public static AdaptiveCardActionSetClassName = "ac-actionSet";
