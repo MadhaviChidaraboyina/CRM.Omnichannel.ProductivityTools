@@ -7,7 +7,7 @@
 			"bindings": [
 				{
 					"find": "__SG_NAME__",
-					"replaceWith": "oc$(CloudType)$(Cloud)$(Geo)gs"
+					"replaceWith": "oc$environment()(Cloud)(Geo)gs"
 				},
 				{
 					"find": "__CACHE_VALUE__",
@@ -15,7 +15,7 @@
 				},
 				{
 					"find": "__RG_NAME__",
-					"replaceWith": "oc-$(CloudType)-$(Cloud)-$(Geo)-geogrp"
+					"replaceWith": "oc-$environment()-(Cloud)-(Geo)-geogrp"
 				}
 			]
 		},
@@ -24,19 +24,43 @@
 			"bindings": [
 				{
 					"find": "__SUBS_ID__",
-					"replaceWith": "$(SubscriptionId)"
+					"replaceWith": "(SubscriptionId)"
 				},
 				{
 					"find": "__TENANT_ID__",
-					"replaceWith": "$(TenantId)"
+					"replaceWith": "(TenantId)"
 				},
 				{
-					"find": "__SP_ID__",
-					"replaceWith": "$(AdminApplicationId)"
+					"find": "__ADMIN_KV_SUB_ID__",
+					"replaceWith": "(adminKVSubId)"
 				},
 				{
-					"find": "__SP_PWD__",
-					"replaceWith": "$(AdminApplicationPassword)"
+					"find": "__ADMIN_KV_NAME__",
+					"replaceWith": "oc-$environment()-adminvault"
+				},
+				{
+					"find": "__KV_DNS__",
+					"replaceWith": "$config(keyVault.domainNameSuffix)"
+				},
+				{
+					"find": "__ADMIN_KV_RG_NAME__",
+					"replaceWith": "oc-$environment()-adminvaultgrp"
+				},
+				{
+					"find": "__IDENTITY_NAME__",
+					"replaceWith": "oc-$environment()-identity"
+				},
+				{
+					"find": "__GCC__",
+					"replaceWith": "(GCC)"
+				},
+				{
+					"find": "__GCC_APP_ID_SECRET__",
+					"replaceWith": "(CloudType)-DevopsAdminApp-ApplicationId"
+				},
+				{
+					"find": "__GCC_APP_PWD_SECRET__",
+					"replaceWith": "(CloudType)-DevopsAdminApp-AdminApplicationSecret"
 				}
 			]
 		},
@@ -49,7 +73,7 @@
 				},
 				{
 					"find": "__BLOB_FOLDER_NAME__",
-					"replaceWith": "drop/outputs/build/Designer/BlobArtifacts"
+					"replaceWith": "(BlobFolder)"
 				}
 			]
 		}

@@ -38,12 +38,24 @@
 						"value": "__BLOB_FOLDER_NAME__"
 					},
 					{
-						"name": "spid",
-						"value": "__SP_ID__"
+							"name": "appid",
+							"reference": {
+								"provider": "AzureKeyVault",
+								"parameters": {
+									"secretId": "https://__ADMIN_KV_NAME__.__KV_DNS__/secrets/__GCC_APP_ID_SECRET__"
+								}
+							},
+							"asSecureValue": "true"
 					},
 					{
-						"name": "sppwd",
-						"value": "__SP_PWD__"
+							"name": "apppwd",
+							"reference": {
+								"provider": "AzureKeyVault",
+								"parameters": {
+									"secretId": "https://__ADMIN_KV_NAME__.__KV_DNS__/secrets/__GCC_APP_PWD_SECRET__"
+								}
+							},
+							"asSecureValue": "true"
 					},
 					{
 						"name": "tenantId",
@@ -52,8 +64,18 @@
 					{
 						"name": "subscriptionId",
 						"value": "__SUBS_ID__"
+					},
+					{
+						"name": "gcc",
+						"value": "__GCC__"
 					}
-				]
+				],
+				"identity": {
+						"type": "UserAssigned",
+						"userAssignedIdentities": [
+							"/subscriptions/__ADMIN_KV_SUB_ID__/resourceGroups/__ADMIN_KV_RG_NAME__/providers/Microsoft.ManagedIdentity/userAssignedIdentities/__IDENTITY_NAME__"
+						]
+				}
 			}
 		}
 	]
