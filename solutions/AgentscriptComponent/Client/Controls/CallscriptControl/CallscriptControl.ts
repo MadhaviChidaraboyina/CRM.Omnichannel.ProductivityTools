@@ -20,6 +20,7 @@ module MscrmControls.Callscript {
 		private telemetryContext: string;
 		private telemetryLogger: TelemetryLogger;
         private setFocusOnSelector: boolean;
+		private loadRetryCount: number;
 
 		/**
 		 * Constructor.
@@ -28,6 +29,7 @@ module MscrmControls.Callscript {
 			this.initCompleted = false;
 			this.telemetryContext = TelemetryComponents.MainComponent;
             this.setFocusOnSelector = false;
+			this.loadRetryCount = 0;
 		}
 
 		/**
@@ -69,11 +71,13 @@ module MscrmControls.Callscript {
 
         //This method is registered as a handler for session switch
         private handleSessionSwitch(context: XrmClientApi.EventContext) {
+			this.loadRetryCount = 0;
             this.stateManager.onSessionSwitch();
         }
 
 		//This method is registered as a handler for session refresh event
         private handleSessionRefresh(context: XrmClientApi.EventContext) {
+			this.loadRetryCount = 0;
 			// If eventSource is specified as Macros, skip refreshing callscript
 			if (context["eventSource"] !== Constants.EVENTSOURCE_MACROS)
 			{
@@ -288,6 +292,7 @@ module MscrmControls.Callscript {
 		{
 			let isScriptDataInitialized = this.stateManager.initializeCallscriptsForCurrentSession();
 			if (isScriptDataInitialized === false) {
+				this.reloadCallScript();
 				return this.getLoadingWheel();
             }
 
@@ -338,6 +343,25 @@ module MscrmControls.Callscript {
 					style: controlStyles
 				}, callscriptComponents);
         }
+
+		private async reloadCallScript() { 
+			let methodName = 'reloadCallScript';
+			let eventParams = new EventParameters();
+			// Home session is expected to have undefined call scripts. We need to record session id in telemetry.
+			eventParams.addParameter("Current Session Id: ", Utility.getCurrentSessionId());
+			// We give one initial load and three reload retry times.
+			while (this.loadRetryCount < 4 && this.context.utils.isNullOrUndefined(this.stateManager.callscriptsForCurrentSession)) {
+				this.loadRetryCount++;
+				await this.stateManager.fetchCallScriptsForCurrentSession();
+				eventParams.addParameter("The count of loading CallScript: ", this.loadRetryCount.toString());
+				this.telemetryLogger.logSuccess(this.telemetryContext, methodName, eventParams);
+			}
+			// After three times retry, we still failed to get call scripts. Log Error.
+			if (this.context.utils.isNullOrUndefined(this.stateManager.callscriptsForCurrentSession)) {
+				let errorMessage = 'Exceeded three retry times and still fail to retrieve call scripts';
+				this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, eventParams);
+			}
+		}
 
         /**Dispatch No data event to PP */
         private DispatchNoDataEvent() {

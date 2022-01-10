@@ -14,7 +14,6 @@ module MscrmControls.Callscript {
 		private telemetryContext: string;
 		private telemetryLogger: TelemetryLogger;
 
-		private isScriptsDataRequested: boolean;
 		public scriptDataFetchFailed: boolean;
 		private currentUciSessionId: string;
 		public selectedScriptForCurrentSession: CallScript;
@@ -32,7 +31,6 @@ module MscrmControls.Callscript {
 			this.selectedScriptForCurrentSession = null;
 			this.telemetryContext = TelemetryComponents.StateManager;
 			this.telemetryLogger = logger;
-			this.isScriptsDataRequested = false;
 			this.scriptDataFetchFailed = false;
 			this.dataManager = new DataManager(context, logger, cec, macro);
 
@@ -54,14 +52,10 @@ module MscrmControls.Callscript {
             await this.initializeControlStateFromCEC();
             if (this.context.utils.isNullOrUndefined(this.callscriptsForCurrentSession)) {
                 this.selectedScriptForCurrentSession = null;
-                this.isScriptsDataRequested = false;
-                this.scriptDataFetchFailed = false;
                 //TODO: need to remove this code once CEC bug is fixed related to null context on
                 //session create and session switch
             }
-            else {
-                this.scriptDataFetchFailed = false;
-            }
+            this.scriptDataFetchFailed = false;
             this.context.utils.requestRender();
 		}
 
@@ -115,14 +109,14 @@ module MscrmControls.Callscript {
 		/**
 		 * Fetch callscript data from CRM config
 		*/
-		private fetchCallScriptsForCurrentSession(): void {
+		public async fetchCallScriptsForCurrentSession(): Promise<void> {
 			let methodName = "fetchCallScriptsForCurrentSession";
 			let dataManagerPromise = this.dataManager.retrieveInitialData();
 
-			dataManagerPromise.then(
-				(callscriptRecords: CallScript[]) => {
+			await dataManagerPromise.then(
+				async (callscriptRecords: CallScript[]) => {
 					let retrieveDefaultCallScriptPromise = this.dataManager.retrieveDefaultCallScript();
-					retrieveDefaultCallScriptPromise.then(
+					await retrieveDefaultCallScriptPromise.then(
 						function (defaultCallScriptID: string) {
 							this.callscriptsForCurrentSession = callscriptRecords;
 							if (!this.context.utils.isNullOrUndefined(defaultCallScriptID)) {
@@ -195,22 +189,13 @@ module MscrmControls.Callscript {
 
 			if (!this.context.utils.isNullOrUndefined(this.callscriptsForCurrentSession)) {
 				this.selectedScriptForCurrentSession = this.getCurrentCallScript();
-				if (!this.context.utils.isNullOrUndefined(this.selectedScriptForCurrentSession)) {
-					if (this.selectedScriptForCurrentSession.isStepsDataRetrieved) {
-						return true;
-					}
-					else {
-						this.fetchStepsForCallscript(this.selectedScriptForCurrentSession);
-						return false;
-					}
+				if ( !this.context.utils.isNullOrUndefined(this.selectedScriptForCurrentSession)
+					&& !this.selectedScriptForCurrentSession.isStepsDataRetrieved ) {
+					this.fetchStepsForCallscript(this.selectedScriptForCurrentSession);
 				}
 				return true;
 			}
 			else {
-				if (!this.isScriptsDataRequested) {
-					this.isScriptsDataRequested = true;
-					this.fetchCallScriptsForCurrentSession();
-				}
 				return false;
 			}
 		}
