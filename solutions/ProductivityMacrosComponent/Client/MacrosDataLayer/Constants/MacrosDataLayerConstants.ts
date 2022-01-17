@@ -47,6 +47,8 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
 		public static ocFPIUrlKey = "ocFPIUrl";
 		public static ocDeploymentTypeKey = "ocDeploymentType";
 		public static ocEndpointNameKey = "ocEndpointName";
+		public static ocMsalFCBNamespace = "Omnichannel.Msal";
+		public static ocMsalFCBKey = "EnableOcMsalFCS";
 
         private static readonly publicFPIUrlMap = new Map();
 
@@ -68,6 +70,28 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
             EndpointConstants.fairfaxFPIUrlMap.set("PROD", "https://oc-auth.azurewebsites.us/OmniChannel/9.0/Runtime.html?");
         }
 
+        private static readonly publicFPI_MSALUrlMap = new Map();
+
+        public static setPublicFPI_MSALUrlMap() {
+			EndpointConstants.publicFPI_MSALUrlMap
+			.set("DEV", "https://fpi-dev.oc.crmlivetie.com/fpi/OmniChannel/9.0/Runtime_Msal.html?")
+            .set("INT", "https://fpi.oc.crmlivetie.com/fpi/OmniChannel/9.0/Runtime_Msal.html?")
+            .set("TEST", "https://fpi.oc.crmlivetie.com/fpi/OmniChannel/9.0/Runtime_Msal.html?")
+            .set("PPE", "https://ocfpippe.blob.core.windows.net/fpi/OmniChannel/9.0/Runtime_Msal.html?")
+            .set("PROD", "https://fpi.omnichannelengagementhub.com/fpi/OmniChannel/9.0/Runtime_Msal.html?");
+        }
+
+        private static readonly fairfaxFPI_MSALUrlMap = new Map();
+
+        public static setFairfaxFPI_MSALUrlMap() {
+			EndpointConstants.fairfaxFPI_MSALUrlMap
+			.set("DEV", "https://omnichanneltestauthservice.azurewebsites.us/OmniChannel/9.0/Runtime_Msal.html?")
+            .set("INT", "https://omnichanneltestauthservice.azurewebsites.us/OmniChannel/9.0/Runtime_Msal.html?")
+            .set("TEST", "https://omnichanneltestauthservice.azurewebsites.us/OmniChannel/9.0/Runtime_Msal.html?")
+            .set("PPE", "https://oc-auth.azurewebsites.us/OmniChannel/9.0/Runtime_Msal.html?")
+            .set("PROD", "https://oc-auth.azurewebsites.us/OmniChannel/9.0/Runtime_Msal.html?");
+        }
+
 		//public static readonly mooncakeFPIUrlMap = new Map()  //Not deployed yet, to be updated after deployment. If common deployment for all GCC, will be a copy of fairfaxFPIUrlMap
 
 		public static getFPIURLMap(cloudType: string)
@@ -78,17 +102,35 @@ namespace Microsoft.ProductivityMacros.MacrosDataLayer
             if (this.fairfaxFPIUrlMap.size == 0) {
                 this.setFairfaxFPIUrlMap();
             }
+            if (this.publicFPI_MSALUrlMap.size == 0) {
+                this.setPublicFPI_MSALUrlMap();
+            }
+            if (this.fairfaxFPI_MSALUrlMap.size == 0) {
+                this.setFairfaxFPI_MSALUrlMap();
+            }
+
+            let msal_fcb = false;
+            try {
+                msal_fcb = (Xrm.Utility.getGlobalContext() as any).getFeatureControlSetting(EndpointConstants.ocMsalFCBNamespace, EndpointConstants.ocMsalFCBKey);
+            }
+            catch(e) {
+                console.log("Couldn't fetch msal bit : ", e);
+            }
+            const urls = msal_fcb ? 
+				[this.fairfaxFPI_MSALUrlMap, this.publicFPI_MSALUrlMap] :
+				[this.fairfaxFPIUrlMap, this.publicFPIUrlMap];
+
 			if(cloudType === null || cloudType === undefined)
             {
-				return this.publicFPIUrlMap;
+				return urls[1];
 			}
 			switch (cloudType.toLowerCase())
 			{
 				case EndpointConstants.fairfaxString:
-					return this.fairfaxFPIUrlMap;
+					return urls[0];
 				case EndpointConstants.publicString:
 				default:
-					return this.publicFPIUrlMap;
+					return urls[1];
 			}
 		}
 	}
