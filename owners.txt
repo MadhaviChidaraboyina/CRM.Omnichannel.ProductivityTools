@@ -5,11 +5,9 @@
 ; defined by placing an owners.txt file inside any subdirectory. More information
 ; about Ownership Enforcer can be found at https://aka.ms/ownershipenforcer.
 abaviskar
-amdode
 beizhou
+johpaul
 midang
 enwan
-frankzheng
-lionlai
 xiwa
 yuyuhuang
