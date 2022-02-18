@@ -132,6 +132,14 @@
         bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
 </value>
   </metadata>
+  <data name="100000:label,0D4DB5C9EF5E1EFD3E8687BE3CB768868B8EC7A6D01087874CDAB324C5FE276F" xml:space="preserve">
+    <value>Részletes utasításokat adhat az emberi hibák kiküszöbölése és az egységes szolgáltatásnyújtás elősegítése érdekében.</value>
+    <comment>Relative path in xml: \msdyn_panetoolconfiguration\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,7C4A14EF225F6F1542FA00FD36FA227065FAE529327C8A76089960C0503971C7" xml:space="preserve">
+    <value>Ügynök parancsfájlok</value>
+    <comment>Relative path in xml: \msdyn_panetoolconfiguration\msdyn_name id:</comment>
+  </data>
   <data name="10:Description,business_unit_msdyn_productivityagentscript" xml:space="preserve">
     <value>A rekordtulajdonos részleg egyedi azonosítója</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'business_unit_msdyn_productivityagentscript'</comment>

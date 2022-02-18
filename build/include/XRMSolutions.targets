@@ -77,5 +77,4 @@
 	<PropertyGroup>
 		<SolutionPackageDefaultLocale>en-US</SolutionPackageDefaultLocale>
 	</PropertyGroup>
-	<Import Project="AssetLocalization.targets" />
 </Project>

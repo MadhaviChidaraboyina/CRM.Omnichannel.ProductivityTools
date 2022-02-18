@@ -132,6 +132,614 @@
         bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
 </value>
   </metadata>
+  <data name="100000:label,006E0ECD3AE7F47459E5E6B2557C0E5FBCBF9F3ABA44122597429825BFEA238C" xml:space="preserve">
+    <value>Search the knowledge base for the populated phrase</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,00A4A83627E0B5DF4D4576D6A0C877259A2E7AAF728DF4EDD0E33FA772200BE4" xml:space="preserve">
+    <value>This macro will autofill form fields based on the information you provide</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,01E6E5DDA1C61427416BE4667974C99D02A9A4297E139B51729959856721CCBD" xml:space="preserve">
+    <value>Open a new form to create a record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,03906F4410221ADF7263C46AE49B266AFBFBC1348E29CDCB5974E9ADA0A98F9A" xml:space="preserve">
+    <value>Open an existing record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,0568178B0A4120761247B009AD290A358F3BA693A88124218D202ECFB476157C" xml:space="preserve">
+    <value>Do a relevance search based on the phrase</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,08E1B161EE757F199980E146F5431A6A9712B39101B6B49F0D5D6AE946D1C758" xml:space="preserve">
+    <value>Open an email form with predefined template</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,095AAE72E243A75DF14589C38DDA94021C109088D38922ABE1AC7DB20E4D0C52" xml:space="preserve">
+    <value>Automate commonly used client-side tasks</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,097D6A74D4D014BEC6EC9FB04937721B2AC1B6B0865DA82C29AA760C8CB6EB7A" xml:space="preserve">
+    <value>Billable time</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,0980DF563B2FC619031AFBD5F7C912FEF959293E621E5B3F08D415F7C4BAE8E5" xml:space="preserve">
+    <value>Resolution reason</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,09FB8CEADE0B0BE180677E911DFB61594945E81EC359759B8DC2FD1E8B21A685" xml:space="preserve">
+    <value>Session connector</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,10D3D6CFF91A80C0A6B3486C9A2633A5F1B1CB747BD4D96EEDE911D3B79F9912" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,10E8DF941DFAAA5374EE9DDC0A105E91C3829B9BCE73A9F7BDB6C45CBE5D315F" xml:space="preserve">
+    <value>Refresh the session context</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,129C92FD5FCA73196AD647B54388EF103CFA953FF449AD33AD0B4A0C1C1179AE" xml:space="preserve">
+    <value>The ID of the view to be opened</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,131D02D008B69A052046F15B2A59635A79684347FDDA6507EEBC2BA9E064762B" xml:space="preserve">
+    <value>Dashboard ID</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,135A3F671F19CC7C4D4CD4FEC50116B201C9E3057B6C3B3DE5A97A0C79B93301" xml:space="preserve">
+    <value>Time that is billable</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,14410131D4A5540FBAEFA75E43ED09C91FACDFF2742629B49469B6354FFB7284" xml:space="preserve">
+    <value>Automate flow trigger actions</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,15A6DA6D89C17575ACC8C31D76DD72902C359FD8635D3E32FE2C97435ABF3550" xml:space="preserve">
+    <value>Open application tab</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,1759D64DB022CEADF08AD3369632917B2F323147575CFAA99B7F60DC98507690" xml:space="preserve">
+    <value>A JSON string representing the attributes and values to be updated</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,19D1FA363DBAB964A6F2342D8F2FEC2B591654B7C2F447BF8963D5FACC8D7A57" xml:space="preserve">
+    <value>Get the current tab</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,1A52C54ACD32CA00523268BB279C5D663FBD768B12FC35F55B11958D2B39C16A" xml:space="preserve">
+    <value>Focus on the tab</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,1D49C833CC48CC818D0BBB976E6E831217CC58C9485C5838893BE8AD47126E66" xml:space="preserve">
+    <value>Clone input record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,1E4D1720AC67805A371DFEFF619D690E4012EBECEF7496CE660ACCF46948E470" xml:space="preserve">
+    <value>Session connector</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,1ECEF5654F686DCB833FF5AD4BF7311C91B44B49BBC0E2D1BAEBD680B459F824" xml:space="preserve">
+    <value>Flow Connector</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,1F46DCE3AAE02CBC34B3542254C6F6F3570C58FE6FCE3B65150EF406D999B888" xml:space="preserve">
+    <value>View ID</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,21786AC9DB46EE1F248AF151FDC3122F63AB128533661C51E932D07EF6C129B2" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,24C70414A124FE679AA12AF26957A6AE8A1910085924B53A02A75BF6FE7D5D21" xml:space="preserve">
+    <value>This macro will autofill form fields based on the information you provide</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,2690DE40075D5872A159EF9F908A5D5D287CF789A8EC5EA284BB92E599DBDA7B" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,29229D9CA5B11FA3D44DB193EA803E4E27FBA783F133171E6182BC1879655702" xml:space="preserve">
+    <value>ID of the email template</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,29A9B2940452D8D932975CF1577BBF9C49E94A24BDBB788286311AFE372C1BE9" xml:space="preserve">
+    <value>This is the title of the record</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,29E58AD94AA3E3FBDFD80717EDA5A3AC53B06E138EFBA28137731A2186DECA48" xml:space="preserve">
+    <value>This will clone the record in the curent tab and open it in a new tab as new unsaved record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,2A9EDA6B6F20683BAF59D19F744CCE1CD64F06E520802223B124232E74D09DD0" xml:space="preserve">
+    <value>Save the record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,2B0AF925DAEE9D53E9FAC33B3E2DEBCD82C300F81BC58C8E7A31FA871EB15E1C" xml:space="preserve">
+    <value>Search string</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,2DD4B76470DF4648B4B3772E380E00EE4E3AB2B664C02599C7A1477077E7A5E6" xml:space="preserve">
+    <value>Get the current tab</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,2F2A340C4C4F6F14FD0FE9450F50363E33B395C587581F18A834C034C816822E" xml:space="preserve">
+    <value>Session Connector</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,2F8CDCCCC411A716621DEC8417C647675ABAF879D06929BCDBBE0686F6D834F7" xml:space="preserve">
+    <value>Search the knowledge base for the populated phrase</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,3118F29FFFDECEEC10810EB5C79D7DE38E2DA3524397852F9843D775DAFC7603" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,31FB097E3CD390CF4968D60439E554A80520C309D49D17E28FF7A1244C375203" xml:space="preserve">
+    <value>Open a record grid</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,35D3CE9F367F2A75784E054562E709A4B0BCC1DE23B8DC3430567C900A209E0A" xml:space="preserve">
+    <value>Logical name of the entity to be opened</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,37E9EB9FFE372CAAEDCBC66972EFC501D8225B66C4337BCDFEBDF42E8CB70EBC" xml:space="preserve">
+    <value>Start macro execution</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,3B5288C664BD698BBA22F14F58DFF82304D8AACEC6C76A7165FFC37B197C49AD" xml:space="preserve">
+    <value>The ID of the dashboard to be opened</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,3DDF7EA62AAA8996209B8E3FF1DC06C440075AD11D6F5916B342622217CAE67A" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,3FE10B76B719E4122BB8277C4575A629B24BD4AFBFC91AEA97F3C58213463035" xml:space="preserve">
+    <value>Entity record ID</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,4435745FBAF4EFEB77530A50B3A3375E66F90A32C4CFC10BE42A19F9467E8162" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,444C652494853EC46137481D9CFEAD9BF93897EE37DCE0EAAE7554473A0E2138" xml:space="preserve">
+    <value>Record title</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,4616FCA5F6A21290C8F9B7CDF0D2CDACE7C9A8552A6038C5F4550BE21A5F0543" xml:space="preserve">
+    <value>Attribute</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,480152B032AD11F308CDA6081C62016F459965FCB09A404A1D94D6B8E436ABE7" xml:space="preserve">
+    <value>Sample JSON object</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,48E4E0E7F7D9D77792ED6FD7EF41D40F7117CAC34276BA1BEB5365F8C21AE0F7" xml:space="preserve">
+    <value>Autofill form fields</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,48F15C1B55F282F07B7B8E923745F8BC154BE688A28A8B0CF8D5F9B5E576638D" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,4ADB7AE9E5FA769D38444371238E16575FBF23286B120A245C7CFF6EEE4141DA" xml:space="preserve">
+    <value>Save the record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,4DF21007CCF3C4FA15CAF3B999CCA7D96DEF8B46656B42F2B8AD775A7FE6470B" xml:space="preserve">
+    <value>Case ID</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,4F78B4853EF2E1D7A333FF47F9F5283EB44F1E794144BAA21196E5CD937ABE8E" xml:space="preserve">
+    <value>Clone current record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,4FB9433FCA15B47EF1323EDF195F64087D3DC8F27FBD76E24788E862815C146F" xml:space="preserve">
+    <value>Productivity Automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,500906926178993C6990A894084022B0D52BA60BF3FDBB7CCF1F7815A3289995" xml:space="preserve">
+    <value>Session connector</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,504F2CFBA967086855D27262BFBD4E69968A89B985452C21F249564402FC2021" xml:space="preserve">
+    <value>This will clone the record given as macro input and open it in new tab as new unsaved record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,5755EFD89F884DDB0891CB2D7A17D94D14E471181FE0130335A9CE6E81173A99" xml:space="preserve">
+    <value>Productivity Automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,5A8D881A0ED10048EB32FEE35E84BF917B6CE4A1C3C92189D5AE2DCAF5F90C1E" xml:space="preserve">
+    <value>Sample custom JSON Object</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,5D547CF9E7FF00FC2CD61BE175DCB8F7AD8419FCBF2A3391571FEA92F5C7FBF8" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,5E164B885353D1015D39CEE0A815A2D89469ED3C6DA910C5BA400394EF6E0295" xml:space="preserve">
+    <value>Focus on the tab</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,5F1E971CF97A73BB471A244A5552771443B033179F990771CBD180BF2C2E340A" xml:space="preserve">
+    <value>Application page type</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,6072586D1853FAD3568EF9B3F6DB465D85F46E6D5E2C635002FF2EF2E9990147" xml:space="preserve">
+    <value>Entity primary name</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,60733DB3D9DFE2764C84C4D3D0498C6DAC873B61CAD4DA9AD732E612DC1A9743" xml:space="preserve">
+    <value>Application template ID</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,60966EEA190F7826CAF8141D0F7058CD652BC55DBD066EC0438E7712275BCF83" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,60D5072C047F2D74D820AB974C3C6031391D941DFE6D209760675414F14F987D" xml:space="preserve">
+    <value>Open knowledge base article</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,62458526F4A0E10514C27854C4721428F767119F9F3BAF3AF66A1F7C88A17D21" xml:space="preserve">
+    <value>Run Flow</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,643A4BF130415BBC9ACA08251061E0B4DB30B9FE7071C82D542D8C540FC7272C" xml:space="preserve">
+    <value>Predefined automation actions</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_categorylabel id:</comment>
+  </data>
+  <data name="100000:label,6ACE7806D855A05AD0D3D544E26ED739C542E8F1F7676DF12BF193E00B242FDF" xml:space="preserve">
+    <value>Resolve Case</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,6BB5C10B2A28B1A6081342448603AE5D2BEFA5DB6D906B0CA85FEC54DB4B0DA9" xml:space="preserve">
+    <value>Session Connector</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,6E904DAC6558B40EDF659B68B574036F8CC2D185C879770D2B9C1B6C1B2E93CC" xml:space="preserve">
+    <value>The type of view</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,6F10BF8D3EAF5D5063AEC9D731293C44D4413B8BA250E6938347C55A268BE338" xml:space="preserve">
+    <value>Run Flow</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,705FE08FA1A1C621FE7A45783F03FC13B3241812AE2D971AC2FD56C596F9FD9C" xml:space="preserve">
+    <value>View type</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,70A0B616F38C0A065EC0873DE87C2CC3997924F7D2762FF54611B866903BB30D" xml:space="preserve">
+    <value>Open knowledge base article</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,70A1C766C09C882D7AFA7636AD67C96857F0630242FD389D81B2A09448F719E0" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,72298483574BA198BB3F3BB50A3D1FE39D65740E5F8B4C51BD9859C694FB2982" xml:space="preserve">
+    <value>Start macro execution</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,72819B78BBA77EC7888EEE723007AC3900870BF0B09B3FF5585777C8ABA9A505" xml:space="preserve">
+    <value>Open an existing record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,72A1D98C6EF1B8B58F4DC4B48AE4C19F46CDFBA05CA87E50CAA0223AE1E591D1" xml:space="preserve">
+    <value>Application Template ID</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,7C8F1A3E5E16FEA2B6C5025D0CBB53DB6161334F1789BE43D1848540C855BBC9" xml:space="preserve">
+    <value>Refresh the tab</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,7E5E3BE7BD6BA4093579DB03C2BC7F810FFAC9A49BEFD0D251D1A9C0E64B453E" xml:space="preserve">
+    <value>Array of custom name-value pairs</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,7FB5A722101975989BD1C0FB48000FC27BF25A5C40FBE6D17DE876EF7BDFD45C" xml:space="preserve">
+    <value>This will clone the record in the curent tab and open it in a new tab as new unsaved record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,825C3F74E27D8BF8DE2EFAD3BDC09BF8D4F4C624D1CD5C39445199EA9A2A9415" xml:space="preserve">
+    <value>Do a relevance search based on the phrase</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,828BA2AE08A93079FFE74579ED990F51177B2C8DBE60FCDCC69C27269C473E90" xml:space="preserve">
+    <value>Update an existing record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,8337C007AD9C2B04796D8E4CF77A49A82C28EBE69273AD982A850F2C376B438B" xml:space="preserve">
+    <value>Open an existing record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,83DFF9E41E9E9DCC86D99000E6FA8C28F4D1761F44722015B6C3BE5F0587D0F7" xml:space="preserve">
+    <value>Search by relevance</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,86037488162D6FD5202C0C618058B6C4C75769965F9FEC1D686820C1C32ED28D" xml:space="preserve">
+    <value>Focus on the tab</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,8701943C34E0E51A869C350FC4E169E99003482727BBC2B0F28A2BF8B2FAA54B" xml:space="preserve">
+    <value>List Instant CDS flows and run the selected one at runtime</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,87BBB05E9ADFD897824C6BE7CD897CBE4811713730FF6A8336C9EEEB4633F7FE" xml:space="preserve">
+    <value>Entity form ID</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,87BD75792CD5B41E08FAA32D9CDBF29D371E8236DEEE3611511AA693A988A718" xml:space="preserve">
+    <value>Email</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,88BA5C092458D36EE9779E9134B6FEB954D15DC253408D8BD58C9B6CBDF70225" xml:space="preserve">
+    <value>Open a record grid</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,88BD8BCFA38219B914C33D7AE6AF7AF9898E0EEA30C951DC0972CE364238FC13" xml:space="preserve">
+    <value>Start</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,8E32E902746CC011A1FD318DFB9131D139354DDB2BB181FCD60F916FD8ABDAAB" xml:space="preserve">
+    <value>Open an email form with predefined template</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,8EC7D3654041FB1E3ECF00DDFBED8CE630328C4849A2780D2FF3DAB282B4A980" xml:space="preserve">
+    <value>Update an existing record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,90997CC26042E4FA4648878C37AD30E789D87245A6641D8DA64BABEECC113FD0" xml:space="preserve">
+    <value>Session connector</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,90AC90C9CAE1264C3EB477FE13C01FE1BA227F7B4070961A603844DB36FC784F" xml:space="preserve">
+    <value>Open grid</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,910526065D89AA4950612AF5173A72568162B5A137F76454B6E8BBD829760204" xml:space="preserve">
+    <value>Search the knowledge base for the populated phrase</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,9285147AF4B6A67D666EA471246AD07F1B3A1482FEE65FFE1358324957EFA81B" xml:space="preserve">
+    <value>Action to resolve case</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,92A9819C58E36D8B15443FFE5DEE210BA7E4AF20E295D8AEE65212E7C71B98F0" xml:space="preserve">
+    <value>Refresh the tab</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,93D8EDBEB98E21FF3299AB111D1F4963E6B9F4A485ABC7B28AD57D6E11F3B370" xml:space="preserve">
+    <value>Save</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,95D51754E9D6010637C8FD3B1DE1FBCD6D83A50E817362D2A8C13BBA348F9682" xml:space="preserve">
+    <value>Open knowledge base article</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,966E3ACBFF4CE8FECE41DCAD00004BE40C9CC4C5E9267EF0E2A572AA8C2339AB" xml:space="preserve">
+    <value>You’ll need to enter the entity ID to open the knowledge base article</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,970B8692E75C2AE93F2F5982C0783F667CAEE88CCD4AE1CC961FEE60C8F22A8F" xml:space="preserve">
+    <value>Refresh the tab</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,9C856FDE46DADDAD47EA4A9A47B5DF0827D5CCC60D90E1D511D0EED9C228DE2C" xml:space="preserve">
+    <value>Form ID to be opened</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,9DED7E07F43EF3D4620E553E61E3605CDA8C5A173EE4046EBB14C97BF7E75B50" xml:space="preserve">
+    <value>Get the current tab</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,A0FDD042EF28C362E713B18E35766AA0737105175B5C2792E31ECFC5C011105A" xml:space="preserve">
+    <value>This will clone the record given as macro input and open it in new tab as new unsaved record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,A1D7F310CEBFEE8DF15D2DC48C84A8A14DAF88B36772407F7C3924D251F57922" xml:space="preserve">
+    <value>Do a relevance search based on the phrase</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,A44984D111D9BEF397B9F55B7D58E1828946E05DB1BC2846FDFDB7514B51A47B" xml:space="preserve">
+    <value>Autofill form fields</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,A52D87D3C24E92244A9852B09885C8A46D89D48B403DE8257D652D1DD922BE9E" xml:space="preserve">
+    <value>Resolution</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,AAE99483E0A15A9772EEA10BA3F40BE34252910192991B5F7D6C7742C8A6FEA0" xml:space="preserve">
+    <value>Save the record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,AF3412324AD06ACFC885974C84B2707BF8EB88726FABC39208B327C82F684A06" xml:space="preserve">
+    <value>Predefined automation actions</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_categorylabel id:</comment>
+  </data>
+  <data name="100000:label,AF426BA4E445A04E097070A2D9D2F697862CE2CCF34A8B004633E8B7F70B1389" xml:space="preserve">
+    <value>Open application tab</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,B02FEF50F49F05D29E8E75F94B6F0490F377777DDBFE737FC0D3E312272EFAAC" xml:space="preserve">
+    <value>Update record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,B1C69CCEA6E800003311F147E18BB0F35181691DDBFCABE51EDE9BE93A9DF596" xml:space="preserve">
+    <value>Refresh the session context</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,B31E6E07C8581D49E92CE316BA2ED8568D434649D10F89679F494FD68B5D14E1" xml:space="preserve">
+    <value>Open a new form to create a record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,B389B18CC219DA1148D0992C61E7248915AF5AA55927F86D5D7AF4AAADB66E13" xml:space="preserve">
+    <value>ID of the tab</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,B43E04BB265DD13134BCF1DAA5DCF974194C760EF3E3CD8F78FF4C461A2CDBFF" xml:space="preserve">
+    <value>Resolve Case</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,B4DBF4C138C706517BFC25173E8ADACE96F46A801B6518621FA901AE7B8E30FA" xml:space="preserve">
+    <value>Flow Connector</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,B5558A56DBEFED89507687660DE1DFF997A69EC6090980062808D88500C86855" xml:space="preserve">
+    <value>Open a new form to create a record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,B5DE97BE0622ECDC0D5680074D3D3CE70C1A49EA4A439169148309A0F65F657B" xml:space="preserve">
+    <value>Open an email form with predefined template</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,B67441268B6521A0C28717199234FC1216084A3E6C1DDFCED394D7F9E1FE4859" xml:space="preserve">
+    <value>Action to resolve case</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,B81BE3C4DE8C9960F8B03CF056DA7774EF8B896FEFCDA0543D8F6292B4E4D1A2" xml:space="preserve">
+    <value>Open a record grid</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,C2BB067DFEF775A89D95691FD028E7033D27C9042F986D964BF3C44C93152F0E" xml:space="preserve">
+    <value>Update an existing record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,C7810E48BCEC209E8A898A8259F92B86714AE35F397E25B7D018AE644EF78BB3" xml:space="preserve">
+    <value>JSON string of key-value pairs</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,CEDFEECF5C0A5CD64AEABBACA4FC94EDFF3C5550F6FAB6DDF8C15145E492F020" xml:space="preserve">
+    <value>Refresh the session context</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,CF986112F2FBED68D5B26AD861BC5DD6FC4BEAA774A627C556C01C4309799D76" xml:space="preserve">
+    <value>Incident ID</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,D09D9C7A72718E31B9A741B24B5262834862D8264D17D81A1AB5216BA0ECB1B0" xml:space="preserve">
+    <value>Session Connector</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,D26473F88ED447642C7FDDB753D3E81FE1C9627002F67FC441E91FB92548C3A6" xml:space="preserve">
+    <value>Page type</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,D422E5788DD061075E742067C3709DE651AE1386B9226A1D72F9B213FDCC9B4A" xml:space="preserve">
+    <value>Email recipients</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,D4715577D586B8B2E0262BF4487244E563ED0BBEC99DBA4B0728199419645A8B" xml:space="preserve">
+    <value>This action will open an application tab for the given inputs</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,D6BB1D729E81FD5CCE22C787D6AC155F78BA7811D0C133C953390BF4A50DA95F" xml:space="preserve">
+    <value>Start macro execution</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,D941C6D52EB2BDE9D0C8A9F7B1C9B14FBF73156CFB47363117AA2E92D08F0636" xml:space="preserve">
+    <value>Refresh the tab</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,DA3A5AF9616AA61001E1602A2696B3CC7B6158AAADC6CA724557D8D63C70D467" xml:space="preserve">
+    <value>Get the current tab</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,DC23E4138F0BB134493A316362EB357858EDD88A7946A862A56581373FAA1E48" xml:space="preserve">
+    <value>Email recipients</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,DC7D69234E3B4FB470F3C8F60D0CE96D5DAC07CA6337F41F3775B3C25A4F145E" xml:space="preserve">
+    <value>Tab ID</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,DDFBC1E2E1E70B3B04023485A79CD935FEE1CC2EAF4BC1A633622B274F92A484" xml:space="preserve">
+    <value>Refresh the session context</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,DED347D82877B3FE04EC7FA2747BACB353D5FAE368503024B905F59B7F94AD92" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,E0B788DAFEB8532CF9E5EE4B7EEB83F6FA5FB84C960060CBBD7A24BB7AB6510B" xml:space="preserve">
+    <value>Clone input record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,E11011003ADBB96D6C5AE2977E44E40E6FC5DD572DDCC5CC6789149708DA310A" xml:space="preserve">
+    <value>Focus on the tab</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,E1B106F7B2D38EDB7AD551421D793C676DB8550957DD960E9B5F8785194E117C" xml:space="preserve">
+    <value>Search knowledge base article</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,E20C3E9A28068B97C7EF0E1A62E69E55282BD15E9DF7D5CF2AF447AEF6CAA114" xml:space="preserve">
+    <value>Open form</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,E341051C02C7D18B0FFA1DE786B81D2F8E66BDF549004CAAEC90D1D140E5AF6C" xml:space="preserve">
+    <value>List_Flows</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,E36E3FE3764C978C0215E0AF58695F043FDE4939D0DD6C6954FBA8D16BC6E392" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,E47CE6004CE88C2F971875CDDA9FAAB8C9A3BF8C125EB6600B6A41B141B9CA35" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,E509A3010B6622F164F60BD8E90B44DDA5F7947043922C05D6E621B169DA6F16" xml:space="preserve">
+    <value>Create New</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,E72B8B1154F0151341BB585478E84150B81DB538EE421AF3DC57DDCFC15869B2" xml:space="preserve">
+    <value>Flow Connector</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,EB43FDC1046868F719D893D2B1C229A060A72617D75DEAC7040FAAE236193DCC" xml:space="preserve">
+    <value>Template ID</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,EBD4B0B1C00DBD189E96C96F7E8976A2AB56C94FDF92D781B18B8115678F9B56" xml:space="preserve">
+    <value>This will open an application tab for the given inputs</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,EED89CB3B4222E6558B35502E4ABFB4E7F41ED66FBB3C13EDDF6BD04384C63B4" xml:space="preserve">
+    <value>Predefined automation actions</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_categorylabel id:</comment>
+  </data>
+  <data name="100000:label,F126BFE8DC62816DE002B35E27E497819D66FE3943BE3297C912B666FC952F55" xml:space="preserve">
+    <value>The phrase to be searched for&amp;amp;amp;quot;</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,F1B439457DD996170EE3B1B4D019467E1193815DE7B468D559EEFAD07C47D40D" xml:space="preserve">
+    <value>Clone current record</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,F3D748E9CE6376822456FA4476A5F90E31BBBC964D25E83571DE42F7F828E927" xml:space="preserve">
+    <value>Productivity automation</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,F660A762E630BDB7D8444828F0895FB5B304901E53B775ED0FDC359F5DC79D70" xml:space="preserve">
+    <value>Entity logical name</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,F9F19775DBCFE17A9FECDFD180BD8AB63735A4E45290763E2DD3D927AA27DDB4" xml:space="preserve">
+    <value>Primary name of the entity to be opened</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,FF822E4C985B6DF888B002AF44A8D449FB6B7993DB66871E8DB511586674D1EF" xml:space="preserve">
+    <value>Automate commonly used session actions</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,FFF5C2D4D6129545D2C4F233DB80903B02417B540CD75F1A0E25CEAAA5CD2A3F" xml:space="preserve">
+    <value>Entity record ID to be opened</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>

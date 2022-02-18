@@ -132,6 +132,10 @@
         bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
 </value>
   </metadata>
+  <data name="100000:label,0A60BE79C24A5C66CE4C0AA56FDA60E03ECA62043AA00AAA682256BA0A622073" xml:space="preserve">
+    <value>ให้คำแนะนำอย่างชาญฉลาดเกี่ยวกับบทความให้ความรู้ กรณีและปัญหาที่คล้ายกัน และอื่นๆ ตามบริบทแบบเรียลไทม์</value>
+    <comment>Relative path in xml: \msdyn_panetoolconfiguration\msdyn_description id:</comment>
+  </data>
   <data name="10:Description,lk_msdyn_adaptivecardconfiguration_createdby" xml:space="preserve">
     <value>รหัสเฉพาะของผู้ใช้ที่สร้างเรกคอร์ด</value>
     <comment>msdyn_adaptivecardconfiguration Description for EntityRelationship 'lk_msdyn_adaptivecardconfiguration_createdby'</comment>

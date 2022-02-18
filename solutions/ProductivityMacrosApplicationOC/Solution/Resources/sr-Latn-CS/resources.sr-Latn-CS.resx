@@ -132,6 +132,106 @@
         bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
 </value>
   </metadata>
+  <data name="100000:label,0856448DF24C3FFBD308922AFD3760AF3F55B42842A63D7DF5B8D1A975BAA8C8" xml:space="preserve">
+    <value>Slanje članka u bazi znanja u ćaskanje</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,1394F085ACABD3AB523F9E541AB568E51A132AFBD0BF392EE749495C3BDBBFA3" xml:space="preserve">
+    <value>Konektor za više kanala</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,1A0B637692C3E708222D3C35E207F3CB18FA5893F8CC0BD7F98EE5E21F338F5C" xml:space="preserve">
+    <value>Povežite zapis sa razgovorom</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,35D3CE9F367F2A75784E054562E709A4B0BCC1DE23B8DC3430567C900A209E0A" xml:space="preserve">
+    <value>Logički naziv entiteta koji se otvara</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,3AC0671BF3696CCC7CC3B77449B5C72AB43B0671C5A8BBC161A404DA0B190DC9" xml:space="preserve">
+    <value>Ovo će poslati vezu članka u bazi znanja u ćaskanje</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,3FE10B76B719E4122BB8277C4575A629B24BD4AFBFC91AEA97F3C58213463035" xml:space="preserve">
+    <value>ID zapisa entiteta</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,47D9B9DE978CAC55929FC4BB687852E316AB23BDAABCB614CF5C96396704CB86" xml:space="preserve">
+    <value>Raskinite vezu između zapisa i razgovora</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,6072586D1853FAD3568EF9B3F6DB465D85F46E6D5E2C635002FF2EF2E9990147" xml:space="preserve">
+    <value>Primarni naziv entiteta</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,61A45311375657A586E18C0F50A50FE12B0D13F9025DBB652AEF078B67694658" xml:space="preserve">
+    <value>Povežite zapis sa razgovorom</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,65A036F9DA133D2C22490DEFD2713C05E341931C9605A7B555082C05D812E24A" xml:space="preserve">
+    <value>Unapred definisane radnje automatizacije</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_categorylabel id:</comment>
+  </data>
+  <data name="100000:label,84125FBE0D04BB728772F0A321574AB7AFD8F25B4FF5EDC3D4003BD39517A948" xml:space="preserve">
+    <value>Konektor za više kanala</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,86A67AB646B4313EF21240DCE926BF0C50B3CC126D66687F233E2C96BFD7A273" xml:space="preserve">
+    <value>Raskinite vezu između zapisa i razgovora</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,9246D1B74E7321200B086ED9242E6557471CEABCF125CAE233A428930CC18FBD" xml:space="preserve">
+    <value>Slanje članka u bazi znanja u ćaskanje</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,97C3C58FA659D76FA1CA473940821A2231236D8D2F17D1BAA36F752E8CB95472" xml:space="preserve">
+    <value>Povežite zapis sa razgovorom</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,A5D802ADDCBF708AF4FDF7E52D410C568F3C739DEACA58854C48D02F987A15BE" xml:space="preserve">
+    <value>Raskinite vezu između zapisa i razgovora</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,B145B585A3747C48DEAFC5F14F500C415C6BA6B4A70B5CDBB6B0B2F8B334B532" xml:space="preserve">
+    <value>Raskinite vezu između zapisa i razgovora</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,C106CA69A3451898DFFD2A94FBAE0FCD8FB48066BBA880D25C8903BA96AD1EA3" xml:space="preserve">
+    <value>Ovo će poslati vezu članka u bazi znanja u ćaskanje</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
+  <data name="100000:label,C361D7E5ED74408622DC1196C25D6B91B5ABB7C096A9A72EAF90177CD59B0A2C" xml:space="preserve">
+    <value>Konektor za više kanala</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,CBEF5472F4A470D0FFAF079974509C2F03398C9277328DB855F3EF34A6D3C334" xml:space="preserve">
+    <value>Konektor za više kanala</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_title id:</comment>
+  </data>
+  <data name="100000:label,DA09458A62D2817F5FA479745731645FBA76E3358635795CF4F4083472F79EAD" xml:space="preserve">
+    <value>Konektor za više kanala</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,F42E9FA59FEBC4051CA86D128223D8A6F9C90562B07E757D8EC3907CB32146E2" xml:space="preserve">
+    <value>Povežite zapis sa razgovorom</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,F660A762E630BDB7D8444828F0895FB5B304901E53B775ED0FDC359F5DC79D70" xml:space="preserve">
+    <value>Logičko ime entiteta</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,F71CB356390B8A29C7F0FB52BBA7B6F86533086672F8D74AB72F4858778DCE8D" xml:space="preserve">
+    <value>Automatizujte najčešće korišćene radnje za više kanala</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,F9F19775DBCFE17A9FECDFD180BD8AB63735A4E45290763E2DD3D927AA27DDB4" xml:space="preserve">
+    <value>Primarni naziv entiteta koji se otvara</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,FFF5C2D4D6129545D2C4F233DB80903B02417B540CD75F1A0E25CEAAA5CD2A3F" xml:space="preserve">
+    <value>ID zapisa entiteta koji se otvara</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
     <value>Microsoft Dynamics 365</value>
     <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>

@@ -132,6 +132,10 @@
         bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
 </value>
   </metadata>
+  <data name="100000:label,0A60BE79C24A5C66CE4C0AA56FDA60E03ECA62043AA00AAA682256BA0A622073" xml:space="preserve">
+    <value>Đưa ra đề xuất thông minh về các bài viết trong cơ sở kiến thức, trường hợp tương tự và nhiều nội dung khác dựa trên ngữ cảnh theo thời gian thực.</value>
+    <comment>Relative path in xml: \msdyn_panetoolconfiguration\msdyn_description id:</comment>
+  </data>
   <data name="10:Description,lk_msdyn_adaptivecardconfiguration_createdby" xml:space="preserve">
     <value>Mã định danh duy nhất của người dùng đã tạo bản ghi.</value>
     <comment>msdyn_adaptivecardconfiguration Description for EntityRelationship 'lk_msdyn_adaptivecardconfiguration_createdby'</comment>

@@ -132,6 +132,14 @@
         bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
 </value>
   </metadata>
+  <data name="100000:label,0D4DB5C9EF5E1EFD3E8687BE3CB768868B8EC7A6D01087874CDAB324C5FE276F" xml:space="preserve">
+    <value>인적 오류를 최소화하고 일관된 서비스를 제공하는 데 도움이 되는 단계별 지침을 제공합니다.</value>
+    <comment>Relative path in xml: \msdyn_panetoolconfiguration\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,7C4A14EF225F6F1542FA00FD36FA227065FAE529327C8A76089960C0503971C7" xml:space="preserve">
+    <value>에이전트 스크립트</value>
+    <comment>Relative path in xml: \msdyn_panetoolconfiguration\msdyn_name id:</comment>
+  </data>
   <data name="10:Description,business_unit_msdyn_productivityagentscript" xml:space="preserve">
     <value>레코드를 담당하는 사업부의 고유 식별자</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'business_unit_msdyn_productivityagentscript'</comment>
