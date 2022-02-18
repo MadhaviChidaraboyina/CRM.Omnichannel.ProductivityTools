@@ -15,12 +15,9 @@
 solutions\AgentscriptComponent\Client\Controls\ButtonControl\strings\ButtonControl.1033.resx,AgentscriptComponent
 solutions\AgentscriptComponent\Client\Controls\CallscriptControl\strings\CallscriptControl.1033.resx,AgentscriptComponent
 solutions\AgentscriptComponent\Client\Localization\Languages\msdyn_AgentscriptComponent.1033.resx,AgentscriptComponent
-solutions\AgentscriptComponent\Solution\Resources\Assets\1033.json,AgentscriptComponent
 solutions\AgentscriptComponent\Solution\Resources\en-US\resources.en-US.resx,AgentscriptComponent
 solutions\Anchors\AgentProductivityTools\Solution\Resources\en-US\resources.en-US.resx,Anchors\AgentProductivityTools
-solutions\ProductivityMacrosApplication\Solution\Resources\Assets\1033.json,ProductivityMacrosApplication
 solutions\ProductivityMacrosApplication\Solution\Resources\en-US\resources.en-US.resx,ProductivityMacrosApplication
-solutions\ProductivityMacrosApplicationOC\Solution\Resources\Assets\1033.json,ProductivityMacrosApplicationOC
 solutions\ProductivityMacrosApplicationOC\Solution\Resources\en-US\resources.en-US.resx,ProductivityMacrosApplicationOC
 solutions\ProductivityMacrosComponent\Client\Controls\RunLinkControl\Strings\RunLinkControl.1033.resx,ProductivityMacrosComponent
 solutions\ProductivityMacrosComponent\Client\Localization\ProductivityMacrosComponent_webresource_strings.1033.resx,ProductivityMacrosComponent
@@ -33,5 +30,4 @@ solutions\SmartAssist\Client\Controls\RecommendationControl\strings\Recommendati
 solutions\SmartAssist\Client\Controls\SmartAssistAnyEntityControl\strings\SmartAssistAnyEntityControl.1033.resx,SmartAssist
 solutions\SmartAssist\Client\Controls\SmartassistPanelControl\strings\SmartassistPanelControl.1033.resx,SmartAssist
 solutions\SmartAssist\Client\Controls\TPBotControl\strings\TPBotControl.1033.resx,SmartAssist
-solutions\SmartAssist\Solution\Resources\Assets\1033.json,SmartAssist
 solutions\SmartAssist\Solution\Resources\en-US\resources.en-US.resx,SmartAssist
