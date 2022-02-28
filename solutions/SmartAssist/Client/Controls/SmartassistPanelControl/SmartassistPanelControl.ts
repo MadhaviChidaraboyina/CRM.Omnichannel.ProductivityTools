@@ -156,7 +156,9 @@ module MscrmControls.SmartassistPanelControl {
 
                 let recordId = this.getEntityRecordId(this.AnchorTabContext);
                 this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SessionInitStarted, null);
-                this.renderSuggestions(false, this.AnchorTabContext.entityName, Utility.FormatGuid(recordId));
+                if (this.AnchorTabContext) {
+                    this.renderSuggestions(false, this.AnchorTabContext.entityName, Utility.FormatGuid(recordId));
+                }
 
                 this.newInstance = false;
             }
@@ -283,7 +285,7 @@ module MscrmControls.SmartassistPanelControl {
         public async renderSuggestions(update: boolean, entityName: string, recordId: string = null): Promise<void> {
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.UpdateViewStarted, null);
             this.showLoader();
-
+            
             // Get Configs to display suggestions
             var configs: SAConfig[] = await SAConfigDataManager.Instance.getFilteredSAConfig(entityName, this.telemetryHelper);  
             
