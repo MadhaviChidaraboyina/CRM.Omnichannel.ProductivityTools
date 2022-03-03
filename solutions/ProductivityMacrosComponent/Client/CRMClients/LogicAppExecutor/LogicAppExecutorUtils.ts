@@ -79,6 +79,9 @@ namespace Microsoft.LogicAppExecutor {
 			}
 			return Microsoft.ProductivityMacros.Internal.resolveTemplateString(slug, stateParams, "");
 		}
+        else if (typeof slug == "boolean" || slug instanceof Boolean) {
+            return Promise.resolve(slug.toString());
+        }
 		else {
 			return Promise.resolve(slug);
 		}
