@@ -3,6 +3,8 @@
  */
 /// <reference path="../../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApiInternal.d.ts" />
 /// <reference path="./Constants.ts" />
+/// <reference path="./XrmAppProxy.ts" />
+/// <reference path="../../TypeDefinitions/AppRuntimeClientSdk.d.ts" />
 module ProductivityPaneLoader {
     export class Utils {
         public static isNullOrUndefined(obj: any) {

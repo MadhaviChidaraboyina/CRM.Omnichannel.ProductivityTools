@@ -1,0 +1,15 @@
+{
+  "name": "crm.omnichannel.productivitytools",
+  "version": "1.0.0",
+  "description": "Productivity Tools for Microsoft Dynamics 365",
+  "author": "Microsoft Corporation",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "install": "cd tests && npm install",
+    "test": "cd tests && npm run test",
+    "test-cli": "cd tests && npm run test-cli",
+    "watch": "cd tests && npm run watch",
+    "watchAll": "cd tests && npm run watchAll"
+  }
+}

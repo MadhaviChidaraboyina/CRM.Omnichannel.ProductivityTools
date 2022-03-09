@@ -1,0 +1,11 @@
+{
+    "include": ["Utils.ts"],
+    "exclude": ["node_modules"],
+    "compileOnSave": true,
+    "compilerOptions": {
+        "outFile": "Utils.js",
+        "skipLibCheck": true,
+        "module": "amd",
+        "target": "es6"
+    }
+}

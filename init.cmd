@@ -77,11 +77,11 @@ echo BuildVariables path is %WSRoot%\target\buildVariables.txt
 
 if [%TestAgentTag%] == [true] if exist %WSRoot%\target\buildVariables.txt (
 	echo Enabling existing build variables..
-	
+
 	for /f %%a in (%WSRoot%\target\buildVariables.txt) do (
 		set "%%a"
 		echo %%a has been set
-		
+
 		for /f "delims== tokens=1,2" %%G IN ("%%a") do echo powershell -ExecutionPolicy Bypass -Command "%PKG_XRMAPP_TOOLS%\build\agent\agent_setProcessVariable.ps1 %%G %%H
 	)
 )
@@ -195,7 +195,7 @@ for /f "tokens=1* delims=;" %%a in ("%listPath%") do (
 	set "listPath=%%b"
 )
 goto nextExistingPathItem
-	
+
 :setNewPath
 set "getCleanedPathCommand=powershell -ExecutionPolicy Unrestricted -Command "%PKG_XRMAPP_TOOLS%\build\agent\AgentUtilities.exe /command:cleanpath /path:'%PATH%' /excludefile:%WSRoot%\build\config\pathExclude.txt""
 for /f "delims=" %%I in ('%getCleanedPathCommand%') do set "PATH=%%I;%PKG_XRMAPP_TOOLS%\tools\commands;%PKG_XRMAPP_TOOLS%\tools\ImportSolution"
@@ -249,7 +249,7 @@ if exist %buildVariables% (
 
 if [%DevAgentTag%] == [true] (
 	%PKG_XRMAPP_TOOLS%\tools\GenerateEnvironmentConfiguration\GenerateEnvironmentConfiguration.exe %WSRoot% %WSRoot%\build\include %BuildConfiguration% %BuildPlatform%
-	
+
 	echo Flushing build variables for post build operations..
 	echo BuildConfiguration=%BuildConfiguration% >> %buildVariables%
 	echo BuildPlatform=%BuildPlatform% >> %buildVariables%
@@ -285,6 +285,15 @@ echo Install npm dependencies for solutions
 ==========================================================
 if exist ./solutions/package.json (
 	cd ./solutions
+	call npm install
+	cd ..
+)
+@echo.
+
+echo Install npm dependencies for unit tests
+==========================================================
+if exist ./tests/package.json (
+	cd ./tests
 	call npm install
 	cd ..
 )

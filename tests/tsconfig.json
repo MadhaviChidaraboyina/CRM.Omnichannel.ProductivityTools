@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "types": ["@types/jest"]
+  },
+  "exclude": ["**/tests/*.test.ts"]
+}

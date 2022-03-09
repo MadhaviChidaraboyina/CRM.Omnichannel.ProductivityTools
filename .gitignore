@@ -76,7 +76,7 @@ SolutionPackage/
 *.dll
 *.pdb
 
-#Generated js files 
+#Generated js files
 /solutions/**/**/**/*.js
 /solutions/**/**/**/*.map
 
@@ -86,7 +86,7 @@ SolutionPackage/
 /solutions/**/Solution/WebResources/**/*.map
 /solutions/**/Solution/WebResources/**/*.resx
 
-#stylecop files being generated in project folders after build 
+#stylecop files being generated in project folders after build
 /solutions/**/Client/Settings.StyleCop
 /solutions/**/Solution/Settings.StyleCop
 /solutions/**/Client.UnitTests/Settings.StyleCop
@@ -105,3 +105,8 @@ SolutionPackage/
 
 # Node modules
 /solutions/node_modules
+tests/node_modules/
+
+# Package-lock files
+package-lock.json
+tests/package-lock.json

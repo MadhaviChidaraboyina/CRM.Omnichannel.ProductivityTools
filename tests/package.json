@@ -1,0 +1,26 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "Unit Tests for Productivity Tools",
+  "author": "Microsoft Corporation",
+  "license": "ISC",
+  "private": true,
+  "directories": {
+    "test": "."
+  },
+  "scripts": {
+    "test": "jest",
+    "test-cli": "jest --coverage",
+    "watch": "jest --watch",
+    "watchAll": "jest --watchAll"
+  },
+  "devDependencies": {
+    "@types/jest": "27.4.0",
+    "@types/rewire": "^2.5.28",
+    "jest": "27.4.5",
+    "jest-trx-results-processor": "2.2.0",
+    "rewire": "^6.0.0",
+    "ts-jest": "27.1.2",
+    "typescript": "^4.5.4"
+  }
+}
