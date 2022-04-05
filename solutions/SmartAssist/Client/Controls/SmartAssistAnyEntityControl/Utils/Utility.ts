@@ -155,5 +155,107 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static getMapObject(jsonInput: string): { [key: string]: string } {
             return JSON.parse(jsonInput) as { [key: string]: string };
         }
+
+        public static async checkAndTurnOnSuggestionModeling(telemetryHelper: TelemetryHelper) {
+            // auto-turn on the case and KB suggestion for the org created after May 20, 2022
+            let isSuggestionsAutoProvisionChecked  = localStorage[StringConstants.SuggestionsModelingStatusKey];
+            if (!isSuggestionsAutoProvisionChecked) {
+                // FCS to auto enable case/KB suggestion
+                const isFCSEnabled: boolean = (Xrm.Utility.getGlobalContext() as any).getFeatureControlSetting(StringConstants.suggestionFcsNameSpace, StringConstants.suggestionFcsKey);
+                if (!!isFCSEnabled && this.isNewOrg(telemetryHelper)) {
+                    try {
+                        if ( this.shouldEnableCaseKbSuggestion(telemetryHelper)) {
+                            this.enableAISuggestionsForCaseAndKb(SmartAssistAnyEntityControl._context, telemetryHelper);
+                            telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionAutoEnabled, null);
+                        } else {
+                            telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionNotAutoEnabled, null);
+                        }
+                    } catch(error) {
+                        telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToAutoEnableAISuggestion, error, null);
+                    }
+                } 
+                localStorage.setItem(StringConstants.SuggestionsModelingStatusKey, "true");
+            }
+        }
+
+        public static enableAISuggestionsForCaseAndKb(context: Mscrm.ControlData<IInputBag>, telemetryHelper: TelemetryHelper): void {
+            var msdyn_InitializeAnalyticsRequest = {
+                featureIds: `${StringConstants.CaseSuggestionFeatureId},${StringConstants.KbSuggestionFeatureId}`,
+
+                getMetadata: function() {
+                    return {
+                        boundParameter: null,
+                        parameterTypes: {
+                            "featureIds": {
+                                "typeName": "Edm.String",
+                                "structuralProperty": 1
+                            }
+                        },
+                        operationType: 0,
+                        operationName: StringConstants.InitializeAnalytics
+                    };
+                }
+            };
+
+            context.webAPI.execute(msdyn_InitializeAnalyticsRequest)
+                .then(function (response) {
+                    if (response.status === 204 || response.status === 200) {
+                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionEnabled,  null);
+                    } else {
+                        this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToTriggerAISuggestionModeling, response.status, null);
+                    }
+                })
+                .catch((error) => {
+                    telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToTriggerAISuggestionModeling, error, null);
+                });
+        }
+
+        public static isNewOrg = async(telemetryHelper: TelemetryHelper): Promise<boolean> => {
+            // Only auto turn on suggestion for org creation date is after May 20, 2022
+            try {
+                let isNewOrg: boolean = false;
+                const orgEntity = await SmartAssistAnyEntityControl._context.webAPI.retrieveMultipleRecords(
+                    'organization', 
+                    '?$top=1&$select=createdon'
+                ) as any;
+
+                if (orgEntity && orgEntity.entities && orgEntity.entities.length == 1) {
+                    isNewOrg = Date.parse(orgEntity.entities[0].createdon) > Date.parse(StringConstants.date);
+                }
+                return isNewOrg;
+            } catch(error) {
+                telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToAutoEnableAISuggestion, error, null);
+            }
+        }
+
+        public static shouldEnableCaseKbSuggestion = async(telemetryHelper): Promise<boolean> => {
+            // Check if case suggestion and KB suggestion are enabled
+            try {
+                const fetchXmlQuery = 
+                    "<fetch version='1.0' output-format='xml-platform' mapping='logical'>" + 
+                    `<entity name='${StringConstants.DataInsightsAndAnalyticsFeature}'>` + 
+                    `<attribute name = 'msdyn_datainsightsandanalyticsfeatureid'/>` + 
+                    `<attribute name = 'msdyn_analyticschecksum'/>` + 
+                    "<filter type = 'or'>" + 
+                    `<condition attribute = 'msdyn_datainsightsandanalyticsfeatureid' operator = 'eq' value = '${StringConstants.CaseSuggestionFeatureId}'/>` + 
+                    `<condition attribute = 'msdyn_datainsightsandanalyticsfeatureid' operator = 'eq' value = '${StringConstants.KbSuggestionFeatureId}'/>` + 
+                    "</filter>" + 
+                    "</entity>" + 
+                    "</fetch>"
+                const featureRecords = await SmartAssistAnyEntityControl._context.webAPI.retrieveMultipleRecords(
+                    StringConstants.DataInsightsAndAnalyticsFeature,
+                    "?fetchXml=" + fetchXmlQuery
+                ) as any;
+
+                let isNotEnabled = false;
+                if (featureRecords && featureRecords.entities && featureRecords.entities.length === 2) {
+                    isNotEnabled = !featureRecords.entities[0].msdyn_analyticschecksum && !featureRecords.entities[1].msdyn_analyticschecksum;
+                }
+
+                return isNotEnabled;
+            } catch(error) {
+                telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToAutoEnableAISuggestion, error, null);
+            }
+        }
     }
 }

@@ -42,6 +42,15 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static DismissCardEvent = 'dismissCard';
         public static NoSugegstionsDivId = "noSuggestionsDiv-";
         public static TitleDivId = "saConfigTitleDiv-";
+
+        public static InitializeAnalytics = 'msdyn_InitializeAnalytics';
+        public static SuggestionsModelingStatusKey = 'IsSASuggestionsModelingTriggered';
+        public static DataInsightsAndAnalyticsFeature = 'msdyn_datainsightsandanalyticsfeature';
+        public static CaseSuggestionFeatureId = 'b0d7f44e-b949-4e2f-b0eb-62b5dcf4e76a';
+        public static KbSuggestionFeatureId = 'fc5d5a26-e8c6-4feb-a441-2a471efbe350';
+        public static suggestionFcsNameSpace = 'FCS_SASuggestion';
+        public static suggestionFcsKey = 'DefaultOnFeatureControl';
+        public static date = '2022-05-20T24:00:00Z';
     }
 
     /**

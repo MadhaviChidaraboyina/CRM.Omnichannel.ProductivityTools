@@ -133,8 +133,11 @@ module MscrmControls.SmartAssistAnyEntityControl {
             // logging initialization . ControlInitializationStarted
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ControlInitializationStarted, null);
 
-            //Get Current context
+            // Get Current context
             await this.getCurrentContext();
+
+            await Utility.checkAndTurnOnSuggestionModeling(this.telemetryHelper);
+            
             if (this.saConfig.SuggestionType == SuggestionType.BotSuggestion && this.AnyEntityContainerState == AnyEntityContainerState.Enabled) {
                 this.showLoader();
                 //TODO: add telemetry for all the scenarios
