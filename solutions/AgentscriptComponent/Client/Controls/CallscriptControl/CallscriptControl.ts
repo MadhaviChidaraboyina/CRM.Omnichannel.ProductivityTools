@@ -352,6 +352,7 @@ module MscrmControls.Callscript {
 			// We give one initial load and three reload retry times.
 			while (this.loadRetryCount < 4 && this.context.utils.isNullOrUndefined(this.stateManager.callscriptsForCurrentSession)) {
 				this.loadRetryCount++;
+				await this.macroUtil.init();
 				await this.stateManager.fetchCallScriptsForCurrentSession();
 				eventParams.addParameter("The count of loading CallScript: ", this.loadRetryCount.toString());
 				this.telemetryLogger.logSuccess(this.telemetryContext, methodName, eventParams);

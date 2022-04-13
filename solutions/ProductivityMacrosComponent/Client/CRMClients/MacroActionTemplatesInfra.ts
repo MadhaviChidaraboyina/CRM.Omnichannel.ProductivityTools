@@ -1,5 +1,6 @@
 ﻿/// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 /// <reference path="../Libraries/requirejs/require.d.ts" />
+/// <reference path="../TelemetryHelper.ts" />
 
 /** @internal */
 namespace Microsoft.ProductivityMacros.Internal {
@@ -11,7 +12,9 @@ namespace Microsoft.ProductivityMacros.Internal {
         public static InitMacroActionTemplates(): Promise<boolean> {
             return new Promise<boolean>(
                 function (resolve, reject) {
+                    logSuccess("MacroActionTemplate- startInit", "");
                     if (ProductivityMacroOperation.macroActionTemplates.size > 0 && ProductivityMacroOperation.isWebResourceLoaded == true) {
+                        logSuccess("MacroHasBeenLoaded", "");
                         return resolve(true);
                     }
                     let mPromises: Promise<any>[] = [];
@@ -42,12 +45,15 @@ namespace Microsoft.ProductivityMacros.Internal {
                             );
                             loadWebResource().then((result) => {
                                 ProductivityMacroOperation.isWebResourceLoaded = true;
+                                logSuccess("MacroActionTemplate- loadWebResourceSuccess", "", result);
                                 return resolve(true);
                             }, (error) => {
+                                logFailure("MacroActionTemplate- loadWebResourceFailure", error);
                                 return reject(error);
                             });
                         },
                         function (error) {
+                            logFailure("MacroActionTemplate- resolvePromisesFailure", error);
                             return reject(error);
                         });
                 }
@@ -99,6 +105,7 @@ namespace Microsoft.ProductivityMacros.Internal {
             let webresources: { [key: string]: boolean } = {}
             let resources: string[] = [];
             if (Internal.ProductivityMacroOperation.macroConnectorTemplates.size === 0) {
+                logSuccess("MacroConnectorTemplateSizeIsEmpty. Exiting", "");
                 return resolve(true);
             }
             var serverUrl = (((((window as any).top) as any).Xrm) as any).Page.context.getClientUrl();
@@ -125,15 +132,17 @@ namespace Microsoft.ProductivityMacros.Internal {
                     Object.keys(webresources).forEach(function (key) {
                         resources.push(serverUrl + "/webresources/" + key);
                     });
-                    requirejs.config({waitSeconds: 0});
                     requirejs.onError = function (err: any) {
+                        logFailure("WebresourcesLoadWithfailure", err);
                         return reject(err);
                     }
                     require(resources, function (library: any) {
+                        logSuccess("WebresourcesLoaded", "");
                         return resolve("success");
                     });
                 },
                 function (error) {
+                    logFailure("LoadFailed", error);
                     return reject(error);
                 }
             );
@@ -168,9 +177,11 @@ namespace Microsoft.ProductivityMacros.Internal {
                                         )
                                         Promise.all(promises).then(
                                             function (results: any[]) {
+                                                logSuccess("FindingDependenciesPromisesAllResolved", "");
                                                 resolve("success");
                                             },
                                             function (error) {
+                                                logSuccess("FindingDependenciesPromisesFailure", "");
                                                 return reject(error);
                                             }
                                         );
@@ -180,11 +191,12 @@ namespace Microsoft.ProductivityMacros.Internal {
                                 }
                             );
                         } else {
-                            console.log("Failed to find " + webresourcename);
+                            logSuccess("Failed to find " + webresourcename, "");
                             resolve("success"); //Resolving as success here as error as this point won't be caught in run history
                         }
                     },
                     function (error) {
+                        logFailure("FindDependencyFailed", error);
                         reject(error);
                     }
                 );

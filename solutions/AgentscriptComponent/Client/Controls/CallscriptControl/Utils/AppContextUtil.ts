@@ -111,18 +111,12 @@ module MscrmControls.Callscript
 		private context: Mscrm.ControlData<IInputBag>;
 		private telemetryContext: string;
         private telemetryLogger: TelemetryLogger;
-        private static isInitMacroActionTemplates: boolean;
-        private static initMacroActionTemplatesPromise: Promise<boolean>;
 
 		constructor(context: Mscrm.ControlData<IInputBag>, logger: TelemetryLogger)
 		{
 			this.context = context;
 			this.telemetryContext = TelemetryComponents.MacroUtil;
             this.telemetryLogger = logger;
-            
-            if (!MacroUtil.initMacroActionTemplatesPromise) {
-                MacroUtil.initMacroActionTemplatesPromise = Microsoft.ProductivityMacros.Internal.ProductivityMacroOperation.InitMacroActionTemplates();
-            }
         }
 
 		public async init() {
@@ -137,8 +131,8 @@ module MscrmControls.Callscript
 		public async executeMacro(macroName: string, macroId: string, macroParam?: any): Promise<string>
 		{
 			let methodName = "executeMacro";
-			await this.resolveInitMacroTemplate();
 			try {
+				await this.resolveInitMacroTemplate();
 				return Microsoft.ProductivityMacros.runMacro(macroName);
 			}
 			catch (error) {
@@ -156,20 +150,30 @@ module MscrmControls.Callscript
 
         public async resolveInitMacroTemplate() {
 			let methodName = "resolveInitMacroTemplate";
-            if (!MacroUtil.isInitMacroActionTemplates) {
-				await MacroUtil.initMacroActionTemplatesPromise.then(
-					function (value) {
-						MacroUtil.isInitMacroActionTemplates = value;
-					},
-					function (error) {
-						MacroUtil.isInitMacroActionTemplates = false;
-						let errorMessage = "Failed to initiate macro template";
-						let errorParam = new EventParameters();
-						errorParam.addParameter("errorDetails", error);
-						this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, errorParam);
-					}
-				);
-			}
+			let _this = this;
+			let eventParams = new EventParameters();
+			eventParams.addParameter("message", "Start resolve init macro template");
+			_this.telemetryLogger.logSuccess(_this.telemetryContext, methodName, eventParams);
+			// Set 10s time out if the InitMacroActionTemplates does not finish and pend for loading.
+			const timeoutPromise = new Promise((resolve, reject) => {
+				setTimeout(resolve, 10000, 'time out triggered');
+			});
+			const initMacroPromise = Microsoft.ProductivityMacros.Internal.ProductivityMacroOperation.InitMacroActionTemplates();
+			await Promise.race([timeoutPromise, initMacroPromise]).then((value) => {
+				if (_this.telemetryLogger)
+				{
+					eventParams.addParameter("message", value == 'time out triggered' ? "Resolve init macro template over time limit" : "Macro template init is finished");
+					_this.telemetryLogger.logSuccess(_this.telemetryContext, methodName, eventParams);
+				}
+			}, function (error) {
+				if (_this.telemetryLogger)
+				{
+					let errorMessage = "Failed to initiate macro template";
+					let errorParam = new EventParameters();
+					errorParam.addParameter("errorDetails", error);
+					_this.telemetryLogger.logError(_this.telemetryContext, methodName, errorMessage, errorParam);
+				}
+			})
         }
 
         /**
@@ -179,16 +183,9 @@ module MscrmControls.Callscript
          */
         public async resolveReplaceableParameters(inputParam: string): Promise<string> {
             let methodName = "resolveReplaceableParameters";
-			await this.resolveInitMacroTemplate();
             try {
-                if (MacroUtil.isInitMacroActionTemplates) {
-                    return Microsoft.ProductivityMacros.Internal.resolveTemplateString(inputParam, null, "");
-                }
-                else {
-                    return new Promise((resolve, reject) => {
-                        resolve(inputParam);
-                    });
-                }
+				await this.resolveInitMacroTemplate();
+                return Microsoft.ProductivityMacros.Internal.resolveTemplateString(inputParam, null, "");
             }
             catch (error) {
                 let errorMessage = "Failed to resolve replaceable parameters in text";
