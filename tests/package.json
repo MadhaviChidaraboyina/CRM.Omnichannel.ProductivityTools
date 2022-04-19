@@ -10,7 +10,6 @@
   },
   "scripts": {
     "test": "jest",
-    "test-cli": "jest --coverage",
     "watch": "jest --watch",
     "watchAll": "jest --watchAll"
   },

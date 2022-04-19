@@ -8,7 +8,6 @@
   "scripts": {
     "install": "cd tests && npm install",
     "test": "cd tests && npm run test",
-    "test-cli": "cd tests && npm run test-cli",
     "watch": "cd tests && npm run watch",
     "watchAll": "cd tests && npm run watchAll"
   }
