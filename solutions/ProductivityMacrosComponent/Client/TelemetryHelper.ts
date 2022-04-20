@@ -17,23 +17,28 @@ namespace Microsoft.ProductivityMacros.Internal {
 	let MOONCAKE_ENDPOINT = ""; // Add MoonCake ARIA Endpoint whenever available
 
 	export function initializeTelemetry() {
+		try {
 		let domain = getDomain();
 		let logConfig = getConfiguration(domain);
-		if (domain == "Dev") {
-			macrosLogger = AWTLogManager.initialize(devIngestionKey, logConfig);
-		}
-		else {
-			macrosLogger = AWTLogManager.initialize(prodIngestionKey, logConfig);
-		}
-
-		AWTLogManager.addNotificationListener({
-			eventsSent: (events) => {
-				console.log("CIF Telemetry - Number of Events Sent: " + events.length);
-			},
-			eventsDropped: (events, reason) => {
-				console.log("CIF Telemetry - Number of Events Dropped: " + events.length);
+			if (domain == "Dev") {
+				macrosLogger = AWTLogManager.initialize(devIngestionKey, logConfig);
 			}
-		});
+			else {
+				macrosLogger = AWTLogManager.initialize(prodIngestionKey, logConfig);
+			}
+
+			AWTLogManager.addNotificationListener({
+				eventsSent: (events) => {
+					console.log("CIF Telemetry - Number of Events Sent: " + events.length);
+				},
+				eventsDropped: (events, reason) => {
+					console.log("CIF Telemetry - Number of Events Dropped: " + events.length);
+				}
+			});
+		}
+		catch (e) {
+			console.error("Telemetry Init Failure:", e);
+		}
 	}
 
 	// Returns the Host Name
@@ -177,57 +182,61 @@ namespace Microsoft.ProductivityMacros.Internal {
 	}
 
 	export function setMacrosAdminData(data: any): void {
-		var AdminTelemetry = new AWTEventProperties();
-		AdminTelemetry.setName(TelemetryConstants.macrosAdminTable);
+		if (macrosLogger) {
+			var AdminTelemetry = new AWTEventProperties();
+			AdminTelemetry.setName(TelemetryConstants.macrosAdminTable);
 
-		AdminTelemetry.setProperty(TelemetryConstants.adminDesignerInstanceId, data.designerInstanceId ? data.designerInstanceId : "");
-		AdminTelemetry.setProperty(TelemetryConstants.adminEventName, data.eventName ? data.eventName : "");
-		AdminTelemetry.setProperty(TelemetryConstants.adminEventCorrelationId, data.eventCorrelationId ? data.eventCorrelationId : "");
-		AdminTelemetry.setProperty(TelemetryConstants.adminMessage, data.message ? data.message : "");
-		AdminTelemetry.setProperty(TelemetryConstants.adminEventData, data.eventData ? data.eventData : "");
-		AdminTelemetry.setProperty(TelemetryConstants.adminEventId, data.eventId ? data.eventId : "");
-		AdminTelemetry.setProperty(TelemetryConstants.adminEventTimeStamp, data.eventTimeStamp ? data.eventTimeStamp : "");
-		AdminTelemetry.setProperty(TelemetryConstants.adminEventType, data.eventType ? data.eventType : "");
-		AdminTelemetry.setProperty(TelemetryConstants.adminLevel, data.level ? data.level : "");
-		AdminTelemetry.setProperty(TelemetryConstants.adminException, data.exception ? data.exception : "");
+			AdminTelemetry.setProperty(TelemetryConstants.adminDesignerInstanceId, data.designerInstanceId ? data.designerInstanceId : "");
+			AdminTelemetry.setProperty(TelemetryConstants.adminEventName, data.eventName ? data.eventName : "");
+			AdminTelemetry.setProperty(TelemetryConstants.adminEventCorrelationId, data.eventCorrelationId ? data.eventCorrelationId : "");
+			AdminTelemetry.setProperty(TelemetryConstants.adminMessage, data.message ? data.message : "");
+			AdminTelemetry.setProperty(TelemetryConstants.adminEventData, data.eventData ? data.eventData : "");
+			AdminTelemetry.setProperty(TelemetryConstants.adminEventId, data.eventId ? data.eventId : "");
+			AdminTelemetry.setProperty(TelemetryConstants.adminEventTimeStamp, data.eventTimeStamp ? data.eventTimeStamp : "");
+			AdminTelemetry.setProperty(TelemetryConstants.adminEventType, data.eventType ? data.eventType : "");
+			AdminTelemetry.setProperty(TelemetryConstants.adminLevel, data.level ? data.level : "");
+			AdminTelemetry.setProperty(TelemetryConstants.adminException, data.exception ? data.exception : "");
 
-		AdminTelemetry.setProperty(TelemetryConstants.macroVersion, getMacroVersion());
-		AdminTelemetry.setProperty(TelemetryConstants.appId, getAppId());
-		AdminTelemetry.setProperty(TelemetryConstants.navigationType, getNavigationType());
-		AdminTelemetry.setProperty(TelemetryConstants.clientType, getClientType());
-		AdminTelemetry.setProperty(TelemetryConstants.crmVersion, getCrmVersion());
-		AdminTelemetry.setProperty(TelemetryConstants.orgId, getOrgId());
-		AdminTelemetry.setProperty(TelemetryConstants.orgName, getOrgName());
-		AdminTelemetry.setProperty(TelemetryConstants.userId, getUserId());
+			AdminTelemetry.setProperty(TelemetryConstants.macroVersion, getMacroVersion());
+			AdminTelemetry.setProperty(TelemetryConstants.appId, getAppId());
+			AdminTelemetry.setProperty(TelemetryConstants.navigationType, getNavigationType());
+			AdminTelemetry.setProperty(TelemetryConstants.clientType, getClientType());
+			AdminTelemetry.setProperty(TelemetryConstants.crmVersion, getCrmVersion());
+			AdminTelemetry.setProperty(TelemetryConstants.orgId, getOrgId());
+			AdminTelemetry.setProperty(TelemetryConstants.orgName, getOrgName());
+			AdminTelemetry.setProperty(TelemetryConstants.userId, getUserId());
 
-		macrosLogger.logEvent(AdminTelemetry);
+			macrosLogger.logEvent(AdminTelemetry);
+		}
 	}
 
 	// Function to populate the Macros Runtime Data Telemetry
 	function setMacrosRuntimeData(data: UsageTelemetryData): void {
-		var RuntimeTelemetry = new AWTEventProperties();
-		RuntimeTelemetry.setName(TelemetryConstants.macrosRuntimeTable);
+		if (macrosLogger) {
+			var RuntimeTelemetry = new AWTEventProperties();
+			RuntimeTelemetry.setName(TelemetryConstants.macrosRuntimeTable);
 
-		RuntimeTelemetry.setProperty(TelemetryConstants.macroActionName, data.MacrosActionName);
-		RuntimeTelemetry.setProperty(TelemetryConstants.macroActionResult, data.MacrosActionResult);
-		RuntimeTelemetry.setProperty(TelemetryConstants.telemetryData, data.TelemetryData ? JSON.stringify(data.TelemetryData) : "");
-		RuntimeTelemetry.setProperty(TelemetryConstants.isError, data.IsError ? data.IsError : false);
-		RuntimeTelemetry.setProperty(TelemetryConstants.errorFunction, data.ErrorObject ? data.ErrorObject.sourceFunc : "");
-		RuntimeTelemetry.setProperty(TelemetryConstants.errorMessage, data.ErrorObject ? data.ErrorObject.errorMsg : "");
-		RuntimeTelemetry.setProperty(TelemetryConstants.errorType, data.ErrorObject ? errorTypes[data.ErrorObject.errorType] : "");
-		RuntimeTelemetry.setProperty(TelemetryConstants.errorReportTime, data.ErrorObject ? data.ErrorObject.reportTime : "");
-		RuntimeTelemetry.setProperty(TelemetryConstants.correlationId, data.CorrelationId ? data.CorrelationId : "");
+			RuntimeTelemetry.setProperty(TelemetryConstants.macroActionName, data.MacrosActionName);
+			RuntimeTelemetry.setProperty(TelemetryConstants.macroActionResult, data.MacrosActionResult);
+			RuntimeTelemetry.setProperty(TelemetryConstants.telemetryData, data.TelemetryData ? JSON.stringify(data.TelemetryData) : "");
+			RuntimeTelemetry.setProperty(TelemetryConstants.isError, data.IsError ? data.IsError : false);
+			RuntimeTelemetry.setProperty(TelemetryConstants.errorFunction, data.ErrorObject ? data.ErrorObject.sourceFunc : "");
+			RuntimeTelemetry.setProperty(TelemetryConstants.errorMessage, data.ErrorObject ? data.ErrorObject.errorMsg : "");
+			RuntimeTelemetry.setProperty(TelemetryConstants.errorType, data.ErrorObject ? errorTypes[data.ErrorObject.errorType] : "");
+			RuntimeTelemetry.setProperty(TelemetryConstants.errorReportTime, data.ErrorObject ? data.ErrorObject.reportTime : "");
+			RuntimeTelemetry.setProperty(TelemetryConstants.correlationId, data.CorrelationId ? data.CorrelationId : "");
 
-		RuntimeTelemetry.setProperty(TelemetryConstants.macroVersion, getMacroVersion());
-		RuntimeTelemetry.setProperty(TelemetryConstants.appId, getAppId());
-		RuntimeTelemetry.setProperty(TelemetryConstants.navigationType, getNavigationType());
-		RuntimeTelemetry.setProperty(TelemetryConstants.clientType, getClientType());
-		RuntimeTelemetry.setProperty(TelemetryConstants.crmVersion, getCrmVersion());
-		RuntimeTelemetry.setProperty(TelemetryConstants.orgId, getOrgId());
-		RuntimeTelemetry.setProperty(TelemetryConstants.orgName, getOrgName());
-		RuntimeTelemetry.setProperty(TelemetryConstants.userId, getUserId());
+			RuntimeTelemetry.setProperty(TelemetryConstants.macroVersion, getMacroVersion());
+			RuntimeTelemetry.setProperty(TelemetryConstants.appId, getAppId());
+			RuntimeTelemetry.setProperty(TelemetryConstants.navigationType, getNavigationType());
+			RuntimeTelemetry.setProperty(TelemetryConstants.clientType, getClientType());
+			RuntimeTelemetry.setProperty(TelemetryConstants.crmVersion, getCrmVersion());
+			RuntimeTelemetry.setProperty(TelemetryConstants.orgId, getOrgId());
+			RuntimeTelemetry.setProperty(TelemetryConstants.orgName, getOrgName());
+			RuntimeTelemetry.setProperty(TelemetryConstants.userId, getUserId());
 
-		macrosLogger.logEvent(RuntimeTelemetry);
+			macrosLogger.logEvent(RuntimeTelemetry);
+		}
 	}
 
 	export class UsageTelemetryData {
