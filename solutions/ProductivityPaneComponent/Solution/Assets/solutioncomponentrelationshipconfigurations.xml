@@ -1,0 +1,26 @@
+<solutioncomponentrelationshipconfigurations>
+  <solutioncomponentrelationshipconfiguration entityrelationshipid.schemaname="msdyn_msdyn_paneconfig_msdyn_appconfig">
+    <addrelatedcomponents>1</addrelatedcomponents>
+    <iscustomizable>0</iscustomizable>
+    <primaryentitydependencytype>0</primaryentitydependencytype>
+    <secondaryentitydependencytype>0</secondaryentitydependencytype>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentrelationshipconfiguration>
+  <solutioncomponentrelationshipconfiguration entityrelationshipid.schemaname="msdyn_msdyn_paneconfig_msdyn_tabconfig">
+    <addrelatedcomponents>1</addrelatedcomponents>
+    <iscustomizable>0</iscustomizable>
+    <primaryentitydependencytype>0</primaryentitydependencytype>
+    <secondaryentitydependencytype>0</secondaryentitydependencytype>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentrelationshipconfiguration>
+  <solutioncomponentrelationshipconfiguration entityrelationshipid.schemaname="msdyn_msdyn_toolconfig_msdyn_tabconfig">
+    <addrelatedcomponents>1</addrelatedcomponents>
+    <iscustomizable>0</iscustomizable>
+    <primaryentitydependencytype>0</primaryentitydependencytype>
+    <secondaryentitydependencytype>0</secondaryentitydependencytype>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentrelationshipconfiguration>
+</solutioncomponentrelationshipconfigurations>

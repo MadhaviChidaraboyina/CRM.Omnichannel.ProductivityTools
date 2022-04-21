@@ -1,0 +1,50 @@
+<solutioncomponentrelationshipconfigurations>
+  <solutioncomponentrelationshipconfiguration entityrelationshipid.schemaname="msdyn_msdyn_prod_actioninputparameter_msdyn_par">
+    <addrelatedcomponents>1</addrelatedcomponents>
+    <iscustomizable>0</iscustomizable>
+    <primaryentitydependencytype>0</primaryentitydependencytype>
+    <secondaryentitydependencytype>0</secondaryentitydependencytype>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentrelationshipconfiguration>
+  <solutioncomponentrelationshipconfiguration entityrelationshipid.schemaname="msdyn_msdyn_prod_actionoutputparameter_msdyn_pa">
+    <addrelatedcomponents>1</addrelatedcomponents>
+    <iscustomizable>0</iscustomizable>
+    <primaryentitydependencytype>0</primaryentitydependencytype>
+    <secondaryentitydependencytype>0</secondaryentitydependencytype>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentrelationshipconfiguration>
+  <solutioncomponentrelationshipconfiguration entityrelationshipid.schemaname="msdyn_msdyn_prod_macroactiontemplate_msdyn_actioninput">
+    <addrelatedcomponents>1</addrelatedcomponents>
+    <iscustomizable>0</iscustomizable>
+    <primaryentitydependencytype>0</primaryentitydependencytype>
+    <secondaryentitydependencytype>0</secondaryentitydependencytype>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentrelationshipconfiguration>
+  <solutioncomponentrelationshipconfiguration entityrelationshipid.schemaname="msdyn_msdyn_prod_macroactiontemplate_msdyn_actionout">
+    <addrelatedcomponents>1</addrelatedcomponents>
+    <iscustomizable>0</iscustomizable>
+    <primaryentitydependencytype>0</primaryentitydependencytype>
+    <secondaryentitydependencytype>0</secondaryentitydependencytype>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentrelationshipconfiguration>
+  <solutioncomponentrelationshipconfiguration entityrelationshipid.schemaname="msdyn_msdyn_Prod_macroconnector_msdyn_macroactiontemplate_macroconnector">
+    <addrelatedcomponents>1</addrelatedcomponents>
+    <iscustomizable>0</iscustomizable>
+    <primaryentitydependencytype>0</primaryentitydependencytype>
+    <secondaryentitydependencytype>0</secondaryentitydependencytype>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentrelationshipconfiguration>
+  <solutioncomponentrelationshipconfiguration entityrelationshipid.schemaname="msdyn_workflow_msdyn_macrosession_macroname">
+    <addrelatedcomponents>1</addrelatedcomponents>
+    <iscustomizable>0</iscustomizable>
+    <primaryentitydependencytype>0</primaryentitydependencytype>
+    <secondaryentitydependencytype>0</secondaryentitydependencytype>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentrelationshipconfiguration>
+</solutioncomponentrelationshipconfigurations>

@@ -88,6 +88,7 @@
       <RootComponent type="1" schemaName="msdyn_productivitymacroconnector" behavior="0" />
       <RootComponent type="1" schemaName="msdyn_productivitymacrosolutionconfiguration" behavior="0" />
       <RootComponent type="1" schemaName="msdyn_productivityparameterdefinition" behavior="0" />
+      <RootComponent type="1" schemaName="solutioncomponentrelationshipconfiguration" behavior="0" />
       <RootComponent type="60" id="{206b5fb0-376f-40cf-9e78-2acce3e61f42}" behavior="0" />
       <RootComponent type="60" id="{4956d6b7-1d8c-4767-b73b-d4d9de0dd17d}" behavior="0" />
       <RootComponent type="60" id="{55d8cfea-d1d1-43b8-b581-e83b6d276695}" behavior="0" />

@@ -1,0 +1,34 @@
+<solutioncomponentrelationshipconfigurations>
+  <solutioncomponentrelationshipconfiguration entityrelationshipid.schemaname="msdyn_msdyn_prod_agentscript_msdyn_sessiontemplat">
+    <addrelatedcomponents>1</addrelatedcomponents>
+    <iscustomizable>0</iscustomizable>
+    <primaryentitydependencytype>0</primaryentitydependencytype>
+    <secondaryentitydependencytype>0</secondaryentitydependencytype>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentrelationshipconfiguration>
+  <solutioncomponentrelationshipconfiguration entityrelationshipid.schemaname="msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_agentscriptid">
+    <addrelatedcomponents>1</addrelatedcomponents>
+    <iscustomizable>0</iscustomizable>
+    <primaryentitydependencytype>0</primaryentitydependencytype>
+    <secondaryentitydependencytype>0</secondaryentitydependencytype>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentrelationshipconfiguration>
+  <solutioncomponentrelationshipconfiguration entityrelationshipid.schemaname="msdyn_workflow_msdyn_prod_agentscriptstep_macroactionid">
+    <addrelatedcomponents>1</addrelatedcomponents>
+    <iscustomizable>0</iscustomizable>
+    <primaryentitydependencytype>0</primaryentitydependencytype>
+    <secondaryentitydependencytype>0</secondaryentitydependencytype>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentrelationshipconfiguration>
+  <solutioncomponentrelationshipconfiguration entityrelationshipid.schemaname="msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_routeactionid">
+    <addrelatedcomponents>1</addrelatedcomponents>
+    <iscustomizable>0</iscustomizable>
+    <primaryentitydependencytype>0</primaryentitydependencytype>
+    <secondaryentitydependencytype>0</secondaryentitydependencytype>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </solutioncomponentrelationshipconfiguration>
+</solutioncomponentrelationshipconfigurations>

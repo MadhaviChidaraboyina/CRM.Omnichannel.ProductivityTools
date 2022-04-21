@@ -89,6 +89,7 @@
       <RootComponent type="1" schemaName="msdyn_paneconfiguration" behavior="0" />
       <RootComponent type="1" schemaName="msdyn_panetabconfiguration" behavior="0" />
       <RootComponent type="1" schemaName="msdyn_panetoolconfiguration" behavior="0" />
+      <RootComponent type="1" schemaName="solutioncomponentrelationshipconfiguration" behavior="0" />
       <RootComponent type="60" id="{53119dc8-3b00-44cd-8656-dce8c75bbd35}" behavior="0" />
       <RootComponent type="60" id="{86bce1bc-32cd-432f-9223-4536f3fc777a}" behavior="0" />
       <RootComponent type="60" id="{f4d67a2f-7ec5-44c4-803e-f80eac68dfb7}" behavior="0" />
