@@ -17,6 +17,11 @@
     <DropFolder>$(SolutionName)PVS</DropFolder>
     <BuildPVS>true</BuildPVS>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\build\config\mssharedlibsn1024.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -151,7 +156,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\build\config\mssharedlibsn1024.snk">
+      <Link>mssharedlibsn1024.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="app.config" />
+    <None Include="mssharedlibsn1024.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

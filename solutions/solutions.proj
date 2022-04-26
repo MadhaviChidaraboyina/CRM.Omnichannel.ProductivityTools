@@ -6,8 +6,8 @@
 		<ProjectToBuild Include="ProductivityMacrosComponent\solutions.proj" />
 		<ProjectToBuild Include="ProductivityMacrosApplication\solutions.proj" />
 		<ProjectToBuild Include="ProductivityMacrosApplicationOC\solutions.proj" />
-		<ProjectToBuild Include="ProductivityPaneComponent\solutions.proj" />
 		<ProjectToBuild Include="SmartAssist\solutions.proj" />
+		<ProjectToBuild Include="ProductivityPaneComponent\solutions.proj" />
   	</ItemGroup>
 	<Target Name="Clean">
 		<MSBuild Projects="@(ProjectToBuild)" Targets="Clean" />
