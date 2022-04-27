@@ -93,7 +93,7 @@ module MscrmControls.SmartassistPanelControl {
         public static SAPanelTitleIconInfoDiv = `<div role="button" aria-label="{2}" id="sapanel-info-icon" tabindex="0" class="popup"><img alt="icon" class="popup ${Constants.TitleImgCss}" src="${Constants.SAPanelTitleIconPath}"/><span tabindex="-1" class="popuptext" id="${Constants.IconPopOutId}">{1}</span></div>`;
         public static SAPanelTitleDiv = `<div class="${Constants.TitleDivCss}" ><label class="${Constants.TitleLabelCss}">{0}</label>${Constants.SAPanelTitleIconInfoDiv}</div>`;
         public static SAPanelStyle =
-            `<style id="sa-panel-style">
+            `<style id="sa-panel-{0}-style">
 	        .hide-element{
 		        display:none !important;
 	        }

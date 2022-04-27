@@ -142,12 +142,12 @@ module MscrmControls.SmartassistPanelControl {
 
                 // Loader Element
                 var loaderElement: HTMLDivElement = document.createElement("div");
-                loaderElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelLoaderDiv.Format(Utility.getString(LocalizedStrings.LoadingText));
+                loaderElement.innerHTML = Constants.SAPanelStyle.Format('loaderElement') + Constants.SAPanelLoaderDiv.Format(Utility.getString(LocalizedStrings.LoadingText));
                 this.smartAssistContainer.appendChild(loaderElement);
 
                 // No Permission Element
                 var noPermissionElement: HTMLDivElement = document.createElement("div");
-                noPermissionElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelNoPermissionDiv.Format(Utility.getString(LocalizedStrings.SmartAssistNoPermissionMessage));
+                noPermissionElement.innerHTML = Constants.SAPanelStyle.Format('noPermissionElement') + Constants.SAPanelNoPermissionDiv.Format(Utility.getString(LocalizedStrings.SmartAssistNoPermissionMessage));
                 this.smartAssistContainer.appendChild(noPermissionElement);
 
                 var SuggestionEl: HTMLDivElement = document.createElement("div");
@@ -490,7 +490,7 @@ module MscrmControls.SmartassistPanelControl {
         private setSmartAssistInfoIconText(anchorContext: any) {
             this.smartAssistInfoIconElement.innerHTML = "";
             const infoIconString = anchorContext && anchorContext.entityName === Constants.LWIEntityName ? LocalizedStrings.LWITitleIconInfoText : LocalizedStrings.TitleIconInfoText;
-            this.smartAssistInfoIconElement.innerHTML = Constants.SAPanelStyle + Constants.SAPanelTitleDiv.Format(Utility.getString(LocalizedStrings.SuggestionControlTitle), Utility.getString(infoIconString), Utility.getString(LocalizedStrings.InfoIcon));
+            this.smartAssistInfoIconElement.innerHTML = Constants.SAPanelStyle.Format("InfoIconElement") + Constants.SAPanelTitleDiv.Format(Utility.getString(LocalizedStrings.SuggestionControlTitle), Utility.getString(infoIconString), Utility.getString(LocalizedStrings.InfoIcon));
         }
     }
 }
