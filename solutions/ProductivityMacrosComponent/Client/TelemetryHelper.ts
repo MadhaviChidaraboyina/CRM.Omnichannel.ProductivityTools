@@ -6,7 +6,6 @@ namespace Microsoft.ProductivityMacros.Internal {
 	export declare var appId: string;
 	export var crmVersion: string = "";
 	export var orgId: string = "";
-	declare var macrosLogger: any;
 	let prodIngestionKey = "15742b0e58eb4711bc046acff53e7165-1bfb5a4d-2ecc-4c51-8271-a773c63f58de-6809";
 	let devIngestionKey = "22fdf28125b2493787078364a7ffe42e-28bf5791-b218-4f89-8d06-8135775da123-7269";
 
@@ -16,28 +15,44 @@ namespace Microsoft.ProductivityMacros.Internal {
 	let EUROPE_ENDPOINT = "https://eu.pipe.aria.microsoft.com/Collector/3.0/";
 	let MOONCAKE_ENDPOINT = ""; // Add MoonCake ARIA Endpoint whenever available
 
-	export function initializeTelemetry() {
-		try {
-		let domain = getDomain();
-		let logConfig = getConfiguration(domain);
-			if (domain == "Dev") {
-				macrosLogger = AWTLogManager.initialize(devIngestionKey, logConfig);
-			}
-			else {
-				macrosLogger = AWTLogManager.initialize(prodIngestionKey, logConfig);
-			}
+	export class TelemetryReporter {
+		private static instance: TelemetryReporter;
+		public macrosLogger: AWTLogger;
 
-			AWTLogManager.addNotificationListener({
-				eventsSent: (events) => {
-					console.log("CIF Telemetry - Number of Events Sent: " + events.length);
-				},
-				eventsDropped: (events, reason) => {
-					console.log("CIF Telemetry - Number of Events Dropped: " + events.length);
-				}
-			});
+		constructor() {
+			this.initializeTelemetry();
 		}
-		catch (e) {
-			console.error("Telemetry Init Failure:", e);
+
+		public static get Instance(): TelemetryReporter {
+			if (!(TelemetryReporter.instance)) {
+				TelemetryReporter.instance = new TelemetryReporter();
+			}
+			return TelemetryReporter.instance;
+		}
+
+		private initializeTelemetry() {
+			try {
+				let domain = getDomain();
+				let logConfig = getConfiguration(domain);
+				if (domain == "Dev") {
+					this.macrosLogger = AWTLogManager.initialize(devIngestionKey, logConfig);
+				}
+				else {
+					this.macrosLogger = AWTLogManager.initialize(prodIngestionKey, logConfig);
+				}
+
+				AWTLogManager.addNotificationListener({
+					eventsSent: (events) => {
+						console.log("CIF Telemetry - Number of Events Sent: " + events.length);
+					},
+					eventsDropped: (events, reason) => {
+						console.log("CIF Telemetry - Number of Events Dropped: " + events.length);
+					}
+				});
+			}
+			catch (e) {
+				console.error("Telemetry Init Failure:", e);
+			}
 		}
 	}
 
@@ -110,7 +125,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 
 	function getMacroVersion(): string {
 		let MacrosVersion = "";
-        (window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_productivitymacrosolutionconfiguration", "?$top=1").then(
+		(window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_productivitymacrosolutionconfiguration", "?$top=1").then(
 			(result: any) => {
 				if (result && result.entities) {
 					MacrosVersion = result.entities[0].msdyn_macrosversion;
@@ -182,7 +197,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 	}
 
 	export function setMacrosAdminData(data: any): void {
-		if (macrosLogger) {
+		if (TelemetryReporter.Instance && TelemetryReporter.Instance.macrosLogger) {
 			var AdminTelemetry = new AWTEventProperties();
 			AdminTelemetry.setName(TelemetryConstants.macrosAdminTable);
 
@@ -206,13 +221,13 @@ namespace Microsoft.ProductivityMacros.Internal {
 			AdminTelemetry.setProperty(TelemetryConstants.orgName, getOrgName());
 			AdminTelemetry.setProperty(TelemetryConstants.userId, getUserId());
 
-			macrosLogger.logEvent(AdminTelemetry);
+			TelemetryReporter.Instance.macrosLogger.logEvent(AdminTelemetry);
 		}
 	}
 
 	// Function to populate the Macros Runtime Data Telemetry
 	function setMacrosRuntimeData(data: UsageTelemetryData): void {
-		if (macrosLogger) {
+		if (TelemetryReporter.Instance && TelemetryReporter.Instance.macrosLogger) {
 			var RuntimeTelemetry = new AWTEventProperties();
 			RuntimeTelemetry.setName(TelemetryConstants.macrosRuntimeTable);
 
@@ -235,7 +250,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 			RuntimeTelemetry.setProperty(TelemetryConstants.orgName, getOrgName());
 			RuntimeTelemetry.setProperty(TelemetryConstants.userId, getUserId());
 
-			macrosLogger.logEvent(RuntimeTelemetry);
+			TelemetryReporter.Instance.macrosLogger.logEvent(RuntimeTelemetry);
 		}
 	}
 

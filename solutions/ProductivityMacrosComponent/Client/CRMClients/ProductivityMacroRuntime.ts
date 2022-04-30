@@ -4,14 +4,9 @@
 
 /// <reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
 /// <reference path="../../../../Packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApiInternal.d.ts" />
-/// <reference path="../TelemetryHelper.ts" />
 /// <reference path="./LogicAppExecutor/LogicAppExecutor.ts" />
 
 namespace Microsoft.ProductivityMacros {
-
-	export function initializeMacrosRuntime() {
-		Microsoft.ProductivityMacros.Internal.initializeTelemetry();
-	}
 
 	export function runMacro(macroName: string, params?: string): Promise<string> {
 
@@ -54,7 +49,4 @@ namespace Microsoft.ProductivityMacros {
 			);
 		});
 	}
-	
-	initializeMacrosRuntime();
-	
 }
