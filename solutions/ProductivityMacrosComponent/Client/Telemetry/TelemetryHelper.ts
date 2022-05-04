@@ -1,5 +1,5 @@
 /// <reference path="TelemetryConstants.ts" />
-/// <reference path="CRMClients/aria-webjs-sdk-1.8.3.d.ts" />
+/// <reference path="../CRMClients/aria-webjs-sdk-1.8.3.d.ts" />
 /** @internal */
 namespace Microsoft.ProductivityMacros.Internal {
 	declare var Xrm: any;

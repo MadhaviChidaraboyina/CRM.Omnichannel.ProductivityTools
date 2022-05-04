@@ -1,6 +1,5 @@
 ﻿/// <reference path="../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 /// <reference path="Constants.ts" />
-/// <reference path="TelemetryHelper.ts" />
 
 namespace Microsoft.Macros.Utility {
 	var webresourceName = "Localization/ProductivityMacrosComponent_webresource_strings";

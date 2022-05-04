@@ -1,6 +1,6 @@
 ﻿/// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 /// <reference path="../Libraries/requirejs/require.d.ts" />
-/// <reference path="../TelemetryHelper.ts" />
+/// <reference path="../Telemetry/TelemetryHelper.ts" />
 
 /** @internal */
 namespace Microsoft.ProductivityMacros.Internal {
