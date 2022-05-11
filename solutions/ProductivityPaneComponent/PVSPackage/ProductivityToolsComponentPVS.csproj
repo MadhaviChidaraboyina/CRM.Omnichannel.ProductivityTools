@@ -183,7 +183,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="mssharedlibsn1024.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GetSignedSolution" BeforeTargets="CreatePDPackageZip">
+    <ItemGroup>
+      <SolutionCabs Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityPaneComponent_managed.cab" />
+      <SolutionCabs Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_AgentscriptComponent_managed.cab" />
+      <SolutionCabs Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityMacrosComponent_managed.cab" />
+      <SolutionCabs Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_ProductivityMacrosApplication_managed.cab" />
+      <SolutionCabs Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_smartassist_managed.cab" />
+      <SolutionCabs Include="..\..\..\drop\$(BuildConfiguration)\$(BuildPlatform)\Solutions\msdyn_AgentProductivityToolsAnchor_managed.zip" />
+      <PVSDll Include="..\..\..\target\$(BuildConfiguration)\$(BuildPlatform)\ProductivityToolsComponentPVS\Microsoft.Dynamics.ProductivityToolsComponent.PVSPackage.dll" />
+    </ItemGroup>
+    <Message Text="Getting signed solution files.." Importance="high" />
+    <Copy SourceFiles="@(SolutionCabs)" DestinationFolder="$(OutputPath)ProductivityToolsComponent" Retries="20" RetryDelayMilliseconds="1000" ContinueOnError="true" />
+    <Copy SourceFiles="@(PVSDll)" DestinationFolder="$(OutputPath)" Retries="20" RetryDelayMilliseconds="1000" ContinueOnError="true" />
+    <Copy SourceFiles="ProductivityToolsComponent\ImportConfig.xml" DestinationFolder="$(OutputPath)ProductivityToolsComponent" Retries="20" RetryDelayMilliseconds="1000" ContinueOnError="true" />
+  </Target>
 </Project>
