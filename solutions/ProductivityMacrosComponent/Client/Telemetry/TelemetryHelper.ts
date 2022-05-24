@@ -12,7 +12,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 	let GERMANY_ENDPOINT = "https://de.pipe.aria.microsoft.com/Collector/3.0/";
 	let GCCH_ENDPOINT = "https://tb.pipe.aria.microsoft.com/Collector/3.0/";
 	let DOD_ENDPOINT = "https://pf.pipe.aria.microsoft.com/Collector/3.0";
-	let EUROPE_ENDPOINT = "https://eu.pipe.aria.microsoft.com/Collector/3.0/";
+	let EUROPE_ENDPOINT = "https://eu-mobile.events.data.microsoft.com/Collector/3.0/"; // EUDB Collector URL. Please refer: https://www.aria.ms/developers/deep-dives/eudb-routing/
 	let MOONCAKE_ENDPOINT = ""; // Add MoonCake ARIA Endpoint whenever available
 
 	export class TelemetryReporter {
@@ -70,7 +70,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 		let hostValue = getHost();
 
 		// Need to add checks for MoonCake(China) and Europe Orgs, if needed
-		if (hostValue.endsWith("dod-crm.microsoftdynamics.us"))
+		if (hostValue.endsWith("dod-crm.microsoftdynamics.us") || hostValue.endsWith("crm.appsplatform.us"))
 			return "DoD";
 		else if (hostValue.endsWith("crm9.dynamics.com") || hostValue.endsWith("crm.microsoftdynamics.us"))
 			return "GCCHigh";
@@ -78,12 +78,15 @@ namespace Microsoft.ProductivityMacros.Internal {
 			return "BlackForest";
 		else if (hostValue.endsWith("crm.dynamics.cn"))
 			return "MoonCake";
-		else if (hostValue.endsWith("crm4.dynamics.com"))
+		// EUR: crm4; FRA: crm12; GER: crm16; CHE: crm17; NOR: crm19
+		else if (hostValue.endsWith("crm4.dynamics.com") || hostValue.endsWith("crm12.dynamics.com") || hostValue.endsWith("crm16.dynamics.com")
+			|| hostValue.endsWith("crm17.dynamics.com") || hostValue.endsWith("crm19.dynamics.com"))
 			return "Europe";
 		else if (hostValue.endsWith("extest.microsoft.com") || hostValue.endsWith("crm10.dynamics.com") || hostValue.endsWith("crm.crmlivetie.com")
 			|| hostValue.endsWith("crm2.crmlivetie.com") || hostValue.endsWith("contoso.com:444") || hostValue.endsWith("microsoft.com")
 			|| hostValue.endsWith("msmecrm.com") || hostValue.endsWith("crm.crmlivetoday.com") || hostValue.endsWith("crm.1boxtest.com")
-			|| hostValue.endsWith("crm.crmifd.com") || hostValue.endsWith("msmecrm.com:444") || hostValue.search("localhost") == 0)
+			|| hostValue.endsWith("crm.crmifd.com") || hostValue.endsWith("msmecrm.com:444") || hostValue.search("localhost") == 0
+			|| hostValue.endsWith("crmtest.dynamics.com") || hostValue.endsWith("crm.dynamics-int.com"))
 			return "Dev";
 		else
 			return "Public";
