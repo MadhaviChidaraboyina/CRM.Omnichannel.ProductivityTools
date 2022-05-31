@@ -10,7 +10,7 @@
 
 /** @internal */
 namespace Microsoft.ProductivityMacros.Internal {
-    
+
     /**
      * utility func to check whether an object is null or undefined
      */
@@ -132,7 +132,7 @@ namespace Microsoft.ProductivityMacros.Internal {
         });
     }
 
-    function getApplicationTemplateRecord(guid: string): Promise<any> { 
+    function getApplicationTemplateRecord(guid: string): Promise<any> {
         return new Promise<any>(function (resolve, reject) {
             let xml = `<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
                           <entity name="msdyn_applicationtabtemplate">
@@ -329,7 +329,7 @@ namespace Microsoft.ProductivityMacros.Internal {
             return Promise.reject("openNewForm - formInputs is Null or Undefined");
         }
     }
-         
+
     export function openExistingForm(actionName: string, entityFormOptions: any): Promise<string> {
         if (!(isNullOrUndefined(entityFormOptions) || entityFormOptions == "")) {
             return new Promise<any>((resolve, reject) => {
@@ -653,7 +653,10 @@ namespace Microsoft.ProductivityMacros.Internal {
                     webresourceName: "msdyn_kbsearchpagehost.html",
                     data: searchPageOptions.SearchString
                 },
-                options: { isFocused: true }
+                options: {
+                    isFocused: true,
+                    title: searchPageOptions && searchPageOptions.TabLabel ? searchPageOptions.TabLabel : ""
+                 }
             };
             return new Promise<any>((resolve, reject) => {
                 getNavigationType().then((navigationType: any) => {
@@ -762,10 +765,10 @@ namespace Microsoft.ProductivityMacros.Internal {
 
         let windowXrm: any;
         try {
-            //we are using here windows.top.xrm.page 
+            //we are using here windows.top.xrm.page
             //this api will work in case of crm forms are focused
-            //if anything else is focused then it will contradict the action it self as this action for cloning a record on crm form. 
-            //in that case we are catching exception and returning as macro triggered for invalide form.  
+            //if anything else is focused then it will contradict the action it self as this action for cloning a record on crm form.
+            //in that case we are catching exception and returning as macro triggered for invalide form.
             windowXrm = (((((window as any).top) as any).Xrm) as any);
         }
         catch (e) {
@@ -779,7 +782,7 @@ namespace Microsoft.ProductivityMacros.Internal {
         let col = windowXrm.Page.data.entity.attributes._collection;
         let entityRef = windowXrm.Page.data.entity.getEntityReference();
         entityObj["entityName"] = entityRef.entityType;
-        Object.keys(col).forEach(function (key) {          
+        Object.keys(col).forEach(function (key) {
             entityObj.attributeObj[key] = col[key].getValue();
             }
         );
@@ -798,14 +801,14 @@ namespace Microsoft.ProductivityMacros.Internal {
                 }
             });
         });
-        
+
         return tempObj;
     }
 
     function arrangeLookupValue(obj: any, entityName: string): {} {
         let temp: any = obj;
         let result: any = {};
-        
+
         let formatedValue: string = "_value@OData.Community.Display.V1.FormattedValue";
         let navigationProperty: string = "_value@Microsoft.Dynamics.CRM.associatednavigationproperty";
         let lookupLogicalName: string = "_value@Microsoft.Dynamics.CRM.lookuplogicalname";
@@ -828,7 +831,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 
             if ((attribName != "") && (underScor + attribName + value in obj) && (underScor + attribName + lookupLogicalName in obj) &&
                 (underScor + attribName + navigationProperty in obj) && (underScor + attribName + formatedValue in obj)) {
-               
+
                 var lookupValue = new Array();
                 lookupValue[0] = new Object();
                 lookupValue[0].id = obj[underScor + attribName + value];
@@ -853,7 +856,7 @@ namespace Microsoft.ProductivityMacros.Internal {
     export function cloneInputRecord(actionName: string, entityData: any, telemetryData?: Object | any): Promise<string> {
         let recordTitle = "_copy";
         if (!entityData) {
-            return Promise.reject(createErrorMap("Need values to clone record", "cloneInputRecord")); 
+            return Promise.reject(createErrorMap("Need values to clone record", "cloneInputRecord"));
         }
         return new Promise<string>((resolve, reject) => {
 
@@ -879,14 +882,14 @@ namespace Microsoft.ProductivityMacros.Internal {
                         );
                     }
                 );
-            
+
         });
     }
 
     export function cloneFocusedRecord(actionName: string, entityData: any, telemetryData?: Object | any): Promise<string> {
         let recordTitle = "_copy";
         if (!entityData) {
-            return Promise.reject(createErrorMap("Need values to clone record", "cloneFocusedRecord")); 
+            return Promise.reject(createErrorMap("Need values to clone record", "cloneFocusedRecord"));
         }
         return new Promise<string>((resolve, reject) => {
 
@@ -907,11 +910,11 @@ namespace Microsoft.ProductivityMacros.Internal {
                     resolve(cloneRecord_DefaultBehaviour(actionName, entityObj.entityName, entityObj.attributeObj));
                 }
             );
-            
+
         });
     }
 
-    function getPrimaryNameAttribute(entityName: string): Promise < string > {        
+    function getPrimaryNameAttribute(entityName: string): Promise < string > {
         return new Promise<string>(function (resolve, reject) {
             var req = new XMLHttpRequest();
             req.open("GET", Xrm.Utility.getGlobalContext().getClientUrl() + "/api/data/v9.0/EntityDefinitions(LogicalName='" + entityName + "')/?$select=PrimaryNameAttribute", true);
@@ -941,15 +944,15 @@ namespace Microsoft.ProductivityMacros.Internal {
     function getRecordToClone(actionName : string,entityData : any,primaryNameAttribute : string,recordTitle : string): Promise<any> {
         return new Promise<string>((resolve, reject) => {
             let startTime = new Date();
-            Xrm.WebApi.retrieveRecord(entityData.EntityName, entityData.EntityId).then(function success(result1 : any){                
+            Xrm.WebApi.retrieveRecord(entityData.EntityName, entityData.EntityId).then(function success(result1 : any){
                 result1 = arrangeLookupValue(result1, entityData.EntityName);
                 result1 = removeExtraData(result1, entityData.EntityName);
 
                 delete result1["@odata.context"];
                 delete result1["@odata.etag"];
-                if (primaryNameAttribute != "") 
+                if (primaryNameAttribute != "")
                     result1[primaryNameAttribute] = (recordTitle == "_copy") ? result1[primaryNameAttribute] + recordTitle : recordTitle;
-                
+
                 resolve(result1);
             },
             function(error){
@@ -961,7 +964,7 @@ namespace Microsoft.ProductivityMacros.Internal {
     }
 
     function cloneRecord_DefaultBehaviour(actionName: string, entityName: string, entityData: {}): Promise<string>{
-        
+
         return new Promise<any>((resolve, reject) => {
             getNavigationType().then((navigationType: any) => {
                 if (navigationType == 1) {
@@ -1047,8 +1050,8 @@ namespace Microsoft.ProductivityMacros.Internal {
         try {
             //we are using here windows.top.xrm.page and windows.top.xrm.page.ui.formselector
             //this api will work in case of crm forms are focused
-            //if anything else is focused then it will contradict the action it self as this action for pupulating fields on crm form. 
-            //in that case we are catching exception and returning as macro triggered for invalide form.  
+            //if anything else is focused then it will contradict the action it self as this action for pupulating fields on crm form.
+            //in that case we are catching exception and returning as macro triggered for invalide form.
             windowXrm = (((((window as any).top) as any).Xrm) as any);
             if (entityData.EntityName != windowXrm.Page.ui.formSelector._entityName) {
                 return Promise.reject(createErrorMap("Macro executed for invalid form", "updateFormAttribute")); // should be removed add logrejectanderror mrthod here
@@ -1090,7 +1093,7 @@ namespace Microsoft.ProductivityMacros.Internal {
                                     tempArray.forEach(function (item : string) {
                                         multiOptionSet.push(parseInt(item));
                                     })
-                                }                                
+                                }
                                 windowXrm.Page.getAttribute(key).setValue(multiOptionSet);
                                 break;
                             case "lookup":
@@ -1123,7 +1126,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 
         });
     }
-    
+
     export function updateRecord(actionName: string, entityData: any,telemetryData?: Object | any): Promise<Map<string, any>> {
         if (!entityData) {
             /* let errorData = {} as IErrorHandler;
@@ -1243,7 +1246,7 @@ namespace Microsoft.ProductivityMacros.Internal {
             function (error) {
                 reject(error.message);
             });
-            
+
         });
     }
 
@@ -1545,12 +1548,12 @@ namespace Microsoft.ProductivityMacros.Internal {
         return dialogParams;
     }
 
-    export function refreshSessionContext(actionName: string): Promise<any> {        
+    export function refreshSessionContext(actionName: string): Promise<any> {
         return new Promise<any>((resolve, reject) => {
             const skipCreateAdditionalTabs: boolean = true;
             const skipUpdateTitle: boolean = true;
             const sessionId: string = getFocusedSessionId();
-            
+
             Microsoft.AppRuntime.Sessions.refreshSession(skipCreateAdditionalTabs, undefined, undefined, skipUpdateTitle, Constants.EVENTSOURCE_MACROS).then(
                 () => {
                     let outputResponse: any = {};

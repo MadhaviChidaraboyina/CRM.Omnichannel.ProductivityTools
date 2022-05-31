@@ -111,13 +111,14 @@
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_RecordTitle\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_Resolution\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_SearchString\msdyn_productivityparameterdefinition.xml" />
+    <Content Include="msdyn_productivityparameterdefinitions\msdyn_TabLabel\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_TabId\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_TemplateId\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_UpdateData\msdyn_productivityparameterdefinition.xml" />
     <Content Include="msdyn_productivityparameterdefinitions\msdyn_ViewId\msdyn_productivityparameterdefinition.xml" />
-    <Content Include="msdyn_productivityparameterdefinitions\msdyn_ViewType\msdyn_productivityparameterdefinition.xml" />    
+    <Content Include="msdyn_productivityparameterdefinitions\msdyn_ViewType\msdyn_productivityparameterdefinition.xml" />
     <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_run_flow.svg" />
-    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_run_flow.svg.data.xml" />    
+    <Content Include="WebResources\MacroDesigner\msdyn_ProductivityMacros_run_flow.svg.data.xml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="WebResources\MacroDesigner\msdyn_flowConnector_macro_connector.svg" />

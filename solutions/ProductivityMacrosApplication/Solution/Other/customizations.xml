@@ -21,7 +21,7 @@
     </msdyn_msdyn_prod_actioninputparameter_msdyn_par>
     <msdyn_msdyn_prod_actioninputparameter_msdyn_par msdyn_productivityactioninputparameterid.msdyn_uniquename="msdyn_Resolve_Case_Input_Mandatory" msdyn_productivityparameterdefinitionid.msdyn_uniquename="msdyn_Resolution">
       <iscustomizable>1</iscustomizable>
-    </msdyn_msdyn_prod_actioninputparameter_msdyn_par>  
+    </msdyn_msdyn_prod_actioninputparameter_msdyn_par>
     <msdyn_msdyn_prod_actioninputparameter_msdyn_par msdyn_productivityactioninputparameterid.msdyn_uniquename="msdyn_Open_Grid_Input_Params_Optional" msdyn_productivityparameterdefinitionid.msdyn_uniquename="msdyn_ViewId">
       <iscustomizable>1</iscustomizable>
     </msdyn_msdyn_prod_actioninputparameter_msdyn_par>
@@ -101,6 +101,9 @@
       <iscustomizable>1</iscustomizable>
     </msdyn_msdyn_prod_actioninputparameter_msdyn_par>
     <msdyn_msdyn_prod_actioninputparameter_msdyn_par msdyn_productivityactioninputparameterid.msdyn_uniquename="msdyn_Search_kb_input_params" msdyn_productivityparameterdefinitionid.msdyn_uniquename="msdyn_SearchString">
+      <iscustomizable>1</iscustomizable>
+    </msdyn_msdyn_prod_actioninputparameter_msdyn_par>
+    <msdyn_msdyn_prod_actioninputparameter_msdyn_par msdyn_productivityactioninputparameterid.msdyn_uniquename="msdyn_Search_kb_input_params" msdyn_productivityparameterdefinitionid.msdyn_uniquename="msdyn_TabLabel">
       <iscustomizable>1</iscustomizable>
     </msdyn_msdyn_prod_actioninputparameter_msdyn_par>
     <msdyn_msdyn_prod_actioninputparameter_msdyn_par msdyn_productivityparameterdefinitionid.msdyn_uniquename="msdyn_EntityName" msdyn_productivityactioninputparameterid.msdyn_uniquename="msdyn_Open_Grid_Input_Params_Mandatory">
