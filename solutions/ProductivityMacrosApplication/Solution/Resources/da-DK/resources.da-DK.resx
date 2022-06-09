@@ -292,6 +292,10 @@
     <value>Id'et for det dashboard, der skal åbnes</value>
     <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
   </data>
+  <data name="100000:label,3CCC5C2CFBAFCE9895B0CADA5503587CDF993D73765D3D065E8707529C66577F" xml:space="preserve">
+    <value>Etiket til en fane</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
   <data name="100000:label,3DDF7EA62AAA8996209B8E3FF1DC06C440075AD11D6F5916B342622217CAE67A" xml:space="preserve">
     <value>Produktivitetsautomatisering</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
@@ -527,6 +531,10 @@
   <data name="100000:label,970B8692E75C2AE93F2F5982C0783F667CAEE88CCD4AE1CC961FEE60C8F22A8F" xml:space="preserve">
     <value>Opdater fanen</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
+  <data name="100000:label,9AAF3AFE3CC60A2F3FFE6DCAE306723AE01DB9F856BB0F58D60288E65879AC4B" xml:space="preserve">
+    <value>Faneetiket</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
   </data>
   <data name="100000:label,9C856FDE46DADDAD47EA4A9A47B5DF0827D5CCC60D90E1D511D0EED9C228DE2C" xml:space="preserve">
     <value>Formular-id, der skal åbnes</value>

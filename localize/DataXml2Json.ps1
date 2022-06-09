@@ -113,6 +113,12 @@ function ImportTranslatedJsonFile {
         $xmlSettings.Indent = $true
         $xmlSettings.Encoding = [System.Text.Encoding]::UTF8
 
+        $dirPath = Split-Path -Path $outputDataXmlPath
+        if (!(Test-Path($dirPath))) {
+          New-Item -ItemType "directory" -Path $dirPath | Out-Null
+          Write-Verbose "Created '$dirPath'"
+        }
+
         $writer = [System.Xml.XmlWriter]::Create($outputDataXmlPath, $xmlSettings)
         $recordId = ""
         $entityName = ""
