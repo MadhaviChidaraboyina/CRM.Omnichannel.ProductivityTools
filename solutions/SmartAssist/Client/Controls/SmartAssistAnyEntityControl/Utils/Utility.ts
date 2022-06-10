@@ -157,14 +157,25 @@ module MscrmControls.SmartAssistAnyEntityControl {
         }
 
         public static async checkAndTurnOnSuggestionModeling(telemetryHelper: TelemetryHelper) {
-            // auto-turn on the case and KB suggestion for the org created after May 20, 2022
+            // auto-turn on the case and KB suggestion for the org, based on FCS AND
+            // either FCB for October 2022 Update is ON or org created after May 20, 2022
             let isSuggestionsAutoProvisionChecked  = localStorage[StringConstants.SuggestionsModelingStatusKey];
             if (!isSuggestionsAutoProvisionChecked) {
                 try {
+                    let enableSuggestionsDefaultOn: boolean = false;
                     // FCS to auto enable case/KB suggestion
                     const isFCSEnabled: boolean = (Xrm.Utility.getGlobalContext() as any).getFeatureControlSetting(StringConstants.suggestionFcsNameSpace, StringConstants.suggestionFcsKey);
-                    const isNewOrg = await this.isNewOrg(telemetryHelper);
-                    if (!!isFCSEnabled && isNewOrg) {
+                    if (!!isFCSEnabled) {
+                        // Check FCB for October 2022 Update
+                        enableSuggestionsDefaultOn = SmartAssistAnyEntityControl._context.utils.isFeatureEnabled(StringConstants.FCB_October2022Update);
+
+                        // If FCB for October 2022 Update is OFF, keep existing logic to check for new org created after 20 May 2022
+                        if (!enableSuggestionsDefaultOn) {
+                            enableSuggestionsDefaultOn = await this.isNewOrg(telemetryHelper);                      
+                        }
+                    }
+
+                    if (enableSuggestionsDefaultOn) {
                         const shouldEnableCaseKbSuggestion = await this.shouldEnableCaseKbSuggestion(telemetryHelper);
                         if (shouldEnableCaseKbSuggestion) {
                             this.enableAISuggestionsForCaseAndKb(SmartAssistAnyEntityControl._context, telemetryHelper);
