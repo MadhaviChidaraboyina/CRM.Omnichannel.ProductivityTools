@@ -149,7 +149,7 @@
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
   </data>
   <data name="100000:label,0568178B0A4120761247B009AD290A358F3BA693A88124218D202ECFB476157C" xml:space="preserve">
-    <value>Выполнить поиск с сортировкой по релевантности на основе фразы</value>
+    <value>Выполнить поиск на основе фразы</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
   </data>
   <data name="100000:label,08E1B161EE757F199980E146F5431A6A9712B39101B6B49F0D5D6AE946D1C758" xml:space="preserve">
@@ -449,7 +449,7 @@
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
   </data>
   <data name="100000:label,825C3F74E27D8BF8DE2EFAD3BDC09BF8D4F4C624D1CD5C39445199EA9A2A9415" xml:space="preserve">
-    <value>Выполнить поиск с сортировкой по релевантности на основе фразы</value>
+    <value>Выполнить поиск на основе фразы</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
   </data>
   <data name="100000:label,828BA2AE08A93079FFE74579ED990F51177B2C8DBE60FCDCC69C27269C473E90" xml:space="preserve">
@@ -549,7 +549,7 @@
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
   </data>
   <data name="100000:label,A1D7F310CEBFEE8DF15D2DC48C84A8A14DAF88B36772407F7C3924D251F57922" xml:space="preserve">
-    <value>Выполнить поиск с сортировкой по релевантности на основе фразы</value>
+    <value>Выполнить поиск на основе фразы</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
   </data>
   <data name="100000:label,A44984D111D9BEF397B9F55B7D58E1828946E05DB1BC2846FDFDB7514B51A47B" xml:space="preserve">
