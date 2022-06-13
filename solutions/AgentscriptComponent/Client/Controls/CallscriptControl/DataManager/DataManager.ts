@@ -61,12 +61,12 @@ module MscrmControls.Callscript
 
 					//Reject the promise
 					reject(errorMessage);
-                }   
+                }
 			});
 		}
 
 		/**
-		 * Retrieves default call script 
+		 * Retrieves default call script
 		 * It gets session template and then retrieves default script for it by executing logicAppExecutor
 		 */
 		public retrieveDefaultCallScript(): Promise<string> {
@@ -440,7 +440,7 @@ module MscrmControls.Callscript
 					}
 
                     name = await this.resolveSlugValues(name, methodName);
-             
+
                     let stepRecord = new CallScriptStep(id, name, order, description, stepAction, this.context);
                     callScriptStepRecords.push(stepRecord);
 				}
@@ -479,7 +479,7 @@ module MscrmControls.Callscript
 			eventParam.addParameter("context", context);
 			eventParam.addParameter("recordId", recordId);
 			eventParam.addParameter("attribute", attribute);
-			
+
 		}
 
 		/**
@@ -489,11 +489,14 @@ module MscrmControls.Callscript
         private getCallscriptFetchxml(sessionTemplateUniqueName: string): string
 		{
 			let fetchXml = "<fetch version='1.0' output-format='xml-platform' mapping='logical' returntotalrecordcount='true' page='1' no-lock='false'>" +
-								"<entity name='msdyn_productivityagentscript'>" + 
+								"<entity name='msdyn_productivityagentscript'>" +
 									"<attribute name='msdyn_productivityagentscriptid'/>"  +
 									"<attribute name='msdyn_name'/>" +
 									"<attribute name='msdyn_description'/>" +
 									"<order attribute='msdyn_name' descending='false'/>" +
+									"<filter type='and'>" +
+										"<condition attribute='statuscode' operator='eq' value='1'/>" +
+									"</filter>"  +
 									"<filter type='and'>" +
 										`<condition attribute='msdyn_language' operator='eq' value='${this.languageId}' />` +
 									"</filter>" +
@@ -532,10 +535,13 @@ module MscrmControls.Callscript
 											`<condition attribute='msdyn_productivityagentscriptid' operator='eq' value='${callscriptId}'/>` +
 										"</filter>" +
 									"</link-entity>" +
-									"</entity>" +
-								"</fetch>";
+									"<filter type='and'>" +
+										"<condition attribute='statuscode' operator='eq' value='1'/>" +
+									"</filter>" +
+								"</entity>" +
+							"</fetch>";
 
 			return fetchxml;
-        }     
+        }
 	}
 }
