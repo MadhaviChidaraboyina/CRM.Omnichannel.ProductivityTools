@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "CommonJS",
+    "target": "es6",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "paths": {
+      "configuration/*": ["configuration/*"],
+      "areas/*": ["areas/*"],
+      "helpers/*": ["helpers/*"],
+      "pages/*": ["pages/*"],
+      "Utility/*": ["Utility/*"]
+  },
+    "types": ["@types/jest"]
+  },
+  "exclude": ["**/tests/*.test.ts","node_modules", "dist"]
+}

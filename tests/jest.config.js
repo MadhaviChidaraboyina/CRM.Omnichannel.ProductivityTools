@@ -7,6 +7,7 @@ module.exports = {
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest"
   },
+  modulePathIgnorePatterns : ["tests/IntegrationTests/"],
   // The directory where Jest should output its coverage files
   coverageDirectory: "../drop/coverage",
   coverageReporters: ["text", "cobertura", "lcov", "json-summary"],

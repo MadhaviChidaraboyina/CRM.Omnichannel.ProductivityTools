@@ -1,0 +1,1057 @@
+{
+  "ADClientId": "",
+  "TenantId": "",
+  "InboxUser": "",
+  "InboxUser1": "",
+  "TwitterAttachmentsSourceURL": "",
+  "BlobURL": "",
+  "KeyVaultURL": "",
+  "ApplicationClientId": "",
+  "ApplicationClientSecret": "",
+  "AzureADTenantId": "",
+  "BotTokenURL": "",
+  "BYOBBlobURL": "",
+  "LiveChatBotUrl": "",
+  "BYOBEndBlobURL": "",
+  "PVABlobURL": "",
+  "AdaptiveCardBlobURL": "",
+  "DefaultPassword": "",
+  "LcwUrl": "",
+  "AgentAffinityAccountEmail": "",
+  "AdminAgentAffinityAccountEmail": "",
+  "AgentAffinityOnUrl": "",
+  "AgentAffinityOffUrl": "",
+  "AgentAffinityQueueId": "",
+  "PreChatSurveyUrl": "",
+  "DynamicBlob": "",
+  "AuthDynamicBlob": "",
+  "LCWAuthBlobUrl": "",
+  "LCWAuthToken": "",
+  "LCWSrc": "",
+  "InsideOperatingHourUrl": "",
+  "ReconnectBlob": "",
+  "ReconnectPopoutBlob": "",
+  "ReconnectPopoutWithoutRedirectionBlob": "",
+  "ReconnectConsultTransferSurveyQuestionBlob": "",
+  "ReconnectPopoutSurveyQuestionBlob": "",
+  "ReconnectPopoutSurveyQuestionWithoutRedirectionBlob": "",
+  "ReconnectDisabledBlob": "",
+  "ReconnectCapacityReservePopoutBlob": "",
+  "ReconnectWaitingConversationPopoutBlob": "",
+  "ReconnectCapacityBlob": "",
+  "LiveChatAutomatedPopOutBlobURL": "",
+  "LiveChatAutomatedMonotypeFontPopUpBlobURL": "",
+  "LiveChatReconnectCapacityHoldZeroAccountBlob": "",
+  "LiveChatSupervisorExperienceblobUrl": "",
+  "ProactiveChatEnabledblobUrl": "",
+  "ProactiveChatEnabledWithoutMessageblobUrl": "",
+  "ProactiveChatEnabledWithoutMessagePopOutblobUrl": "",
+  "LiveChatPushHeaderBlob": "",
+  "LiveChatPickHeaderBlob": "",
+  "LiveChatContextVariableBlob": "",
+  "LiveChatContextVariablePopOutBlob": "",
+  "LiveChatAutoOpenContextVariableBlob": "",
+  "LiveChatAutoOpenContextVariableNewWindowBlob": "",
+  "LiveChatHideChatWidgetBlob": "",
+  "LiveChatSDKNewWindowBlob": "",
+  "ConsultAndTransferVerificationBlob": "",
+  "LcwPWPickUrl": "",
+  "SDKLiveChatBlobURL": "",
+  "ChatSDKBlobURL": "",
+  "SBRExactMatchLcwUrl": "",
+  "UaUserMail": "",
+  "UaUserPassword": "",
+  "HolidayLcwUrl": "",
+  "SkillsLcwUrl": "",
+  "LcwPickEnglishUrl": "",
+  "LcwPickSpanishUrl": "",
+  "ReconnectExhaustedLcwUrl": "",
+  "RoutingRulesQueueUrl": "",
+  "PVAPreChatSDKBlobUrl": "",
+  "PesistentChatUrl": "",
+  "PesistentChatNonOperationHoursUrl": "",
+  "PickChatSpanishUrl": "",
+  "OrgUrl": "",
+  "OrgId": "",
+  "ApiGatewayUrl": "",
+  "AgentAccountEmail": "",
+  "AdminAccountEmail": "",
+  "AdminAccountPassword": "",
+  "OfflineOHUrl": "",
+  "OfflineOHSpanishUrl": "",
+  "LiveChatNoRuleUrl": "",
+  "SupervisorAccountEmail": "",
+  "SupervisorAccountPassword": "",
+  "CSMUser":"",
+  "CSRUser":"",
+  "QueueNameToAssignChat": "",
+  "QueueName": "",
+  "SentimentAnalysisConfigTitle": "Sentiment analysis",
+  "QPTestWSChat": "",
+  "QPTestWSChatSecond": "",
+  "QPTestSecondWSChat": "",
+  "QPTestThirdWSChat": "",
+  "DBEndPoint": "",
+  "DBKey": "",
+  "MacroConditionCustomerName": "",
+  "PublicKeyValidUrl": "",
+  "PublicKeyEmptyUrl": "",
+  "PublicKeyInvalidUrl": "",
+  "MultiPublicKeysArrayValidUrl": "",
+  "MultiPublicKeysArrayWithoutKidUrl": "",
+  "MultiPublicKeysArrayWithEmptyPublicKeyUrl": "",
+  "MultiPublicKeysArrayWithInvalidPublicKeyUrl": "",
+  "AuthChatPortalLink": "https://dailycss.powerappsportals.com/support/",
+  "AuthPortalUser1": "",
+  "AuthPortalUserPassword1": "",
+  "AuthPortalUser2": "",
+  "AuthPortalUserPassword2": "",
+  "JWTPortalUrl": "",
+  "TestLiveChatPersistentAutomatedBlobUrl": "",
+  "CustomTelegramAccountEmail": "",
+  "TwilioSentimentAccountSID": "",
+  "TwilioSentimentAuthToken": "",
+  "LCWPersistentAuthURL": "",
+  "LCWAuthPersistentUser": "",
+  "LCWAuthPersistentPwd": "",
+  "CosmosDB": {
+    "Endpoint": ""
+  },
+  "ServiceBus": {
+    "Endpoint": ""
+  },
+  "AuthenticationSettings": {
+    "KeyUrls": {
+      "EmptyKey": "",
+      "MultiInvalid": "",
+      "MultiNoKey": "",
+      "MultiNullValue": "",
+      "MultiEmpty": "",
+      "InvalidKey": "",
+      "InvalidEndpoint": ""
+    }
+  },
+  "AppleMessagesForBusiness": {
+    "AppleBusinessAccountId": ""
+  },
+  "LiveChat": {
+    "AgentEmail": "",
+    "SupervisorEmail": "",
+    "QueueName": "LiveChatAutomatedTestQueue",
+    "WorkStreamName": "LiveChatAutomatedTestWS",
+    "ChannelName": "LiveChatAutomatedTestChannel",
+    "RuQueueName": "LiveChatRuAutomatedTestQueue",
+    "RuWorkStreamName": "LiveChatRuAutomatedTestWS",
+    "QPFirstWSName": "QueuePosition Test First Work Stream",
+    "QPSecondWSName": "QueuePosition Test Second Work Stream",
+    "QPThirdWSName": "QueuePosition Test Third Work Stream",
+    "QPFirstQueueName": "QueuePosition Test First Queue",
+    "QPSecondQueueName": "QueuePosition Test Second Queue",
+    "QPFirstWSChatName": "QueuePosition Test First WS Chat",
+    "QPFirstWSSecondChatName": "QueuePosition Test First WS Second Chat",
+    "QPSecondWSChatName": "QueuePosition Test Second WS Chat",
+    "QPThirdWSChatName": "QueuePosition Test Third WS Chat",
+    "ZeroCapacityAgentEmail": "",
+    "RuChannelName": "LiveChatRuAutomatedTestChannel",
+    "SDKChatName": "SDKChat",
+    "SDKQueue": "SDKQueue",
+    "EscalationPostQueue": "EscalationPostQueue",
+    "SDKWorkstream": "SDKWorkstream",
+    "SDKPreChatQuestion": {
+      "Name": "SDKChatValidation",
+      "Text": "SDKLiveChat"
+    },
+    "SentimentAlertingWS": "SentimentAlertingWS",
+    "SentimentAlertingQueue": "SentimentAlertingQueue",
+    "SentimentAlertingChatName": "SentimentAlertingChatName",
+    "SentimentAlertingAgentEmail": "",
+    "SentimentAlertingSupervisorEmail": "",
+    "SentimentAlertingTelesignWS": "SentimentAlertingTelesignWS",
+    "SentimentAlertingTelesignNumber": "18887779999",
+    "SentimentAlertingTwilioWS": "SentimentAlertingTwilioWS",
+    "SentimentAlertingTwilioNumber": "16667779999",
+    "ProactiveChatEnabledWidget": "ProactiveChatEnabledWidget",
+    "PCSLinkModeEnabledWidget": "PCSLinkModeEnabledWidget",
+    "PCSEmbedModeEnabledWidget": "PCSEmbedModeEnabledWidget",
+    "AISuggestionChatWidgetFirst": "AISuggestionCWFirstWithAttachment",
+    "AISuggestionChatWidgetSecond": "AISuggestionCWSecond",
+    "PVAPWChat": "PVAPWChat",
+    "SentimentAlertingChatBlobUrl": "",
+    "EmptyFontStyleBlobUrl": "",
+    "WrongFontStyleBlobUrl": "",
+    "LiveChatRuAutomatedBlobUrl": "",
+    "SentimentSupervisorAffinityAccountEmail": "",
+    "SupervisorRoleAgentAffinityBlobUrl": ""
+  },
+  "Line": {
+    "ChannelID": "",
+    "ChannelSecret": "",
+    "ChannelAccessToken": "",
+    "LineBCRClientID": "",
+    "LineBCRClientSecret": "",
+    "AgentAccountEmail": "",
+    "QueueName": "LineQueueAutomated",
+    "Name": "LineAutomatedTest",
+    "PushWorkStreamName": "LineAutomatedWorkstream",
+    "ConfigName": "_msdyn_oclinechannelconfigid_value",
+    "SanityLineUser": "",
+    "SanityLineQueueName": ""
+  },
+  "MicrosoftTeams": {
+    "TeamsChatName": "TeamsTestChatAutomated",
+    "MicrosoftTeamsUrl": "",
+    "MicrosoftAppStudio": "",
+    "TeamsAgentEmail": "",
+    "TeamsAgentPassword": "",
+    "TeamsSupervisorEmail": "",
+    "TeamsSupervisorPassword": "",
+    "TeamsBCRClientId": "",
+    "TeamsBCRClientSecret": "",
+    "TeamsWorkStreamName": "TeamsTestWorkStramAutomted",
+    "TeamsQueueName": "TeamsTestQueueAutomated",
+    "TeamsAgentNameToAssignChat": "",
+    "TeamsBotWorkStreamName": "",
+    "TeamsSkillName": "",
+    "SanityTeamsUser": "",
+    "SanityTeamsQueueName": ""
+  },
+  "SMSsettings": {
+    "AccountSID": "",
+    "AuthToken": "",
+    "SMSNumber": ""
+  },
+  "SMSTwilio": {
+    "AccountSIDTwilio": "someRandomCustomerId",
+    "AgentEmail": "",
+    "AuthTokenTwilio": "someRandomApikey",
+    "SMSNumberTwilio": "123328123329",
+    "QueueName": "TwilioQueueAutomated",
+    "WorkStreamName": "TwilioWorkStreamAutomated",
+    "Twilio": {
+      "TwilioWorkStreamName": "SMSTwilioPWWorkStream",
+      "SMSTwilioAgentEmail": "",
+      "SMSTwilioSupervisorAssignWS": "SMSTwilioSupervisorAssignWS",
+      "SMSTwilioSupervisorAssignEmail": "",
+      "SMSTwilioQueue": "SMSTwilioPWQueue"
+    }
+  },
+  "WhatsAppTwilio": {
+    "AccountSIDTwilio": "someRandomCustomerId",
+    "AuthTokenTwilio": "someRandomApikey",
+    "AccountSIDTwilio1": "someRandomCustomerId1",
+    "AuthTokenTwilio1": "someRandomApikey1",
+    "AgentAccountEmail": "",
+    "AgentAccountPassword": "",
+    "DevAgentAccountEmail": "",
+    "PushWorkStreamName": "WhatsAppStreamAutomatedTest",
+    "QueueName": "WhatsAppQueueAutomatedTest",
+    "Name": "TestWhatsApp",
+    "NewNumberName": "TestNumber",
+    "TwilioInboundPhone": "+123391123329",
+    "WhatsAppChannel": {
+      "WhatsAppAccountName": "WhatsAppPWAccount",
+      "WhatsAppWorkStreamName": "WhatsAppPWWorkStream",
+      "WhatsAppQueueName": "WhatsAppPWQueue",
+      "WhatsAppNewNumberName": "WhatsAppPWPhoneNumber",
+      "WhatsAppAgentName": "",
+      "WhatsAppSupervisorAssignWS": "WhatsAppSupervisorAssignWS"
+    },
+    "SanityWhatsAppQueueName": "",
+    "SanityWhatsAppUser": ""
+  },
+  "SMSTelesign": {
+    "AgentEmail": "",
+    "TelesignCustomerId": "someRandomCustomerId",
+    "TelesignApikey": "someRandomApikey",
+    "TelesignSMSNumber": "123321123321",
+    "QueueName": "TelesignQueueAutomated",
+    "WorkStreamName": "TelesignWorkStreamAutomated",
+    "TeleSign": {
+      "TeleSignWorkStreamName": "SMSTeleSignPWWorkStream",
+      "SMSTeleSignAgentEmail": ""
+    }
+  },
+  "Twitter": {
+    "TwitterEnvironmentName": "",
+    "TwitterChannelAPIKey": "",
+    "TwitterChannelAPISecret": "",
+    "twitterUserName": "",
+    "twitterPassword": "",
+    "twitterLoginEmail": "",
+    "TwitterUrl": "",
+    "TwitterHandleName": "",
+    "TransferAgentAccountEmail": "",
+    "TransferAgentAccountPassword": "",
+    "TransferQueueName": "",
+    "TwitterAgentEmail": "",
+    "TwitterAgentPassword": "",
+    "AgentNameToAssignChat": "",
+    "QueueNameToAssignChat": "",
+    "TwitterAgentSupervisorEmail": "",
+    "TwitterAgentSupervisorPassword": "",
+    "SanityTwitterAppUser": "",
+    "SanityTwitterQueuename": ""
+  },
+  "Custom": {
+    "ChannelName": "Custom Automated",
+    "CustomMicrosoftAppID": "",
+    "CustomMicrosoftDevAppID": "",
+    "CustomClientSecret": "",
+    "CustomClientDevSecret": "",
+    "WorkStreamName": "CustomWorkStreamAutomatedTest",
+    "QueueName": "CustomQueueAutomatedTest",
+    "AgentEmail": "",
+    "CustomAgentEmail": "",
+    "DirectLineBlob": "",
+    "CustomDirectLineAgentEmail": "",
+    "CustomTelegramAgentEmail": "",
+    "CustomTelegramAppID": "",
+    "CustomTelegramAppSecret": "",
+    "TelegramOperatingHourAppId": "",
+    "TelegramOperatingHourAppSecret": "",
+    "SanityCustomQueueName": "",
+    "SanityCustomUserName": ""
+  },
+  "Facebook": {
+    "Name": "Facebook Automated",
+    "FacebookUrl": "",
+    "FacebookUserName": "",
+    "FacebookPassword": "",
+    "FacebookPageName": "",
+    "DevAppId": "",
+    "Secret": "",
+    "PageId": "",
+    "DevPageId": "",
+    "DevPageName": "fbautomated",
+    "PageToken": "",
+    "FacebookBCRClientID": "",
+    "FacebookDevBCRClientId": "",
+    "FacebookBCRClientSecret": "",
+    "FacebookDevBCRClientSecret": "",
+    "FacebookAgentEmail": "",
+    "FacebookDevAgentEmail": "",
+    "FacebookAgentPassword": "",
+    "FacebookSessionName": "",
+    "ExpressionBuilderFirstAgentScriptName": "",
+    "ExpressionBuilderSecondAgentScriptName": "",
+    "FacebookAccountName": "",
+    "PVAFacebookPageName": "",
+    "PVAFacebookPageId": "",
+    "PVAFacebookUserName": "",
+    "FacebookWorkStreamName": "",
+    "FacebookAgentName": "",
+    "FacebookOldBCRClientId": "",
+    "PVAFacebookPassword": "",
+    "FacebookWS": "Facebook Automated WS",
+    "FacebookQueue": "Facebook Automated Queue",
+    "FacebookConsultingAgentName": "",
+    "AttachmentImageBlobUrl": "",
+    "AttachmentImageName": "",
+    "AttachmentDllblobUrl": "",
+    "AttachmentDllName": "",
+    "FacebookConsultingAgentEmail": ""
+  },
+  "WeChat": {
+    "GLTeamSettings": {
+      "OriginalId": "",
+      "Token": "dummyDefaultToken",
+      "ConfigId": ""
+    },
+    "WeChatName": "Automated WeChat",
+    "DefaultSecret": "dummyDefaultSecret",
+    "DefaultToken": "dummyDefaultToken",
+    "OriginalID": "",
+    "DeveloperID": "",
+    "WeChatSecret": "dummyDefaultSecret",
+    "WeChatToken": "dummyDefaultToken",
+    "MessageEncryptionkey": "",
+    "AgentEmail": "",
+    "PushWorkStreamName": "WeChatPushWorkStreamAutomated1",
+    "QueueName": "WeChatQueueAutomated1",
+    "WeChatChannel": {
+      "WeChatAccountName": "WeChatPWAccount",
+      "WeChatOriginalID": "",
+      "WeChatDeveloperID": "",
+      "WeChatSecretKey": "",
+      "WeChatMessageEncryptionkey": "",
+      "WeChatTokenID": "",
+      "WeChatWorkStreamName": "WeChatPWWorkStream",
+      "WeChatQueue": "WeChatPWQueue",
+      "WeChatAgent": "",
+      "WeChatAgentEmail": "",
+      "WeChatSupervisorAssignWS": "WeChatSupervisorAssignWS",
+      "WeChatSupervisorAssignEmail": "",
+      "WeChatSupervisorAssignName": ""
+    }
+  },
+  "Telephony": {
+    "TelephonyAgentEmail": "TelephonyAgent@ocautositpw1.onmicrosoft.com",
+    "WorkStreamName": "Voice live stream by Automation",
+    "VoiceQueueName": "Voice Queue by Automation",
+    "VoiceChannelName": "Voice Channel by Automation",
+    "OutboundProfileName": "Outbound Profile By Automation",
+    "TalosClient_Id": "ac2022db-49dd-4111-a714-33d265de3308",
+    "Client_Secret": "",
+    "CustomerPhoneNumber": "+18333161809",
+    "UniqueOrgId": "unq7d223c8d6ef44eb99d9647b5eea8a",
+    "TalosTenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+  },
+  "LiveChatLogin": {
+    "LiveChatAccountEmail": "",
+    "LiveAccountAgentEmail": "",
+    "LiveChatAccountPassword": "",
+    "CobrowseScreenshareBlob": "",
+    "LiveChatConsultOrTransferAgentEmail": "",
+    "LiveChatConsultOrTransferAgentPassword": "",
+    "LiveChatConsultRedesignUser1": "",
+    "LiveChatConsultRedesignUser2": "",
+    "LiveChatConsultRedesignUser3": "",
+    "LiveChatConsultRedesignSupervisor": "",
+    "LiveChatConsultRedesignBlobUrl": "",
+    "LiveChatTransferQueueName": "",
+    "LivePopoutChatUrl": "",
+    "LivePopoutChatPreChatSurveyUrl": "",
+    "LiveChatDesignPopoutbloburl": "",
+    "PVAPreChatSurveybloburl": "",
+    "ExactSkillMatchBlobUrl" : "",
+    "ExactMostSkillMatchBlobUrl" : "",
+    "BYOBUserName": "",
+    "PVAUserName": "",
+    "SupervisorBlob": "",
+    "ZeroCapacityUser": "",
+    "ZeroCapacityPassword": "",
+    "MinimumCapacityUser": "",
+    "MinimumCapacityPassword": "",
+    "LivePopoutChatUserName": "",
+    "LiveChatReconnectUserName": "",
+    "LiveChatAttachmentEmail": "",
+    "LCWAuthURL": "",
+    "LCWAuthUser": "",
+    "LCWAuthPwd": "",
+    "LCWE2EAuthUser": "",
+    "LCWE2EAuthPassword": "",
+    "PortalURL": "",
+    "LCWAuthPopURL": "",
+    "LCWAuthPickURL": "",
+    "LcwPickUrl": "",
+    "LcwCapacityPickUrl": "",
+    "LcwCapPickUrl":"",
+    "Prechatcombinations": "",
+    "AuthReconnectPopoutSurveyQuestionBlobURL": "",
+    "AuthReconnectPopoutSurveyQuestionWithOutRedirectionBlobURL": "",
+    "AuthReconnectWithOutRedirectionURL": "",
+    "PVAContextVariableAuthURL": "",
+    "LiveChatAttachments": {
+      "LiveChatAttachmentsYYBloburl": "",
+      "LiveChatAttachmentsYNBloburl": "",
+      "LiveChatAttachmentsNYBloburl": "",
+      "LiveChatAttachmentsNNBloburl": ""
+    },
+    "LiveInliveVideosBlobUrl": "",
+    "LCWAutomatedChatblobUrl": "",
+    "LCWAutomatedChatBypassCacheblobUrl": "",
+    "AgentEmailFirst": "",
+    "AgentEmailSecond": "",
+    "LiveChatAutomatedTestChannelblobUrl": "",
+    "LCWAutomatedChatPopOutblobUrl": "",
+    "LCWAutomatedChatPopOutInvalidLocationBlobUrl": "",
+    "LiveChatAutomatedTestTranscriptBlobUrl": "",
+    "SDKChatGuid": "",
+    "LiveChatACSAccountBlobUrl": "",
+    "LiveChatAutomatedFontTestUrl": "",
+    "LiveChatAvgWaitQueuePositionBlobUrl": "",
+    "LiveChatRelevanceAccountBlobUrl": "",
+    "LiveChatPWLinkAccountBlobUrl": "",
+    "SkillprofileBlobUrl": "",
+    "PVAPreChatSurveyMultibloburl": "",
+    "PVAHorizontalBlobUrl": "",
+    "PVAVerticalBlobUrl": "",
+    "LiveChatAWTBlobUrl": "",
+    "LiveChatPrechatTranscriptBlobUrl": "",
+    "LiveChatAutomatedQueueTransfer":"",
+    "LiveChatProfileBasedCapacityWSBlobUrl": "",
+    "ClosestSkillMatchBlobUrl" : "",
+    "SpecialcharChatBlobURL": "",
+    "LCWQuickReplyTextMessage1": "",
+    "LCWQuickReplyTextMessage2": "",
+    "LiveChatOfflineUserBlobUrl": "",
+    "CustomSkillprofileBlobUrl":""
+  },
+  "LiveChatPickMode": {
+    "EnglishChatName": "TestLiveChatPickEnglishAutomated",
+    "SpanishChatName": "TestLiveChatPickSpanishAutomated",
+    "AgentEmail": "",
+    "QueueName": "PickChatAutomatedQueue",
+    "WorkStreamName": "PickChatAutomatedWS"
+  },
+  "LiveChatPersistentMode": {
+    "ChatName": "TestLiveChatPersistentAutomated",
+    "AgentEmail": "",
+    "AgentName": "Persistent Automated",
+    "QueueName": "PersistentChatQueue",
+    "WorkStreamName": "PersistentChatWorkStream",
+    "AuthSettingsName": "AutomatedTestingDefaultAuthSettings",
+    "PublicKeyURL": "",
+    "JavaScriptClientFunction": "",
+    "AzureFunctionEndpoint": "",
+    "PersistentChatOOHBlobUrl": "",
+    "CustomSkillBYOSEBlobUrl":""
+  },
+  "OmnichannelAgentLogin": {
+    "OmnichannelAgentEmail": "",
+    "OmnichannelAgentPassword": ""
+  },
+  "LCW": {
+    "SentimentMultipleSessions": {
+      "LCWName": "LCWMultipleSessionsAutomated",
+      "QueueName": "LCWMultipleSessionsQueueAutomated",
+      "WorkStreamName": "LCWMultipleSessionsWSAutomated"
+    },
+    "QueuePositionTransfer": {
+      "LCWName": "Queue Position Transfer Test Case",
+      "LCWAppId": "",
+      "Queue1": {
+        "QueueName": "QueueTransfer Q1",
+        "AgentEmails": [],
+        "AgentName1": "",
+        "AgentName2": ""
+      },
+      "Queue2": {
+        "QueueName": "QueueTransfer Q2",
+        "AgentEmail": ""
+      },
+      "Workstream": {
+        "Name": "QueuePositionTransferWS Automated"
+      }
+    },
+    "AutomatedMessages": {
+      "LCWName": "AutomatedMessagesChat",
+      "QueueName": "AutomatedMessagesQueueAutomated",
+      "WorkstreamName": "AutomatedMessagesWSAutomated",
+      "AutomatedMessageName": "TestAutomatedMessage",
+      "AutomatedMessageText": "Test automated message",
+      "AutomatedMessagesBlobURL": ""
+    }
+  },
+  "DataMaskingSettings": {
+    "UserEmail": ""
+  },
+  "QueuePositionTransfer": {
+    "QueuePositionTransferAutomatedBlobURL": "",
+    "QueuePositionFirstChatBlobURL": "",
+    "QueuePositionFirstSecondChatBlobURL": "",
+    "QueuePositionSecondChatBlobURL": "",
+    "QueuePositionThirdChatBlobURL": ""
+  },
+  "AsyncChannelsE2EConfigs": {
+    "SenderName": "Playwright customer",
+    "AppleMessagesForBusiness": {
+      "Agent": [
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        }
+      ],
+      "Channels": {
+        "Default": {
+          "appleBusinessAccountId": "",
+          "mspId": ""
+        }
+      },
+      "AgentIndex": {
+        "Push": 0
+      }
+    },
+    "WhatsApp": {
+      "Agent": [
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        },
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        },
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        },
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        }
+      ],
+      "AgentIndex": {
+        "Push": 0,
+        "SupervisorAssign": 1
+      },
+      "Channels": {
+        "Default": {
+          "orgNumber": "",
+          "authToken": "",
+          "accountSid": ""
+        },
+        "AttachmentsDisabled": {
+          "orgNumber": "",
+          "authToken": "",
+          "accountSid": ""
+        },
+        "push": {
+          "orgNumber": "",
+          "authToken": "",
+          "accountSid": ""
+        },
+        "supervisorassign": {
+          "orgNumber": "",
+          "authToken": "",
+          "accountSid": ""
+        },
+        "ConversationStatus": {
+          "orgNumber": "",
+          "authToken": "",
+          "accountSid": ""
+        },
+        "OOH": {
+          "orgNumber": "",
+          "authToken": "",
+          "accountSid": ""
+        }
+      }
+    },
+    "Facebook": {
+      "Agent": [
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        },
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        },
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        }
+      ],
+      "AgentIndex": {
+        "Push": 0,
+        "Pick": 1
+      },
+      "Channels": {
+        "Default": {
+          "facebookPageId": "",
+          "bcrAppId": "",
+          "queueName": ""
+        },
+        "AttachmentsDisabled": {
+          "facebookPageId": "",
+          "bcrAppId": "",
+          "queueName": ""
+        },
+        "Push": {
+          "facebookPageId": "",
+          "bcrAppId": "",
+          "queueName": ""
+        },
+        "Pick": {
+          "facebookPageId": "",
+          "bcrAppId": "",
+          "queueName": ""
+        },
+        "FBAllAttachmentDisabled": {
+          "facebookPageId": "",
+          "bcrAppId": "",
+          "queueName": ""
+        },
+        "FBAgentAttachmentDisabled": {
+          "facebookPageId": "",
+          "bcrAppId": "",
+          "queueName": ""
+        },
+        "FBUserAttachmentDisabled": {
+          "facebookPageId": "",
+          "bcrAppId": "",
+          "queueName": ""
+        },
+        "EnablePushBasedWSSelection": {
+          "facebookPageId": "",
+          "bcrAppId": "",
+          "queueName": ""
+        },
+        "FBPWPick": {
+          "facebookPageId": "",
+          "bcrAppId": "",
+          "queueName": ""
+        },
+        "OOH": {
+          "facebookPageId": "",
+          "bcrAppId": "",
+          "queueName": ""
+        }
+      }
+    },
+    "Teams": {
+      "Agent": [
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        },
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        },
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        },
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        },
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        }
+      ],
+      "AgentIndex": {
+        "Push": 0,
+        "Pick": 1,
+        "Inbox": 4
+      },
+      "Channels": {
+        "Default": {
+          "bcrAppId": ""
+        },
+        "AttachmentsDisabled": {
+          "bcrAppId": ""
+        },
+        "Push": {
+          "bcrAppId": ""
+        },
+        "Inbox": {
+          "bcrAppId": ""
+        },
+        "Pick": {
+          "bcrAppId": ""
+        },
+        "EnabledAttachments": {
+          "bcrAppId": ""
+        },
+        "EnabledAgentAttachment": {
+          "bcrAppId": ""
+        },
+        "EnabledCustomerAttachment": {
+          "bcrAppId": ""
+        },
+        "OOOHTeams": {
+          "bcrAppId": ""
+        }
+      }
+    },
+    "Telegram": {
+      "Agent": [
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        }
+      ],
+      "Channels": {
+        "Default": {
+          "bcrAppId": ""
+        },
+        "AttachmentsDisabled": {
+          "bcrAppId": ""
+        },
+        "EnabledAgentAttachment": {
+          "bcrAppId": ""
+        },
+        "EnabledCustomerAttachment": {
+          "bcrAppId": ""
+        }
+      }
+    },
+    "Line": {
+      "Agent": [
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        },
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        },
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        }
+      ],
+      "AgentIndex": {
+        "Push": 0,
+        "Pick": 1
+      },
+      "Channels": {
+        "Default": {
+          "bcrAppId": ""
+        },
+        "AttachmentsDisabled": {
+          "bcrAppId": ""
+        },
+        "Push": {
+          "bcrAppId": ""
+        },
+        "Pick": {
+          "bcrAppId": ""
+        },
+        "LineAgentAttachmentDisabled": {
+          "bcrAppId": ""
+        },
+        "LineUserAttachmentDisabled": {
+          "bcrAppId": ""
+        },
+        "OOOHLine": {
+          "bcrAppId": ""
+        }
+      }
+    },
+    "DirectLine": {
+      "Agent": [
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        }
+      ],
+      "Channels": {
+        "Default": {
+          "bcrAppId": ""
+        }
+      }
+    },
+    "Kik": {
+      "Agent": [
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        }
+      ],
+      "Channels": {
+        "Default": {
+          "bcrAppId": ""
+        }
+      }
+    },
+    "Twitter": {
+      "Agent": [
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        },
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        },
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        }
+      ],
+      "AgentIndex": {
+        "Push": 0,
+        "Pick": 1,
+        "Affinity": 2
+      },
+      "Channels": {
+        "Default": {
+          "applicationId": "",
+          "consumerSecret": "",
+          "recipientId": ""
+        },
+        "AttachmentsDisabled": {
+          "applicationId": "",
+          "consumerSecret": "",
+          "recipientId": ""
+        },
+        "Push": {
+          "applicationId": "",
+          "consumerSecret": "",
+          "recipientId": ""
+        },
+        "Pick": {
+          "applicationId": "",
+          "consumerSecret": "",
+          "recipientId": ""
+        },
+        "Transfer": {
+          "applicationId": "",
+          "consumerSecret": "",
+          "recipientId": ""
+        },
+        "OOH": {
+          "applicationId": "",
+          "consumerSecret": "",
+          "recipientId": ""
+        },
+        "AgentAffinity": {
+          "applicationId": "",
+          "consumerSecret": "",
+          "recipientId": ""
+        }
+      }
+    },
+    "WeChat": {
+      "Agent": [
+        {
+          "email": "",
+          "password": ""
+        }
+      ],
+      "Channels": {
+        "Default": {
+          "token": "",
+          "ocConfigId": "",
+          "serviceAccountId": ""
+        },
+        "AttachmentsDisabled": {
+          "token": "",
+          "ocConfigId": "",
+          "serviceAccountId": ""
+        },
+        "Push": {
+          "token": "",
+          "ocConfigId": "",
+          "serviceAccountId": ""
+        },
+        "Pick": {
+          "token": "",
+          "ocConfigId": "",
+          "serviceAccountId": ""
+        },
+        "supervisorassign": {
+          "token": "",
+          "ocConfigId": "",
+          "serviceAccountId": ""
+        },
+        "WeChatAgentAttachmentDisabled": {
+          "token": "",
+          "ocConfigId": "",
+          "serviceAccountId": ""
+        },
+        "WeChatUserAttachmentDisabled": {
+          "token": "",
+          "ocConfigId": "",
+          "serviceAccountId": ""
+        },
+        "WeChatBothAttachmentEnabled": {
+          "token": "",
+          "ocConfigId": "",
+          "serviceAccountId": ""
+        },
+        "WeChatBothAttachmentDisabled": {
+          "token": "",
+          "ocConfigId": "",
+          "serviceAccountId": ""
+        }
+      }
+    },
+    "SMSTeleSign": {
+      "Agent": {
+        "email": "",
+        "password": "",
+        "name": ""
+      },
+      "Channels": {
+        "Default": {
+          "apikey": "",
+          "customerId": "",
+          "telesignSMSNumber": ""
+        },
+        "Push": {
+          "apikey": "",
+          "customerId": "",
+          "telesignSMSNumber": ""
+        },
+        "Pick": {
+          "apikey": "",
+          "customerId": "",
+          "telesignSMSNumber": ""
+        },
+        "SentimentAnalysis": {
+          "apikey": "",
+          "customerId": "",
+          "telesignSMSNumber": ""
+        }
+      }
+    },
+    "SMSTwilio": {
+      "Agent": [
+        {
+          "email": "",
+          "password": "",
+          "name": ""
+        }
+      ],
+      "AgentIndex": {
+        "Push": 0
+      },
+      "Channels": {
+        "Default": {
+          "apikey": "",
+          "customerId": "",
+          "telesignSMSNumber": ""
+        },
+        "Push": {
+          "accountSid": "",
+          "authToken": "",
+          "twilioSMSNumber": ""
+        },
+        "supervisorassign": {
+          "accountSid": "",
+          "authToken": "",
+          "twilioSMSNumber": ""
+        },
+        "SentimentAnalysis": {
+          "accountSid": "",
+          "authToken": "",
+          "twilioSMSNumber": ""
+        }
+      }
+    }
+  },
+  "ModernAdmin": {
+    "ModernAdminEmail": "",
+    "ModernAdminPassword": "",
+    "ModernAdminUrl": ""
+  },
+  "browsers": [
+    "chromium"
+  ],
+  "devices": [],
+  "launchBrowserSettings": {
+    "headless": false,
+    "slowMo": 10,
+    "args": [
+      "--disable-web-security"
+    ]
+  }
+}
