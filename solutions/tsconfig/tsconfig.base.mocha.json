@@ -4,7 +4,6 @@
 		"../../Packages/Crm.UnifiedMoca.UnitTestTools.1.2.0/content/typings/assertion-error/assertion-error.d.ts",
 		"../../Packages/Crm.UnifiedMoca.UnitTestTools.1.2.0/content/typings/sinon/sinon.d.ts",
 		"../../Packages/Crm.UnifiedMoca.UnitTestTools.1.2.0/content/typings/chai/chai.d.ts",
-		"../../references/internal/TypeDefinitions/React/react-addons-test-utils.d.ts",
 		"../../references/external/TypeDefinitions/microsoft.ajax.d.ts",
 		"../../references/external/TypeDefinitions/lib.es6.d.ts",
 		"../../references/external/TypeDefinitions/whatwg-fetch.d.ts"

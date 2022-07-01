@@ -1,6 +1,5 @@
 {
     "files": [
-		"../../references/internal/TypeDefinitions/XrmClientApi/XrmClassicWebClientApi.d.ts",
 		"../../references/external/TypeDefinitions/microsoft.ajax.d.ts",
 		"../../references/external/TypeDefinitions/lib.es6.d.ts",
 		"../../references/external/TypeDefinitions/whatwg-fetch.d.ts"
