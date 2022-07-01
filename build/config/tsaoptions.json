@@ -1,7 +1,7 @@
 {
     "instanceUrl": "https://dynamicscrm.visualstudio.com/defaultcollection",
     "projectName": "OneCRM",
-    "areaPath": "OneCRM\\CRM\\Productivity controls",
+    "areaPath": "OneCRM\\Client Foundation\\Productivity pane\\Productivity Tools",
     "notificationAliases":  ["vbanga@microsoft.com","john.paul@microsoft.com","idcefun@microsoft.com"],
     "codebaseName": "CRM.Solutions.ProductivityTools - TSAV2",
 	"iterationPath": "OneCRM\\Train\\2022",
