@@ -48,7 +48,7 @@ module ProductivityPaneLoader {
          * all sessions. Currently there is only Teams Collab control.
          */
         public static isShownOnAllSessions(controlName: string): boolean {
-            return Utils.isEqual(controlName, Constants.teamsCollabControlName);
+            return Utils.isEqual(controlName, Constants.teamsCollabControlName) || Utils.isEqual(controlName, Constants.teamsCallsControlName);
         }
 
         /**
@@ -56,14 +56,14 @@ module ProductivityPaneLoader {
          * keepBadgeOnSelect is passed false. Teams Collab control wants to keep badge on select.
          */
         public static keepBadgeOnSelect(controlName: string): boolean {
-            return Utils.isEqual(controlName, Constants.teamsCollabControlName);
+            return Utils.isEqual(controlName, Constants.teamsCollabControlName) || Utils.isEqual(controlName, Constants.teamsCallsControlName);
         }
 
         /**
          * Return true if the app side pane header needs to be removed for certain controls.
          */
         public static hideHeader(controlName: string): boolean {
-            return Utils.isEqual(controlName, Constants.teamsCollabControlName);
+            return Utils.isEqual(controlName, Constants.teamsCollabControlName) || Utils.isEqual(controlName, Constants.teamsCallsControlName);
         }
 
         /**

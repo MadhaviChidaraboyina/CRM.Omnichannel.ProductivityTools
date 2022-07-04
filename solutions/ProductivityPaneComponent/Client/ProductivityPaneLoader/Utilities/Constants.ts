@@ -65,6 +65,7 @@ module ProductivityPaneLoader {
 
         // App side pane
         public static teamsCollabControlName = 'MscrmControls.OfficeProductivity.CollabControl';
+        public static teamsCallsControlName = 'TeamsDialerLayoutHostControl.LayoutHostControl';
         public static appSidePaneIdPrefix = 'AppSidePane_';
         public static SmartAssistPaneId = 'AppSidePane_MscrmControls.SmartassistPanelControl.SmartassistPanelControl';
 
