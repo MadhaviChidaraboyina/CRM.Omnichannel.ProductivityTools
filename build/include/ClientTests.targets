@@ -115,11 +115,6 @@
       <Private>True</Private>
       <HintPath>$(PKG_XRMSERVER)\lib\net452\Microsoft.Xrm.Test.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-      <HintPath>$(PKG_JSON)\lib\net40\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="WebDriver">
       <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>

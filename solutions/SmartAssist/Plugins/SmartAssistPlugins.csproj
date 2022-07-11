@@ -49,11 +49,6 @@
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>true</Private>
-      <HintPath>$(PKG_JSON)\lib\net40\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
