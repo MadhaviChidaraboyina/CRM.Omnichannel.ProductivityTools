@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
   <Import Project="$(XrmSolutionsRoot)\build\include\XRMSolutions.targets" Condition="Exists('$(XrmSolutionsRoot)\build\include\XRMSolutions.targets')" />
   <PropertyGroup>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <NOTARGET>true</NOTARGET>
     <SolutionProjectNamePrefix>ProductivityMacrosApplicationOC</SolutionProjectNamePrefix>
     <SolutionFileNamePrefix>msdyn_ProductivityMacrosApplicationOC</SolutionFileNamePrefix>
