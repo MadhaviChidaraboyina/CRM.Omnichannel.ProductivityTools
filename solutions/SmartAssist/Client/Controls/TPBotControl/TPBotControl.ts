@@ -127,13 +127,7 @@ module MscrmControls.ProductivityPanel {
                 let tags = messageMap.get("tags");
                 if (conversationId && uiSessionId && tags.indexOf(TPBot.Constants.FPBTag) == -1) {
                     TPBot.TPBotManager.Instance.RenderTPBotCard(conversationId, card.content);
-                    
-                    if (TPBotControl._context && TPBot.Utility.isUsingAppSidePane(TPBotControl._context)) {
-                        TPBot.Utility.updateBadge(1);
-                    } else {
-                        // we should remove "else" section after Oct 2021 release
-                        TPBot.Utility.DispatchPaneNotificationEvent(1);
-                    }
+                    TPBot.Utility.updateBadge(1);
                 }
             }
         }

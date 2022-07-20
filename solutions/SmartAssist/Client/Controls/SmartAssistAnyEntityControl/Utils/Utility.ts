@@ -86,16 +86,6 @@ module MscrmControls.SmartAssistAnyEntityControl {
         }
 
         /**
-         * Dispatches Productivity Panel In Bound Event
-         * @param notificationNumber: Notification Number
-         */
-        public static DispatchPanelInboundEvent(notificationNumber: number, sesssionId: string) {
-            let eventPayload = new MscrmControls.PanelControl.PanelInboundEventDataModel(StringConstants.PPChildControlId, new MscrmControls.PanelControl.PanelNotification(notificationNumber, sesssionId));
-            let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, { "detail": eventPayload });
-            window.top.dispatchEvent(event);
-        }
-
-        /**
          * Update app side pane badge
          * @param notificationNumber: notification count
          */
@@ -114,14 +104,6 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     : notificationNumber;
                 pane.badge = badge <= 0 ? false : badge;
             }
-        }
-
-        /**
-        * Indicate if smart assist control is rendered in app side pane
-        * @param context: PCF control context
-        */
-        public static isUsingAppSidePane(context: any): boolean {
-            return true;
         }
 
         /**Get live work stream id */

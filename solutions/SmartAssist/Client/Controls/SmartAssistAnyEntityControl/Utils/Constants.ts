@@ -16,8 +16,6 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static LocCacheString = "SAlocStrings";
         public static EnglishLanguageCode = "1033";
         public static SmartAssistPaneId = "AppSidePane_MscrmControls.SmartassistPanelControl.SmartassistPanelControl";
-		public static FCB_ProductivityTools_UseAppSidePanes = "ProductivityTools.UseAppSidePanes";
-		public static FCB_October2021Update = "October2021Update";
         public static FCB_October2022Update = "October2022Update";
 
         //FPBot

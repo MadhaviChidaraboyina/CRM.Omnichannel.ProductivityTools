@@ -93,43 +93,5 @@ module ProductivityPaneLoader {
                 );
             }
         }
-
-        /*
-         * This method will be removed post Oct 2021 release, along with the invokers.
-         */
-        public static loadLegacyProductivityPane() {
-            XrmAppProxy.getXrmAppApis()
-                .panels.loadPanel({
-                    pageInput: {
-                        pageType: PcfControlConstants.pageType,
-                        controlName: PcfControlConstants.paneControlName,
-                    },
-                    // =True: If already have sidepanel with pageInput at target position, will auto replace with new content.
-                    // =false: will create new sidepanel at position, event have another sidepanel already
-                    replaceIfExisted: true,
-                    width: 340,
-                    position: 2, // 1=left, 2=right, default = right
-                    state: 2, // 0=collapsed, 1=Expanded, 2=Hidden, default = Expanded
-                    showTitle: false, // default = true
-                    canBeClosed: false, // will display close button in title bar
-                    canBeCollapsed: true, // will display expand / collapse in title bar,
-                    defaultCollapsedBehavior: false, // default = true
-                    isTitleStatic: true,
-                })
-                .then((paneId: string) => {
-                    Logger.logInfo(
-                        EventType.LEGACY_PANE_LOAD_SUCCESS,
-                        `${Constants.productivityToolsLogPrefix} Success: legacy pane loaded: ${paneId}`,
-                    );
-                    sessionStorage.setItem(PcfControlConstants.sidePaneKey, paneId);
-                }),
-                (error: any) => {
-                    Logger.logWarning(
-                        EventType.LEGACY_PANE_LOAD_FAILURE,
-                        `${Constants.productivityToolsLogPrefix} Legacy pane load failed`,
-                        error,
-                    );
-                };
-        }
     }
 }

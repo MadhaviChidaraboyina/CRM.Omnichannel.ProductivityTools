@@ -66,13 +66,6 @@ module ProductivityPaneLoader {
             return Utils.isEqual(controlName, Constants.teamsCollabControlName) || Utils.isEqual(controlName, Constants.teamsCallsControlName);
         }
 
-        /**
-         * Indicate if the control is loaded via app side panes.
-         */
-        public static isUsingAppSidePanes(): boolean {
-            return true;
-        }
-
         public static convertMapToJsonString(map: Map<string, string>): string {
             let jsonObject = {};
             map.forEach((value, key) => {

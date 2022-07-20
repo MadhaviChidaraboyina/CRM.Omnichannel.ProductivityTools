@@ -89,24 +89,6 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         /**
-         * Dispatches Productivity Panel In Bound Event
-         * @param rerender: PP Rerender obj
-         */
-        public static DispatchPanelInboundEvent(rerender: MscrmControls.PanelControl.Rerender | MscrmControls.PanelControl.PanelNotification) {
-            let eventPayload = new MscrmControls.PanelControl.PanelInboundEventDataModel(Constants.ControlId, rerender);
-            let event = new CustomEvent(MscrmControls.PanelControl.PanelInboundEventName, { "detail": eventPayload });
-            window.top.dispatchEvent(event);
-        }
-
-        /**
-        * Indicate if smart assist control is rendered in app side pane
-        * @param context: PCF control context
-        */
-         public static isUsingAppSidePane(context: any): boolean {
-            return true;
-        }
-
-        /**
          * Check if provided entity name is valid
          * @param entityName: source entity name
          */

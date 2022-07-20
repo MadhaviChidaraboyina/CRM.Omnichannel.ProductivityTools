@@ -11,5 +11,4 @@
 /// <reference path="../../TypeDefinitions/XrmClientApiInternal.d.ts" />
 /// <reference path="../../TypeDefinitions/AppRuntimeClientSdk.d.ts" />
 /// <reference path="../../TypeDefinitions/libs/TelemetryLogger.ts" />
-/// <reference path="../../TypeDefinitions/ProductivityPaneInboundEvent.d.ts" />
 /// <reference path="CommonReferences.ts" />

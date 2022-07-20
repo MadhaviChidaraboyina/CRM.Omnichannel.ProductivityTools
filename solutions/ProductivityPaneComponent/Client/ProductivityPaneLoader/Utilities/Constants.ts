@@ -52,17 +52,9 @@ module ProductivityPaneLoader {
                 },
             },
         };
-
-        // Serve legacy productivity pane. Will be removed post Oct 2021 release
-        public static sidePaneKey = 'ProductivityPaneSidePanelId';
-        public static paneControlName = 'MscrmControls.PanelControl.PanelControl';
     }
 
     export class Constants {
-        // FCB
-        public static FCB_ProductivityTools_UseAppSidePanes = 'ProductivityTools.UseAppSidePanes';
-        public static FCB_October2021Update = 'October2021Update';
-
         // App side pane
         public static teamsCollabControlName = 'MscrmControls.OfficeProductivity.CollabControl';
         public static teamsCallsControlName = 'TeamsDialerLayoutHostControl.LayoutHostControl';
@@ -93,8 +85,6 @@ module ProductivityPaneLoader {
         PRODUCTIVITY_TOOLS_LOAD_FAILURE,
         APP_SIDE_PANE_LOAD_SUCCESS,
         APP_SIDE_PANE_LOAD_FAILURE,
-        LEGACY_PANE_LOAD_SUCCESS,
-        LEGACY_PANE_LOAD_FAILURE,
         SESSION_CHANGE_MANAGER_SUCCESS,
         SESSION_CHANGE_MANAGER_ERROR,
         SCRIPT_LOAD_SUCCESS,

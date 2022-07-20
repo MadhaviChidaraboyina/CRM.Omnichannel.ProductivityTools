@@ -298,11 +298,6 @@ module MscrmControls.Callscript {
 
 			let callscriptComponents: Mscrm.Component[] = [];
 
-			// Will be removed post Oct 2021 release. The header will be redundant post realse.
-			if (!Utility.isUsingAppSidePane(context as any)) {
-				callscriptComponents.push(this.getControlHeader());
-			}
-
             if (!this.stateManager.scriptDataFetchFailed) {
                 callscriptComponents.push(this.getScriptsDropdown());
             }
@@ -328,11 +323,9 @@ module MscrmControls.Callscript {
 			}
 
             if (this.stateManager.scriptDataFetchFailed) {
-                this.DispatchNoDataEvent();
                 callscriptComponents.push(this.getScriptLoadErrorContainer(LocalizedStrings.InitialScriptDataLoadFailure));
             }
             else if (this.stateManager.callscriptsForCurrentSession.length == 0) {
-                this.DispatchNoDataEvent();
                 callscriptComponents.push(this.getScriptLoadErrorContainer(LocalizedStrings.NoDataCallScriptMessage));
             }
 
@@ -362,22 +355,7 @@ module MscrmControls.Callscript {
 				let errorMessage = 'Exceeded three retry times and still fail to retrieve call scripts';
 				this.telemetryLogger.logError(this.telemetryContext, methodName, errorMessage, eventParams);
 			}
-		}
-
-        /**Dispatch No data event to PP */
-        private DispatchNoDataEvent() {
-			// do nothing if the tool is rendered in app side pane as PP doesn't exist
-			// we should remove this method and all the invoke after Oct 2021 release
-			if (this.context && Utility.isUsingAppSidePane(this.context as any)) {
-				return;
-			}
-
-            var sessionId = Utility.getCurrentSessionId();
-            var ppRerender = new MscrmControls.PanelControl.Rerender(sessionId, true);
-
-            // Dispatch No Data PP event 
-            Utility.DispatchPanelInboundEvent(ppRerender);
-        }   
+		}  
 
 		/**
 		 * Set focus on script selector

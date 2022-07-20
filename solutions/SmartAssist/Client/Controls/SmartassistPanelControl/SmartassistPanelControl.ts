@@ -62,7 +62,7 @@ module MscrmControls.SmartassistPanelControl {
                     var eventId = Microsoft.AppRuntime.Sessions.addOnSessionRefresh(this.listenCECContextChangeAPI.bind(this));
                     this.sessionRefreshHandlerId = eventId;
                 }
-                if (Utility.isUsingAppSidePane(context) && Microsoft.AppRuntime.Sessions.registrySessionStatePersistence) {
+                if (Microsoft.AppRuntime.Sessions.registrySessionStatePersistence) {
                     Microsoft.AppRuntime.Sessions.registrySessionStatePersistence(
                         "smartAssistBadge",
                         () => {
@@ -104,33 +104,6 @@ module MscrmControls.SmartassistPanelControl {
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.UpdateViewStarted, null);
 
             if (this.newInstance) {
-                // Will be removed post Oct 2021 release. The header will be redundant post realse.
-                if (!Utility.isUsingAppSidePane(SmartassistPanelControl._context as any)) {
-                    //Control title
-                    this.smartAssistInfoIconElement = document.createElement("div");
-                    this.setSmartAssistInfoIconText(this.AnchorTabContext);
-                    this.smartAssistContainer.appendChild(this.smartAssistInfoIconElement);
-
-                    var panelInfoIcon = document.getElementById(Constants.SAPanelInfoIcon);
-                    panelInfoIcon.onclick = (e) => {
-                        Utility.toggleTooltip();
-                    }
-                    panelInfoIcon.onkeydown = (e: KeyboardEvent) => {
-                        switch (e.keyCode) {
-                            case KeyCodes.ENTER_KEY:
-                                Utility.toggleTooltip();
-                                break;
-                            case KeyCodes.ESCAPE_KEY:
-                                var popup = document.getElementById('IconPopOutId');
-                                if (popup.classList.contains('show')) {
-                                    Utility.toggleTooltip();
-                                }
-                                break;
-                        }
-                    }
-                }
-
-
 				// Not visible div which is used for screen reader only
 				var screenReaderOnly = document.createElement("div");
 				screenReaderOnly.style.position = 'absolute';
@@ -295,9 +268,7 @@ module MscrmControls.SmartassistPanelControl {
             }
             var emptyStatus: AnyEntityContainerState = await this.checkEmptyStatus(entityName, recordId, configs);
             if (configs.length < 1 || emptyStatus != AnyEntityContainerState.Enabled) {            
-                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.ConfigNotFound, new Error("SA config not found Or AI settings are disabled"), null);
-                // No Data to PP
-                this.DispatchNoDataEvent();       
+                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.ConfigNotFound, new Error("SA config not found Or AI settings are disabled"), null);  
             }
             configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
             for (let i = 0; i <= (configs.length - 1); i++) {
@@ -398,21 +369,6 @@ module MscrmControls.SmartassistPanelControl {
                 return false;
             }
             return true;
-        }
-
-        /**Dispatch No data event to PP */
-        private DispatchNoDataEvent() {
-            // do nothing if the tool is rendered in app side pane as PP doesn't exist
-            // we should remove this method and all the invoke after Oct 2021 release
-            if (SmartassistPanelControl._context && Utility.isUsingAppSidePane(SmartassistPanelControl._context as any)) {
-                return;
-            }
-
-            var sessionId = Utility.getCurrentSessionId();
-            var ppRerender = new MscrmControls.PanelControl.Rerender(sessionId, true);
-
-            // Dispatch No Data PP event 
-            Utility.DispatchPanelInboundEvent(ppRerender);
         }
 
         /**

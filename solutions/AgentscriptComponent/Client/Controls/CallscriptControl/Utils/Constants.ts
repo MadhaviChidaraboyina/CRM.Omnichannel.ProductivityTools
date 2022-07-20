@@ -35,8 +35,6 @@ module MscrmControls.Callscript {
 		public static UninitializedString = "UNINITIALIZED";
         public static ControlStateKey = "CallscriptControlState";
         public static OdataError = "ODATA_ERROR";
-		public static FCB_ProductivityTools_UseAppSidePanes = "ProductivityTools.UseAppSidePanes";
-		public static FCB_October2021Update = "October2021Update";
 
 		//class names for styling
 		public static AccordionRightArrowClassName = "accordionRightArrow";
