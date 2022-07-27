@@ -165,15 +165,15 @@
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'msdyn_msdyn_toolconfig_msdyn_tabconfig'</comment>
   </data>
   <data name="10:Description,organization_msdyn_paneconfiguration" xml:space="preserve">
-    <value>Identificatore univoco per l'organizzazione</value>
+    <value>Identificatore univoco dell'organizzazione</value>
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'organization_msdyn_paneconfiguration'</comment>
   </data>
   <data name="10:Description,organization_msdyn_panetabconfiguration" xml:space="preserve">
-    <value>Identificatore univoco per l'organizzazione</value>
+    <value>Identificatore univoco dell'organizzazione</value>
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'organization_msdyn_panetabconfiguration'</comment>
   </data>
   <data name="10:Description,organization_msdyn_panetoolconfiguration" xml:space="preserve">
-    <value>Identificatore univoco per l'organizzazione</value>
+    <value>Identificatore univoco dell'organizzazione</value>
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'organization_msdyn_panetoolconfiguration'</comment>
   </data>
   <data name="15062:Description,msdyn_ProductivityPaneComponent" xml:space="preserve">
@@ -253,7 +253,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationOrganizationId" xml:space="preserve">
-    <value>Identificatore univoco per l'organizzazione</value>
+    <value>Identificatore univoco dell'organizzazione</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationOverriddenCreatedOn" xml:space="preserve">
@@ -353,7 +353,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationOrganizationId" xml:space="preserve">
-    <value>Identificatore univoco per l'organizzazione</value>
+    <value>Identificatore univoco dell'organizzazione</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationOverriddenCreatedOn" xml:space="preserve">
@@ -465,7 +465,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationOrganizationId" xml:space="preserve">
-    <value>Identificatore univoco per l'organizzazione</value>
+    <value>Identificatore univoco dell'organizzazione</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationOverriddenCreatedOn" xml:space="preserve">

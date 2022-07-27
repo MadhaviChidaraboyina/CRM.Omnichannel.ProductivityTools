@@ -185,11 +185,11 @@
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'owner_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityagentscript" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'team_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'team_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityagentscript" xml:space="preserve">
@@ -225,11 +225,11 @@
     <comment>'Agent script step' : Description for systemform in Entity FormXml ID: '{371db648-34af-4f9e-817e-cfb9ea67540a}'</comment>
   </data>
   <data name="1:Description,Agent script step{4cfec666-e1e5-4f10-8e91-98a2c286f9bc}" xml:space="preserve">
-    <value>‏‫‏‫טופס כרטיס עבור ישות זו.‬‬</value>
+    <value>‏‫‏‫טופס כרטיס לישות זו.‬‬</value>
     <comment>'Agent script step' : Description for systemform in Entity FormXml ID: '{4cfec666-e1e5-4f10-8e91-98a2c286f9bc}'</comment>
   </data>
   <data name="1:Description,Agent script{67277fb5-ba01-429e-a2cd-77407871f5a3}" xml:space="preserve">
-    <value>‏‫‏‫טופס כרטיס עבור ישות זו.‬‬</value>
+    <value>‏‫‏‫טופס כרטיס לישות זו.‬‬</value>
     <comment>'Agent script' : Description for systemform in Entity FormXml ID: '{67277fb5-ba01-429e-a2cd-77407871f5a3}'</comment>
   </data>
   <data name="1:Description,Agent script{a57f7d04-e2aa-ea11-a81c-000d3ac5e423}" xml:space="preserve">
@@ -281,7 +281,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" xml:space="preserve">
-    <value>המזהה ה ייחודי של מופעי ישות</value>
+    <value>המזהה הייחודי של מופעי ישות</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_productivityagentscriptId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" xml:space="preserve">
@@ -309,7 +309,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningTeam" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningUser" xml:space="preserve">
@@ -377,7 +377,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" xml:space="preserve">
-    <value>המזהה ה ייחודי של מופעי ישות</value>
+    <value>המזהה הייחודי של מופעי ישות</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_productivityagentscriptstepId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" xml:space="preserve">
@@ -417,7 +417,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningTeam" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningUser" xml:space="preserve">
@@ -437,7 +437,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.</value>
+    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.‬</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
@@ -445,7 +445,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.</value>
+    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.‬</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_sessiontemplateentitymsdyn_sessiontemplate" xml:space="preserve">
@@ -661,7 +661,7 @@
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>קוד אזור הזמן של המרת זמן אוניברסלי מתואם (UTC)</value>
+    <value>קוד אזור זמן של המרת זמן אוניברסלי מתואם (UTC)</value>
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
@@ -669,7 +669,7 @@
     <comment>'msdyn_productivityagentscript' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>קוד אזור הזמן של המרת זמן אוניברסלי מתואם (UTC)</value>
+    <value>קוד אזור זמן של המרת זמן אוניברסלי מתואם (UTC)</value>
     <comment>'msdyn_productivityagentscript' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_sessiontemplatemsdyn_enablebuildexpression" xml:space="preserve">

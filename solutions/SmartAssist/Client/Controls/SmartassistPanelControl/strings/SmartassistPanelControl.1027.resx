@@ -130,7 +130,7 @@
     <comment>Empty message</comment>
   </data>
   <data name="FailureMessage" xml:space="preserve">
-    <value>Hi ha hagut algun problema. Torna-ho a provar.</value>
+    <value>Alguna cosa no ha funcionat bé. Torneu-ho a provar</value>
     <comment>Failure Message</comment>
   </data>
   <data name="LoadingText" xml:space="preserve">

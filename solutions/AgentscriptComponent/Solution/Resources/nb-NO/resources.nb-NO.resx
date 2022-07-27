@@ -221,7 +221,7 @@
     <comment>'Agent script step' : Description for SavedQuery on Entity QueryId: '{194a3727-e2aa-ea11-a81c-000d3ac5e423}'</comment>
   </data>
   <data name="1:Description,Agent script step{371db648-34af-4f9e-817e-cfb9ea67540a}" xml:space="preserve">
-    <value>Et skjema for denne.</value>
+    <value>Et skjema for denne enheten.</value>
     <comment>'Agent script step' : Description for systemform in Entity FormXml ID: '{371db648-34af-4f9e-817e-cfb9ea67540a}'</comment>
   </data>
   <data name="1:Description,Agent script step{4cfec666-e1e5-4f10-8e91-98a2c286f9bc}" xml:space="preserve">
@@ -237,7 +237,7 @@
     <comment>'Agent script' : Description for SavedQuery on Entity QueryId: '{a57f7d04-e2aa-ea11-a81c-000d3ac5e423}'</comment>
   </data>
   <data name="1:Description,Agent script{fc60eca2-37c4-43c3-b604-e11d433ae008}" xml:space="preserve">
-    <value>Et skjema for denne.</value>
+    <value>Et skjema for denne enheten.</value>
     <comment>'Agent script' : Description for systemform in Entity FormXml ID: '{fc60eca2-37c4-43c3-b604-e11d433ae008}'</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptCreatedBy" xml:space="preserve">
@@ -245,7 +245,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptCreatedOn" xml:space="preserve">
-    <value>Datoen og klokkeslettet oppføringen ble opprettet.</value>
+    <value>Datoen og klokkeslettet da oppføringen ble opprettet.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptCreatedOnBehalfBy" xml:space="preserve">
@@ -329,7 +329,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepCreatedOn" xml:space="preserve">
-    <value>Datoen og klokkeslettet oppføringen ble opprettet.</value>
+    <value>Datoen og klokkeslettet da oppføringen ble opprettet.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepCreatedOnBehalfBy" xml:space="preserve">
@@ -469,7 +469,7 @@
     <comment>'Process' : Description for SavedQuery on Entity QueryId: '{46291012-667a-ea11-a811-000d3a8d88aa}'</comment>
   </data>
   <data name="1:Description,Session Template{5de0d599-f36d-425a-9c06-b80630d91def}" xml:space="preserve">
-    <value>Et skjema for denne.</value>
+    <value>Et skjema for denne enheten.</value>
     <comment>'Session Template' : Description for systemform in Entity FormXml ID: '{5de0d599-f36d-425a-9c06-b80630d91def}'</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptCreatedBy" xml:space="preserve">

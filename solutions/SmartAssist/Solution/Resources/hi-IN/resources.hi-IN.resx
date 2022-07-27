@@ -193,7 +193,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
+    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationentitymsdyn_adaptivecardconfiguration" xml:space="preserve">
@@ -269,7 +269,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigCreatedOnBehalfBy" xml:space="preserve">
-    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
+    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigentitymsdyn_smartassistconfig" xml:space="preserve">

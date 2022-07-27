@@ -141,11 +141,11 @@
     <comment>Relative path in xml: \msdyn_panetoolconfiguration\msdyn_name id:</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityagentscript" xml:space="preserve">
-    <value>レコードを所有している部署を表す一意識別子です</value>
+    <value>レコードを所有する部署を表す一意識別子</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'business_unit_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>レコードを所有している部署を表す一意識別子です</value>
+    <value>レコードを所有する部署を表す一意識別子</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'business_unit_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscriptstep_createdby" xml:space="preserve">
@@ -245,7 +245,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptCreatedOn" xml:space="preserve">
-    <value>レコードが作成された日時。</value>
+    <value>レコードを作成した日時。</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptCreatedOnBehalfBy" xml:space="preserve">
@@ -305,7 +305,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningBusinessUnit" xml:space="preserve">
-    <value>レコードを所有している部署を表す一意識別子です</value>
+    <value>レコードを所有する部署を表す一意識別子</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningTeam" xml:space="preserve">
@@ -329,7 +329,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepCreatedOn" xml:space="preserve">
-    <value>レコードが作成された日時。</value>
+    <value>レコードを作成した日時。</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepCreatedOnBehalfBy" xml:space="preserve">
@@ -413,7 +413,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningBusinessUnit" xml:space="preserve">
-    <value>レコードを所有している部署を表す一意識別子です</value>
+    <value>レコードを所有する部署を表す一意識別子</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningTeam" xml:space="preserve">

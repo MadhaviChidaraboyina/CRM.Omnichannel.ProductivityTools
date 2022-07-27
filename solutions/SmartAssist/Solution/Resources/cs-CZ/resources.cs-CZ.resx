@@ -189,7 +189,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationCreatedOn" xml:space="preserve">
-    <value>Datum a čas, kdy byl tento záznam vytvořen</value>
+    <value>Datum a čas, kdy byl záznam vytvořen</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationCreatedOnBehalfBy" xml:space="preserve">
@@ -205,7 +205,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationModifiedOn" xml:space="preserve">
-    <value>Datum a čas, kdy byl tento záznam upraven</value>
+    <value>Datum a čas, kdy byl záznam upraven</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationModifiedOnBehalfBy" xml:space="preserve">
@@ -241,7 +241,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum a čas, kdy byl tento záznam migrován</value>
+    <value>Datum a čas, kdy byl záznam migrován</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationstatecode" xml:space="preserve">
@@ -253,7 +253,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Jen pro vnitřní potřebu</value>
+    <value>Pouze pro vnitřní potřebu</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
@@ -265,7 +265,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigCreatedOn" xml:space="preserve">
-    <value>Datum a čas, kdy byl tento záznam vytvořen</value>
+    <value>Datum a čas, kdy byl záznam vytvořen</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigCreatedOnBehalfBy" xml:space="preserve">
@@ -281,7 +281,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigModifiedOn" xml:space="preserve">
-    <value>Datum a čas, kdy byl tento záznam upraven</value>
+    <value>Datum a čas, kdy byl záznam upraven</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigModifiedOnBehalfBy" xml:space="preserve">
@@ -361,7 +361,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum a čas, kdy byl tento záznam migrován</value>
+    <value>Datum a čas, kdy byl záznam migrován</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigstatecode" xml:space="preserve">
@@ -373,7 +373,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Jen pro vnitřní potřebu</value>
+    <value>Pouze pro vnitřní potřebu</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigUTCConversionTimeZoneCode" xml:space="preserve">

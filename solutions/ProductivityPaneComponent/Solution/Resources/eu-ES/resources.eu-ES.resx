@@ -133,7 +133,7 @@
 </value>
   </metadata>
   <data name="10:Description,lk_msdyn_paneconfiguration_createdby" xml:space="preserve">
-    <value>Erregistroa sortu duen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'lk_msdyn_paneconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_paneconfiguration_modifiedby" xml:space="preserve">
@@ -141,7 +141,7 @@
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'lk_msdyn_paneconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetabconfiguration_createdby" xml:space="preserve">
-    <value>Erregistroa sortu duen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'lk_msdyn_panetabconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetabconfiguration_modifiedby" xml:space="preserve">
@@ -149,7 +149,7 @@
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'lk_msdyn_panetabconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetoolconfiguration_createdby" xml:space="preserve">
-    <value>Erregistroa sortu duen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'lk_msdyn_panetoolconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetoolconfiguration_modifiedby" xml:space="preserve">
@@ -189,15 +189,15 @@
     <comment> 'msdyn_ProductivityPaneComponent' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedBy" xml:space="preserve">
-    <value>Erregistroa sortu duen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedOn" xml:space="preserve">
-    <value>Erregistroaren sorrera-data eta -ordua.</value>
+    <value>Erregistroa sortu zeneko data eta ordua.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa sortu duen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationentitymsdyn_paneconfiguration" xml:space="preserve">
@@ -209,11 +209,11 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedOn" xml:space="preserve">
-    <value>Erregistroa aldatu deneko data eta ordua.</value>
+    <value>Erregistroa aldatu zeneko data eta ordua.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa aldatu duen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_name" xml:space="preserve">
@@ -221,7 +221,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfigurationId" xml:space="preserve">
-    <value>Entitate-instantziaren identifikatzaile esklusiboa</value>
+    <value>Entitate-instantzien identifikatzaile esklusiboa.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_paneconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode" xml:space="preserve">
@@ -257,7 +257,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>Erregistroaren migrazio-data eta -ordua.</value>
+    <value>Erregistroa migratu zeneko data eta ordua.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationstatecode" xml:space="preserve">
@@ -269,7 +269,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Barnean erabiltzeko soilik.</value>
+    <value>Barne-erabilerarako bakarrik.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
@@ -277,15 +277,15 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedBy" xml:space="preserve">
-    <value>Erregistroa sortu duen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedOn" xml:space="preserve">
-    <value>Erregistroaren sorrera-data eta -ordua.</value>
+    <value>Erregistroa sortu zeneko data eta ordua.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa sortu duen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationentitymsdyn_panetabconfiguration" xml:space="preserve">
@@ -297,11 +297,11 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedOn" xml:space="preserve">
-    <value>Erregistroa aldatu deneko data eta ordua.</value>
+    <value>Erregistroa aldatu zeneko data eta ordua.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa aldatu duen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_iconpath" xml:space="preserve">
@@ -321,7 +321,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfigurationid" xml:space="preserve">
-    <value>Entitate-instantziaren identifikatzaile esklusiboa</value>
+    <value>Entitate-instantzien identifikatzaile esklusiboa.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_panetabconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfiguration_msdyn_isenabled" xml:space="preserve">
@@ -357,7 +357,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>Erregistroaren migrazio-data eta -ordua.</value>
+    <value>Erregistroa migratu zeneko data eta ordua.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationstatecode" xml:space="preserve">
@@ -369,7 +369,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Barnean erabiltzeko soilik.</value>
+    <value>Barne-erabilerarako bakarrik.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
@@ -377,15 +377,15 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedBy" xml:space="preserve">
-    <value>Erregistroa sortu duen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedOn" xml:space="preserve">
-    <value>Erregistroaren sorrera-data eta -ordua.</value>
+    <value>Erregistroa sortu zeneko data eta ordua.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa sortu duen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationentitymsdyn_panetoolconfiguration" xml:space="preserve">
@@ -397,11 +397,11 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedOn" xml:space="preserve">
-    <value>Erregistroa aldatu deneko data eta ordua.</value>
+    <value>Erregistroa aldatu zeneko data eta ordua.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa aldatu duen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_category" xml:space="preserve">
@@ -437,7 +437,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfigurationid" xml:space="preserve">
-    <value>Entitate-instantziaren identifikatzaile esklusiboa</value>
+    <value>Entitate-instantzien identifikatzaile esklusiboa.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_panetoolconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_category" xml:space="preserve">
@@ -469,7 +469,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>Erregistroaren migrazio-data eta -ordua.</value>
+    <value>Erregistroa migratu zeneko data eta ordua.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationstatecode" xml:space="preserve">
@@ -481,7 +481,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Barnean erabiltzeko soilik.</value>
+    <value>Barne-erabilerarako bakarrik.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
@@ -593,7 +593,7 @@
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Ordu unibertsal koordinatu (UTC) bihurtzeko ordu-zonaren kodea</value>
+    <value>UTC bihurtzeko ordu-zonaren kodea</value>
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationCreatedBy" xml:space="preserve">
@@ -689,7 +689,7 @@
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Ordu unibertsal koordinatu (UTC) bihurtzeko ordu-zonaren kodea</value>
+    <value>UTC bihurtzeko ordu-zonaren kodea</value>
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationCreatedBy" xml:space="preserve">
@@ -797,7 +797,7 @@
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Ordu unibertsal koordinatu (UTC) bihurtzeko ordu-zonaren kodea</value>
+    <value>UTC bihurtzeko ordu-zonaren kodea</value>
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode0" xml:space="preserve">

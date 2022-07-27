@@ -141,11 +141,11 @@
     <comment>Relative path in xml: \msdyn_panetoolconfiguration\msdyn_name id:</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityagentscript" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'business_unit_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'business_unit_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscriptstep_createdby" xml:space="preserve">
@@ -153,7 +153,7 @@
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'lk_msdyn_productivityagentscriptstep_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscriptstep_modifiedby" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'lk_msdyn_productivityagentscriptstep_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscript_createdby" xml:space="preserve">
@@ -161,7 +161,7 @@
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'lk_msdyn_productivityagentscript_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscript_modifiedby" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'lk_msdyn_productivityagentscript_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_agentscriptid" xml:space="preserve">
@@ -185,19 +185,19 @@
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'owner_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityagentscript" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'team_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'team_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityagentscript" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'user_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'user_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="15062:Description,microsoftdynamicsmsdyn19236" xml:space="preserve">
@@ -245,7 +245,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptCreatedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika izveidots.</value>
+    <value>Ieraksta izveides datums un laiks.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptCreatedOnBehalfBy" xml:space="preserve">
@@ -257,15 +257,15 @@
     <comment> 'msdyn_productivityagentscript' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptModifiedBy" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptModifiedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika modificēts.</value>
+    <value>Ieraksta modificēšanas datums un laiks.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tā pārstāvja unikālais identifikators, kas modificēja ierakstu.</value>
+    <value>Tā deleģētā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_description" xml:space="preserve">
@@ -305,15 +305,15 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningBusinessUnit" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningTeam" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningUser" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstatecode" xml:space="preserve">
@@ -329,7 +329,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepCreatedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika izveidots.</value>
+    <value>Ieraksta izveides datums un laiks.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepCreatedOnBehalfBy" xml:space="preserve">
@@ -341,15 +341,15 @@
     <comment> 'msdyn_productivityagentscriptstep' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepModifiedBy" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepModifiedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika modificēts.</value>
+    <value>Ieraksta modificēšanas datums un laiks.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tā pārstāvja unikālais identifikators, kas modificēja ierakstu.</value>
+    <value>Tā deleģētā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_actiontype" xml:space="preserve">
@@ -413,15 +413,15 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningBusinessUnit" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningTeam" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningUser" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepstatecode" xml:space="preserve">
@@ -433,19 +433,19 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Izmantot tikai iekšējām vajadzībām.</value>
+    <value>Tikai iekšējai lietošanai.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laika joslas kods, kas izmantots, veidojot ierakstu.</value>
+    <value>Laika joslas kods, kas tika izmantots ieraksta izveides laikā.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Izmantot tikai iekšējām vajadzībām.</value>
+    <value>Tikai iekšējai lietošanai.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laika joslas kods, kas izmantots, veidojot ierakstu.</value>
+    <value>Laika joslas kods, kas tika izmantots ieraksta izveides laikā.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_sessiontemplateentitymsdyn_sessiontemplate" xml:space="preserve">

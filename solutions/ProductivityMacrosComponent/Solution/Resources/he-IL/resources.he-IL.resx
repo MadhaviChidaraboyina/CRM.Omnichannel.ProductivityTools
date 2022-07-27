@@ -245,27 +245,27 @@
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'owner_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'team_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'team_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'team_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'team_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'team_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'team_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityactioninputparameter" xml:space="preserve">
@@ -309,7 +309,7 @@
     <comment> 'msdyn_Macros' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,Action Input Parameter{a050bc67-9e91-4cc6-8987-5bfb058988e5}" xml:space="preserve">
-    <value>‏‫‏‫טופס כרטיס עבור ישות זו.‬‬</value>
+    <value>‏‫‏‫טופס כרטיס לישות זו.‬‬</value>
     <comment>'Action Input Parameter' : Description for systemform in Entity FormXml ID: '{a050bc67-9e91-4cc6-8987-5bfb058988e5}'</comment>
   </data>
   <data name="1:Description,Action Input Parameter{b00b65d5-efef-4fc6-871e-8ace809eae26}" xml:space="preserve">
@@ -329,7 +329,7 @@
     <comment>'Action Output Parameter' : Description for SavedQuery on Entity QueryId: '{fd110973-a599-ea11-a81c-000d3af70e62}'</comment>
   </data>
   <data name="1:Description,Action Output Parameter{ffbf54c3-28a8-4c3a-9b20-bb4a2186f04e}" xml:space="preserve">
-    <value>‏‫‏‫טופס כרטיס עבור ישות זו.‬‬</value>
+    <value>‏‫‏‫טופס כרטיס לישות זו.‬‬</value>
     <comment>'Action Output Parameter' : Description for systemform in Entity FormXml ID: '{ffbf54c3-28a8-4c3a-9b20-bb4a2186f04e}'</comment>
   </data>
   <data name="1:Description,Macro Action Template{ad744929-a599-ea11-a81c-000d3af70e62}" xml:space="preserve">
@@ -337,7 +337,7 @@
     <comment>'Macro Action Template' : Description for SavedQuery on Entity QueryId: '{ad744929-a599-ea11-a81c-000d3af70e62}'</comment>
   </data>
   <data name="1:Description,Macro Action Template{d75f0224-6210-40a3-a9da-d5e52376f1a6}" xml:space="preserve">
-    <value>‏‫‏‫טופס כרטיס עבור ישות זו.‬‬</value>
+    <value>‏‫‏‫טופס כרטיס לישות זו.‬‬</value>
     <comment>'Macro Action Template' : Description for systemform in Entity FormXml ID: '{d75f0224-6210-40a3-a9da-d5e52376f1a6}'</comment>
   </data>
   <data name="1:Description,Macro Action Template{d9f3060d-a09b-4966-a1d0-aba226880a1d}" xml:space="preserve">
@@ -353,11 +353,11 @@
     <comment>'Macro Connector' : Description for systemform in Entity FormXml ID: '{55d8cfea-d1d1-43b8-b581-e83b6d276695}'</comment>
   </data>
   <data name="1:Description,Macro Connector{b29248c2-8c23-4ab1-b287-0182849d28b6}" xml:space="preserve">
-    <value>‏‫‏‫טופס כרטיס עבור ישות זו.‬‬</value>
+    <value>‏‫‏‫טופס כרטיס לישות זו.‬‬</value>
     <comment>'Macro Connector' : Description for systemform in Entity FormXml ID: '{b29248c2-8c23-4ab1-b287-0182849d28b6}'</comment>
   </data>
   <data name="1:Description,Macro Run History{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}" xml:space="preserve">
-    <value>טופס כרטיס עבור ישות זו.</value>
+    <value>טופס כרטיס לישות זו.</value>
     <comment>'Macro Run History' : Description for systemform in Entity FormXml ID: '{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}'</comment>
   </data>
   <data name="1:Description,Macro Run History{47492cdb-57ca-4667-a741-35c34491b4f6}" xml:space="preserve">
@@ -369,7 +369,7 @@
     <comment>'Macro Solution Configuration' : Description for systemform in Entity FormXml ID: '{206b5fb0-376f-40cf-9e78-2acce3e61f42}'</comment>
   </data>
   <data name="1:Description,Macro Solution Configuration{6e1b7485-7675-4ade-b40e-86f4313fe2db}" xml:space="preserve">
-    <value>‏‫‏‫טופס כרטיס עבור ישות זו.‬‬</value>
+    <value>‏‫‏‫טופס כרטיס לישות זו.‬‬</value>
     <comment>'Macro Solution Configuration' : Description for systemform in Entity FormXml ID: '{6e1b7485-7675-4ade-b40e-86f4313fe2db}'</comment>
   </data>
   <data name="1:Description,Macro Solution Configuration{757e9f3c-a699-ea11-a81c-000d3af70e62}" xml:space="preserve">
@@ -393,7 +393,7 @@
     <comment> 'msdyn_macrosession' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionImportSequenceNumber" xml:space="preserve">
-    <value>מספר הרצף של הייבוא שיצר את הרשומה הזו.‬‬</value>
+    <value>מספר הרצף של הייבוא שיצר את הרשומה.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedBy" xml:space="preserve">
@@ -465,11 +465,11 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>‏‏לשימוש פנימי בלבד.</value>
+    <value>‏‏לשימוש פנימי בלבד.‬</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.</value>
+    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.‬</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedBy" xml:space="preserve">
@@ -513,7 +513,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameterId" xml:space="preserve">
-    <value>המזהה ה ייחודי של מופעי ישות</value>
+    <value>המזהה הייחודי של מופעי ישות</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_productivityactioninputparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_msdyn_parametertype" xml:space="preserve">
@@ -549,7 +549,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningTeam" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningUser" xml:space="preserve">
@@ -569,7 +569,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.</value>
+    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.‬</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
@@ -609,7 +609,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameterId" xml:space="preserve">
-    <value>המזהה ה ייחודי של מופעי ישות</value>
+    <value>המזהה הייחודי של מופעי ישות</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_productivityactionoutputparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameter_statecode" xml:space="preserve">
@@ -637,7 +637,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningTeam" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningUser" xml:space="preserve">
@@ -657,7 +657,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.</value>
+    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.‬</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
@@ -725,7 +725,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_outputparameters' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplateId" xml:space="preserve">
-    <value>המזהה ה ייחודי של מופעי ישות</value>
+    <value>המזהה הייחודי של מופעי ישות</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_productivitymacroactiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplate_statecode" xml:space="preserve">
@@ -773,7 +773,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningTeam" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningUser" xml:space="preserve">
@@ -793,7 +793,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.</value>
+    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.‬</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
@@ -861,7 +861,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_prefix' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_productivitymacroconnectorId" xml:space="preserve">
-    <value>המזהה ה ייחודי של מופעי ישות</value>
+    <value>המזהה הייחודי של מופעי ישות</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_productivitymacroconnectorId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_productivitymacroconnector_statecode" xml:space="preserve">
@@ -901,7 +901,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningTeam" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningUser" xml:space="preserve">
@@ -921,7 +921,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.</value>
+    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.‬</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
@@ -985,7 +985,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfigurationId" xml:space="preserve">
-    <value>המזהה ה ייחודי של מופעי ישות</value>
+    <value>המזהה הייחודי של מופעי ישות</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_productivitymacrosolutionconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfiguration_statecode" xml:space="preserve">
@@ -1025,7 +1025,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningTeam" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningUser" xml:space="preserve">
@@ -1045,7 +1045,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.</value>
+    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.‬</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1101,7 +1101,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinitionId" xml:space="preserve">
-    <value>המזהה ה ייחודי של מופעי ישות</value>
+    <value>המזהה הייחודי של מופעי ישות</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_productivityparameterdefinitionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinition_statecode" xml:space="preserve">
@@ -1129,7 +1129,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningTeam" xml:space="preserve">
-    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.</value>
+    <value>‏‫ה‏‏מזהה הייחודי של הצוות שהרשומה נמצאת בבעלותו.‬</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningUser" xml:space="preserve">
@@ -1149,7 +1149,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.</value>
+    <value>‏‏קוד אזור הזמן שהיה בשימוש בעת יצירת הרשומה.‬</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Parameter definition{1d6fe4b9-a699-ea11-a81c-000d3af70e62}" xml:space="preserve">
@@ -1161,7 +1161,7 @@
     <comment>'Parameter definition' : Description for systemform in Entity FormXml ID: '{b520abfd-79f7-44e8-80bd-430d66619828}'</comment>
   </data>
   <data name="1:Description,Parameter definition{bf2b6722-14f7-4ebe-b551-b64e96bff693}" xml:space="preserve">
-    <value>‏‫‏‫טופס כרטיס עבור ישות זו.‬‬</value>
+    <value>‏‫‏‫טופס כרטיס לישות זו.‬‬</value>
     <comment>'Parameter definition' : Description for systemform in Entity FormXml ID: '{bf2b6722-14f7-4ebe-b551-b64e96bff693}'</comment>
   </data>
   <data name="1:Description,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
@@ -1365,7 +1365,7 @@
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>קוד אזור הזמן של המרת זמן אוניברסלי מתואם (UTC)</value>
+    <value>קוד אזור זמן של המרת זמן אוניברסלי מתואם (UTC)</value>
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
@@ -1449,7 +1449,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>קוד אזור הזמן של המרת זמן אוניברסלי מתואם (UTC)</value>
+    <value>קוד אזור זמן של המרת זמן אוניברסלי מתואם (UTC)</value>
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
@@ -1581,7 +1581,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>קוד אזור הזמן של המרת זמן אוניברסלי מתואם (UTC)</value>
+    <value>קוד אזור זמן של המרת זמן אוניברסלי מתואם (UTC)</value>
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
@@ -1705,7 +1705,7 @@
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>קוד אזור הזמן של המרת זמן אוניברסלי מתואם (UTC)</value>
+    <value>קוד אזור זמן של המרת זמן אוניברסלי מתואם (UTC)</value>
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
@@ -1825,7 +1825,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>קוד אזור הזמן של המרת זמן אוניברסלי מתואם (UTC)</value>
+    <value>קוד אזור זמן של המרת זמן אוניברסלי מתואם (UTC)</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1925,7 +1925,7 @@
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>קוד אזור הזמן של המרת זמן אוניברסלי מתואם (UTC)</value>
+    <value>קוד אזור זמן של המרת זמן אוניברסלי מתואם (UTC)</value>
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,WorkflowCategory" xml:space="preserve">

@@ -281,7 +281,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" xml:space="preserve">
-    <value>Identificador único das instancias da entidade</value>
+    <value>Identificador único de instancias da entidade</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_productivityagentscriptId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" xml:space="preserve">
@@ -377,7 +377,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" xml:space="preserve">
-    <value>Identificador único das instancias da entidade</value>
+    <value>Identificador único de instancias da entidade</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_productivityagentscriptstepId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" xml:space="preserve">

@@ -401,7 +401,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedOn" xml:space="preserve">
-    <value>Ημερομηνία και ώρα τροποποίησης της καρτέλας.</value>
+    <value>Ημερομηνία και ώρα κατά την οποία τροποποιήθηκε η καρτέλα.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedOnBehalfBy" xml:space="preserve">
@@ -493,7 +493,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOn" xml:space="preserve">
-    <value>Τροποποιήθηκε στις της καρτέλας.</value>
+    <value>Ημερομηνία και ώρα κατά την οποία τροποποιήθηκε η καρτέλα.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOnBehalfBy" xml:space="preserve">
@@ -593,7 +593,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOn" xml:space="preserve">
-    <value>Τροποποιήθηκε στις της καρτέλας.</value>
+    <value>Ημερομηνία και ώρα κατά την οποία τροποποιήθηκε η καρτέλα.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOnBehalfBy" xml:space="preserve">
@@ -681,7 +681,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOn" xml:space="preserve">
-    <value>Τροποποιήθηκε στις της καρτέλας.</value>
+    <value>Ημερομηνία και ώρα κατά την οποία τροποποιήθηκε η καρτέλα.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOnBehalfBy" xml:space="preserve">
@@ -817,7 +817,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOn" xml:space="preserve">
-    <value>Τροποποιήθηκε στις της καρτέλας.</value>
+    <value>Ημερομηνία και ώρα κατά την οποία τροποποιήθηκε η καρτέλα.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOnBehalfBy" xml:space="preserve">
@@ -945,7 +945,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOn" xml:space="preserve">
-    <value>Τροποποιήθηκε στις της καρτέλας.</value>
+    <value>Ημερομηνία και ώρα κατά την οποία τροποποιήθηκε η καρτέλα.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOnBehalfBy" xml:space="preserve">
@@ -1069,7 +1069,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOn" xml:space="preserve">
-    <value>Τροποποιήθηκε στις της καρτέλας.</value>
+    <value>Ημερομηνία και ώρα κατά την οποία τροποποιήθηκε η καρτέλα.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">

@@ -245,51 +245,51 @@
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'owner_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'team_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'team_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'team_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'team_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'team_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'team_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'user_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'user_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'user_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'user_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'user_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'user_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
@@ -393,7 +393,7 @@
     <comment> 'msdyn_macrosession' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionImportSequenceNumber" xml:space="preserve">
-    <value>Broj sekvence uvoza koji je kreirao ovaj zapis.</value>
+    <value>Broj sekvence uvoza kojim je kreiran ovaj zapis.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedBy" xml:space="preserve">
@@ -505,7 +505,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_actiontemplateinputparameterid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_name" xml:space="preserve">
-    <value>Ime prilagođenog entiteta.</value>
+    <value>Naziv prilagođenog entiteta.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_parametertype" xml:space="preserve">
@@ -529,7 +529,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for OptionSet 'msdyn_productivityactioninputparameter_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_UniqueName" xml:space="preserve">
-    <value>Jedinstveno ime za entitet.</value>
+    <value>Jedinstveni naziv za entitet.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_visibility" xml:space="preserve">
@@ -549,11 +549,11 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningTeam" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningUser" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterstatecode" xml:space="preserve">
@@ -605,7 +605,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_actiontemplateoutputparameterid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_name" xml:space="preserve">
-    <value>Ime prilagođenog entiteta.</value>
+    <value>Naziv prilagođenog entiteta.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameterId" xml:space="preserve">
@@ -621,7 +621,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for OptionSet 'msdyn_productivityactionoutputparameter_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_UniqueName" xml:space="preserve">
-    <value>Jedinstveno ime za entitet.</value>
+    <value>Jedinstveni naziv za entitet.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOverriddenCreatedOn" xml:space="preserve">
@@ -637,11 +637,11 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningTeam" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningUser" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterstatecode" xml:space="preserve">
@@ -717,7 +717,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_macroconnector' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_name" xml:space="preserve">
-    <value>Ime prilagođenog entiteta.</value>
+    <value>Naziv prilagođenog entiteta.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_outputparameters" xml:space="preserve">
@@ -753,7 +753,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_title' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_UniqueName" xml:space="preserve">
-    <value>Jedinstveno ime za entitet.</value>
+    <value>Jedinstveni naziv za entitet.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_visibility" xml:space="preserve">
@@ -773,11 +773,11 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningTeam" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningUser" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatestatecode" xml:space="preserve">
@@ -853,7 +853,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_icon' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_name" xml:space="preserve">
-    <value>Ime prilagođenog entiteta.</value>
+    <value>Naziv prilagođenog entiteta.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_prefix" xml:space="preserve">
@@ -881,7 +881,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_type' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_UniqueName" xml:space="preserve">
-    <value>Jedinstveno ime za entitet.</value>
+    <value>Jedinstveni naziv za entitet.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_webresourcename" xml:space="preserve">
@@ -901,11 +901,11 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningTeam" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningUser" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorstatecode" xml:space="preserve">
@@ -981,7 +981,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_macrosversion' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_name" xml:space="preserve">
-    <value>Ime prilagođenog entiteta.</value>
+    <value>Naziv prilagođenog entiteta.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfigurationId" xml:space="preserve">
@@ -1001,7 +1001,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_searchhint' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>Jedinstveno ime za entitet.</value>
+    <value>Jedinstveni naziv za entitet.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_uservoicelink" xml:space="preserve">
@@ -1025,11 +1025,11 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningTeam" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningUser" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationstatecode" xml:space="preserve">
@@ -1093,7 +1093,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_jsonobjectstructure' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_name" xml:space="preserve">
-    <value>Ime prilagođenog entiteta.</value>
+    <value>Naziv prilagođenog entiteta.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_parametertype" xml:space="preserve">
@@ -1113,7 +1113,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for OptionSet 'msdyn_productivityparameterdefinition_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_UniqueName" xml:space="preserve">
-    <value>Jedinstveno ime za entitet.</value>
+    <value>Jedinstveni naziv za entitet.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOverriddenCreatedOn" xml:space="preserve">
@@ -1129,11 +1129,11 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningTeam" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningUser" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionstatecode" xml:space="preserve">
@@ -1265,11 +1265,11 @@
     <comment>'msdyn_macrosession' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosessionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Broj verzije pravila vremenske zone</value>
+    <value>Broj verzije pravila za vremensku zonu</value>
     <comment>'msdyn_macrosession' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosessionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone za UTC konverziju</value>
+    <value>Šifra vremenske zone za konverziju UTC vremena</value>
     <comment>'msdyn_macrosession' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparameterCreatedBy" xml:space="preserve">
@@ -1365,7 +1365,7 @@
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone za konvertovanje UTC vremena</value>
+    <value>Šifra vremenske zone za konverziju UTC vremena</value>
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
@@ -1449,7 +1449,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone za konvertovanje UTC vremena</value>
+    <value>Šifra vremenske zone za konverziju UTC vremena</value>
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
@@ -1581,7 +1581,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone za konvertovanje UTC vremena</value>
+    <value>Šifra vremenske zone za konverziju UTC vremena</value>
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
@@ -1705,7 +1705,7 @@
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone za konvertovanje UTC vremena</value>
+    <value>Šifra vremenske zone za konverziju UTC vremena</value>
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
@@ -1825,7 +1825,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone za konvertovanje UTC vremena</value>
+    <value>Šifra vremenske zone za konverziju UTC vremena</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1925,7 +1925,7 @@
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone za konvertovanje UTC vremena</value>
+    <value>Šifra vremenske zone za konverziju UTC vremena</value>
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,WorkflowCategory" xml:space="preserve">

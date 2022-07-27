@@ -133,27 +133,27 @@
 </value>
   </metadata>
   <data name="10:Description,business_unit_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'business_unit_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'business_unit_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'business_unit_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'business_unit_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'business_unit_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'business_unit_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactioninputparameter_createdby" xml:space="preserve">
@@ -161,7 +161,7 @@
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'lk_msdyn_productivityactioninputparameter_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactioninputparameter_modifiedby" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'lk_msdyn_productivityactioninputparameter_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactionoutputparameter_createdby" xml:space="preserve">
@@ -169,7 +169,7 @@
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'lk_msdyn_productivityactionoutputparameter_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactionoutputparameter_modifiedby" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'lk_msdyn_productivityactionoutputparameter_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroactiontemplate_createdby" xml:space="preserve">
@@ -177,7 +177,7 @@
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'lk_msdyn_productivitymacroactiontemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroactiontemplate_modifiedby" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'lk_msdyn_productivitymacroactiontemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroconnector_createdby" xml:space="preserve">
@@ -185,7 +185,7 @@
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'lk_msdyn_productivitymacroconnector_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroconnector_modifiedby" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'lk_msdyn_productivitymacroconnector_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacrosolutionconfiguration_createdby" xml:space="preserve">
@@ -193,7 +193,7 @@
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'lk_msdyn_productivitymacrosolutionconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacrosolutionconfiguration_modifiedby" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'lk_msdyn_productivitymacrosolutionconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityparameterdefinition_createdby" xml:space="preserve">
@@ -201,7 +201,7 @@
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'lk_msdyn_productivityparameterdefinition_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityparameterdefinition_modifiedby" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'lk_msdyn_productivityparameterdefinition_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_prod_macroactiontemplate_msdyn_actioninput" xml:space="preserve">
@@ -245,51 +245,51 @@
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'owner_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'team_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'team_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'team_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'team_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'team_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'team_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'user_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'user_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'user_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'user_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'user_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'user_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
@@ -377,7 +377,7 @@
     <comment>'Macro Solution Configuration' : Description for SavedQuery on Entity QueryId: '{757e9f3c-a699-ea11-a81c-000d3af70e62}'</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionCreatedBy" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kurš izveidoja ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas izveidoja ierakstu.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionCreatedOn" xml:space="preserve">
@@ -385,7 +385,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tā deleģētā lietotāja unikālais identifikators, kas izveidoja šo ierakstu.</value>
+    <value>Tā deleģētā lietotāja unikālais identifikators, kas izveidoja ierakstu.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionentitymsdyn_macrosession" xml:space="preserve">
@@ -393,11 +393,11 @@
     <comment> 'msdyn_macrosession' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionImportSequenceNumber" xml:space="preserve">
-    <value>Tā importa kārtas numurs, kas izveidoja šo ierakstu.</value>
+    <value>Tās importēšanas darbības kārtas numurs, ar kuru tika izveidots ieraksts.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedBy" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedOn" xml:space="preserve">
@@ -405,7 +405,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tā deleģētā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā deleģētā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionmsdyn_executioncontext" xml:space="preserve">
@@ -437,7 +437,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_status' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOverriddenCreatedOn" xml:space="preserve">
-    <value>Ieraksta migrēšanas datums un laiks.</value>
+    <value>Ieraksta migrācijas datums un laiks.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwnerId" xml:space="preserve">
@@ -445,7 +445,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningBusinessUnit" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningTeam" xml:space="preserve">
@@ -453,7 +453,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningUser" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kuram pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionstatecode" xml:space="preserve">
@@ -465,11 +465,11 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Tikai izmantošanai iekšējām vajadzībām.</value>
+    <value>Tikai iekšējai lietošanai.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tās laika joslas kods, kura tika izmantota, veidojot ierakstu.</value>
+    <value>Laika joslas kods, kas tika izmantots ieraksta izveides laikā.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedBy" xml:space="preserve">
@@ -477,7 +477,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika izveidots.</value>
+    <value>Ieraksta izveides datums un laiks.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOnBehalfBy" xml:space="preserve">
@@ -489,15 +489,15 @@
     <comment> 'msdyn_productivityactioninputparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedBy" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika modificēts.</value>
+    <value>Ieraksta modificēšanas datums un laiks.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tā pārstāvja unikālais identifikators, kas modificēja ierakstu.</value>
+    <value>Tā deleģētā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_actiontemplateinputparameterid" xml:space="preserve">
@@ -545,15 +545,15 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningTeam" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningUser" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterstatecode" xml:space="preserve">
@@ -565,11 +565,11 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Izmantot tikai iekšējām vajadzībām.</value>
+    <value>Tikai iekšējai lietošanai.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laika joslas kods, kas izmantots, veidojot ierakstu.</value>
+    <value>Laika joslas kods, kas tika izmantots ieraksta izveides laikā.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
@@ -577,7 +577,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika izveidots.</value>
+    <value>Ieraksta izveides datums un laiks.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOnBehalfBy" xml:space="preserve">
@@ -589,15 +589,15 @@
     <comment> 'msdyn_productivityactionoutputparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedBy" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika modificēts.</value>
+    <value>Ieraksta modificēšanas datums un laiks.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tā pārstāvja unikālais identifikators, kas modificēja ierakstu.</value>
+    <value>Tā deleģētā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_actiontemplateoutputparameterid" xml:space="preserve">
@@ -633,15 +633,15 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningTeam" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningUser" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterstatecode" xml:space="preserve">
@@ -653,11 +653,11 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Izmantot tikai iekšējām vajadzībām.</value>
+    <value>Tikai iekšējai lietošanai.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laika joslas kods, kas izmantots, veidojot ierakstu.</value>
+    <value>Laika joslas kods, kas tika izmantots ieraksta izveides laikā.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
@@ -665,7 +665,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika izveidots.</value>
+    <value>Ieraksta izveides datums un laiks.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -677,15 +677,15 @@
     <comment> 'msdyn_productivitymacroactiontemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedBy" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika modificēts.</value>
+    <value>Ieraksta modificēšanas datums un laiks.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tā pārstāvja unikālais identifikators, kas modificēja ierakstu.</value>
+    <value>Tā deleģētā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_actionDescription" xml:space="preserve">
@@ -769,15 +769,15 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningTeam" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningUser" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatestatecode" xml:space="preserve">
@@ -789,11 +789,11 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Izmantot tikai iekšējām vajadzībām.</value>
+    <value>Tikai iekšējai lietošanai.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laika joslas kods, kas izmantots, veidojot ierakstu.</value>
+    <value>Laika joslas kods, kas tika izmantots ieraksta izveides laikā.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
@@ -801,7 +801,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika izveidots.</value>
+    <value>Ieraksta izveides datums un laiks.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOnBehalfBy" xml:space="preserve">
@@ -813,15 +813,15 @@
     <comment> 'msdyn_productivitymacroconnector' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedBy" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika modificēts.</value>
+    <value>Ieraksta modificēšanas datums un laiks.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tā pārstāvja unikālais identifikators, kas modificēja ierakstu.</value>
+    <value>Tā deleģētā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_brandcolor" xml:space="preserve">
@@ -897,15 +897,15 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningBusinessUnit" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningTeam" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningUser" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorstatecode" xml:space="preserve">
@@ -917,11 +917,11 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Izmantot tikai iekšējām vajadzībām.</value>
+    <value>Tikai iekšējai lietošanai.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laika joslas kods, kas izmantots, veidojot ierakstu.</value>
+    <value>Laika joslas kods, kas tika izmantots ieraksta izveides laikā.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
@@ -929,7 +929,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika izveidots.</value>
+    <value>Ieraksta izveides datums un laiks.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOnBehalfBy" xml:space="preserve">
@@ -941,15 +941,15 @@
     <comment> 'msdyn_productivitymacrosolutionconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedBy" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika modificēts.</value>
+    <value>Ieraksta modificēšanas datums un laiks.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tā pārstāvja unikālais identifikators, kas modificēja ierakstu.</value>
+    <value>Tā deleģētā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_designerfallbackurl" xml:space="preserve">
@@ -1021,15 +1021,15 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningBusinessUnit" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningTeam" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningUser" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationstatecode" xml:space="preserve">
@@ -1041,11 +1041,11 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Izmantot tikai iekšējām vajadzībām.</value>
+    <value>Tikai iekšējai lietošanai.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laika joslas kods, kas izmantots, veidojot ierakstu.</value>
+    <value>Laika joslas kods, kas tika izmantots ieraksta izveides laikā.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1053,7 +1053,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika izveidots.</value>
+    <value>Ieraksta izveides datums un laiks.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
@@ -1065,15 +1065,15 @@
     <comment> 'msdyn_productivityparameterdefinition' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedBy" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kas modificēja šo ierakstu.</value>
+    <value>Tā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika modificēts.</value>
+    <value>Ieraksta modificēšanas datums un laiks.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tā pārstāvja unikālais identifikators, kas modificēja ierakstu.</value>
+    <value>Tā deleģētā lietotāja unikālais identifikators, kas modificēja ierakstu.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_defaultvalue" xml:space="preserve">
@@ -1125,15 +1125,15 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningBusinessUnit" xml:space="preserve">
-    <value>Tās biznesa vienības unikālais identifikators, kam pieder šis ieraksts</value>
+    <value>Tās struktūrvienības unikālais identifikators, kam pieder šis ieraksts</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningTeam" xml:space="preserve">
-    <value>Tās darba grupas unikālais identifikators, kurai pieder šis ieraksts.</value>
+    <value>Tās darba grupas unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningUser" xml:space="preserve">
-    <value>Tā lietotāja unikālais identifikators, kam pieder šis ieraksts.</value>
+    <value>Tā lietotāja unikālais identifikators, kam pieder ieraksts.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionstatecode" xml:space="preserve">
@@ -1145,11 +1145,11 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Izmantot tikai iekšējām vajadzībām.</value>
+    <value>Tikai iekšējai lietošanai.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laika joslas kods, kas izmantots, veidojot ierakstu.</value>
+    <value>Laika joslas kods, kas tika izmantots ieraksta izveides laikā.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Parameter definition{1d6fe4b9-a699-ea11-a81c-000d3af70e62}" xml:space="preserve">

@@ -141,7 +141,7 @@
     <comment>msdyn_adaptivecardconfiguration Description for EntityRelationship 'lk_msdyn_adaptivecardconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_adaptivecardconfiguration_modifiedby" xml:space="preserve">
-    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>msdyn_adaptivecardconfiguration Description for EntityRelationship 'lk_msdyn_adaptivecardconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_smartassistconfig_createdby" xml:space="preserve">
@@ -149,7 +149,7 @@
     <comment>msdyn_smartassistconfig Description for EntityRelationship 'lk_msdyn_smartassistconfig_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_smartassistconfig_modifiedby" xml:space="preserve">
-    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>msdyn_smartassistconfig Description for EntityRelationship 'lk_msdyn_smartassistconfig_modifiedby'</comment>
   </data>
   <data name="10:Description,organization_msdyn_adaptivecardconfiguration" xml:space="preserve">
@@ -201,7 +201,7 @@
     <comment> 'msdyn_adaptivecardconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationModifiedBy" xml:space="preserve">
-    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationModifiedOn" xml:space="preserve">
@@ -277,7 +277,7 @@
     <comment> 'msdyn_smartassistconfig' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigModifiedBy" xml:space="preserve">
-    <value>Įrašą modifikavusio vartotojo unikalusis identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigModifiedOn" xml:space="preserve">

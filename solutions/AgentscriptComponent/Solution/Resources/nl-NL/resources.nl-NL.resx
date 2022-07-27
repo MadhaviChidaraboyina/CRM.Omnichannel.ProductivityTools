@@ -185,19 +185,19 @@
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'owner_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityagentscript" xml:space="preserve">
-    <value>Unieke id van het team dat eigenaar van de record is.</value>
+    <value>Unieke id van het team dat eigenaar is van de record.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'team_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>Unieke id van het team dat eigenaar van de record is.</value>
+    <value>Unieke id van het team dat eigenaar is van de record.</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'team_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityagentscript" xml:space="preserve">
-    <value>Unieke id van de gebruiker die eigenaar van de record is.</value>
+    <value>Unieke id van de gebruiker die eigenaar is van de record.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'user_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>Unieke id van de gebruiker die eigenaar van de record is.</value>
+    <value>Unieke id van de gebruiker die eigenaar is van de record.</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'user_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="15062:Description,microsoftdynamicsmsdyn19236" xml:space="preserve">
@@ -245,7 +245,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptCreatedOn" xml:space="preserve">
-    <value>Datum en tijd waarop de record is gemaakt.</value>
+    <value>Datum en tijdstip waarop de record is gemaakt.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptCreatedOnBehalfBy" xml:space="preserve">
@@ -261,7 +261,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptModifiedOn" xml:space="preserve">
-    <value>Datum en tijd waarop de record is gewijzigd.</value>
+    <value>Datum en tijdstip waarop de record is gewijzigd.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptModifiedOnBehalfBy" xml:space="preserve">
@@ -281,7 +281,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" xml:space="preserve">
-    <value>Unieke id voor entiteitsexemplaren</value>
+    <value>Unieke id van entiteitsexemplaren</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_productivityagentscriptId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" xml:space="preserve">
@@ -293,11 +293,11 @@
     <comment>'msdyn_productivityagentscript' : Description for OptionSet 'msdyn_productivityagentscript_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_UniqueName" xml:space="preserve">
-    <value>Unieke naam voor de entiteit.</value>
+    <value>Unieke naam van de entiteit.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum en tijd waarop de record is gemigreerd.</value>
+    <value>Datum en tijdstip waarop de record is gemigreerd.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwnerId" xml:space="preserve">
@@ -309,11 +309,11 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningTeam" xml:space="preserve">
-    <value>Unieke id van het team dat eigenaar van de record is.</value>
+    <value>Unieke id van het team dat eigenaar is van de record.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningUser" xml:space="preserve">
-    <value>Unieke id van de gebruiker die eigenaar van de record is.</value>
+    <value>Unieke id van de gebruiker die eigenaar is van de record.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstatecode" xml:space="preserve">
@@ -329,7 +329,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepCreatedOn" xml:space="preserve">
-    <value>Datum en tijd waarop de record is gemaakt.</value>
+    <value>Datum en tijdstip waarop de record is gemaakt.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepCreatedOnBehalfBy" xml:space="preserve">
@@ -345,7 +345,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepModifiedOn" xml:space="preserve">
-    <value>Datum en tijd waarop de record is gewijzigd.</value>
+    <value>Datum en tijdstip waarop de record is gewijzigd.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepModifiedOnBehalfBy" xml:space="preserve">
@@ -377,7 +377,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" xml:space="preserve">
-    <value>Unieke id voor entiteitsexemplaren</value>
+    <value>Unieke id van entiteitsexemplaren</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_productivityagentscriptstepId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" xml:space="preserve">
@@ -401,11 +401,11 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_textinstruction' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_UniqueName" xml:space="preserve">
-    <value>Unieke naam voor de entiteit.</value>
+    <value>Unieke naam van de entiteit.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum en tijd waarop de record is gemigreerd.</value>
+    <value>Datum en tijdstip waarop de record is gemigreerd.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwnerId" xml:space="preserve">
@@ -417,11 +417,11 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningTeam" xml:space="preserve">
-    <value>Unieke id van het team dat eigenaar van de record is.</value>
+    <value>Unieke id van het team dat eigenaar is van de record.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningUser" xml:space="preserve">
-    <value>Unieke id van de gebruiker die eigenaar van de record is.</value>
+    <value>Unieke id van de gebruiker die eigenaar is van de record.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepstatecode" xml:space="preserve">
@@ -433,19 +433,19 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Alleen voor intern gebruik.</value>
+    <value>Uitsluitend voor intern gebruik.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Code van de tijdzone die is gebruikt toen de record werd gemaakt.</value>
+    <value>Tijdzonecode die is gebruikt bij het maken van de record.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Alleen voor intern gebruik.</value>
+    <value>Uitsluitend voor intern gebruik.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Code van de tijdzone die is gebruikt toen de record werd gemaakt.</value>
+    <value>Tijdzonecode die is gebruikt bij het maken van de record.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_sessiontemplateentitymsdyn_sessiontemplate" xml:space="preserve">
@@ -661,7 +661,7 @@
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tijdzonecode van UTC-conversie</value>
+    <value>Tijdzonecode voor UTC-conversie</value>
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
@@ -669,7 +669,7 @@
     <comment>'msdyn_productivityagentscript' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tijdzonecode van UTC-conversie</value>
+    <value>Tijdzonecode voor UTC-conversie</value>
     <comment>'msdyn_productivityagentscript' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_sessiontemplatemsdyn_enablebuildexpression" xml:space="preserve">

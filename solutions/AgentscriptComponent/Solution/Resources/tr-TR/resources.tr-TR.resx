@@ -433,7 +433,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca şirket içi kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
@@ -441,7 +441,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca şirket içi kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">

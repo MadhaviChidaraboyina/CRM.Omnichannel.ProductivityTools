@@ -193,7 +193,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedOn" xml:space="preserve">
-    <value>Fecha y hora en que se creó el registro.</value>
+    <value>Fecha y hora de creación del registro.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedOnBehalfBy" xml:space="preserve">
@@ -217,7 +217,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_name" xml:space="preserve">
-    <value>Nombre de la entidad personalizada.</value>
+    <value>El nombre de la entidad personalizada.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfigurationId" xml:space="preserve">
@@ -273,7 +273,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Código de zona horaria en uso cuando se creó el registro.</value>
+    <value>Código de la zona horaria que estaba en uso cuando se creó el registro.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedBy" xml:space="preserve">
@@ -281,7 +281,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedOn" xml:space="preserve">
-    <value>Fecha y hora en que se creó el registro.</value>
+    <value>Fecha y hora de creación del registro.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedOnBehalfBy" xml:space="preserve">
@@ -313,7 +313,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_isEnabled' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_name" xml:space="preserve">
-    <value>Nombre de la entidad personalizada.</value>
+    <value>El nombre de la entidad personalizada.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_order" xml:space="preserve">
@@ -373,7 +373,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Código de zona horaria en uso cuando se creó el registro.</value>
+    <value>Código de la zona horaria que estaba en uso cuando se creó el registro.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedBy" xml:space="preserve">
@@ -381,7 +381,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedOn" xml:space="preserve">
-    <value>Fecha y hora en que se creó el registro.</value>
+    <value>Fecha y hora de creación del registro.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedOnBehalfBy" xml:space="preserve">
@@ -433,7 +433,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_learnmorelink' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_name" xml:space="preserve">
-    <value>Nombre de la entidad personalizada.</value>
+    <value>El nombre de la entidad personalizada.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfigurationid" xml:space="preserve">
@@ -485,7 +485,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Código de zona horaria en uso cuando se creó el registro.</value>
+    <value>Código de la zona horaria que estaba en uso cuando se creó el registro.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Pane tab configuration{53119dc8-3b00-44cd-8656-dce8c75bbd35}" xml:space="preserve">

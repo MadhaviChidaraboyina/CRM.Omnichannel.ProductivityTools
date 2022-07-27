@@ -197,7 +197,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>रिकॉर्ड को बनाने वाले प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर.</value>
+    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationentitymsdyn_paneconfiguration" xml:space="preserve">
@@ -285,7 +285,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>रिकॉर्ड को बनाने वाले प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर.</value>
+    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationentitymsdyn_panetabconfiguration" xml:space="preserve">
@@ -385,7 +385,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>रिकॉर्ड को बनाने वाले प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर.</value>
+    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationentitymsdyn_panetoolconfiguration" xml:space="preserve">

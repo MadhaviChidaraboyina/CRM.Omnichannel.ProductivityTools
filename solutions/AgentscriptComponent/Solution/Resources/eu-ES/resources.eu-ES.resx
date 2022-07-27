@@ -141,11 +141,11 @@
     <comment>Relative path in xml: \msdyn_panetoolconfiguration\msdyn_name id:</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityagentscript" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'business_unit_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'business_unit_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscriptstep_createdby" xml:space="preserve">
@@ -153,7 +153,7 @@
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'lk_msdyn_productivityagentscriptstep_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscriptstep_modifiedby" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'lk_msdyn_productivityagentscriptstep_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscript_createdby" xml:space="preserve">
@@ -161,7 +161,7 @@
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'lk_msdyn_productivityagentscript_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscript_modifiedby" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'lk_msdyn_productivityagentscript_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_agentscriptid" xml:space="preserve">
@@ -185,19 +185,19 @@
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'owner_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityagentscript" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'team_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'team_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityagentscript" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'user_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'user_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="15062:Description,microsoftdynamicsmsdyn19236" xml:space="preserve">
@@ -245,11 +245,11 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptCreatedOn" xml:space="preserve">
-    <value>Erregistroa sortu den data eta ordua.</value>
+    <value>Erregistroa sortu zeneko data eta ordua.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptCreatedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa sortu zuen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptentitymsdyn_productivityagentscript" xml:space="preserve">
@@ -257,15 +257,15 @@
     <comment> 'msdyn_productivityagentscript' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptModifiedBy" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptModifiedOn" xml:space="preserve">
-    <value>Erregistroaren aldatze-data eta -ordua.</value>
+    <value>Erregistroa aldatu zeneko data eta ordua.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptModifiedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa aldatu duen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_description" xml:space="preserve">
@@ -281,7 +281,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" xml:space="preserve">
-    <value>Entitate-instantziaren identifikatzaile esklusiboa</value>
+    <value>Entitate-instantzien identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_productivityagentscriptId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" xml:space="preserve">
@@ -297,7 +297,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOverriddenCreatedOn" xml:space="preserve">
-    <value>Erregistroa migratu den data eta ordua.</value>
+    <value>Erregistroa migratu zeneko data eta ordua.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwnerId" xml:space="preserve">
@@ -305,15 +305,15 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningBusinessUnit" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningTeam" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningUser" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstatecode" xml:space="preserve">
@@ -329,11 +329,11 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepCreatedOn" xml:space="preserve">
-    <value>Erregistroa sortu den data eta ordua.</value>
+    <value>Erregistroa sortu zeneko data eta ordua.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepCreatedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa sortu zuen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepentitymsdyn_productivityagentscriptstep" xml:space="preserve">
@@ -341,15 +341,15 @@
     <comment> 'msdyn_productivityagentscriptstep' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepModifiedBy" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepModifiedOn" xml:space="preserve">
-    <value>Erregistroaren aldatze-data eta -ordua.</value>
+    <value>Erregistroa aldatu zeneko data eta ordua.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepModifiedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa aldatu duen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_actiontype" xml:space="preserve">
@@ -377,7 +377,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" xml:space="preserve">
-    <value>Entitate-instantziaren identifikatzaile esklusiboa</value>
+    <value>Entitate-instantzien identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_productivityagentscriptstepId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" xml:space="preserve">
@@ -405,7 +405,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOverriddenCreatedOn" xml:space="preserve">
-    <value>Erregistroa migratu den data eta ordua.</value>
+    <value>Erregistroa migratu zeneko data eta ordua.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwnerId" xml:space="preserve">
@@ -413,15 +413,15 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningBusinessUnit" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningTeam" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningUser" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepstatecode" xml:space="preserve">
@@ -433,7 +433,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Barne-erabilerarako soilik.</value>
+    <value>Barne-erabilerarako bakarrik.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
@@ -441,7 +441,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Barne-erabilerarako soilik.</value>
+    <value>Barne-erabilerarako bakarrik.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">

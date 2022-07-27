@@ -133,27 +133,27 @@
 </value>
   </metadata>
   <data name="10:Description,business_unit_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'business_unit_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'business_unit_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'business_unit_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'business_unit_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'business_unit_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'business_unit_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactioninputparameter_createdby" xml:space="preserve">
@@ -393,7 +393,7 @@
     <comment> 'msdyn_macrosession' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionImportSequenceNumber" xml:space="preserve">
-    <value>Nomor urut impor pembuat rekaman ini.</value>
+    <value>Nomor urutan impor yang membuat rekaman ini.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedBy" xml:space="preserve">
@@ -417,7 +417,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_macroname' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionmsdyn_macrosessionid" xml:space="preserve">
-    <value>Pengidentifikasi unik instans entitas</value>
+    <value>Pengidentifikasi unik untuk instans entitas</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_macrosessionid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionmsdyn_macrosession_statecode" xml:space="preserve">
@@ -445,15 +445,15 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningBusinessUnit" xml:space="preserve">
-    <value>Pengidentifikasi unik unit bisnis yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningTeam" xml:space="preserve">
-    <value>Pengidentifikasi unik tim yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk tim yang memiliki rekaman.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningUser" xml:space="preserve">
-    <value>Pengidentifikasi unik pengguna yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk pengguna yang memiliki rekaman.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionstatecode" xml:space="preserve">
@@ -477,7 +477,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman dibuat.</value>
+    <value>Tanggal dan waktu rekaman dibuat.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOnBehalfBy" xml:space="preserve">
@@ -493,7 +493,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman diubah.</value>
+    <value>Tanggal dan waktu rekaman diubah.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOnBehalfBy" xml:space="preserve">
@@ -537,7 +537,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_visibility' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOverriddenCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman dimigrasikan.</value>
+    <value>Tanggal dan waktu rekaman dimigrasikan.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwnerId" xml:space="preserve">
@@ -545,7 +545,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningTeam" xml:space="preserve">
@@ -569,7 +569,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kode zona waktu yang digunakan saat membuat rekaman.</value>
+    <value>Kode zona waktu yang digunakan saat rekaman dibuat.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
@@ -577,7 +577,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman dibuat.</value>
+    <value>Tanggal dan waktu rekaman dibuat.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOnBehalfBy" xml:space="preserve">
@@ -593,7 +593,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman diubah.</value>
+    <value>Tanggal dan waktu rekaman diubah.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOnBehalfBy" xml:space="preserve">
@@ -625,7 +625,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOverriddenCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman dimigrasikan.</value>
+    <value>Tanggal dan waktu rekaman dimigrasikan.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwnerId" xml:space="preserve">
@@ -633,7 +633,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningTeam" xml:space="preserve">
@@ -657,7 +657,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kode zona waktu yang digunakan saat membuat rekaman.</value>
+    <value>Kode zona waktu yang digunakan saat rekaman dibuat.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
@@ -665,7 +665,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman dibuat.</value>
+    <value>Tanggal dan waktu rekaman dibuat.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -681,7 +681,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman diubah.</value>
+    <value>Tanggal dan waktu rekaman diubah.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOnBehalfBy" xml:space="preserve">
@@ -761,7 +761,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_visibility' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman dimigrasikan.</value>
+    <value>Tanggal dan waktu rekaman dimigrasikan.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwnerId" xml:space="preserve">
@@ -769,7 +769,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningTeam" xml:space="preserve">
@@ -793,7 +793,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kode zona waktu yang digunakan saat membuat rekaman.</value>
+    <value>Kode zona waktu yang digunakan saat rekaman dibuat.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
@@ -801,7 +801,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman dibuat.</value>
+    <value>Tanggal dan waktu rekaman dibuat.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOnBehalfBy" xml:space="preserve">
@@ -817,7 +817,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman diubah.</value>
+    <value>Tanggal dan waktu rekaman diubah.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOnBehalfBy" xml:space="preserve">
@@ -889,7 +889,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_webresourcename' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOverriddenCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman dimigrasikan.</value>
+    <value>Tanggal dan waktu rekaman dimigrasikan.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwnerId" xml:space="preserve">
@@ -897,7 +897,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningBusinessUnit" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningTeam" xml:space="preserve">
@@ -921,7 +921,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kode zona waktu yang digunakan saat membuat rekaman.</value>
+    <value>Kode zona waktu yang digunakan saat rekaman dibuat.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
@@ -929,7 +929,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman dibuat.</value>
+    <value>Tanggal dan waktu rekaman dibuat.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOnBehalfBy" xml:space="preserve">
@@ -945,7 +945,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman diubah.</value>
+    <value>Tanggal dan waktu rekaman diubah.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOnBehalfBy" xml:space="preserve">
@@ -1013,7 +1013,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_uservoicetext' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman dimigrasikan.</value>
+    <value>Tanggal dan waktu rekaman dimigrasikan.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwnerId" xml:space="preserve">
@@ -1021,7 +1021,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningBusinessUnit" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningTeam" xml:space="preserve">
@@ -1045,7 +1045,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kode zona waktu yang digunakan saat membuat rekaman.</value>
+    <value>Kode zona waktu yang digunakan saat rekaman dibuat.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1053,7 +1053,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman dibuat.</value>
+    <value>Tanggal dan waktu rekaman dibuat.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
@@ -1069,7 +1069,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman diubah.</value>
+    <value>Tanggal dan waktu rekaman diubah.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
@@ -1117,7 +1117,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOverriddenCreatedOn" xml:space="preserve">
-    <value>Tanggal dan waktu saat rekaman dimigrasikan.</value>
+    <value>Tanggal dan waktu rekaman dimigrasikan.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwnerId" xml:space="preserve">
@@ -1125,7 +1125,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningBusinessUnit" xml:space="preserve">
-    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman.</value>
+    <value>Pengidentifikasi unik untuk unit bisnis yang memiliki rekaman</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningTeam" xml:space="preserve">
@@ -1149,7 +1149,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kode zona waktu yang digunakan saat membuat rekaman.</value>
+    <value>Kode zona waktu yang digunakan saat rekaman dibuat.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Parameter definition{1d6fe4b9-a699-ea11-a81c-000d3af70e62}" xml:space="preserve">
@@ -3285,7 +3285,7 @@
     <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.LabelText'</comment>
   </data>
   <data name="1:Title,Processworkflow.HomePageGrid.New.Button.ToolTipDesc" xml:space="preserve">
-    <value>Buat data baru</value>
+    <value>Buat rekaman baru</value>
     <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.ToolTipDesc'</comment>
   </data>
   <data name="1:Title,Processworkflow.HomePageGrid.New.Button.ToolTipTitle" xml:space="preserve">

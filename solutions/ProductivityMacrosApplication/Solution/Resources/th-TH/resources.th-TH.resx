@@ -741,7 +741,7 @@
     <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
   </data>
   <data name="100000:label,FF822E4C985B6DF888B002AF44A8D449FB6B7993DB66871E8DB511586674D1EF" xml:space="preserve">
-    <value>การดำเนินการเซสชันที่ใช้กันโดยทั่วไปเป็นอัตโนมัติ</value>
+    <value>ทำให้การดำเนินการเซสชันที่ใช้กันโดยทั่วไปเป็นอัตโนมัติ</value>
     <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_description id:</comment>
   </data>
   <data name="100000:label,FFF5C2D4D6129545D2C4F233DB80903B02417B540CD75F1A0E25CEAAA5CD2A3F" xml:space="preserve">

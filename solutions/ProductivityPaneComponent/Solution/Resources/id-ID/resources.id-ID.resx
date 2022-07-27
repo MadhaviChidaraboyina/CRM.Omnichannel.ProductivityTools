@@ -221,7 +221,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfigurationId" xml:space="preserve">
-    <value>Pengidentifikasi unik instans entitas</value>
+    <value>Pengidentifikasi unik untuk instans entitas</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_paneconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode" xml:space="preserve">
@@ -321,7 +321,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfigurationid" xml:space="preserve">
-    <value>Pengidentifikasi unik instans entitas</value>
+    <value>Pengidentifikasi unik untuk instans entitas</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_panetabconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfiguration_msdyn_isenabled" xml:space="preserve">
@@ -437,7 +437,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfigurationid" xml:space="preserve">
-    <value>Pengidentifikasi unik instans entitas</value>
+    <value>Pengidentifikasi unik untuk instans entitas</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_panetoolconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_category" xml:space="preserve">

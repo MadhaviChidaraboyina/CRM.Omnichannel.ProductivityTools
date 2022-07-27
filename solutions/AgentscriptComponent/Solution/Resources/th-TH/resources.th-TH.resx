@@ -141,11 +141,11 @@
     <comment>Relative path in xml: \msdyn_panetoolconfiguration\msdyn_name id:</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityagentscript" xml:space="preserve">
-    <value>รหัสเฉพาะของหน่วยธุรกิจที่เป็นเจ้าของเรกคอร์ด</value>
+    <value>รหัสเฉพาะสำหรับหน่วยธุรกิจที่เป็นเจ้าของเรกคอร์ด</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'business_unit_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>รหัสเฉพาะของหน่วยธุรกิจที่เป็นเจ้าของเรกคอร์ด</value>
+    <value>รหัสเฉพาะสำหรับหน่วยธุรกิจที่เป็นเจ้าของเรกคอร์ด</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'business_unit_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscriptstep_createdby" xml:space="preserve">
@@ -185,19 +185,19 @@
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'owner_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityagentscript" xml:space="preserve">
-    <value>รหัสเฉพาะของกลุ่มคนที่เป็นเจ้าของเรกคอร์ด</value>
+    <value>รหัสเฉพาะสำหรับกลุ่มคนที่เป็นเจ้าของเรกคอร์ด</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'team_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>รหัสเฉพาะของกลุ่มคนที่เป็นเจ้าของเรกคอร์ด</value>
+    <value>รหัสเฉพาะสำหรับกลุ่มคนที่เป็นเจ้าของเรกคอร์ด</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'team_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityagentscript" xml:space="preserve">
-    <value>รหัสเฉพาะของผู้ใช้ที่เป็นเจ้าของเรกคอร์ด</value>
+    <value>รหัสเฉพาะสำหรับผู้ใช้ที่เป็นเจ้าของเรกคอร์ด</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'user_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>รหัสเฉพาะของผู้ใช้ที่เป็นเจ้าของเรกคอร์ด</value>
+    <value>รหัสเฉพาะสำหรับผู้ใช้ที่เป็นเจ้าของเรกคอร์ด</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'user_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="15062:Description,microsoftdynamicsmsdyn19236" xml:space="preserve">
@@ -225,11 +225,11 @@
     <comment>'Agent script step' : Description for systemform in Entity FormXml ID: '{371db648-34af-4f9e-817e-cfb9ea67540a}'</comment>
   </data>
   <data name="1:Description,Agent script step{4cfec666-e1e5-4f10-8e91-98a2c286f9bc}" xml:space="preserve">
-    <value>ฟอร์มบัตรสำหรับเอนทิตีนี้</value>
+    <value>ฟอร์มการ์ดสำหรับเอนทิตีนี้</value>
     <comment>'Agent script step' : Description for systemform in Entity FormXml ID: '{4cfec666-e1e5-4f10-8e91-98a2c286f9bc}'</comment>
   </data>
   <data name="1:Description,Agent script{67277fb5-ba01-429e-a2cd-77407871f5a3}" xml:space="preserve">
-    <value>ฟอร์มบัตรสำหรับเอนทิตีนี้</value>
+    <value>ฟอร์มการ์ดสำหรับเอนทิตีนี้</value>
     <comment>'Agent script' : Description for systemform in Entity FormXml ID: '{67277fb5-ba01-429e-a2cd-77407871f5a3}'</comment>
   </data>
   <data name="1:Description,Agent script{a57f7d04-e2aa-ea11-a81c-000d3ac5e423}" xml:space="preserve">
@@ -249,7 +249,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptCreatedOnBehalfBy" xml:space="preserve">
-    <value>รหัสเฉพาะของผู้รับมอบสิทธิ์ซึ่งสร้างเรกคอร์ด</value>
+    <value>รหัสเฉพาะของผู้ใช้ที่เป็นผู้รับมอบสิทธิ์ซึ่งสร้างเรกคอร์ด</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptentitymsdyn_productivityagentscript" xml:space="preserve">
@@ -281,7 +281,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" xml:space="preserve">
-    <value>รหัสเฉพาะของอินสแตนซ์เอนทิตี</value>
+    <value>รหัสเฉพาะของอินสแตนซ์ของเอนทิตี</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_productivityagentscriptId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" xml:space="preserve">
@@ -305,15 +305,15 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningBusinessUnit" xml:space="preserve">
-    <value>รหัสเฉพาะของหน่วยธุรกิจที่เป็นเจ้าของเรกคอร์ด</value>
+    <value>รหัสเฉพาะสำหรับหน่วยธุรกิจที่เป็นเจ้าของเรกคอร์ด</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningTeam" xml:space="preserve">
-    <value>รหัสเฉพาะของกลุ่มคนที่เป็นเจ้าของเรกคอร์ด</value>
+    <value>รหัสเฉพาะสำหรับกลุ่มคนที่เป็นเจ้าของเรกคอร์ด</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningUser" xml:space="preserve">
-    <value>รหัสเฉพาะของผู้ใช้ที่เป็นเจ้าของเรกคอร์ด</value>
+    <value>รหัสเฉพาะสำหรับผู้ใช้ที่เป็นเจ้าของเรกคอร์ด</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstatecode" xml:space="preserve">
@@ -333,7 +333,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepCreatedOnBehalfBy" xml:space="preserve">
-    <value>รหัสเฉพาะของผู้รับมอบสิทธิ์ซึ่งสร้างเรกคอร์ด</value>
+    <value>รหัสเฉพาะของผู้ใช้ที่เป็นผู้รับมอบสิทธิ์ซึ่งสร้างเรกคอร์ด</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepentitymsdyn_productivityagentscriptstep" xml:space="preserve">
@@ -377,7 +377,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" xml:space="preserve">
-    <value>รหัสเฉพาะของอินสแตนซ์เอนทิตี</value>
+    <value>รหัสเฉพาะของอินสแตนซ์ของเอนทิตี</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_productivityagentscriptstepId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" xml:space="preserve">
@@ -413,15 +413,15 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningBusinessUnit" xml:space="preserve">
-    <value>รหัสเฉพาะของหน่วยธุรกิจที่เป็นเจ้าของเรกคอร์ด</value>
+    <value>รหัสเฉพาะสำหรับหน่วยธุรกิจที่เป็นเจ้าของเรกคอร์ด</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningTeam" xml:space="preserve">
-    <value>รหัสเฉพาะของกลุ่มคนที่เป็นเจ้าของเรกคอร์ด</value>
+    <value>รหัสเฉพาะสำหรับกลุ่มคนที่เป็นเจ้าของเรกคอร์ด</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningUser" xml:space="preserve">
-    <value>รหัสเฉพาะของผู้ใช้ที่เป็นเจ้าของเรกคอร์ด</value>
+    <value>รหัสเฉพาะสำหรับผู้ใช้ที่เป็นเจ้าของเรกคอร์ด</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepstatecode" xml:space="preserve">
@@ -433,19 +433,19 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>สำหรับการใช้งานภายในเท่านั้น</value>
+    <value>สำหรับใช้ภายในเท่านั้น</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>รหัสโซนเวลาที่ใช้งานอยู่เมื่อสร้างเรกคอร์ด</value>
+    <value>รหัสโซนเวลาที่ใช้งานขณะที่สร้างเรกคอร์ด</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>สำหรับการใช้งานภายในเท่านั้น</value>
+    <value>สำหรับใช้ภายในเท่านั้น</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>รหัสโซนเวลาที่ใช้งานอยู่เมื่อสร้างเรกคอร์ด</value>
+    <value>รหัสโซนเวลาที่ใช้งานขณะที่สร้างเรกคอร์ด</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_sessiontemplateentitymsdyn_sessiontemplate" xml:space="preserve">
@@ -657,19 +657,19 @@
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptstepTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>หมายเลขรุ่นสำหรับกฎของโซนเวลา</value>
+    <value>หมายเลขรุ่นของกฎโซนเวลา</value>
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>รหัสโซนเวลาสำหรับการแปลง UTC</value>
+    <value>รหัสโซนเวลาที่ใช้ในการแปลง UTC</value>
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>หมายเลขรุ่นสำหรับกฎของโซนเวลา</value>
+    <value>หมายเลขรุ่นของกฎโซนเวลา</value>
     <comment>'msdyn_productivityagentscript' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>รหัสโซนเวลาสำหรับการแปลง UTC</value>
+    <value>รหัสโซนเวลาที่ใช้ในการแปลง UTC</value>
     <comment>'msdyn_productivityagentscript' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_sessiontemplatemsdyn_enablebuildexpression" xml:space="preserve">

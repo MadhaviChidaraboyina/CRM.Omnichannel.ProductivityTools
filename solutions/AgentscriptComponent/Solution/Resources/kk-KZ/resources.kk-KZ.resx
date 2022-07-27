@@ -141,11 +141,11 @@
     <comment>Relative path in xml: \msdyn_panetoolconfiguration\msdyn_name id:</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityagentscript" xml:space="preserve">
-    <value>Жазбаға ие бөлімшенің бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие бизнес бірліктің бір мәнді идентификаторы</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'business_unit_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>Жазбаға ие бөлімшенің бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие бизнес бірліктің бір мәнді идентификаторы</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'business_unit_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscriptstep_createdby" xml:space="preserve">
@@ -153,7 +153,7 @@
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'lk_msdyn_productivityagentscriptstep_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscriptstep_modifiedby" xml:space="preserve">
-    <value>Жазбаны өзгерткен пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен пайдаланушының бірегей идентификаторы.</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'lk_msdyn_productivityagentscriptstep_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscript_createdby" xml:space="preserve">
@@ -161,7 +161,7 @@
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'lk_msdyn_productivityagentscript_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscript_modifiedby" xml:space="preserve">
-    <value>Жазбаны өзгерткен пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен пайдаланушының бірегей идентификаторы.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'lk_msdyn_productivityagentscript_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_agentscriptid" xml:space="preserve">
@@ -185,19 +185,19 @@
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'owner_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityagentscript" xml:space="preserve">
-    <value>Жазбаға ие топқа арналған бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие топқа арналған бір мәнді идентификатор.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'team_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>Жазбаға ие топқа арналған бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие топқа арналған бір мәнді идентификатор.</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'team_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityagentscript" xml:space="preserve">
-    <value>Жазбаға ие пайдаланушыға арналған бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие пайдаланушыға арналған бір мәнді идентификатор.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'user_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>Жазбаға ие пайдаланушыға арналған бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие пайдаланушыға арналған бір мәнді идентификатор.</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'user_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="15062:Description,microsoftdynamicsmsdyn19236" xml:space="preserve">
@@ -225,11 +225,11 @@
     <comment>'Agent script step' : Description for systemform in Entity FormXml ID: '{371db648-34af-4f9e-817e-cfb9ea67540a}'</comment>
   </data>
   <data name="1:Description,Agent script step{4cfec666-e1e5-4f10-8e91-98a2c286f9bc}" xml:space="preserve">
-    <value>Осы нысанға арналған карта.</value>
+    <value>Осы нысанға арналған карта пішіні.</value>
     <comment>'Agent script step' : Description for systemform in Entity FormXml ID: '{4cfec666-e1e5-4f10-8e91-98a2c286f9bc}'</comment>
   </data>
   <data name="1:Description,Agent script{67277fb5-ba01-429e-a2cd-77407871f5a3}" xml:space="preserve">
-    <value>Осы нысанға арналған карта.</value>
+    <value>Осы нысанға арналған карта пішіні.</value>
     <comment>'Agent script' : Description for systemform in Entity FormXml ID: '{67277fb5-ba01-429e-a2cd-77407871f5a3}'</comment>
   </data>
   <data name="1:Description,Agent script{a57f7d04-e2aa-ea11-a81c-000d3ac5e423}" xml:space="preserve">
@@ -257,7 +257,7 @@
     <comment> 'msdyn_productivityagentscript' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptModifiedBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен пайдаланушының бірегей идентификаторы.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptModifiedOn" xml:space="preserve">
@@ -265,7 +265,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptModifiedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен өкіл пайдаланушының бірегей идентификаторы.</value>
+    <value>Жазбаны өзгерткен өкілетті пайдаланушының бірегей идентификаторы.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_description" xml:space="preserve">
@@ -277,11 +277,11 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_language' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_name" xml:space="preserve">
-    <value>Реттемелі нысан атауы.</value>
+    <value>Реттелетін нысан атауы.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" xml:space="preserve">
-    <value>Нысан даналарының бір мәнді идентификаторы</value>
+    <value>Нысан даналарына арналған бір мәнді идентификаторы</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_productivityagentscriptId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscript_statecode" xml:space="preserve">
@@ -293,11 +293,11 @@
     <comment>'msdyn_productivityagentscript' : Description for OptionSet 'msdyn_productivityagentscript_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_UniqueName" xml:space="preserve">
-    <value>Нысанның бірегей атауы.</value>
+    <value>Нысанның бір мәнді атауы.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOverriddenCreatedOn" xml:space="preserve">
-    <value>Жазбаның ауыстырылған күні мен уақыты.</value>
+    <value>Жазба тасымалданған күн мен уақыт.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwnerId" xml:space="preserve">
@@ -305,15 +305,15 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningBusinessUnit" xml:space="preserve">
-    <value>Жазбаға ие бөлімшенің бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие бизнес бірліктің бір мәнді идентификаторы</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningTeam" xml:space="preserve">
-    <value>Жазбаға ие топқа арналған бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие топқа арналған бір мәнді идентификатор.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningUser" xml:space="preserve">
-    <value>Жазбаға ие пайдаланушыға арналған бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие пайдаланушыға арналған бір мәнді идентификатор.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstatecode" xml:space="preserve">
@@ -341,7 +341,7 @@
     <comment> 'msdyn_productivityagentscriptstep' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepModifiedBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен пайдаланушының бірегей идентификаторы.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepModifiedOn" xml:space="preserve">
@@ -349,7 +349,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepModifiedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен өкіл пайдаланушының бірегей идентификаторы.</value>
+    <value>Жазбаны өзгерткен өкілетті пайдаланушының бірегей идентификаторы.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_actiontype" xml:space="preserve">
@@ -369,7 +369,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_macroactionid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_name" xml:space="preserve">
-    <value>Реттемелі нысан атауы.</value>
+    <value>Реттелетін нысан атауы.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_order" xml:space="preserve">
@@ -377,7 +377,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" xml:space="preserve">
-    <value>Нысан даналарының бір мәнді идентификаторы</value>
+    <value>Нысан даналарына арналған бір мәнді идентификаторы</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_productivityagentscriptstepId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstep_msdyn_actiontype" xml:space="preserve">
@@ -401,11 +401,11 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_textinstruction' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_UniqueName" xml:space="preserve">
-    <value>Нысанның бірегей атауы.</value>
+    <value>Нысанның бір мәнді атауы.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOverriddenCreatedOn" xml:space="preserve">
-    <value>Жазбаның ауыстырылған күні мен уақыты.</value>
+    <value>Жазба тасымалданған күн мен уақыт.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwnerId" xml:space="preserve">
@@ -413,15 +413,15 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningBusinessUnit" xml:space="preserve">
-    <value>Жазбаға ие бөлімшенің бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие бизнес бірліктің бір мәнді идентификаторы</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningTeam" xml:space="preserve">
-    <value>Жазбаға ие топқа арналған бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие топқа арналған бір мәнді идентификатор.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningUser" xml:space="preserve">
-    <value>Жазбаға ие пайдаланушыға арналған бір мәнді идентификаторы.</value>
+    <value>Жазбаға ие пайдаланушыға арналған бір мәнді идентификатор.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepstatecode" xml:space="preserve">
@@ -437,7 +437,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Жазба жасалған уақытта пайдаланылған уақыт белдеуінің коды.</value>
+    <value>Жазба жасалған уақытта пайдаланылатын уақыт белдеуінің коды.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
@@ -445,7 +445,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Жазба жасалған уақытта пайдаланылған уақыт белдеуінің коды.</value>
+    <value>Жазба жасалған уақытта пайдаланылатын уақыт белдеуінің коды.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_sessiontemplateentitymsdyn_sessiontemplate" xml:space="preserve">
@@ -657,19 +657,19 @@
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptstepTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Уақыт белдеуі ережесінің нұсқа нөмірі</value>
+    <value>Уақыт белдеуі ережесі нұсқасының нөмірі</value>
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC түрлендірілген уақыт белдеуінің коды</value>
+    <value>UTC түрлендіру уақыт белдеуінің коды</value>
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Уақыт белдеуі ережесінің нұсқа нөмірі</value>
+    <value>Уақыт белдеуі ережесі нұсқасының нөмірі</value>
     <comment>'msdyn_productivityagentscript' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC түрлендірілген уақыт белдеуінің коды</value>
+    <value>UTC түрлендіру уақыт белдеуінің коды</value>
     <comment>'msdyn_productivityagentscript' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_sessiontemplatemsdyn_enablebuildexpression" xml:space="preserve">

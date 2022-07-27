@@ -213,7 +213,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, променил записа.</value>
+    <value>Еднозначен идентификатор на делегирания потребител, който е променил записа.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_name" xml:space="preserve">
@@ -221,7 +221,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfigurationId" xml:space="preserve">
-    <value>Еднозначен идентификатор на екземпляри на обект</value>
+    <value>Еднозначен идентификатор за екземпляри на обекти</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_paneconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode" xml:space="preserve">
@@ -301,7 +301,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, променил записа.</value>
+    <value>Еднозначен идентификатор на делегирания потребител, който е променил записа.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_iconpath" xml:space="preserve">
@@ -321,7 +321,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfigurationid" xml:space="preserve">
-    <value>Еднозначен идентификатор на екземпляри на обект</value>
+    <value>Еднозначен идентификатор за екземпляри на обекти</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_panetabconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfiguration_msdyn_isenabled" xml:space="preserve">
@@ -401,7 +401,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, променил записа.</value>
+    <value>Еднозначен идентификатор на делегирания потребител, който е променил записа.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_category" xml:space="preserve">
@@ -437,7 +437,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfigurationid" xml:space="preserve">
-    <value>Еднозначен идентификатор на екземпляри на обект</value>
+    <value>Еднозначен идентификатор за екземпляри на обекти</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_panetoolconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_category" xml:space="preserve">
@@ -589,7 +589,7 @@
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_paneconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Номер на версията на правило за часова зона</value>
+    <value>Номер на версията на правило на часова зона</value>
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
@@ -685,7 +685,7 @@
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Номер на версията на правило за часова зона</value>
+    <value>Номер на версията на правило на часова зона</value>
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
@@ -793,7 +793,7 @@
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Номер на версията на правило за часова зона</value>
+    <value>Номер на версията на правило на часова зона</value>
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">

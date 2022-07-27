@@ -130,7 +130,7 @@
     <comment>Empty message</comment>
   </data>
   <data name="FailureMessage" xml:space="preserve">
-    <value>Valami hiba történt. Próbálja meg újra</value>
+    <value>Valamilyen hiba történt. Próbálja meg újra</value>
     <comment>Failure Message</comment>
   </data>
   <data name="LoadingText" xml:space="preserve">

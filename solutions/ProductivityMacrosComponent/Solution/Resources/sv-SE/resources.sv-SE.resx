@@ -381,7 +381,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten skapades.</value>
+    <value>Datum och tid då posten skapades.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionCreatedOnBehalfBy" xml:space="preserve">
@@ -393,7 +393,7 @@
     <comment> 'msdyn_macrosession' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionImportSequenceNumber" xml:space="preserve">
-    <value>Sekvensnummer för importen som genererade den här posten.</value>
+    <value>Löpnummer för importen där den här posten skapades.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedBy" xml:space="preserve">
@@ -401,7 +401,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedOn" xml:space="preserve">
-    <value>Datum och tid då posten ändrades.</value>
+    <value>Datumet och tiden då posten ändrades.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedOnBehalfBy" xml:space="preserve">
@@ -417,7 +417,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_macroname' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionmsdyn_macrosessionid" xml:space="preserve">
-    <value>Unik identifierare för entitetsinstanser</value>
+    <value>Unikt id för entitetsinstanser</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_macrosessionid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionmsdyn_macrosession_statecode" xml:space="preserve">
@@ -437,7 +437,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_status' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten migrerades.</value>
+    <value>Datum och tid då posten migrerades.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwnerId" xml:space="preserve">
@@ -465,11 +465,11 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Enbart för internt bruk.</value>
+    <value>Endast för internt bruk.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Den tidszonskod som användes när posten skapades.</value>
+    <value>Den tidzonskod som användes då posten skapades.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedBy" xml:space="preserve">
@@ -477,7 +477,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten skapades.</value>
+    <value>Datum och tid då posten skapades.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOnBehalfBy" xml:space="preserve">
@@ -493,7 +493,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOn" xml:space="preserve">
-    <value>Datum och tid då posten ändrades.</value>
+    <value>Datumet och tiden då posten ändrades.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOnBehalfBy" xml:space="preserve">
@@ -513,7 +513,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameterId" xml:space="preserve">
-    <value>Unik identifierare för entitetsinstanser</value>
+    <value>Unikt id för entitetsinstanser</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_productivityactioninputparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_msdyn_parametertype" xml:space="preserve">
@@ -537,7 +537,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_visibility' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten migrerades.</value>
+    <value>Datum och tid då posten migrerades.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwnerId" xml:space="preserve">
@@ -565,11 +565,11 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>För intern användning.</value>
+    <value>Endast för internt bruk.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tidszonskod som användes när posten skapades.</value>
+    <value>Den tidzonskod som användes då posten skapades.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
@@ -577,7 +577,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten skapades.</value>
+    <value>Datum och tid då posten skapades.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOnBehalfBy" xml:space="preserve">
@@ -593,7 +593,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOn" xml:space="preserve">
-    <value>Datum och tid då posten ändrades.</value>
+    <value>Datumet och tiden då posten ändrades.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOnBehalfBy" xml:space="preserve">
@@ -609,7 +609,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameterId" xml:space="preserve">
-    <value>Unik identifierare för entitetsinstanser</value>
+    <value>Unikt id för entitetsinstanser</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_productivityactionoutputparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameter_statecode" xml:space="preserve">
@@ -625,7 +625,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten migrerades.</value>
+    <value>Datum och tid då posten migrerades.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwnerId" xml:space="preserve">
@@ -653,11 +653,11 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>För intern användning.</value>
+    <value>Endast för internt bruk.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tidszonskod som användes när posten skapades.</value>
+    <value>Den tidzonskod som användes då posten skapades.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
@@ -665,7 +665,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten skapades.</value>
+    <value>Datum och tid då posten skapades.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -681,7 +681,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOn" xml:space="preserve">
-    <value>Datum och tid då posten ändrades.</value>
+    <value>Datumet och tiden då posten ändrades.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOnBehalfBy" xml:space="preserve">
@@ -725,7 +725,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_outputparameters' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplateId" xml:space="preserve">
-    <value>Unik identifierare för entitetsinstanser</value>
+    <value>Unikt id för entitetsinstanser</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_productivitymacroactiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplate_statecode" xml:space="preserve">
@@ -761,7 +761,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_visibility' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten migrerades.</value>
+    <value>Datum och tid då posten migrerades.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwnerId" xml:space="preserve">
@@ -789,11 +789,11 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>För intern användning.</value>
+    <value>Endast för internt bruk.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tidszonskod som användes när posten skapades.</value>
+    <value>Den tidzonskod som användes då posten skapades.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
@@ -801,7 +801,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten skapades.</value>
+    <value>Datum och tid då posten skapades.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOnBehalfBy" xml:space="preserve">
@@ -817,7 +817,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOn" xml:space="preserve">
-    <value>Datum och tid då posten ändrades.</value>
+    <value>Datumet och tiden då posten ändrades.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOnBehalfBy" xml:space="preserve">
@@ -861,7 +861,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_prefix' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_productivitymacroconnectorId" xml:space="preserve">
-    <value>Unik identifierare för entitetsinstanser</value>
+    <value>Unikt id för entitetsinstanser</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_productivitymacroconnectorId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_productivitymacroconnector_statecode" xml:space="preserve">
@@ -889,7 +889,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_webresourcename' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten migrerades.</value>
+    <value>Datum och tid då posten migrerades.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwnerId" xml:space="preserve">
@@ -917,11 +917,11 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>För intern användning.</value>
+    <value>Endast för internt bruk.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tidszonskod som användes när posten skapades.</value>
+    <value>Den tidzonskod som användes då posten skapades.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
@@ -929,7 +929,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten skapades.</value>
+    <value>Datum och tid då posten skapades.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOnBehalfBy" xml:space="preserve">
@@ -945,7 +945,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOn" xml:space="preserve">
-    <value>Datum och tid då posten ändrades.</value>
+    <value>Datumet och tiden då posten ändrades.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOnBehalfBy" xml:space="preserve">
@@ -985,7 +985,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfigurationId" xml:space="preserve">
-    <value>Unik identifierare för entitetsinstanser</value>
+    <value>Unikt id för entitetsinstanser</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_productivitymacrosolutionconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfiguration_statecode" xml:space="preserve">
@@ -1013,7 +1013,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_uservoicetext' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten migrerades.</value>
+    <value>Datum och tid då posten migrerades.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwnerId" xml:space="preserve">
@@ -1041,11 +1041,11 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>För intern användning.</value>
+    <value>Endast för internt bruk.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tidszonskod som användes när posten skapades.</value>
+    <value>Den tidzonskod som användes då posten skapades.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1053,7 +1053,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten skapades.</value>
+    <value>Datum och tid då posten skapades.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
@@ -1069,7 +1069,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOn" xml:space="preserve">
-    <value>Datum och tid då posten ändrades.</value>
+    <value>Datumet och tiden då posten ändrades.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
@@ -1101,7 +1101,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinitionId" xml:space="preserve">
-    <value>Unik identifierare för entitetsinstanser</value>
+    <value>Unikt id för entitetsinstanser</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_productivityparameterdefinitionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinition_statecode" xml:space="preserve">
@@ -1117,7 +1117,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten migrerades.</value>
+    <value>Datum och tid då posten migrerades.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwnerId" xml:space="preserve">
@@ -1145,11 +1145,11 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>För intern användning.</value>
+    <value>Endast för internt bruk.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tidszonskod som användes när posten skapades.</value>
+    <value>Den tidzonskod som användes då posten skapades.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Parameter definition{1d6fe4b9-a699-ea11-a81c-000d3af70e62}" xml:space="preserve">
@@ -1365,7 +1365,7 @@
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tidszonskod för konvertering av UTC-tid</value>
+    <value>Tidszonskod för UTC-konvertering</value>
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
@@ -1449,7 +1449,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tidszonskod för konvertering av UTC-tid</value>
+    <value>Tidszonskod för UTC-konvertering</value>
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
@@ -1581,7 +1581,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tidszonskod för konvertering av UTC-tid</value>
+    <value>Tidszonskod för UTC-konvertering</value>
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
@@ -1705,7 +1705,7 @@
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tidszonskod för konvertering av UTC-tid</value>
+    <value>Tidszonskod för UTC-konvertering</value>
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
@@ -1825,7 +1825,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tidszonskod för konvertering av UTC-tid</value>
+    <value>Tidszonskod för UTC-konvertering</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1925,7 +1925,7 @@
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tidszonskod för konvertering av UTC-tid</value>
+    <value>Tidszonskod för UTC-konvertering</value>
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,WorkflowCategory" xml:space="preserve">

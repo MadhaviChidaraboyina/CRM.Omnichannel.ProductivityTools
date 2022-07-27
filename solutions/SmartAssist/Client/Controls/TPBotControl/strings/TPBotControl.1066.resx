@@ -130,7 +130,7 @@
     <comment>Empty message</comment>
   </data>
   <data name="FailureMessage" xml:space="preserve">
-    <value>Đã xảy ra sự cố. Vui lòng thử lại</value>
+    <value>Đã xảy ra sự cố. Vui lòng thử lại.</value>
     <comment>Failure Message</comment>
   </data>
   <data name="SuccessMessage" xml:space="preserve">

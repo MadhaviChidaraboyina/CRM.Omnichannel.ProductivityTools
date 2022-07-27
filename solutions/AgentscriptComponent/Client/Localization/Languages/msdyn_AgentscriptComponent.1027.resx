@@ -188,7 +188,7 @@
     <comment>Error message when the macro definition to be edited could not be read</comment>
   </data>
   <data name="DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" xml:space="preserve">
-    <value>No es poden llegir les plantilles d’acció</value>
+    <value>No es poden llegir les plantilles d'acció</value>
     <comment>Error message when templates entity read fails</comment>
   </data>
   <data name="DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" xml:space="preserve">
@@ -200,7 +200,7 @@
     <comment>Error message when write to CDS fails</comment>
   </data>
   <data name="DESIGNER_CONTROL_INIT_FAILURE" xml:space="preserve">
-    <value>S’ha produït un error en inicialitzar el control del dissenyador</value>
+    <value>S'ha produït un error en inicialitzar el control del dissenyador</value>
     <comment>Error message when designer control initialization fails</comment>
   </data>
   <data name="DESIGNER_CONTROL_JSON_GENERATION_ERROR" xml:space="preserve">

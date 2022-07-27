@@ -153,7 +153,7 @@
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'lk_msdyn_productivityagentscriptstep_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscriptstep_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'lk_msdyn_productivityagentscriptstep_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscript_createdby" xml:space="preserve">
@@ -161,7 +161,7 @@
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'lk_msdyn_productivityagentscript_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityagentscript_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'lk_msdyn_productivityagentscript_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_prod_agentscript_msdyn_prod_agentscriptstep_agentscriptid" xml:space="preserve">
@@ -257,7 +257,7 @@
     <comment> 'msdyn_productivityagentscript' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptModifiedOn" xml:space="preserve">
@@ -341,7 +341,7 @@
     <comment> 'msdyn_productivityagentscriptstep' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepModifiedOn" xml:space="preserve">

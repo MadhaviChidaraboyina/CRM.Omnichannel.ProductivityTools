@@ -385,7 +385,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionCreatedOnBehalfBy" xml:space="preserve">
-    <value>रिकॉर्ड को बनाने वाले प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर.</value>
+    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionentitymsdyn_macrosession" xml:space="preserve">
@@ -481,7 +481,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOnBehalfBy" xml:space="preserve">
-    <value>उस प्रतिनिधि उपयोगकर्ता के लिए युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया था.</value>
+    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterentitymsdyn_productivityactioninputparameter" xml:space="preserve">
@@ -581,7 +581,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOnBehalfBy" xml:space="preserve">
-    <value>उस प्रतिनिधि उपयोगकर्ता के लिए युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया था.</value>
+    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterentitymsdyn_productivityactionoutputparameter" xml:space="preserve">
@@ -669,7 +669,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>उस प्रतिनिधि उपयोगकर्ता के लिए युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया था.</value>
+    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateentitymsdyn_productivitymacroactiontemplate" xml:space="preserve">
@@ -805,7 +805,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOnBehalfBy" xml:space="preserve">
-    <value>उस प्रतिनिधि उपयोगकर्ता के लिए युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया था.</value>
+    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorentitymsdyn_productivitymacroconnector" xml:space="preserve">
@@ -933,7 +933,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>उस प्रतिनिधि उपयोगकर्ता के लिए युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया था.</value>
+    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationentitymsdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
@@ -1057,7 +1057,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
-    <value>उस प्रतिनिधि उपयोगकर्ता के लिए युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया था.</value>
+    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionentitymsdyn_productivityparameterdefinition" xml:space="preserve">

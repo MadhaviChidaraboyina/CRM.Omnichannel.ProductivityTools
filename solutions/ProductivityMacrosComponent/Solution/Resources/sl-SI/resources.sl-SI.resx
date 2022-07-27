@@ -3285,7 +3285,7 @@
     <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.LabelText'</comment>
   </data>
   <data name="1:Title,Processworkflow.HomePageGrid.New.Button.ToolTipDesc" xml:space="preserve">
-    <value>Ustvarite nov zapis</value>
+    <value>Ustvarjanje novega zapisa</value>
     <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.ToolTipDesc'</comment>
   </data>
   <data name="1:Title,Processworkflow.HomePageGrid.New.Button.ToolTipTitle" xml:space="preserve">

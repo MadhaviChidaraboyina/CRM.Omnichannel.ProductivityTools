@@ -1365,7 +1365,7 @@
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod Zon Waktu Penukaran UTC</value>
+    <value>Kod Zon Waktu Penukaran UTC</value>
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
@@ -1449,7 +1449,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod Zon Waktu Penukaran UTC</value>
+    <value>Kod Zon Waktu Penukaran UTC</value>
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
@@ -1581,7 +1581,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod Zon Waktu Penukaran UTC</value>
+    <value>Kod Zon Waktu Penukaran UTC</value>
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
@@ -1705,7 +1705,7 @@
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod Zon Waktu Penukaran UTC</value>
+    <value>Kod Zon Waktu Penukaran UTC</value>
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
@@ -1825,7 +1825,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod Zon Waktu Penukaran UTC</value>
+    <value>Kod Zon Waktu Penukaran UTC</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1925,7 +1925,7 @@
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kod Zon Waktu Penukaran UTC</value>
+    <value>Kod Zon Waktu Penukaran UTC</value>
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,WorkflowCategory" xml:space="preserve">

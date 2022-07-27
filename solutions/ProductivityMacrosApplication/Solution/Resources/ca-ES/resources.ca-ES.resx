@@ -209,7 +209,7 @@
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
   </data>
   <data name="100000:label,1A52C54ACD32CA00523268BB279C5D663FBD768B12FC35F55B11958D2B39C16A" xml:space="preserve">
-    <value>Centra’t en la pestanya</value>
+    <value>Centra't en la pestanya</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
   </data>
   <data name="100000:label,1D49C833CC48CC818D0BBB976E6E831217CC58C9485C5838893BE8AD47126E66" xml:space="preserve">
@@ -365,7 +365,7 @@
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
   </data>
   <data name="100000:label,5E164B885353D1015D39CEE0A815A2D89469ED3C6DA910C5BA400394EF6E0295" xml:space="preserve">
-    <value>Centra’t en la pestanya</value>
+    <value>Centra't en la pestanya</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
   </data>
   <data name="100000:label,5F1E971CF97A73BB471A244A5552771443B033179F990771CBD180BF2C2E340A" xml:space="preserve">
@@ -465,7 +465,7 @@
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
   </data>
   <data name="100000:label,86037488162D6FD5202C0C618058B6C4C75769965F9FEC1D686820C1C32ED28D" xml:space="preserve">
-    <value>Centra’t en la pestanya</value>
+    <value>Centra't en la pestanya</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
   </data>
   <data name="100000:label,8701943C34E0E51A869C350FC4E169E99003482727BBC2B0F28A2BF8B2FAA54B" xml:space="preserve">
@@ -677,7 +677,7 @@
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
   </data>
   <data name="100000:label,E11011003ADBB96D6C5AE2977E44E40E6FC5DD572DDCC5CC6789149708DA310A" xml:space="preserve">
-    <value>Centra’t en la pestanya</value>
+    <value>Centra't en la pestanya</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
   </data>
   <data name="100000:label,E1B106F7B2D38EDB7AD551421D793C676DB8550957DD960E9B5F8785194E117C" xml:space="preserve">
@@ -741,7 +741,7 @@
     <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
   </data>
   <data name="100000:label,FF822E4C985B6DF888B002AF44A8D449FB6B7993DB66871E8DB511586674D1EF" xml:space="preserve">
-    <value>Automatitzeu les accions de sessió que s’utilitzin habitualment</value>
+    <value>Automatitzeu les accions de sessió que s'utilitzin habitualment</value>
     <comment>Relative path in xml: \msdyn_productivitymacroconnector\msdyn_description id:</comment>
   </data>
   <data name="100000:label,FFF5C2D4D6129545D2C4F233DB80903B02417B540CD75F1A0E25CEAAA5CD2A3F" xml:space="preserve">

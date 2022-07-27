@@ -193,7 +193,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten skapades.</value>
+    <value>Datum och tid då posten skapades.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedOnBehalfBy" xml:space="preserve">
@@ -209,7 +209,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedOn" xml:space="preserve">
-    <value>Datum och tid då posten ändrades.</value>
+    <value>Datumet och tiden då posten ändrades.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedOnBehalfBy" xml:space="preserve">
@@ -221,7 +221,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfigurationId" xml:space="preserve">
-    <value>Unik identifierare för entitetsinstanser</value>
+    <value>Unikt id för entitetsinstanser</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_paneconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode" xml:space="preserve">
@@ -257,7 +257,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten migrerades.</value>
+    <value>Datum och tid då posten migrerades.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationstatecode" xml:space="preserve">
@@ -269,11 +269,11 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Enbart för internt bruk.</value>
+    <value>Endast för internt bruk.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Den tidszonskod som användes när posten skapades.</value>
+    <value>Den tidzonskod som användes då posten skapades.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedBy" xml:space="preserve">
@@ -281,7 +281,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten skapades.</value>
+    <value>Datum och tid då posten skapades.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedOnBehalfBy" xml:space="preserve">
@@ -297,7 +297,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedOn" xml:space="preserve">
-    <value>Datum och tid då posten ändrades.</value>
+    <value>Datumet och tiden då posten ändrades.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedOnBehalfBy" xml:space="preserve">
@@ -321,7 +321,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfigurationid" xml:space="preserve">
-    <value>Unik identifierare för entitetsinstanser</value>
+    <value>Unikt id för entitetsinstanser</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_panetabconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfiguration_msdyn_isenabled" xml:space="preserve">
@@ -357,7 +357,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten migrerades.</value>
+    <value>Datum och tid då posten migrerades.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationstatecode" xml:space="preserve">
@@ -369,11 +369,11 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Enbart för internt bruk.</value>
+    <value>Endast för internt bruk.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Den tidszonskod som användes när posten skapades.</value>
+    <value>Den tidzonskod som användes då posten skapades.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedBy" xml:space="preserve">
@@ -381,7 +381,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten skapades.</value>
+    <value>Datum och tid då posten skapades.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedOnBehalfBy" xml:space="preserve">
@@ -397,7 +397,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedOn" xml:space="preserve">
-    <value>Datum och tid då posten ändrades.</value>
+    <value>Datumet och tiden då posten ändrades.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedOnBehalfBy" xml:space="preserve">
@@ -437,7 +437,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfigurationid" xml:space="preserve">
-    <value>Unik identifierare för entitetsinstanser</value>
+    <value>Unikt id för entitetsinstanser</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_panetoolconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_category" xml:space="preserve">
@@ -469,7 +469,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>Datum och tid när posten migrerades.</value>
+    <value>Datum och tid då posten migrerades.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationstatecode" xml:space="preserve">
@@ -481,11 +481,11 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Enbart för internt bruk.</value>
+    <value>Endast för internt bruk.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Den tidszonskod som användes när posten skapades.</value>
+    <value>Den tidzonskod som användes då posten skapades.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Pane tab configuration{53119dc8-3b00-44cd-8656-dce8c75bbd35}" xml:space="preserve">

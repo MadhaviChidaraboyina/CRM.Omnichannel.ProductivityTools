@@ -133,27 +133,27 @@
 </value>
   </metadata>
   <data name="10:Description,lk_msdyn_paneconfiguration_createdby" xml:space="preserve">
-    <value>레코드를 만든 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 만든 사용자의 고유 식별자.</value>
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'lk_msdyn_paneconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_paneconfiguration_modifiedby" xml:space="preserve">
-    <value>레코드를 수정한 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 수정한 사용자의 고유 식별자.</value>
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'lk_msdyn_paneconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetabconfiguration_createdby" xml:space="preserve">
-    <value>레코드를 만든 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 만든 사용자의 고유 식별자.</value>
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'lk_msdyn_panetabconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetabconfiguration_modifiedby" xml:space="preserve">
-    <value>레코드를 수정한 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 수정한 사용자의 고유 식별자.</value>
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'lk_msdyn_panetabconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetoolconfiguration_createdby" xml:space="preserve">
-    <value>레코드를 만든 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 만든 사용자의 고유 식별자.</value>
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'lk_msdyn_panetoolconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetoolconfiguration_modifiedby" xml:space="preserve">
-    <value>레코드를 수정한 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 수정한 사용자의 고유 식별자.</value>
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'lk_msdyn_panetoolconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_paneconfig_msdyn_tabconfig" xml:space="preserve">
@@ -189,15 +189,15 @@
     <comment> 'msdyn_ProductivityPaneComponent' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedBy" xml:space="preserve">
-    <value>레코드를 만든 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 만든 사용자의 고유 식별자.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedOn" xml:space="preserve">
-    <value>레코드를 만든 날짜 및 시간입니다.</value>
+    <value>레코드를 만든 날짜 및 시간.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>레코드를 만든 대리인 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 만든 대리인 사용자의 고유 식별자.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationentitymsdyn_paneconfiguration" xml:space="preserve">
@@ -205,19 +205,19 @@
     <comment> 'msdyn_paneconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedBy" xml:space="preserve">
-    <value>레코드를 수정한 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 수정한 사용자의 고유 식별자.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedOn" xml:space="preserve">
-    <value>레코드가 수정된 날짜 및 시간입니다.</value>
+    <value>레코드를 수정한 날짜 및 시간.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>레코드를 수정한 대리인 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 수정한 대리인 사용자의 고유 식별자.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_name" xml:space="preserve">
-    <value>사용자 지정 엔터티의 이름입니다.</value>
+    <value>사용자 지정 엔터티의 이름.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfigurationId" xml:space="preserve">
@@ -249,7 +249,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_panestate' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>엔터티의 고유 이름입니다.</value>
+    <value>엔터티의 고유 이름.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationOrganizationId" xml:space="preserve">
@@ -257,7 +257,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>레코드가 마이그레이션된 날짜 및 시간입니다.</value>
+    <value>레코드를 마이그레이션한 날짜 및 시간.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationstatecode" xml:space="preserve">
@@ -269,23 +269,23 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>내부 전용입니다.</value>
+    <value>내부 전용.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>레코드를 만들 때 사용된 표준 시간대 코드입니다.</value>
+    <value>레코드를 만들 때 사용한 표준 시간대 코드.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedBy" xml:space="preserve">
-    <value>레코드를 만든 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 만든 사용자의 고유 식별자.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedOn" xml:space="preserve">
-    <value>레코드를 만든 날짜 및 시간입니다.</value>
+    <value>레코드를 만든 날짜 및 시간.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>레코드를 만든 대리인 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 만든 대리인 사용자의 고유 식별자.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationentitymsdyn_panetabconfiguration" xml:space="preserve">
@@ -293,15 +293,15 @@
     <comment> 'msdyn_panetabconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedBy" xml:space="preserve">
-    <value>레코드를 수정한 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 수정한 사용자의 고유 식별자.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedOn" xml:space="preserve">
-    <value>레코드가 수정된 날짜 및 시간입니다.</value>
+    <value>레코드를 수정한 날짜 및 시간.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>레코드를 수정한 대리인 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 수정한 대리인 사용자의 고유 식별자.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_iconpath" xml:space="preserve">
@@ -313,7 +313,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_isEnabled' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_name" xml:space="preserve">
-    <value>사용자 지정 엔터티의 이름입니다.</value>
+    <value>사용자 지정 엔터티의 이름.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_order" xml:space="preserve">
@@ -349,7 +349,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_tooltip' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>엔터티의 고유 이름입니다.</value>
+    <value>엔터티의 고유 이름.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationOrganizationId" xml:space="preserve">
@@ -357,7 +357,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>레코드가 마이그레이션된 날짜 및 시간입니다.</value>
+    <value>레코드를 마이그레이션한 날짜 및 시간.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationstatecode" xml:space="preserve">
@@ -369,23 +369,23 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>내부 전용입니다.</value>
+    <value>내부 전용.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>레코드를 만들 때 사용된 표준 시간대 코드입니다.</value>
+    <value>레코드를 만들 때 사용한 표준 시간대 코드.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedBy" xml:space="preserve">
-    <value>레코드를 만든 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 만든 사용자의 고유 식별자.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedOn" xml:space="preserve">
-    <value>레코드를 만든 날짜 및 시간입니다.</value>
+    <value>레코드를 만든 날짜 및 시간.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>레코드를 만든 대리인 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 만든 대리인 사용자의 고유 식별자.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationentitymsdyn_panetoolconfiguration" xml:space="preserve">
@@ -393,15 +393,15 @@
     <comment> 'msdyn_panetoolconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedBy" xml:space="preserve">
-    <value>레코드를 수정한 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 수정한 사용자의 고유 식별자.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedOn" xml:space="preserve">
-    <value>레코드가 수정된 날짜 및 시간입니다.</value>
+    <value>레코드를 수정한 날짜 및 시간.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>레코드를 수정한 대리인 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 수정한 대리인 사용자의 고유 식별자.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_category" xml:space="preserve">
@@ -433,7 +433,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_learnmorelink' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_name" xml:space="preserve">
-    <value>사용자 지정 엔터티의 이름입니다.</value>
+    <value>사용자 지정 엔터티의 이름.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfigurationid" xml:space="preserve">
@@ -461,7 +461,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_toolConfigurationEntity' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>엔터티의 고유 이름입니다.</value>
+    <value>엔터티의 고유 이름.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationOrganizationId" xml:space="preserve">
@@ -469,7 +469,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>레코드가 마이그레이션된 날짜 및 시간입니다.</value>
+    <value>레코드를 마이그레이션한 날짜 및 시간.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationstatecode" xml:space="preserve">
@@ -481,15 +481,15 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>내부 전용입니다.</value>
+    <value>내부 전용.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>레코드를 만들 때 사용된 표준 시간대 코드입니다.</value>
+    <value>레코드를 만들 때 사용한 표준 시간대 코드.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Pane tab configuration{53119dc8-3b00-44cd-8656-dce8c75bbd35}" xml:space="preserve">
-    <value>이 엔터티에 대한 양식입니다.</value>
+    <value>이 엔터티의 양식입니다.</value>
     <comment>'Pane tab configuration' : Description for systemform in Entity FormXml ID: '{53119dc8-3b00-44cd-8656-dce8c75bbd35}'</comment>
   </data>
   <data name="1:Description,Pane tab configuration{a871234d-aaaf-ea11-a81b-000d3ac61e3a}" xml:space="preserve">
@@ -497,7 +497,7 @@
     <comment>'Pane tab configuration' : Description for SavedQuery on Entity QueryId: '{a871234d-aaaf-ea11-a81b-000d3ac61e3a}'</comment>
   </data>
   <data name="1:Description,Pane tool configuration{86bce1bc-32cd-432f-9223-4536f3fc777a}" xml:space="preserve">
-    <value>이 엔터티에 대한 양식입니다.</value>
+    <value>이 엔터티의 양식입니다.</value>
     <comment>'Pane tool configuration' : Description for systemform in Entity FormXml ID: '{86bce1bc-32cd-432f-9223-4536f3fc777a}'</comment>
   </data>
   <data name="1:Description,Pane tool configuration{c9081ef5-aaaf-ea11-a81b-000d3ac61e3a}" xml:space="preserve">
@@ -509,7 +509,7 @@
     <comment>'Productivity pane configuration' : Description for SavedQuery on Entity QueryId: '{2190ac35-a8af-ea11-a81b-000d3ac61e3a}'</comment>
   </data>
   <data name="1:Description,Productivity pane configuration{f4d67a2f-7ec5-44c4-803e-f80eac68dfb7}" xml:space="preserve">
-    <value>이 엔터티에 대한 양식입니다.</value>
+    <value>이 엔터티의 양식입니다.</value>
     <comment>'Productivity pane configuration' : Description for systemform in Entity FormXml ID: '{f4d67a2f-7ec5-44c4-803e-f80eac68dfb7}'</comment>
   </data>
   <data name="1:displayname,msdyn_paneconfigurationCreatedBy" xml:space="preserve">
@@ -593,7 +593,7 @@
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC 전환 표준 시간대 코드</value>
+    <value>UTC 변환 표준 시간대 코드</value>
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationCreatedBy" xml:space="preserve">
@@ -689,7 +689,7 @@
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC 전환 표준 시간대 코드</value>
+    <value>UTC 변환 표준 시간대 코드</value>
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationCreatedBy" xml:space="preserve">
@@ -797,7 +797,7 @@
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC 전환 표준 시간대 코드</value>
+    <value>UTC 변환 표준 시간대 코드</value>
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode0" xml:space="preserve">

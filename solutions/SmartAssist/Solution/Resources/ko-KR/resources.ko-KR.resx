@@ -137,19 +137,19 @@
     <comment>Relative path in xml: \msdyn_panetoolconfiguration\msdyn_description id:</comment>
   </data>
   <data name="10:Description,lk_msdyn_adaptivecardconfiguration_createdby" xml:space="preserve">
-    <value>레코드를 만든 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 만든 사용자의 고유 식별자.</value>
     <comment>msdyn_adaptivecardconfiguration Description for EntityRelationship 'lk_msdyn_adaptivecardconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_adaptivecardconfiguration_modifiedby" xml:space="preserve">
-    <value>레코드를 수정한 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 수정한 사용자의 고유 식별자.</value>
     <comment>msdyn_adaptivecardconfiguration Description for EntityRelationship 'lk_msdyn_adaptivecardconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_smartassistconfig_createdby" xml:space="preserve">
-    <value>레코드를 만든 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 만든 사용자의 고유 식별자.</value>
     <comment>msdyn_smartassistconfig Description for EntityRelationship 'lk_msdyn_smartassistconfig_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_smartassistconfig_modifiedby" xml:space="preserve">
-    <value>레코드를 수정한 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 수정한 사용자의 고유 식별자.</value>
     <comment>msdyn_smartassistconfig Description for EntityRelationship 'lk_msdyn_smartassistconfig_modifiedby'</comment>
   </data>
   <data name="10:Description,organization_msdyn_adaptivecardconfiguration" xml:space="preserve">
@@ -177,23 +177,23 @@
     <comment>'Adaptive Card Configuration' : Description for SavedQuery on Entity QueryId: '{3919736b-aeab-ea11-a81b-000d3ac622d1}'</comment>
   </data>
   <data name="1:Description,Adaptive Card Configuration{67f74c42-2118-4ff3-9713-0f6d518d24b8}" xml:space="preserve">
-    <value>이 엔터티에 대한 양식입니다.</value>
+    <value>이 엔터티의 양식입니다.</value>
     <comment>'Adaptive Card Configuration' : Description for systemform in Entity FormXml ID: '{67f74c42-2118-4ff3-9713-0f6d518d24b8}'</comment>
   </data>
   <data name="1:Description,Adaptive Card Configuration{88a15309-45b3-49b3-86ae-2434136ab066}" xml:space="preserve">
-    <value>이 엔터티의 카드 양식입니다.</value>
+    <value>이 엔터티의 카드 양식.</value>
     <comment>'Adaptive Card Configuration' : Description for systemform in Entity FormXml ID: '{88a15309-45b3-49b3-86ae-2434136ab066}'</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationCreatedBy" xml:space="preserve">
-    <value>레코드를 만든 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 만든 사용자의 고유 식별자.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationCreatedOn" xml:space="preserve">
-    <value>레코드를 만든 날짜와 시간입니다.</value>
+    <value>레코드를 만든 날짜 및 시간.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>레코드를 만든 대리인 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 만든 대리인 사용자의 고유 식별자.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationentitymsdyn_adaptivecardconfiguration" xml:space="preserve">
@@ -201,19 +201,19 @@
     <comment> 'msdyn_adaptivecardconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationModifiedBy" xml:space="preserve">
-    <value>레코드를 수정한 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 수정한 사용자의 고유 식별자.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationModifiedOn" xml:space="preserve">
-    <value>레코드를 수정한 날짜 및 시간입니다.</value>
+    <value>레코드를 수정한 날짜 및 시간.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>레코드를 수정한 대리인 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 수정한 대리인 사용자의 고유 식별자.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfigurationId" xml:space="preserve">
-    <value>엔터티 인스턴스에 대한 고유 식별자</value>
+    <value>엔터티 인스턴스의 고유 식별자</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'msdyn_adaptivecardconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfiguration_statecode" xml:space="preserve">
@@ -229,11 +229,11 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'msdyn_adaptivecardtemplate' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_name" xml:space="preserve">
-    <value>사용자 지정 엔터티의 이름입니다.</value>
+    <value>사용자 지정 엔터티의 이름.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>엔터티의 고유 이름입니다.</value>
+    <value>엔터티의 고유 이름.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationOrganizationId" xml:space="preserve">
@@ -241,7 +241,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>레코드가 마이그레이션된 날짜와 시간입니다.</value>
+    <value>레코드를 마이그레이션한 날짜 및 시간.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationstatecode" xml:space="preserve">
@@ -257,19 +257,19 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>레코드를 만들 때 사용한 표준 시간대 코드입니다.</value>
+    <value>레코드를 만들 때 사용한 표준 시간대 코드.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigCreatedBy" xml:space="preserve">
-    <value>레코드를 만든 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 만든 사용자의 고유 식별자.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigCreatedOn" xml:space="preserve">
-    <value>레코드를 만든 날짜와 시간입니다.</value>
+    <value>레코드를 만든 날짜 및 시간.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigCreatedOnBehalfBy" xml:space="preserve">
-    <value>레코드를 만든 대리인 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 만든 대리인 사용자의 고유 식별자.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigentitymsdyn_smartassistconfig" xml:space="preserve">
@@ -277,15 +277,15 @@
     <comment> 'msdyn_smartassistconfig' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigModifiedBy" xml:space="preserve">
-    <value>레코드를 수정한 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 수정한 사용자의 고유 식별자.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigModifiedOn" xml:space="preserve">
-    <value>레코드를 수정한 날짜 및 시간입니다.</value>
+    <value>레코드를 수정한 날짜 및 시간.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigModifiedOnBehalfBy" xml:space="preserve">
-    <value>레코드를 수정한 대리인 사용자의 고유 식별자입니다.</value>
+    <value>레코드를 수정한 대리인 사용자의 고유 식별자.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_IconURL" xml:space="preserve">
@@ -301,7 +301,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_maxsuggestioncount' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_name" xml:space="preserve">
-    <value>사용자 지정 엔터티의 이름입니다.</value>
+    <value>사용자 지정 엔터티의 이름.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_Order" xml:space="preserve">
@@ -309,7 +309,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfigId" xml:space="preserve">
-    <value>엔터티 인스턴스에 대한 고유 식별자</value>
+    <value>엔터티 인스턴스의 고유 식별자</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_smartassistconfigId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfig_msdyn_isdefault" xml:space="preserve">
@@ -353,7 +353,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_SuggestionWebresourceURL' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_UniqueName" xml:space="preserve">
-    <value>엔터티의 고유 이름입니다.</value>
+    <value>엔터티의 고유 이름.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigOrganizationId" xml:space="preserve">
@@ -361,7 +361,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigOverriddenCreatedOn" xml:space="preserve">
-    <value>레코드가 마이그레이션된 날짜와 시간입니다.</value>
+    <value>레코드를 마이그레이션한 날짜 및 시간.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigstatecode" xml:space="preserve">
@@ -377,15 +377,15 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>레코드를 만들 때 사용한 표준 시간대 코드입니다.</value>
+    <value>레코드를 만들 때 사용한 표준 시간대 코드.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Smartassist configuration{0beeec6f-1ad0-4d4e-bf62-d4875b24764c}" xml:space="preserve">
-    <value>이 엔터티에 대한 양식입니다.</value>
+    <value>이 엔터티의 양식입니다.</value>
     <comment>'Smartassist configuration' : Description for systemform in Entity FormXml ID: '{0beeec6f-1ad0-4d4e-bf62-d4875b24764c}'</comment>
   </data>
   <data name="1:Description,Smartassist configuration{53db0d63-67b8-49a5-8c80-677cd77bed47}" xml:space="preserve">
-    <value>이 엔터티의 카드 양식입니다.</value>
+    <value>이 엔터티의 카드 양식.</value>
     <comment>'Smartassist configuration' : Description for systemform in Entity FormXml ID: '{53db0d63-67b8-49a5-8c80-677cd77bed47}'</comment>
   </data>
   <data name="1:Description,Smartassist configuration{bb1d8168-d3b5-ea11-a81c-000d3ac629fa}" xml:space="preserve">
@@ -461,7 +461,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_adaptivecardconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC 표준 변환 시간대 코드</value>
+    <value>UTC 변환 표준 시간대 코드</value>
     <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_smartassistconfigCreatedBy" xml:space="preserve">
@@ -577,7 +577,7 @@
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_smartassistconfigUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC 표준 변환 시간대 코드</value>
+    <value>UTC 변환 표준 시간대 코드</value>
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,Adaptive Card Configuration{06bad12e-c299-29a7-00d4-a0a2b654519a}" xml:space="preserve">

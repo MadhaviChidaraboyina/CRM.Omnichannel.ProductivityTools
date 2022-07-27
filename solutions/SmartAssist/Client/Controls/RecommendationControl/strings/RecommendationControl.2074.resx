@@ -130,7 +130,7 @@
     <comment>adaptivecard template</comment>
   </data>
   <data name="FailureMessage" xml:space="preserve">
-    <value>Došlo je do greške. Pokušajte ponovo.</value>
+    <value>Nešto nije u redu. Pokušajte ponovo.</value>
     <comment>Failure Message</comment>
   </data>
   <data name="SuccessMessage" xml:space="preserve">

@@ -313,7 +313,7 @@
     <comment>'Action Input Parameter' : Description for systemform in Entity FormXml ID: '{a050bc67-9e91-4cc6-8987-5bfb058988e5}'</comment>
   </data>
   <data name="1:Description,Action Input Parameter{b00b65d5-efef-4fc6-871e-8ace809eae26}" xml:space="preserve">
-    <value>Et skjema for denne.</value>
+    <value>Et skjema for denne enheten.</value>
     <comment>'Action Input Parameter' : Description for systemform in Entity FormXml ID: '{b00b65d5-efef-4fc6-871e-8ace809eae26}'</comment>
   </data>
   <data name="1:Description,Action Input Parameter{b84e887d-a499-ea11-a81c-000d3af70e62}" xml:space="preserve">
@@ -321,7 +321,7 @@
     <comment>'Action Input Parameter' : Description for SavedQuery on Entity QueryId: '{b84e887d-a499-ea11-a81c-000d3af70e62}'</comment>
   </data>
   <data name="1:Description,Action Output Parameter{4956d6b7-1d8c-4767-b73b-d4d9de0dd17d}" xml:space="preserve">
-    <value>Et skjema for denne.</value>
+    <value>Et skjema for denne enheten.</value>
     <comment>'Action Output Parameter' : Description for systemform in Entity FormXml ID: '{4956d6b7-1d8c-4767-b73b-d4d9de0dd17d}'</comment>
   </data>
   <data name="1:Description,Action Output Parameter{fd110973-a599-ea11-a81c-000d3af70e62}" xml:space="preserve">
@@ -341,7 +341,7 @@
     <comment>'Macro Action Template' : Description for systemform in Entity FormXml ID: '{d75f0224-6210-40a3-a9da-d5e52376f1a6}'</comment>
   </data>
   <data name="1:Description,Macro Action Template{d9f3060d-a09b-4966-a1d0-aba226880a1d}" xml:space="preserve">
-    <value>Et skjema for denne.</value>
+    <value>Et skjema for denne enheten.</value>
     <comment>'Macro Action Template' : Description for systemform in Entity FormXml ID: '{d9f3060d-a09b-4966-a1d0-aba226880a1d}'</comment>
   </data>
   <data name="1:Description,Macro Connector{08f565b4-a599-ea11-a81c-000d3af70e62}" xml:space="preserve">
@@ -349,7 +349,7 @@
     <comment>'Macro Connector' : Description for SavedQuery on Entity QueryId: '{08f565b4-a599-ea11-a81c-000d3af70e62}'</comment>
   </data>
   <data name="1:Description,Macro Connector{55d8cfea-d1d1-43b8-b581-e83b6d276695}" xml:space="preserve">
-    <value>Et skjema for denne.</value>
+    <value>Et skjema for denne enheten.</value>
     <comment>'Macro Connector' : Description for systemform in Entity FormXml ID: '{55d8cfea-d1d1-43b8-b581-e83b6d276695}'</comment>
   </data>
   <data name="1:Description,Macro Connector{b29248c2-8c23-4ab1-b287-0182849d28b6}" xml:space="preserve">
@@ -365,7 +365,7 @@
     <comment>'Macro Run History' : Description for systemform in Entity FormXml ID: '{47492cdb-57ca-4667-a741-35c34491b4f6}'</comment>
   </data>
   <data name="1:Description,Macro Solution Configuration{206b5fb0-376f-40cf-9e78-2acce3e61f42}" xml:space="preserve">
-    <value>Et skjema for denne.</value>
+    <value>Et skjema for denne enheten.</value>
     <comment>'Macro Solution Configuration' : Description for systemform in Entity FormXml ID: '{206b5fb0-376f-40cf-9e78-2acce3e61f42}'</comment>
   </data>
   <data name="1:Description,Macro Solution Configuration{6e1b7485-7675-4ade-b40e-86f4313fe2db}" xml:space="preserve">
@@ -385,7 +385,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionCreatedOnBehalfBy" xml:space="preserve">
-    <value>Unik identifikator for representantbrukeren som opprettet oppføringen.</value>
+    <value>Unik identifikator for representanten som opprettet oppføringen.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionentitymsdyn_macrosession" xml:space="preserve">
@@ -405,7 +405,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedOnBehalfBy" xml:space="preserve">
-    <value>Unik identifikator for representantbrukeren som endret oppføringen.</value>
+    <value>Unik identifikator for representanten som endret oppføringen.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionmsdyn_executioncontext" xml:space="preserve">
@@ -465,7 +465,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Bare til internt bruk.</value>
+    <value>Bare til intern bruk.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionUTCConversionTimeZoneCode" xml:space="preserve">
@@ -477,7 +477,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOn" xml:space="preserve">
-    <value>Datoen og klokkeslettet oppføringen ble opprettet.</value>
+    <value>Datoen og klokkeslettet da oppføringen ble opprettet.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOnBehalfBy" xml:space="preserve">
@@ -577,7 +577,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOn" xml:space="preserve">
-    <value>Datoen og klokkeslettet oppføringen ble opprettet.</value>
+    <value>Datoen og klokkeslettet da oppføringen ble opprettet.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOnBehalfBy" xml:space="preserve">
@@ -665,7 +665,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOn" xml:space="preserve">
-    <value>Datoen og klokkeslettet oppføringen ble opprettet.</value>
+    <value>Datoen og klokkeslettet da oppføringen ble opprettet.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOnBehalfBy" xml:space="preserve">
@@ -801,7 +801,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOn" xml:space="preserve">
-    <value>Datoen og klokkeslettet oppføringen ble opprettet.</value>
+    <value>Datoen og klokkeslettet da oppføringen ble opprettet.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOnBehalfBy" xml:space="preserve">
@@ -929,7 +929,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOn" xml:space="preserve">
-    <value>Datoen og klokkeslettet oppføringen ble opprettet.</value>
+    <value>Datoen og klokkeslettet da oppføringen ble opprettet.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOnBehalfBy" xml:space="preserve">
@@ -1053,7 +1053,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOn" xml:space="preserve">
-    <value>Datoen og klokkeslettet oppføringen ble opprettet.</value>
+    <value>Datoen og klokkeslettet da oppføringen ble opprettet.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
@@ -1157,7 +1157,7 @@
     <comment>'Parameter definition' : Description for SavedQuery on Entity QueryId: '{1d6fe4b9-a699-ea11-a81c-000d3af70e62}'</comment>
   </data>
   <data name="1:Description,Parameter definition{b520abfd-79f7-44e8-80bd-430d66619828}" xml:space="preserve">
-    <value>Et skjema for denne.</value>
+    <value>Et skjema for denne enheten.</value>
     <comment>'Parameter definition' : Description for systemform in Entity FormXml ID: '{b520abfd-79f7-44e8-80bd-430d66619828}'</comment>
   </data>
   <data name="1:Description,Parameter definition{bf2b6722-14f7-4ebe-b551-b64e96bff693}" xml:space="preserve">

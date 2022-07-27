@@ -445,15 +445,15 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningBusinessUnit" xml:space="preserve">
-    <value>Identificatore univoco della Business Unit proprietaria del record</value>
+    <value>Identificatore univoco della Business Unit a cui appartiene il record</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningTeam" xml:space="preserve">
-    <value>Identificatore univoco del team proprietario del record.</value>
+    <value>Identificatore univoco del team a cui appartiene il record.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningUser" xml:space="preserve">
-    <value>Identificatore univoco dell'utente proprietario del record.</value>
+    <value>Identificatore univoco dell'utente a cui appartiene il record.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionstatecode" xml:space="preserve">
@@ -513,7 +513,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameterId" xml:space="preserve">
-    <value>Identificatore univoco per le istanze di entità</value>
+    <value>Identificatore univoco delle istanze di entità</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_productivityactioninputparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_msdyn_parametertype" xml:space="preserve">
@@ -569,7 +569,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codice del fuso orario usato al momento della creazione del record.</value>
+    <value>Codice del fuso orario utilizzato al momento della creazione del record.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
@@ -609,7 +609,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameterId" xml:space="preserve">
-    <value>Identificatore univoco per le istanze di entità</value>
+    <value>Identificatore univoco delle istanze di entità</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_productivityactionoutputparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameter_statecode" xml:space="preserve">
@@ -657,7 +657,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codice del fuso orario usato al momento della creazione del record.</value>
+    <value>Codice del fuso orario utilizzato al momento della creazione del record.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
@@ -725,7 +725,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_outputparameters' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplateId" xml:space="preserve">
-    <value>Identificatore univoco per le istanze di entità</value>
+    <value>Identificatore univoco delle istanze di entità</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_productivitymacroactiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplate_statecode" xml:space="preserve">
@@ -793,7 +793,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codice del fuso orario usato al momento della creazione del record.</value>
+    <value>Codice del fuso orario utilizzato al momento della creazione del record.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
@@ -861,7 +861,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_prefix' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_productivitymacroconnectorId" xml:space="preserve">
-    <value>Identificatore univoco per le istanze di entità</value>
+    <value>Identificatore univoco delle istanze di entità</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_productivitymacroconnectorId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_productivitymacroconnector_statecode" xml:space="preserve">
@@ -921,7 +921,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codice del fuso orario usato al momento della creazione del record.</value>
+    <value>Codice del fuso orario utilizzato al momento della creazione del record.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
@@ -985,7 +985,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfigurationId" xml:space="preserve">
-    <value>Identificatore univoco per le istanze di entità</value>
+    <value>Identificatore univoco delle istanze di entità</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_productivitymacrosolutionconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfiguration_statecode" xml:space="preserve">
@@ -1045,7 +1045,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codice del fuso orario usato al momento della creazione del record.</value>
+    <value>Codice del fuso orario utilizzato al momento della creazione del record.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1101,7 +1101,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinitionId" xml:space="preserve">
-    <value>Identificatore univoco per le istanze di entità</value>
+    <value>Identificatore univoco delle istanze di entità</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_productivityparameterdefinitionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinition_statecode" xml:space="preserve">
@@ -1149,7 +1149,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codice del fuso orario usato al momento della creazione del record.</value>
+    <value>Codice del fuso orario utilizzato al momento della creazione del record.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Parameter definition{1d6fe4b9-a699-ea11-a81c-000d3af70e62}" xml:space="preserve">

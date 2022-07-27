@@ -249,7 +249,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_panestate' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>Olemi ainunimi.</value>
+    <value>Olemi kordumatu nimi.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationOrganizationId" xml:space="preserve">
@@ -273,7 +273,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kirje loomisel kasutatud ajavööndi kood.</value>
+    <value>Ajavööndi kood, mis oli kirje loomise ajal kasutusel.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedBy" xml:space="preserve">
@@ -349,7 +349,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_tooltip' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>Olemi ainunimi.</value>
+    <value>Olemi kordumatu nimi.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationOrganizationId" xml:space="preserve">
@@ -373,7 +373,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kirje loomisel kasutatud ajavööndi kood.</value>
+    <value>Ajavööndi kood, mis oli kirje loomise ajal kasutusel.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedBy" xml:space="preserve">
@@ -461,7 +461,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_toolConfigurationEntity' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>Olemi ainunimi.</value>
+    <value>Olemi kordumatu nimi.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationOrganizationId" xml:space="preserve">
@@ -485,7 +485,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Kirje loomisel kasutatud ajavööndi kood.</value>
+    <value>Ajavööndi kood, mis oli kirje loomise ajal kasutusel.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Pane tab configuration{53119dc8-3b00-44cd-8656-dce8c75bbd35}" xml:space="preserve">
@@ -589,11 +589,11 @@
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_paneconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Ajavööndireegli versiooni number</value>
+    <value>Ajavööndireegli versiooninumber</value>
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Teisenduse ajavööndi kood (UTC)</value>
+    <value>UTC-teisenduse ajavööndikood</value>
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationCreatedBy" xml:space="preserve">
@@ -685,11 +685,11 @@
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Ajavööndireegli versiooni number</value>
+    <value>Ajavööndireegli versiooninumber</value>
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Teisenduse ajavööndi kood (UTC)</value>
+    <value>UTC-teisenduse ajavööndikood</value>
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationCreatedBy" xml:space="preserve">
@@ -793,11 +793,11 @@
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Ajavööndireegli versiooni number</value>
+    <value>Ajavööndireegli versiooninumber</value>
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Teisenduse ajavööndi kood (UTC)</value>
+    <value>UTC-teisenduse ajavööndikood</value>
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode0" xml:space="preserve">

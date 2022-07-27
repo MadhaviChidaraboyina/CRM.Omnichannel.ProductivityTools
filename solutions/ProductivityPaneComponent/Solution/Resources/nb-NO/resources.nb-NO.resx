@@ -197,7 +197,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>Unik identifikator for representantbrukeren som opprettet oppføringen.</value>
+    <value>Unik identifikator for representanten som opprettet oppføringen.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationentitymsdyn_paneconfiguration" xml:space="preserve">
@@ -213,7 +213,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Unik identifikator for representantbrukeren som endret oppføringen.</value>
+    <value>Unik identifikator for representanten som endret oppføringen.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_name" xml:space="preserve">
@@ -269,7 +269,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Bare til internt bruk.</value>
+    <value>Bare til intern bruk.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
@@ -285,7 +285,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>Unik identifikator for representantbrukeren som opprettet oppføringen.</value>
+    <value>Unik identifikator for representanten som opprettet oppføringen.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationentitymsdyn_panetabconfiguration" xml:space="preserve">
@@ -301,7 +301,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Unik identifikator for representantbrukeren som endret oppføringen.</value>
+    <value>Unik identifikator for representanten som endret oppføringen.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_iconpath" xml:space="preserve">
@@ -369,7 +369,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Bare til internt bruk.</value>
+    <value>Bare til intern bruk.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
@@ -385,7 +385,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>Unik identifikator for representantbrukeren som opprettet oppføringen.</value>
+    <value>Unik identifikator for representanten som opprettet oppføringen.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationentitymsdyn_panetoolconfiguration" xml:space="preserve">
@@ -401,7 +401,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Unik identifikator for representantbrukeren som endret oppføringen.</value>
+    <value>Unik identifikator for representanten som endret oppføringen.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_category" xml:space="preserve">
@@ -481,7 +481,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Bare til internt bruk.</value>
+    <value>Bare til intern bruk.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
@@ -489,7 +489,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Pane tab configuration{53119dc8-3b00-44cd-8656-dce8c75bbd35}" xml:space="preserve">
-    <value>Et skjema for denne.</value>
+    <value>Et skjema for denne enheten.</value>
     <comment>'Pane tab configuration' : Description for systemform in Entity FormXml ID: '{53119dc8-3b00-44cd-8656-dce8c75bbd35}'</comment>
   </data>
   <data name="1:Description,Pane tab configuration{a871234d-aaaf-ea11-a81b-000d3ac61e3a}" xml:space="preserve">
@@ -497,7 +497,7 @@
     <comment>'Pane tab configuration' : Description for SavedQuery on Entity QueryId: '{a871234d-aaaf-ea11-a81b-000d3ac61e3a}'</comment>
   </data>
   <data name="1:Description,Pane tool configuration{86bce1bc-32cd-432f-9223-4536f3fc777a}" xml:space="preserve">
-    <value>Et skjema for denne.</value>
+    <value>Et skjema for denne enheten.</value>
     <comment>'Pane tool configuration' : Description for systemform in Entity FormXml ID: '{86bce1bc-32cd-432f-9223-4536f3fc777a}'</comment>
   </data>
   <data name="1:Description,Pane tool configuration{c9081ef5-aaaf-ea11-a81b-000d3ac61e3a}" xml:space="preserve">
@@ -509,7 +509,7 @@
     <comment>'Productivity pane configuration' : Description for SavedQuery on Entity QueryId: '{2190ac35-a8af-ea11-a81b-000d3ac61e3a}'</comment>
   </data>
   <data name="1:Description,Productivity pane configuration{f4d67a2f-7ec5-44c4-803e-f80eac68dfb7}" xml:space="preserve">
-    <value>Et skjema for denne.</value>
+    <value>Et skjema for denne enheten.</value>
     <comment>'Productivity pane configuration' : Description for systemform in Entity FormXml ID: '{f4d67a2f-7ec5-44c4-803e-f80eac68dfb7}'</comment>
   </data>
   <data name="1:displayname,msdyn_paneconfigurationCreatedBy" xml:space="preserve">

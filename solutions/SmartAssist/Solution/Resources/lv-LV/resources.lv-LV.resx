@@ -189,7 +189,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationCreatedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika izveidots.</value>
+    <value>Ieraksta izveides datums un laiks.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationCreatedOnBehalfBy" xml:space="preserve">
@@ -205,7 +205,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationModifiedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika modificēts.</value>
+    <value>Ieraksta modificēšanas datums un laiks.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationModifiedOnBehalfBy" xml:space="preserve">
@@ -213,7 +213,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfigurationId" xml:space="preserve">
-    <value>Entītiju instanču unikāls identifikators</value>
+    <value>Entītijas instanču unikālais identifikators</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'msdyn_adaptivecardconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfiguration_statecode" xml:space="preserve">
@@ -253,11 +253,11 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Izmantošanai tikai iekšējām vajadzībām.</value>
+    <value>Tikai iekšējai lietošanai.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laika joslas kods, kas tika izmantots, veidojot ierakstu.</value>
+    <value>Laika joslas kods, kas tika izmantots ieraksta izveides laikā.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigCreatedBy" xml:space="preserve">
@@ -265,7 +265,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigCreatedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika izveidots.</value>
+    <value>Ieraksta izveides datums un laiks.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigCreatedOnBehalfBy" xml:space="preserve">
@@ -281,7 +281,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigModifiedOn" xml:space="preserve">
-    <value>Datums un laiks, kad ieraksts tika modificēts.</value>
+    <value>Ieraksta modificēšanas datums un laiks.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigModifiedOnBehalfBy" xml:space="preserve">
@@ -309,7 +309,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfigId" xml:space="preserve">
-    <value>Entītiju instanču unikāls identifikators</value>
+    <value>Entītijas instanču unikālais identifikators</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_smartassistconfigId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfig_msdyn_isdefault" xml:space="preserve">
@@ -373,11 +373,11 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Izmantošanai tikai iekšējām vajadzībām.</value>
+    <value>Tikai iekšējai lietošanai.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Laika joslas kods, kas tika izmantots, veidojot ierakstu.</value>
+    <value>Laika joslas kods, kas tika izmantots ieraksta izveides laikā.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Smartassist configuration{0beeec6f-1ad0-4d4e-bf62-d4875b24764c}" xml:space="preserve">
@@ -461,7 +461,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_adaptivecardconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC konvertēšanas laika joslas kods</value>
+    <value>UTC konvertēšanas laika joslas kods</value>
     <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_smartassistconfigCreatedBy" xml:space="preserve">
@@ -577,7 +577,7 @@
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_smartassistconfigUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC konvertēšanas laika joslas kods</value>
+    <value>UTC konvertēšanas laika joslas kods</value>
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,Adaptive Card Configuration{06bad12e-c299-29a7-00d4-a0a2b654519a}" xml:space="preserve">

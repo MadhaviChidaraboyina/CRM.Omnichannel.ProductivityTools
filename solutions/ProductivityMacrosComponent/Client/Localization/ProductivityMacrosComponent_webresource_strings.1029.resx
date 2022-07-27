@@ -242,7 +242,7 @@
     <comment>Error message when write to CDS fails</comment>
   </data>
   <data name="DESIGNER_CONTROL_INIT_FAILURE" xml:space="preserve">
-    <value>Selhala inicializace řízení návrháře</value>
+    <value>Selhala inicializace ovládacího prvku návrháře.</value>
     <comment>Error message when designer control initialization fails</comment>
   </data>
   <data name="DESIGNER_CONTROL_JSON_GENERATION_ERROR" xml:space="preserve">

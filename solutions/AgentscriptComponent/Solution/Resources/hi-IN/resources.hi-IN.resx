@@ -249,7 +249,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptCreatedOnBehalfBy" xml:space="preserve">
-    <value>उस प्रतिनिधि उपयोगकर्ता के लिए युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया था.</value>
+    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptentitymsdyn_productivityagentscript" xml:space="preserve">
@@ -333,7 +333,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepCreatedOnBehalfBy" xml:space="preserve">
-    <value>उस प्रतिनिधि उपयोगकर्ता के लिए युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया था.</value>
+    <value>उस प्रतिनिधि उपयोगकर्ता का युनीक आइडेंटिफ़ायर, जिसने रिकॉर्ड बनाया.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepentitymsdyn_productivityagentscriptstep" xml:space="preserve">

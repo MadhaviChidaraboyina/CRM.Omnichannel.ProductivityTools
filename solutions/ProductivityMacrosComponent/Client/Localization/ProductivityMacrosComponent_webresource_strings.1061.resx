@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" xml:space="preserve">
-    <value>Disaineri konfiguratsiooni ei õnnestu leida</value>
+    <value>Kujundaja konfiguratsiooni ei leidu</value>
     <comment>Error message when config entity read fails</comment>
   </data>
   <data name="DESIGNER_ACTION" xml:space="preserve">
@@ -234,7 +234,7 @@
     <comment>Error message when the macro definition to be edited could not be read</comment>
   </data>
   <data name="DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" xml:space="preserve">
-    <value>Toimingu malle ei saa lugeda</value>
+    <value>Toimingumalle ei saa lugeda</value>
     <comment>Error message when templates entity read fails</comment>
   </data>
   <data name="DESIGNER_CONTROL_CDS_WRITE_ERROR" xml:space="preserve">
@@ -262,7 +262,7 @@
     <comment>Macro Solution Configuration Search Hint Text</comment>
   </data>
   <data name="msdyn_macrosolutionconfiguration_msdyn_uservoicetext" xml:space="preserve">
-    <value>Andke meile teada, mida võiksime luua järgmisena</value>
+    <value>Andke meile teada, mida uut võiksime järgmisena luua</value>
     <comment>Macro Solution Configuration User Voice Text</comment>
   </data>
   <data name="LADESIGNER_RECOMMENDATION_CATEGORY_LOGICAPP_BUILTIN" xml:space="preserve">

@@ -188,7 +188,7 @@
     <comment>Error message when the macro definition to be edited could not be read</comment>
   </data>
   <data name="DESIGNER_CONFIG_ERROR_TEMPLATES_NOT_FOUND" xml:space="preserve">
-    <value>ไม่สามารถอ่านแม่แบบการดำเนินการ</value>
+    <value>ไม่สามารถอ่านเทมเพลตการดำเนินการ</value>
     <comment>Error message when templates entity read fails</comment>
   </data>
   <data name="DESIGNER_CONFIG_ERROR_URL_NOT_FOUND" xml:space="preserve">

@@ -130,7 +130,7 @@
     <comment>Empty message</comment>
   </data>
   <data name="FailureMessage" xml:space="preserve">
-    <value>Bir sorun oluştu, lütfen tekrar deneyin</value>
+    <value>Bir sorun oluştu. Lütfen tekrar deneyin</value>
     <comment>Failure Message</comment>
   </data>
   <data name="SuccessMessage" xml:space="preserve">

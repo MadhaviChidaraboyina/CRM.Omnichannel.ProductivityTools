@@ -565,7 +565,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca şirket içi kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
@@ -653,7 +653,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca şirket içi kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
@@ -789,7 +789,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca şirket içi kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
@@ -917,7 +917,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca şirket içi kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1041,7 +1041,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca şirket içi kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1145,7 +1145,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Yalnızca şirket içi kullanım için.</value>
+    <value>Yalnızca dahili kullanım içindir.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">

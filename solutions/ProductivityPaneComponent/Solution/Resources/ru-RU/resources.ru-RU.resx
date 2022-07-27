@@ -165,15 +165,15 @@
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'msdyn_msdyn_toolconfig_msdyn_tabconfig'</comment>
   </data>
   <data name="10:Description,organization_msdyn_paneconfiguration" xml:space="preserve">
-    <value>Уникальный идентификатор организации</value>
+    <value>Уникальный идентификатор организации.</value>
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'organization_msdyn_paneconfiguration'</comment>
   </data>
   <data name="10:Description,organization_msdyn_panetabconfiguration" xml:space="preserve">
-    <value>Уникальный идентификатор организации</value>
+    <value>Уникальный идентификатор организации.</value>
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'organization_msdyn_panetabconfiguration'</comment>
   </data>
   <data name="10:Description,organization_msdyn_panetoolconfiguration" xml:space="preserve">
-    <value>Уникальный идентификатор организации</value>
+    <value>Уникальный идентификатор организации.</value>
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'organization_msdyn_panetoolconfiguration'</comment>
   </data>
   <data name="15062:Description,msdyn_ProductivityPaneComponent" xml:space="preserve">
@@ -217,11 +217,11 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_name" xml:space="preserve">
-    <value>Имя настраиваемой сущности.</value>
+    <value>Имя пользовательской сущности.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfigurationId" xml:space="preserve">
-    <value>Уникальный идентификатор экземпляров сущности</value>
+    <value>Уникальный идентификатор для экземпляров сущности.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_paneconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode" xml:space="preserve">
@@ -253,7 +253,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationOrganizationId" xml:space="preserve">
-    <value>Уникальный идентификатор организации</value>
+    <value>Уникальный идентификатор организации.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationOverriddenCreatedOn" xml:space="preserve">
@@ -313,7 +313,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_isEnabled' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_name" xml:space="preserve">
-    <value>Имя настраиваемой сущности.</value>
+    <value>Имя пользовательской сущности.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_order" xml:space="preserve">
@@ -321,7 +321,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfigurationid" xml:space="preserve">
-    <value>Уникальный идентификатор экземпляров сущности</value>
+    <value>Уникальный идентификатор для экземпляров сущности.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_panetabconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfiguration_msdyn_isenabled" xml:space="preserve">
@@ -353,7 +353,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationOrganizationId" xml:space="preserve">
-    <value>Уникальный идентификатор организации</value>
+    <value>Уникальный идентификатор организации.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationOverriddenCreatedOn" xml:space="preserve">
@@ -433,11 +433,11 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_learnmorelink' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_name" xml:space="preserve">
-    <value>Имя настраиваемой сущности.</value>
+    <value>Имя пользовательской сущности.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfigurationid" xml:space="preserve">
-    <value>Уникальный идентификатор экземпляров сущности</value>
+    <value>Уникальный идентификатор для экземпляров сущности.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_panetoolconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_category" xml:space="preserve">
@@ -465,7 +465,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationOrganizationId" xml:space="preserve">
-    <value>Уникальный идентификатор организации</value>
+    <value>Уникальный идентификатор организации.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationOverriddenCreatedOn" xml:space="preserve">

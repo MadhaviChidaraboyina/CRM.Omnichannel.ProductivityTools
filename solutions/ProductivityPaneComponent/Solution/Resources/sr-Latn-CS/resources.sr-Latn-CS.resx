@@ -137,7 +137,7 @@
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'lk_msdyn_paneconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_paneconfiguration_modifiedby" xml:space="preserve">
-    <value>Jedinstveni identifikator koji je izmenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika koji je izmenio zapis.</value>
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'lk_msdyn_paneconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetabconfiguration_createdby" xml:space="preserve">
@@ -145,7 +145,7 @@
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'lk_msdyn_panetabconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetabconfiguration_modifiedby" xml:space="preserve">
-    <value>Jedinstveni identifikator koji je izmenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika koji je izmenio zapis.</value>
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'lk_msdyn_panetabconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetoolconfiguration_createdby" xml:space="preserve">
@@ -153,7 +153,7 @@
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'lk_msdyn_panetoolconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetoolconfiguration_modifiedby" xml:space="preserve">
-    <value>Jedinstveni identifikator koji je izmenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika koji je izmenio zapis.</value>
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'lk_msdyn_panetoolconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_paneconfig_msdyn_tabconfig" xml:space="preserve">
@@ -205,7 +205,7 @@
     <comment> 'msdyn_paneconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedBy" xml:space="preserve">
-    <value>Jedinstveni identifikator koji je izmenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika koji je izmenio zapis.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedOn" xml:space="preserve">
@@ -221,7 +221,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfigurationId" xml:space="preserve">
-    <value>Jedinstveni identifikator za instance entiteta</value>
+    <value>Jedinstveni identifikator instanci entiteta</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_paneconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode" xml:space="preserve">
@@ -249,7 +249,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_panestate' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>Jedinstveno ime za entitet.</value>
+    <value>Jedinstveni naziv za entitet.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationOrganizationId" xml:space="preserve">
@@ -293,7 +293,7 @@
     <comment> 'msdyn_panetabconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedBy" xml:space="preserve">
-    <value>Jedinstveni identifikator koji je izmenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika koji je izmenio zapis.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedOn" xml:space="preserve">
@@ -321,7 +321,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfigurationid" xml:space="preserve">
-    <value>Jedinstveni identifikator za instance entiteta</value>
+    <value>Jedinstveni identifikator instanci entiteta</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_panetabconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfiguration_msdyn_isenabled" xml:space="preserve">
@@ -349,7 +349,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_tooltip' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>Jedinstveno ime za entitet.</value>
+    <value>Jedinstveni naziv za entitet.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationOrganizationId" xml:space="preserve">
@@ -393,7 +393,7 @@
     <comment> 'msdyn_panetoolconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedBy" xml:space="preserve">
-    <value>Jedinstveni identifikator koji je izmenio zapis.</value>
+    <value>Jedinstveni identifikator korisnika koji je izmenio zapis.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedOn" xml:space="preserve">
@@ -437,7 +437,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfigurationid" xml:space="preserve">
-    <value>Jedinstveni identifikator za instance entiteta</value>
+    <value>Jedinstveni identifikator instanci entiteta</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_panetoolconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_category" xml:space="preserve">
@@ -461,7 +461,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_toolConfigurationEntity' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>Jedinstveno ime za entitet.</value>
+    <value>Jedinstveni naziv za entitet.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationOrganizationId" xml:space="preserve">
@@ -593,7 +593,7 @@
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone za konvertovanje UTC vremena</value>
+    <value>Šifra vremenske zone za konverziju UTC vremena</value>
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationCreatedBy" xml:space="preserve">
@@ -689,7 +689,7 @@
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone za konvertovanje UTC vremena</value>
+    <value>Šifra vremenske zone za konverziju UTC vremena</value>
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationCreatedBy" xml:space="preserve">
@@ -797,7 +797,7 @@
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone za konvertovanje UTC vremena</value>
+    <value>Šifra vremenske zone za konverziju UTC vremena</value>
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode0" xml:space="preserve">

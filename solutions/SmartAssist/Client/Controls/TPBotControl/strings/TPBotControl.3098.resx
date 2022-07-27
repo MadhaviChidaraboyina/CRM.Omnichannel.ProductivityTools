@@ -130,7 +130,7 @@
     <comment>Empty message</comment>
   </data>
   <data name="FailureMessage" xml:space="preserve">
-    <value>Дошло је до грешке. Покушајте поново</value>
+    <value>Нешто није у реду. Покушајте поново</value>
     <comment>Failure Message</comment>
   </data>
   <data name="SuccessMessage" xml:space="preserve">

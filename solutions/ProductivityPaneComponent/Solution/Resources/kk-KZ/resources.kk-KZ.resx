@@ -137,7 +137,7 @@
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'lk_msdyn_paneconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_paneconfiguration_modifiedby" xml:space="preserve">
-    <value>Жазбаны өзгерткен пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен пайдаланушының бірегей идентификаторы.</value>
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'lk_msdyn_paneconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetabconfiguration_createdby" xml:space="preserve">
@@ -145,7 +145,7 @@
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'lk_msdyn_panetabconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetabconfiguration_modifiedby" xml:space="preserve">
-    <value>Жазбаны өзгерткен пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен пайдаланушының бірегей идентификаторы.</value>
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'lk_msdyn_panetabconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetoolconfiguration_createdby" xml:space="preserve">
@@ -153,7 +153,7 @@
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'lk_msdyn_panetoolconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetoolconfiguration_modifiedby" xml:space="preserve">
-    <value>Жазбаны өзгерткен пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен пайдаланушының бірегей идентификаторы.</value>
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'lk_msdyn_panetoolconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_paneconfig_msdyn_tabconfig" xml:space="preserve">
@@ -165,15 +165,15 @@
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'msdyn_msdyn_toolconfig_msdyn_tabconfig'</comment>
   </data>
   <data name="10:Description,organization_msdyn_paneconfiguration" xml:space="preserve">
-    <value>Ұйымға арналған бір мәнді идентификатор</value>
+    <value>Ұйымға арналған бір мәнді идентификатор.</value>
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'organization_msdyn_paneconfiguration'</comment>
   </data>
   <data name="10:Description,organization_msdyn_panetabconfiguration" xml:space="preserve">
-    <value>Ұйымға арналған бір мәнді идентификатор</value>
+    <value>Ұйымға арналған бір мәнді идентификатор.</value>
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'organization_msdyn_panetabconfiguration'</comment>
   </data>
   <data name="10:Description,organization_msdyn_panetoolconfiguration" xml:space="preserve">
-    <value>Ұйымға арналған бір мәнді идентификатор</value>
+    <value>Ұйымға арналған бір мәнді идентификатор.</value>
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'organization_msdyn_panetoolconfiguration'</comment>
   </data>
   <data name="15062:Description,msdyn_ProductivityPaneComponent" xml:space="preserve">
@@ -193,11 +193,11 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedOn" xml:space="preserve">
-    <value>Жазбаның жасалған күні мен уақыты.</value>
+    <value>Жазба жасалған күн мен уақыт.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны жасаған өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны жасаған өкілетті пайдаланушының бірегей идентификаторы.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationentitymsdyn_paneconfiguration" xml:space="preserve">
@@ -205,7 +205,7 @@
     <comment> 'msdyn_paneconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен пайдаланушының бірегей идентификаторы.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedOn" xml:space="preserve">
@@ -213,7 +213,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен өкілетті пайдаланушының бірегей идентификаторы.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_name" xml:space="preserve">
@@ -221,7 +221,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfigurationId" xml:space="preserve">
-    <value>Нысан даналарына арналған бір мәнді идентификатор</value>
+    <value>Нысан даналарына арналған бір мәнді идентификаторы</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_paneconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode" xml:space="preserve">
@@ -249,11 +249,11 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_panestate' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>Нысанның бірегей атауы.</value>
+    <value>Нысанның бір мәнді атауы.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationOrganizationId" xml:space="preserve">
-    <value>Ұйымға арналған бір мәнді идентификатор</value>
+    <value>Ұйымға арналған бір мәнді идентификатор.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationOverriddenCreatedOn" xml:space="preserve">
@@ -273,7 +273,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Жазба жасалған уақытта пайдаланылған уақыт белдеуінің коды.</value>
+    <value>Жазба жасалған уақытта пайдаланылатын уақыт белдеуінің коды.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedBy" xml:space="preserve">
@@ -281,11 +281,11 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedOn" xml:space="preserve">
-    <value>Жазбаның жасалған күні мен уақыты.</value>
+    <value>Жазба жасалған күн мен уақыт.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны жасаған өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны жасаған өкілетті пайдаланушының бірегей идентификаторы.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationentitymsdyn_panetabconfiguration" xml:space="preserve">
@@ -293,7 +293,7 @@
     <comment> 'msdyn_panetabconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен пайдаланушының бірегей идентификаторы.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedOn" xml:space="preserve">
@@ -301,7 +301,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен өкілетті пайдаланушының бірегей идентификаторы.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_iconpath" xml:space="preserve">
@@ -321,7 +321,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfigurationid" xml:space="preserve">
-    <value>Нысан даналарына арналған бір мәнді идентификатор</value>
+    <value>Нысан даналарына арналған бір мәнді идентификаторы</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_panetabconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfiguration_msdyn_isenabled" xml:space="preserve">
@@ -349,11 +349,11 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_tooltip' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>Нысанның бірегей атауы.</value>
+    <value>Нысанның бір мәнді атауы.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationOrganizationId" xml:space="preserve">
-    <value>Ұйымға арналған бір мәнді идентификатор</value>
+    <value>Ұйымға арналған бір мәнді идентификатор.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationOverriddenCreatedOn" xml:space="preserve">
@@ -373,7 +373,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Жазба жасалған уақытта пайдаланылған уақыт белдеуінің коды.</value>
+    <value>Жазба жасалған уақытта пайдаланылатын уақыт белдеуінің коды.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedBy" xml:space="preserve">
@@ -381,11 +381,11 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedOn" xml:space="preserve">
-    <value>Жазбаның жасалған күні мен уақыты.</value>
+    <value>Жазба жасалған күн мен уақыт.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны жасаған өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны жасаған өкілетті пайдаланушының бірегей идентификаторы.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationentitymsdyn_panetoolconfiguration" xml:space="preserve">
@@ -393,7 +393,7 @@
     <comment> 'msdyn_panetoolconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен пайдаланушының бірегей идентификаторы.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedOn" xml:space="preserve">
@@ -401,7 +401,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Жазбаны өзгерткен өкіл пайдаланушының бір мәнді идентификаторы.</value>
+    <value>Жазбаны өзгерткен өкілетті пайдаланушының бірегей идентификаторы.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_category" xml:space="preserve">
@@ -437,7 +437,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfigurationid" xml:space="preserve">
-    <value>Нысан даналарына арналған бір мәнді идентификатор</value>
+    <value>Нысан даналарына арналған бір мәнді идентификаторы</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_panetoolconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_category" xml:space="preserve">
@@ -461,11 +461,11 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_toolConfigurationEntity' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>Нысанның бірегей атауы.</value>
+    <value>Нысанның бір мәнді атауы.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationOrganizationId" xml:space="preserve">
-    <value>Ұйымға арналған бір мәнді идентификатор</value>
+    <value>Ұйымға арналған бір мәнді идентификатор.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationOverriddenCreatedOn" xml:space="preserve">
@@ -485,7 +485,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Жазба жасалған уақытта пайдаланылған уақыт белдеуінің коды.</value>
+    <value>Жазба жасалған уақытта пайдаланылатын уақыт белдеуінің коды.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Pane tab configuration{53119dc8-3b00-44cd-8656-dce8c75bbd35}" xml:space="preserve">
@@ -589,11 +589,11 @@
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_paneconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Уақыт белдеуі ережесінің нұсқа нөмірі</value>
+    <value>Уақыт белдеуі ережесі нұсқасының нөмірі</value>
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC түрлендірілген уақыт белдеуінің коды</value>
+    <value>UTC түрлендіру уақыт белдеуінің коды</value>
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationCreatedBy" xml:space="preserve">
@@ -685,11 +685,11 @@
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Уақыт белдеуі ережесінің нұсқа нөмірі</value>
+    <value>Уақыт белдеуі ережесі нұсқасының нөмірі</value>
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC түрлендірілген уақыт белдеуінің коды</value>
+    <value>UTC түрлендіру уақыт белдеуінің коды</value>
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationCreatedBy" xml:space="preserve">
@@ -793,11 +793,11 @@
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Уақыт белдеуі ережесінің нұсқа нөмірі</value>
+    <value>Уақыт белдеуі ережесі нұсқасының нөмірі</value>
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC түрлендірілген уақыт белдеуінің коды</value>
+    <value>UTC түрлендіру уақыт белдеуінің коды</value>
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode0" xml:space="preserve">

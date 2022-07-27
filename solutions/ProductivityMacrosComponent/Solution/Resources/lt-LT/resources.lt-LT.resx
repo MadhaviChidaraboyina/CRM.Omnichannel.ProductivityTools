@@ -161,7 +161,7 @@
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'lk_msdyn_productivityactioninputparameter_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactioninputparameter_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'lk_msdyn_productivityactioninputparameter_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactionoutputparameter_createdby" xml:space="preserve">
@@ -169,7 +169,7 @@
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'lk_msdyn_productivityactionoutputparameter_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactionoutputparameter_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'lk_msdyn_productivityactionoutputparameter_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroactiontemplate_createdby" xml:space="preserve">
@@ -177,7 +177,7 @@
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'lk_msdyn_productivitymacroactiontemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroactiontemplate_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'lk_msdyn_productivitymacroactiontemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroconnector_createdby" xml:space="preserve">
@@ -185,7 +185,7 @@
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'lk_msdyn_productivitymacroconnector_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroconnector_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'lk_msdyn_productivitymacroconnector_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacrosolutionconfiguration_createdby" xml:space="preserve">
@@ -193,7 +193,7 @@
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'lk_msdyn_productivitymacrosolutionconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacrosolutionconfiguration_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'lk_msdyn_productivitymacrosolutionconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityparameterdefinition_createdby" xml:space="preserve">
@@ -201,7 +201,7 @@
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'lk_msdyn_productivityparameterdefinition_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityparameterdefinition_modifiedby" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'lk_msdyn_productivityparameterdefinition_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_prod_macroactiontemplate_msdyn_actioninput" xml:space="preserve">
@@ -397,7 +397,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedBy" xml:space="preserve">
-    <value>Vartotojo, kuris modifikavo įrašą, unikalusis identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedOn" xml:space="preserve">
@@ -489,7 +489,7 @@
     <comment> 'msdyn_productivityactioninputparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOn" xml:space="preserve">
@@ -589,7 +589,7 @@
     <comment> 'msdyn_productivityactionoutputparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOn" xml:space="preserve">
@@ -677,7 +677,7 @@
     <comment> 'msdyn_productivitymacroactiontemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOn" xml:space="preserve">
@@ -813,7 +813,7 @@
     <comment> 'msdyn_productivitymacroconnector' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOn" xml:space="preserve">
@@ -941,7 +941,7 @@
     <comment> 'msdyn_productivitymacrosolutionconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOn" xml:space="preserve">
@@ -1065,7 +1065,7 @@
     <comment> 'msdyn_productivityparameterdefinition' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedBy" xml:space="preserve">
-    <value>Unikalusis vartotojo, kuris modifikavo įrašą, identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOn" xml:space="preserve">

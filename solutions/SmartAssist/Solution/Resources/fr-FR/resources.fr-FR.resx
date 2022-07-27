@@ -181,7 +181,7 @@
     <comment>'Adaptive Card Configuration' : Description for systemform in Entity FormXml ID: '{67f74c42-2118-4ff3-9713-0f6d518d24b8}'</comment>
   </data>
   <data name="1:Description,Adaptive Card Configuration{88a15309-45b3-49b3-86ae-2434136ab066}" xml:space="preserve">
-    <value>Formulaire de carte de cette entité.</value>
+    <value>Formulaire de carte pour cette entité.</value>
     <comment>'Adaptive Card Configuration' : Description for systemform in Entity FormXml ID: '{88a15309-45b3-49b3-86ae-2434136ab066}'</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationCreatedBy" xml:space="preserve">
@@ -385,7 +385,7 @@
     <comment>'Smartassist configuration' : Description for systemform in Entity FormXml ID: '{0beeec6f-1ad0-4d4e-bf62-d4875b24764c}'</comment>
   </data>
   <data name="1:Description,Smartassist configuration{53db0d63-67b8-49a5-8c80-677cd77bed47}" xml:space="preserve">
-    <value>Formulaire de carte de cette entité.</value>
+    <value>Formulaire de carte pour cette entité.</value>
     <comment>'Smartassist configuration' : Description for systemform in Entity FormXml ID: '{53db0d63-67b8-49a5-8c80-677cd77bed47}'</comment>
   </data>
   <data name="1:Description,Smartassist configuration{bb1d8168-d3b5-ea11-a81c-000d3ac629fa}" xml:space="preserve">

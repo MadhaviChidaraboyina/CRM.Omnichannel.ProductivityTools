@@ -185,19 +185,19 @@
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'owner_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityagentscript" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'team_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'team_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityagentscript" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>msdyn_productivityagentscript Description for EntityRelationship 'user_msdyn_productivityagentscript'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityagentscriptstep" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>msdyn_productivityagentscriptstep Description for EntityRelationship 'user_msdyn_productivityagentscriptstep'</comment>
   </data>
   <data name="15062:Description,microsoftdynamicsmsdyn19236" xml:space="preserve">
@@ -277,7 +277,7 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_language' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_name" xml:space="preserve">
-    <value>Ime prilagođenog entiteta.</value>
+    <value>Naziv prilagođenog entiteta.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_productivityagentscriptId" xml:space="preserve">
@@ -293,7 +293,7 @@
     <comment>'msdyn_productivityagentscript' : Description for OptionSet 'msdyn_productivityagentscript_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptmsdyn_UniqueName" xml:space="preserve">
-    <value>Jedinstveno ime za entitet.</value>
+    <value>Jedinstveni naziv za entitet.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOverriddenCreatedOn" xml:space="preserve">
@@ -309,11 +309,11 @@
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningTeam" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptOwningUser" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivityagentscript' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstatecode" xml:space="preserve">
@@ -369,7 +369,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_macroactionid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_name" xml:space="preserve">
-    <value>Ime prilagođenog entiteta.</value>
+    <value>Naziv prilagođenog entiteta.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_order" xml:space="preserve">
@@ -401,7 +401,7 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_textinstruction' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepmsdyn_UniqueName" xml:space="preserve">
-    <value>Jedinstveno ime za entitet.</value>
+    <value>Jedinstveni naziv za entitet.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOverriddenCreatedOn" xml:space="preserve">
@@ -417,11 +417,11 @@
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningTeam" xml:space="preserve">
-    <value>Jedinstveni identifikator za tim koji je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator tima koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepOwningUser" xml:space="preserve">
-    <value>Jedinstveni identifikator za korisnika koja je vlasnik zapisa.</value>
+    <value>Jedinstveni identifikator korisnika koji je vlasnik zapisa.</value>
     <comment>'msdyn_productivityagentscriptstep' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityagentscriptstepstatecode" xml:space="preserve">
@@ -661,7 +661,7 @@
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptstepUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone za konvertovanje UTC vremena</value>
+    <value>Šifra vremenske zone za konverziju UTC vremena</value>
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptTimeZoneRuleVersionNumber" xml:space="preserve">
@@ -669,7 +669,7 @@
     <comment>'msdyn_productivityagentscript' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Šifra vremenske zone za konvertovanje UTC vremena</value>
+    <value>Šifra vremenske zone za konverziju UTC vremena</value>
     <comment>'msdyn_productivityagentscript' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_sessiontemplatemsdyn_enablebuildexpression" xml:space="preserve">

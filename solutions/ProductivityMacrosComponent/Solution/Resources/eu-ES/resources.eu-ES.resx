@@ -133,27 +133,27 @@
 </value>
   </metadata>
   <data name="10:Description,business_unit_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'business_unit_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'business_unit_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'business_unit_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'business_unit_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'business_unit_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'business_unit_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactioninputparameter_createdby" xml:space="preserve">
@@ -161,7 +161,7 @@
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'lk_msdyn_productivityactioninputparameter_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactioninputparameter_modifiedby" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'lk_msdyn_productivityactioninputparameter_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactionoutputparameter_createdby" xml:space="preserve">
@@ -169,7 +169,7 @@
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'lk_msdyn_productivityactionoutputparameter_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactionoutputparameter_modifiedby" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'lk_msdyn_productivityactionoutputparameter_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroactiontemplate_createdby" xml:space="preserve">
@@ -177,7 +177,7 @@
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'lk_msdyn_productivitymacroactiontemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroactiontemplate_modifiedby" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'lk_msdyn_productivitymacroactiontemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroconnector_createdby" xml:space="preserve">
@@ -185,7 +185,7 @@
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'lk_msdyn_productivitymacroconnector_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroconnector_modifiedby" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'lk_msdyn_productivitymacroconnector_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacrosolutionconfiguration_createdby" xml:space="preserve">
@@ -193,7 +193,7 @@
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'lk_msdyn_productivitymacrosolutionconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacrosolutionconfiguration_modifiedby" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'lk_msdyn_productivitymacrosolutionconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityparameterdefinition_createdby" xml:space="preserve">
@@ -201,7 +201,7 @@
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'lk_msdyn_productivityparameterdefinition_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityparameterdefinition_modifiedby" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'lk_msdyn_productivityparameterdefinition_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_prod_macroactiontemplate_msdyn_actioninput" xml:space="preserve">
@@ -245,51 +245,51 @@
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'owner_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'team_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'team_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'team_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'team_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'team_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'team_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'user_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'user_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'user_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'user_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'user_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'user_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
@@ -377,15 +377,15 @@
     <comment>'Macro Solution Configuration' : Description for SavedQuery on Entity QueryId: '{757e9f3c-a699-ea11-a81c-000d3af70e62}'</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionCreatedBy" xml:space="preserve">
-    <value>Erregistroa sortu duen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionCreatedOn" xml:space="preserve">
-    <value>Erregistroaren sorrera-data eta -ordua.</value>
+    <value>Erregistroa sortu zeneko data eta ordua.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionCreatedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa sortu duen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionentitymsdyn_macrosession" xml:space="preserve">
@@ -393,7 +393,7 @@
     <comment> 'msdyn_macrosession' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionImportSequenceNumber" xml:space="preserve">
-    <value>Erregistroa sortzeko erabili zen inportazioaren sekuentzia-zenbakia.</value>
+    <value>Erregistro hau sortu zuen inportazioaren sekuentzia-zenbakia.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedBy" xml:space="preserve">
@@ -401,11 +401,11 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedOn" xml:space="preserve">
-    <value>Erregistroa aldatu deneko data eta ordua.</value>
+    <value>Erregistroa aldatu zeneko data eta ordua.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa aldatu duen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionmsdyn_executioncontext" xml:space="preserve">
@@ -417,7 +417,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_macroname' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionmsdyn_macrosessionid" xml:space="preserve">
-    <value>Entitate-instantziaren identifikatzaile esklusiboa</value>
+    <value>Entitate-instantzien identifikatzaile esklusiboa.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_macrosessionid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionmsdyn_macrosession_statecode" xml:space="preserve">
@@ -437,7 +437,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_status' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOverriddenCreatedOn" xml:space="preserve">
-    <value>Erregistroaren migrazio-data eta -ordua.</value>
+    <value>Erregistroa migratu zeneko data eta ordua.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwnerId" xml:space="preserve">
@@ -445,15 +445,15 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningBusinessUnit" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitatearen identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningTeam" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningUser" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionstatecode" xml:space="preserve">
@@ -465,7 +465,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Barnean erabiltzeko soilik.</value>
+    <value>Barne-erabilerarako bakarrik.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionUTCConversionTimeZoneCode" xml:space="preserve">
@@ -477,11 +477,11 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOn" xml:space="preserve">
-    <value>Erregistroa sortu den data eta ordua.</value>
+    <value>Erregistroa sortu zeneko data eta ordua.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa sortu zuen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterentitymsdyn_productivityactioninputparameter" xml:space="preserve">
@@ -489,15 +489,15 @@
     <comment> 'msdyn_productivityactioninputparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedBy" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOn" xml:space="preserve">
-    <value>Erregistroaren aldatze-data eta -ordua.</value>
+    <value>Erregistroa aldatu zeneko data eta ordua.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa aldatu duen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_actiontemplateinputparameterid" xml:space="preserve">
@@ -513,7 +513,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameterId" xml:space="preserve">
-    <value>Entitate-instantziaren identifikatzaile esklusiboa</value>
+    <value>Entitate-instantzien identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_productivityactioninputparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_msdyn_parametertype" xml:space="preserve">
@@ -537,7 +537,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_visibility' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOverriddenCreatedOn" xml:space="preserve">
-    <value>Erregistroa migratu den data eta ordua.</value>
+    <value>Erregistroa migratu zeneko data eta ordua.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwnerId" xml:space="preserve">
@@ -545,15 +545,15 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningTeam" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningUser" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterstatecode" xml:space="preserve">
@@ -565,7 +565,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Barne-erabilerarako soilik.</value>
+    <value>Barne-erabilerarako bakarrik.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
@@ -577,11 +577,11 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOn" xml:space="preserve">
-    <value>Erregistroa sortu den data eta ordua.</value>
+    <value>Erregistroa sortu zeneko data eta ordua.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa sortu zuen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterentitymsdyn_productivityactionoutputparameter" xml:space="preserve">
@@ -589,15 +589,15 @@
     <comment> 'msdyn_productivityactionoutputparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedBy" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOn" xml:space="preserve">
-    <value>Erregistroaren aldatze-data eta -ordua.</value>
+    <value>Erregistroa aldatu zeneko data eta ordua.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa aldatu duen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_actiontemplateoutputparameterid" xml:space="preserve">
@@ -609,7 +609,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameterId" xml:space="preserve">
-    <value>Entitate-instantziaren identifikatzaile esklusiboa</value>
+    <value>Entitate-instantzien identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_productivityactionoutputparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameter_statecode" xml:space="preserve">
@@ -625,7 +625,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOverriddenCreatedOn" xml:space="preserve">
-    <value>Erregistroa migratu den data eta ordua.</value>
+    <value>Erregistroa migratu zeneko data eta ordua.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwnerId" xml:space="preserve">
@@ -633,15 +633,15 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningTeam" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningUser" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterstatecode" xml:space="preserve">
@@ -653,7 +653,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Barne-erabilerarako soilik.</value>
+    <value>Barne-erabilerarako bakarrik.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
@@ -665,11 +665,11 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOn" xml:space="preserve">
-    <value>Erregistroa sortu den data eta ordua.</value>
+    <value>Erregistroa sortu zeneko data eta ordua.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa sortu zuen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateentitymsdyn_productivitymacroactiontemplate" xml:space="preserve">
@@ -677,15 +677,15 @@
     <comment> 'msdyn_productivitymacroactiontemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedBy" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOn" xml:space="preserve">
-    <value>Erregistroaren aldatze-data eta -ordua.</value>
+    <value>Erregistroa aldatu zeneko data eta ordua.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa aldatu duen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_actionDescription" xml:space="preserve">
@@ -725,7 +725,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_outputparameters' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplateId" xml:space="preserve">
-    <value>Entitate-instantziaren identifikatzaile esklusiboa</value>
+    <value>Entitate-instantzien identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_productivitymacroactiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplate_statecode" xml:space="preserve">
@@ -761,7 +761,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_visibility' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOverriddenCreatedOn" xml:space="preserve">
-    <value>Erregistroa migratu den data eta ordua.</value>
+    <value>Erregistroa migratu zeneko data eta ordua.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwnerId" xml:space="preserve">
@@ -769,15 +769,15 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningTeam" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningUser" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatestatecode" xml:space="preserve">
@@ -789,7 +789,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Barne-erabilerarako soilik.</value>
+    <value>Barne-erabilerarako bakarrik.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
@@ -801,11 +801,11 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOn" xml:space="preserve">
-    <value>Erregistroa sortu den data eta ordua.</value>
+    <value>Erregistroa sortu zeneko data eta ordua.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa sortu zuen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorentitymsdyn_productivitymacroconnector" xml:space="preserve">
@@ -813,15 +813,15 @@
     <comment> 'msdyn_productivitymacroconnector' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedBy" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOn" xml:space="preserve">
-    <value>Erregistroaren aldatze-data eta -ordua.</value>
+    <value>Erregistroa aldatu zeneko data eta ordua.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa aldatu duen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_brandcolor" xml:space="preserve">
@@ -861,7 +861,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_prefix' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_productivitymacroconnectorId" xml:space="preserve">
-    <value>Entitate-instantziaren identifikatzaile esklusiboa</value>
+    <value>Entitate-instantzien identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_productivitymacroconnectorId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_productivitymacroconnector_statecode" xml:space="preserve">
@@ -889,7 +889,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_webresourcename' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOverriddenCreatedOn" xml:space="preserve">
-    <value>Erregistroa migratu den data eta ordua.</value>
+    <value>Erregistroa migratu zeneko data eta ordua.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwnerId" xml:space="preserve">
@@ -897,15 +897,15 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningBusinessUnit" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningTeam" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningUser" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorstatecode" xml:space="preserve">
@@ -917,7 +917,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Barne-erabilerarako soilik.</value>
+    <value>Barne-erabilerarako bakarrik.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
@@ -929,11 +929,11 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOn" xml:space="preserve">
-    <value>Erregistroa sortu den data eta ordua.</value>
+    <value>Erregistroa sortu zeneko data eta ordua.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa sortu zuen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationentitymsdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
@@ -941,15 +941,15 @@
     <comment> 'msdyn_productivitymacrosolutionconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedBy" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOn" xml:space="preserve">
-    <value>Erregistroaren aldatze-data eta -ordua.</value>
+    <value>Erregistroa aldatu zeneko data eta ordua.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa aldatu duen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_designerfallbackurl" xml:space="preserve">
@@ -985,7 +985,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfigurationId" xml:space="preserve">
-    <value>Entitate-instantziaren identifikatzaile esklusiboa</value>
+    <value>Entitate-instantzien identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_productivitymacrosolutionconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfiguration_statecode" xml:space="preserve">
@@ -1013,7 +1013,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_uservoicetext' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>Erregistroa migratu den data eta ordua.</value>
+    <value>Erregistroa migratu zeneko data eta ordua.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwnerId" xml:space="preserve">
@@ -1021,15 +1021,15 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningBusinessUnit" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningTeam" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningUser" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationstatecode" xml:space="preserve">
@@ -1041,7 +1041,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Barne-erabilerarako soilik.</value>
+    <value>Barne-erabilerarako bakarrik.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1053,11 +1053,11 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOn" xml:space="preserve">
-    <value>Erregistroa sortu den data eta ordua.</value>
+    <value>Erregistroa sortu zeneko data eta ordua.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa sortu zuen erabiltzaile-ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa sortu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionentitymsdyn_productivityparameterdefinition" xml:space="preserve">
@@ -1065,15 +1065,15 @@
     <comment> 'msdyn_productivityparameterdefinition' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedBy" xml:space="preserve">
-    <value>Erregistroa aldatu zuen erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu duen erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOn" xml:space="preserve">
-    <value>Erregistroaren aldatze-data eta -ordua.</value>
+    <value>Erregistroa aldatu zeneko data eta ordua.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
-    <value>Erregistroa aldatu duen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
+    <value>Erregistroa aldatu zuen erabiltzaile ordezkariaren identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_defaultvalue" xml:space="preserve">
@@ -1101,7 +1101,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinitionId" xml:space="preserve">
-    <value>Entitate-instantziaren identifikatzaile esklusiboa</value>
+    <value>Entitate-instantzien identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_productivityparameterdefinitionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinition_statecode" xml:space="preserve">
@@ -1117,7 +1117,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOverriddenCreatedOn" xml:space="preserve">
-    <value>Erregistroa migratu den data eta ordua.</value>
+    <value>Erregistroa migratu zeneko data eta ordua.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwnerId" xml:space="preserve">
@@ -1125,15 +1125,15 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningBusinessUnit" xml:space="preserve">
-    <value>Erregistroaren jabe den negozio-unitaterako identifikatzaile esklusiboa</value>
+    <value>Erregistroaren jabea den negozio-unitatearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningTeam" xml:space="preserve">
-    <value>Erregistroaren jabe den taldearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den taldearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningUser" xml:space="preserve">
-    <value>Erregistroaren jabe den erabiltzailearen identifikatzaile esklusiboa.</value>
+    <value>Erregistroaren jabea den erabiltzailearen identifikatzaile esklusiboa.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionstatecode" xml:space="preserve">
@@ -1145,7 +1145,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Barne-erabilerarako soilik.</value>
+    <value>Barne-erabilerarako bakarrik.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1269,7 +1269,7 @@
     <comment>'msdyn_macrosession' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosessionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Ordu unibertsal koordinatu (UTC) bihurtzeko ordu-zonaren kodea</value>
+    <value>UTC bihurtzeko ordu-zonaren kodea</value>
     <comment>'msdyn_macrosession' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparameterCreatedBy" xml:space="preserve">
@@ -3285,7 +3285,7 @@
     <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.LabelText'</comment>
   </data>
   <data name="1:Title,Processworkflow.HomePageGrid.New.Button.ToolTipDesc" xml:space="preserve">
-    <value>Sortu erregistroa</value>
+    <value>Sortu erregistro bat</value>
     <comment>'Process' : Title for LocLabel on Entity ID: 'workflow.HomePageGrid.New.Button.ToolTipDesc'</comment>
   </data>
   <data name="1:Title,Processworkflow.HomePageGrid.New.Button.ToolTipTitle" xml:space="preserve">

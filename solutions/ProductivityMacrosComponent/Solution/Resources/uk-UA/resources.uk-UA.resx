@@ -133,27 +133,27 @@
 </value>
   </metadata>
   <data name="10:Description,business_unit_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'business_unit_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'business_unit_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'business_unit_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'business_unit_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'business_unit_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'business_unit_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactioninputparameter_createdby" xml:space="preserve">
@@ -245,51 +245,51 @@
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'owner_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <value>Унікальний ідентифікатор робочої групи, яка відповідає за запис.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'team_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <value>Унікальний ідентифікатор робочої групи, яка відповідає за запис.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'team_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <value>Унікальний ідентифікатор робочої групи, яка відповідає за запис.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'team_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <value>Унікальний ідентифікатор робочої групи, яка відповідає за запис.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'team_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <value>Унікальний ідентифікатор робочої групи, яка відповідає за запис.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'team_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <value>Унікальний ідентифікатор робочої групи, яка відповідає за запис.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'team_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор користувача, який відповідає за запис.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'user_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор користувача, який відповідає за запис.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'user_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор користувача, який відповідає за запис.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'user_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор користувача, який відповідає за запис.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'user_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор користувача, який відповідає за запис.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'user_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор користувача, який відповідає за запис.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'user_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
@@ -445,15 +445,15 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningBusinessUnit" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис.</value>
+    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningTeam" xml:space="preserve">
-    <value>Унікальний ідентифікатор для робочої групи, яка відповідає за запис.</value>
+    <value>Унікальний ідентифікатор робочої групи, яка відповідає за запис.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningUser" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, який відповідає за запис.</value>
+    <value>Унікальний ідентифікатор користувача, який відповідає за запис.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionstatecode" xml:space="preserve">
@@ -545,15 +545,15 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningTeam" xml:space="preserve">
-    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <value>Унікальний ідентифікатор робочої групи, яка відповідає за запис.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningUser" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор користувача, який відповідає за запис.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterstatecode" xml:space="preserve">
@@ -565,7 +565,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Тільки для внутрішнього використання.</value>
+    <value>Лише для внутрішнього використання.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
@@ -633,15 +633,15 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningTeam" xml:space="preserve">
-    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <value>Унікальний ідентифікатор робочої групи, яка відповідає за запис.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningUser" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор користувача, який відповідає за запис.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterstatecode" xml:space="preserve">
@@ -653,7 +653,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Тільки для внутрішнього використання.</value>
+    <value>Лише для внутрішнього використання.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
@@ -769,15 +769,15 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningTeam" xml:space="preserve">
-    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <value>Унікальний ідентифікатор робочої групи, яка відповідає за запис.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningUser" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор користувача, який відповідає за запис.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatestatecode" xml:space="preserve">
@@ -789,7 +789,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Тільки для внутрішнього використання.</value>
+    <value>Лише для внутрішнього використання.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
@@ -897,15 +897,15 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningBusinessUnit" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningTeam" xml:space="preserve">
-    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <value>Унікальний ідентифікатор робочої групи, яка відповідає за запис.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningUser" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор користувача, який відповідає за запис.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorstatecode" xml:space="preserve">
@@ -917,7 +917,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Тільки для внутрішнього використання.</value>
+    <value>Лише для внутрішнього використання.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1021,15 +1021,15 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningBusinessUnit" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningTeam" xml:space="preserve">
-    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <value>Унікальний ідентифікатор робочої групи, яка відповідає за запис.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningUser" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор користувача, який відповідає за запис.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationstatecode" xml:space="preserve">
@@ -1041,7 +1041,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Тільки для внутрішнього використання.</value>
+    <value>Лише для внутрішнього використання.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1125,15 +1125,15 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningBusinessUnit" xml:space="preserve">
-    <value>Унікальний ідентифікатор підрозділу, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор підрозділу, який відповідає за запис</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningTeam" xml:space="preserve">
-    <value>Унікальний ідентифікатор робочої групи, відповідальної за запис.</value>
+    <value>Унікальний ідентифікатор робочої групи, яка відповідає за запис.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningUser" xml:space="preserve">
-    <value>Унікальний ідентифікатор для користувача, відповідального за запис.</value>
+    <value>Унікальний ідентифікатор користувача, який відповідає за запис.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionstatecode" xml:space="preserve">
@@ -1145,7 +1145,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Тільки для внутрішнього використання.</value>
+    <value>Лише для внутрішнього використання.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1269,7 +1269,7 @@
     <comment>'msdyn_macrosession' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosessionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Код часового поясу у форматі UTC</value>
+    <value>Код вихідного часового поясу до перетворення на формат UTC</value>
     <comment>'msdyn_macrosession' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparameterCreatedBy" xml:space="preserve">
@@ -1365,7 +1365,7 @@
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Код часового поясу у форматі UTC</value>
+    <value>Код вихідного часового поясу до перетворення на формат UTC</value>
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
@@ -1449,7 +1449,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Код часового поясу у форматі UTC</value>
+    <value>Код вихідного часового поясу до перетворення на формат UTC</value>
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
@@ -1581,7 +1581,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Код часового поясу у форматі UTC</value>
+    <value>Код вихідного часового поясу до перетворення на формат UTC</value>
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
@@ -1705,7 +1705,7 @@
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Код часового поясу у форматі UTC</value>
+    <value>Код вихідного часового поясу до перетворення на формат UTC</value>
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
@@ -1825,7 +1825,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Код часового поясу у форматі UTC</value>
+    <value>Код вихідного часового поясу до перетворення на формат UTC</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1925,7 +1925,7 @@
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Код часового поясу у форматі UTC</value>
+    <value>Код вихідного часового поясу до перетворення на формат UTC</value>
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,WorkflowCategory" xml:space="preserve">

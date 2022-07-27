@@ -32,14 +32,14 @@ if exist "%xRM_TMPPATH%" rd /S /Q "%xRM_TMPPATH%
 
 REM Set language options
 REM if Arabic
-REM - xRM_LCID=1025 
+REM - xRM_LCID=1025
 REM - xRM_CULTURE_NAME=ar-SA
 
 set xRM_LCID=%1
 
 for /f "usebackq  eol=! tokens=1,2 delims= " %%i in (%~dp0xRM_language.txt) do (
     if "%%i"=="%xRM_LCID%" (
-       set xRM_CULTURE_NAME=%%j
+        set xRM_CULTURE_NAME=%%j
     )
 )
 
@@ -93,7 +93,7 @@ for /f "usebackq  eol=! tokens=1,2 delims=," %%i in (%~dp0xRM_filelist.txt) do (
             set xRM_SRC=!xRM_TRG:json=xml!
             REM delete data json file generated in previous run
             if exist "%xRM_SRCPATH%\!xRM_TRG!" del "%xRM_SRCPATH%\!xRM_TRG!" /f /q
-            call powershell -noprofile %~dp0DataXml2json.ps1 -mode generate -sourceDataxmlPath %xRM_SRCPATH%\!xRM_SRC! -referenceFilePath %~dp0%%~ni_rules.xml -jsonFilePath %xRM_SRCPATH%\!xRM_TRG!
+            call powershell -noprofile %~dp0DataXml2json.ps1 -mode generate -sourceDataxmlPath %xRM_SRCPATH%\!xRM_SRC! -referenceFilePath %~dp0%%~ni_rules.xml -jsonFilePath %xRM_SRCPATH%\!xRM_TRG! || goto :Error
         )
     )
     call :Get_RelativePath "%xRM_SRCPATH%\%%i" %xRM_charcount% "%%j"
@@ -104,23 +104,24 @@ if /i "All"=="%xRM_LCID%" (
     for /f "tokens=1,2" %%i in (%~dp0xRM_language.txt) do (
         set xRM_LCID=%%i
         set xRM_CULTURE_NAME=%%j
-        call :RunlsBuild
+        call :RunlsBuild || goto :Error
         set xRM_BASEDONE=true
     )
-    call :lsBuildGenerate lsbuild.response
-    call :RunCmd genXML.cmd
-    call :RunCmd copytarget.cmd
+    call :lsBuildGenerate lsbuild.response || goto :Error
+    call :RunCmd genXML.cmd || goto :Error
+    call :RunCmd copytarget.cmd || goto :Error
 ) else (
     for /f "tokens=1,2" %%i in (%~dp0xRM_language.txt) do (
         if "%%i" == "%xRM_LCID%" (
-            call :RunlsBuild
+            call :RunlsBuild || goto :Error
         )
     )
-    call :lsBuildGenerate lsbuild.response
-    call :RunCmd genXML.cmd
-    call :RunCmd copytarget.cmd
+    call :lsBuildGenerate lsbuild.response || goto :Error
+    call :RunCmd genXML.cmd || goto :Error
+    call :RunCmd copytarget.cmd || goto :Error
 )
-exit /b
+echo '%~nx0 %*' completed successfully.
+exit /b 0
 
 REM 
 REM Process all the files under target language
@@ -178,9 +179,9 @@ if Exist "%xRM_TMPPATH%\target.txt" (
                 if !xRM_SOURCE_BASEPATH:~-1!==\ (set xRM_SOURCE_BASEPATH=!xRM_SOURCE_BASEPATH:~0,-1!)
 
                 REM Genereate base lcl
-                echo *** call %PKG_LSBUILD%\lsbuild parse /p !xRM_PARSER! /o "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /s "%xRM_LOCPATH%\Base\%xRM_PNAME%\LSS\lss.lss" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE!
+                echo *** call %PKG_LSBUILD%\lsbuild parse /p !xRM_PARSER! /o "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /s "%xRM_LOCPATH%\Base\%xRM_PNAME%\LSS\lss.lss" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE! || goto :Error
                 echo.
-                call %PKG_LSBUILD%\lsbuild parse /p !xRM_PARSER! /o "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /s "%xRM_LOCPATH%\Base\%xRM_PNAME%\LSS\lss.lss" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE!
+                call %PKG_LSBUILD%\lsbuild parse /p !xRM_PARSER! /o "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /s "%xRM_LOCPATH%\Base\%xRM_PNAME%\LSS\lss.lss" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE! || goto :Error
 
                 REM Genereate target lcl
                 for /f "tokens=1,2" %%i in (%~dp0xRM_language.txt) do (
@@ -196,8 +197,8 @@ if Exist "%xRM_TMPPATH%\target.txt" (
                     REM 2. under 'Localize\Extern\[lcid]' to copy to core team repo
                     REM After the change to stop checking in lcl files to core team repo, not all languages lcl files are available since 'Localize\Extern\ folder deleted
                     REM and we only copy Base and one language ('1031') while running 'xx_makelang.cmd 1031 /handoff' so use 'Base\%xRM_PNAME%\LSS\lss.lss' to generate language lcl files for new files
-                    call %PKG_LSBUILD%\lsbuild generate /w 0 /d !LCID! /o %xRM_TMPPATH%\Output\!xRM_FILE! /s "%xRM_LOCPATH%\Base\%xRM_PNAME%\LSS\lss.lss" /ol "%xRM_LOCPATH%\!LCID!\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE!
-                    call %PKG_LSBUILD%\lsbuild generate /w 0 /d !LL-CC! /o %xRM_TMPPATH%\Output\!xRM_FILE! /s "%xRM_LOCPATH%\Base\%xRM_PNAME%\LSS\lss.lss" /ol "%xRM_TMPPATH%\!LL-CC!\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE!
+                    call %PKG_LSBUILD%\lsbuild generate /w 0 /d !LCID! /o %xRM_TMPPATH%\Output\!xRM_FILE! /s "%xRM_LOCPATH%\Base\%xRM_PNAME%\LSS\lss.lss" /ol "%xRM_LOCPATH%\!LCID!\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE! || goto :Error
+                    call %PKG_LSBUILD%\lsbuild generate /w 0 /d !LL-CC! /o %xRM_TMPPATH%\Output\!xRM_FILE! /s "%xRM_LOCPATH%\Base\%xRM_PNAME%\LSS\lss.lss" /ol "%xRM_TMPPATH%\!LL-CC!\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" /basepath "!xRM_SOURCE_BASEPATH!" !xRM_FILE! || goto :Error
                 )
             )
         )
@@ -208,9 +209,12 @@ if Exist "%xRM_TMPPATH%\target.txt" (
                 echo "Copy the source file (%%~do%%~po!xRM_FILE!) to Master folder (%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!)"
                 REM if path includes 'CmtDataFiles\data_1033', use '/MOV' to delete data json file after copying since no need to check it in to core team repo
                 if not "!xRM_SOURCE:CmtDataFiles\data_1033=!"=="!xRM_SOURCE!" (
-                    call robocopy "%%~do%%~po\" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\" !xRM_FILE! /MOV
+                    REM Robocopy's exit code is a bitmap. In the case of copying a single file, a value of 8 or more indicates a failure.
+                    REM note: when "if ERRORLEVEL 8" test succeeds, then the error level is 8 or more
+                    REM see https://docs.microsoft.com/en-us/archive/blogs/deploymentguys/robocopy-exit-codes
+                    call robocopy "%%~do%%~po\" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\" !xRM_FILE! /MOV & if ERRORLEVEL 8 goto :Error
                 ) else (
-                    call robocopy "%%~do%%~po\" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\" !xRM_FILE!
+                    call robocopy "%%~do%%~po\" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\" !xRM_FILE! & if ERRORLEVEL 8 goto :Error
                 )
             )
 
@@ -284,58 +288,78 @@ if Exist "%xRM_TMPPATH%\target.txt" (
             )
             if NOT DEFINED xRM_EXTRACT (
                 echo generate %xRM_PL_FULL% /novalidate /ol "%xRM_TMPPATH%\%xRM_LCID%\!xRM_COMPNAME!\LCL\target\!xRM_TARGETFILE!.lcl" /d %xRM_LCID% /s "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\LSS\lss.lss" /o "%xRM_TMPPATH%\%xRM_LCID%\!xRM_PATH!\!xRM_FILE!" /t "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" "%xRM_TMPPATH%\Master\%xRM_PNAME%\!xRM_COMPNAME!\!xRM_FILE!">>%xRM_TMPPATH%\lsbuild.response
-                if NOT EXIST %xRM_SRCPATH%!xRM_PATH! md %xRM_SRCPATH%!xRM_PATH!
 
+                REM Generate copy command
+                REM
+                REM append ' || set failed=1' or ' & if ERRORLEVEL 8 set failed=1' at the end of each line in 'genXML.cmd' and 'copytarget.cmd' to set 'failed=1' if any execution fails while executing all lines
+                REM see ':RunCmd' where 'setlocal' at the first line and 'exit /b %failed%' at the last line are added to return the error to the caller.
+                REM
                 REM if path includes 'CmtDataFiles\data_1033' and .json, construct PowerShell command
                 REM to run DataXml2json.ps1 to generate data xml from data json which has translation, then append it to genXML.cmd
+                if NOT EXIST %xRM_SRCPATH%!xRM_PATH! md %xRM_SRCPATH%!xRM_PATH!
                 if not "!xRM_SOURCE:CmtDataFiles\data_1033=!"=="!xRM_SOURCE!" (
                     if /i "%%~xo"==".json" (
                         set xRM_SOURCE=!xRM_SOURCE:json=xml!
-                        echo call powershell -noprofile %~dp0DataXml2json.ps1 -mode importjson -sourceDataxmlPath "!xRM_SOURCE!" -referenceFilePath %~dp0%%~no_rules.xml -jsonFilePath "%xRM_TMPPATH%\%xRM_LCID%\!xRM_PATH!\!xRM_FILE!" -outputDataXmlPath !xRM_TARGET!>>%xRM_TMPPATH%\genXML.cmd
+                        echo call powershell -noprofile %~dp0DataXml2json.ps1 -mode importjson -sourceDataxmlPath "!xRM_SOURCE!" -referenceFilePath %~dp0%%~no_rules.xml -jsonFilePath "%xRM_TMPPATH%\%xRM_LCID%\!xRM_PATH!\!xRM_FILE!" -outputDataXmlPath !xRM_TARGET! ^|^| set failed=^1>>%xRM_TMPPATH%\genXML.cmd
                     )
                 ) else ( 
-                    REM Generate copy command
-                    echo call copy "%xRM_TMPPATH%\%xRM_LCID%!xRM_PATH!!xRM_FILE!" "!xRM_TARGET!" /Y>>%xRM_TMPPATH%\copytarget.cmd
+                    echo call copy "%xRM_TMPPATH%\%xRM_LCID%!xRM_PATH!!xRM_FILE!" "!xRM_TARGET!" /Y ^|^| set failed=^1>>%xRM_TMPPATH%\copytarget.cmd
                 )
             ) else (
                 if NOT DEFINED xRM_BASEDONE (
-                    echo call robocopy "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!LCL" "%xRM_TMPPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!LCL" !xRM_FILE!.lcl /s>>%xRM_TMPPATH%\copytarget.cmd
+                    echo call robocopy "%xRM_LOCPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!LCL" "%xRM_TMPPATH%\Base\%xRM_PNAME%\!xRM_COMPNAME!LCL" !xRM_FILE!.lcl /s ^& if ERRORLEVEL 8 set failed=^1>>%xRM_TMPPATH%\copytarget.cmd
                 )
             )
+        ) else (
+            echo Info - "%xRM_LOCPATH%\%xRM_LCID%\%xRM_PNAME%\!xRM_COMPNAME!\LCL\!xRM_FILE!.lcl" not found. Skip processing the file.
         )
     )
 ) else (
     echo Error - %xRM_TMPPATH%\target.txt not found
-    exit /b
+    goto :Error
 )
 endlocal
-goto :eof
+exit /b 0
+
 
 :lsBuildGenerate
 if EXIST %xRM_TMPPATH%\%1 (
     echo call %PKG_LSBUILD%\lsbuild response %xRM_TMPPATH%\%1
     call %PKG_LSBUILD%\lsbuild response %xRM_TMPPATH%\%1
+    if ERRORLEVEL 1 goto :Error
 ) else (
     if NOT DEFINED xRM_EXTRACT (
         echo Error - Solution Name does not exist
     )
-    exit /b
+    goto :Error
 )
-goto :eof
+exit /b 0
 
 
 REM ----------------------------------------------------------------------
 REM RunCmd
 :RunCmd
+if exist %xRM_TMPPATH%\%1 (
+    REM Inject 'set failed=0' at the beginning and 'exit /b %failed%' at the end of the file
+    REM in order to expose an error ('exit /b 1') while executing commands in the files (e.g. genXML.cmd, copytarget.cmd)
+    setlocal
+    echo set failed=^0>%xRM_TMPPATH%\setFailed.cmd
+    type %xRM_TMPPATH%\%1 >>%xRM_TMPPATH%\setFailed.cmd
+    type %xRM_TMPPATH%\setFailed.cmd > %xRM_TMPPATH%\%1
+    echo exit /b %%failed%%>> %xRM_TMPPATH%\%1
+    del %xRM_TMPPATH%\setFailed.cmd
+    endlocal
 
-REM Copy to final destination
-if exist %xRM_TMPPATH%\%1 call %xRM_TMPPATH%\%1
-
-echo.
-echo Process completed.
-echo.
-
-goto :eof
+    REM Copy to final destination (copytarget.cmd) or Generate data xml files (genXML.cmd)
+    echo.
+    echo call %xRM_TMPPATH%\%1
+    call %xRM_TMPPATH%\%1
+    if ERRORLEVEL 1 goto :Error
+    echo.
+    echo '%1' completed successfully.
+    echo.
+)
+exit /b 0
 
 
 REM ----------------------------------------------------------------------
@@ -377,7 +401,7 @@ goto :ArgumentsLoopBegin
 
 :ArgumentsLoopEnd
 shift /0
-goto :eof
+exit /b 0
 
 
 :Get_CharCount
@@ -389,8 +413,7 @@ if defined s (
     set /a xRM_charcount+=1
     goto :LOOP_GCC
 )
-exit /b
-
+exit /b 0
 
 
 :Get_RelativePath
@@ -402,13 +425,18 @@ if not 2==%ch% (
     set /a ch-=1
     goto :LOOP_GRP
 )
-    if not exist "%xRM_TMPPATH%" md "%xRM_TMPPATH%"
-    if DEFINED xRM_TCOMP (
-        if /I %3 EQU %xRM_TCOMP% echo>>"%xRM_TMPPATH%\target.txt" %1,%xRM_R_PATH%,%~3
-    ) else (
-        echo>>"%xRM_TMPPATH%\target.txt" %1,%xRM_R_PATH%,%~3
-    )
-exit /b
+if not exist "%xRM_TMPPATH%" md "%xRM_TMPPATH%"
+if DEFINED xRM_TCOMP (
+    if /I %3 EQU %xRM_TCOMP% echo>>"%xRM_TMPPATH%\target.txt" %1,%xRM_R_PATH%,%~3
+) else (
+    echo>>"%xRM_TMPPATH%\target.txt" %1,%xRM_R_PATH%,%~3
+)
+exit /b 0
+
+
+:Error
+echo Error!
+exit /b 1
 
 
 REM ----------------------------------------------------------------------

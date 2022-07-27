@@ -225,11 +225,11 @@
     <comment>'Agent script step' : Description for systemform in Entity FormXml ID: '{371db648-34af-4f9e-817e-cfb9ea67540a}'</comment>
   </data>
   <data name="1:Description,Agent script step{4cfec666-e1e5-4f10-8e91-98a2c286f9bc}" xml:space="preserve">
-    <value>Formulaire de carte de cette entité.</value>
+    <value>Formulaire de carte pour cette entité.</value>
     <comment>'Agent script step' : Description for systemform in Entity FormXml ID: '{4cfec666-e1e5-4f10-8e91-98a2c286f9bc}'</comment>
   </data>
   <data name="1:Description,Agent script{67277fb5-ba01-429e-a2cd-77407871f5a3}" xml:space="preserve">
-    <value>Formulaire de carte de cette entité.</value>
+    <value>Formulaire de carte pour cette entité.</value>
     <comment>'Agent script' : Description for systemform in Entity FormXml ID: '{67277fb5-ba01-429e-a2cd-77407871f5a3}'</comment>
   </data>
   <data name="1:Description,Agent script{a57f7d04-e2aa-ea11-a81c-000d3ac5e423}" xml:space="preserve">

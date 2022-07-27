@@ -137,7 +137,7 @@
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'lk_msdyn_paneconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_paneconfiguration_modifiedby" xml:space="preserve">
-    <value>Vartotojo, kuris modifikavo įrašą, unikalusis identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'lk_msdyn_paneconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetabconfiguration_createdby" xml:space="preserve">
@@ -145,7 +145,7 @@
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'lk_msdyn_panetabconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetabconfiguration_modifiedby" xml:space="preserve">
-    <value>Vartotojo, kuris modifikavo įrašą, unikalusis identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'lk_msdyn_panetabconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetoolconfiguration_createdby" xml:space="preserve">
@@ -153,7 +153,7 @@
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'lk_msdyn_panetoolconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetoolconfiguration_modifiedby" xml:space="preserve">
-    <value>Vartotojo, kuris modifikavo įrašą, unikalusis identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'lk_msdyn_panetoolconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_paneconfig_msdyn_tabconfig" xml:space="preserve">
@@ -205,7 +205,7 @@
     <comment> 'msdyn_paneconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedBy" xml:space="preserve">
-    <value>Vartotojo, kuris modifikavo įrašą, unikalusis identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedOn" xml:space="preserve">
@@ -293,7 +293,7 @@
     <comment> 'msdyn_panetabconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedBy" xml:space="preserve">
-    <value>Vartotojo, kuris modifikavo įrašą, unikalusis identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedOn" xml:space="preserve">
@@ -393,7 +393,7 @@
     <comment> 'msdyn_panetoolconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedBy" xml:space="preserve">
-    <value>Vartotojo, kuris modifikavo įrašą, unikalusis identifikatorius.</value>
+    <value>Unikalusis įrašą modifikavusio vartotojo identifikatorius.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedOn" xml:space="preserve">

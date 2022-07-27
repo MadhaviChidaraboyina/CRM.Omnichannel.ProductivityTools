@@ -133,7 +133,7 @@
 </value>
   </metadata>
   <data name="10:Description,lk_msdyn_paneconfiguration_createdby" xml:space="preserve">
-    <value>Mã định danh duy nhất của người dùng đã tạo bản ghi.</value>
+    <value>Mã định danh duy nhất của người dùng đã tạo bản ghi.</value>
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'lk_msdyn_paneconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_paneconfiguration_modifiedby" xml:space="preserve">
@@ -141,7 +141,7 @@
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'lk_msdyn_paneconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetabconfiguration_createdby" xml:space="preserve">
-    <value>Mã định danh duy nhất của người dùng đã tạo bản ghi.</value>
+    <value>Mã định danh duy nhất của người dùng đã tạo bản ghi.</value>
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'lk_msdyn_panetabconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetabconfiguration_modifiedby" xml:space="preserve">
@@ -149,7 +149,7 @@
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'lk_msdyn_panetabconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetoolconfiguration_createdby" xml:space="preserve">
-    <value>Mã định danh duy nhất của người dùng đã tạo bản ghi.</value>
+    <value>Mã định danh duy nhất của người dùng đã tạo bản ghi.</value>
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'lk_msdyn_panetoolconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_panetoolconfiguration_modifiedby" xml:space="preserve">
@@ -165,15 +165,15 @@
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'msdyn_msdyn_toolconfig_msdyn_tabconfig'</comment>
   </data>
   <data name="10:Description,organization_msdyn_paneconfiguration" xml:space="preserve">
-    <value>Mã định danh duy nhất cho tổ chức</value>
+    <value>Mã định danh duy nhất cho tổ chức</value>
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'organization_msdyn_paneconfiguration'</comment>
   </data>
   <data name="10:Description,organization_msdyn_panetabconfiguration" xml:space="preserve">
-    <value>Mã định danh duy nhất cho tổ chức</value>
+    <value>Mã định danh duy nhất cho tổ chức</value>
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'organization_msdyn_panetabconfiguration'</comment>
   </data>
   <data name="10:Description,organization_msdyn_panetoolconfiguration" xml:space="preserve">
-    <value>Mã định danh duy nhất cho tổ chức</value>
+    <value>Mã định danh duy nhất cho tổ chức</value>
     <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'organization_msdyn_panetoolconfiguration'</comment>
   </data>
   <data name="15062:Description,msdyn_ProductivityPaneComponent" xml:space="preserve">
@@ -189,7 +189,7 @@
     <comment> 'msdyn_ProductivityPaneComponent' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedBy" xml:space="preserve">
-    <value>Mã định danh duy nhất của người dùng đã tạo bản ghi.</value>
+    <value>Mã định danh duy nhất của người dùng đã tạo bản ghi.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationCreatedOn" xml:space="preserve">
@@ -221,7 +221,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfigurationId" xml:space="preserve">
-    <value>Mã định danh duy nhất của phiên bản thực thể</value>
+    <value>Mã định danh duy nhất của phiên bản thực thể</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_paneconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode" xml:space="preserve">
@@ -253,7 +253,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationOrganizationId" xml:space="preserve">
-    <value>Mã định danh duy nhất cho tổ chức</value>
+    <value>Mã định danh duy nhất cho tổ chức</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationOverriddenCreatedOn" xml:space="preserve">
@@ -277,7 +277,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedBy" xml:space="preserve">
-    <value>Mã định danh duy nhất của người dùng đã tạo bản ghi.</value>
+    <value>Mã định danh duy nhất của người dùng đã tạo bản ghi.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationCreatedOn" xml:space="preserve">
@@ -321,7 +321,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfigurationid" xml:space="preserve">
-    <value>Mã định danh duy nhất của phiên bản thực thể</value>
+    <value>Mã định danh duy nhất của phiên bản thực thể</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_panetabconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationmsdyn_panetabconfiguration_msdyn_isenabled" xml:space="preserve">
@@ -353,7 +353,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationOrganizationId" xml:space="preserve">
-    <value>Mã định danh duy nhất cho tổ chức</value>
+    <value>Mã định danh duy nhất cho tổ chức</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationOverriddenCreatedOn" xml:space="preserve">
@@ -377,7 +377,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedBy" xml:space="preserve">
-    <value>Mã định danh duy nhất của người dùng đã tạo bản ghi.</value>
+    <value>Mã định danh duy nhất của người dùng đã tạo bản ghi.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationCreatedOn" xml:space="preserve">
@@ -437,7 +437,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfigurationid" xml:space="preserve">
-    <value>Mã định danh duy nhất của phiên bản thực thể</value>
+    <value>Mã định danh duy nhất của phiên bản thực thể</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_panetoolconfigurationid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_category" xml:space="preserve">
@@ -465,7 +465,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationOrganizationId" xml:space="preserve">
-    <value>Mã định danh duy nhất cho tổ chức</value>
+    <value>Mã định danh duy nhất cho tổ chức</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationOverriddenCreatedOn" xml:space="preserve">
@@ -593,7 +593,7 @@
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_paneconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Mã múi giờ chuyển đổi theo UTC</value>
+    <value>Mã múi giờ chuyển đổi UTC</value>
     <comment>'msdyn_paneconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationCreatedBy" xml:space="preserve">
@@ -689,7 +689,7 @@
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Mã múi giờ chuyển đổi theo UTC</value>
+    <value>Mã múi giờ chuyển đổi UTC</value>
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationCreatedBy" xml:space="preserve">
@@ -797,7 +797,7 @@
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Mã múi giờ chuyển đổi theo UTC</value>
+    <value>Mã múi giờ chuyển đổi UTC</value>
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,msdyn_paneconfigurationmsdyn_paneconfiguration_msdyn_panemode0" xml:space="preserve">

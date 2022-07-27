@@ -253,7 +253,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Bare for intern bruk.</value>
+    <value>Bare til intern bruk.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
@@ -373,7 +373,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Bare for intern bruk.</value>
+    <value>Bare til intern bruk.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigUTCConversionTimeZoneCode" xml:space="preserve">

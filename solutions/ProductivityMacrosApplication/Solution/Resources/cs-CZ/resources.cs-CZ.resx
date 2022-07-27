@@ -205,11 +205,11 @@
     <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
   </data>
   <data name="100000:label,19D1FA363DBAB964A6F2342D8F2FEC2B591654B7C2F447BF8963D5FACC8D7A57" xml:space="preserve">
-    <value>Získá aktuální kartu.</value>
+    <value>Získat aktuální kartu</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
   </data>
   <data name="100000:label,1A52C54ACD32CA00523268BB279C5D663FBD768B12FC35F55B11958D2B39C16A" xml:space="preserve">
-    <value>Přesune fokus na tuto kartu.</value>
+    <value>Přesunout fokus na tuto kartu</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
   </data>
   <data name="100000:label,1D49C833CC48CC818D0BBB976E6E831217CC58C9485C5838893BE8AD47126E66" xml:space="preserve">
@@ -261,7 +261,7 @@
     <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
   </data>
   <data name="100000:label,2DD4B76470DF4648B4B3772E380E00EE4E3AB2B664C02599C7A1477077E7A5E6" xml:space="preserve">
-    <value>Získá aktuální kartu.</value>
+    <value>Získat aktuální kartu</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
   </data>
   <data name="100000:label,2F2A340C4C4F6F14FD0FE9450F50363E33B395C587581F18A834C034C816822E" xml:space="preserve">
@@ -365,7 +365,7 @@
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
   </data>
   <data name="100000:label,5E164B885353D1015D39CEE0A815A2D89469ED3C6DA910C5BA400394EF6E0295" xml:space="preserve">
-    <value>Přesune fokus na tuto kartu.</value>
+    <value>Přesunout fokus na tuto kartu</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
   </data>
   <data name="100000:label,5F1E971CF97A73BB471A244A5552771443B033179F990771CBD180BF2C2E340A" xml:space="preserve">
@@ -465,7 +465,7 @@
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
   </data>
   <data name="100000:label,86037488162D6FD5202C0C618058B6C4C75769965F9FEC1D686820C1C32ED28D" xml:space="preserve">
-    <value>Přesune fokus na tuto kartu.</value>
+    <value>Přesunout fokus na tuto kartu</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
   </data>
   <data name="100000:label,8701943C34E0E51A869C350FC4E169E99003482727BBC2B0F28A2BF8B2FAA54B" xml:space="preserve">
@@ -541,7 +541,7 @@
     <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
   </data>
   <data name="100000:label,9DED7E07F43EF3D4620E553E61E3605CDA8C5A173EE4046EBB14C97BF7E75B50" xml:space="preserve">
-    <value>Získá aktuální kartu.</value>
+    <value>Získat aktuální kartu</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
   </data>
   <data name="100000:label,A0FDD042EF28C362E713B18E35766AA0737105175B5C2792E31ECFC5C011105A" xml:space="preserve">
@@ -653,7 +653,7 @@
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
   </data>
   <data name="100000:label,DA3A5AF9616AA61001E1602A2696B3CC7B6158AAADC6CA724557D8D63C70D467" xml:space="preserve">
-    <value>Získá aktuální kartu.</value>
+    <value>Získat aktuální kartu</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
   </data>
   <data name="100000:label,DC23E4138F0BB134493A316362EB357858EDD88A7946A862A56581373FAA1E48" xml:space="preserve">
@@ -677,7 +677,7 @@
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
   </data>
   <data name="100000:label,E11011003ADBB96D6C5AE2977E44E40E6FC5DD572DDCC5CC6789149708DA310A" xml:space="preserve">
-    <value>Přesune fokus na tuto kartu.</value>
+    <value>Přesunout fokus na tuto kartu</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
   </data>
   <data name="100000:label,E1B106F7B2D38EDB7AD551421D793C676DB8550957DD960E9B5F8785194E117C" xml:space="preserve">

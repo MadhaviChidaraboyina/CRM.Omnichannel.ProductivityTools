@@ -133,75 +133,75 @@
 </value>
   </metadata>
   <data name="10:Description,business_unit_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>Identificador únic per a la unitat de negoci propietària del registre</value>
+    <value>Identificador únic de la unitat de negoci propietària del registre</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'business_unit_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>Identificador únic per a la unitat de negoci propietària del registre</value>
+    <value>Identificador únic de la unitat de negoci propietària del registre</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'business_unit_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>Identificador únic per a la unitat de negoci propietària del registre</value>
+    <value>Identificador únic de la unitat de negoci propietària del registre</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'business_unit_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>Identificador únic per a la unitat de negoci propietària del registre</value>
+    <value>Identificador únic de la unitat de negoci propietària del registre</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'business_unit_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>Identificador únic per a la unitat de negoci propietària del registre</value>
+    <value>Identificador únic de la unitat de negoci propietària del registre</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'business_unit_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,business_unit_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>Identificador únic per a la unitat de negoci propietària del registre</value>
+    <value>Identificador únic de la unitat de negoci propietària del registre</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'business_unit_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactioninputparameter_createdby" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari que ha creat el registre.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'lk_msdyn_productivityactioninputparameter_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactioninputparameter_modifiedby" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari que ha modificat el registre.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'lk_msdyn_productivityactioninputparameter_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactionoutputparameter_createdby" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari que ha creat el registre.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'lk_msdyn_productivityactionoutputparameter_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactionoutputparameter_modifiedby" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari que ha modificat el registre.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'lk_msdyn_productivityactionoutputparameter_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroactiontemplate_createdby" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari que ha creat el registre.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'lk_msdyn_productivitymacroactiontemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroactiontemplate_modifiedby" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari que ha modificat el registre.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'lk_msdyn_productivitymacroactiontemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroconnector_createdby" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari que ha creat el registre.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'lk_msdyn_productivitymacroconnector_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroconnector_modifiedby" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari que ha modificat el registre.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'lk_msdyn_productivitymacroconnector_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacrosolutionconfiguration_createdby" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari que ha creat el registre.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'lk_msdyn_productivitymacrosolutionconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacrosolutionconfiguration_modifiedby" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari que ha modificat el registre.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'lk_msdyn_productivitymacrosolutionconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityparameterdefinition_createdby" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari que ha creat el registre.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'lk_msdyn_productivityparameterdefinition_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityparameterdefinition_modifiedby" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari que ha modificat el registre.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'lk_msdyn_productivityparameterdefinition_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_prod_macroactiontemplate_msdyn_actioninput" xml:space="preserve">
@@ -245,51 +245,51 @@
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'owner_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>Identificador únic per a l’equip propietari del registre.</value>
+    <value>Identificador únic de l'equip propietari del registre.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'team_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>Identificador únic per a l’equip propietari del registre.</value>
+    <value>Identificador únic de l'equip propietari del registre.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'team_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>Identificador únic per a l’equip propietari del registre.</value>
+    <value>Identificador únic de l'equip propietari del registre.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'team_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>Identificador únic per a l’equip propietari del registre.</value>
+    <value>Identificador únic de l'equip propietari del registre.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'team_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>Identificador únic per a l’equip propietari del registre.</value>
+    <value>Identificador únic de l'equip propietari del registre.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'team_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,team_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>Identificador únic per a l’equip propietari del registre.</value>
+    <value>Identificador únic de l'equip propietari del registre.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'team_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityactioninputparameter" xml:space="preserve">
-    <value>Identificador únic per a l’usuari propietari del registre.</value>
+    <value>Identificador únic de l'usuari propietari del registre.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'user_msdyn_productivityactioninputparameter'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityactionoutputparameter" xml:space="preserve">
-    <value>Identificador únic per a l’usuari propietari del registre.</value>
+    <value>Identificador únic de l'usuari propietari del registre.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'user_msdyn_productivityactionoutputparameter'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivitymacroactiontemplate" xml:space="preserve">
-    <value>Identificador únic per a l’usuari propietari del registre.</value>
+    <value>Identificador únic de l'usuari propietari del registre.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'user_msdyn_productivitymacroactiontemplate'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivitymacroconnector" xml:space="preserve">
-    <value>Identificador únic per a l’usuari propietari del registre.</value>
+    <value>Identificador únic de l'usuari propietari del registre.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'user_msdyn_productivitymacroconnector'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
-    <value>Identificador únic per a l’usuari propietari del registre.</value>
+    <value>Identificador únic de l'usuari propietari del registre.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'user_msdyn_productivitymacrosolutionconfiguration'</comment>
   </data>
   <data name="10:Description,user_msdyn_productivityparameterdefinition" xml:space="preserve">
-    <value>Identificador únic per a l’usuari propietari del registre.</value>
+    <value>Identificador únic de l'usuari propietari del registre.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'user_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="15062:Description,microsoftdynamicsmsdyn10000" xml:space="preserve">
@@ -309,11 +309,11 @@
     <comment> 'msdyn_Macros' : LocalizedName for Solution</comment>
   </data>
   <data name="1:Description,Action Input Parameter{a050bc67-9e91-4cc6-8987-5bfb058988e5}" xml:space="preserve">
-    <value>Format de targeta per a aquesta entitat.</value>
+    <value>Format de targeta d'aquesta entitat.</value>
     <comment>'Action Input Parameter' : Description for systemform in Entity FormXml ID: '{a050bc67-9e91-4cc6-8987-5bfb058988e5}'</comment>
   </data>
   <data name="1:Description,Action Input Parameter{b00b65d5-efef-4fc6-871e-8ace809eae26}" xml:space="preserve">
-    <value>Un formulari per a aquesta entitat.</value>
+    <value>Formulari per a aquesta entitat.</value>
     <comment>'Action Input Parameter' : Description for systemform in Entity FormXml ID: '{b00b65d5-efef-4fc6-871e-8ace809eae26}'</comment>
   </data>
   <data name="1:Description,Action Input Parameter{b84e887d-a499-ea11-a81c-000d3af70e62}" xml:space="preserve">
@@ -321,7 +321,7 @@
     <comment>'Action Input Parameter' : Description for SavedQuery on Entity QueryId: '{b84e887d-a499-ea11-a81c-000d3af70e62}'</comment>
   </data>
   <data name="1:Description,Action Output Parameter{4956d6b7-1d8c-4767-b73b-d4d9de0dd17d}" xml:space="preserve">
-    <value>Un formulari per a aquesta entitat.</value>
+    <value>Formulari per a aquesta entitat.</value>
     <comment>'Action Output Parameter' : Description for systemform in Entity FormXml ID: '{4956d6b7-1d8c-4767-b73b-d4d9de0dd17d}'</comment>
   </data>
   <data name="1:Description,Action Output Parameter{fd110973-a599-ea11-a81c-000d3af70e62}" xml:space="preserve">
@@ -329,7 +329,7 @@
     <comment>'Action Output Parameter' : Description for SavedQuery on Entity QueryId: '{fd110973-a599-ea11-a81c-000d3af70e62}'</comment>
   </data>
   <data name="1:Description,Action Output Parameter{ffbf54c3-28a8-4c3a-9b20-bb4a2186f04e}" xml:space="preserve">
-    <value>Format de targeta per a aquesta entitat.</value>
+    <value>Format de targeta d'aquesta entitat.</value>
     <comment>'Action Output Parameter' : Description for systemform in Entity FormXml ID: '{ffbf54c3-28a8-4c3a-9b20-bb4a2186f04e}'</comment>
   </data>
   <data name="1:Description,Macro Action Template{ad744929-a599-ea11-a81c-000d3af70e62}" xml:space="preserve">
@@ -337,11 +337,11 @@
     <comment>'Macro Action Template' : Description for SavedQuery on Entity QueryId: '{ad744929-a599-ea11-a81c-000d3af70e62}'</comment>
   </data>
   <data name="1:Description,Macro Action Template{d75f0224-6210-40a3-a9da-d5e52376f1a6}" xml:space="preserve">
-    <value>Format de targeta per a aquesta entitat.</value>
+    <value>Format de targeta d'aquesta entitat.</value>
     <comment>'Macro Action Template' : Description for systemform in Entity FormXml ID: '{d75f0224-6210-40a3-a9da-d5e52376f1a6}'</comment>
   </data>
   <data name="1:Description,Macro Action Template{d9f3060d-a09b-4966-a1d0-aba226880a1d}" xml:space="preserve">
-    <value>Un formulari per a aquesta entitat.</value>
+    <value>Formulari per a aquesta entitat.</value>
     <comment>'Macro Action Template' : Description for systemform in Entity FormXml ID: '{d9f3060d-a09b-4966-a1d0-aba226880a1d}'</comment>
   </data>
   <data name="1:Description,Macro Connector{08f565b4-a599-ea11-a81c-000d3af70e62}" xml:space="preserve">
@@ -349,11 +349,11 @@
     <comment>'Macro Connector' : Description for SavedQuery on Entity QueryId: '{08f565b4-a599-ea11-a81c-000d3af70e62}'</comment>
   </data>
   <data name="1:Description,Macro Connector{55d8cfea-d1d1-43b8-b581-e83b6d276695}" xml:space="preserve">
-    <value>Un formulari per a aquesta entitat.</value>
+    <value>Formulari per a aquesta entitat.</value>
     <comment>'Macro Connector' : Description for systemform in Entity FormXml ID: '{55d8cfea-d1d1-43b8-b581-e83b6d276695}'</comment>
   </data>
   <data name="1:Description,Macro Connector{b29248c2-8c23-4ab1-b287-0182849d28b6}" xml:space="preserve">
-    <value>Format de targeta per a aquesta entitat.</value>
+    <value>Format de targeta d'aquesta entitat.</value>
     <comment>'Macro Connector' : Description for systemform in Entity FormXml ID: '{b29248c2-8c23-4ab1-b287-0182849d28b6}'</comment>
   </data>
   <data name="1:Description,Macro Run History{0d1cf650-7fb7-468a-a180-6ca27b5b43e7}" xml:space="preserve">
@@ -365,11 +365,11 @@
     <comment>'Macro Run History' : Description for systemform in Entity FormXml ID: '{47492cdb-57ca-4667-a741-35c34491b4f6}'</comment>
   </data>
   <data name="1:Description,Macro Solution Configuration{206b5fb0-376f-40cf-9e78-2acce3e61f42}" xml:space="preserve">
-    <value>Un formulari per a aquesta entitat.</value>
+    <value>Formulari per a aquesta entitat.</value>
     <comment>'Macro Solution Configuration' : Description for systemform in Entity FormXml ID: '{206b5fb0-376f-40cf-9e78-2acce3e61f42}'</comment>
   </data>
   <data name="1:Description,Macro Solution Configuration{6e1b7485-7675-4ade-b40e-86f4313fe2db}" xml:space="preserve">
-    <value>Format de targeta per a aquesta entitat.</value>
+    <value>Format de targeta d'aquesta entitat.</value>
     <comment>'Macro Solution Configuration' : Description for systemform in Entity FormXml ID: '{6e1b7485-7675-4ade-b40e-86f4313fe2db}'</comment>
   </data>
   <data name="1:Description,Macro Solution Configuration{757e9f3c-a699-ea11-a81c-000d3af70e62}" xml:space="preserve">
@@ -437,7 +437,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_status' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOverriddenCreatedOn" xml:space="preserve">
-    <value>Data i hora en què s'ha migrat el registre.</value>
+    <value>Data i hora de migració del registre.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwnerId" xml:space="preserve">
@@ -473,7 +473,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari que ha creat el registre.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOn" xml:space="preserve">
@@ -481,7 +481,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOnBehalfBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari delegat que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari delegat que ha creat el registre.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterentitymsdyn_productivityactioninputparameter" xml:space="preserve">
@@ -489,7 +489,7 @@
     <comment> 'msdyn_productivityactioninputparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari que ha modificat el registre.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOn" xml:space="preserve">
@@ -497,7 +497,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOnBehalfBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari delegat que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari delegat que ha modificat el registre.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_actiontemplateinputparameterid" xml:space="preserve">
@@ -505,7 +505,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_actiontemplateinputparameterid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_name" xml:space="preserve">
-    <value>Nom de l’entitat personalitzada.</value>
+    <value>Nom de l'entitat personalitzada.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_parametertype" xml:space="preserve">
@@ -513,7 +513,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameterId" xml:space="preserve">
-    <value>Identificador únic de les instàncies d’entitat</value>
+    <value>Identificador únic de les instàncies de l'entitat</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_productivityactioninputparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_msdyn_parametertype" xml:space="preserve">
@@ -529,7 +529,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for OptionSet 'msdyn_productivityactioninputparameter_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_UniqueName" xml:space="preserve">
-    <value>Nom únic per a l’entitat.</value>
+    <value>Nom únic de l'entitat.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_visibility" xml:space="preserve">
@@ -545,15 +545,15 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Identificador únic per a la unitat de negoci propietària del registre</value>
+    <value>Identificador únic de la unitat de negoci propietària del registre</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningTeam" xml:space="preserve">
-    <value>Identificador únic per a l’equip propietari del registre.</value>
+    <value>Identificador únic de l'equip propietari del registre.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterOwningUser" xml:space="preserve">
-    <value>Identificador únic per a l’usuari propietari del registre.</value>
+    <value>Identificador únic de l'usuari propietari del registre.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterstatecode" xml:space="preserve">
@@ -565,15 +565,15 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a ús intern.</value>
+    <value>Només per a l'ús intern.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codi del fus horari que s’utilitzava quan es va crear el registre.</value>
+    <value>Codi de fus horari que s'estava utilitzant quan es va crear el registre.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari que ha creat el registre.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOn" xml:space="preserve">
@@ -581,7 +581,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOnBehalfBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari delegat que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari delegat que ha creat el registre.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterentitymsdyn_productivityactionoutputparameter" xml:space="preserve">
@@ -589,7 +589,7 @@
     <comment> 'msdyn_productivityactionoutputparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari que ha modificat el registre.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOn" xml:space="preserve">
@@ -597,7 +597,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOnBehalfBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari delegat que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari delegat que ha modificat el registre.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_actiontemplateoutputparameterid" xml:space="preserve">
@@ -605,11 +605,11 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_actiontemplateoutputparameterid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_name" xml:space="preserve">
-    <value>Nom de l’entitat personalitzada.</value>
+    <value>Nom de l'entitat personalitzada.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameterId" xml:space="preserve">
-    <value>Identificador únic de les instàncies d’entitat</value>
+    <value>Identificador únic de les instàncies de l'entitat</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_productivityactionoutputparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameter_statecode" xml:space="preserve">
@@ -621,7 +621,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for OptionSet 'msdyn_productivityactionoutputparameter_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_UniqueName" xml:space="preserve">
-    <value>Nom únic per a l’entitat.</value>
+    <value>Nom únic de l'entitat.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOverriddenCreatedOn" xml:space="preserve">
@@ -633,15 +633,15 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningBusinessUnit" xml:space="preserve">
-    <value>Identificador únic per a la unitat de negoci propietària del registre</value>
+    <value>Identificador únic de la unitat de negoci propietària del registre</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningTeam" xml:space="preserve">
-    <value>Identificador únic per a l’equip propietari del registre.</value>
+    <value>Identificador únic de l'equip propietari del registre.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOwningUser" xml:space="preserve">
-    <value>Identificador únic per a l’usuari propietari del registre.</value>
+    <value>Identificador únic de l'usuari propietari del registre.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterstatecode" xml:space="preserve">
@@ -653,15 +653,15 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a ús intern.</value>
+    <value>Només per a l'ús intern.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codi del fus horari que s’utilitzava quan es va crear el registre.</value>
+    <value>Codi de fus horari que s'estava utilitzant quan es va crear el registre.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari que ha creat el registre.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOn" xml:space="preserve">
@@ -669,7 +669,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari delegat que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari delegat que ha creat el registre.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateentitymsdyn_productivitymacroactiontemplate" xml:space="preserve">
@@ -677,7 +677,7 @@
     <comment> 'msdyn_productivitymacroactiontemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari que ha modificat el registre.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOn" xml:space="preserve">
@@ -685,7 +685,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari delegat que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari delegat que ha modificat el registre.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_actionDescription" xml:space="preserve">
@@ -717,7 +717,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_macroconnector' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_name" xml:space="preserve">
-    <value>Nom de l’entitat personalitzada.</value>
+    <value>Nom de l'entitat personalitzada.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_outputparameters" xml:space="preserve">
@@ -725,7 +725,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_outputparameters' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplateId" xml:space="preserve">
-    <value>Identificador únic de les instàncies d’entitat</value>
+    <value>Identificador únic de les instàncies de l'entitat</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_productivitymacroactiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplate_statecode" xml:space="preserve">
@@ -753,7 +753,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_title' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_UniqueName" xml:space="preserve">
-    <value>Nom únic per a l’entitat.</value>
+    <value>Nom únic de l'entitat.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_visibility" xml:space="preserve">
@@ -769,15 +769,15 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningBusinessUnit" xml:space="preserve">
-    <value>Identificador únic per a la unitat de negoci propietària del registre</value>
+    <value>Identificador únic de la unitat de negoci propietària del registre</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningTeam" xml:space="preserve">
-    <value>Identificador únic per a l’equip propietari del registre.</value>
+    <value>Identificador únic de l'equip propietari del registre.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateOwningUser" xml:space="preserve">
-    <value>Identificador únic per a l’usuari propietari del registre.</value>
+    <value>Identificador únic de l'usuari propietari del registre.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatestatecode" xml:space="preserve">
@@ -789,15 +789,15 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a ús intern.</value>
+    <value>Només per a l'ús intern.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codi del fus horari que s’utilitzava quan es va crear el registre.</value>
+    <value>Codi de fus horari que s'estava utilitzant quan es va crear el registre.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari que ha creat el registre.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOn" xml:space="preserve">
@@ -805,7 +805,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOnBehalfBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari delegat que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari delegat que ha creat el registre.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorentitymsdyn_productivitymacroconnector" xml:space="preserve">
@@ -813,7 +813,7 @@
     <comment> 'msdyn_productivitymacroconnector' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari que ha modificat el registre.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOn" xml:space="preserve">
@@ -821,7 +821,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOnBehalfBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari delegat que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari delegat que ha modificat el registre.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_brandcolor" xml:space="preserve">
@@ -853,7 +853,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_icon' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_name" xml:space="preserve">
-    <value>Nom de l’entitat personalitzada.</value>
+    <value>Nom de l'entitat personalitzada.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_prefix" xml:space="preserve">
@@ -861,7 +861,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_prefix' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_productivitymacroconnectorId" xml:space="preserve">
-    <value>Identificador únic de les instàncies d’entitat</value>
+    <value>Identificador únic de les instàncies de l'entitat</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_productivitymacroconnectorId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_productivitymacroconnector_statecode" xml:space="preserve">
@@ -881,7 +881,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_type' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_UniqueName" xml:space="preserve">
-    <value>Nom únic per a l’entitat.</value>
+    <value>Nom únic de l'entitat.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_webresourcename" xml:space="preserve">
@@ -897,15 +897,15 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningBusinessUnit" xml:space="preserve">
-    <value>Identificador únic per a la unitat de negoci propietària del registre</value>
+    <value>Identificador únic de la unitat de negoci propietària del registre</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningTeam" xml:space="preserve">
-    <value>Identificador únic per a l’equip propietari del registre.</value>
+    <value>Identificador únic de l'equip propietari del registre.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorOwningUser" xml:space="preserve">
-    <value>Identificador únic per a l’usuari propietari del registre.</value>
+    <value>Identificador únic de l'usuari propietari del registre.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorstatecode" xml:space="preserve">
@@ -917,15 +917,15 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a ús intern.</value>
+    <value>Només per a l'ús intern.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codi del fus horari que s’utilitzava quan es va crear el registre.</value>
+    <value>Codi de fus horari que s'estava utilitzant quan es va crear el registre.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari que ha creat el registre.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOn" xml:space="preserve">
@@ -933,7 +933,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari delegat que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari delegat que ha creat el registre.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationentitymsdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
@@ -941,7 +941,7 @@
     <comment> 'msdyn_productivitymacrosolutionconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari que ha modificat el registre.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOn" xml:space="preserve">
@@ -949,7 +949,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari delegat que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari delegat que ha modificat el registre.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_designerfallbackurl" xml:space="preserve">
@@ -981,11 +981,11 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_macrosversion' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_name" xml:space="preserve">
-    <value>Nom de l’entitat personalitzada.</value>
+    <value>Nom de l'entitat personalitzada.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfigurationId" xml:space="preserve">
-    <value>Identificador únic de les instàncies d’entitat</value>
+    <value>Identificador únic de les instàncies de l'entitat</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_productivitymacrosolutionconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfiguration_statecode" xml:space="preserve">
@@ -1001,7 +1001,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_searchhint' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>Nom únic per a l’entitat.</value>
+    <value>Nom únic de l'entitat.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_uservoicelink" xml:space="preserve">
@@ -1021,15 +1021,15 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningBusinessUnit" xml:space="preserve">
-    <value>Identificador únic per a la unitat de negoci propietària del registre</value>
+    <value>Identificador únic de la unitat de negoci propietària del registre</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningTeam" xml:space="preserve">
-    <value>Identificador únic per a l’equip propietari del registre.</value>
+    <value>Identificador únic de l'equip propietari del registre.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationOwningUser" xml:space="preserve">
-    <value>Identificador únic per a l’usuari propietari del registre.</value>
+    <value>Identificador únic de l'usuari propietari del registre.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationstatecode" xml:space="preserve">
@@ -1041,15 +1041,15 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a ús intern.</value>
+    <value>Només per a l'ús intern.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codi del fus horari que s’utilitzava quan es va crear el registre.</value>
+    <value>Codi de fus horari que s'estava utilitzant quan es va crear el registre.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari que ha creat el registre.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOn" xml:space="preserve">
@@ -1057,7 +1057,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari delegat que ha creat el registre.</value>
+    <value>Identificador únic de l'usuari delegat que ha creat el registre.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionentitymsdyn_productivityparameterdefinition" xml:space="preserve">
@@ -1065,7 +1065,7 @@
     <comment> 'msdyn_productivityparameterdefinition' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari que ha modificat el registre.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOn" xml:space="preserve">
@@ -1073,7 +1073,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
-    <value>Identificador únic de l’usuari delegat que ha modificat el registre.</value>
+    <value>Identificador únic de l'usuari delegat que ha modificat el registre.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_defaultvalue" xml:space="preserve">
@@ -1093,7 +1093,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_jsonobjectstructure' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_name" xml:space="preserve">
-    <value>Nom de l’entitat personalitzada.</value>
+    <value>Nom de l'entitat personalitzada.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_parametertype" xml:space="preserve">
@@ -1101,7 +1101,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinitionId" xml:space="preserve">
-    <value>Identificador únic de les instàncies d’entitat</value>
+    <value>Identificador únic de les instàncies de l'entitat</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_productivityparameterdefinitionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinition_statecode" xml:space="preserve">
@@ -1113,7 +1113,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for OptionSet 'msdyn_productivityparameterdefinition_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_UniqueName" xml:space="preserve">
-    <value>Nom únic per a l’entitat.</value>
+    <value>Nom únic de l'entitat.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOverriddenCreatedOn" xml:space="preserve">
@@ -1125,15 +1125,15 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningBusinessUnit" xml:space="preserve">
-    <value>Identificador únic per a la unitat de negoci propietària del registre</value>
+    <value>Identificador únic de la unitat de negoci propietària del registre</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningTeam" xml:space="preserve">
-    <value>Identificador únic per a l’equip propietari del registre.</value>
+    <value>Identificador únic de l'equip propietari del registre.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOwningUser" xml:space="preserve">
-    <value>Identificador únic per a l’usuari propietari del registre.</value>
+    <value>Identificador únic de l'usuari propietari del registre.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionstatecode" xml:space="preserve">
@@ -1145,11 +1145,11 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Només per a ús intern.</value>
+    <value>Només per a l'ús intern.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codi del fus horari que s’utilitzava quan es va crear el registre.</value>
+    <value>Codi de fus horari que s'estava utilitzant quan es va crear el registre.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Parameter definition{1d6fe4b9-a699-ea11-a81c-000d3af70e62}" xml:space="preserve">
@@ -1157,11 +1157,11 @@
     <comment>'Parameter definition' : Description for SavedQuery on Entity QueryId: '{1d6fe4b9-a699-ea11-a81c-000d3af70e62}'</comment>
   </data>
   <data name="1:Description,Parameter definition{b520abfd-79f7-44e8-80bd-430d66619828}" xml:space="preserve">
-    <value>Un formulari per a aquesta entitat.</value>
+    <value>Formulari per a aquesta entitat.</value>
     <comment>'Parameter definition' : Description for systemform in Entity FormXml ID: '{b520abfd-79f7-44e8-80bd-430d66619828}'</comment>
   </data>
   <data name="1:Description,Parameter definition{bf2b6722-14f7-4ebe-b551-b64e96bff693}" xml:space="preserve">
-    <value>Format de targeta per a aquesta entitat.</value>
+    <value>Format de targeta d'aquesta entitat.</value>
     <comment>'Parameter definition' : Description for systemform in Entity FormXml ID: '{bf2b6722-14f7-4ebe-b551-b64e96bff693}'</comment>
   </data>
   <data name="1:Description,Process{012107d2-54d0-e911-a81c-000d3a6e50b0}" xml:space="preserve">
@@ -1269,7 +1269,7 @@
     <comment>'msdyn_macrosession' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosessionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codi de fus horari de conversió UTC</value>
+    <value>Codi de fus horari de conversió a hora UTC</value>
     <comment>'msdyn_macrosession' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparameterCreatedBy" xml:space="preserve">
@@ -1361,11 +1361,11 @@
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Número de versió de la regla del fus horari</value>
+    <value>Número de versió de la regla de fus horari</value>
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codi de fus horari de conversió UTC</value>
+    <value>Codi de fus horari de conversió a hora UTC</value>
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
@@ -1445,11 +1445,11 @@
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Número de versió de la regla del fus horari</value>
+    <value>Número de versió de la regla de fus horari</value>
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codi de fus horari de conversió UTC</value>
+    <value>Codi de fus horari de conversió a hora UTC</value>
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
@@ -1577,11 +1577,11 @@
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Número de versió de la regla del fus horari</value>
+    <value>Número de versió de la regla de fus horari</value>
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codi de fus horari de conversió UTC</value>
+    <value>Codi de fus horari de conversió a hora UTC</value>
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
@@ -1701,11 +1701,11 @@
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Número de versió de la regla del fus horari</value>
+    <value>Número de versió de la regla de fus horari</value>
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codi de fus horari de conversió UTC</value>
+    <value>Codi de fus horari de conversió a hora UTC</value>
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
@@ -1737,15 +1737,15 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'msdyn_designerfallbackurl' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationmsdyn_designerurlconfigentity" xml:space="preserve">
-    <value>Entitat de la qual s’ha de llegir l’adreça URL del dissenyador</value>
+    <value>Entitat de la qual s'ha de llegir l'adreça URL del dissenyador</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlconfigentity' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationmsdyn_designerurlconfigentityattrib" xml:space="preserve">
-    <value>Atribut del qual s’ha de llegir l’adreça URL del dissenyador</value>
+    <value>Atribut del qual s'ha de llegir l'adreça URL del dissenyador</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlconfigentityattrib' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationmsdyn_designerurlconfigentityid" xml:space="preserve">
-    <value>Identificador de registre del qual s’ha de llegir l’adreça URL del dissenyador</value>
+    <value>Identificador de registre del qual s'ha de llegir l'adreça URL del dissenyador</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'msdyn_designerurlconfigentityid' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationmsdyn_designerurlconfigentityquery" xml:space="preserve">
@@ -1821,11 +1821,11 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Número de versió de la regla del fus horari</value>
+    <value>Número de versió de la regla de fus horari</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codi de fus horari de conversió UTC</value>
+    <value>Codi de fus horari de conversió a hora UTC</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1921,11 +1921,11 @@
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Número de versió de la regla del fus horari</value>
+    <value>Número de versió de la regla de fus horari</value>
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Codi de fus horari de conversió UTC</value>
+    <value>Codi de fus horari de conversió a hora UTC</value>
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,WorkflowCategory" xml:space="preserve">

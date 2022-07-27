@@ -130,7 +130,7 @@
     <comment>Empty message</comment>
   </data>
   <data name="FailureMessage" xml:space="preserve">
-    <value>Произошла ошибка. Повторите попытку.</value>
+    <value>Произошла ошибка. Повторите попытку</value>
     <comment>Failure Message</comment>
   </data>
   <data name="LoadingText" xml:space="preserve">

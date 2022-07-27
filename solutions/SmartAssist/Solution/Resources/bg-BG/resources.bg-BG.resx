@@ -209,7 +209,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, променил записа.</value>
+    <value>Еднозначен идентификатор на делегирания потребител, който е променил записа.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfigurationId" xml:space="preserve">
@@ -229,7 +229,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'msdyn_adaptivecardtemplate' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_name" xml:space="preserve">
-    <value>Името на обекта по избор.</value>
+    <value>Името на персонализирания обект.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_UniqueName" xml:space="preserve">
@@ -253,7 +253,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Само за вътрешно ползване.</value>
+    <value>Само за вътрешна употреба.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
@@ -285,7 +285,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigModifiedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, променил записа.</value>
+    <value>Еднозначен идентификатор на делегирания потребител, който е променил записа.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_IconURL" xml:space="preserve">
@@ -301,7 +301,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_maxsuggestioncount' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_name" xml:space="preserve">
-    <value>Името на обекта по избор.</value>
+    <value>Името на персонализирания обект.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_Order" xml:space="preserve">
@@ -373,7 +373,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Само за вътрешно ползване.</value>
+    <value>Само за вътрешна употреба.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigUTCConversionTimeZoneCode" xml:space="preserve">
@@ -461,7 +461,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_adaptivecardconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Преобразуване на код на часова зона към UTC</value>
+    <value>Код на часова зона за преобразуване към UTC</value>
     <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_smartassistconfigCreatedBy" xml:space="preserve">
@@ -577,7 +577,7 @@
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_smartassistconfigUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Преобразуване на код на часова зона към UTC</value>
+    <value>Код на часова зона за преобразуване към UTC</value>
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,Adaptive Card Configuration{06bad12e-c299-29a7-00d4-a0a2b654519a}" xml:space="preserve">

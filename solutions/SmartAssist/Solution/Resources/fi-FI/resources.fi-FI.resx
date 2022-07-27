@@ -181,7 +181,7 @@
     <comment>'Adaptive Card Configuration' : Description for systemform in Entity FormXml ID: '{67f74c42-2118-4ff3-9713-0f6d518d24b8}'</comment>
   </data>
   <data name="1:Description,Adaptive Card Configuration{88a15309-45b3-49b3-86ae-2434136ab066}" xml:space="preserve">
-    <value>Korttilomake tätä entiteettiä varten.</value>
+    <value>Tämän entiteetin korttilomake.</value>
     <comment>'Adaptive Card Configuration' : Description for systemform in Entity FormXml ID: '{88a15309-45b3-49b3-86ae-2434136ab066}'</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationCreatedBy" xml:space="preserve">
@@ -189,7 +189,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationCreatedOn" xml:space="preserve">
-    <value>Tietueen luontipäivä ja -aika.</value>
+    <value>Tietueen luontipäivämäärä ja -aika.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationCreatedOnBehalfBy" xml:space="preserve">
@@ -205,7 +205,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationModifiedOn" xml:space="preserve">
-    <value>Päivämäärä ja kellonaika, jolloin tietuetta on muokattu.</value>
+    <value>Tietueen muokkauspäivämäärä ja -aika.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationModifiedOnBehalfBy" xml:space="preserve">
@@ -213,7 +213,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfigurationId" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöivä tunnus.</value>
+    <value>Entiteetin esiintymien yksilöivä tunnus</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'msdyn_adaptivecardconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_adaptivecardconfiguration_statecode" xml:space="preserve">
@@ -233,7 +233,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>Entiteetin yksilöllinen nimi.</value>
+    <value>Entiteetin yksilöivä nimi.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationOrganizationId" xml:space="preserve">
@@ -241,7 +241,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationOverriddenCreatedOn" xml:space="preserve">
-    <value>Tietueen siirtopäivä ja -aika.</value>
+    <value>Tietueen siirtopäivämäärä ja -aika.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationstatecode" xml:space="preserve">
@@ -257,7 +257,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_adaptivecardconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tietuetta luotaessa käytetty aikavyöhykkeen koodi.</value>
+    <value>Aikavyöhykekoodi, joka oli käytössä tietuetta luotaessa.</value>
     <comment>'msdyn_adaptivecardconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigCreatedBy" xml:space="preserve">
@@ -265,7 +265,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigCreatedOn" xml:space="preserve">
-    <value>Tietueen luontipäivä ja -aika.</value>
+    <value>Tietueen luontipäivämäärä ja -aika.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigCreatedOnBehalfBy" xml:space="preserve">
@@ -281,7 +281,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigModifiedOn" xml:space="preserve">
-    <value>Päivämäärä ja kellonaika, jolloin tietuetta on muokattu.</value>
+    <value>Tietueen muokkauspäivämäärä ja -aika.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigModifiedOnBehalfBy" xml:space="preserve">
@@ -309,7 +309,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_Order' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfigId" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöivä tunnus.</value>
+    <value>Entiteetin esiintymien yksilöivä tunnus</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_smartassistconfigId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_smartassistconfig_msdyn_isdefault" xml:space="preserve">
@@ -353,7 +353,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_SuggestionWebresourceURL' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigmsdyn_UniqueName" xml:space="preserve">
-    <value>Entiteetin yksilöllinen nimi.</value>
+    <value>Entiteetin yksilöivä nimi.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigOrganizationId" xml:space="preserve">
@@ -361,7 +361,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'OrganizationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigOverriddenCreatedOn" xml:space="preserve">
-    <value>Tietueen siirtopäivä ja -aika.</value>
+    <value>Tietueen siirtopäivämäärä ja -aika.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'OverriddenCreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigstatecode" xml:space="preserve">
@@ -377,7 +377,7 @@
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_smartassistconfigUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tietuetta luotaessa käytetty aikavyöhykkeen koodi.</value>
+    <value>Aikavyöhykekoodi, joka oli käytössä tietuetta luotaessa.</value>
     <comment>'msdyn_smartassistconfig' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Smartassist configuration{0beeec6f-1ad0-4d4e-bf62-d4875b24764c}" xml:space="preserve">
@@ -385,7 +385,7 @@
     <comment>'Smartassist configuration' : Description for systemform in Entity FormXml ID: '{0beeec6f-1ad0-4d4e-bf62-d4875b24764c}'</comment>
   </data>
   <data name="1:Description,Smartassist configuration{53db0d63-67b8-49a5-8c80-677cd77bed47}" xml:space="preserve">
-    <value>Korttilomake tätä entiteettiä varten.</value>
+    <value>Tämän entiteetin korttilomake.</value>
     <comment>'Smartassist configuration' : Description for systemform in Entity FormXml ID: '{53db0d63-67b8-49a5-8c80-677cd77bed47}'</comment>
   </data>
   <data name="1:Description,Smartassist configuration{bb1d8168-d3b5-ea11-a81c-000d3ac629fa}" xml:space="preserve">
@@ -461,7 +461,7 @@
     <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_adaptivecardconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC-muunnon aikavyöhykekoodi</value>
+    <value>UTC-ajan muuntamisen aikavyöhykekoodi</value>
     <comment>'msdyn_adaptivecardconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_smartassistconfigCreatedBy" xml:space="preserve">
@@ -577,7 +577,7 @@
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_smartassistconfigUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC-muunnon aikavyöhykekoodi</value>
+    <value>UTC-ajan muuntamisen aikavyöhykekoodi</value>
     <comment>'msdyn_smartassistconfig' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:label,Adaptive Card Configuration{06bad12e-c299-29a7-00d4-a0a2b654519a}" xml:space="preserve">

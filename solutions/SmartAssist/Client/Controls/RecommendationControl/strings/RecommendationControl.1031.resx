@@ -130,7 +130,7 @@
     <comment>adaptivecard template</comment>
   </data>
   <data name="FailureMessage" xml:space="preserve">
-    <value>Es ist ein Problem aufgetreten. Wiederholen Sie den Vorgang.</value>
+    <value>Ein Problem ist aufgetreten. Versuchen Sie es erneut.</value>
     <comment>Failure Message</comment>
   </data>
   <data name="SuccessMessage" xml:space="preserve">

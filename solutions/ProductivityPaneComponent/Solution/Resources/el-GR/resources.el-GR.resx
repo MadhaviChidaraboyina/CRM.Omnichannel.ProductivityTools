@@ -209,7 +209,7 @@
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedOn" xml:space="preserve">
-    <value>Ημερομηνία και ώρα τροποποίησης της καρτέλας.</value>
+    <value>Ημερομηνία και ώρα κατά την οποία τροποποιήθηκε η καρτέλα.</value>
     <comment>'msdyn_paneconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_paneconfigurationModifiedOnBehalfBy" xml:space="preserve">
@@ -297,7 +297,7 @@
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedOn" xml:space="preserve">
-    <value>Ημερομηνία και ώρα τροποποίησης της καρτέλας.</value>
+    <value>Ημερομηνία και ώρα κατά την οποία τροποποιήθηκε η καρτέλα.</value>
     <comment>'msdyn_panetabconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetabconfigurationModifiedOnBehalfBy" xml:space="preserve">
@@ -397,7 +397,7 @@
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedOn" xml:space="preserve">
-    <value>Ημερομηνία και ώρα τροποποίησης της καρτέλας.</value>
+    <value>Ημερομηνία και ώρα κατά την οποία τροποποιήθηκε η καρτέλα.</value>
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationModifiedOnBehalfBy" xml:space="preserve">

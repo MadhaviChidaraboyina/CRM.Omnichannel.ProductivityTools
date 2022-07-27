@@ -158,7 +158,7 @@
     <comment>Trigger String for Designer Control</comment>
   </data>
   <data name="DESIGNER_USERVOICEMSG" xml:space="preserve">
-    <value>Recite nam šta biste želeli da izgradite sledeće</value>
+    <value>Recite nam šta biste želeli da razvijemo sledeće</value>
     <comment>User Voice Message for Designer Control</comment>
   </data>
   <data name="DESIGNR_STARTMACRO_TITLE" xml:space="preserve">

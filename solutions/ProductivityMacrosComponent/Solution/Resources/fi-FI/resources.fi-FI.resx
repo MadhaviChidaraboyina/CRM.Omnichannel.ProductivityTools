@@ -377,7 +377,7 @@
     <comment>'Macro Solution Configuration' : Description for SavedQuery on Entity QueryId: '{757e9f3c-a699-ea11-a81c-000d3af70e62}'</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionCreatedBy" xml:space="preserve">
-    <value>Tietueen luoneen käyttäjän yksilöllinen tunniste.</value>
+    <value>Tietueen luoneen käyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionCreatedOn" xml:space="preserve">
@@ -385,7 +385,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunniste.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionentitymsdyn_macrosession" xml:space="preserve">
@@ -397,7 +397,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedBy" xml:space="preserve">
-    <value>Tietuetta muokanneen käyttäjän yksilöllinen tunniste.</value>
+    <value>Tietuetta muokanneen käyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedOn" xml:space="preserve">
@@ -405,7 +405,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunniste.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionmsdyn_executioncontext" xml:space="preserve">
@@ -417,7 +417,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_macroname' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionmsdyn_macrosessionid" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöllinen tunniste</value>
+    <value>Entiteetin esiintymien yksilöivä tunnus</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_macrosessionid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionmsdyn_macrosession_statecode" xml:space="preserve">
@@ -445,15 +445,15 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningBusinessUnit" xml:space="preserve">
-    <value>Tietueen omistavan liiketoimintayksikön yksilöllinen tunniste.</value>
+    <value>Tietueen omistavan liiketoimintayksikön yksilöivä tunnus</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningTeam" xml:space="preserve">
-    <value>Tietueen omistavan ryhmän yksilöllinen tunniste.</value>
+    <value>Tietueen omistavan ryhmän yksilöivä tunnus.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningUser" xml:space="preserve">
-    <value>Tietueen omistavan käyttäjän yksilöllinen tunniste.</value>
+    <value>Tietueen omistavan käyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionstatecode" xml:space="preserve">
@@ -477,11 +477,11 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOn" xml:space="preserve">
-    <value>Tietueen luontipäivä ja -aika.</value>
+    <value>Tietueen luontipäivämäärä ja -aika.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunnus.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterentitymsdyn_productivityactioninputparameter" xml:space="preserve">
@@ -493,11 +493,11 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOn" xml:space="preserve">
-    <value>Tietueen muokkauspäivä ja -aika.</value>
+    <value>Tietueen muokkauspäivämäärä ja -aika.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunnus.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_actiontemplateinputparameterid" xml:space="preserve">
@@ -513,7 +513,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameterId" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöllinen tunnus.</value>
+    <value>Entiteetin esiintymien yksilöivä tunnus</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_productivityactioninputparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_productivityactioninputparameter_msdyn_parametertype" xml:space="preserve">
@@ -529,7 +529,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for OptionSet 'msdyn_productivityactioninputparameter_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_UniqueName" xml:space="preserve">
-    <value>Entiteetin yksilöllinen nimi.</value>
+    <value>Entiteetin yksilöivä nimi.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_visibility" xml:space="preserve">
@@ -569,7 +569,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tietuetta luotaessa käytetty aikavyöhykkeen koodi.</value>
+    <value>Aikavyöhykekoodi, joka oli käytössä tietuetta luotaessa.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
@@ -577,11 +577,11 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOn" xml:space="preserve">
-    <value>Tietueen luontipäivä ja -aika.</value>
+    <value>Tietueen luontipäivämäärä ja -aika.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunnus.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterentitymsdyn_productivityactionoutputparameter" xml:space="preserve">
@@ -593,11 +593,11 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOn" xml:space="preserve">
-    <value>Tietueen muokkauspäivä ja -aika.</value>
+    <value>Tietueen muokkauspäivämäärä ja -aika.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunnus.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_actiontemplateoutputparameterid" xml:space="preserve">
@@ -609,7 +609,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameterId" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöllinen tunnus.</value>
+    <value>Entiteetin esiintymien yksilöivä tunnus</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_productivityactionoutputparameterId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_productivityactionoutputparameter_statecode" xml:space="preserve">
@@ -621,7 +621,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for OptionSet 'msdyn_productivityactionoutputparameter_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_UniqueName" xml:space="preserve">
-    <value>Entiteetin yksilöllinen nimi.</value>
+    <value>Entiteetin yksilöivä nimi.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterOverriddenCreatedOn" xml:space="preserve">
@@ -657,7 +657,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tietuetta luotaessa käytetty aikavyöhykkeen koodi.</value>
+    <value>Aikavyöhykekoodi, joka oli käytössä tietuetta luotaessa.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
@@ -665,11 +665,11 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOn" xml:space="preserve">
-    <value>Tietueen luontipäivä ja -aika.</value>
+    <value>Tietueen luontipäivämäärä ja -aika.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunnus.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateentitymsdyn_productivitymacroactiontemplate" xml:space="preserve">
@@ -681,11 +681,11 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOn" xml:space="preserve">
-    <value>Tietueen muokkauspäivä ja -aika.</value>
+    <value>Tietueen muokkauspäivämäärä ja -aika.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunnus.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_actionDescription" xml:space="preserve">
@@ -725,7 +725,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_outputparameters' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplateId" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöllinen tunnus.</value>
+    <value>Entiteetin esiintymien yksilöivä tunnus</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_productivitymacroactiontemplateId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_productivitymacroactiontemplate_statecode" xml:space="preserve">
@@ -753,7 +753,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_title' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_UniqueName" xml:space="preserve">
-    <value>Entiteetin yksilöllinen nimi.</value>
+    <value>Entiteetin yksilöivä nimi.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_visibility" xml:space="preserve">
@@ -793,7 +793,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tietuetta luotaessa käytetty aikavyöhykkeen koodi.</value>
+    <value>Aikavyöhykekoodi, joka oli käytössä tietuetta luotaessa.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
@@ -801,11 +801,11 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOn" xml:space="preserve">
-    <value>Tietueen luontipäivä ja -aika.</value>
+    <value>Tietueen luontipäivämäärä ja -aika.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunnus.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorentitymsdyn_productivitymacroconnector" xml:space="preserve">
@@ -817,11 +817,11 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOn" xml:space="preserve">
-    <value>Tietueen muokkauspäivä ja -aika.</value>
+    <value>Tietueen muokkauspäivämäärä ja -aika.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunnus.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_brandcolor" xml:space="preserve">
@@ -861,7 +861,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_prefix' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_productivitymacroconnectorId" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöllinen tunnus.</value>
+    <value>Entiteetin esiintymien yksilöivä tunnus</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_productivitymacroconnectorId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_productivitymacroconnector_statecode" xml:space="preserve">
@@ -881,7 +881,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_type' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_UniqueName" xml:space="preserve">
-    <value>Entiteetin yksilöllinen nimi.</value>
+    <value>Entiteetin yksilöivä nimi.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_webresourcename" xml:space="preserve">
@@ -921,7 +921,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tietuetta luotaessa käytetty aikavyöhykkeen koodi.</value>
+    <value>Aikavyöhykekoodi, joka oli käytössä tietuetta luotaessa.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
@@ -929,11 +929,11 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOn" xml:space="preserve">
-    <value>Tietueen luontipäivä ja -aika.</value>
+    <value>Tietueen luontipäivämäärä ja -aika.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunnus.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationentitymsdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
@@ -945,11 +945,11 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOn" xml:space="preserve">
-    <value>Tietueen muokkauspäivä ja -aika.</value>
+    <value>Tietueen muokkauspäivämäärä ja -aika.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunnus.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_designerfallbackurl" xml:space="preserve">
@@ -985,7 +985,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfigurationId" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöllinen tunnus.</value>
+    <value>Entiteetin esiintymien yksilöivä tunnus</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_productivitymacrosolutionconfigurationId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_productivitymacrosolutionconfiguration_statecode" xml:space="preserve">
@@ -1001,7 +1001,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_searchhint' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_UniqueName" xml:space="preserve">
-    <value>Entiteetin yksilöllinen nimi.</value>
+    <value>Entiteetin yksilöivä nimi.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_uservoicelink" xml:space="preserve">
@@ -1045,7 +1045,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tietuetta luotaessa käytetty aikavyöhykkeen koodi.</value>
+    <value>Aikavyöhykekoodi, joka oli käytössä tietuetta luotaessa.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1053,11 +1053,11 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOn" xml:space="preserve">
-    <value>Tietueen luontipäivä ja -aika.</value>
+    <value>Tietueen luontipäivämäärä ja -aika.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
-    <value>Tietueen luoneen edustajakäyttäjän yksilöllinen tunnus.</value>
+    <value>Tietueen luoneen edustajakäyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionentitymsdyn_productivityparameterdefinition" xml:space="preserve">
@@ -1069,11 +1069,11 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOn" xml:space="preserve">
-    <value>Tietueen muokkauspäivä ja -aika.</value>
+    <value>Tietueen muokkauspäivämäärä ja -aika.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
-    <value>Tietuetta muokanneen edustajakäyttäjän yksilöllinen tunnus.</value>
+    <value>Tietuetta muokanneen edustajakäyttäjän yksilöivä tunnus.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_defaultvalue" xml:space="preserve">
@@ -1101,7 +1101,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_parametertype' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinitionId" xml:space="preserve">
-    <value>Entiteetin esiintymien yksilöllinen tunnus.</value>
+    <value>Entiteetin esiintymien yksilöivä tunnus</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_productivityparameterdefinitionId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_productivityparameterdefinition_statecode" xml:space="preserve">
@@ -1113,7 +1113,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for OptionSet 'msdyn_productivityparameterdefinition_statuscode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_UniqueName" xml:space="preserve">
-    <value>Entiteetin yksilöllinen nimi.</value>
+    <value>Entiteetin yksilöivä nimi.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'msdyn_UniqueName' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionOverriddenCreatedOn" xml:space="preserve">
@@ -1149,7 +1149,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Tietuetta luotaessa käytetty aikavyöhykkeen koodi.</value>
+    <value>Aikavyöhykekoodi, joka oli käytössä tietuetta luotaessa.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,Parameter definition{1d6fe4b9-a699-ea11-a81c-000d3af70e62}" xml:space="preserve">
@@ -1269,7 +1269,7 @@
     <comment>'msdyn_macrosession' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosessionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC-muunnon aikavyöhykekoodi</value>
+    <value>UTC-ajan muuntamisen aikavyöhykekoodi</value>
     <comment>'msdyn_macrosession' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparameterCreatedBy" xml:space="preserve">
@@ -1365,7 +1365,7 @@
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC-muunnon aikavyöhykekoodi</value>
+    <value>UTC-ajan muuntamisen aikavyöhykekoodi</value>
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
@@ -1449,7 +1449,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC-muunnon aikavyöhykekoodi</value>
+    <value>UTC-ajan muuntamisen aikavyöhykekoodi</value>
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
@@ -1581,7 +1581,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC-muunnon aikavyöhykekoodi</value>
+    <value>UTC-ajan muuntamisen aikavyöhykekoodi</value>
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
@@ -1705,7 +1705,7 @@
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC-muunnon aikavyöhykekoodi</value>
+    <value>UTC-ajan muuntamisen aikavyöhykekoodi</value>
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
@@ -1825,7 +1825,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC-muunnon aikavyöhykekoodi</value>
+    <value>UTC-ajan muuntamisen aikavyöhykekoodi</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1925,7 +1925,7 @@
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>UTC-muunnon aikavyöhykekoodi</value>
+    <value>UTC-ajan muuntamisen aikavyöhykekoodi</value>
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,WorkflowCategory" xml:space="preserve">

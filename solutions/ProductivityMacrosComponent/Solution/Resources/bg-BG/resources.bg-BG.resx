@@ -157,51 +157,51 @@
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'business_unit_msdyn_productivityparameterdefinition'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactioninputparameter_createdby" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя, създал записа.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'lk_msdyn_productivityactioninputparameter_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactioninputparameter_modifiedby" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е променил записа.</value>
+    <value>Еднозначен идентификатор на потребителя, променил записа.</value>
     <comment>msdyn_productivityactioninputparameter Description for EntityRelationship 'lk_msdyn_productivityactioninputparameter_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactionoutputparameter_createdby" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя, създал записа.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'lk_msdyn_productivityactionoutputparameter_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityactionoutputparameter_modifiedby" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е променил записа.</value>
+    <value>Еднозначен идентификатор на потребителя, променил записа.</value>
     <comment>msdyn_productivityactionoutputparameter Description for EntityRelationship 'lk_msdyn_productivityactionoutputparameter_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroactiontemplate_createdby" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя, създал записа.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'lk_msdyn_productivitymacroactiontemplate_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroactiontemplate_modifiedby" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е променил записа.</value>
+    <value>Еднозначен идентификатор на потребителя, променил записа.</value>
     <comment>msdyn_productivitymacroactiontemplate Description for EntityRelationship 'lk_msdyn_productivitymacroactiontemplate_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroconnector_createdby" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя, създал записа.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'lk_msdyn_productivitymacroconnector_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacroconnector_modifiedby" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е променил записа.</value>
+    <value>Еднозначен идентификатор на потребителя, променил записа.</value>
     <comment>msdyn_productivitymacroconnector Description for EntityRelationship 'lk_msdyn_productivitymacroconnector_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacrosolutionconfiguration_createdby" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя, създал записа.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'lk_msdyn_productivitymacrosolutionconfiguration_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivitymacrosolutionconfiguration_modifiedby" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е променил записа.</value>
+    <value>Еднозначен идентификатор на потребителя, променил записа.</value>
     <comment>msdyn_productivitymacrosolutionconfiguration Description for EntityRelationship 'lk_msdyn_productivitymacrosolutionconfiguration_modifiedby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityparameterdefinition_createdby" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя, създал записа.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'lk_msdyn_productivityparameterdefinition_createdby'</comment>
   </data>
   <data name="10:Description,lk_msdyn_productivityparameterdefinition_modifiedby" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е променил записа.</value>
+    <value>Еднозначен идентификатор на потребителя, променил записа.</value>
     <comment>msdyn_productivityparameterdefinition Description for EntityRelationship 'lk_msdyn_productivityparameterdefinition_modifiedby'</comment>
   </data>
   <data name="10:Description,msdyn_msdyn_prod_macroactiontemplate_msdyn_actioninput" xml:space="preserve">
@@ -393,7 +393,7 @@
     <comment> 'msdyn_macrosession' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionImportSequenceNumber" xml:space="preserve">
-    <value>Пореден номер на импортирането, създало този запис.</value>
+    <value>Пореден номер на заданието за импортиране, създало този запис.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ImportSequenceNumber' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedBy" xml:space="preserve">
@@ -405,7 +405,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionModifiedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, променил записа.</value>
+    <value>Еднозначен идентификатор на делегирания потребител, който е променил записа.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionmsdyn_executioncontext" xml:space="preserve">
@@ -417,7 +417,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_macroname' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionmsdyn_macrosessionid" xml:space="preserve">
-    <value>Еднозначен идентификатор на екземпляри на обект</value>
+    <value>Еднозначен идентификатор за екземпляри на обекти</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'msdyn_macrosessionid' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionmsdyn_macrosession_statecode" xml:space="preserve">
@@ -445,15 +445,15 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'OwnerId' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningBusinessUnit" xml:space="preserve">
-    <value>Еднозначен идентификатор на бизнес единицата, която притежава записа</value>
+    <value>Еднозначен идентификатор за бизнес единицата, която притежава записа</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningBusinessUnit' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningTeam" xml:space="preserve">
-    <value>Еднозначен идентификатор на екипа, който притежава записа.</value>
+    <value>Еднозначен идентификатор за екипа, който притежава записа.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningTeam' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionOwningUser" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който притежава записа.</value>
+    <value>Еднозначен идентификатор за потребителя, който притежава записа.</value>
     <comment>'msdyn_macrosession' : Description for Attribute 'OwningUser' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_macrosessionstatecode" xml:space="preserve">
@@ -473,7 +473,7 @@
     <comment>'msdyn_macrosession' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя, създал записа.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOn" xml:space="preserve">
@@ -481,7 +481,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterCreatedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя представител, създал записа.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterentitymsdyn_productivityactioninputparameter" xml:space="preserve">
@@ -489,7 +489,7 @@
     <comment> 'msdyn_productivityactioninputparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е променил записа.</value>
+    <value>Еднозначен идентификатор на потребителя, променил записа.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOn" xml:space="preserve">
@@ -497,7 +497,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparameterModifiedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, променил записа.</value>
+    <value>Еднозначен идентификатор на делегирания потребител, който е променил записа.</value>
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactioninputparametermsdyn_actiontemplateinputparameterid" xml:space="preserve">
@@ -573,7 +573,7 @@
     <comment>'msdyn_productivityactioninputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя, създал записа.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOn" xml:space="preserve">
@@ -581,7 +581,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterCreatedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя представител, създал записа.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterentitymsdyn_productivityactionoutputparameter" xml:space="preserve">
@@ -589,7 +589,7 @@
     <comment> 'msdyn_productivityactionoutputparameter' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е променил записа.</value>
+    <value>Еднозначен идентификатор на потребителя, променил записа.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOn" xml:space="preserve">
@@ -597,7 +597,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparameterModifiedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, променил записа.</value>
+    <value>Еднозначен идентификатор на делегирания потребител, който е променил записа.</value>
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityactionoutputparametermsdyn_actiontemplateoutputparameterid" xml:space="preserve">
@@ -661,7 +661,7 @@
     <comment>'msdyn_productivityactionoutputparameter' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя, създал записа.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOn" xml:space="preserve">
@@ -669,7 +669,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateCreatedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя представител, създал записа.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateentitymsdyn_productivitymacroactiontemplate" xml:space="preserve">
@@ -677,7 +677,7 @@
     <comment> 'msdyn_productivitymacroactiontemplate' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е променил записа.</value>
+    <value>Еднозначен идентификатор на потребителя, променил записа.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOn" xml:space="preserve">
@@ -685,7 +685,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplateModifiedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, променил записа.</value>
+    <value>Еднозначен идентификатор на делегирания потребител, който е променил записа.</value>
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroactiontemplatemsdyn_actionDescription" xml:space="preserve">
@@ -797,7 +797,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя, създал записа.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOn" xml:space="preserve">
@@ -805,7 +805,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorCreatedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя представител, създал записа.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorentitymsdyn_productivitymacroconnector" xml:space="preserve">
@@ -813,7 +813,7 @@
     <comment> 'msdyn_productivitymacroconnector' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е променил записа.</value>
+    <value>Еднозначен идентификатор на потребителя, променил записа.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOn" xml:space="preserve">
@@ -821,7 +821,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectorModifiedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, променил записа.</value>
+    <value>Еднозначен идентификатор на делегирания потребител, който е променил записа.</value>
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacroconnectormsdyn_brandcolor" xml:space="preserve">
@@ -925,7 +925,7 @@
     <comment>'msdyn_productivitymacroconnector' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя, създал записа.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOn" xml:space="preserve">
@@ -933,7 +933,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationCreatedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя представител, създал записа.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationentitymsdyn_productivitymacrosolutionconfiguration" xml:space="preserve">
@@ -941,7 +941,7 @@
     <comment> 'msdyn_productivitymacrosolutionconfiguration' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е променил записа.</value>
+    <value>Еднозначен идентификатор на потребителя, променил записа.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOn" xml:space="preserve">
@@ -949,7 +949,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationModifiedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, променил записа.</value>
+    <value>Еднозначен идентификатор на делегирания потребител, който е променил записа.</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivitymacrosolutionconfigurationmsdyn_designerfallbackurl" xml:space="preserve">
@@ -1049,7 +1049,7 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : Description for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя, създал записа.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOn" xml:space="preserve">
@@ -1057,7 +1057,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionCreatedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, който е създал записа.</value>
+    <value>Еднозначен идентификатор на потребителя представител, създал записа.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'CreatedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionentitymsdyn_productivityparameterdefinition" xml:space="preserve">
@@ -1065,7 +1065,7 @@
     <comment> 'msdyn_productivityparameterdefinition' : Description for Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя, който е променил записа.</value>
+    <value>Еднозначен идентификатор на потребителя, променил записа.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOn" xml:space="preserve">
@@ -1073,7 +1073,7 @@
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedOn' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionModifiedOnBehalfBy" xml:space="preserve">
-    <value>Еднозначен идентификатор на потребителя представител, променил записа.</value>
+    <value>Еднозначен идентификатор на делегирания потребител, който е променил записа.</value>
     <comment>'msdyn_productivityparameterdefinition' : Description for Attribute 'ModifiedOnBehalfBy' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_productivityparameterdefinitionmsdyn_defaultvalue" xml:space="preserve">
@@ -1265,7 +1265,7 @@
     <comment>'msdyn_macrosession' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosessionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Номер на версията на правило за часова зона</value>
+    <value>Номер на версията на правило на часова зона</value>
     <comment>'msdyn_macrosession' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_macrosessionUTCConversionTimeZoneCode" xml:space="preserve">
@@ -1361,11 +1361,11 @@
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Номер на версията на правило за часова зона</value>
+    <value>Номер на версията на правило на часова зона</value>
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactioninputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Преобразуване на код на часова зона към UTC</value>
+    <value>Код на часова зона за преобразуване към UTC</value>
     <comment>'msdyn_productivityactioninputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterCreatedBy" xml:space="preserve">
@@ -1445,11 +1445,11 @@
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Номер на версията на правило за часова зона</value>
+    <value>Номер на версията на правило на часова зона</value>
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityactionoutputparameterUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Преобразуване на код на часова зона към UTC</value>
+    <value>Код на часова зона за преобразуване към UTC</value>
     <comment>'msdyn_productivityactionoutputparameter' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateCreatedBy" xml:space="preserve">
@@ -1577,11 +1577,11 @@
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Номер на версията на правило за часова зона</value>
+    <value>Номер на версията на правило на часова зона</value>
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplateUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Преобразуване на код на часова зона към UTC</value>
+    <value>Код на часова зона за преобразуване към UTC</value>
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorCreatedBy" xml:space="preserve">
@@ -1701,11 +1701,11 @@
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Номер на версията на правило за часова зона</value>
+    <value>Номер на версията на правило на часова зона</value>
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectorUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Преобразуване на код на часова зона към UTC</value>
+    <value>Код на часова зона за преобразуване към UTC</value>
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationCreatedBy" xml:space="preserve">
@@ -1821,11 +1821,11 @@
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Номер на версията на правило за часова зона</value>
+    <value>Номер на версията на правило на часова зона</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacrosolutionconfigurationUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Преобразуване на код на часова зона към UTC</value>
+    <value>Код на часова зона за преобразуване към UTC</value>
     <comment>'msdyn_productivitymacrosolutionconfiguration' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionCreatedBy" xml:space="preserve">
@@ -1921,11 +1921,11 @@
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionTimeZoneRuleVersionNumber" xml:space="preserve">
-    <value>Номер на версията на правило за часова зона</value>
+    <value>Номер на версията на правило на часова зона</value>
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'TimeZoneRuleVersionNumber' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionUTCConversionTimeZoneCode" xml:space="preserve">
-    <value>Преобразуване на код на часова зона към UTC</value>
+    <value>Код на часова зона за преобразуване към UTC</value>
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'UTCConversionTimeZoneCode' on Entity</comment>
   </data>
   <data name="1:displayname,WorkflowCategory" xml:space="preserve">

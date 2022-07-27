@@ -130,7 +130,7 @@
     <comment>Empty message</comment>
   </data>
   <data name="FailureMessage" xml:space="preserve">
-    <value>कुछ गलत हो गया. कृपया फिर से कोशिश करें.</value>
+    <value>कुछ गलत हुआ. कृपया पुनः प्रयास करें</value>
     <comment>Failure Message</comment>
   </data>
   <data name="SuccessMessage" xml:space="preserve">
