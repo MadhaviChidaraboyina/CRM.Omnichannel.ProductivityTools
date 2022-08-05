@@ -16,3 +16,5 @@ _< Please provide screenshots / screen recordings of your changes, as appropriat
 - [ ] Run a local build
 - [ ] Tested with patch solution
 - [ ] Choose squash commit when completing the PR
+- [ ] Added / Removed any associated unit test
+- [ ] Added / Removed any associated test case from test plan
