@@ -85,6 +85,12 @@ module MscrmControls.Callscript
 		constructor()
 		{
 			this.eventParamList = [];
+			// Add session-id as defaule param
+			try {
+				this.addParameter("Session-ID", Utility.getCurrentSessionId());
+			} catch (e) {
+				console.log(`Unable to add Session-Id to event param.`);
+			}
 		}
 
 		/**

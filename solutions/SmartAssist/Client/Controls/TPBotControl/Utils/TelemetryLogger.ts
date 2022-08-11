@@ -85,6 +85,12 @@ module MscrmControls.ProductivityPanel.TPBot
 		constructor()
 		{
 			this.eventParamList = [];
+
+			// Add session-id as defaule param
+			if (Microsoft && Microsoft.AppRuntime && Microsoft.AppRuntime.Sessions && Microsoft.AppRuntime.Sessions.getFocusedSession)
+			{
+				this.addParameter("Session-ID", Microsoft.AppRuntime.Sessions.getFocusedSession().sessionId);
+			}
 		}
 
 		/**
