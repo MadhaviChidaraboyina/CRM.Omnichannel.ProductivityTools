@@ -650,7 +650,7 @@ namespace Microsoft.ProductivityMacros.Internal {
             var tabInput: XrmClientApi.TabInput = {
                 pageInput: {
                     pageType: "webresource" as any,
-                    webresourceName: "msdyn_kbsearchpagehost.html",
+                    webresourceName: "msdyncrm_/KnowledgeSearch/msdyn_kbsearchpagehostforpt.html",
                     data: searchPageOptions.SearchString
                 },
                 options: {
