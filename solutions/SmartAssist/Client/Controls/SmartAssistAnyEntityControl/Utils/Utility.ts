@@ -138,8 +138,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         }
 
         public static async checkAndTurnOnSuggestionModeling(telemetryHelper: TelemetryHelper) {
-            // auto-turn on the case and KB suggestion for the org, based on FCS AND
-            // either FCB for October 2022 Update is ON or org created after May 20, 2022
+            // auto-turn on the case and KB suggestion for the org, based on FCS
             let isSuggestionsAutoProvisionChecked  = localStorage[StringConstants.SuggestionsModelingStatusKey];
             if (!isSuggestionsAutoProvisionChecked) {
                 try {
@@ -147,13 +146,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     // FCS to auto enable case/KB suggestion
                     const isFCSEnabled: boolean = (Xrm.Utility.getGlobalContext() as any).getFeatureControlSetting(StringConstants.suggestionFcsNameSpace, StringConstants.suggestionFcsKey);
                     if (!!isFCSEnabled) {
-                        // Check FCB for October 2022 Update
-                        enableSuggestionsDefaultOn = SmartAssistAnyEntityControl._context.utils.isFeatureEnabled(StringConstants.FCB_October2022Update);
-
-                        // If FCB for October 2022 Update is OFF, keep existing logic to check for new org created after 20 May 2022
-                        if (!enableSuggestionsDefaultOn) {
-                            enableSuggestionsDefaultOn = await this.isNewOrg(telemetryHelper);                      
-                        }
+                        enableSuggestionsDefaultOn = true;
                     }
 
                     if (enableSuggestionsDefaultOn) {
@@ -202,24 +195,6 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 .catch((error) => {
                     telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToTriggerAISuggestionModeling, error, null);
                 });
-        }
-
-        public static isNewOrg = async(telemetryHelper: TelemetryHelper): Promise<boolean> => {
-            // Only auto turn on suggestion for org creation date is after May 20, 2022
-            let isNewOrg: boolean = false;
-            try {
-                const orgEntity = await SmartAssistAnyEntityControl._context.webAPI.retrieveMultipleRecords(
-                    'organization', 
-                    '?$top=1&$select=createdon'
-                ) as any;
-
-                if (orgEntity && orgEntity.entities && orgEntity.entities.length == 1) {
-                    isNewOrg = Date.parse(orgEntity.entities[0].createdon) > Date.parse(StringConstants.date);
-                }
-            } catch(error) {
-                telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToAutoEnableAISuggestion, error, null);
-            }
-            return isNewOrg;
         }
 
         public static shouldEnableCaseKbSuggestion = async(telemetryHelper): Promise<boolean> => {

@@ -16,7 +16,6 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static LocCacheString = "SAlocStrings";
         public static EnglishLanguageCode = "1033";
         public static SmartAssistPaneId = "AppSidePane_MscrmControls.SmartassistPanelControl.SmartassistPanelControl";
-        public static FCB_October2022Update = "October2022Update";
 
         //FPBot
         public static ConversatonControlOrigin = "ConversatonControlOrigin";
@@ -49,7 +48,6 @@ module MscrmControls.SmartAssistAnyEntityControl {
         public static KbSuggestionFeatureId = 'fc5d5a26-e8c6-4feb-a441-2a471efbe350';
         public static suggestionFcsNameSpace = 'FCS_SASuggestion';
         public static suggestionFcsKey = 'DefaultOnFeatureControl';
-        public static date = '2022-05-20T24:00:00Z';
     }
 
     /**
