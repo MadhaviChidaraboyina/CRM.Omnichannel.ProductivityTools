@@ -3,7 +3,7 @@
   <Import Project="$(WSRoot)\build\include\XRMSolutions.targets" />
   <PropertyGroup>
     <ProjectGuid>{284fee46-896c-48dd-bde0-80020a8ca795}</ProjectGuid>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <NOTARGET>true</NOTARGET>
     <SolutionProjectNamePrefix>SmartAssist</SolutionProjectNamePrefix>
     <SolutionFileNamePrefix>msdyn_smartassist</SolutionFileNamePrefix>

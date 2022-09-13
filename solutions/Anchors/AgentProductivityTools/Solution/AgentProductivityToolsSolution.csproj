@@ -3,7 +3,7 @@
   <Import Project="$(WSRoot)\build\include\XRMSolutions.targets" />
   <PropertyGroup>
     <ProjectGuid>{3d3ea2f0-fe15-4797-ad12-1dd175480167}</ProjectGuid>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <NOTARGET>true</NOTARGET>
     <SolutionProjectNamePrefix>AgentProductivityToolsAnchor</SolutionProjectNamePrefix>
     <SolutionFileNamePrefix>msdyn_AgentProductivityToolsAnchor</SolutionFileNamePrefix>

@@ -11,7 +11,7 @@
 		<ProjectTypeGuids>{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
 		<OutputType>Library</OutputType>
 		<OutputPath>$(MSBuildProjectDirectory)</OutputPath>
-		<TargetFrameworkVersion>$(CRMdotNetTargetFrameWork)</TargetFrameworkVersion>
+		<TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
 		<DebugType>full</DebugType>
 		<DebugSymbols>false</DebugSymbols>
 		<TypeScriptSkipLibCheck>true</TypeScriptSkipLibCheck>
