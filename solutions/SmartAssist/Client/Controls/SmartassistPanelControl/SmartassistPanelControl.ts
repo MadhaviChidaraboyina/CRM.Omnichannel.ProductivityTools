@@ -26,7 +26,7 @@ module MscrmControls.SmartassistPanelControl {
          * Empty constructor.
          */
         constructor() {
-
+            this.addSessionCloseHandler();
         }
 
         /**
@@ -135,6 +135,23 @@ module MscrmControls.SmartassistPanelControl {
 
                 this.newInstance = false;
             }
+        }
+
+		/**
+		 * Callback Handler after Session closed. Clear the context and sessions from SA manager.
+         * Help to avoid memory leak issue in suggestion setting. 
+		 */
+        private addSessionCloseHandler() {
+            var callback=() =>{
+                try {
+                    var sessionId = Utility.getCurrentSessionId();
+                    SmartassistPanelControl._context = null;
+                    SAConfigDataManager.Instance.clearSuggestionsSetting(sessionId);
+                } catch(error) {
+                    this.telemetryHelper.logTelemetryError(TelemetryEventTypes.ErrorInCloseSessionHandler, error, null);
+                }
+            }
+            Microsoft.AppRuntime.Sessions.addOnAfterSessionClose(callback);
         }
 
         /** 

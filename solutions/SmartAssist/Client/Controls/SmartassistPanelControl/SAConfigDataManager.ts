@@ -35,6 +35,13 @@ module MscrmControls.SmartassistPanelControl {
             return this.saConfig;
         }
 
+        public clearSuggestionsSetting(sessionId: string) {
+            var keySet=new Set(Object.keys(this.suggestionsSetting));
+            if(keySet.has(sessionId)){
+                delete this.suggestionsSetting[sessionId];
+            }
+        }
+
         /**
         * Get Filtered SA config from admin suggestions setting
         * @param saConfig: All active SA config

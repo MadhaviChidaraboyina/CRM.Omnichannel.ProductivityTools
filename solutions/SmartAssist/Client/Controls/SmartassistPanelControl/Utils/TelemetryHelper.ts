@@ -96,5 +96,6 @@
         public static WebresourceLoadedSuccessfully = TelemetryEventTypes.componentName + "WebresourceLoadedSuccessfully";
         public static RenderingSmartAssistAnyEntityControl = TelemetryEventTypes.componentName + "RenderingSmartAssistAnyEntityControl";
         public static ErrorInCheckEmptyStatus = TelemetryEventTypes.componentName + "ErrorInCheckEmptyStatus";
+        public static ErrorInCloseSessionHandler = TelemetryEventTypes.componentName + "ErrorInCloseSessionHandler";
     }
 }
