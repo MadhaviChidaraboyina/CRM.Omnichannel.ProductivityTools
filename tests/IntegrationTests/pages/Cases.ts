@@ -12,10 +12,6 @@ import { IFrameConstants, IFrameHelper } from "../Utility/IFrameHelper";
 import { TimeoutConstants } from "../constants";
 
 export enum CustomConstants {
-  assign = "//img[contains(@title,'Assign')]",
-  select1 = '//div[@data-id="rdoMe_id.fieldControl-checkbox-container"]',
-  selectlookup = "//input[@placeholder='Look for records']",
-  UsersMenuItem = "//span[contains(.,'Users')]",
   CaseMenuItem = " //li[contains(@id,'sitemap')]//span[contains(text(),'Cases')]",
   CustomEntityMenuItem = " //li[contains(@id,'sitemap')]//span[contains(text(),'Custom Entity')]",
   AccountMenuItem = " //li[contains(@id,'sitemap')]//span[contains(text(),'Accounts')]",
@@ -23,7 +19,7 @@ export enum CustomConstants {
   NameInput = "input[data-id='name.fieldControl-text-box-text']",
   CaseTitle = "input[data-id='title.fieldControl-text-box-text']",
   CaseSkill = "input[data-id='new_skill.fieldControl-text-box-text']",
-  CaseSkillTwo = "//input[@data-id='new_skilltwo.fieldControl-text-box-text']",
+  CaseSkillTwo="//input[@data-id='new_skilltwo.fieldControl-text-box-text']",
   CustomEntityTitle = "//input[@data-id='new_name.fieldControl-text-box-text']",
   CustomerName = "input[data-id='customerid.fieldControl-LookupResultsDropdown_customerid_textInputBox_with_filter_new']",
   CustomerSearchButton = "button[data-id='customerid.fieldControl-LookupResultsDropdown_customerid_search']",
@@ -39,8 +35,7 @@ export enum CustomConstants {
   BillableTime = "input[data-id='billabletime_id.fieldControl-duration-combobox-text']",
   ResolveCaseClick = "button[data-lp-id='dialogFooterContainer|ok_id']",
   ResolveSystemMessage = "span[data-id='warningNotification']",
-  ConfirmButton = "//button[contains(@id,'confirmButton')]",
-  RouteConfirmButton = "#confirmButtonText",
+  ConfirmButton = "button[data-id='confirmButton']",
   OkButton = "button[data-id='okButton']",
   EntityName = "input[data-id='msdyn_name.fieldControl-text-box-text']",
   EntityType = "input[data-id='msdyn_entity.fieldControl-activityEnabledEntityListCombobox-text']",
@@ -96,11 +91,10 @@ export enum CustomConstants {
   NavigateClick = "span[data-id='appBreadCrumbText']",
   ResolveOverFlow = "button[data-id='OverflowButton']",
   ResolveCaseClickButton = "button[data-id='incident|NoRelationship|Form|Mscrm.Form.incident.Resolve']",
-  CaseSearchBox = "//input[@data-id='quickFind_text_1']",
+  CaseSearchBox = "//input[@aria-label='Search this view']",
   QuickFindBtn = "//button[@aria-label='Start search']",
   DataRowCount = "//div[@data-row-count]",
   DateRowCaseLink = "//div[@data-row-count]//a[@title='{0}']",
-  NewRowCaseLink = "//a[@aria-label='{0}']",
   MoreCaseCommands = "//button[@aria-label='More commands for Case']",
   ResolveCaseBtn = "//button[@data-id='incident|NoRelationship|Form|Mscrm.Form.incident.Resolve']",
   ResolveCaseDialog = "//div[@role='dialog' and @data-id='ResolveCase']",
@@ -177,34 +171,6 @@ export enum CustomConstants {
   MessagingTypeRoutingRuleSetName = "MessagingTypeRoutingRuleSet",
   AccountTitle = "//*[@title='Account Name']",
   DeleteAccount = "//button[@data-id='account|NoRelationship|HomePageGrid|Mscrm.HomepageGrid.account.DeleteMenu']",
-  Diagnostics = "//span[contains(.,'Diagnostics')]",
-  DiagnosticsearchText = "//input[@placeholder='Search this view']",
-  Diagnosticsearch = '//button[@aria-label="Start search"]',
-  selectcase = "span[aria-label='Select or deselect the row']",
-  Route = "//span[@id='confirmButtonText']",
-  inbox = "(//img[contains(@title,'Inbox')])",
-  openworkitem = "//div[text()='Open work items']/following::button[@aria-label='More options'][1]",
-  assigntome = "//div[contains(@data-id,'msdyn_ocliveworkitem.OmniChannelPick')]",
-  inboxinside = '//*[@id="msdyn_MscrmControls.InboxShellControl-InboxShellControl_Container"]/div[1]/div/div/div/div[1]/div[1]/button',
-  Refresh = "//button[@aria-label='Refresh']",
-  popout = "(//i[@data-icon-name='OpenInNewTab'])[1]",
-  RefreshOnDashboard = "//button[@aria-label='Refresh All']",
-  CSWCaseNumber = "input[data-id='header_ticketnumber.fieldControl-text-box-text']",
-  //Inbox customer grouping
-  SelectInbox = "//li[@title='Inbox']",
-  SelectAssignedConversations = "//button[@aria-label='Assigned conversations']",
-  SelectAssignedConversationsDropdownMenuItem = "//*[text()='Assigned conversations']",
-  SelectCases = "//*[contains(text(),'Cases')]",
-  CasesDropdownMenu = "//button[@aria-label='Cases' and @aria-expanded='false']",
-  SelectSort = "//button/div/span[contains(text(),'Sort')]",
-  SortByCustomer = "//button/div/span[contains(text(),'Customer')]",
-  SortByAscending = "//button/div/span[contains(text(),'Ascending')]",
-  Escape = "Escape",
-  QuickCreate = "//button[@aria-label='Press CTRL + Enter to open site map item in a new tab' or @data-id='create-new-tab-button']",
-  SaveAndClose = "//li/button[@aria-label='Save & Close']",
-  TypesofCases = "//span[@data-automationid='splitbuttonprimary']/i[@data-icon-name='ChevronDown']",
-  DropdownOption1 = "//div/span[text()='Active Cases']",
-  CaseRecordValidation = "//a[@title='{0}']",
 }
 
 export enum ResolutionType {
@@ -230,13 +196,6 @@ export class CasesPage extends RoutingRulePage {
   };
   private newCSHCaseData = {
     Name: "TestAccount",
-    Resolutionsummary: "Case Resolved",
-    TotalTime: "30 minutes",
-    ResolvedSystemText: "Read-only  This record’s status: Resolved",
-  };
-
-  private newCSHCaseDataCase = {
-    Name: "Case",
     Resolutionsummary: "Case Resolved",
     TotalTime: "30 minutes",
     ResolvedSystemText: "Read-only  This record’s status: Resolved",
@@ -278,7 +237,6 @@ export class CasesPage extends RoutingRulePage {
   public newCustomerAccountMultiTargetLookUpdata;
 
   private AssignTo: string;
-  newAccountTestData1: string;
 
   constructor(page: Page) {
     super(page);
@@ -327,7 +285,7 @@ export class CasesPage extends RoutingRulePage {
   public async openQueue() {
     await this.Page.waitForSelector(AgentChatConstants.CSHQueue);
     await this.Page.focus(AgentChatConstants.CSHQueue);
-    await this.Page.click(AgentChatConstants.CSHQueue, { force: true });
+    await this.Page.click(AgentChatConstants.CSHQueue, {force: true});
     await this.waitForDomContentLoaded();
   }
 
@@ -343,7 +301,7 @@ export class CasesPage extends RoutingRulePage {
     await this.waitUntilSelectorIsVisible(AgentChatConstants.CSHQueueFormProp, Constants.Five, null, Constants.FourThousandsMiliSeconds);
     await this.Page.waitForSelector(AgentChatConstants.CSHQueueFormProp);
     await this.Page.focus(AgentChatConstants.CSHQueueFormProp);
-    await this.Page.click(AgentChatConstants.CSHQueueFormProp, { force: true });
+    await this.Page.click(AgentChatConstants.CSHQueueFormProp, {force: true});
     await this.waitForDomContentLoaded();
   }
 
@@ -558,11 +516,6 @@ export class CasesPage extends RoutingRulePage {
     await this.goToNavigationMyApp(Constants.OmnichannelAdministration);
   }
 
-  public async navigateToOCAdminApp() {
-    await this.navigateToAdminCentre();
-    await this.waitForDomContentLoaded();
-  }
-
   public async fillcasesDetails() {
     this.newCasesTestData = `${this.newCSHCaseData.Name
       }_${new Date().getTime()}`;
@@ -607,13 +560,13 @@ export class CasesPage extends RoutingRulePage {
 
   public async saveandRoute() {
     await this.Page.click(CustomConstants.SaveandRoute);
-    await this.Page.click(CustomConstants.RouteConfirmButton);
+    await this.Page.click(CustomConstants.ConfirmButton);
   }
 
   public async customEntitySaveandRoute() {
     await this.Page.click(CustomConstants.CustomEntitySaveAndRoute);
     expect(this.validateCustomEntity()).toBeTruthy();
-    await this.Page.click(CustomConstants.RouteConfirmButton);
+    await this.Page.click(CustomConstants.ConfirmButton);
   }
 
   public async acceptInvitationToChat() {
@@ -681,12 +634,29 @@ export class CasesPage extends RoutingRulePage {
     await this.Page.waitForSelector(CustomConstants.CaseSearchBox);
     await this.Page.fill(CustomConstants.CaseSearchBox, title);
     await this.Page.click(CustomConstants.QuickFindBtn);
-    await this.Page.waitForSelector(
-      CustomConstants.NewRowCaseLink.replace("{0}", title));
-
-    await this.Page.click(
-      CustomConstants.NewRowCaseLink.replace("{0}", title)
+    await this.Page.waitForSelector(CustomConstants.DataRowCount);
+    const count = await this.Page.$eval(CustomConstants.DataRowCount, (el) =>
+      el.getAttribute("data-row-count")
     );
+    expect(parseInt(count)).toBeGreaterThanOrEqual(1);
+    await this.Page.click(
+      CustomConstants.DateRowCaseLink.replace("{0}", title)
+    );
+    await this.Page.click(CustomConstants.MoreCaseCommands);
+    await this.Page.waitForSelector(CustomConstants.ResolveCaseBtn);
+    await this.Page.click(CustomConstants.ResolveCaseBtn);
+    await this.Page.waitForSelector(CustomConstants.ConfirmButton);
+    await this.Page.click(CustomConstants.ConfirmButton);
+    await this.Page.waitForSelector(CustomConstants.ResolveCaseDialog);
+    await this.Page.waitForSelector(CustomConstants.Resolution);
+    await this.Page.fill(CustomConstants.Resolution, CustomConstants.Solved);
+    await this.Page.click(CustomConstants.ResolveBtn);
+    await this.Page.waitForSelector(CustomConstants.WarningNotification);
+    const readonlyMsg = await this.Page.$eval(
+      CustomConstants.WarningNotification,
+      (el) => (el as HTMLElement).innerHTML.trim()
+    );
+    expect(readonlyMsg.indexOf(CustomConstants.Resolved)).toBeTruthy();
   }
 
   public async navigateToActivity() {
@@ -898,7 +868,7 @@ export class CasesPage extends RoutingRulePage {
     await this.Page.click(CustomConstants.DeleteCase);
     await this.Page.click(CustomConstants.ConfirmButton);
   }
-
+  
   public async fillcasesRecordSaveandRoute() {
     this.newCasesTestData = `${this.newCSHCaseData.Name}_${new Date().getTime()}`;
     await this.waitForDomContentLoaded();
@@ -911,7 +881,7 @@ export class CasesPage extends RoutingRulePage {
     );
     await this.Page.click(CustomConstants.SaveandRoute);
     await this.Page.click(CustomConstants.ConfirmButton);
-  }
+    }
 
   public async GotoCSHRoutingRuleSet() {
     await this.waitUntilSelectorIsVisible(CustomConstants.CSHRoutingRuleSetSelector, Constants.Five, this._page, Constants.FourThousandsMiliSeconds);
@@ -1080,7 +1050,7 @@ export class CasesPage extends RoutingRulePage {
   }
 
   public async openChatFromMyWorkItems() {
-    const refreshAll = await this._page.waitForSelector(AgentChatConstants.BtnRefreshAll);
+    const refreshAll=await this._page.waitForSelector(AgentChatConstants.BtnRefreshAll);
     await refreshAll.click();
     await this.waitForAgentStatus();
     await this.waitUntilWorkItemIsVisible(AgentChatConstants.MoreChatOption);
@@ -1279,38 +1249,31 @@ export class CasesPage extends RoutingRulePage {
   public async openQueueType() {
     await this.Page.waitForSelector(AgentChatConstants.CSHQueue);
     await this.Page.focus(AgentChatConstants.CSHQueue);
-    await this.Page.click(AgentChatConstants.CSHQueue, { force: true });
+    await this.Page.click(AgentChatConstants.CSHQueue, {force: true});
     await this.waitForDomContentLoaded();
   }
 
   public async checkQueueType() {
-    await this.waitForDomContentLoaded();
+    await this.waitForDomContentLoaded();    
     await this.Page.waitForSelector(SelectorConstants.SortQueueType);
     await this.Page.focus(SelectorConstants.SortQueueType);
-    await this.Page.click(SelectorConstants.SortQueueType, { force: true });
+    await this.Page.click(SelectorConstants.SortQueueType, {force: true});
     await this.waitForDomContentLoaded();
     expect(await this.Page.waitForSelector(SelectorConstants.MessagingQueue)).toBeTruthy();
     expect(await this.Page.waitForSelector(SelectorConstants.EntityQueue)).toBeTruthy();
     expect(await this.Page.waitForSelector(SelectorConstants.VoiceQueue)).toBeTruthy();
   }
 
-  public async fillcasesDetailsPresenceAvailble() {
-    this.newCasesTestData = `${this.newCSHCaseData.Name
-      }_${new Date().getTime()}`;
-    await this.waitForDomContentLoaded();
-    await this.fillInputData(CustomConstants.CaseTitle, this.newCasesTestData);
-  }
-
-  public async SelectCreatedCaseItem(CaseName: string) {
+  public async SelectCreatedCaseItem(CaseName:string) {
     await this.Page.click(SelectorConstants.CSHDashboardSelector);
     await this.Page.waitForSelector(SelectorConstants.RefreshAllTab);
     await this.Page.click(SelectorConstants.RefreshAllTab);
-    const const1 = SelectorConstants.CaseItemSelector + `/following::a[text()='${CaseName}']`;
-    await this.Page.click(SelectorConstants.CaseItemSelector + `/following::a[text()='${CaseName}']`);
+    const const1=SelectorConstants.CaseItemSelector+`/following::a[text()='${CaseName}']`;
+    await this.Page.click(SelectorConstants.CaseItemSelector+`/following::a[text()='${CaseName}']`);
     await this.Page.click(SelectorConstants.CaseRefreshSelector);
   }
-
-  public async VerifyParentCase(CaseName: string, Parentcase: string) {
+  
+  public async VerifyParentCase(CaseName:string,Parentcase:string) {
     await this.Page.waitForTimeout(TimeoutConstants.FiveSecondsDelay);// waiting for the rule getting updated in parent case field
     await this.Page.click(SelectorConstants.CaseRefreshSelector);
     await this.Page.waitForTimeout(TimeoutConstants.FiveSecondsDelay);// waiting for the rule getting updated in parent case field
@@ -1318,7 +1281,8 @@ export class CasesPage extends RoutingRulePage {
     await this.Page.click(SelectorConstants.CaseDetailsTabSelector);
     const ParentCaseName = await this.Page.waitForSelector(SelectorConstants.ParentCaseText);
     const currentName = await ParentCaseName.textContent();
-    if (currentName == Parentcase) {
+    if(currentName==Parentcase)
+    {
       return true;
     }
   }
@@ -1327,62 +1291,34 @@ export class CasesPage extends RoutingRulePage {
     await this.Page.waitForSelector(SelectorConstants.CaseDetailsTabSelector);
     await this.Page.click(SelectorConstants.CaseDetailsTabSelector);
     await this.Page.waitForSelector(SelectorConstants.ParentCaseSelector);
-    await this.fillLookupField(SelectorConstants.ParentCaseSelector, SelectorConstants.ParentCaseSearchSelector, SelectorConstants.ParentLookUpvalueTake, AgentChatConstants.ParentCaseName1);
+    await this.fillLookupField(SelectorConstants.ParentCaseSelector,SelectorConstants.ParentCaseSearchSelector,SelectorConstants.ParentLookUpvalueTake,AgentChatConstants.ParentCaseName1);
   }
-
-  public async fillcasesDetailsForSkill(skill: string) {
+  
+  public async fillcasesDetailsForSkill(skill:string) {
     this.newCasesTestData = `${this.newCSHCaseData.Name
       }_${new Date().getTime()}`;
-      await this.waitForDomContentLoaded();
-      await this.fillInputData(CustomConstants.CaseTitle, this.newCasesTestData);
-      await this.fillLookupField(
-        CustomConstants.CustomerName,
-        CustomConstants.CustomerSearchButton,
-        CustomConstants.CustomerLookupValue,
-        this.newAccountTestData
-      );
-      await this.Page.click(CustomConstants.Save);
-      await this.waitForSaveComplete();
-      await this.Page.click(CustomConstants.SaveandRoute);
-      await this.waitForDomContentLoaded();
-      await this.Page.click(CustomConstants.Route);
-  }
 
-  public async fillcasesDetailsNewCase() {
-    this.newCasesTestData = `${this.newCSHCaseDataCase.Name
-      }_${new Date().getTime()}`;
     await this.waitForDomContentLoaded();
     await this.fillInputData(CustomConstants.CaseTitle, this.newCasesTestData);
+
     await this.fillLookupField(
       CustomConstants.CustomerName,
       CustomConstants.CustomerSearchButton,
       CustomConstants.CustomerLookupValue,
       this.newAccountTestData
     );
+    await this.Page.click(CustomConstants.PriorityExpandclick);
+    await this.Page.selectOption(
+      CustomConstants.PriorityType,
+      PriorityType.High as string
+    );
+    await this.fillInputData(CustomConstants.CaseSkill, skill);
     await this.Page.click(CustomConstants.Save);
     await this.waitForSaveComplete();
-    await this.Page.click(CustomConstants.SaveandRoute);
-    await this.waitForDomContentLoaded();
-    await this.Page.click(CustomConstants.Route);
-    await this.waitForDomContentLoaded();
-    await this.Page.waitForTimeout(60000);
-  }
-
-  public async navigatetodiagnostics() {
-    await this.Page.click(CustomConstants.Diagnostics);
-    await this.waitForSaveComplete();
-    await this.fillInputData(CustomConstants.DiagnosticsearchText, this.newCasesTestData);
     await this.Page.waitForTimeout(Constants.DefaultAverageTimeout);
     await this.waitForDomContentLoaded();
-    await this.Page.click(CustomConstants.Diagnosticsearch);
-    await this.Page.waitForSelector(CustomConstants.selectcase);
-    await this.Page.click(CustomConstants.selectcase);
-    await this.Page.click(SelectorConstants.DiagnosticsEdit);
-    await this.Page.waitForSelector(SelectorConstants.RouteToQueue);
-    await this.Page.click(SelectorConstants.RouteToQueue);
-    await this.Page.hover(SelectorConstants.RouteToQueueHover);
   }
-  public async fillcasesDetailsForMultipleSkills(skillOne: string, SkillTwo: string) {
+  public async fillcasesDetailsForMultipleSkills(skillOne:string, SkillTwo:string) {
     this.newCasesTestData = `${this.newCSHCaseData.Name
       }_${new Date().getTime()}`;
 
@@ -1408,26 +1344,11 @@ export class CasesPage extends RoutingRulePage {
     await this.waitForDomContentLoaded();
   }
 
-  public async navigateToUsersTabViewNew() {
-    await this.Page.click(SelectorConstants.UsersMenuItem);
-    await this.Page.waitForTimeout(Constants.DefaultTimeout);
-    await this.fillInputData(SelectorConstants.UserInputUsers, SelectorConstants.TransferUserAgent);
-    await this.Page.click(SelectorConstants.UserSearchIconUsers);
-    await this.Page.keyboard.press(Constants.EnterKey);
-    await this.waitForDomContentLoaded();
-    await this.Page.click(SelectorConstants.selectuser);
-    await this.Page.click(SelectorConstants.omnichanneltab);
-    await this.Page.hover(SelectorConstants.availablemouseover)
-    await this.Page.click(SelectorConstants.availablecancel);
-    await this.fillInputData(SelectorConstants.UserInput1, SelectorConstants.available);
-    await this.Page.waitForTimeout(180000);
-  }
-
   public async ValidateInboxCaseDateandLatestonTopSorting() {
-    await this.waitUntilSelectorIsVisible(SelectorConstants.ConversationDropdown, AgentChatConstants.Four, null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
+    await this.waitUntilSelectorIsVisible(SelectorConstants.ConversationDropdown,AgentChatConstants.Four, null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
     await this._page.click(SelectorConstants.ConversationDropdown);
-    const caseitem = await this.Page.waitForSelector(SelectorConstants.InboxCaseItem);
-    await this.waitUntilSelectorIsVisible(SelectorConstants.InboxSortItem, AgentChatConstants.Four,
+    const caseitem=await this.Page.waitForSelector(SelectorConstants.InboxCaseItem);
+    await this.waitUntilSelectorIsVisible(SelectorConstants.InboxSortItem,AgentChatConstants.Four,
       null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
     await this.Page.hover(SelectorConstants.InboxSortItem);
     expect(await this.Page.waitForSelector(SelectorConstants.InboxSortLatestonTop)).toBeTruthy();
@@ -1437,233 +1358,109 @@ export class CasesPage extends RoutingRulePage {
   }
 
   public async navigateToInboxCaseItem() {
-    await this.waitUntilSelectorIsVisible(SelectorConstants.ConversationDropdown, AgentChatConstants.Four, null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
+    await this.waitUntilSelectorIsVisible(SelectorConstants.ConversationDropdown,AgentChatConstants.Four, null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
     await this._page.click(SelectorConstants.ConversationDropdown);
-    await this.waitUntilSelectorIsVisible(SelectorConstants.InboxCaseItem, AgentChatConstants.Four,
+    await this.waitUntilSelectorIsVisible(SelectorConstants.InboxCaseItem,AgentChatConstants.Four,
       null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
     await this._page.click(SelectorConstants.InboxCaseItem);
   }
 
   public async ValidateInboxCategoryToday() {
-    const category = await this.Page.waitForSelector(SelectorConstants.InboxTodayCategory);
-    const Todaycategory = await category.textContent();
-    if (Todaycategory == "Today") { return true }
+   const category= await this.Page.waitForSelector(SelectorConstants.InboxTodayCategory);
+   const Todaycategory=await category.textContent();
+   if(Todaycategory=="Today")
+   {return true}
   }
 
   public async ValidateInboxFooterTime() {
-    const timefooter = await this.Page.waitForSelector(SelectorConstants.InboxFooterTime);
-    const inboxtime = await timefooter.textContent();
-    if (inboxtime.includes("Last updated at"))
-      return true;
+   const timefooter= await this.Page.waitForSelector(SelectorConstants.InboxFooterTime);
+   const inboxtime=await timefooter.textContent();
+   if(inboxtime.includes("Last updated at")) 
+     return true;
   }
 
   public async ValidateInboxFooterItemCount() {
-    const countfooter = await this.Page.waitForSelector(SelectorConstants.InboxFooterItemCount);
-    const inboxcount = await countfooter.textContent();
+    const countfooter= await this.Page.waitForSelector(SelectorConstants.InboxFooterItemCount);
+    const inboxcount=await countfooter.textContent();
     return /\d/.test(inboxcount);
-  }
+   }
 
-  public async GetCaseNumber() {
-    await this.waitUntilSelectorIsVisible(SelectorConstants.InboxCaseNumber, AgentChatConstants.Four, null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
-    const casenumber = await this._page.$eval(SelectorConstants.InboxCaseNumber, el => (el as HTMLInputElement).value);
+   public async GetCaseNumber()
+   {
+    await this.waitUntilSelectorIsVisible(SelectorConstants.InboxCaseNumber,AgentChatConstants.Four, null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
+    const casenumber=await this._page.$eval(SelectorConstants.InboxCaseNumber, el => (el as HTMLInputElement).value);
     return casenumber;
-  }
+   }
 
-  public async GetCasePriority() {
-    const priority = await this.Page.waitForSelector(SelectorConstants.CasePriority);
-    const casepriority = priority.textContent();
+   public async GetCasePriority()
+   {
+    const priority= await this.Page.waitForSelector(SelectorConstants.CasePriority);
+    const casepriority=priority.textContent();
     return casepriority;
-  }
+   }
 
-  public async GetCustomerName() {
+   public async GetCustomerName()
+   {
     return this.newAccountTestData;
-  }
+   }
 
-  public async GetCaseName() {
+   public async GetCaseName()
+   {
     return this.newAccountTestData;
-  }
+   }
 
-  public async ValidateInboxCardStyling(casenumber: string, casepriority: string, customerName: string, casename: string) {
-    expect(await this.Page.$eval(SelectorConstants.InboxCardCase, e => getComputedStyle(e).backgroundColor)).toBeTruthy();
-    const casenameInitial = await this.Page.waitForSelector(SelectorConstants.InboxCardCase);
-    const inboxcasenameInitial = casenameInitial.textContent();
+   public async ValidateInboxCardStyling(casenumber:string,casepriority:string,customerName:string,casename:string){
+    expect(await this.Page.$eval(SelectorConstants.InboxCardCase,e=>getComputedStyle(e).backgroundColor)).toBeTruthy();
+    const casenameInitial=await this.Page.waitForSelector(SelectorConstants.InboxCardCase);
+    const inboxcasenameInitial=casenameInitial.textContent();
     expect(inboxcasenameInitial).toBeTruthy();
     expect(await this.Page.waitForSelector(SelectorConstants.InboxCardline2Wrench)).toBeTruthy();
-    const casenumberstring = await this.Page.waitForSelector(SelectorConstants.InboxCardline2CaseNumber);
-    const inboxcasenumber = await casenumberstring.textContent();
-    expect((inboxcasenumber == casenumber) ? true : false).toBeTruthy();
-    const casecustomer = await this.Page.waitForSelector(SelectorConstants.InboxCustomer);
-    const inboxcasecustomer = await casecustomer.textContent();
+    const casenumberstring=await this.Page.waitForSelector(SelectorConstants.InboxCardline2CaseNumber);
+    const inboxcasenumber=await casenumberstring.textContent();
+    expect((inboxcasenumber==casenumber) ? true : false).toBeTruthy();
+    const casecustomer= await this.Page.waitForSelector(SelectorConstants.InboxCustomer);
+    const inboxcasecustomer=await casecustomer.textContent(); 
     expect(((await inboxcasecustomer).includes(customerName)) ? true : false).toBeTruthy();
-    const inboxcasepriority = await this.Page.waitForSelector(SelectorConstants.InboxCardCasePriority);
-    const priority = await inboxcasepriority.textContent();
-    expect((priority == casepriority) ? true : false).toBeTruthy();
-    const dot = await this.Page.waitForSelector(SelectorConstants.InboxdotSeperator);
-    const dotseperator = await dot.innerText();
+    const inboxcasepriority=await this.Page.waitForSelector(SelectorConstants.InboxCardCasePriority);
+    const priority=await inboxcasepriority.textContent();
+    expect((priority==casepriority) ? true : false).toBeTruthy();
+    const dot=await this.Page.waitForSelector(SelectorConstants.InboxdotSeperator);
+    const dotseperator=await dot.innerText();
     expect(dotseperator).toBeTruthy();
-    const inboxcasestatus = await this.Page.waitForSelector(SelectorConstants.InboxCardCasePriority);
+    const inboxcasestatus=await this.Page.waitForSelector(SelectorConstants.InboxCardCasePriority);
     expect(await inboxcasestatus.textContent()).toBeTruthy();
-    const inboxcaseModified = await this.Page.waitForSelector(SelectorConstants.InboxCaseModified);
+    const inboxcaseModified=await this.Page.waitForSelector(SelectorConstants.InboxCaseModified);
     expect(await inboxcaseModified.textContent()).toBeTruthy();
-    const caseellipsis = await this.Page.waitForSelector(`${SelectorConstants.InboxstyleEllipsis}//span[contains(text(),"${casename}")]`);
+    const caseellipsis=await this.Page.waitForSelector(`${SelectorConstants.InboxstyleEllipsis}//span[contains(text(),"${casename}")]`);
     expect(caseellipsis).toBeTruthy();
-  }
+   }
 
-  public async ValidateInboxCardSelectionStyles() {
+   public async ValidateInboxCardSelectionStyles(){
     await this._page.hover(SelectorConstants.InboxCustomer);
     expect(await this.Page.waitForSelector(SelectorConstants.InboxOpenNewTab)).toBeTruthy();
     await this.Page.click(SelectorConstants.InboxCustomer);
     await this.Page.click(SelectorConstants.InboxOpenNewTab);
-    await this.waitUntilSelectorIsVisible(SelectorConstants.CaseInboxPriorityField, AgentChatConstants.Four, null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
+    await this.waitUntilSelectorIsVisible(SelectorConstants.CaseInboxPriorityField,AgentChatConstants.Four, null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
     await this._page.click(SelectorConstants.CaseInboxPriorityField);
     await this.Page.selectOption(
       SelectorConstants.CaseInboxPriorityField,
       SelectorConstants.InboxCasePriorityNone as string
-    );
+      );
     await this.Page.click(SelectorConstants.SavePersonalQuickRepliesButton);
     await this.waitForSaveComplete();
     await this.inboxSection();
     await this.Page.waitForSelector(AgentChatConstants.RefreshInbox);
     await this.Page.click(AgentChatConstants.RefreshInbox);
-    const inboxcasestatus = await this.Page.waitForSelector(SelectorConstants.InboxCardCasePriority);
+    const inboxcasestatus=await this.Page.waitForSelector(SelectorConstants.InboxCardCasePriority);
     expect(await inboxcasestatus.textContent()).toBeTruthy();
-    const inboxcaseModified = await this.Page.waitForSelector(SelectorConstants.InboxCaseModified);
+    const inboxcaseModified=await this.Page.waitForSelector(SelectorConstants.InboxCaseModified);
     expect(await inboxcaseModified.textContent()).toBeTruthy();
     await this.ValidateInboxFooterItemCount();
     await this.ValidateInboxFooterTime();
-  }
+   }
 
-  public async inboxSection() {
+   public async inboxSection() {
     await this.Page.waitForSelector(SelectorConstants.Inbox);
     await this.Page.click(SelectorConstants.Inbox);
   }
-
-  public async fillcasesDetailsNew() {
-    this.newCasesTestData = `${this.newCSHCaseData.Name
-      }_${new Date().getTime()}`;
-    await this.waitForDomContentLoaded();
-    await this.fillInputData(CustomConstants.CaseTitle, this.newCasesTestData);
-    await this.fillLookupField(
-      CustomConstants.CustomerName,
-      CustomConstants.CustomerSearchButton,
-      CustomConstants.CustomerLookupValue,
-      this.newAccountTestData
-    );
-    await this.Page.click(CustomConstants.Save);
-    await this.waitForSaveComplete();
-    await this.Page.waitForSelector(SelectorConstants.UserAssignCasebutton);
-    await this.Page.focus(SelectorConstants.UserAssignCasebutton);
-    await this.Page.click(SelectorConstants.UserAssignCasebutton, { force: true });
-    await this.Page.selectOption(
-      SelectorConstants.AssignSelectToOption, "1"
-    );
-    await this.fillInputData(SelectorConstants.UserInput, SelectorConstants.TransferUserAgentOffline);
-    await this.Page.click(SelectorConstants.UserSearchIcon);
-    await this.waitForDomContentLoaded();
-    await this.Page.waitForTimeout(5000);
-    await this.Page.keyboard.press('Tab');
-    await this.Page.waitForTimeout(Constants.DefaultAverageTimeout)
-    await this.Page.keyboard.press('Tab');
-    await this.Page.waitForTimeout(Constants.DefaultAverageTimeout)
-    await this.Page.keyboard.press('Tab');
-    await this.Page.keyboard.press('Tab');
-    await this.Page.waitForTimeout(Constants.DefaultAverageTimeout)
-    await this.Page.keyboard.press('Enter');
-    await this.Page.click(SelectorConstants.Assignpopbtn);
-  }
-
-  public async navigateToUsersTabView() {
-    await this.Page.click(SelectorConstants.UsersMenuItem);
-    await this.Page.waitForTimeout(Constants.DefaultTimeout);
-    await this.fillInputData(SelectorConstants.UserInputUsers, SelectorConstants.TransferUserAgentOffline);
-    await this.Page.click(SelectorConstants.UserSearchIconUsers);
-    await this.waitForDomContentLoaded();
-    await this.Page.click(SelectorConstants.selectuserOffline);
-    await this.Page.click(SelectorConstants.omnichanneltab);
-    await this.Page.hover(SelectorConstants.availablemouseover)
-    await this.Page.click(SelectorConstants.availablecancel);
-    await this.fillInputData(SelectorConstants.UserInput1, SelectorConstants.Offline);
-    await this.Page.keyboard.press('Tab');
-    await this.Page.waitForTimeout(Constants.DefaultAverageTimeout)
-    await this.Page.keyboard.press('Tab');
-    await this.Page.waitForTimeout(Constants.DefaultAverageTimeout)
-    await this.Page.keyboard.press('Enter');
-    await this.Page.click(SelectorConstants.userssave);
-    await this.Page.waitForTimeout(180000);
-  }
-
-  public async fillInboxCustomerGroupingCasesDetails() {
-    this.newCasesTestData = `${this.newCSHCaseData.Name
-      }_${new Date().getTime()}`;
-    await this.waitForDomContentLoaded();
-    await this.fillInputData(CustomConstants.CaseTitle, this.newCasesTestData);
-    await this.fillLookupField(
-      CustomConstants.CustomerName,
-      CustomConstants.CustomerSearchButton,
-      CustomConstants.CustomerLookupValue,
-      this.newAccountTestData
-    );
-    await this.Page.click(CustomConstants.PriorityExpandclick);
-    await this.Page.selectOption(
-      CustomConstants.PriorityType,
-      PriorityType.Medium as string
-    );
-    await this.Page.click(CustomConstants.Save);
-    await this.waitForSaveComplete();
-    await this.Page.waitForTimeout(Constants.DefaultAverageTimeout);
-    await this.waitForDomContentLoaded();
-  }
-
-  public async fillcasesDetailswithCaseNbr(CaseName: string) {
-    //this method wont create case nbr, here we just parameterise the casenbr instead of creation
-
-    await this.waitForDomContentLoaded();
-    await this.fillInputData(CustomConstants.CaseTitle, CaseName);
-
-    await this.fillLookupField(
-      CustomConstants.CustomerName,
-      CustomConstants.CustomerSearchButton,
-      CustomConstants.CustomerLookupValue,
-      this.newAccountTestData
-    );
-    await this.Page.click(CustomConstants.Save);
-    await this.waitForSaveComplete();
-    await this.waitForDomContentLoaded();
-  }
-
-  public async getCaseName() {
-    await this.fillInboxCustomerGroupingCasesDetails();
-    return this.newCasesTestData;
-  }
-
-  //loginToInboxUserDetails
-  public async loginAndNavigateToCSHAppForInboxCustomerGrouping() {
-    await this.loginToInboxUserDetails();
-    await this.navigateToCSHApp();
-    await this.waitForDomContentLoaded();
-  }
-
-  //Login email and password for Agent
-  public async loginToInboxUserDetails() {
-    const email = TestSettings.InboxUser;
-    const pwd = TestSettings.DefaultPassword;
-    await this.navigateToOrgUrlAndSignIn(email, pwd);
-    await this.waitForDomContentLoaded();
-  }
-
-
-  public async changePriorityToHigh() {
-    await this.Page.click(CustomConstants.PriorityExpandclick);
-    await this.Page.selectOption(
-      CustomConstants.PriorityType,
-      PriorityType.High as string
-    );
-  }
-
-  public async changeToActieCasesinDropdown() {
-    await this.Page.click(CustomConstants.TypesofCases);
-    await this.Page.waitForSelector(CustomConstants.DropdownOption1)
-    await this.Page.click(CustomConstants.DropdownOption1);
-  }
-
 }

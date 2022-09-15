@@ -170,7 +170,7 @@ export class AgentPage extends BasePage {
     catch { }
     await this.navigateToOrgUrlAndSignIn(email, password);
     await this.navigateToCustomerService();
-    await this.waitForAgentStatusIcon();
+    //await this.waitForAgentStatusIcon();
     await this.expandConversationSessionPanel();
     await this.closeGlobalSearchPopUp();
   }

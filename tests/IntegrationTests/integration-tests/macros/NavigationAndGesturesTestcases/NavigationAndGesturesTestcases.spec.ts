@@ -1,10 +1,11 @@
 import { BrowserContext, Page } from "playwright";
 import { Constants } from "../../common/constants";
 import { LiveChatPage } from "../../../pages/LiveChat";
-import { Macros } from "../../macros/pages/macrosAdmin";
+import { Macros } from "../../macropages/macrosAdmin";
 import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.page";
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
+import { AgentChatConstants } from "Utility/Constants";
 
 describe("Navigation and Gestures - ", () => {
     let adminContext: BrowserContext;
@@ -42,20 +43,23 @@ describe("Navigation and Gestures - ", () => {
     ///<summary>        
     it("Test Case 2045186: [Navigation and Gestures] : Verify if records can be opened as sessions from case views", async () => {
         agentPage = await agentContext.newPage();
+        let casetitle;
         try {
             //Login as admin and create two cases and initiate it and verify
-            await adminStartPage.goToOrgUrlAndSignIn(TestSettings.AdminAccountEmail, TestSettings.AdminAccountPassword);
+            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.AgentEmailSecond, TestSettings.AdminAccountPassword);
             await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-            await macrosAdminPage.createCase(Constants.CaseTitleName);
+            casetitle = await macrosAdminPage.createCaseForNandG(Constants.CaseTitleName);
             //Initiate session and validate
             await macrosAdminPage.openAppLandingPage(adminPage);
             await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+            await adminStartPage.waitUntilSelectorIsVisible(AgentChatConstants.AgentScreenAvailablitySelector,
+                AgentChatConstants.Five, adminStartPage.Page, Constants.FourThousandsMiliSeconds);
             await macrosAdminPage.GoToCases();
-            await macrosAdminPage.InitiateSession(Constants.CaseTitleName, Constants.CaseLink1);
-            await macrosAdminPage.ValidateThePage(Constants.CloseSession1);
+            await macrosAdminPage.InitiateNandGSession(casetitle, casetitle);
+            await macrosAdminPage.ValidateNandGThePage(casetitle);
         }
         finally {
-            await macrosAdminPage.deleteCaseInCSH(adminPage, adminStartPage, Constants.CaseTitleName);
+            await macrosAdminPage.deleteCaseInCSH(adminPage, adminStartPage, casetitle);
         }
     });
 
@@ -65,20 +69,23 @@ describe("Navigation and Gestures - ", () => {
     ///</summary>
     it("Test Case 2045190: [Navigation and Gestures] : Verify if records can be opened as tabs from case views)", async () => {
         agentPage = await agentContext.newPage();
+        let casetitle;
         try {
             //Login as admin and create case
-            await adminStartPage.goToOrgUrlAndSignIn(TestSettings.AdminAccountEmail, TestSettings.AdminAccountPassword);
+            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.AgentEmailSecond, TestSettings.AdminAccountPassword);
             await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-            await macrosAdminPage.createCase(Constants.CaseTitleName);
+            casetitle = await macrosAdminPage.createCaseForNandG(Constants.CaseTitleName);
             //Initiate session 
             await macrosAdminPage.openAppLandingPage(adminPage);
-            await adminStartPage.goToCustomerServiceWorkspace();
+            await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+            await adminStartPage.waitUntilSelectorIsVisible(AgentChatConstants.AgentScreenAvailablitySelector,
+                AgentChatConstants.Five, adminStartPage.Page, Constants.FourThousandsMiliSeconds);
             await macrosAdminPage.GoToCases();
-            await macrosAdminPage.InitiateTab(Constants.CaseTitleName, Constants.CaseLink1);
-            await macrosAdminPage.ValidateThePage(Constants.CloseTab);
+            await macrosAdminPage.InitiateNandGTab(casetitle, casetitle);
+            await macrosAdminPage.ValidateClosePage(casetitle);
         }
         finally {
-            await macrosAdminPage.deleteCaseInCSH(adminPage, adminStartPage, Constants.CaseTitleName);
+            await macrosAdminPage.deleteCaseInCSH(adminPage, adminStartPage, casetitle);
         }
     });
 
@@ -88,22 +95,26 @@ describe("Navigation and Gestures - ", () => {
     ///<summary> 
     it("Test Case 2045193: [Navigation and Gestures] : Verify if records can be opened as tabs from queue views", async () => {
         agentPage = await agentContext.newPage();
+        let casetitle;
         try {
-            await adminStartPage.goToOrgUrlAndSignIn(TestSettings.AdminAccountEmail, TestSettings.AdminAccountPassword);
+            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.AgentEmailSecond, TestSettings.AdminAccountPassword);
             await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
             // Create a public Queue
             await macrosAdminPage.GoToServiceManagement();
             await macrosAdminPage.CreatePublicQueue(Constants.QueueTitle);
             await macrosAdminPage.GoToServices();
-            await macrosAdminPage.createCase(Constants.CaseTitleName);
-            await macrosAdminPage.AddQueueToExistingCases(Constants.CaseTitleName, Constants.QueueTitle);
+            casetitle = await macrosAdminPage.createCaseForNandG(Constants.CaseTitleName);
+            await macrosAdminPage.AddQueueToExistingCases(casetitle, Constants.QueueTitle);
             await macrosAdminPage.openAppLandingPage(adminPage);
-            await adminStartPage.goToCustomerServiceWorkspace();
+            await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+            await adminStartPage.waitUntilSelectorIsVisible(AgentChatConstants.AgentScreenAvailablitySelector,
+                AgentChatConstants.Five, adminStartPage.Page, Constants.FourThousandsMiliSeconds);
             await macrosAdminPage.casesLinkedToQueue(Constants.QueueTitleText);
-            await macrosAdminPage.ValidateThePage(Constants.CaseLink1);
+            await macrosAdminPage.ValidateTheQueueTitle(Constants.QueueNameText);
+            //await macrosAdminPage.ValidateNandGThePage(Constants.CaseLink1);
         }
         finally {
-            await macrosAdminPage.deleteCase(adminPage, adminStartPage, Constants.CaseTitleName);
+            await macrosAdminPage.deleteCase(adminPage, adminStartPage, casetitle);
             await macrosAdminPage.deleteQueue(adminPage, adminStartPage, Constants.QueueTitle);
         }
     });
@@ -115,21 +126,22 @@ describe("Navigation and Gestures - ", () => {
     it("Test Case 2045196: [Navigation and Gestures] : Verifiy if records can be opened in line from views", async () => {
         agentPage = await agentContext.newPage();
         liveChatPage = new LiveChatPage(await liveChatContext.newPage());
+        let casetitle;
         try {
             // Login as Admin and create a case
-            await adminStartPage.goToOrgUrlAndSignIn(TestSettings.AdminAccountEmail, TestSettings.AdminAccountPassword);
+            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.AgentEmailSecond, TestSettings.AdminAccountPassword);
             await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-            await macrosAdminPage.createCase(Constants.CaseTitleName);
+            casetitle = await macrosAdminPage.createCaseForNandG(Constants.CaseTitleName);
             // Navigate to CSW and validate page
             await macrosAdminPage.openAppLandingPage(adminPage);
             await adminStartPage.goToCustomerServiceWorkspace();
             await macrosAdminPage.GoToCases();
-            await macrosAdminPage.InitiateSession(Constants.CaseTitleName, Constants.CaseLink1);
-            await macrosAdminPage.ValidateThePage(Constants.CloseSession1);
-            await macrosAdminPage.ValidateThePage(Constants.CaseInTab);
+            await macrosAdminPage.InitiateNandGSession(casetitle, casetitle);
+            await macrosAdminPage.ValidateNandGThePage(casetitle);
+            await macrosAdminPage.ValidateClosePageinTab(casetitle);
         }
         finally {
-            await macrosAdminPage.deleteCase(adminPage, adminStartPage, Constants.CaseTitleName);
+            await macrosAdminPage.deleteCase(adminPage, adminStartPage, casetitle);
         }
     });
 });

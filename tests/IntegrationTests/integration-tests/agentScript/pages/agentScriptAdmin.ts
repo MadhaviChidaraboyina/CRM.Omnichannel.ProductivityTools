@@ -1,16 +1,17 @@
 import { IFrameConstants, MacrosConstants } from "../../../pages/Macros";
-
 import { BasePage } from "../../../pages/BasePage";
 import { Constants } from "../../common/constants";
 import { Iframe } from "../../../pages/Iframe";
 import { Page } from "playwright";
 import { SelectorConstants } from "../../../Utility/Constants";
+import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.page";
 
-export class AgentScript {
+export class AgentScript extends BasePage {
   adminPage: any;
   constant: any;
   basepage: any;
   constructor(page: Page) {
+    super(page);
     this.adminPage = page;
     this.basepage = new BasePage(this.adminPage);
   }
@@ -31,6 +32,25 @@ export class AgentScript {
   }
 
   public async createGenericSessionTemplate(adminPage) {
+    let rnd: any;
+    rnd = this.RandomNumber();
+    await this.adminPage.click(Constants.sessionTemplateLable);
+    try {
+      await this.adminPage.waitForSelector(Constants.SessionTemplate, { timeout: 3000 });
+    }
+    catch {
+      await this.adminPage.click(Constants.NewButton);
+      await this.adminPage.fill(Constants.NameField, Constants.SessionTemplateName);
+      await this.adminPage.fill(Constants.UniqueNameField, Constants.SessionTemplateUniqueName + rnd);
+      await this.adminPage.selectOption(Constants.TypeField, { label: 'Generic' });
+      await this.adminPage.click(Constants.AnchorTabSearchBox);
+      await this.adminPage.click(Constants.AnchorTabSearchIcon);
+      await this.adminPage.click(Constants.AnchorTabSearchResult);
+      await this.adminPage.click(Constants.SaveAndCloseButton);
+    }
+  }
+
+  public async createSessionTemplateWithApplicationTemplate(applicationTemplate: string) {
     await this.adminPage.click(Constants.SessionsSitemapOCBtn);
     try {
       await this.adminPage.waitForSelector(Constants.SessionTemplate, { timeout: 3000 });
@@ -38,57 +58,49 @@ export class AgentScript {
     catch {
       await this.adminPage.click(Constants.NewButton);
       await this.adminPage.fill(Constants.NameField, Constants.SessionTemplateName);
-      await this.adminPage.fill(Constants.UniqueNameField,Constants.SessionTemplateUniqueName);
-      await this.adminPage.selectOption(Constants.TypeField, {label:'Generic'});
+      await this.adminPage.fill(Constants.UniqueNameField, Constants.SessionTemplateUniqueName);
+      await this.adminPage.selectOption(Constants.TypeField, { label: 'Generic' });
       await this.adminPage.click(Constants.AnchorTabSearchBox);
+      await this.adminPage.fill(Constants.AnchorTabInputBox, applicationTemplate);
       await this.adminPage.click(Constants.AnchorTabSearchIcon);
-      await this.adminPage.click(Constants.AnchorTabSearchResult);
+      await this.adminPage.click(Constants.AnchorTabLookupValue.replace("{0}", applicationTemplate));
       await this.adminPage.click(Constants.SaveAndCloseButton);
     }
-    }
+  }
 
-    public async createSessionTemplateWithApplicationTemplate(applicationTemplate: string) {
-        await this.adminPage.click(Constants.SessionsSitemapOCBtn);
-        try {
-            await this.adminPage.waitForSelector(Constants.SessionTemplate, { timeout: 3000 });
-        }
-        catch {
-            await this.adminPage.click(Constants.NewButton);
-            await this.adminPage.fill(Constants.NameField, Constants.SessionTemplateName);
-            await this.adminPage.fill(Constants.UniqueNameField, Constants.SessionTemplateUniqueName);
-            await this.adminPage.selectOption(Constants.TypeField, { label: 'Generic' });
-            await this.adminPage.click(Constants.AnchorTabSearchBox);
-            await this.adminPage.fill(Constants.AnchorTabInputBox, applicationTemplate);
-            await this.adminPage.click(Constants.AnchorTabSearchIcon);
-            await this.adminPage.click(Constants.AnchorTabLookupValue.replace("{0}", applicationTemplate));
-            await this.adminPage.click(Constants.SaveAndCloseButton);
-        }
+  public async verifySessionTemplate(sessionTemplate: string) {
+    await this.adminPage.click(Constants.SessionsSitemapOCBtn);
+    try {
+      await this.adminPage.waitForSelector(Constants.SessionTemplate, { timeout: 3000 });
     }
+    catch {
+      await this.adminPage.fill(SelectorConstants.QuicksearchSMS, sessionTemplate);
+      await this.adminPage.waitForSelector(SelectorConstants.QuicksearchSMSbutton, 2, this.adminPage, Constants.MaxTimeout);
+      await this.adminPage.click(SelectorConstants.QuicksearchSMSbutton);
+      //await this.adminPage.waitForTimeout(1000);
+      const actualTemplateName = await this.adminPage.waitForSelector(SelectorConstants.GridViewFirstRowSecondCell)
+      expect(await actualTemplateName.innerText()).toEqual(sessionTemplate);
+    }
+  }
 
-    public async verifySessionTemplate(sessionTemplate: string) {
-        await this.adminPage.click(Constants.SessionsSitemapOCBtn);
-        try {
-            await this.adminPage.waitForSelector(Constants.SessionTemplate, { timeout: 3000 });
-        }
-        catch {
-            await this.adminPage.fill(SelectorConstants.QuicksearchSMS, sessionTemplate);
-            await this.adminPage.waitForSelector(SelectorConstants.QuicksearchSMSbutton, 2, this.adminPage, Constants.MaxTimeout);
-            await this.adminPage.click(SelectorConstants.QuicksearchSMSbutton);
-            //await this.adminPage.waitForTimeout(1000);
-            const actualTemplateName = await this.adminPage.waitForSelector(SelectorConstants.GridViewFirstRowSecondCell)
-            expect(await actualTemplateName.innerText()).toEqual(sessionTemplate);
-        }
-    }
+  public RandomNumber() {
+    var minm = 100;
+    var maxm = 999;
+    return Math.floor(Math.random() * (maxm - minm + 1)) + minm;
+  }
 
   public async createAgentScript(AgentScriptName: any, AgentScriptUniqueName: any) {
-    await this.adminPage.click(Constants.AgentScriptSitemapOCBtn);
-    try{
-      await this.adminPage.waitForSelector(`//*[@title="` +AgentScriptName  + `"]`, { timeout: 3000 });
+    let rnd: any;
+    rnd = this.RandomNumber();
+    await this.adminPage.waitForSelector(Constants.AgentScriptlabel);
+    await this.adminPage.click(Constants.AgentScriptlabel);
+    try {
+      await this.adminPage.waitForSelector(`//*[@title="` + AgentScriptName + `"]`, { timeout: 3000 });
     }
-    catch{
+    catch {
       await this.adminPage.click(Constants.NewButton);
-      await this.adminPage.fill(Constants.NameField,AgentScriptName);
-      await this.adminPage.fill(Constants.UniqueNameField,AgentScriptUniqueName);
+      await this.adminPage.fill(Constants.NameField, AgentScriptName);
+      await this.adminPage.fill(Constants.UniqueNameField, AgentScriptUniqueName + rnd);
       await this.adminPage.click(Constants.SaveAndCloseButton);
     }
   }
@@ -199,9 +211,20 @@ export class AgentScript {
     await this.adminPage.click(Constants.OkId);
   }
 
-  public async addTwoAgentScriptToSesssionTemplate(AgentScriptName: any, AgentName2: any) {
+  public async InitiateSession(InitiateOne: any, Click: any) {
+    await this.adminPage.waitForSelector(Constants.SessionsSitemapOCBtn);
     await this.adminPage.click(Constants.SessionsSitemapOCBtn);
-    await this.adminPage.click(Constants.SessionTemplate);
+    await this.adminPage.waitForTimeout(3000);
+    await this.adminPage.click(Constants.SearchOption, { timeout: 5000 });
+    await this.adminPage.fill(Constants.SearchOption, InitiateOne);
+    await this.adminPage.waitForTimeout(3000);
+    await this.adminPage.click(Constants.SearchTheView);
+    await this.adminPage.click(Click);
+    await this.adminPage.waitForTimeout(8000);
+  }
+
+  public async addTwoAgentScriptToSesssionTemplate(AgentScriptName: any, AgentScriptName2: any) {
+    await this.adminPage.waitForSelector(Constants.AgentScriptsTab);
     await this.adminPage.click(Constants.AgentScriptsTab);
     await this.adminPage.click(Constants.MoreCommandsForAgentScript);
     await this.adminPage.click(Constants.AddExistingAgentScriptsBtn);
@@ -209,16 +232,15 @@ export class AgentScript {
     await this.adminPage.click(Constants.AgentOneSearchResult);
     await this.adminPage.waitForTimeout(1000);
     await this.adminPage.waitForSelector(Constants.SeleectedAgentScriptSearchResult);
-    await this.adminPage.fill(Constants.AddMoreRecords, AgentName2);
+    await this.adminPage.fill(Constants.AddMoreRecords, AgentScriptName2);
     await this.adminPage.click(Constants.AgentTwoSearchResult);
     await this.adminPage.waitForTimeout(1000);
     await this.adminPage.waitForSelector(Constants.SeleectedAgentScriptSearchResult);
+    await this.adminPage.waitForTimeout(1000);
     await this.adminPage.click(Constants.AddBtn);
-    await this.adminPage.click(Constants.MoreCommandsForAgentScript);
-    await this.adminPage.click(Constants.RefreshAgentScriptsSubGrid);
   }
 
-  public async addStaticValueConditionForExpressionBuilder(LhsValue:any,RhsValue:any) {
+  public async addStaticValueConditionForExpressionBuilder(LhsValue: any, RhsValue: any) {
     const parentIframe: Page = await Iframe.GetIframe(
       this.adminPage,
       IFrameConstants.BuildExpressionParentIframe
@@ -324,62 +346,62 @@ export class AgentScript {
 
   public async sessionBuilder() {
     await this.adminPage.click(Constants.SessionsSitemapOCBtn);
-    await this.adminPage.click(Constants.SessionTemplateForSessionBuilder);
-    await this.adminPage.click(Constants.AgentScriptTabList);
+    //await this.adminPage.click(Constants.SessionTemplateForSessionBuilder);
+    //await this.adminPage.click(Constants.AgentScriptTabList);
   }
 
   public async associateSessionTemplateToaWorkStream() {
-    await this.adminPage.click(Constants.WorkStreamSitemapOCBtn); 
+    await this.adminPage.click(Constants.WorkStreamSitemapOCBtn);
     await this.adminPage.click(Constants.WorkStream);
     await this.adminPage.click(Constants.TemplatesTab);
     await this.adminPage.click(Constants.LookupSessionTemplate);
     await this.adminPage.click(Constants.SessionSearchResult);
-    await this.adminPage.click(Constants.SaveAndCloseButton); 
+    await this.adminPage.click(Constants.SaveAndCloseButton);
     await this.adminPage.waitForTimeout(1000);
-    }
-
-    public async addDefaultSessionTemplateToWorkStream() {
-        await this.adminPage.click(Constants.WorkStreamSitemapOCBtn);
-        await this.adminPage.click(Constants.WorkStream);
-        await this.adminPage.click(Constants.TemplatesTab);
-        await this.adminPage.click(Constants.LookupSessionTemplate);
-        await this.adminPage.click(Constants.SessionSearchResultDefault);
-        await this.adminPage.click(Constants.SaveAndCloseButton);
-        //await this.adminPage.waitForTimeout(1000);
-    }
-
-  public async goToApps(){
-    await this.adminPage.click(Constants.LandingPage); 
   }
 
-  public async addAgentScriptTitle(agentscriptStepActiontype : string){
+  public async addDefaultSessionTemplateToWorkStream() {
+    await this.adminPage.click(Constants.WorkStreamSitemapOCBtn);
+    await this.adminPage.click(Constants.WorkStream);
+    await this.adminPage.click(Constants.TemplatesTab);
+    await this.adminPage.click(Constants.LookupSessionTemplate);
+    await this.adminPage.click(Constants.SessionSearchResultDefault);
+    await this.adminPage.click(Constants.SaveAndCloseButton);
+    //await this.adminPage.waitForTimeout(1000);
+  }
+
+  public async goToApps() {
+    await this.adminPage.click(Constants.LandingPage);
+  }
+
+  public async addAgentScriptTitle(agentscriptStepActiontype: string) {
     await this.adminPage.click(Constants.AgentScriptSitemapOCBtn);
     await this.adminPage.click(Constants.AgentScript);
     await this.adminPage.click(Constants.AgentScriptStepTitle);
     await this.adminPage.click(Constants.NewAgentScriptStep);
     //Time Delay for filling AgentScriptName
     await this.adminPage.waitForTimeout(3000);
-    await this.adminPage.fill(Constants.AgentScriptStepNameField,Constants.AgentScriptStepName);
-    await this.adminPage.waitForSelector(Constants.AgentscriptstepUniquenamefield,{timeout:3000});
-    await this.adminPage.fill(Constants.AgentscriptstepUniquenamefield,Constants.AgentscriptUniquename);
+    await this.adminPage.fill(Constants.AgentScriptStepNameField, Constants.AgentScriptStepName);
+    await this.adminPage.waitForSelector(Constants.AgentscriptstepUniquenamefield, { timeout: 3000 });
+    await this.adminPage.fill(Constants.AgentscriptstepUniquenamefield, Constants.AgentscriptUniquename);
     //Time Delay for filling Order
     await this.adminPage.waitForTimeout(4000);
     await this.adminPage.click(Constants.AgentscriptStepOrderfield);
-    await this.adminPage.fill(Constants.AgentscriptStepOrderfield,Constants.AgentscriptStepOrder);
+    await this.adminPage.fill(Constants.AgentscriptStepOrderfield, Constants.AgentscriptStepOrder);
     //Time Delay for Clicking Selector Step
     await this.adminPage.waitForTimeout(4000);
-    switch(agentscriptStepActiontype){
+    switch (agentscriptStepActiontype) {
       case Constants.SelectOptionText:
         await this.adminPage.click(Constants.AgentscriptSelectorStep);
-        const textActiontype=await this.adminPage.$(Constants.AgentscriptSelectorStep);
+        const textActiontype = await this.adminPage.$(Constants.AgentscriptSelectorStep);
         textActiontype?.selectOption(Constants.SelectOptionText);
         await this.adminPage.keyboard.press(Constants.TabKeyboardbutton);
-        await this.adminPage.waitForSelector(Constants.TextAreaInstruction,{timeout:3000});
-        await this.adminPage.fill(Constants.TextAreaInstruction,Constants.TextInstructionValue);
+        await this.adminPage.waitForSelector(Constants.TextAreaInstruction, { timeout: 3000 });
+        await this.adminPage.fill(Constants.TextAreaInstruction, Constants.TextInstructionValue);
         break;
 
       case Constants.SelectOptionMacro:
-        const macroActiontype=await this.adminPage.$(Constants.AgentscriptSelectorStep);
+        const macroActiontype = await this.adminPage.$(Constants.AgentscriptSelectorStep);
         await macroActiontype?.selectOption(Constants.SelectOptionMacro);
         await this.adminPage.keyboard.press(Constants.TabKeyboardbutton);
         await this.adminPage.click(Constants.TargetMacroLookupResult);
@@ -388,11 +410,11 @@ export class AgentScript {
         await this.adminPage.keyboard.press(Constants.TabKeyboardbutton);
         break;
     }
-    await this.adminPage.waitForSelector(Constants.AgentscriptStepSaveAndclose,{timeout:3000});
+    await this.adminPage.waitForSelector(Constants.AgentscriptStepSaveAndclose, { timeout: 3000 });
     await this.adminPage.click(Constants.AgentscriptStepSaveAndclose);
   }
 
-  public async addAgentScripttoDefaultChatSession(){
+  public async addAgentScripttoDefaultChatSession() {
     await this.adminPage.click(Constants.SessionsSitemapOCBtn);
     await this.adminPage.click(Constants.ChatSession);
     await this.adminPage.click(Constants.AgentScriptsTab);
@@ -409,25 +431,25 @@ export class AgentScript {
     await this.adminPage.click(Constants.SaveAndCloseButton);
   }
 
-  public async validateAgentScriptsForExpressionBuilder(agentScriptName:string) {
+  public async validateAgentScriptsForExpressionBuilder(agentScriptName: string) {
     await this.adminPage.click(Constants.NavigateToAgentScript);
-    const option=await this.adminPage.innerText(Constants.AgentScriptVerification);
-    expect(option==agentScriptName).toBeTruthy();
+    const option = await this.adminPage.innerText(Constants.AgentScriptVerification);
+    expect(option == agentScriptName).toBeTruthy();
   }
 
-  public async validateSlugName(){
+  public async validateSlugName() {
     await this.openAgentScriptInProductivityPane();
-    try{
-      await this.adminPage.waitForSelector(Constants.VisitorLabel,{timeout:8000});
-      const visitorText=await (await this.adminPage.waitForSelector(Constants.VisitorLabel)).textContent();
-      return(visitorText.startsWith(Constants.CustomerName)) ? true : false;
+    try {
+      await this.adminPage.waitForSelector(Constants.VisitorLabel, { timeout: 8000 });
+      const visitorText = await (await this.adminPage.waitForSelector(Constants.VisitorLabel)).textContent();
+      return (visitorText.startsWith(Constants.CustomerName)) ? true : false;
     }
-    catch{
+    catch {
       return false;
     }
   }
 
-  public async openAgentScriptInProductivityPane(){
+  public async openAgentScriptInProductivityPane() {
     await this.adminPage.click(Constants.NavigateToAgentScript);
   }
 
@@ -435,16 +457,41 @@ export class AgentScript {
     await this.adminPage.waitForSelector(Constants.SessionsSitemapOCBtn, { timeout: 3000 });
     await this.adminPage.click(Constants.SessionsSitemapOCBtn);
     try {
-      await this.adminPage.waitForSelector(Constants.SessionTemplate, { timeout: 3000 });
+      await this.adminPage.waitForSelector(Constants.SessionTemplateName, { timeout: 3000 });
     }
     finally {
-      const element = await this.adminPage.isVisible(Constants.SessionTemplate);
+      const element = await this.adminPage.isVisible(Constants.SessionTemplateName);
       if (element) {
-        await this.adminPage.click(Constants.SessionTemplate);
+        await this.adminPage.click(Constants.SessionTemplateName);
         await this.adminPage.click(Constants.DeleteButton);
         await this.adminPage.click(Constants.ConfirmDeleteButton);
       }
     }
+  }
+
+  public async openAppLandingPage(page: Page) {
+    await page.click(Constants.LandingPage);
+  }
+
+  public async deleteSession(SessionTemplateName: string) {
+    await this.openAppLandingPage(page);
+    await this.adminPage.goToCustomerServiceAdmincenter();
+    await this.adminPage.waitForSelector(Constants.WorkspaceSiteMap);
+    await this.adminPage.click(Constants.WorkspaceSiteMap);
+    await this.adminPage.click(Constants.ManagedSession);
+    await this.adminPage.waitForSelector(Constants.SessionSearchThisView);
+    await this.adminPage.fill(
+      Constants.SessionSearchThisView,
+      SessionTemplateName
+    );
+    await this.adminPage.click(Constants.SearchThisViewStartBtn);
+    await this.adminPage.click(Constants.RefreshBtn);
+    await this.adminPage.waitForSelector(Constants.SelectAllRowsBtn, {
+      timeout: 10000,
+    });
+    await this.adminPage.click(Constants.SelectAllRowsBtn);
+    await this.adminPage.click(Constants.DeleteButton);
+    await this.adminPage.click(Constants.ConfirmDeleteButton);
   }
 
   public async addAgentScriptToSesssionTemplate() {
@@ -479,7 +526,25 @@ export class AgentScript {
     }
   }
 
-  public async addSlugOrSessionConditionForExpressionBuilder(LhsValue:any,RhsValue:any) {
+  public async deleteAgentScriptTemplate(agentScript: string, agentStartPage: OrgDynamicsCrmStartPage,) {
+    await this.openAppLandingPage(page);
+    await agentStartPage.goToOmnichannelForCustomers();
+    await this.adminPage.waitForSelector(Constants.AgentScriptSitemapOCBtn);
+    await this.adminPage.click(Constants.AgentScriptSitemapOCBtn);
+    await this.adminPage.click(Constants.SearchBox);
+    await this.adminPage.fill(Constants.SearchBox, agentScript);
+    await this.adminPage.click(Constants.SearchThisViewStartBtn);
+    await this.adminPage.waitForSelector(Constants.SelectAllRowsBtn, {
+      timeout: 10000,
+    });
+    await this.adminPage.click(Constants.SelectAllRowsBtn);
+    await this.adminPage.click(Constants.OCADelete);
+    await this.adminPage.waitForTimeout(2000);
+    await this.adminPage.click(Constants.OCAConfirmDelete);
+    await this.adminPage.waitForTimeout(2000);
+  }
+
+  public async addSlugOrSessionConditionForExpressionBuilder(LhsValue: any, RhsValue: any) {
     const parentIframe: Page = await Iframe.GetIframe(
       this.adminPage,
       IFrameConstants.BuildExpressionParentIframe
@@ -582,15 +647,15 @@ export class AgentScript {
       (el as HTMLElement).click();
     });
   }
-  
-  public async deleteAgentScripthavingSteps(AgentScript:any){
+
+  public async deleteAgentScripthavingSteps(AgentScript: any) {
     await this.adminPage.click(Constants.AgentScriptSitemapOCBtn);
     try {
-      await this.adminPage.waitForSelector(AgentScript,{timeout:8000});
+      await this.adminPage.waitForSelector(AgentScript, { timeout: 8000 });
     }
-    finally{
-      const element=await this.adminPage.isVisible(AgentScript);
-      if(element){
+    finally {
+      const element = await this.adminPage.isVisible(AgentScript);
+      if (element) {
         await this.adminPage.click(AgentScript);
         await this.adminPage.click(Constants.StepTitleCheckbox);
         await this.adminPage.click(Constants.AgentScriptStepTitle);

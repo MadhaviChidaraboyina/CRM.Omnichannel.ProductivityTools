@@ -23,9 +23,8 @@ class CustomEnvironment extends PlaywrightEnvironment {
                                 });
                                 await currentPage.close();
                             } catch (e) {
-                                console.log(
-                                    `screenshot failed test: ${specName}_page \n ${e}`
-                                );
+                                throw e;
+                                //If page is already closed, there will be an exception
                             }
                         }
                     }

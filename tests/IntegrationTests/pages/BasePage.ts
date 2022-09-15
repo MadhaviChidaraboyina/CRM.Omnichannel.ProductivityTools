@@ -329,10 +329,10 @@ export class BasePage {
     await this.Page.waitForTimeout(Constants.DefaultTimeout);
     const selectAll = await this.Page.waitForSelector(SelectorConstants.SelectAllLine);
     await selectAll.click();
-    const casesrecord = await this.Page.waitForSelector(
-      SelectorConstants.SelectCasesRecord.replace('{0}', searchRecord)
-    );
-    await casesrecord.click();
+    // const casesrecord = await this.Page.waitForSelector(
+    //   SelectorConstants.SelectCasesRecord.replace('{0}', searchRecord)
+    // );
+    //await casesrecord.click();
     await this.waitForDomContentLoaded();
     await this.Page.waitForTimeout(Constants.MaxTimeout);
   }

@@ -64,6 +64,7 @@ export enum MacrosConstants {
   ConditionTabSelector = "//*[@aria-label='Condition']",
   ExpressionBuilderBtnSelector = "//*[@data-id='msdyn_expressiondata.fieldControl-ExpressionBuilder-Button']",
   DisableExpressionBuilderRadioBtnSelector = "//*[@aria-label='Enable build expression: No']",
+  DisableExpressionBuilderRadioBtnSelectorSection = "//*[@data-id='msdyn_enablebuildexpression.fieldControl_container']",
   ConditionMenuSelector = "//*[@aria-label='Menu for Condition']",
   DeleteOptionSelector = "//*[@data-icon-name='Delete']",
   OKBtnSelector = "//*[text()='OK']",
@@ -144,6 +145,10 @@ export enum MacrosConstants {
   Macro_TC1760325 = "Macro_TC1760325",
   Macro_TC1982216 = "Macro_TC1982216",
   Macro_TC1717127 = "Macro_TC1717127",
+  MaxTimeout = 8000,
+  OpenWsWaitTimeout = 10000,
+  AgentScriptNameSearchResult = `//*[text()='AutomationTestAgentScript']`,
+  AgentscriptName2 = "AutomationTestAgentScript2",
 }
 
 export enum IFrameConstants {
@@ -493,13 +498,18 @@ export class MacrosPage extends AdminPage {
   }
 
   public async prerequisiteForExpressionBuilder() {
+    const section = await this.Page.waitForSelector(MacrosConstants.DisableExpressionBuilderRadioBtnSelectorSection);
+    await (await section.waitForSelector(MacrosConstants.DisableExpressionBuilderRadioBtnSelector)).click();
+
     const isExpressionBuilderFlag: boolean = await this.IsExpressionBuilderEnable();
     if (isExpressionBuilderFlag) {
       await this.waitUntilSelectorIsVisible(MacrosConstants.ExpressionBuilderBtnSelector, Constants.Three, this._page, Constants.MaxTimeout);
       await this.Page.click(MacrosConstants.ExpressionBuilderBtnSelector);
     }
     else {
-      await this.Page.click(MacrosConstants.DisableExpressionBuilderRadioBtnSelector);
+      const section = await this.Page.waitForSelector(MacrosConstants.DisableExpressionBuilderRadioBtnSelectorSection);
+      await (await section.waitForSelector(MacrosConstants.DisableExpressionBuilderRadioBtnSelector)).click();
+      //await section.click("//*[@aria-label='Enable build expression: No']");
       await this.waitUntilSelectorIsVisible(MacrosConstants.EnableExpressionBuilderRadioBtnSelector, Constants.Five, this._page, Constants.FourThousandsMiliSeconds);
       await this.waitUntilSelectorIsVisible(MacrosConstants.ExpressionBuilderBtnSelector, Constants.Three, this._page, Constants.MaxTimeout);
       await this.Page.click(MacrosConstants.ExpressionBuilderBtnSelector);

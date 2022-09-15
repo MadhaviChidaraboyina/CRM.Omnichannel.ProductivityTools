@@ -2,11 +2,11 @@ import { AgentChat } from "../../../pages/AgentChat";
 import { BrowserContext, Page } from "playwright";
 import { Constants } from "../../common/constants";
 import { LiveChatPage } from "../../../pages/LiveChat";
-import { Macros } from "../../macros/pages/macrosAdmin";
+import { Macros } from "../../macropages/macrosAdmin";
 import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.page";
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
-import { AgentScript } from "../../../integration-tests/agentScript/pages/agentScriptAdmin";
+import { AgentScript } from "../../agentScript/pages/agentScriptAdmin";
 
 describe("Productivity Pane Testcases - ", () => {
   let adminContext: BrowserContext;
@@ -49,7 +49,7 @@ describe("Productivity Pane Testcases - ", () => {
     liveChatPage = new LiveChatPage(await liveChatContext.newPage());
     try {
       //Login as admin and create case
-      await adminStartPage.goToOrgUrlAndSignIn(
+      await adminStartPage.navigateToOrgUrlAndSignIn(
         TestSettings.AdminAccountEmail,
         TestSettings.AdminAccountPassword
       );
@@ -57,6 +57,13 @@ describe("Productivity Pane Testcases - ", () => {
       await macrosAdminPage.createCase(Constants.CaseTitleName);
       await macrosAdminPage.TurnOffSuggestions(adminPage, adminStartPage);
       //Initiate Session and Validate
+      await macrosAdminPage.openAppLandingPage(adminPage);
+      await adminStartPage.goToCustomerServiceWorkspace();
+      await macrosAdminPage.InitiateSession(
+        Constants.CaseTitleName,
+        Constants.CaseLink1
+      );
+      await macrosAdminPage.VerifyReloadSuggestionsInCSW();
       await macrosAdminPage.openAppLandingPage(adminPage);
       await adminStartPage.goToCustomerServiceWorkspace();
       await macrosAdminPage.InitiateSession(
@@ -82,7 +89,7 @@ describe("Productivity Pane Testcases - ", () => {
     agentPage = await agentContext.newPage();
     try {
       //Login as admin and create case
-      await adminStartPage.goToOrgUrlAndSignIn(
+      await adminStartPage.navigateToOrgUrlAndSignIn(
         TestSettings.AdminAccountEmail,
         TestSettings.AdminAccountPassword
       );
@@ -100,10 +107,7 @@ describe("Productivity Pane Testcases - ", () => {
       await macrosAdminPage.openAppLandingPage(adminPage);
       await adminStartPage.goToCustomerServiceAdmincenter();
       await macrosAdminPage.createAppProfile();
-      await macrosAdminPage.AddUsers(Constants.User2);
-      await macrosAdminPage.AddEntitySession(
-        Constants.SessionTemplateinPowerApps
-      );
+      await macrosAdminPage.AddUsers(TestSettings.InboxUser);
       await macrosAdminPage.EnableTwoAppsInProductivityPane();
       //Initiate session and validate
       await macrosAdminPage.openAppLandingPage(adminPage);
@@ -118,10 +122,11 @@ describe("Productivity Pane Testcases - ", () => {
       );
       expect(NoKSTool).toBeFalsy();
     } finally {
-      await macrosAdminPage.DeleteAppProfile(
+      await macrosAdminPage.maximizeDeleteAppProfile(
         adminPage,
         adminStartPage,
-        Constants.Name
+        Constants.AppProfileName1,
+        Constants.AppProfileNameLink1
       );
       await macrosAdminPage.deleteCase(
         adminPage,
@@ -135,11 +140,11 @@ describe("Productivity Pane Testcases - ", () => {
   ///Test Case 2045250: [Productivity Pane: Smart Assist] : Setup smart assist using customer service hub for similar case and article suggestions
   ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2045250
   ///<summary>
-  it("Test Case 2045250: [Productivity Pane: Smart Assist] : Setup smart assist using customer service hub for similar case and article suggestions", async () => {
+  it.skip("Test Case 2045250: [Productivity Pane: Smart Assist] : Setup smart assist using customer service hub for similar case and article suggestions", async () => {
     agentPage = await agentContext.newPage();
     try {
       //Login as admin and create case
-      await adminStartPage.goToOrgUrlAndSignIn(
+      await adminStartPage.navigateToOrgUrlAndSignIn(
         TestSettings.AdminAccountEmail,
         TestSettings.AdminAccountPassword
       );
@@ -151,7 +156,7 @@ describe("Productivity Pane Testcases - ", () => {
       await macrosAdminPage.ValidateThePage(Constants.KBSuggestionsinCSH);
       await macrosAdminPage.EnableSuggestionsInCSH();
     } finally {
-      await macrosAdminPage.TurnOffSuggestions(adminPage, adminStartPage);
+      console.log("validation Successfully");
     }
   });
 
@@ -163,7 +168,7 @@ describe("Productivity Pane Testcases - ", () => {
     agentPage = await agentContext.newPage();
     try {
       //Login as admin and create case
-      await adminStartPage.goToOrgUrlAndSignIn(
+      await adminStartPage.navigateToOrgUrlAndSignIn(
         TestSettings.AdminAccountEmail,
         TestSettings.AdminAccountPassword
       );
@@ -192,11 +197,11 @@ describe("Productivity Pane Testcases - ", () => {
   /// Test Case 2045254: [Productivity Pane: Smart Assist] : Validate if KB and similar case sugestions are turned back on from CSH, it doesn't break
   ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2045254
   ///<summary>
-  it("Test Case 2045254: [Productivity Pane: Smart Assist] : Validate if KB and similar case sugestions are turned back on from CSH, it doesn't break", async () => {
+  it.skip("Test Case 2045254: [Productivity Pane: Smart Assist] : Validate if KB and similar case sugestions are turned back on from CSH, it doesn't break", async () => {
     agentPage = await agentContext.newPage();
     try {
       //Login as admin and create case & TurnOffSuggestions
-      await adminStartPage.goToOrgUrlAndSignIn(
+      await adminStartPage.navigateToOrgUrlAndSignIn(
         TestSettings.AdminAccountEmail,
         TestSettings.AdminAccountPassword
       );
@@ -245,7 +250,7 @@ describe("Productivity Pane Testcases - ", () => {
     agentPage = await agentContext.newPage();
     try {
       //Login as admin and create case
-      await adminStartPage.goToOrgUrlAndSignIn(
+      await adminStartPage.navigateToOrgUrlAndSignIn(
         TestSettings.AdminAccountEmail,
         TestSettings.AdminAccountPassword
       );
@@ -277,7 +282,7 @@ describe("Productivity Pane Testcases - ", () => {
     agentPage = await agentContext.newPage();
     try {
       //Login as admin and create case
-      await adminStartPage.goToOrgUrlAndSignIn(
+      await adminStartPage.navigateToOrgUrlAndSignIn(
         TestSettings.AdminAccountEmail,
         TestSettings.AdminAccountPassword
       );
@@ -304,49 +309,18 @@ describe("Productivity Pane Testcases - ", () => {
       );
     }
   });
-
-  ///<summary>
-  ///Test Case 2045186: [Navigation and Gestures] : Verify if records can be opened as sessions from case views
-  ///Test Case Link  https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2045186
-  ///<summary>
-  it("Test Case 2045186: [Navigation and Gestures] : Verify if records can be opened as sessions from case views", async () => {
-    agentPage = await agentContext.newPage();
-    try {
-      //Login as admin and create two cases and initiate it and verify
-      await adminStartPage.goToOrgUrlAndSignIn(
-        TestSettings.AdminAccountEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-      await macrosAdminPage.createCase(Constants.CaseTitleName);
-      //Initiate session and validate
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-      await macrosAdminPage.GoToCases();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await macrosAdminPage.ValidateThePage(Constants.CloseSession1);
-    } finally {
-      await macrosAdminPage.deleteCaseInCSH(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName
-      );
-    }
-  });
+ 
 
   ///<summary>
   ///Test Case 2045261: [Productivity Pane: Smart Assist] : Verify Copy URL action with appropriate contextual message
   ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2045261
   ///<summary>
-  it("Test Case 2045261: [Productivity Pane: Smart Assist] : Verify Copy URL action with appropriate contextual message", async () => {
+  it.skip("Test Case 2045261: [Productivity Pane: Smart Assist] : Verify Copy URL action with appropriate contextual message", async () => {
     agentPage = await agentContext.newPage();
     liveChatPage = new LiveChatPage(await liveChatContext.newPage());
     try {
       // Login as Admin
-      await adminStartPage.goToOrgUrlAndSignIn(
+      await adminStartPage.navigateToOrgUrlAndSignIn(
         TestSettings.AdminAccountEmail,
         TestSettings.AdminAccountPassword
       );
@@ -361,8 +335,7 @@ describe("Productivity Pane Testcases - ", () => {
       await macrosAdminPage.openAppLandingPage(adminPage);
       await adminStartPage.goToCustomerServiceWorkspace();
       await macrosAdminPage.CreateCaseInCSW(
-        Constants.CaseTitleName,
-        Constants.CasePriority
+        Constants.CaseTitleName
       );
       await macrosAdminPage.InitiateSession(
         Constants.CaseTitleName,
@@ -385,11 +358,11 @@ describe("Productivity Pane Testcases - ", () => {
   ///Test Case 2045262: [Productivity Pane: Smart Assist] : Verify Email URL action is working
   ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2045262
   ///</summary>
-  it("Test Case 2045262: [Productivity Pane: Smart Assist] : Verify Email URL action is working", async () => {
+  it.skip("Test Case 2045262: [Productivity Pane: Smart Assist] : Verify Email URL action is working", async () => {
     agentPage = await agentContext.newPage();
     liveChatPage = new LiveChatPage(await liveChatContext.newPage());
     try {
-      await adminStartPage.goToOrgUrlAndSignIn(
+      await adminStartPage.navigateToOrgUrlAndSignIn(
         TestSettings.AdminAccountEmail,
         TestSettings.AdminAccountPassword
       );
@@ -403,8 +376,7 @@ describe("Productivity Pane Testcases - ", () => {
       await macrosAdminPage.openAppLandingPage(adminPage);
       await adminStartPage.goToCustomerServiceWorkspace();
       await macrosAdminPage.CreateCaseInCSW(
-        Constants.CaseTitleName,
-        Constants.CasePriority
+        Constants.CaseTitleName
       );
       await macrosAdminPage.InitiateSession(
         Constants.CaseTitleName,
@@ -429,11 +401,11 @@ describe("Productivity Pane Testcases - ", () => {
   /// Test Case 2045263: [Productivity Pane: Smart Assist] : Verify Email content action worked
   ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2045263
   ///<summary>
-  it("Test Case 2045263: [Productivity Pane: Smart Assist] : Verify Email content action worked", async () => {
+  it.skip("Test Case 2045263: [Productivity Pane: Smart Assist] : Verify Email content action worked", async () => {
     agentPage = await agentContext.newPage();
     try {
       //Login as admin and create case
-      await adminStartPage.goToOrgUrlAndSignIn(
+      await adminStartPage.navigateToOrgUrlAndSignIn(
         TestSettings.AdminAccountEmail,
         TestSettings.AdminAccountPassword
       );
@@ -478,7 +450,7 @@ describe("Productivity Pane Testcases - ", () => {
     const agentScriptAdminPage = new AgentScript(adminPage);
     try {
       //Login as admin and create case
-      await adminStartPage.goToOrgUrlAndSignIn(
+      await adminStartPage.navigateToOrgUrlAndSignIn(
         TestSettings.AdminAccountEmail,
         TestSettings.AdminAccountPassword
       );
@@ -505,12 +477,12 @@ describe("Productivity Pane Testcases - ", () => {
   ///Test Case Test Case 2045258: [Productivity Pane: Smart Assist] : Verify focus is Returning to opened article when card is clicked again
   ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2045258
   ///<summary>
-  it("Test Case 2045258: [Productivity Pane: Smart Assist] : Verify focus is Returning to opened article when card is clicked again", async () => {
+  it.skip("Test Case 2045258: [Productivity Pane: Smart Assist] : Verify focus is Returning to opened article when card is clicked again", async () => {
     agentPage = await agentContext.newPage();
     liveChatPage = new LiveChatPage(await liveChatContext.newPage());
     try {
       // Login as Admin
-      await adminStartPage.goToOrgUrlAndSignIn(
+      await adminStartPage.navigateToOrgUrlAndSignIn(
         TestSettings.AdminAccountEmail,
         TestSettings.AdminAccountPassword
       );
@@ -525,8 +497,7 @@ describe("Productivity Pane Testcases - ", () => {
       await macrosAdminPage.openAppLandingPage(adminPage);
       await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
       await macrosAdminPage.CreateCaseInCSW(
-        Constants.CaseTitleName,
-        Constants.CasePriority
+        Constants.CaseTitleName
       );
       await macrosAdminPage.InitiateSession(
         Constants.CaseTitleName,
@@ -535,15 +506,12 @@ describe("Productivity Pane Testcases - ", () => {
       await macrosAdminPage.ValidateThePage(Constants.ValKBSuggestionsinCSW);
       // Open Similar Cards and validate it
       await macrosAdminPage.OpenValidateArticle(
-        Constants.KArticleName,
         Constants.KArticleOpen
       );
       await macrosAdminPage.OpenCaseSession(
-        Constants.CaseTitleName,
         Constants.KArticleHome
       );
       await macrosAdminPage.OpenValidateArticle(
-        Constants.KArticleName,
         Constants.KArticleOpen
       );
     } finally {

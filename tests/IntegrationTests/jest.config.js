@@ -22,7 +22,7 @@ module.exports = {
   // The directory where Jest should output its coverage files
   coverageDirectory: "./testResults/coverage",
   coverageReporters: ["text", "cobertura", "lcov", "json-summary"],
-  collectCoverage: true,
+  collectCoverage: false,
   coverageThreshold: {
       global: {
           branches: 0,

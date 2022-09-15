@@ -9,24 +9,7 @@ export enum CustomConstants {
   MessageToAgent = "Hi! ping from Customer",
   AdminInformation = "div[id='mectrl_headerPicture']",
   AdminSignOutBtnSelector = "//*[contains(text(),'Sign out')]",
-  CustomPresenceTemplate = "button[data-test-id='custom-presence-manage']",
-  CSHAreaSwitchSelector = "//button[@data-id='sitemap-areaSwitcher-expand-btn']",
-  One = 1,
-  ServiceAreaSelector ="//span[normalize-space()='Service Management']",
-  AgentPopUpWaitingTimeout = 60000,
-  Users = "//li[@aria-label='Users']",
-  SearchInput = "//input[@aria-label='User Search this view']",
-  UserName = "ocautopw csmuser1",
-  Checkboxselect = "//a[@aria-label='ocautopw csmuser1']",
-  NavigateOminichannel ="//li[@aria-label='Omnichannel']",
-  UserMouiceOver = "//div[@data-id='default_presence_user.fieldControl-entityIconContainer_selectedRecords']",
-  RemoveStatus ="//span[@data-id='default_presence_user.fieldControl-LookupResultsDropdown_msdyn_defaultpresenceiduser_microsoftIcon_cancelButton']",
-  InputfiledSelector = "input[data-id='default_presence_user.fieldControl-LookupResultsDropdown_msdyn_defaultpresenceiduser_textInputBox_with_filter_new']",
-  SearchbuttonSelector = "//button[@data-id='msdyn_default_presence_user.fieldControl-Lookup_msdyn_defaultpresenceiduser_microsoftIcon_searchButton']",
-  SelectResultValue = "default_presence_user.fieldControl-LookupResultsDropdown_msdyn_defaultpresenceiduser_resultsContainer",
-  offline = "offline",
-  lookValueSelect = "ul[data-id='default_presence_user.fieldControl-LookupResultsDropdown_msdyn_defaultpresenceiduser_tab'] li:first-child",
-  SaveAndClose ="//button[@aria-label='Save & Close']"
+  CustomPresenceTemplate = "button[data-test-id='custom-presence-manage']"
 }
 export class AdminPage extends BasePage {
   newQueueType: string;
@@ -210,11 +193,6 @@ export class AdminPage extends BasePage {
     await this._page.waitForLoadState("networkidle", { timeout: 10000 }).catch(() => { });
   }
 
-  public async loginAndNavigateToOCAdminAppNew() {
-    await this.navigateToAdminCentre();
-    await this.waitForDomContentLoaded();
-  }
-
   public async OpenQueueTypeDashBoard() {
     await this.Page.waitForSelector(SelectorConstants.Queues);
     await this.Page.click(SelectorConstants.Queues);
@@ -293,24 +271,6 @@ export class AdminPage extends BasePage {
     }
   }
 
-  //Go to the workstream and add a bot
-  public async addABotToWorkStream(workStreamName: string, botName: string) {
-    await this.openWorkStream(workStreamName);
-    if (await this.Page.isVisible(SelectorConstants.AddBotButton)) {
-      await this.Page.click(SelectorConstants.AddBotButton);
-      await this.Page.click(SelectorConstants.SelectBotDropdown);
-      await this.Page.click('text=' + botName);
-      await this.Page.click(SelectorConstants.AddBotConfirmButton);
-    }
-  }
-
-  //Remove a bot from the workstream page
-  public async removeABotFromWorkstream() {
-    await this.Page.click(SelectorConstants.BotMoreOptionsButton);
-    await this.Page.click(SelectorConstants.RemoveBotButton);
-    await this.Page.click(SelectorConstants.RemoveBotConfirmButton);
-  }
-
   public async fillandSaveworkstream(streamname:string) {
     await this.waitForDomContentLoaded();
     await this.Page.waitForSelector(SelectorConstants.WorkstreamName);
@@ -347,70 +307,4 @@ export class AdminPage extends BasePage {
     await this.navigateToCSWApp();
     await this.waitForDomContentLoaded();
   }
-
-  public async NavigateCSHService() {
-    await this.waitUntilSelectorIsVisible(CustomConstants.CSHAreaSwitchSelector, CustomConstants.One, null, CustomConstants.AgentPopUpWaitingTimeout);
-     const areaSwitch = await this.Page.waitForSelector(CustomConstants.CSHAreaSwitchSelector);
-     await areaSwitch.click();
-     await this.waitUntilSelectorIsVisible(CustomConstants.ServiceAreaSelector, CustomConstants.One, null, CustomConstants.AgentPopUpWaitingTimeout);
-     const service = await this.Page.waitForSelector(CustomConstants.ServiceAreaSelector);
-     await service.click();
-   }
-
-  public async NavigateUnifiedRouting() {
-    await this.waitUntilSelectorIsVisible(CustomConstants.Users, CustomConstants.One, null, CustomConstants.AgentPopUpWaitingTimeout);
-    const areaSwitch = await this.Page.waitForSelector(CustomConstants.Users);
-    await areaSwitch.click();
-    await this.fillInputData(
-      CustomConstants.SearchInput,
-      CustomConstants.UserName
-    );
-    await this.Page.keyboard.press(Constants.EnterKey, { delay: Number(Constants.DefaultMinTimeout) });
-    await this.waitForDomContentLoaded();
-    await this.Page.waitForTimeout(Constants.WaitingHalfMinute);
-    await this.waitUntilSelectorIsVisible(CustomConstants.Checkboxselect, CustomConstants.One, null, CustomConstants.AgentPopUpWaitingTimeout);
-    const CHeckbox = await this.Page.waitForSelector(CustomConstants.Checkboxselect);
-    await CHeckbox.click();
-    await this.waitForDomContentLoaded();
-    await this.Page.waitForTimeout(Constants.MaxTimeout);
-    await this.waitUntilSelectorIsVisible(CustomConstants.NavigateOminichannel, CustomConstants.One, null, CustomConstants.AgentPopUpWaitingTimeout);
-    const NavigateOminichannel = await this.Page.waitForSelector(CustomConstants.NavigateOminichannel);
-    await NavigateOminichannel.click();
-    await this.Page.waitForTimeout(Constants.MaxTimeout);
-    await this.waitUntilSelectorIsVisible(CustomConstants.UserMouiceOver, CustomConstants.One, null, CustomConstants.AgentPopUpWaitingTimeout);
-    await this._page.hover(CustomConstants.UserMouiceOver);
-    const Removeuser = await this.Page.waitForSelector(CustomConstants.RemoveStatus);
-    await Removeuser.click();
-    await this.Page.fill(CustomConstants.InputfiledSelector, CustomConstants.offline);
-    await this.Page.click(CustomConstants.SearchbuttonSelector);
-    await this.Page.click(CustomConstants.SelectResultValue);
-    await this.waitUntilSelectorIsVisible(CustomConstants.SaveAndClose, Constants.Three, this._page, Constants.MaxTimeout);
-    await this.Page.click(CustomConstants.SaveAndClose);
-    await this.waitForSaveComplete();
-    await this.waitForDomContentLoaded();
-  }
-
-public async validateDryrunSlidingPage(frame: any) {
-  await this.waitUntilFrameSelectorIsVisible(
-    SelectorConstants.DryrunSlidingButton,
-    frame,
-    Constants.One,
-    Constants.DefaultTimeout
-   );
-   const Tooltip = await frame.waitForSelector(SelectorConstants.DryrunSlidingButton);
-    return true;
 }
-public async navigateToUserAttributesview() {
-  await this.Page.waitForSelector(SelectorConstants.UserAttributesMenuItems);
-  await this.Page.click(SelectorConstants.UserAttributesMenuItems);
-  await this.waitForDomContentLoaded();
-}
-public async navigateToSentimentbasedrouting() {
-  await this.Page.waitForSelector(SelectorConstants.Sentimentbasedrouting);
-  await this.Page.click(SelectorConstants.Sentimentbasedrouting);
-  await this.waitForDomContentLoaded();
-  await this.Page.click(SelectorConstants.ManageButton);
-  await this.Page.click(SelectorConstants.DryrunButton);
-}
-}
-

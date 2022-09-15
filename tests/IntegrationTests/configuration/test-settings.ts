@@ -66,6 +66,26 @@ export class TestSettings {
         return process.env.AdminAccountEmail || testData.AdminAccountEmail;
     }
 
+    public static get AdminAccountEmail1(): string {
+        return process.env.AdminAccountEmail1 || testData.AdminAccountEmail1;
+    }
+
+    public static get AdminAccountEmail2(): string {
+        return process.env.AdminAccountEmail2 || testData.AdminAccountEmail2;
+    }
+
+    public static get AdminAccountEmail3(): string {
+        return process.env.AdminAccountEmail3 || testData.AdminAccountEmail3;
+    }
+
+    public static get AdminAccountEmail4(): string {
+        return process.env.AdminAccountEmail4 || testData.AdminAccountEmail4;
+    }
+
+    public static get AdminAccountEmail5(): string {
+        return process.env.AdminAccountEmail5 || testData.AdminAccountEmail5;
+    }
+
     public static get AdminAccountPassword(): string {
         return process.env.AdminAccountPassword || testData.AdminAccountPassword;
     }
@@ -124,7 +144,7 @@ export class TestSettings {
     }
 
     public static get LcwCapPickUrl(): string {
-        return process.env.LcwCapPickUrl || testData.LiveChatLogin.LcwCapPickUrl;
+        return process.env.LcwCapPickUrl //|| testData.LiveChatLogin.LcwCapPickUrl;
     }
 
     // This chat queue with agent and supervisor
@@ -1695,15 +1715,6 @@ export class TestSettings {
         return process.env.AgentEmailSecond || testData.LiveChatLogin.AgentEmailSecond;
     }
 
-    public static get LCWQuickReplyTextMessage1(): string {
-        return process.env.LCWQuickReplyTextMessage1 || testData.LiveChatLogin.LCWQuickReplyTextMessage1;
-    }
-
-
-    public static get LCWQuickReplyTextMessage2(): string {
-        return process.env.LCWQuickReplyTextMessage2 || testData.LiveChatLogin.LCWQuickReplyTextMessage2;
-    }
-
 
     public static get LiveChatAutomatedTestChannelblobUrl(): string {
         return process.env.LiveChatAutomatedTestChannelblobUrl || testData.LiveChatLogin.LiveChatAutomatedTestChannelblobUrl;
@@ -1830,10 +1841,6 @@ export class TestSettings {
 
     public static get LiveChatPWLinkAccountBlobUrl(): string {
         return process.env.LiveChatPWLinkAccountBlobUrl || testData.LiveChatLogin.LiveChatPWLinkAccountBlobUrl;
-    }
-
-    public static get SkillprofileBlobUrl(): string {
-        return process.env.SkillprofileBlobUrl || testData.LiveChatLogin.SkillprofileBlobUrl;
     }
 
     public static get LiveChatProfileBasedCapacityWSBlobUrl(): string {
@@ -2060,11 +2067,11 @@ export class TestSettings {
     }
 
     public static get ExactSkillsMatchBlobUrl(): string {
-        return process.env.ExactSkillsMatchBlobUrl || testData.LiveChatLogin.ExactSkillMatchBlobUrl;
+        return process.env.ExactSkillsMatchBlobUrl //|| testData.LiveChatLogin.ExactSkillMatchBlobUrl;
     }
 
     public static get ExactMostSkillsMatchBlobUrl(): string {
-        return process.env.ExactMostSkillsMatchBlobUrl || testData.LiveChatLogin.ExactMostSkillMatchBlobUrl;
+        return process.env.ExactMostSkillsMatchBlobUrl //|| testData.LiveChatLogin.ExactMostSkillMatchBlobUrl;
     }
     public static get OmnichannelAgentAccountEmail(): string {
         return process.env.OmnichannelAgentEmail || testData.OmnichannelAgentLogin.OmnichannelAgentEmail;
@@ -2077,82 +2084,63 @@ export class TestSettings {
     public static get RoutingRulesQueueUrl(): string {
         return process.env.RoutingRulesQueueUrl || testData.RoutingRulesQueueUrl;
     }
-
-    public static get ClosestSkillsMatchBlobUrl(): string {
-        return process.env.ClosestSkillsMatchBlobUrl || testData.LiveChatLogin.ClosestSkillMatchBlobUrl;
-    }
-    public static get SpecialcharChatBlobURL(): string {
-        return process.env.SpecialcharChatBlobURL || testData.LiveChatLogin.SpecialcharChatBlobURL;
-    }
-
-    public static get LiveChatOfflineUserBlobUrl(): string {
-        return process.env.LiveChatOfflineUserBlobUrl || testData.LiveChatLogin.LiveChatOfflineUserBlobUrl;
-    }
-
     public static get InboxUser(): string {
         return process.env.InboxUser || testData.InboxUser;
     }
 
     public static get InboxUser1(): string {
-        return process.env.InboxUser || testData.InboxUser1;
+        return process.env.InboxUser1 || testData.InboxUser1;
+    }
+
+    public static get InboxUser2(): string {
+        return process.env.InboxUser2 || testData.InboxUser2;
+    }
+
+    public static get InboxUser3(): string {
+        return process.env.InboxUser3 || testData.InboxUser3;
+    }
+    public static get InboxUser4(): string {
+        return process.env.InboxUser4 || testData.InboxUser4;
     }
 
     public static get PVAPreChatSDKBlobUrl(): string {
         return process.env.PVAPreChatSDKBlobUrl || testData.PVAPreChatSDKBlobUrl;
     }
-    public static get CSMUser() {
-        return process.env.CSMUser || testData.CSMUser;
-    }
-    public static get CSRUser() {
-        return process.env.CSRUser || testData.CSRUser;
-    }
 
-    public static get OutboundProfileName(): string {
-        return process.env.OutboundProfileName || testData.Telephony.OutboundProfileName;
-    }
-
-    public static get WorkStreamName(): string {
-        return process.env.WorkStreamName || testData.Telephony.WorkStreamName;
-    }
-
-    public static get VoiceQueueName(): string {
-        return process.env.VoiceQueueName || testData.Telephony.VoiceQueueName;
-    }
-
-    public static get VoiceChannelName(): string {
-        return process.env.VoiceChannelName || testData.Telephony.VoiceChannelName;
-    }
-
-    public static get TalosClient_Id(): string {
-        return process.env.TalosClient_Id || testData.Telephony.TalosClient_Id;
-    }
-
-    public static get Scope(): string {
-        return `${process.env.TalosClient_Id}/.default` || `${testData.Telephony.TalosClient_Id}/.default`;
-    }
-
-    public static get Client_Secret(): string {
-        return process.env.Client_Secret || testData.Telephony.Client_Secret;
-    }
-
-    public static get CustomerPhoneNumber(): string {
-        return process.env.CustomerPhoneNumber || testData.Telephony.CustomerPhoneNumber;
-    }
-
-    public static get UniqueOrgId(): string {
-        return process.env.UniqueOrgId || testData.Telephony.UniqueOrgId;
-    }
-
-    public static get TalosTenantId(): string {
-        return process.env.TalosTenantId || testData.Telephony.TalosTenantId;
-    }
-
-    public static get CustomSkillprofileBlobUrl(): string {
-        return process.env.CustomSkillprofileBlobUrl || testData.LiveChatLogin.CustomSkillprofileBlobUrl;
-    }
 
     public static get CustomSkillBYOSEBlobUrl() {
         return process.env.CustomSkillBYOSEBlobUrl || testData.LiveChatPersistentMode.CustomSkillBYOSEBlobUrl;
     }
 
+    public static get MacroAccountEmail() {
+        return process.env.MacroAccountEmail || testData.ProductivityPane.MacroAccountEmail;
+    }
+
+    public static get MacroBloburl() {
+        return process.env.MacroBloburl || testData.ProductivityPane.MacroBloburl;
+    }
+
+    public static get LivechatBloburl() {
+        return process.env.LivechatBloburl || testData.ProductivityPane.LivechatBloburl;
+    }
+
+    public static get LiveChatPTEAccountEmail() {
+        return process.env.LiveChatPTEAccountEmail || testData.ProductivityPane.LiveChatPTEAccountEmail;
+    }
+
+    public static get AgentScriptEmail() {
+        return process.env.AgentScriptEmail || testData.ProductivityPane.AgentScriptEmail;
+    }
+    public static get ApplicationSetupEmail() {
+        return process.env.ApplicationSetupEmail || testData.ProductivityPane.ApplicationSetupEmail;
+    }
+    public static get MacrosAgentEmail() {
+        return process.env.MacrosAgentEmail || testData.ProductivityPane.MacrosAgentEmail;
+    }
+    public static get MultiSessionEmail() {
+        return process.env.MultiSessionEmail || testData.ProductivityPane.MultiSessionEmail;
+    }
+    public static get InboxUser5() {
+        return process.env.InboxUser5 || testData.InboxUser5;
+    }
 }

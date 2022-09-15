@@ -1,8 +1,12 @@
 {
   "ADClientId": "",
   "TenantId": "",
-  "InboxUser": "",
-  "InboxUser1": "",
+  "InboxUser":"CustomerService Web Staging",
+  "InboxUser1":"ocautopw livechatagent",
+  "InboxUser2":"Automated User4",
+  "InboxUser3":"Admin Automated",
+  "InboxUser4":"ocautopw livechat123",
+  "InboxUser5":"ocautopw livechatuser1",  
   "TwitterAttachmentsSourceURL": "",
   "BlobURL": "",
   "KeyVaultURL": "",
@@ -57,7 +61,7 @@
   "ConsultAndTransferVerificationBlob": "",
   "LcwPWPickUrl": "",
   "SDKLiveChatBlobURL": "",
-  "ChatSDKBlobURL": "",
+  "ChatSDKBlobURL":"",
   "SBRExactMatchLcwUrl": "",
   "UaUserMail": "",
   "UaUserPassword": "",
@@ -66,24 +70,27 @@
   "LcwPickEnglishUrl": "",
   "LcwPickSpanishUrl": "",
   "ReconnectExhaustedLcwUrl": "",
-  "RoutingRulesQueueUrl": "",
-  "PVAPreChatSDKBlobUrl": "",
+  "RoutingRulesQueueUrl":"",
+  "PVAPreChatSDKBlobUrl":"",
   "PesistentChatUrl": "",
   "PesistentChatNonOperationHoursUrl": "",
   "PickChatSpanishUrl": "",
   "OrgUrl": "",
   "OrgId": "",
   "ApiGatewayUrl": "",
-  "AgentAccountEmail": "",
-  "AdminAccountEmail": "",
+  "AgentAccountEmail": "crmadmin@csweb1.onmicrosoft.com",
+  "AdminAccountEmail": "crmadmin@csweb1.onmicrosoft.com",
+  "AdminAccountEmail1": "ocautopwlivechatagent@csweb1.onmicrosoft.com",
+  "AdminAccountEmail2": "AutomatedUser4@csweb1.onmicrosoft.com",
+  "AdminAccountEmail3": "adminautomated@csweb1.onmicrosoft.com",
+  "AdminAccountEmail4": "ocautopwlivechat123@csweb1.onmicrosoft.com",
+  "AdminAccountEmail5": "ocautopwlivechatuser1@csweb1.onmicrosoft.com",
   "AdminAccountPassword": "",
   "OfflineOHUrl": "",
   "OfflineOHSpanishUrl": "",
   "LiveChatNoRuleUrl": "",
   "SupervisorAccountEmail": "",
   "SupervisorAccountPassword": "",
-  "CSMUser":"",
-  "CSRUser":"",
   "QueueNameToAssignChat": "",
   "QueueName": "",
   "SentimentAnalysisConfigTitle": "Sentiment analysis",
@@ -132,7 +139,7 @@
     }
   },
   "AppleMessagesForBusiness": {
-    "AppleBusinessAccountId": ""
+    "AppleBusinessAccountId":""
   },
   "LiveChat": {
     "AgentEmail": "",
@@ -385,16 +392,7 @@
     }
   },
   "Telephony": {
-    "TelephonyAgentEmail": "TelephonyAgent@ocautositpw1.onmicrosoft.com",
-    "WorkStreamName": "Voice live stream by Automation",
-    "VoiceQueueName": "Voice Queue by Automation",
-    "VoiceChannelName": "Voice Channel by Automation",
-    "OutboundProfileName": "Outbound Profile By Automation",
-    "TalosClient_Id": "ac2022db-49dd-4111-a714-33d265de3308",
-    "Client_Secret": "",
-    "CustomerPhoneNumber": "+18333161809",
-    "UniqueOrgId": "unq7d223c8d6ef44eb99d9647b5eea8a",
-    "TalosTenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+    "TelephonyAgentEmail": ""
   },
   "LiveChatLogin": {
     "LiveChatAccountEmail": "",
@@ -413,8 +411,6 @@
     "LivePopoutChatPreChatSurveyUrl": "",
     "LiveChatDesignPopoutbloburl": "",
     "PVAPreChatSurveybloburl": "",
-    "ExactSkillMatchBlobUrl" : "",
-    "ExactMostSkillMatchBlobUrl" : "",
     "BYOBUserName": "",
     "PVAUserName": "",
     "SupervisorBlob": "",
@@ -435,12 +431,11 @@
     "LCWAuthPickURL": "",
     "LcwPickUrl": "",
     "LcwCapacityPickUrl": "",
-    "LcwCapPickUrl":"",
     "Prechatcombinations": "",
     "AuthReconnectPopoutSurveyQuestionBlobURL": "",
     "AuthReconnectPopoutSurveyQuestionWithOutRedirectionBlobURL": "",
     "AuthReconnectWithOutRedirectionURL": "",
-    "PVAContextVariableAuthURL": "",
+    "PVAContextVariableAuthURL":"",
     "LiveChatAttachments": {
       "LiveChatAttachmentsYYBloburl": "",
       "LiveChatAttachmentsYNBloburl": "",
@@ -462,20 +457,13 @@
     "LiveChatAvgWaitQueuePositionBlobUrl": "",
     "LiveChatRelevanceAccountBlobUrl": "",
     "LiveChatPWLinkAccountBlobUrl": "",
-    "SkillprofileBlobUrl": "",
     "PVAPreChatSurveyMultibloburl": "",
     "PVAHorizontalBlobUrl": "",
     "PVAVerticalBlobUrl": "",
     "LiveChatAWTBlobUrl": "",
     "LiveChatPrechatTranscriptBlobUrl": "",
     "LiveChatAutomatedQueueTransfer":"",
-    "LiveChatProfileBasedCapacityWSBlobUrl": "",
-    "ClosestSkillMatchBlobUrl" : "",
-    "SpecialcharChatBlobURL": "",
-    "LCWQuickReplyTextMessage1": "",
-    "LCWQuickReplyTextMessage2": "",
-    "LiveChatOfflineUserBlobUrl": "",
-    "CustomSkillprofileBlobUrl":""
+    "LiveChatProfileBasedCapacityWSBlobUrl": ""
   },
   "LiveChatPickMode": {
     "EnglishChatName": "TestLiveChatPickEnglishAutomated",
@@ -495,7 +483,7 @@
     "JavaScriptClientFunction": "",
     "AzureFunctionEndpoint": "",
     "PersistentChatOOHBlobUrl": "",
-    "CustomSkillBYOSEBlobUrl":""
+    "CustomSkillBYOSEBlobUrl": ""
   },
   "OmnichannelAgentLogin": {
     "OmnichannelAgentEmail": "",
@@ -556,7 +544,7 @@
       "Channels": {
         "Default": {
           "appleBusinessAccountId": "",
-          "mspId": ""
+          "mspId":""
         }
       },
       "AgentIndex": {
@@ -741,7 +729,7 @@
         "Push": {
           "bcrAppId": ""
         },
-        "Inbox": {
+        "Inbox":{
           "bcrAppId": ""
         },
         "Pick": {
@@ -1038,20 +1026,38 @@
       }
     }
   },
+
+  "ProductivityPane": {
+    "AdminAccountEmail": "",
+    "LiveChatPTEAccountEmail": "ocautopwlivechat123@ocautositpw1.onmicrosoft.com",
+    "LivechatBloburl": "https://dailymblobstorage.blob.core.windows.net/ocdailympwccautomation/LivechatWS.html",
+    "LivechatSecondAgent": "",
+    "DefaultPassword": "",
+    "MacroAccountEmail": "ocautopwlivechatagent@ocautositpw1.onmicrosoft.com",
+    "MacroBloburl": "https://dailymblobstorage.blob.core.windows.net/ocdailympwccautomation/LivechatMacroSecondAgentWS.html",
+    "AgentScriptEmail": "",
+    "ApplicationSetupEmail": "",
+    "MacrosAgentEmail": "",
+    "MultiSessionEmail": ""
+  },
   "ModernAdmin": {
     "ModernAdminEmail": "",
     "ModernAdminPassword": "",
     "ModernAdminUrl": ""
   },
+
+
   "browsers": [
     "chromium"
   ],
   "devices": [],
   "launchBrowserSettings": {
-    "headless": false,
+    "headless": true,
     "slowMo": 10,
     "args": [
-      "--disable-web-security"
+      "--disable-web-security",
+      "--no-sandbox",
+      "--no-zygote"
     ]
   }
 }

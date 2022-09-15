@@ -702,7 +702,6 @@ export class WorkStreamsPage extends AdminPage {
     await this.waitUntilSelectorIsVisible(SelectorConstants.EnableBtnSelector, Constants.Three, this._page, Constants.MaxTimeout);
     await this.Page.keyboard.press(Constants.EnterKey, { delay: Number(Constants.DefaultMinTimeout) });
     await this.waitUntilSelectorIsVisible(WorkStreamSelector.UserName.replace("{0}", userName), Constants.Five, this._page, Constants.MaxTimeout);
-    await this.Page.waitForSelector(SelectorConstants.TransferUserAgentOffline);
   }
 
   public async ChangeUserCapacity(userCapacity: string) {
