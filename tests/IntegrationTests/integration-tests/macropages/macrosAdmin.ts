@@ -2356,7 +2356,6 @@ export class Macros extends BasePage {
 
   public async ChooseEnt1ToEnt2(chooseEnt: string) {
     await this.adminPage.click(Constants.Detais);
-    await this.adminPage.click(Constants.ClickEntField);
     await this.adminPage.click(Constants.SearchEntFeild);
     //Time delay to perform action
     await this.adminPage.click(chooseEnt, { timeout: 4000 });

@@ -1307,4 +1307,6 @@ export class Constants {
   static SearchAgentScriptName = `SearchAgentScript`;
   static SearchMacroName = `SearchMacro`;
   static SearchTitle = `(//span[contains(.,'SearchApplicationTab')])`;
+  static SpecificCaseLink1 = `//*[text()="Automation Case{0}"]`;
+  static SpecificCaseLink2 = `//*[text()="Case For Automation{0}"]`;
 }
