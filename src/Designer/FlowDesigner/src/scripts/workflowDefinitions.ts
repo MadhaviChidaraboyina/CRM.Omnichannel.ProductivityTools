@@ -152,7 +152,7 @@ export class Macros {
             let action: Action = {
                 id: templ.msdyn_name,
                 type: templ.msdyn_name,
-                name: Utils.getResourceString(templ.msdyn_displayname, responseLocale),
+                name: templ.msdyn_name,
                 brandColor: templ.msdyn_brandcolor,
                 description: Utils.getResourceString(templ.msdyn_actiondescription, responseLocale),
                 icon: (templ.msdyn_icon && _getIconUrl(templ.msdyn_icon) || ""),
