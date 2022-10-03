@@ -15,10 +15,14 @@ describe("Application Setup - ", () => {
 
   beforeEach(async () => {
     adminContext = await browser.newContext({
-      viewport: TestSettings.Viewport,
+      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+        origin: "",
+      },
     });
     agentContext = await browser.newContext({
-      viewport: TestSettings.Viewport,
+      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+        origin: "",
+      },
       acceptDownloads: true,
     });
     adminPage = await adminContext.newPage();

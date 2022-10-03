@@ -15,10 +15,14 @@ describe("Agent Scripts - ", () => {
 
   beforeEach(async () => {
     adminContext = await browser.newContext({
-      viewport: TestSettings.Viewport,
-    });  
+      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+        origin: "",
+      },
+    });
     agentContext = await browser.newContext({
-      viewport: TestSettings.Viewport,
+      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+        origin: "",
+      },
       acceptDownloads: true,
     });
     adminPage = await adminContext.newPage();
@@ -29,6 +33,7 @@ describe("Agent Scripts - ", () => {
     TestHelper.dispose(adminContext);
     TestHelper.dispose(agentContext);
   });
+
 
   ///<summary>
   ///Test Case 1577436: Verify Admin is able to configure agent scripts
@@ -107,5 +112,5 @@ describe("Agent Scripts - ", () => {
         Constants.SessionTemplateName
       );
     }
-  });  
+  });
 });

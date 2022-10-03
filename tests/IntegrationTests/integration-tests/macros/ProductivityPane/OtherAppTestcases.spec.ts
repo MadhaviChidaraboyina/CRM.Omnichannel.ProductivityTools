@@ -19,14 +19,20 @@ describe("Live Chat - ", () => {
 
   beforeEach(async () => {
     adminContext = await browser.newContext({
-      viewport: TestSettings.Viewport,
+      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+        origin: "",
+      },
     });
     liveChatContext = await browser.newContext({
-      viewport: TestSettings.Viewport,
+      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+        origin: "",
+      },
       acceptDownloads: true,
     });
     agentContext = await browser.newContext({
-      viewport: TestSettings.Viewport,
+      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+        origin: "",
+      },
       acceptDownloads: true,
     });
     adminPage = await adminContext.newPage();
@@ -134,26 +140,26 @@ describe("Live Chat - ", () => {
         var context = await (window as any).Microsoft.Apm.getFocusedSession().getContext();
         const ctrl = await context.resolveSlug("{anchor.servicestage}");
         return ctrl;
-    });
-    expect(servicestage).toBeTruthy();
-    const routecase = await adminPage.evaluate(async () => {
+      });
+      expect(servicestage).toBeTruthy();
+      const routecase = await adminPage.evaluate(async () => {
         var context = await (window as any).Microsoft.Apm.getFocusedSession().getContext();
         const ctrl = await context.resolveSlug("{anchor.routecase}");
         return ctrl;
-    });
-    expect(routecase).toBeTruthy();
-    const followuptaskcreated = await adminPage.evaluate(async () => {
+      });
+      expect(routecase).toBeTruthy();
+      const followuptaskcreated = await adminPage.evaluate(async () => {
         var context = await (window as any).Microsoft.Apm.getFocusedSession().getContext();
         const ctrl = await context.resolveSlug("{anchor.followuptaskcreated}");
         return ctrl;
-    });
-    expect(followuptaskcreated).toBeTruthy();
-    const _accountid_value = await adminPage.evaluate(async () => {
+      });
+      expect(followuptaskcreated).toBeTruthy();
+      const _accountid_value = await adminPage.evaluate(async () => {
         var context = await (window as any).Microsoft.Apm.getFocusedSession().getContext();
         const ctrl = await context.resolveSlug("{anchor._accountid_value}");
         return ctrl;
-    });
-    expect(_accountid_value).toBe("");
+      });
+      expect(_accountid_value).toBe("");
     } finally {
       await macrosAdminPage.deleteCaseInCSH(
         adminPage,

@@ -22,14 +22,20 @@ describe("Multi Session - ", () => {
 
   beforeEach(async () => {
     adminContext = await browser.newContext({
-      viewport: TestSettings.Viewport,
+      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+        origin: "",
+      },
     });
     liveChatContext = await browser.newContext({
-      viewport: TestSettings.Viewport,
+      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+        origin: "",
+      },
       acceptDownloads: true,
     });
     agentContext = await browser.newContext({
-      viewport: TestSettings.Viewport,
+      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+        origin: "",
+      },
       acceptDownloads: true,
     });
     adminPage = await adminContext.newPage();
@@ -87,7 +93,7 @@ describe("Multi Session - ", () => {
       );
       await macrosAdminPage.openAppLandingPage(adminPage);
       await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-     // await adminStartPage.waitForAgentStatusIcon();
+      // await adminStartPage.waitForAgentStatusIcon();
       //Creating Subjects
       await macrosAdminPage.CreateCaseForSubjectsInCSW(
         Constants.CaseTitleName2,
@@ -550,7 +556,7 @@ describe("Multi Session - ", () => {
       //Initiate two Session and Validating Productivity pane
       await macrosAdminPage.openAppLandingPage(adminPage);
       await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-     // await adminStartPage.waitForAgentStatusIcon();
+      // await adminStartPage.waitForAgentStatusIcon();
       await macrosAdminPage.InitiateSession(
         Constants.CaseTitleName,
         Constants.CaseLink1
@@ -592,7 +598,7 @@ describe("Multi Session - ", () => {
         TestSettings.AdminAccountPassword
       );
       await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-   //   await adminStartPage.waitForAgentStatusIcon();
+      //   await adminStartPage.waitForAgentStatusIcon();
       await macrosAdminPage.ClickDropDown(Constants.DashboardSelector);
       //Validate page
       await macrosAdminPage.ValidateThePage(Constants.ServiceManagerDashboard);
@@ -668,7 +674,7 @@ describe("Multi Session - ", () => {
         TestSettings.AdminAccountPassword
       );
       await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-     // await adminStartPage.waitForAgentStatusIcon();
+      // await adminStartPage.waitForAgentStatusIcon();
       //validate page
       await macrosAdminPage.ValidateDashboard(
         Constants.ValidateServiceAgentDashboard
@@ -696,7 +702,7 @@ describe("Multi Session - ", () => {
       //Initiate one Session and Tab
       await macrosAdminPage.openAppLandingPage(adminPage);
       await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-     // await adminStartPage.waitForAgentStatusIcon();
+      // await adminStartPage.waitForAgentStatusIcon();
       await macrosAdminPage.InitiateSession(
         Constants.CaseTitleName,
         Constants.CaseLink1
@@ -744,7 +750,7 @@ describe("Multi Session - ", () => {
       //Initiate first child case and add Note in it
       await macrosAdminPage.openAppLandingPage(adminPage);
       await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-   //   await adminStartPage.waitForAgentStatusIcon();
+      //   await adminStartPage.waitForAgentStatusIcon();
       await macrosAdminPage.InitiateSession(
         Constants.FCase1,
         Constants.ChildCaseLink1
@@ -860,7 +866,7 @@ describe("Multi Session - ", () => {
         TestSettings.AdminAccountPassword
       );
       await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-     // await adminStartPage.waitForAgentStatusIcon();
+      // await adminStartPage.waitForAgentStatusIcon();
       await macrosAdminPage.createCaseFromCSWSiteMap(Constants.CaseTitleName);
       await macrosAdminPage.InitiateSession(
         Constants.CaseTitleName,
@@ -1013,12 +1019,12 @@ describe("Multi Session - ", () => {
         Constants.Pick,
         Constants.ConfirmPickOperation
       );
-      await macrosAdminPage.ValidateThePage(stringFormat(Constants.CSMOwner,TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateThePage(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
       await macrosAdminPage.ClickOperation(
         Constants.Release,
         Constants.ConfirmReleaseOperation
       );
-      await macrosAdminPage.ValidateNotPresent(stringFormat(Constants.CSMOwner,TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateNotPresent(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
       await macrosAdminPage.ClickReleaseOperation(
         Constants.Remove,
         Constants.ConfirmRemoveOperation
@@ -1034,12 +1040,12 @@ describe("Multi Session - ", () => {
         Constants.Pick,
         Constants.ConfirmPickOperation
       );
-      await macrosAdminPage.ValidateThePage(stringFormat(Constants.CSMOwner,TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateThePage(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
       await macrosAdminPage.ClickOperation(
         Constants.Release,
         Constants.ConfirmReleaseOperation
       );
-      await macrosAdminPage.ValidateNotPresent(stringFormat(Constants.CSMOwner,TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateNotPresent(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
       await macrosAdminPage.ClickReleaseOperation(
         Constants.Remove,
         Constants.ConfirmRemoveOperation
@@ -1085,12 +1091,12 @@ describe("Multi Session - ", () => {
         Constants.Pick,
         Constants.ConfirmPickOperation
       );
-      await macrosAdminPage.ValidateThePage(stringFormat(Constants.CSMOwner,TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateThePage(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
       await macrosAdminPage.ClickOperation(
         Constants.Release,
         Constants.ConfirmReleaseOperation
       );
-      await macrosAdminPage.ValidateNotPresent(stringFormat(Constants.CSMOwner,TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateNotPresent(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
       await macrosAdminPage.ClickReleaseOperation(
         Constants.Remove,
         Constants.ConfirmRemoveOperation
@@ -1106,12 +1112,12 @@ describe("Multi Session - ", () => {
         Constants.Pick,
         Constants.ConfirmPickOperation
       );
-      await macrosAdminPage.ValidateThePage(stringFormat(Constants.CSMOwner,TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateThePage(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
       await macrosAdminPage.ClickOperation(
         Constants.Release,
         Constants.ConfirmReleaseOperation
       );
-      await macrosAdminPage.ValidateNotPresent(stringFormat(Constants.CSMOwner,TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateNotPresent(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
       await macrosAdminPage.ClickReleaseOperation(
         Constants.Remove,
         Constants.ConfirmRemoveOperation

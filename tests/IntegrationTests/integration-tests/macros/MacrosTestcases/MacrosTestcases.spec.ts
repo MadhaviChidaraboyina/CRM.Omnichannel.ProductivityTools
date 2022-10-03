@@ -21,6 +21,9 @@ describe("Macro testcases - ", () => {
   beforeEach(async () => {
     adminContext = await browser.newContext({
       viewport: TestSettings.Viewport,
+      extraHTTPHeaders: {
+        origin: "",
+      },
     });
     liveChatContext = await browser.newContext({
       viewport: TestSettings.Viewport,

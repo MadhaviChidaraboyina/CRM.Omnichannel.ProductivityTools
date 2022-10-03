@@ -1,6 +1,6 @@
 import { BrowserContext, Page } from "playwright";
 import { Constants } from "../../common/constants";
- import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.page";
+import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.page";
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
 import { Macros } from "integration-tests/macropages/macrosAdmin";
@@ -14,16 +14,23 @@ describe("P.Tool Migration - ", () => {
   let liveChatContext: BrowserContext;
   let macrosAdminPage: Macros;
 
+
   beforeEach(async () => {
     adminContext = await browser.newContext({
-      viewport: TestSettings.Viewport,
+      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+        origin: "",
+      },
     });
     liveChatContext = await browser.newContext({
-      viewport: TestSettings.Viewport,
+      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+        origin: "",
+      },
       acceptDownloads: true,
     });
     agentContext = await browser.newContext({
-      viewport: TestSettings.Viewport,
+      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+        origin: "",
+      },
       acceptDownloads: true,
     });
     adminPage = await adminContext.newPage();

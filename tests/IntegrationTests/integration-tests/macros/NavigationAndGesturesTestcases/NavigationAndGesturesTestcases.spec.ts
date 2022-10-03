@@ -19,13 +19,19 @@ describe("Navigation and Gestures - ", () => {
 
     beforeEach(async () => {
         adminContext = await browser.newContext({
-            viewport: TestSettings.Viewport,
+            viewport: TestSettings.Viewport, extraHTTPHeaders: {
+                origin: "",
+            },
         });
         liveChatContext = await browser.newContext({
-            viewport: TestSettings.Viewport, acceptDownloads: true,
+            viewport: TestSettings.Viewport, acceptDownloads: true, extraHTTPHeaders: {
+                origin: "",
+            },
         });
         agentContext = await browser.newContext({
-            viewport: TestSettings.Viewport, acceptDownloads: true,
+            viewport: TestSettings.Viewport, acceptDownloads: true, extraHTTPHeaders: {
+                origin: "",
+            },
         });
         adminPage = await adminContext.newPage();
         adminStartPage = new OrgDynamicsCrmStartPage(adminPage);
@@ -36,7 +42,7 @@ describe("Navigation and Gestures - ", () => {
         TestHelper.dispose(liveChatContext);
         TestHelper.dispose(agentContext);
     });
-
+    
     ///<summary>
     ///Test Case 2045186: [Navigation and Gestures] : Verify if records can be opened as sessions from case views
     ///Test Case Link  https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2045186

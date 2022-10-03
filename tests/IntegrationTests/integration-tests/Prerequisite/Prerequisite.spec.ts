@@ -16,14 +16,18 @@ import { BrowserContext, Page } from "playwright-core";
 
   beforeEach(async () => {
     adminContext = await browser.newContext({
-      viewport: TestSettings.Viewport,
+      viewport: TestSettings.Viewport,extraHTTPHeaders: {
+        origin: "",
+    },
     });
     liveChatContext = await browser.newContext({
       viewport: TestSettings.Viewport,
       acceptDownloads: true,
     });
     agentContext = await browser.newContext({
-      viewport: TestSettings.Viewport,
+      viewport: TestSettings.Viewport,extraHTTPHeaders: {
+        origin: "",
+    },
       acceptDownloads: true,
     });
     adminPage = await adminContext.newPage();

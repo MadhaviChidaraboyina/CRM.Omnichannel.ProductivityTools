@@ -18,10 +18,14 @@ describe("Live Chat - ", () => {
 
     beforeEach(async () => {
         adminContext = await browser.newContext({
-            viewport: TestSettings.Viewport,
+            viewport: TestSettings.Viewport, extraHTTPHeaders: {
+                origin: "",
+            },
         });
         agentContext = await browser.newContext({
-            viewport: TestSettings.Viewport, acceptDownloads: true,
+            viewport: TestSettings.Viewport, acceptDownloads: true, extraHTTPHeaders: {
+                origin: "",
+            },
         });
         adminPage = await adminContext.newPage();
         adminStartPage = new OrgDynamicsCrmStartPage(adminPage);

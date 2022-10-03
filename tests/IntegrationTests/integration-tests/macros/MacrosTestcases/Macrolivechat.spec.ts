@@ -21,13 +21,19 @@ describe("Live Chat - ", () => {
 
     beforeEach(async () => {
         adminContext = await browser.newContext({
-            viewport: TestSettings.Viewport,
+            viewport: TestSettings.Viewport, extraHTTPHeaders: {
+                origin: "",
+            },
         });
         liveChatContext = await browser.newContext({
-            viewport: TestSettings.Viewport, acceptDownloads: true,
+            viewport: TestSettings.Viewport, acceptDownloads: true, extraHTTPHeaders: {
+                origin: "",
+            },
         });
         agentContext = await browser.newContext({
-            viewport: TestSettings.Viewport, acceptDownloads: true,
+            viewport: TestSettings.Viewport, acceptDownloads: true, extraHTTPHeaders: {
+                origin: "",
+            },
         });
         adminPage = await adminContext.newPage();
         adminStartPage = new OrgDynamicsCrmStartPage(adminPage);
@@ -122,7 +128,7 @@ describe("Live Chat - ", () => {
                 Constants.OpenWebResource
             );
             await macrosAdminPage.waitForTimeout();
-            await macrosAdminPage.addAgentScripttoDefaultChatSessionbyParameterization2(Constants.DashboardOpenSourceScriptName,Constants.DashboardOpenSourceAgentScript);
+            await macrosAdminPage.addAgentScripttoDefaultChatSessionbyParameterization2(Constants.DashboardOpenSourceScriptName, Constants.DashboardOpenSourceAgentScript);
             //Run Macro
             await macrosAdminPage.waitForTimeout();// it is mandatory to load UI elements
             await macrosAdminPage.openAppLandingPage(adminPage);
