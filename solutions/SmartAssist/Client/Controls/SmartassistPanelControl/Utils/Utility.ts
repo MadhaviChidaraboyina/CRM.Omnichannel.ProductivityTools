@@ -112,6 +112,7 @@ module MscrmControls.SmartassistPanelControl {
                 let cifUtil = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
                 let templateParams = cifUtil.getSessionTemplateParams();
                 let data = templateParams.data;
+                if (typeof data === "string") data = JSON.parse(data);
                 workStreamId = data.ocContext.config.sessionParams.LiveWorkStreamId;
             } catch (error) {
                 eventParameters.addParameter("Exception Details", error.message);
