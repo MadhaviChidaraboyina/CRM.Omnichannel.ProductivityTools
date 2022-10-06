@@ -6,9 +6,9 @@
   "license": "ISC",
   "private": true,
   "scripts": {
-    "install": "cd tests && npm install",
-    "test": "cd tests && npm run test",
-    "watch": "cd tests && npm run watch",
-    "watchAll": "cd tests && npm run watchAll"
+    "install": "cd Tests/UnitTests && npm install",
+    "test": "cd Tests/UnitTests && npm run test",
+    "watch": "cd Tests/UnitTests && npm run watch",
+    "watchAll": "cd Tests/UnitTests && npm run watchAll"
   }
 }

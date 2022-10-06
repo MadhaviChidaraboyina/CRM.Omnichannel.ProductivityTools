@@ -1,15 +1,15 @@
 module.exports = {
   roots: ["."],
   testMatch: [
-    "**/tests/**/?(*.)+(spec|test).+(ts|tsx|js)",
+    "**/Tests/**/?(*.)+(spec|test).+(ts|tsx|js)",
     "**/?(*.)+(spec|test).+(ts|tsx|js)"
   ],
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest"
   },
-  modulePathIgnorePatterns : ["tests/IntegrationTests/"],
+  modulePathIgnorePatterns : ["Tests/IntegrationTests/"],
   // The directory where Jest should output its coverage files
-  coverageDirectory: "../drop/coverage",
+  coverageDirectory: "../../drop/coverage",
   coverageReporters: ["text", "cobertura", "lcov", "json-summary"],
   collectCoverage: true,
   coverageThreshold: {
@@ -25,7 +25,7 @@ module.exports = {
     [
       "jest-trx-results-processor",
       {
-        outputFile: "../drop/testResults/test-results.trx",
+        outputFile: "../../drop/testResults/test-results.trx",
       },
     ],
   ],

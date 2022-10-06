@@ -3,5 +3,5 @@
     "esModuleInterop": true,
     "types": ["@types/jest"]
   },
-  "exclude": ["**/tests/*.test.ts"]
+  "exclude": ["**/Tests/UnitTests/*.test.ts"]
 }

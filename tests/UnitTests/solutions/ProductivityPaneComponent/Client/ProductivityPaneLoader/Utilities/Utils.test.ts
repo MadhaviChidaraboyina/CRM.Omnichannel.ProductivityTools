@@ -4,7 +4,7 @@ describe("ProductivityPaneLoader.Utils tests", () => {
   let exportModule: any;
 
   beforeEach(() => {
-    exportModule = rewire("../../../../../../solutions/ProductivityPaneComponent/Client/ProductivityPaneLoader/Utilities/Utils.js");
+    exportModule = rewire("../../../../../../../solutions/ProductivityPaneComponent/Client/ProductivityPaneLoader/Utilities/Utils.js");
   });
 
   describe("isNullOrUndefined tests", () => {

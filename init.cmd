@@ -292,10 +292,10 @@ if exist ./solutions/package.json (
 
 echo Install npm dependencies for unit tests
 ==========================================================
-if exist ./tests/package.json (
-	cd ./tests
+if exist ./Tests/UnitTests/package.json (
+	cd ./Tests/UnitTests
 	call npm install
-	cd ..
+	cd ../..
 )
 @echo.
 
