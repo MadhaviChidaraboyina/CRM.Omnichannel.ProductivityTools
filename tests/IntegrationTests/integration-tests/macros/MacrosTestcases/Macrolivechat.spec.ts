@@ -362,84 +362,8 @@ describe("Live Chat - ", () => {
             await agentScriptAdminPage.deleteAgentScript(Constants.AgentScript2);
             await macrosPage?.closePage();
         }
-    });
-
-    ///<summary>
-    ///Test Case 2045302: [Productivity Pane: Agent Guidance] : Validate knowledge search control in both case session and conversation session (actions are slightly different)
-    /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2045302
-    ///</summary>
-    it.skip("Test Case 2045302: [Productivity Pane: Agent Guidance] : Validate knowledge search control in both case session and conversation session (actions are slightly different)", async () => {
-        agentPage = await agentContext.newPage();
-        const agentStartPage = new OrgDynamicsCrmStartPage(agentPage);
-        liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-        const agentChat = new AgentChat(agentPage);
-        try {
-            //Login as admin and create case
-            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.MacrosAgentEmail, TestSettings.AdminAccountPassword);
-            await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-            await macrosAdminPage.createCase(Constants.CaseTitleName);
-
-            //Initiate session and validate kb search
-            await macrosAdminPage.openAppLandingPage(adminPage);
-            await adminStartPage.goToCustomerServiceWorkspace();
-            await macrosAdminPage.InitiateSession(Constants.CaseTitleName, Constants.CaseLink1);
-            await macrosAdminPage.ClickProductivityPaneTool(Constants.KStool);
-            await macrosAdminPage.ValidateThePage(Constants.KStool);
-            await macrosAdminPage.ValidateThePage(Constants.KSLinkBtn);
-            await macrosAdminPage.MoreActions();
-            await macrosAdminPage.ValidateThePage(Constants.CopyURL);
-            await macrosAdminPage.ValidateThePage(Constants.EmailURL);
-            await macrosAdminPage.ValidateThePage(Constants.EmailContent);
-
-            //Login as agent and accept chat
-            await macrosAdminPage.loginAsAgentAndOpenOmnichannelForCS(TestSettings.MacrosAgentEmail, agentStartPage, agentChat);
-            await macrosAdminPage.initiateLiveChatWithAgent(liveChatPage);
-            await macrosAdminPage.acceptLiveChatAsAgent(liveChatPage, agentChat);
-
-            //validate kb search
-            const KbSearch = await macrosAdminPage.OpenKbSearchAndValidate(agentPage);
-            expect(KbSearch).toBeTruthy();
-
-            //Closing Chat
-
-            await agentChat.closeUnusedChat();
-            await liveChatPage.closeChat();
-        }
-        finally {
-            await macrosAdminPage.deleteCase(adminPage, adminStartPage, Constants.CaseTitleName);
-        }
-    });
-
-
-    ///<summary>
-    ///Test Case 1577428: Verify Admin of the company can configure the custom activities to be tracked as part of user navigation and those would be listed in the navigation tab.
-    /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1577428
-    ///</summary>
-    it.skip("Test Case 1577428: Verify Admin of the company can configure the custom activities to be tracked as part of user navigation and those would be listed in the navigation tab.", async () => {
-        agentPage = await agentContext.newPage();
-        const agentStartPage = new OrgDynamicsCrmStartPage(agentPage);
-        liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-        const agentChat = new AgentChat(agentPage);
-        try {
-            //Login as admin and create case
-            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.MacrosAgentEmail, TestSettings.AdminAccountPassword);
-
-            //Login as agent and accept chat
-            await macrosAdminPage.loginAsAgentAndOpenOmnichannelForCS(TestSettings.MacrosAgentEmail, agentStartPage, agentChat);
-            await macrosAdminPage.initiateLiveChatWithAgent(liveChatPage);
-            await macrosAdminPage.acceptLiveChatAsAgent(liveChatPage, agentChat);
-
-            //Closing Chat
-
-            await agentChat.closeUnusedChat();
-            await liveChatPage.closeChat();
-            await macrosAdminPage.OpenClosedItem(agentChat);
-            await macrosAdminPage.ValidateThePage(Constants.History);
-        }
-        finally {
-            console.log("validation Successfully");
-        }
-    });
+    }); 
+ 
 
     ///<summary>
     ///Test Case 2367015: [Macros] Verify cloning of current record by using 'Clone current record' action in the Productivity Automation.
@@ -482,38 +406,7 @@ describe("Live Chat - ", () => {
         finally {
             await macrosAdminPage.deleteMacro(adminStartPage, Constants.CloneCurrentMacro);
         }
-    });
-
-
-
-
-    ///<summary>
-    ///Test Case 1577427: Verify Agent can see the user navigation history in the customer summary > under Navigation tab.
-    ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1577427
-    ///</summary>
-    it.skip("Test Case 1577427: Verify Agent can see the user navigation history in the customer summary > under Navigation tab", async () => {
-        agentPage = await agentContext.newPage();
-        const agentStartPage = new OrgDynamicsCrmStartPage(agentPage);
-        liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-        const agentChat = new AgentChat(agentPage);
-        try {
-            await macrosAdminPage.initiateLiveChatWithAgent(liveChatPage);
-            //Login as agent and accept chat
-            await macrosAdminPage.loginAsAgentAndOpenOmnichannelForCS(TestSettings.MacrosAgentEmail, agentStartPage, agentChat);
-            await macrosAdminPage.acceptLiveChatAsAgent(liveChatPage, agentChat);
-
-            await agentChat.closeUnusedChat();
-            await liveChatPage.closeChat();
-            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.MacrosAgentEmail, TestSettings.AdminAccountPassword);
-            await adminStartPage.goToMyApp(Constants.OmnichannelCustomerservice);
-            await macrosAdminPage.openClosedWorkItems();
-            await macrosAdminPage.ValidateThePage(Constants.History);
-            await macrosAdminPage.ValidateThePage(Constants.Transcript);
-        }
-        finally {
-            console.log("validation Successfully");
-        }
-    });
+    }); 
 
     ///<summary>
     ///Test Case 1790578: Verify Static values are working in expression builder with true condition
@@ -750,46 +643,7 @@ describe("Live Chat - ", () => {
             await macrosAdminPage.deleteAgentScript(Constants.AgentscriptName2);
             await macrosAdminPage.deleteSessionTemplate(adminPage, adminStartPage, Constants.SessionTemplateName);
         }
-    });
-
-    ///<summary>
-    ///Test Case 1785761: [Sanity][All Channels] Verify Agent scripts are loading in Productivity pane, Macros are running and expression builder is executing as per inputs
-    /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1785761
-    ///</summary>
-    it.skip("Test Case 1785761: [Sanity][All Channels] Verify Agent scripts are loading in Productivity pane, Macros are running and expression builder is executing as per inputs", async () => {
-        agentPage = await agentContext.newPage();
-        const agentStartPage = new OrgDynamicsCrmStartPage(agentPage);
-        liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-        const agentChat = new AgentChat(agentPage);
-        try {
-            //Login as admin and create macro
-            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.MacrosAgentEmail, TestSettings.AdminAccountPassword);
-            await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
-            await macrosAdminPage.createMacro(Constants.OpenFocustab);
-
-            //Initiate live chat with agent
-            await macrosAdminPage.initiateLiveChatWithAgent(liveChatPage);
-
-            //Login as agent and accept chat
-            await macrosAdminPage.loginAsAgentAndOpenOmnichannelForCS(TestSettings.MacrosAgentEmail,
-                agentStartPage, agentChat);
-            await macrosAdminPage.acceptLiveChatAsAgent(liveChatPage, agentChat);
-
-            //Check API response through console
-            const result = await agentPage.evaluate(async () => {
-                const ctrl = await (window as any).Microsoft.ProductivityMacros.runMacro("FocustabMacro");
-                return ctrl;
-            });
-            expect(result).toBe(Constants.ActionPerformedSuccessfully);
-
-            //End live chat
-            await macrosAdminPage.closeConversation(agentPage, agentChat);
-            await liveChatPage.closeChat();
-        }
-        finally {
-            await macrosAdminPage.deleteMacro(adminStartPage, Constants.OpenFocustab);
-        }
-    });
+    }); 
 
     ///<summary>
     ///Test Case 2253523: [Macros] Verify entity search application template  is opened in new tab using 'Open application tab' action in macros
@@ -916,95 +770,5 @@ describe("Live Chat - ", () => {
         finally {
             await macrosAdminPage.deleteMacro(adminStartPage, Constants.CloneInputRecord);
         }
-    });
-
-    ///<summary>
-    ///Test Case 2411747: Verify OC old Customer Summary and new customer summary having it as anchor tab and additional tab (regular tab)
-    /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2411747
-    ///</summary>
-    it.skip("Test Case 2411747: Verify OC old Customer Summary and new customer summary having it as anchor tab and additional tab (regular tab)", async () => {
-        agentPage = await agentContext.newPage();
-        const agentStartPage = new OrgDynamicsCrmStartPage(agentPage);
-        liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-        const agentChat = new AgentChat(agentPage);
-        try {
-            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.MacrosAgentEmail, TestSettings.AdminAccountPassword);
-            await adminStartPage.goToMyApp(Constants.OmnichannelAdminCenterApp);
-            await macrosAdminPage.createApplicationTabInOC(Constants.OldCustomerSummary, Constants.OldCustomerSummaryUniqueName, Constants.EntityRecordOptionValue);
-            await macrosAdminPage.insertParametersInOldSustumersummary();
-            await macrosAdminPage.genericSession(Constants.SessionTemplateName, Constants.SessionTemplateUniqueName);
-            await macrosAdminPage.initiateLiveChatWithAgent(liveChatPage);
-            // Login as agent and accept chat
-            await macrosAdminPage.loginAsAgentAndOpenOmnichannelForCS(TestSettings.MacrosAgentEmail, agentStartPage, agentChat);
-            await macrosAdminPage.acceptLiveChatAsAgent(liveChatPage, agentChat);
-            const CustomerSummaryTab = await macrosAdminPage.verifyOpenedTab(agentPage, Constants.CustomerSummaryTab);
-            expect(CustomerSummaryTab).toBeTruthy();
-            await macrosAdminPage.closeConversation(agentPage, agentChat);
-            await liveChatPage.closeChat();
-
-            await macrosAdminPage.openAppLandingPage(adminPage);
-            await adminStartPage.goToMyApp(Constants.OmnichannelAdminCenterApp);
-            await macrosAdminPage.openGenericSession(Constants.CustomerSummary, Constants.AnchorTabSearchResult);
-            await macrosAdminPage.initiateLiveChatWithAgent(liveChatPage);
-            await macrosAdminPage.loginAsAgentAndOpenOmnichannelForCS(TestSettings.MacrosAgentEmail, agentStartPage, agentChat);
-            await macrosAdminPage.acceptLiveChatAsAgent(liveChatPage, agentChat);
-            const CustomerSummaryAppTab = await macrosAdminPage.verifyOpenedTab(agentPage, Constants.CustomerSummaryConversation);
-            expect(CustomerSummaryAppTab).toBeTruthy();
-            await macrosAdminPage.closeConversation(agentPage, agentChat);
-            await liveChatPage.closeChat();
-
-            await macrosAdminPage.openAppLandingPage(adminPage);
-            await adminStartPage.goToMyApp(Constants.OmnichannelAdminCenterApp);
-            await macrosAdminPage.chooseSecondAnchorTab();
-            await macrosAdminPage.loginAsAgentAndOpenOmnichannelForCS(TestSettings.MacrosAgentEmail, agentStartPage, agentChat);
-            await macrosAdminPage.acceptLiveChatAsAgent(liveChatPage, agentChat);
-            const OldCustomerSummaryTab = await macrosAdminPage.verifyOpenedTab(agentPage, Constants.OldCustomerSummaryConversation);
-            expect(OldCustomerSummaryTab).toBeTruthy();
-            await macrosAdminPage.closeConversation(agentPage, agentChat);
-            await liveChatPage.closeChat();
-
-            await macrosAdminPage.openAppLandingPage(adminPage);
-            await adminStartPage.goToMyApp(Constants.OmnichannelAdminCenterApp);
-            await macrosAdminPage.openGenericSession(Constants.OldCustomerSummary, Constants.AppTabSearchReasult);
-            await macrosAdminPage.loginAsAgentAndOpenOmnichannelForCS(TestSettings.MacrosAgentEmail, agentStartPage, agentChat);
-            await macrosAdminPage.acceptLiveChatAsAgent(liveChatPage, agentChat);
-            const OldCustomerSummaryAppTab = await macrosAdminPage.verifyOpenedTab(agentPage, Constants.OldCustomerSummaryConversation);
-            expect(OldCustomerSummaryAppTab).toBeTruthy();
-            await macrosAdminPage.closeConversation(agentPage, agentChat);
-            await liveChatPage.closeChat();
-        }
-        finally {
-            await macrosAdminPage.deleteApplicationTabWithCSAdminCenter(adminStartPage, Constants.OldCustomerSummary);
-            await macrosAdminPage.deleteSessionTemplate(adminPage, adminStartPage, Constants.SessionTemplateName);
-        }
-    });
-
-    ///<summary>
-    ///Test Case 2412690: Verify Knowledge search as anchor tab and also as an additional (Regular ) tab.
-    ///Test Case Link  https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2412690
-    ///</summary>
-    it.skip("Test Case 2412690: Verify Knowledge search as anchor tab and also as an additional (Regular ) tab.", async () => {
-        agentPage = await agentContext.newPage();
-        const agentStartPage = new OrgDynamicsCrmStartPage(agentPage);
-        liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-        const agentChat = new AgentChat(agentPage);
-        try {
-            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.MacrosAgentEmail, TestSettings.AdminAccountPassword);
-            await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
-            await macrosAdminPage.anchorTabKnowledgeSearch();
-            await macrosAdminPage.initiateLiveChatWithAgent(liveChatPage);
-            await macrosAdminPage.loginAsAgentAndOpenOmnichannelForCS(TestSettings.MacrosAgentEmail,
-                agentStartPage, agentChat);
-            await macrosAdminPage.acceptLiveChatAsAgent(liveChatPage, agentChat);
-            const KnowledgeSearchAppTab = await macrosAdminPage.verifyOpenedTab(agentPage, Constants.KnowledgearticleSearch);
-            expect(KnowledgeSearchAppTab).toBeTruthy();
-
-            //End live chat
-            await macrosAdminPage.closeConversation(agentPage, agentChat);
-            await liveChatPage.closeChat();
-        }
-        finally {
-            await macrosAdminPage.deleteSessionTemplate(adminPage, adminStartPage, Constants.SessionTemplateName);
-        }
-    });
+    });   
 });

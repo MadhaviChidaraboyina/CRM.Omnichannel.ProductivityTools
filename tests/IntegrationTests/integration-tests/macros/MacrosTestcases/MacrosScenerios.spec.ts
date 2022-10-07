@@ -1,12 +1,9 @@
-import { AgentChat } from "../../../pages/AgentChat";
 import { BrowserContext, Page } from "playwright";
 import { Constants } from "../../common/constants";
 import { Macros } from "../../macropages/macrosAdmin";
 import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.page";
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
-import { AgentScript } from "../../agentScript/pages/agentScriptAdmin";
-import { LiveChatPage } from "pages/LiveChat";
 
 describe("Live Chat - ", () => {
     let adminContext: BrowserContext;
@@ -338,60 +335,7 @@ describe("Live Chat - ", () => {
             await macrosAdminPage.deleteCase(adminPage, adminStartPage, Constants.Case11);
             await macrosAdminPage.DeleteQueue(adminPage, adminStartPage, Constants.QueueName);
         }
-    });
-
-    ///<summary>
-    ///Test Case 2418287: Verify Notification should resolve odata and slug.
-    ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2418287
-    ///<summary> 
-    it.skip("Test Case 2418287: Verify Notification should resolve odata and slug.", async () => {
-        agentPage = await agentContext.newPage();
-        const agentStartPage = new OrgDynamicsCrmStartPage(agentPage);
-        const agentChat = new AgentChat(agentPage);
-        try {
-            // Login As Admin and create Queue
-            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.AdminAccountEmail, TestSettings.AdminAccountPassword);
-            await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
-            await macrosAdminPage.createAdvancedQueue(Constants.QueueName);
-            await macrosAdminPage.AddUsers(Constants.User);
-
-            //Create Notification and workstream
-            await macrosAdminPage.notification(Constants.NotificationName);
-            await macrosAdminPage.createRecordWorkStream(Constants.WorkStreamName);
-            await macrosAdminPage.createIntakeRule(Constants.IntakeRuleName);
-            await macrosAdminPage.addNotificationInWorkStream();
-
-            // Create routing rule
-            await macrosAdminPage.createRecordRouting(Constants.AssociateCase3);
-            await macrosAdminPage.createRoutingRuleSet(Constants.RuleName, Constants.RuleItemName, Constants.QueueName);
-
-            // login to Omnichannel for customer service
-            await macrosAdminPage.loginAsAgentAndOpenOmnichannelForCS(TestSettings.AdminAccountEmail, agentStartPage, agentChat);
-            await macrosAdminPage.openAppLandingPage(adminPage);
-
-            // Create a case and route it to queue
-            await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-            await macrosAdminPage.createCase(Constants.CaseTitleName);
-            await macrosAdminPage.AddQueueToExistingCases(Constants.CaseTitleName, Constants.QueueName);
-            await macrosAdminPage.applyRoutingRuleToCase(Constants.CaseTitleName);
-
-            //Verify the case title in the notification
-            await macrosAdminPage.validateTheNotification(agentPage, Constants.CaseLink1);
-
-            //This tescase has an existing bug so cannot verify the customer name.
-            //Please refer the bug for more information https://dev.azure.com/dynamicscrm/OneCRM/_workitems/edit/2625406
-        }
-        finally {
-            await macrosAdminPage.deleteCase(adminPage, adminStartPage, Constants.CaseTitleName);
-            await macrosAdminPage.openAppLandingPage(adminPage);
-            await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
-            await macrosAdminPage.deleteRoutingRuleSet();
-            await macrosAdminPage.deleteRecordWorkstream(Constants.WorkStreamName);
-            await macrosAdminPage.deleteAdvanceQueue(Constants.QueueName);
-            await macrosAdminPage.deleteRecordRouting();
-            await macrosAdminPage.deleteNotification(Constants.NotificationName);
-        }
-    });
+    });  
 });
 
 

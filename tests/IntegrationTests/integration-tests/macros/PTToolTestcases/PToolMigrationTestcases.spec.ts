@@ -144,44 +144,7 @@ describe("P.Tool Migration - ", () => {
     } finally {
       console.log("Test Case Executed Successfully");
     }
-  });
-
-  ///<summary>
-  ///Test Case 2245402: [P.Tool Migration] Verify content updates of each tool when switching sessions (including smart assist cards and agent scripts)
-  /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2245402
-  ///</summary>
-  it.skip("Test Case 2245402: [P.Tool Migration] Verify content updates of each tool when switching sessions (including smart assist cards and agent scripts)", async () => {
-    agentPage = await agentContext.newPage();
-    try {
-      //Login as 'Admin automated' and redirected to OrgUrl
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.AdminAccountEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      //Open suggestions card and validate
-      await macrosAdminPage.OpenSuggestionLink(Constants.KArticleOpen);
-      await macrosAdminPage.ValidateThePage(Constants.ValidateSuggestion);
-      //Initiate session open suggesion card
-      await macrosAdminPage.GoToHome();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName2,
-        Constants.CaseLink2
-      );
-      await macrosAdminPage.ClickProductivityPaneTool(Constants.KStool);
-      await macrosAdminPage.OpenSuggestionLink(Constants.KSToolData);
-      await macrosAdminPage.ValidateThePage(Constants.KStool);
-      //switch to previous session and validate
-      await macrosAdminPage.SwitchBackToPreviousSession(Constants.Firstcase);
-      await macrosAdminPage.ValidateThePage(Constants.ValidateSuggestion);
-    } finally {
-      console.log("Test Case Executed Successfully");
-    }
-  });
+  }); 
 
   ///<summary>
   ///Test Case 2268077: [P.Tool Migration] Ensure state persistence for app side panes state (collapsed/expanded) in each session
@@ -453,40 +416,7 @@ describe("P.Tool Migration - ", () => {
       );
     }
   });
-
-  ///<summary>
-  ///Test Case 2245446: [P.Tool Migration] Ensure the badge number on smart assist can be accumulated and cached/restored along with session switch.
-  /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2245446
-  ///</summary>
-  it.skip("Test Case 2245446: [P.Tool Migration] Ensure the badge number on smart assist can be accumulated and cached/restored along with session switch.", async () => {
-    agentPage = await agentContext.newPage();
-    try {
-      //Login as 'Admin automated' and redirected to OrgUrl
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.AdminAccountEmail4,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await macrosAdminPage.ValidateThePage(Constants.BadgeNum);
-      //Initiate session and validate
-      await macrosAdminPage.GoToHome();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName3,
-        Constants.CaseLink3
-      );
-      await macrosAdminPage.ValidateThePage(Constants.NoBadgeNum);
-      //switch to previous session and validate
-      await macrosAdminPage.SwitchBackToPreviousSession(Constants.Firstcase);
-      await macrosAdminPage.ValidateThePage(Constants.BadgeNum);
-    } finally {
-      console.log("Test Case Executed Successfully");
-    }
-  });
-
+ 
   ///<summary>
   ///Test Case 2271691: [P.Tool Migration] Teams control integration: Teams is not hidden on home session where its collapsed/expanded state respects APM pane mode.
   /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2271691
