@@ -126,18 +126,6 @@ namespace Microsoft.ProductivityMacros.Internal {
 		return top.location.search.split('appid=')[1].split('&')[0];
 	}
 
-	function getMacroVersion(): string {
-		let MacrosVersion = "";
-		(window.top as any).Xrm.WebApi.retrieveMultipleRecords("msdyn_productivitymacrosolutionconfiguration", "?$top=1").then(
-			(result: any) => {
-				if (result && result.entities) {
-					MacrosVersion = result.entities[0].msdyn_macrosversion;
-				}
-			}
-		)
-		return MacrosVersion;
-	}
-
 	function getClientType(): string {
 		return (window.top as any).Xrm.Utility.getGlobalContext().client.getClient();
 	}
@@ -204,7 +192,10 @@ namespace Microsoft.ProductivityMacros.Internal {
 			var AdminTelemetry = new AWTEventProperties();
 			AdminTelemetry.setName(TelemetryConstants.macrosAdminTable);
 
-			AdminTelemetry.setProperty(TelemetryConstants.adminDesignerInstanceId, data.designerInstanceId ? data.designerInstanceId : "");
+			let DesignerInstanceId = "";
+			let DesignerSolutionVersion = "";
+			({ DesignerInstanceId, DesignerSolutionVersion } = GetDesignerInfo(data));
+			AdminTelemetry.setProperty(TelemetryConstants.adminDesignerInstanceId, DesignerInstanceId);
 			AdminTelemetry.setProperty(TelemetryConstants.adminEventName, data.eventName ? data.eventName : "");
 			AdminTelemetry.setProperty(TelemetryConstants.adminEventCorrelationId, data.eventCorrelationId ? data.eventCorrelationId : "");
 			AdminTelemetry.setProperty(TelemetryConstants.adminMessage, data.message ? data.message : "");
@@ -215,7 +206,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 			AdminTelemetry.setProperty(TelemetryConstants.adminLevel, data.level ? data.level : "");
 			AdminTelemetry.setProperty(TelemetryConstants.adminException, data.exception ? data.exception : "");
 
-			AdminTelemetry.setProperty(TelemetryConstants.macroVersion, getMacroVersion());
+			AdminTelemetry.setProperty(TelemetryConstants.macroVersion, DesignerSolutionVersion);
 			AdminTelemetry.setProperty(TelemetryConstants.appId, getAppId());
 			AdminTelemetry.setProperty(TelemetryConstants.navigationType, getNavigationType());
 			AdminTelemetry.setProperty(TelemetryConstants.clientType, getClientType());
@@ -234,6 +225,9 @@ namespace Microsoft.ProductivityMacros.Internal {
 			var RuntimeTelemetry = new AWTEventProperties();
 			RuntimeTelemetry.setName(TelemetryConstants.macrosRuntimeTable);
 
+			let DesignerInstanceId = "";
+			let DesignerSolutionVersion = "";
+			({ DesignerInstanceId, DesignerSolutionVersion } = GetDesignerInfo(data));
 			RuntimeTelemetry.setProperty(TelemetryConstants.macroActionName, data.MacrosActionName);
 			RuntimeTelemetry.setProperty(TelemetryConstants.macroActionResult, data.MacrosActionResult);
 			RuntimeTelemetry.setProperty(TelemetryConstants.telemetryData, data.TelemetryData ? JSON.stringify(data.TelemetryData) : "");
@@ -244,7 +238,7 @@ namespace Microsoft.ProductivityMacros.Internal {
 			RuntimeTelemetry.setProperty(TelemetryConstants.errorReportTime, data.ErrorObject ? data.ErrorObject.reportTime : "");
 			RuntimeTelemetry.setProperty(TelemetryConstants.correlationId, data.CorrelationId ? data.CorrelationId : "");
 
-			RuntimeTelemetry.setProperty(TelemetryConstants.macroVersion, getMacroVersion());
+			RuntimeTelemetry.setProperty(TelemetryConstants.macroVersion, DesignerSolutionVersion);
 			RuntimeTelemetry.setProperty(TelemetryConstants.appId, getAppId());
 			RuntimeTelemetry.setProperty(TelemetryConstants.navigationType, getNavigationType());
 			RuntimeTelemetry.setProperty(TelemetryConstants.clientType, getClientType());
@@ -255,6 +249,22 @@ namespace Microsoft.ProductivityMacros.Internal {
 
 			TelemetryReporter.Instance.macrosLogger.logEvent(RuntimeTelemetry);
 		}
+	}
+
+	// Get Designer info from event data
+	function GetDesignerInfo(data: any) : { DesignerInstanceId: string, DesignerSolutionVersion: string } {
+		let DesignerInstanceId: string = "";
+		let DesignerSolutionVersion: string = "";
+
+		if (data != null && data.eventData != null && data.eventData.data != null) {
+			if (data.eventData.data.DesignerInstanceId != null) {
+				DesignerInstanceId = data.eventData.data.DesignerInstanceId;
+			}
+			if (data.eventData.data.DesignerSolutionVersion != null) {
+				DesignerSolutionVersion = data.eventData.data.DesignerSolutionVersion;
+			}
+		}
+		return { DesignerInstanceId, DesignerSolutionVersion };
 	}
 
 	export class UsageTelemetryData {
