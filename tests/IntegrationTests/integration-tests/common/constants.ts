@@ -125,7 +125,7 @@ export class Constants {
   static AllCasesView = `//*[text()="All Cases"]`;
   static Agentscriptdropdown =  "//*[contains(@id,'ViewSelector_')]/span/i";
   static Inactiveagentscripvalue = "//span[normalize-space()='Inactive Agent scripts']";
-  static SearchBox = `[placeholder="Search this view"]`;
+  static SearchBox = `//*[contains(@data-id,"quickFind_text")]`;
   static AutomationCaseLink = `//*[text()="Automation Case"]`;
   static UpdateAccount = `UpdateAccount`;
   static UpdateAnExistingRecord = `//*[text()="Update an existing record"]`;
@@ -332,7 +332,7 @@ export class Constants {
   static OmnichannelAdminCenterApp = `Omnichannel admin center`;
   static AgentExperience = `[aria-label="Agent experience"]`;
   static ManageMacros = `[aria-label="Manage settings for macros"]`;
-  static SearchMacro = `[placeholder="Search this view"]`;
+  static SearchMacro = `//*[contains(@data-id,"quickFind_text")]`;
   static ThirdPartyWebsiteApplicationTab = `ThirdPartyWebsiteApplicationTab`;
   static MsdynForUniquename = `msdyn_`;
   static ThirdPartyWebsiteApplicationTabUniqueName =
@@ -491,7 +491,7 @@ export class Constants {
   static SaveTheBtn = `//*[text()="Save"]`;
   static CaseSaveBtn = `[data-id="incident|NoRelationship|Form|Mscrm.Form.incident.Save"]`;
   static RefreshTheBtn = `[aria-label="Refresh"]`;
-  static SearchOption = `(//input[@placeholder="Search this view"])[1]`;
+  static SearchOption =  `//*[contains(@data-id,"quickFind_text")]`;
   static CaseLink1 = `//*[text()="Automation Case"]`;
   static CaseLink2 = `//*[text()="Case For Automation"]`;
   static ViewTheSelector = `//*[contains(@data-id,"ViewSelector")]`;
@@ -1309,4 +1309,20 @@ export class Constants {
   static SearchTitle = `(//span[contains(.,'SearchApplicationTab')])`;
   static SpecificCaseLink1 = `//*[text()="Automation Case{0}"]`;
   static SpecificCaseLink2 = `//*[text()="Case For Automation{0}"]`;
+  static KnowledgeBasePSBlank = ``;
+  static KnowledgeBasePSText = `Plan_Text`;
+  static KnowledgeBasePSRandom = `QWERTYUUIO`;
+  static KnowledgeBaseBlankMacroName = `KnowledgeBaseBlankMacro`;
+  static KnowledgeBasePTextMacroName = `KnowledgeBasePTextMacro`;
+  static KnowledgeBaseSlugMacroName = `KnowledgeBaseSlugMacroName`;
+  static KnowledgeBaseRndMacroName = `KnowledgeBaseRndMacroName`;
+  static KnowledgeBaseBlankAgentScriptName = `KnowledgeBaseBlankAgentScript`;
+  static KnowledgeBasePTextAgentScriptName = `KnowledgeBasePTextAgentScript`;
+  static KnowledgeBaseSlugAgentScriptName = `KnowledgeBaseSlugAgentScript`;
+  static KnowledgeBaseRndAgentScriptName = `KnowledgeBaseRndAgentScript`;
+  static KBArticlelinkPTextTitle = `(//span[contains(.,'Plan_Text')])`;
+  static KBArticlelinkRndTitle = `(//span[contains(.,'QWERTYUUIO')])`;
+  static KnowledgeBaseRString = `KnowledgeBase`;
+  static SearchPhraseLabelField = `[aria-label="Tab Label"]`;
+  static KBArticlelinkTitle = `(//span[contains(.,'msdyn_kbsearchpagehost.html')])`;
 }

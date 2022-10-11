@@ -4552,4 +4552,34 @@ export class Macros extends BasePage {
       await this.adminPage.click(Constants.RemoveAll);
     }
   }
+  public async createUpdateMacro(macroName: string, passingStr: string) {
+    await this.adminPage.waitForSelector(Constants.ProductivitySiteMap);
+    await this.adminPage.click(Constants.ProductivitySiteMap);
+    await this.adminPage.waitForSelector(Constants.ManageMacros);
+    await this.adminPage.click(Constants.ManageMacros);
+    await this.adminPage.click(Constants.NewButton);
+    await this.adminPage.fill(Constants.NameField, macroName);
+    const iframeParent = await (
+      await this.adminPage.waitForSelector(Constants.MacroDesignerIFrame)
+    ).contentFrame();
+    const iframeChild = await (
+      await iframeParent.waitForSelector(Constants.MacroDesignerIFrameChild)
+    ).contentFrame();
+    await iframeChild.waitForSelector(Constants.StartMacroExecutionBtn);
+    await iframeChild.click(Constants.StartMacroExecutionBtn);
+    await iframeChild.waitForSelector(Constants.NewStepBtn);
+    await iframeChild.click(Constants.NewStepBtn);
+    await iframeChild.click(Constants.SearchPhraseForPopulatedPhraseMacro);
+    await iframeChild.fill(
+    Constants.SearchPhraseLabelField,
+    passingStr
+    );
+    await iframeChild.fill(
+    Constants.SearchPhraseStringField,
+    Constants.SearchPhraseValue
+    );
+    await iframeParent.click(Constants.SaveAndCloseButton2);
+    await this.adminPage.waitForTimeout(3000);
+    await this.waitForDomContentLoaded();
+  }
 }
