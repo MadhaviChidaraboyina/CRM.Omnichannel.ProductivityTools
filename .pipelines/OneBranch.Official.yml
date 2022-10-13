@@ -1,0 +1,394 @@
+#################################################################################
+#                         OneBranch Pipelines - Official                        #
+# This pipeline was created by EasyStart from a sample located at:              #
+#   https://aka.ms/obpipelines/easystart/samples                                #
+# Documentation:  https://aka.ms/obpipelines                                    #
+# Yaml Schema:    https://aka.ms/obpipelines/yaml/schema                        #
+# Retail Tasks:   https://aka.ms/obpipelines/tasks                              #
+# Support:        https://aka.ms/onebranchsup                                   #
+#################################################################################
+
+name: $(Date:yyyy.MM.dd).$(Build.SourceVersion)-$(SourceBranchName)-$(Cdp_Definition_Build_Count)
+
+trigger: # https://aka.ms/obpipelines/triggers
+  - master
+  - releases/*
+  - one_branch
+
+parameters: # parameters are shown up in ADO UI in a build queue time
+- { name: debug,               displayName: Enable debug output,               type: boolean, default: false }
+- { name: debugTasks,          displayName: Enable debug tasks,                type: boolean, default: false }
+- { name: msBuildVerbosity,    displayName: MsBuild verbosity,                 type: string,  default: normal,   values: [quiet, minimal, normal, detailed, diagnostic] }
+- { name: msBuildLogVerbosity, displayName: MsBuild log verbosity,             type: string,  default: detailed, values: [quiet, minimal, normal, detailed, diagnostic] }
+- { name: debugVsTest,         displayName: Generate vstest dumps,             type: boolean, default: false }
+
+variables:
+  - group: OcCodeCoverage # https://dev.azure.com/dynamicscrm/OneCRM/_library?itemType=VariableGroups&view=VariableGroupView&variableGroupId=940&path=OcCodeCoverage
+  - group: EfunLabVariables # https://dev.azure.com/dynamicscrm/OneCRM/_library?itemType=VariableGroups&view=VariableGroupView&variableGroupId=36&path=EfunLabVariables
+  - group: oc-test-adminvault # https://dev.azure.com/dynamicscrm/OneCRM/_library?itemType=VariableGroups&view=VariableGroupView&variableGroupId=1167&path=oc-test-adminvault
+  - group: ocrouteCRMServerLabVG # https://dev.azure.com/dynamicscrm/OneCRM/_library?itemType=VariableGroups&view=VariableGroupView&variableGroupId=396&path=ocrouteCRMServerLabVG
+
+  - { name: CDP_DEFINITION_BUILD_COUNT, value: "$[counter('', 0)]" }
+  - { name: system.debug, value: "${{ parameters.debug }}" }
+  - { name: ENABLE_PRS_DELAYSIGN, value: 1 }
+  - { name: ROOT, value: "$(Build.SourcesDirectory)" }
+  - { name: REPOROOT, value: "$(Build.SourcesDirectory)" }
+  - { name: OUTPUTROOT, value: "$(REPOROOT)/out" }
+  - { name: NUGET_XMLDOC_MODE, value: none }
+  - { name: WindowsContainerImage, value: "cdpxwin1809.azurecr.io/global/vse2019:latest"} # Docker image which is used to build the project https://aka.ms/obpipelines/containers
+  - { name: solution, value: $(ROOT)\src\Designer\Designer.sln }
+
+  - { name: Configuration, value: Release }
+  - { name: Platform, value: Any CPU }
+  - { name: ApplicationName, value: Microsoft.OmniChannel.ProductivityTools }
+  - { name: PackageLocation, value: $(OUTPUTROOT)\packages }
+
+  - { name: ACSResourceAccessKey, value: "" }
+  - { name: ACSResourceEndpoint, value: "https://omnichannel-test-automation-acs.ppe.communication.azure.net/" }
+  - { name: BotAcsUserId, value: "8:acs:ee30e93d-143f-42e0-bc94-6a78efbf3bde_0000000c-855c-1d87-84f5-084822000dce" }
+
+  #- { name: logRoot, value: $(OUTPUTROOT)\logs\ }
+  - { name: ev2Dir, value: $(ROOT)\src\EV2\ }
+#  - { name: parameterFileName, value: AppParameters.json }
+ # - { name: manifestFilePath, value: $(ROOT)\src\AgentSvc\ApplicationPackageRoot\ApplicationManifest.xml }
+ # - { name: appTemplateFilePath, value: $(ROOT)\src\Ev2\AppTemplate.js }
+
+  - name: optionalParamStr
+    value: |-
+      AgentLibraryWebEndpoint_InstanceCount
+      AgentService_InstanceCount
+      GeoKeyVault_BaseURI
+      OmnichannelAppValidAudienceUrl
+      OmnichannelAppAadAuthorityUrl
+      OmnichannelAppId
+      OmnichannelAppCertificateUpdateTimeInterval
+      AD_ClientId
+      AD_ClientSecret
+      CertificateStoreName
+      AzureServicesAuthConnectionString
+      FrontendApplicationCertificateSecretName
+      FrontendApplicationCertificatePasswordSecretName
+      
+  - name: build_files_to_sign
+    value: |-
+        src/**/bin/**/*.exe
+        src/**/bin/**/*.dll
+        src/**/*.ps1
+        src/**/obj/**/*.exe
+        src/**/obj/**/*.dll
+        build/Designer/**/*.js
+        
+
+  # Some of the projects are getting re-built, so we'll re-sign the package
+  - name: pack_files_to_sign
+    value: |-
+        src/**/bin/**/*.nupkg
+        $(OUTPUTROOT)/**/*.exe
+        $(OUTPUTROOT)/**/*.dll
+        $(OUTPUTROOT)/**/*.ps1
+        build/Designer/**/*.js
+        
+  - name: packTargets
+    value: |- 
+        Designer:Package
+
+resources:
+  repositories: 
+    - { repository: templates, type: git, name: OneBranch.Pipelines/GovernedTemplates, ref: refs/heads/main }
+    - { repository: ocYaml,    type: git, name: OneCrm/Crm.Omnichannel.yaml,           ref: refs/heads/master }
+
+extends:
+  template: v2/OneBranch.Official.CrossPlat.yml@templates # https://aka.ms/obpipelines/templates
+  parameters:
+    cloudvault: # https://aka.ms/obpipelines/cloudvault
+      enabled: false
+    globalSdl: # https://aka.ms/obpipelines/sdl
+      tsa:
+        enabled: false # onebranch publish all sdl results to TSA. If TSA is disabled all SDL tools will forced into 'break' build mode.
+      # credscan:
+      #   suppressionsFile: $(Build.SourcesDirectory)\.config\CredScanSuppressions.json
+      policheck:
+        break: true # always break the build on policheck issues. You can disable it by setting to 'false'
+      # suppression:
+      #   suppressionFile: $(Build.SourcesDirectory)\.gdn\global.gdnsuppress
+      baseline:
+        baselineFile: $(Build.SourcesDirectory)\.gdn\global.gdnbaselines
+        suppressionSet: default
+      suppression:
+        suppressionFile: $(Build.SourcesDirectory)\.gdn\global.gdnsuppress
+        suppressionSet: default
+      nugetPublishing:
+        enabled: true
+        packageNamespaceValidation: true
+        feeds:
+        - name: OneCRM.OmniChannel
+      git:
+        fetchDepth: 1 # Shallow fetch
+      cg:
+        alertWarningLevel: Low
+        ${{ if startsWith(variables['Build.SourceBranch'], 'refs/heads/releases/') }}:
+          failOnAlert: false
+        ${{ if not(startsWith(variables['Build.SourceBranch'], 'refs/heads/releases/')) }}:
+          failOnAlert: true
+
+    stages:
+    - stage: build
+      jobs:
+      - job: main
+        pool:
+          type: windows  # read more about custom job pool types at https://aka.ms/obpipelines/yaml/jobs
+
+        variables:
+          ob_outputDirectory: '$(REPOROOT)\out' # this directory is uploaded to pipeline artifacts, reddog and cloudvault. More info at https://aka.ms/obpipelines/artifacts
+          ob_sdl_binskim_break: true # https://aka.ms/obpipelines/sdl
+          ob_symbolsPublishing_enabled: true
+          ob_symbolsPublishing_symbolsFolder: $(ob_outputDirectory)
+          ob_symbolsPublishing_searchPattern: "**/*.pdb"
+
+        steps:
+          # 📐 Setup
+          - { checkout: ocYaml, displayName: ✔ Checkout Crm.Omnichannel.yaml, fetchDepth: 1, path: Crm.Omnichannel.yaml }
+
+           # yaml only lets us concat multi-line strings with new-lines or spaces but we need them to be ; separated
+          - powershell: |
+                @(
+                    @{ separator = ";"; name = "build_files_to_sign" },
+                    @{ separator = ";"; name = "pack_files_to_sign" },
+                   # @{ separator = ";"; name = "packTargets" },
+                    @{ separator = ","; name = "optionalParamStr" }
+                ) | ForEach-Object {
+                    $value = (Get-Item "env:/$($_.name)").Value
+                    Write-Host "##[info]Raw $($_.name) value: $value"
+                    $value = $value -replace "`n",$_.separator
+                    Write-Host "##[info]Setting $($_.name) to $value"
+                    Write-Host "##vso[task.setvariable variable=$($_.name)]$value"
+                }
+            displayName: 📐 Initialize variables
+
+          - ${{ if eq(parameters.debugTasks, 'true') }}:
+            - template: .pipelines\templates\debug-environment.yaml@ocYaml
+
+          - template: .pipelines\templates\validate-ev2-params.yaml@ocYaml
+            parameters:
+              manifestFilePath: ${{ variables.manifestFilePath }}
+              appTemplateFilePath: ${{ variables.appTemplateFilePath }}
+              optionalParamsStr: $(optionalParamStr)
+
+          # - template: .pipelines\templates\set-application-version.yaml@ocYaml
+          #   parameters:
+          #     ev2Dir: ${{ variables.ev2Dir }}
+          #     parameterFileName: ${{ variables.parameterFileName }}
+
+          # ♻ Nuget restore
+          - template: .pipelines\templates\retry.yaml@ocYaml
+            parameters:
+              step:
+                task: CmdLine@2
+                displayName: ♻ Nuget restore
+                inputs:
+                   command: 'init.cmd'
+                # task: NuGetCommand@2
+                # displayName: ♻ Nuget restore
+                # inputs:
+                #   command: restore
+                #   restoreSolution: ${{ variables.solution }}
+                #   feedsToUse: config
+                #   nugetConfigPath: build/config/NuGet.config
+                # env:
+                #   NUGET_SHOW_STACK: true
+                #   NUGET_RESTORE_MSBUILD_VERBOSITY: ${{ parameters.msBuildVerbosity }}
+                #   Nuget_Restore_MSBuild_Args: >-
+                #     -m
+                #     /nr:false
+                #     /flp1:LogFile=${{ variables.logRoot }}\msbuild_restore_${{ parameters.msBuildLogVerbosity }}.log;append;Verbosity=${{ parameters.msBuildLogVerbosity }}
+                #     /flp2:Logfile=${{ variables.logRoot }}\msbuild_restore.err;errorsonly;append
+                #     /bl:${{ variables.logRoot }}\msbuild_restore.binlog
+                #     -detailedSummary
+          - task: PowerShell@2
+            inputs:
+              filePath: 'init.ps1'
+          # 🏗 Build
+          # - task: CmdLine@2
+          #   inputs:
+          #     script: 'build.cmd'
+          # - task: PowerShell@2
+          #   displayName: 'Overwrite artifactignore on failure'
+          #   condition: always()
+          #   continueOnError: true
+          #   inputs:
+          #     targetType: 'inline'
+          #     script: |
+          #         $path = "$(ob_outputDirectory)"
+          #         New-Item -Path $path -Force -ItemType Directory
+          #         # create empty file in the root of output 
+          #         "" | Out-File -FilePath "$path\.artifactignore" -Encoding ascii
+          - task: MSBuild@1
+            displayName: 🏗 Build ${{ variables.solution }}
+            inputs:
+              solution: ${{ variables.solution }}
+              msbuildLocationMethod: location
+              msbuildLocation: C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe
+              platform: ${{ variables.Platform }}
+              configuration: ${{ variables.Configuration }}
+              msbuildArguments: >-
+                -m
+                /v:${{ parameters.msbuildVerbosity }}
+                /p:OnlyGenerateNuspec=true
+                /p:ContinuePackingAfterGeneratingNuspec=false
+                /p:ShouldPackageSfprojOnBuild=false
+                /nr:false
+                /flp1:LogFile=${{ variables.logRoot }}\msbuild_build_${{ parameters.msBuildLogVerbosity }}.log;append;Verbosity=${{ parameters.msBuildLogVerbosity }}
+                /flp2:Logfile=${{ variables.logRoot }}\msbuild_build.err;errorsonly;append
+                /bl:${{ variables.logRoot }}\msbuild_build.binlog
+                -detailedSummary
+              maximumCpuCount: true
+              logProjectEvents: true
+          - task: CmdLine@2
+            inputs:
+              script: 'build.cmd'
+          # 🖖🏻 Sign build
+          - task: onebranch.pipeline.signing@1 # https://aka.ms/obpipelines/signing
+            displayName: 🖖🏻 Sign build output
+            inputs:
+              command: sign
+              signing_environment: azure-ado
+              files_to_sign: $(build_files_to_sign)
+              search_root: $(Build.SourcesDirectory)
+
+          # 🎁 Pack
+          # - task: MSBuild@1
+          #   displayName: 🎁 Pack ${{ variables.solution }}
+          #   inputs:
+          #     solution: ${{ variables.solution }}
+          #     msbuildLocationMethod: location
+          #     msbuildLocation: C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe
+          #     platform: ${{ variables.Platform }}
+          #     configuration: ${{ variables.Configuration }}
+          #     msbuildArguments: >-
+          #       -m
+          #       /t:$(packTargets)
+          #       /v:${{ parameters.msbuildVerbosity }}
+          #       /p:ContinuePackingAfterGeneratingNuspec=true
+          #       /p:SkipCompilerExecution=true
+          #       /nr:false
+          #       /flp1:LogFile=${{ variables.logRoot }}\msbuild_pack_${{ parameters.msBuildLogVerbosity }}.log;append;Verbosity=${{ parameters.msBuildLogVerbosity }}
+          #       /flp2:Logfile=${{ variables.logRoot }}\msbuild_pack.err;errorsonly;append
+          #       /bl:${{ variables.logRoot }}\msbuild_pack.binlog
+          #       -detailedSummary
+          #     maximumCpuCount: true
+          #     logProjectEvents: false
+
+          # - task: ServiceFabricUpdateManifests@2
+          #   displayName: 📐 Update Service Fabric Manifests versions
+          #   inputs:
+          #     applicationPackagePath: $(PackageLocation)
+          #     versionSuffix: $(ApplicationVersion)
+          #     versionBehavior: Replace
+
+          # 🖖🏻 Sign pack
+          - task: onebranch.pipeline.signing@1 # https://aka.ms/obpipelines/signing
+            displayName: 🖖🏻 Sign pack output
+            inputs:
+              command: sign
+              signing_environment: azure-ado
+              files_to_sign: $(pack_files_to_sign)
+              search_root: $(Build.SourcesDirectory)
+          
+          # - task: PowerShell@2
+          #   displayName: 'Overwrite artifactignore on failure'
+          #   condition: always()
+          #   continueOnError: true
+          #   inputs:
+          #     targetType: 'inline'
+          #     script: |
+          #         $path = "$(ob_outputDirectory)"
+          #         New-Item -Path $path -Force -ItemType Directory
+          #         # create empty file in the root of output 
+          #         "" | Out-File -FilePath "$path\.artifactignore" -Encoding ascii
+          # Copy ev2 files to the output directory
+          - task: CopyFiles@2
+            displayName: 📂 Copy ev2 files to output
+            inputs:
+              SourceFolder: src\EV2
+              Contents: "**/**"
+              TargetFolder: $(OutputRoot)/package/Ev2
+
+          # Archive files
+          - task: ArchiveFiles@2
+            displayName: Creating sfpkg
+            inputs:
+              rootFolderOrFile: '$(OUTPUTROOT)' 
+              includeRootFolder: false 
+              archiveType: 'zip'
+              archiveFile: '$(OutputRoot)/src/Ev2/ServiceFabricArtifact.sfpkg'
+          - task: CopyFiles@2
+            inputs:
+                SourceFolder: 'drop\retail\AnyCPU\Blobs'
+                Contents: '**'
+                TargetFolder: '$(OutputRoot)\build\Designer'
+          - task: CopyFiles@2
+            displayName: 📂 Copy packages
+            inputs:
+              SourceFolder: $(Build.Repository.LocalPath)\src
+              Contents: '**\bin\**\*.nupkg'
+              TargetFolder: $(OUTPUTROOT)\packages
+              flattenFolders: true
+
+          - task: NuGetCommand@2
+            displayName: 📌 Nuget push
+            inputs:
+              command: push
+              packagesToPush: $(OUTPUTROOT)\packages\*.nupkg
+              nuGetFeedType: internal
+              publishVstsFeed: '3c4e535e-714c-4dae-bdba-23aa323b47c9'
+              allowPackageConflicts: true
+
+          - task: ManifestGeneratorTask@0
+            displayName: Manifest Generator - ReleaseArtifact
+            inputs:
+              BuildDropPath: '$(OUTPUTROOT)'
+
+          # - task: ManifestGeneratorTask@0
+          #   displayName: Manifest Generator - TeDCServiceFabricArtifact
+          #   inputs:
+          #     BuildDropPath: '$(PackageLocation)'
+
+          - task: CopyFiles@2
+            displayName: Copy Files to ${{ variables.ROOT }}\TestAssemblies
+            inputs:
+              SourceFolder: '$(ROOT)\tests'
+              Contents: |
+                **\bin\**\$(BuildConfiguration)\**\*.dll
+                **\test.runsettings
+              TargetFolder: '$(ROOT)\TestAssemblies'
+
+          # - task: ManifestGeneratorTask@0
+          #   displayName: Manifest Generator - TeDCTestAssembliesArtifact
+          #   inputs:
+          #     BuildDropPath: '$(ROOT)\TestAssemblies'
+
+          - ${{ if eq(parameters.debugTasks, 'true') }}:
+            - template: .pipelines\templates\debug-environment.yaml@ocYaml
+
+          - powershell: Get-ChildItem "${{ variables.logRoot }}" -File -ErrorAction SilentlyContinue | Where-Object { $_.Length -eq 0 } | Remove-Item -Force -ErrorAction Continue
+            displayName: 🚯 Clean up empty logs
+            condition: always()
+            continueOnError: true
+
+    - stage: sdl
+      displayName: 🛡 Sdl
+
+      jobs:
+      - job: CSRF
+        displayName: 🛡 CSRF
+        pool:
+          type: windows
+        variables: # More settings at https://aka.ms/obpipelines/yaml/jobs
+          ob_outputDirectory: $(REPOROOT)\out # this directory is uploaded to pipeline artifacts, reddog and cloudvault. More info at https://aka.ms/obpipelines/artifacts
+          ob_sdl_binskim_break: true # https://aka.ms/obpipelines/sdl
+          ob_cloudvault_enabled: false # no artifacts for cloud vault in this job
+        steps:
+        - task: securedevelopmentteam.vss-secure-development-tools.build-task-csrf.CSRF@1
+          displayName: 🛡 Run CSRF scan
+          inputs:
+            AnalyzeMvcApiControllers: true
