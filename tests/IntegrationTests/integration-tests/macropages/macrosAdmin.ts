@@ -8,6 +8,7 @@ import { AgentChatConstants, stringFormat } from "Utility/Constants";
 import { Util } from "Utility/Util";
 import { LogChatDetails } from "helpers/log-helper";
 import { BasePage } from "pages/BasePage";
+import { MacrosConstants } from "pages/Macros";
 
 export class Macros extends BasePage {
   adminPage: any;
@@ -4581,5 +4582,148 @@ export class Macros extends BasePage {
     await iframeParent.click(Constants.SaveAndCloseButton2);
     await this.adminPage.waitForTimeout(3000);
     await this.waitForDomContentLoaded();
+  }
+
+  public async CreateSessionTemplatefromCSA() {
+    let rnd: any;
+    rnd = this.getRandomNumber();
+    await this.adminPage.waitForSelector(Constants.SessionTemplateInOverview);
+    await this.adminPage.click(Constants.SessionTemplateInOverview);
+    await this.adminPage.waitForSelector(Constants.NewButton);
+    await this.adminPage.click(Constants.NewButton);
+    await this.adminPage.fill(
+      Constants.NameField,
+      Constants.SessionTemplateName
+    );
+    await this.adminPage.fill(
+      Constants.UniqueNameField,
+      Constants.SessionTemplateUniqueName + rnd
+    );
+    await this.adminPage.selectOption(Constants.TypeField, {
+      label: "Generic",
+    });
+    await this.adminPage.click(Constants.AnchorTabSearchBox);
+    await this.adminPage.click(Constants.AnchorTabSearchIcon);
+    await this.adminPage.click(Constants.AnchorTabSearchResult);
+    await this.adminPage.click(Constants.SaveAndCloseButton);
+    const UnsavedChanges = await this.waitUntilSelectorIsVisible(Constants.ConfirmaDialog, Constants.Two, this.adminPage);
+        if (UnsavedChanges) {
+            await this.adminPage.click(Constants.ConfirmButton);
+        }
+  }
+
+  public async createAgentScriptFromCSA(
+    AgentScriptName: string,
+    AgentScriptUniqueName: string,
+  ) {
+    let rnd: any;
+    rnd = this.getRandomNumber();
+    await this.adminPage.waitForSelector(Constants.AgentScriptInOverview);
+    await this.adminPage.click(Constants.AgentScriptInOverview);
+    await this.adminPage.click(Constants.NewButton);
+      await this.adminPage.fill(Constants.NameField, AgentScriptName);
+      await this.adminPage.fill(
+        Constants.UniqueNameField,
+        AgentScriptUniqueName + rnd
+      );
+      await this.adminPage.click(Constants.SaveAndCloseButton);
+      const UnsavedChanges = await this.waitUntilSelectorIsVisible(Constants.ConfirmaDialog, Constants.Two, this.adminPage);
+        if (UnsavedChanges) {
+            await this.adminPage.click(Constants.ConfirmButton);
+        }
+  }
+
+  public async addTwoAgentScriptToSesssionTemplateFromCSA(AgentScriptName: any, AgentScriptName2: any) {
+    await this.adminPage.waitForSelector(Constants.SessionTemplateInOverview);
+    await this.adminPage.click(Constants.SessionTemplateInOverview);
+    await this.adminPage.waitForSelector(Constants.SessionSearchThisView);
+    await this.adminPage.click(Constants.SessionSearchThisView);
+    await this.adminPage.fill(Constants.SessionSearchThisView,Constants.SessionTemplateName);
+    await this.adminPage.keyboard.press("Enter");
+    await this.adminPage.waitForSelector(stringFormat(Constants.AriaLabel,Constants.SessionTemplateName));
+    await this.adminPage.click(stringFormat(Constants.AriaLabel,Constants.SessionTemplateName));
+    await this.adminPage.waitForSelector(Constants.AgentScriptsTab);
+    await this.adminPage.click(Constants.AgentScriptsTab);
+    await this.adminPage.click(Constants.MoreCommandsForAgentScript);
+    await this.adminPage.click(Constants.AddExistingAgentScriptsBtn);
+    await this.adminPage.fill(Constants.LookForRecordsField, AgentScriptName);
+    await this.adminPage.click(Constants.AgentOneSearchResult);
+    await this.adminPage.waitForSelector(Constants.SeleectedAgentScriptSearchResult);
+    await this.adminPage.fill(Constants.AddMoreRecords, AgentScriptName2);
+    await this.adminPage.click(Constants.AgentTwoSearchResult);
+    await this.adminPage.waitForSelector(Constants.SeleectedAgentScriptSearchResult);
+    await this.adminPage.waitForSelector(Constants.AddBtn)
+    await this.adminPage.click(Constants.AddBtn);
+    await this.adminPage.click(Constants.MoreCommandsForAgentScript);
+    await this.adminPage.click(Constants.RefreshAgentScriptsSubGrid);
+  }
+
+  public async EnablingExpressionBuilder() {
+    const section = await this.Page.waitForSelector(MacrosConstants.DisableExpressionBuilderRadioBtnSelectorSection);
+    await (await section.waitForSelector(MacrosConstants.DisableExpressionBuilderRadioBtnSelector)).click();
+
+    const isExpressionBuilderFlag: boolean = await this.IsExpressionBuilderEnable();
+    if (isExpressionBuilderFlag) {
+      await this.waitUntilSelectorIsVisible(MacrosConstants.ExpressionBuilderBtnSelector, Constants.Three, this._page, Constants.MaxTimeout);
+      await this.Page.click(MacrosConstants.ExpressionBuilderBtnSelector);
+    }
+    else {
+      const section = await this.Page.waitForSelector(MacrosConstants.DisableExpressionBuilderRadioBtnSelectorSection);
+      await (await section.waitForSelector(MacrosConstants.DisableExpressionBuilderRadioBtnSelector)).click();
+      await this.waitUntilSelectorIsVisible(MacrosConstants.EnableExpressionBuilderRadioBtnSelector, Constants.Five, this._page, Constants.FourThousandsMiliSeconds);
+      await this.waitUntilSelectorIsVisible(MacrosConstants.ExpressionBuilderBtnSelector, Constants.Three, this._page, Constants.MaxTimeout);
+      await this.Page.click(MacrosConstants.ExpressionBuilderBtnSelector);
+    }
+  }
+
+  public async IsExpressionBuilderEnable() {
+    return await this.waitUntilSelectorIsVisible(
+      MacrosConstants.EnableExpressionBuilderRadioBtnSelector, Constants.Five, this.adminPage, Constants.MaxTimeout
+    );
+  }
+
+  public async addOdataConditionForExpressionBuilderForSessionTemplate() {
+    const pIframe = await this.adminPage.waitForSelector(Constants.ExpressionBuilderParentIframe);
+    const parentIframe = await pIframe.contentFrame();
+    const cIframe = await parentIframe.waitForSelector(Constants.ExpressionBuilderChildIframe);
+    const childIframe = await cIframe.contentFrame();
+    await childIframe.waitForSelector(Constants.ExpressionBuilderConditionButton);
+    await childIframe.click(Constants.ExpressionBuilderConditionButton);
+    await childIframe.click(Constants.ExpressionBuilderConditionField1);
+    await childIframe.fill(Constants.ExpressionBuilderConditionField1,"{$odata.incident.prioritycode.?$filter=incidentid eq '{caseId}'&$select=prioritycode}");
+    await childIframe.click(Constants.ExpressionBuilderConditionFiled2);
+    await childIframe.fill(Constants.ExpressionBuilderConditionFiled2,"last name");
+    await  parentIframe.click(Constants.ExpressionBuilderSaveAndClose);
+    const text = await this.adminPage.waitForSelector(Constants.ExpressionBuilderDialogText);
+    expect(await text.textContent()).toContain('Unable to create macro definition');
+    await this.waitUntilSelectorIsVisible(Constants.AlertPopUp, Constants.Five, this.adminPage, Constants.MaxTimeout);
+    await this.adminPage.click(Constants.OKButton);
+  }
+
+  public async deleteSessionTemplateFromCSA() {
+    await this.adminPage.waitForSelector(Constants.SessionTemplateInOverview);
+    await this.adminPage.click(Constants.SessionTemplateInOverview);
+    await this.adminPage.waitForSelector(Constants.SessionSearchThisView);
+    await this.adminPage.click(Constants.SessionSearchThisView);
+    await this.adminPage.fill(Constants.SessionSearchThisView,Constants.SessionTemplateName);
+    await this.adminPage.keyboard.press("Enter");
+    await this.adminPage.keyboard.press("Escape");
+    await this.adminPage.click(Constants.SelectAllCheck);
+    await this.adminPage.click(Constants.DeleteButton);
+    await this.adminPage.click(Constants.ConfirmDeleteButton);
+  }
+
+  public async deleteAgentScriptFromCSA(AgentScript: string) {
+    await this.adminPage.waitForSelector(Constants.AgentScriptInOverview);
+    await this.adminPage.click(Constants.AgentScriptInOverview);
+    await this.adminPage.waitForSelector(Constants.AgentScriptSearch);
+    await this.adminPage.click(Constants.AgentScriptSearch);
+    await this.adminPage.fill(Constants.AgentScriptSearch,AgentScript);
+    await this.adminPage.keyboard.press("Enter");
+    await this.adminPage.keyboard.press("Escape");
+    await this.adminPage.hover(stringFormat(Constants.AriaLabel,AgentScript));
+    await this.adminPage.click(Constants.SelectFirstCheck);
+    await this.adminPage.click(Constants.DeleteButton);
+    await this.adminPage.click(Constants.ConfirmDeleteButton);
   }
 }

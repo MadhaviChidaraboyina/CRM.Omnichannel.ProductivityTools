@@ -903,7 +903,7 @@ export class Constants {
   static SessionTemplateEntity = `[data-test-id="session-template-entity-drop-down"]`;
   static Case = `//*[text()="Case"]`;
   static SessionTemplateDropDown = `[data-test-id="session-template-drop-down"]`;
-  static SessionSearchThisView = `[aria-label="Session Template Search this view"]`;
+  static SessionSearchThisView = `//input[contains(@data-id,"quickFind_text")]`;
   static OmnichannelCustomerservice = `Omnichannel for Customer Service`;
   static OmnichannelAgentDashBoard = `(//*[@aria-label="Omnichannel Agent Dashboard"])[2]`;
   static OmnichannelOngoingConversationDashBoard = `[title="Omnichannel Ongoing Conversations Dashboard"]`;
@@ -938,7 +938,7 @@ export class Constants {
   static AgentscriptUniquename2 = "msdyn_stepuniquename2";
   static RefreshButton = `//*[text()="Refresh"]`;
   static AutofillDataform = `//*[text()="AutoFillMacro"]`;
-  static AgentScriptSearch = `[aria-label="Agent script Search this view"]`;
+  static AgentScriptSearch = `//input[contains(@data-id,"quickFind_text")]`;
   static AgentScriptName1 = "AutomationTestAgentScript1";
   static AgentScriptUniqueName1 = "msdyn_AutomationTestAgentScript2";
   static EditBtn = `(//span[text()="AutomationTestAgentScript1"])[1]`;
@@ -1307,6 +1307,19 @@ export class Constants {
   static SearchAgentScriptName = `SearchAgentScript`;
   static SearchMacroName = `SearchMacro`;
   static SearchTitle = `(//span[contains(.,'SearchApplicationTab')])`;
+  static SessionTemplateInOverview = `//div[@id="mainContent"]//button[@data-test-id="overview-subcard-session-template"]`;
+  static AgentScriptInOverview = `//div[@id="mainContent"]//button[@data-test-id="overview-subcard-agentscripts"]`;
+  static AriaLabel = `[aria-label='{0}']`;
+  static ExpressionBuilderParentIframe = `#designer_id`;
+  static ExpressionBuilderChildIframe = `#designerIframe`;
+  static ExpressionBuilderConditionButton = `//div[contains(text(),'Condition')]`;
+  static ExpressionBuilderConditionField1 =`(//div[@class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"])[1]`;
+  static ExpressionBuilderConditionFiled2 = `(//div[@class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"])[2]`;
+  static ExpressionBuilderSaveAndClose = `[id="saveButton"]`;
+  static ExpressionBuilderDialogText = `[data-id="dialogMessageText"]`;
+  static AlertPopUp = `[data-id="alertdialog"]`;
+  static OKButton = `[data-id="okButton"]`;
+  static RandomCaseLink = `//*[text()="Automation Case{0}"]`;
   static SpecificCaseLink1 = `//*[text()="Automation Case{0}"]`;
   static SpecificCaseLink2 = `//*[text()="Case For Automation{0}"]`;
   static KnowledgeBasePSBlank = ``;

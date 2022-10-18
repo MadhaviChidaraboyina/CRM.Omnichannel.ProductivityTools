@@ -4,6 +4,7 @@ import { Macros } from "../../macropages/macrosAdmin";
 import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.page";
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
+import { AgentScript } from "integration-tests/agentScript/pages/agentScriptAdmin";
 
 describe("Live Chat - ", () => {
     let adminContext: BrowserContext;
@@ -12,6 +13,8 @@ describe("Live Chat - ", () => {
     let agentPage: Page;
     let agentContext: BrowserContext;
     let macrosAdminPage: Macros;
+    let rnd: any;
+    const agentScriptAdminPage = new AgentScript(adminPage);
 
     beforeEach(async () => {
         adminContext = await browser.newContext({
@@ -39,15 +42,16 @@ describe("Live Chat - ", () => {
     ///<summary> 
     it("Test Case 2045306: [Productivity Pane: Agent Guidance] : Verify if knowledge search is available with default configuration", async () => {
         agentPage = await agentContext.newPage();
+        rnd = agentScriptAdminPage.RandomNumber();
         try {
             //Login as admin and create case
             await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.MacrosAgentEmail, TestSettings.AdminAccountPassword);
             await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-            await macrosAdminPage.createCase(Constants.CaseTitleName);
+            await macrosAdminPage.createCase(Constants.CaseTitleName + rnd);
             //Initiate session
             await macrosAdminPage.openAppLandingPage(adminPage);
             await adminStartPage.goToCustomerServiceWorkspace();
-            await macrosAdminPage.InitiateSession(Constants.CaseTitleName, Constants.CaseLink1);
+            await macrosAdminPage.InitiateSession(Constants.CaseTitleName + rnd, Constants.RandomCaseLink.replace("{0}", rnd));
             await macrosAdminPage.ClickProductivityPaneTool(Constants.KStool);
             await macrosAdminPage.ValidateThePage(Constants.Knowledgesearch);
         }

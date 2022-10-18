@@ -149,6 +149,7 @@ export enum MacrosConstants {
   OpenWsWaitTimeout = 10000,
   AgentScriptNameSearchResult = `//*[text()='AutomationTestAgentScript']`,
   AgentscriptName2 = "AutomationTestAgentScript2",
+  AgentScriptOverview = `//li[contains(@aria-label,'Agentexperience')]//li[contains(@id,'sitemap')]//span[contains(text(),'Overview')]`,
 }
 
 export enum IFrameConstants {

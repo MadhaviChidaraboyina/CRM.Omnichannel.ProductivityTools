@@ -342,24 +342,30 @@ describe("Live Chat - ", () => {
     ///Test Case 1802338: Verify an error pop up is showing if wrong data provides in expression builder
     ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_testPlans/execute?planId=2338666&suiteId=2347473
     ///</summary>
-    it.skip("Test Case 1802338: Verify an error pop up is showing if wrong data provides in expression builder", async () => {
+    it("Test Case 1802338: Verify an error pop up is showing if wrong data provides in expression builder", async () => {
         let page = await agentContext.newPage();
         const macrosPage = new MacrosPage(page);
-        const agentScriptAdminPage = new AgentScript(page);
         try {
-            await macrosPage.navigateToOrgUrl();
-            await agentScriptAdminPage.createSessionTemplate();
-            await agentScriptAdminPage.createAgentScript(Constants.AgentScriptName, Constants.AgentScriptUniqueName);
-            await agentScriptAdminPage.createAgentScript(Constants.AgentscriptName2, Constants.AgentScriptUniqueName2);
-            await agentScriptAdminPage.addTwoAgentScriptToSesssionTemplate(Constants.AgentScriptName, Constants.AgentscriptName2);
-            await agentScriptAdminPage.sessionBuilder();
-            await macrosPage.prerequisiteForExpressionBuilder();
-            await agentScriptAdminPage.addOdataConditionForExpressionBuilder();
+            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.MacrosAgentEmail, TestSettings.AdminAccountPassword);
+            await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
+            await adminStartPage.navigateToAgentExperienceOverview();
+            await macrosAdminPage.CreateSessionTemplatefromCSA();
+            await adminStartPage.navigateToAgentExperienceOverview();
+            await macrosAdminPage.createAgentScriptFromCSA(Constants.AgentScriptName, Constants.AgentScriptUniqueName);
+            await adminStartPage.navigateToAgentExperienceOverview();
+            await macrosAdminPage.createAgentScriptFromCSA(Constants.AgentscriptName2, Constants.AgentScriptUniqueName2);
+            await adminStartPage.navigateToAgentExperienceOverview();
+            await macrosAdminPage.addTwoAgentScriptToSesssionTemplateFromCSA(Constants.AgentScriptName, Constants.AgentscriptName2);
+            await macrosAdminPage.EnablingExpressionBuilder();
+            await macrosAdminPage.addOdataConditionForExpressionBuilderForSessionTemplate();
         }
         finally {
-            await agentScriptAdminPage.deleteSessionTemplate();
-            await agentScriptAdminPage.deleteAgentScript(Constants.AgentScript);
-            await agentScriptAdminPage.deleteAgentScript(Constants.AgentScript2);
+            await adminStartPage.navigateToAgentExperienceOverview();
+            await macrosAdminPage.deleteSessionTemplateFromCSA();
+            await adminStartPage.navigateToAgentExperienceOverview();
+            await macrosAdminPage.deleteAgentScriptFromCSA(Constants.AgentScriptName);
+            await adminStartPage.navigateToAgentExperienceOverview();
+            await macrosAdminPage.deleteAgentScriptFromCSA(Constants.AgentscriptName2);;
             await macrosPage?.closePage();
         }
     }); 

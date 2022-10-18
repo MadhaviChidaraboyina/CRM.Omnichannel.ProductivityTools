@@ -370,4 +370,9 @@ export class OrgDynamicsCrmStartPage extends BasePage {
     });
   }
 
+  public async navigateToAgentExperienceOverview() {
+    await this.Page.waitForSelector(MacrosConstants.AgentScriptOverview);
+    await this.Page.click(MacrosConstants.AgentScriptOverview);
+    await this.waitForDomContentLoaded();
+  }
 }
