@@ -2394,9 +2394,9 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.SaveAndCloseButton);
     await this.adminPage.waitForTimeout(3000);
     const UnsavedChanges = await this.waitUntilSelectorIsVisible(Constants.ConfirmaDialog, Constants.Two, this.adminPage);
-        if (UnsavedChanges) {
-            await this.adminPage.click(Constants.ConfirmButton);
-        }
+    if (UnsavedChanges) {
+      await this.adminPage.click(Constants.ConfirmButton);
+    }
     await this.waitUntilSelectorIsVisible(Constants.QueueBtn, Constants.Two, this.adminPage);
   }
 
@@ -2729,9 +2729,9 @@ export class Macros extends BasePage {
     await this.adminPage.waitForSelector(Constants.SaveAndCloseButton)
     await this.adminPage.click(Constants.SaveAndCloseButton);
     const UnsavedChanges = await this.waitUntilSelectorIsVisible(Constants.ConfirmaDialog, Constants.Two, this.adminPage);
-        if (UnsavedChanges) {
-            await this.adminPage.click(Constants.ConfirmButton);
-        }
+    if (UnsavedChanges) {
+      await this.adminPage.click(Constants.ConfirmButton);
+    }
     await this.waitUntilSelectorIsVisible(Constants.QueueBtn, Constants.Two, this.adminPage);
   }
 
@@ -4553,6 +4553,161 @@ export class Macros extends BasePage {
       await this.adminPage.click(Constants.RemoveAll);
     }
   }
+
+  public async CSWAppDesignerPage() {
+    await this.adminPage.click(Constants.LandingPage);
+    const selector = await this.adminPage.waitForSelector(Constants.ApplandingIframe);
+    const iframe = await selector.contentFrame();
+    await iframe.waitForSelector(Constants.CSWMoreOptions);
+    await iframe.click(Constants.CSWMoreOptions);
+    await iframe.waitForSelector(Constants.OpenAppDesigner);
+    await iframe.click(Constants.OpenAppDesigner);
+  }
+
+  public async enableInAppNotificatiosAndValidate(title: string) {
+    const [page1] = await Promise.all([
+      await this.adminPage.waitForEvent('popup'),
+    ]);
+    const welcomePopup = await this.waitUntilSelectorIsVisible(Constants.Getstarted, Constants.Five, page1);
+    if (welcomePopup) {
+      await page1.click(Constants.Getstarted);
+    }
+    await page1.waitForSelector(Constants.settingsinAppDesigner);
+    await page1.click(Constants.settingsinAppDesigner);
+    await page1.waitForSelector(Constants.FeaturesButton);
+    await page1.click(Constants.FeaturesButton);
+    await page.waitForLoadState();
+    const notificationIsEnabled = await page1.isVisible(Constants.NotificationEnabled);
+    if (!notificationIsEnabled) {
+      await page1.waitForSelector(Constants.InAppNotification);
+      await page1.click(Constants.InAppNotification);
+      const isenabled = await this.waitUntilSelectorIsVisible(Constants.InappNotificationEnabled, Constants.Five, page1);
+      expect(isenabled).toBeTruthy();
+      await page1.waitForSelector(Constants.PCSave);
+      await page1.click(Constants.PCSave);
+      await this.waitUntilSelectorIsHidden(Constants.Spinner, Constants.Five, page1);
+      await page1.isVisible(Constants.PublishInAppDesigner);
+      await page1.waitForSelector(Constants.PublishInAppDesigner);
+      await page1.click(Constants.PublishInAppDesigner);
+      await page1.waitForSelector(Constants.PlayButton);
+      await page1.click(Constants.PlayButton);
+    }
+    else {
+      await page1.waitForSelector(Constants.CloseSettings);
+      await page1.click(Constants.CloseSettings);
+      await page1.waitForSelector(Constants.PublishInAppDesigner);
+      await page1.click(Constants.PublishInAppDesigner);
+      await page1.waitForSelector(Constants.PlayButton);
+      await page1.click(Constants.PlayButton);
+    }
+
+    // Validation
+    const [page2] = await Promise.all([
+      await page1.waitForEvent('popup'),
+    ]);
+    await page2.waitForLoadState();
+    await page2.reload();
+    await this.waitUntilSelectorIsVisible(Constants.NotificationButton, Constants.Five, page2);
+    await page2.click(Constants.NotificationButton);
+    await this.waitUntilSelectorIsVisible(Constants.OpenRecord, Constants.Five, page2);
+    await page2.click(Constants.OpenRecord);
+    await this.waitUntilSelectorIsVisible(Constants.HomeButton, Constants.Five, page2);
+    await page2.click(Constants.HomeButton);
+    await page2.click(Constants.NotificationButton);
+    await page2.click(Constants.OpenRecord);
+    await this.waitUntilSelectorIsVisible(stringFormat(Constants.CaseTitle, title), Constants.Five, page2);
+  }
+
+  public async incidentId(entityName: string): Promise<string> {
+    return await this.adminPage.evaluate(
+      async (title) => {
+        var record = await (window as any).Xrm.WebApi.retrieveMultipleRecords("incident",
+          "?$select=incidentid&$filter=title eq '" + title + "'"
+        );
+        return await record.entities[0].incidentid;
+      }, [entityName]
+    );
+  }
+
+  public async enableNewLayout() {
+    await this.adminPage.evaluate(
+      async () => {
+        var context = await (window as any).Xrm.Utility.getGlobalContext().saveSettingValue("msdyn_MultiSessionLayoutImprovements", true);
+        return await context;
+      }
+    );
+  }
+
+  public async enableNotificationText() {
+    await this.adminPage.evaluate(
+      async () => {
+        await fetch(window.origin + "/api/data/v9.0/SaveSettingValue()", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            AppUniqueName: "msdyn_CustomerServiceWorkspace",
+            SettingName: "AllowNotificationsEarlyAccess",
+            Value: "true",
+          }),
+        });
+      }
+    );
+  }
+
+  public async enableNotificationIcon(userId: string,IncidentId: string) {
+    await this.adminPage.evaluate(
+      async ([userid, incidentid]) => {
+        var systemuserid = userid;
+        var incidentid = incidentid;
+        var notificationRecord =
+        {
+          "title": "Cases demo with link [here](?pagetype=entityrecord&etn=incident&id=" + incidentid + ")",
+          "body": "cases demo [here](?pagetype=entityrecord&etn=incident&id=" + incidentid + ")",
+          "ownerid@odata.bind": "/systemusers(" + systemuserid + ")",
+          "icontype": 100000000, // info
+          "data": JSON.stringify({
+            "actions": [
+              {
+                "title": "Open record",
+                "data": { "url": "?pagetype=entityrecord&etn=incident&id=" + incidentid }
+              },
+              {
+                "title": "Open record inline",
+                "data": { "url": "?pagetype=entityrecord&etn=incident&id=" + incidentid, "navigationTarget": "inline" }
+              },
+              {
+                "title": "Open record newWindow",
+                "data": { "url": "?pagetype=entityrecord&etn=incident&id=" + incidentid, "navigationTarget": "newWindow" }
+              },
+              {
+                "title": "Open record dialog", "data": { "url": "?pagetype=entityrecord&etn=incident&id=" + incidentid, "navigationTarget": "dialog" }
+              }
+            ]
+          })
+        }
+        await (window as any).Xrm.WebApi.createRecord("appnotification", notificationRecord).
+          then(
+            function success(result) {
+              console.log("notification created with multiple actions: " + result.id);
+            },
+            function (error) {
+              console.log(error.message);
+            });
+      }, [userId, IncidentId]
+    );
+  }
+
+  public async disableNewLayout() {
+    await this.adminPage.evaluate(
+      async () => {
+        var context = await (window as any).Xrm.Utility.getGlobalContext().saveSettingValue("msdyn_MultiSessionLayoutImprovements", false);
+        return await context;
+      }
+    );
+  }
+
   public async createUpdateMacro(macroName: string, passingStr: string) {
     await this.adminPage.waitForSelector(Constants.ProductivitySiteMap);
     await this.adminPage.click(Constants.ProductivitySiteMap);

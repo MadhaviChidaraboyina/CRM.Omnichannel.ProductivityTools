@@ -46,7 +46,7 @@ export class Constants {
   static AgentScriptsTab = `[data-id="tablist-Agent scripts"]`;
   static AddExistingAgentScriptsBtn = `[aria-label="Add Existing Agent script"]`;
   static LookForRecordsField = `[placeholder="Look for records"]`;
-  static Recordsvisible ="//li[contains(@id,'lookupDialogLookup-MscrmControls.FieldControls.SimpleLookupControl-LookupResults')]";
+  static Recordsvisible = "//li[contains(@id,'lookupDialogLookup-MscrmControls.FieldControls.SimpleLookupControl-LookupResults')]";
   static AddBtn = `[data-id="lookupDialogSaveBtn"]`;
   static AddMoreRecords = `//*[@placeholder="Add more records"]`;
   static MoreCommandsForAgentScript = `[aria-label="More commands for Agent script"]`;
@@ -56,7 +56,7 @@ export class Constants {
     `//span[contains(.,'` + Constants.AgentScriptName + `')]`;
   static DashboardAgentScript =
     `//span[contains(.,'` + Constants.DascboardAgentScriptName2 + `')]`;
-    static DashboardOpenSourceAgentScript =
+  static DashboardOpenSourceAgentScript =
     `//span[contains(.,'` + Constants.DashboardOpenSourceScriptName2 + `')]`;
   static AgentScript2 = `//*[@title="` + Constants.AgentscriptName2 + `"]`;
   static AgentScriptSearchResult =
@@ -123,7 +123,7 @@ export class Constants {
   static ViewSelector = `//*[contains(@data-id,"ViewSelector")]`;
   static ResolvedCasesView = `//*[text()="Resolved Cases"]`;
   static AllCasesView = `//*[text()="All Cases"]`;
-  static Agentscriptdropdown =  "//*[contains(@id,'ViewSelector_')]/span/i";
+  static Agentscriptdropdown = "//*[contains(@id,'ViewSelector_')]/span/i";
   static Inactiveagentscripvalue = "//span[normalize-space()='Inactive Agent scripts']";
   static SearchBox = `//*[contains(@data-id,"quickFind_text")]`;
   static AutomationCaseLink = `//*[text()="Automation Case"]`;
@@ -1108,7 +1108,7 @@ export class Constants {
   static DashboardScriptName = "DashboardAgentScript";
   static CaseEntitySession = "(//span[contains(.,'Case entity session - default template')])[1]";
   //static CSWDropDown = "(//*[@aria-label='Omnichannel Agent Dashboard'])[3]";
-  static CSWDropDown="span[contains(@id,'Dashboard_Selector_')]//span[@role='presentation']";
+  static CSWDropDown = "span[contains(@id,'Dashboard_Selector_')]//span[@role='presentation']";
   static CSWDropDownSelector = "(//span[contains(.,'Customer Service Agent Dashboard')])[1]";
   static RemoveAll = "(//span[contains(.,'Remove')])[2]";
   static SlugAndSessionConnector = `SlugAndSessionConnector`;
@@ -1322,6 +1322,24 @@ export class Constants {
   static RandomCaseLink = `//*[text()="Automation Case{0}"]`;
   static SpecificCaseLink1 = `//*[text()="Automation Case{0}"]`;
   static SpecificCaseLink2 = `//*[text()="Case For Automation{0}"]`;
+  static CSWMoreOptions = `[data-lp-id="msdyn_CustomerServiceWorkspace0-options"]`;
+  static OpenAppDesigner = `[aria-label="Open in App Designer"]`;
+  static settingsinAppDesigner = `[data-icon-name="Settings"]`;
+  static ApplandingIframe = `[title="AppLandingPage"]`;
+  static FeaturesButton = `//span[contains(text(),'Features')]`;
+  static InAppNotification = `[aria-label="Value of In-app notifications"]`;
+  static PublishInAppDesigner = `[title="Save and Publish"]`;
+  static NotificationEnabled = `//div[contains(@class,"ms-Toggle is-checked is-enabled root")]`;
+  static CloseSettings = `[aria-label="Close"]`;
+  static PlayButton = `[data-icon-name="Play"]`;
+  static WelcomePopUp = `[id="ModalFocusTrapZone1"]`;
+  static Getstarted = `//span[text()='Get started']`;
+  static InappNotificationEnabled = `[aria-checked="true"]`;
+  static NotificationButton = `[aria-label="Notifications"]`;
+  static OpenRecord = `(//p[contains(text(),'Open record')])[1]`;
+  static HomeButton = `//button[@title="Home"]`;
+  static CaseTitle = `//div[@title="{0}]`;
+  static Spinner = `//*[conatins(@class,'ms-Spinner loadingSpinner')]`;
   static KnowledgeBasePSBlank = ``;
   static KnowledgeBasePSText = `Plan_Text`;
   static KnowledgeBasePSRandom = `QWERTYUUIO`;

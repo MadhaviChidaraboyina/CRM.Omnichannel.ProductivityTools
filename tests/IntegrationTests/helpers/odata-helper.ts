@@ -11,7 +11,7 @@ const OCUserId = "<>";
 
 export const URLConstants = {
 	CreateCaseUrl: `${TestSettings.OrgUrl}/api/data/v9.0/incidents`,
-    UpdateOCConfig: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_omnichannelconfigurations(${OCConfigId})`,
+	UpdateOCConfig: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_omnichannelconfigurations(${OCConfigId})`,
 	AppConfigUrl: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_appconfigurations`,
 	PanelConfigUrl: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_paneconfigurations`,
 	UserUrl: `${TestSettings.OrgUrl}/api/data/v9.0/systemusers(${OCUserId})`,
@@ -122,15 +122,34 @@ export const DeleteAppProfile = async (deleteApp, deletePanel) => {
 // Turn on Missed Notifications
 export const TurnOnMissedNotifications = async () => {
 	const requestBody = {
-        msdyn_enable_missed_notifications: true,
-        "msdyn_inactive_presence_lookup@odata.bind": "/msdyn_presences(a89ee9cf-453a-4b52-8d7a-ad647feecd5d)"
+		msdyn_enable_missed_notifications: true,
+		"msdyn_inactive_presence_lookup@odata.bind": "/msdyn_presences(a89ee9cf-453a-4b52-8d7a-ad647feecd5d)"
 	};
-
-    //To turn off missed notifications
-    // const requestBody = {
-    //     msdyn_enable_missed_notifications: false,
-    //     "_msdyn_inactive_presence_lookup_value": "null",
-	// };
-
 	return await ExecutePatchRequest(URLConstants.UpdateOCConfig, requestBody);
+};
+
+export const ExecuteGetRequest = async (getUrl: string) => {
+	const token = await getAuthToken(
+		TestSettings.AdminAccountEmail1,
+		TestSettings.AdminAccountPassword
+	);
+	return await axiosDefault.get(getUrl, {
+		headers: {
+			Authorization: `Bearer ${token}`,
+			"Content-Type": "application/json",
+		},
+	});
+}
+
+export const getGUID = async (UserUrl: string) => {
+	const response = await ExecuteGetRequest(UserUrl);
+	const data = response && response.data ? JSON.parse(JSON.stringify(response.data)) : null;
+	let uguid = "";
+	if (data) {
+		const obj = data.value && Array.isArray(data.value) ? data.value : null;
+		if (obj && obj.length > 0) {
+			uguid = obj[0].systemuserid;
+		}
+	}
+	return uguid;
 };
