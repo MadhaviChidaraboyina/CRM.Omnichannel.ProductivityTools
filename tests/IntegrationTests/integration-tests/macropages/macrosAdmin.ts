@@ -1776,8 +1776,8 @@ export class Macros extends BasePage {
   }
 
   public async ValidateThePage(ValidateHome: string) {
-    //Time delay to perform the action
-    await this.adminPage.waitForSelector(ValidateHome, { timeout: 3000 });
+    // Added constants.five as of now to wait for selector to load
+    await this.waitUntilSelectorIsVisible(ValidateHome, Constants.Five, this.adminPage);
     const PageValidate = await this.adminPage.isVisible(ValidateHome);
     expect(PageValidate).toBeTruthy();
   }
@@ -3801,8 +3801,8 @@ export class Macros extends BasePage {
     let contexts = await browser.contexts();
     let pages = await contexts[1].pages();
     pages[1].bringToFront();
-    // Time Delay to load the page
-    await pages[1].waitForSelector(ValidateEntity, { timeout: 3000 });
+    // Added constants.five as of now to wait for selector to load
+    await this.waitUntilSelectorIsVisible(ValidateEntity, Constants.Five, pages[1])
     const PageValidate = await pages[1].isVisible(ValidateEntity);
     expect(PageValidate).toBeTruthy();
   }

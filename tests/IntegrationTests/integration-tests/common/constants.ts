@@ -1013,14 +1013,14 @@ export class Constants {
   static SiteMapInAppDesigner = `[id="AppDesigner.CanvasPane.SitemapCard.ItemEditor"][title="Open the Site Map Designer."]`;
   static ConfirmOk = `//*[text()="OK"]`;
   static DashboardDesignerEntity = `[aria-label="Editing SubArea Title Dashboards"]`;
-  static AccountsDesignerEntity = `[aria-label="Editing SubArea Title Accounts"]`;
-  static CasesDesignerEntity = `[aria-label="Editing SubArea Title Cases"]`;
+  static AccountsDesignerEntity = `//div[@title="Account"][contains(@class,"itemLabel")]`;
+  static CasesDesignerEntity = `//div[@title="Case"][contains(@class,"itemLabel")]`;
   static DashboardRunTimeEntity = `//*[text()="Dashboards"]`;
   static AccountsRunTimeEntity = `//*[text()="Accounts"]`;
   static CasesRunTimeEntity = `//*[text()="Cases"]`;
   static MoreOptions = `(//*[@aria-label="More options"])[1]`;
   static Transcript = '[aria-label="Transcript"]';
-  static ValCSWDesignerPage = `[ng-attr-title="{{globalCmdBarController.AppContext.appInfo.title}}"][title="Customer Service workspace"]`;
+  static ValCSWDesignerPage = `[title="Customer Service workspace"]`;
   static ValidateCSW = `[aria-label="Customer Service workspace"]`;
   static CustomerServiceAgentDashboard = `(//*[@aria-label="Customer Service Agent Dashboard"])[3]`;
   static ChannelEditBtn = `[data-test-id="channel-provider-edit-btn"]`;
@@ -1322,6 +1322,7 @@ export class Constants {
   static RandomCaseLink = `//*[text()="Automation Case{0}"]`;
   static SpecificCaseLink1 = `//*[text()="Automation Case{0}"]`;
   static SpecificCaseLink2 = `//*[text()="Case For Automation{0}"]`;
+  static PanelApp = `//div[@title="App"][contains(@class,"itemLabel")]`
   static CSWMoreOptions = `[data-lp-id="msdyn_CustomerServiceWorkspace0-options"]`;
   static OpenAppDesigner = `[aria-label="Open in App Designer"]`;
   static settingsinAppDesigner = `[data-icon-name="Settings"]`;

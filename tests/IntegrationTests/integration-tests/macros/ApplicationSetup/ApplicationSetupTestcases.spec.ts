@@ -139,13 +139,8 @@ describe("Application Setup - ", () => {
       );
       // Open App Designer and Validate Page
       await adminStartPage.goToCSWAppDesigner();
-      await macrosAdminPage.SiteMapInAppDesigner();
-      await macrosAdminPage.ValidateAppDesigner(
-        Constants.DashboardDesignerEntity
-      );
-      await macrosAdminPage.ValidateAppDesigner(
-        Constants.AccountsDesignerEntity
-      );
+      await macrosAdminPage.ValidateAppDesigner(Constants.PanelApp);
+      await macrosAdminPage.ValidateAppDesigner(Constants.AccountsDesignerEntity);
       await macrosAdminPage.ValidateAppDesigner(Constants.CasesDesignerEntity);
       // Go To CSW and validate the page
       await macrosAdminPage.GoToLandingPage();
