@@ -5,7 +5,9 @@ import { Macros } from "../../../macropages/macrosAdmin";
 import { OrgDynamicsCrmStartPage } from "../../../../pages/org-dynamics-crm-start.page";
 import { TestHelper } from "../../../../helpers/test-helper";
 import { TestSettings } from "../../../../configuration/test-settings";
-import { AgentScript } from "integration-tests/agentScript/pages/agentScriptAdmin";
+import { AgentScript } from "../../../../integration-tests/agentScript/pages/agentScriptAdmin";
+import { AgentChat } from "../../../../pages/AgentChat";
+import { stringFormat } from "../../../../Utility/Constants";
 
 describe("MultiSession Test Scenerios - ", () => {
     let adminContext: BrowserContext;
@@ -16,8 +18,10 @@ describe("MultiSession Test Scenerios - ", () => {
     let liveChatContext: BrowserContext;
     let liveChatPage: LiveChatPage;
     let macrosAdminPage: Macros;
+    let agentChat: AgentChat;
     let rnd: any;
     const agentScriptAdminPage = new AgentScript(adminPage);
+    var caseNameList: string[] = [];
 
     beforeEach(async () => {
         adminContext = await browser.newContext({
@@ -34,6 +38,7 @@ describe("MultiSession Test Scenerios - ", () => {
         adminPage = await adminContext.newPage();
         adminStartPage = new OrgDynamicsCrmStartPage(adminPage);
         macrosAdminPage = new Macros(adminPage);
+        agentChat = new AgentChat(adminPage)
     });
     afterEach(async () => {
         TestHelper.dispose(adminContext);

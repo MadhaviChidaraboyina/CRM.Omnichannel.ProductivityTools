@@ -5,8 +5,9 @@ import { Macros } from "../../macropages/macrosAdmin";
 import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.page";
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
-import { stringFormat } from "Utility/Constants";
-import { AgentScript } from "integration-tests/agentScript/pages/agentScriptAdmin";
+import { stringFormat } from "../../../Utility/Constants";
+import { AgentScript } from "../../../integration-tests/agentScript/pages/agentScriptAdmin";
+import { AgentChat } from "../../../pages/AgentChat";
 
 describe("Multi Session - ", () => {
   let adminContext: BrowserContext;
@@ -17,8 +18,10 @@ describe("Multi Session - ", () => {
   let liveChatContext: BrowserContext;
   let liveChatPage: LiveChatPage;
   let macrosAdminPage: Macros;
+  let agentChat: AgentChat;
   let rnd: any;
   const agentScriptAdminPage = new AgentScript(adminPage);
+  var caseNameList: string[] = [];
 
   beforeEach(async () => {
     adminContext = await browser.newContext({
@@ -41,6 +44,7 @@ describe("Multi Session - ", () => {
     adminPage = await adminContext.newPage();
     adminStartPage = new OrgDynamicsCrmStartPage(adminPage);
     macrosAdminPage = new Macros(adminPage);
+    agentChat = new AgentChat(adminPage)
   });
   afterEach(async () => {
     TestHelper.dispose(adminContext);
@@ -132,18 +136,24 @@ describe("Multi Session - ", () => {
     agentPage = await agentContext.newPage();
     rnd = agentScriptAdminPage.RandomNumber();
     //Login as admin and create cases
-    await adminStartPage.navigateToOrgUrlAndSignIn(
+    await agentChat.navigateToOrgUrlAndSignIn(
       TestSettings.MultiSessionEmail,
       TestSettings.AdminAccountPassword
     );
-    await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-    await macrosAdminPage.createCase(Constants.CaseTitleName + rnd);
-    await macrosAdminPage.createCase(Constants.CaseTitleName2 + rnd);
-    //Initiate session and validate
-    await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToCustomerServiceWorkspace();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage)
+
+    var CaseTitleName = Constants.CaseTitleName + rnd
+    var CaseTitleName2 = Constants.CaseTitleName2 + rnd
+
+    caseNameList = [CaseTitleName, CaseTitleName2];
+
+    await macrosAdminPage.createIncidents(agentChat, caseNameList);
+
+    //Initiate session and validate
     await macrosAdminPage.InitiateSession(
-      Constants.CaseTitleName + rnd,
+      CaseTitleName,
       Constants.SpecificCaseLink1.replace("{0}", rnd)
     );
     await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
@@ -171,31 +181,30 @@ describe("Multi Session - ", () => {
   /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1946076
   ///</summary>
   it("Test Case 1946076: [Multi Session] Verify Quick create action for Case entity and Activities", async () => {
-    agentPage = await agentContext.newPage();
-    try {
-      //Login as admin and create case In CSW
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.MultiSessionEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToCustomerServiceWorkspace();
-      //Create case and Validate
-      await macrosAdminPage.CreateCaseInCSW(Constants.CaseTitleName);
-      await macrosAdminPage.ValidateThePage(Constants.Notification);
-      //Initiate Session and Validate
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await macrosAdminPage.ValidateThePage(Constants.ValidateCaseTitle);
-      await macrosAdminPage.ValidateThePage(Constants.ValidateCustomer);
-    } finally {
-      await macrosAdminPage.deleteCaseInCSH(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName
-      );
-    }
+    rnd = agentScriptAdminPage.RandomNumber();
+    await agentChat.navigateToOrgUrlAndSignIn(
+      TestSettings.MultiSessionEmail,
+      TestSettings.AdminAccountPassword
+    );
+
+    await agentChat.goToMyApp(Constants.CustomerServiceWorkspace);
+    await agentChat.waitforTimeout();
+
+    var CaseUserName = Constants.XRMCaseName + rnd;
+    caseNameList = [CaseUserName];
+
+    await macrosAdminPage.createIncidents(agentChat, caseNameList);
+
+    //Validate & Initiate one Session
+    await macrosAdminPage.ValidateThePage(Constants.Notification);
+    await macrosAdminPage.InitiateSession(
+      CaseUserName,
+      stringFormat(Constants.XRMSpecificCaseLink1, rnd)
+    );
+
+    //Validate Username & customer
+    await macrosAdminPage.ValidateThePage(stringFormat(Constants.TitleTag, CaseUserName));
+    await macrosAdminPage.ValidateThePage(stringFormat(Constants.TitleTag, Constants.XRMContact));
   });
 
   ///<summary>
@@ -263,102 +272,108 @@ describe("Multi Session - ", () => {
   /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1945859
   ///</summary>
   it("Test Case 1945859: [Multi Session] Create and Convert Activities (Task, Email, Phone Call, Fax, Letter, Appointment & Custom Activity) to Case.", async () => {
-    agentPage = await agentContext.newPage();
-    try {
-      //Login as admin and create case
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.MultiSessionEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-      await macrosAdminPage.createCase(Constants.CaseTitleName);
-      //Create Task and conver it to case and validate
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToCustomerServiceWorkspace();
-      await macrosAdminPage.CreateTask(Constants.TaskName);
-      await macrosAdminPage.ConvertTaskToCase();
-      await macrosAdminPage.ValidateThePage(Constants.TaskToCaseValidation);
-      //Resolve case and validate
-      await macrosAdminPage.ResolveCase(Constants.ResolutionName);
-      await macrosAdminPage.ValidateThePage(Constants.ValidateResolveCase);
-      //Reactivate case and Validate
-      await macrosAdminPage.ReactivateCase();
-      await macrosAdminPage.ValidateThePage(Constants.ValidateReactivateCase);
-      //Cancel case and valiadte
-      await macrosAdminPage.CancelCase();
-      await macrosAdminPage.ValidateThePage(Constants.ValidateCloseCase);
-      //Reactivate case and delete
-      await macrosAdminPage.ReactivateCase();
-      await macrosAdminPage.DeleteCase();
-      //Initiate case and Resolve it and Validate
-      await macrosAdminPage.GoToHome();
-      await macrosAdminPage.GoToCases();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await macrosAdminPage.ResolveCase(Constants.ResolutionName);
-      await macrosAdminPage.ValidateThePage(Constants.ValidateResolveCase);
-      //Reactivate case and Validate
-      await macrosAdminPage.ReactivateCase();
-      await macrosAdminPage.ValidateThePage(Constants.ValidateReactivateCase);
-      //Cancel case and valiadte
-      await macrosAdminPage.CancelCase();
-      await macrosAdminPage.ValidateThePage(Constants.ValidateCloseCase);
-      await macrosAdminPage.ReactivateCase();
-    } finally {
-      await macrosAdminPage.deleteCaseInCSH(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName
-      );
-    }
-  });  
- 
+    rnd = agentScriptAdminPage.RandomNumber();
+
+    await agentChat.navigateToOrgUrlAndSignIn(
+      TestSettings.MultiSessionEmail,
+      TestSettings.AdminAccountPassword
+    );
+
+    await agentChat.goToMyApp(Constants.CustomerServiceWorkspace);
+    await agentChat.waitforTimeout();
+
+    var CaseUserName = Constants.XRMCaseName + rnd;
+    caseNameList = [CaseUserName];
+
+    await macrosAdminPage.createIncidents(agentChat, caseNameList);
+
+    await macrosAdminPage.InitiateSession(
+      CaseUserName,
+      stringFormat(Constants.XRMSpecificCaseLink1, rnd)
+    );
+
+    //Create Task and convert it to case and validate
+    await macrosAdminPage.CreateTask(Constants.TaskName + rnd);
+    await macrosAdminPage.ConvertTaskToCase();
+    await macrosAdminPage.ValidateTimeLine(Constants.TaskToCaseValidation);
+
+    //Resolve case and validate
+    await macrosAdminPage.ResolveCase(Constants.ResolutionName);
+    await macrosAdminPage.ValidateTimeLine(Constants.ValidateResolveCase);
+
+    //Reactivate case and Validate
+    await macrosAdminPage.ReactivateCase();
+    await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase);
+
+    //Cancel case and validate
+    await macrosAdminPage.CancelCase();
+    await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase);
+
+    //Reactivate case and delete
+    await macrosAdminPage.ReactivateCase();
+    await macrosAdminPage.DeleteCase();
+    await macrosAdminPage.closeTaskTab();
+
+    //Initiate session, Resolve it and Validate
+    await macrosAdminPage.GoToHome();
+    await macrosAdminPage.InitiateSession(
+      CaseUserName,
+      stringFormat(Constants.XRMSpecificCaseLink1, rnd)
+    );
+    await macrosAdminPage.ResolveCase(Constants.ResolutionName);
+    await macrosAdminPage.ValidateTimeLine(Constants.ValidateResolveCase);
+
+    //Reactivate case and Validate
+    await macrosAdminPage.ReactivateCase();
+    await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase);
+
+    //Cancel case and validate
+    await macrosAdminPage.CancelCase();
+    await macrosAdminPage.ValidateTimeLine(Constants.CaseClosed);
+    await macrosAdminPage.ReactivateCase();
+  });
+
   ///<summary>
   ///Test Case 1942194: [Multi Session][Productivity Pane] Productivity pane maintains collapsed state during session switch events
   ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1942194
   ///</summary>
   it("Test Case 1942194: [Multi Session][Productivity Pane] Productivity pane maintains collapsed state during session switch events", async () => {
-    agentPage = await agentContext.newPage();
-    liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-    try {
-      //Login as crmadmin and create case
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.MultiSessionEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-      await macrosAdminPage.createCase(Constants.CaseTitleName);
-      await macrosAdminPage.createCase(Constants.CaseTitleName2);
-      //Navigate to CSW and intitiate sessions
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToCustomerServiceWorkspace();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await macrosAdminPage.GoToHome();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName2,
-        Constants.CaseLink2
-      );
-      await macrosAdminPage.ClickProductivityPaneTool(Constants.SAtool);
-      await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneDisable);
-      await macrosAdminPage.SwitchBackToPreviousSession(Constants.CaseLink1);
-      await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
-    } finally {
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName
-      );
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName2
-      );
-    }
+    rnd = agentScriptAdminPage.RandomNumber();
+    await agentChat.navigateToOrgUrlAndSignIn(
+      TestSettings.AdminAccountEmail,
+      TestSettings.AdminAccountPassword
+    );
+
+    await agentChat.goToMyApp(Constants.CustomerServiceWorkspace);
+    await agentChat.waitforTimeout();
+
+    //To enable new layout improvements
+    await macrosAdminPage.enableLayoutImprovements(adminPage);
+
+    var CaseUserName = Constants.XRMCaseName + rnd;
+    var CaseUserName2 = Constants.XRMCaseName2 + rnd;
+
+    caseNameList = [CaseUserName, CaseUserName2];
+
+    await macrosAdminPage.createIncidents(agentChat, caseNameList);
+
+    //Navigate to CSW and intitiate sessions
+    await macrosAdminPage.InitiateSession(
+      CaseUserName,
+      stringFormat(Constants.XRMSpecificCaseLink1, rnd)
+    );
+    await macrosAdminPage.GoToHome();
+    await macrosAdminPage.InitiateSession(
+      CaseUserName2,
+      stringFormat(Constants.XRMSpecificCaseLink2, rnd)
+    );
+    await macrosAdminPage.ClickProductivityPaneTool(Constants.SAtool);
+    await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneDisable);
+
+    //Validate that Productivity pane maintains collapsed state during session switch events
+    await macrosAdminPage.SwitchBackToPreviousSession(stringFormat(Constants.XRMSpecificCaseLink1, rnd));
+    await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
+    await macrosAdminPage.disableLayoutImprovements(adminPage);
   });
 
   ///<summary>
@@ -366,46 +381,43 @@ describe("Multi Session - ", () => {
   ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_testPlans/execute?planId=2627279&suiteId=2627282
   ///</summary>
   it("Test Case 1942193: [Multi Session][Productivity Pane] Productivity pane expanded once existing case is open", async () => {
-    agentPage = await agentContext.newPage();
-    liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-    try {
-      //Login as admin and create cases
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.MultiSessionEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-      await macrosAdminPage.createCase(Constants.CaseTitleName);
-      await macrosAdminPage.createCase(Constants.CaseTitleName2);
-      //Initiate two Session and Validating Productivity pane
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-      // await adminStartPage.waitForAgentStatusIcon();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await macrosAdminPage.GoToHome();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName2,
-        Constants.CaseLink2
-      );
-      await macrosAdminPage.SwitchBackToPreviousSession(Constants.CaseLink1);
-      await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
-      await macrosAdminPage.SwitchBackToPreviousSession(Constants.CaseLink2);
-      await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
-    } finally {
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName
-      );
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName2
-      );
-    }
+    rnd = agentScriptAdminPage.RandomNumber();
+
+    //Login as admin and create cases
+    await agentChat.navigateToOrgUrlAndSignIn(
+      TestSettings.AdminAccountEmail,
+      TestSettings.AdminAccountPassword
+    );
+
+    await agentChat.goToMyApp(Constants.CustomerServiceWorkspace);
+    await agentChat.waitforTimeout();
+
+    //To enable new layout improvements
+    await macrosAdminPage.enableLayoutImprovements(adminPage);
+
+    var CaseUserName = Constants.XRMCaseName + rnd;
+    var CaseUserName2 = Constants.XRMCaseName2 + rnd;
+
+    caseNameList = [CaseUserName, CaseUserName2];
+
+    await macrosAdminPage.createIncidents(agentChat, caseNameList);
+
+    //Initiate two Sessions and Validate Productivity pane
+    await macrosAdminPage.InitiateSession(
+      CaseUserName,
+      stringFormat(Constants.XRMSpecificCaseLink1, rnd)
+    );
+
+    await macrosAdminPage.GoToHome();
+    await macrosAdminPage.InitiateSession(
+      CaseUserName2,
+      stringFormat(Constants.XRMSpecificCaseLink2, rnd)
+    );
+    await macrosAdminPage.SwitchBackToPreviousSession(stringFormat(Constants.XRMSpecificCaseLink1, rnd));
+    await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
+    await macrosAdminPage.SwitchBackToPreviousSession(stringFormat(Constants.XRMSpecificCaseLink2, rnd));
+    await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
+    await macrosAdminPage.disableLayoutImprovements(adminPage);
   });
 
   ///<summary>
@@ -512,45 +524,38 @@ describe("Multi Session - ", () => {
   ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_testPlans/execute?planId=2627279&suiteId=2627282
   ///</summary>
   it("Test Case 1942179: [Multi Session] Verify General multisession navigation", async () => {
-    agentPage = await agentContext.newPage();
-    liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-    try {
-      //Login as admin and create cases
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.MultiSessionEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-      await macrosAdminPage.createCase(Constants.CaseTitleName);
-      await macrosAdminPage.createCase(Constants.CaseTitleName2);
-      //Initiate one Session and Tab
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-      // await adminStartPage.waitForAgentStatusIcon();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await macrosAdminPage.GoToHome();
-      await macrosAdminPage.InitiateTab(
-        Constants.CaseTitleName2,
-        Constants.CaseLink2
-      );
-      //Validating Opening Session and Tab
-      await macrosAdminPage.ValidateThePage(Constants.CaseTitleNameVal);
-      await macrosAdminPage.ValidateThePage(Constants.CaseTitleName2Val);
-    } finally {
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName
-      );
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName2
-      );
-    }
+    rnd = agentScriptAdminPage.RandomNumber();
+
+    //Login as admin and create cases
+    await agentChat.navigateToOrgUrlAndSignIn(
+      TestSettings.MultiSessionEmail,
+      TestSettings.AdminAccountPassword
+    );
+
+    await agentChat.goToMyApp(Constants.CustomerServiceWorkspace);
+    await agentChat.waitforTimeout();
+
+    var CaseUserName = Constants.XRMCaseName + rnd;
+    var CaseUserName2 = Constants.XRMCaseName2 + rnd;
+
+    caseNameList = [CaseUserName, CaseUserName2];
+
+    await macrosAdminPage.createIncidents(agentChat, caseNameList);
+
+    //Initiate one Session and Tab
+    await macrosAdminPage.InitiateSession(
+      CaseUserName,
+      stringFormat(Constants.XRMSpecificCaseLink1, rnd)
+    );
+    await macrosAdminPage.GoToHome();
+    await macrosAdminPage.InitiateTab(
+      CaseUserName2,
+      stringFormat(Constants.XRMSpecificCaseLink2, rnd)
+    );
+
+    //Validating title of opened Session and Tab
+    await macrosAdminPage.ValidateThePage(stringFormat(Constants.SpecificCaseTitleNameVal, CaseUserName));
+    await macrosAdminPage.ValidateThePage(stringFormat(Constants.SpecificCaseTitleName2Val, CaseUserName2));
   });
 
   ///<summary>
@@ -681,113 +686,112 @@ describe("Multi Session - ", () => {
   ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1945699
   ///<summary>
   it("Test Case 1945699: [Multi Session] Verify Case creation along with timeline wall", async () => {
-    agentPage = await agentContext.newPage();
-    liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-    try {
-      // Login as Admin and create case
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.MultiSessionEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-      // await adminStartPage.waitForAgentStatusIcon();
-      await macrosAdminPage.createCaseFromCSWSiteMap(Constants.CaseTitleName);
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await macrosAdminPage.ValidateThePage(Constants.CaseStatusInProgress);
-      await macrosAdminPage.ValidateTimeLine(Constants.CaseCreated);
-      // Resolve Case and Validate the Page
-      await macrosAdminPage.ResolvecaseAsInformation(
-        Constants.ResolutionTypeInputField,
-        Constants.AutomationResolutionField
-      );
-      await macrosAdminPage.ValidateThePage(
-        Constants.CaseStatusInformationProvided
-      );
-      await macrosAdminPage.ValidateThePage(Constants.CaseResolved);
-      await macrosAdminPage.ValidateTimeLine(Constants.CaseClosed);
-      await macrosAdminPage.ValidateThePage(Constants.FormISReadonly);
-      await macrosAdminPage.GoToMoreCommands();
-      await macrosAdminPage.ValidateNotPresent(Constants.ResolveCaseBtn);
-      await macrosAdminPage.ValidateNotPresent(Constants.CancleCaseBtn);
-      // Reactivate Case and Validate it
-      await macrosAdminPage.ReactivateCase();
-      await macrosAdminPage.ValidateThePage(Constants.CaseStatusInProgress);
-      await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase);
-      await macrosAdminPage.GoToMoreCommands();
-      await macrosAdminPage.ValidateNotPresent(Constants.ReactivateBtn);
-      // Cancle Case and validate it
-      await macrosAdminPage.CancelCase();
-      await macrosAdminPage.ValidateThePage(Constants.CaseStatusCancelled);
-      await macrosAdminPage.ValidateTimeLine(Constants.CaseClosed);
-      await macrosAdminPage.ValidateThePage(Constants.FormISReadonly);
-      await macrosAdminPage.GoToMoreCommands();
-      await macrosAdminPage.ValidateNotPresent(Constants.ResolveCaseBtn);
-      await macrosAdminPage.ValidateNotPresent(Constants.CancleCaseBtn);
-      // Reactivate Case and validate it
-      await macrosAdminPage.ReactivateCase();
-      await macrosAdminPage.ValidateThePage(Constants.CaseStatusInProgress);
-      await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase);
-      await macrosAdminPage.GoToMoreCommands();
-      await macrosAdminPage.ValidateNotPresent(Constants.ReactivateBtn);
-      // Initiate Existing Session
-      await macrosAdminPage.GoToHome();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await macrosAdminPage.ValidateThePage(Constants.CaseStatusInProgress);
-      await macrosAdminPage.ValidateTimeLine(Constants.CaseCreated);
-      // Resolve Case and validate it
-      await macrosAdminPage.ResolvecaseAsInformation(
-        Constants.ResolutionTypeInputField,
-        Constants.AutomationResolutionField
-      );
-      await macrosAdminPage.ValidateThePage(
-        Constants.CaseStatusInformationProvided
-      );
-      await macrosAdminPage.ValidateThePage(Constants.CaseResolved);
-      await macrosAdminPage.ValidateTimeLine(Constants.CaseClosed);
-      await macrosAdminPage.ValidateThePage(Constants.FormISReadonly);
-      await macrosAdminPage.GoToMoreCommands();
-      await macrosAdminPage.ValidateNotPresent(Constants.ResolveCaseBtn);
-      await macrosAdminPage.ValidateNotPresent(Constants.CancleCaseBtn);
+    rnd = agentScriptAdminPage.RandomNumber();
 
-      // Reactivate case and validate it
-      await macrosAdminPage.ReactivateCase();
-      await macrosAdminPage.ValidateThePage(Constants.CaseStatusInProgress);
-      await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase);
-      await macrosAdminPage.GoToMoreCommands();
-      await macrosAdminPage.ValidateNotPresent(Constants.ReactivateBtn);
-      // Cancle case and validate it
-      await macrosAdminPage.CancelCase();
-      await macrosAdminPage.ValidateThePage(Constants.CaseStatusCancelled);
-      await macrosAdminPage.ValidateTimeLine(Constants.CaseClosed);
-      await macrosAdminPage.ValidateThePage(Constants.FormISReadonly);
-      await macrosAdminPage.GoToMoreCommands();
-      await macrosAdminPage.ValidateNotPresent(Constants.ResolveCaseBtn);
-      await macrosAdminPage.ValidateNotPresent(Constants.CancleCaseBtn);
-      // Reactivate case and validate it
-      await macrosAdminPage.ReactivateCase();
-      await macrosAdminPage.ValidateThePage(Constants.CaseStatusInProgress);
-      await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase);
-      await macrosAdminPage.GoToMoreCommands();
-      await macrosAdminPage.ValidateNotPresent(Constants.ReactivateBtn);
-      await macrosAdminPage.GoToMoreCommands();
-      // Clear TimeLine Part
-      await macrosAdminPage.ClearTimeLine(Constants.ValidateReactivateCase);
-      await macrosAdminPage.ClearTimeLine(Constants.CaseClosed);
-      await macrosAdminPage.ClearTimeLine(Constants.ValidateReactivateCase);
-      await macrosAdminPage.ClearTimeLine(Constants.CaseClosed);
-    } finally {
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName
-      );
-    }
+    await agentChat.navigateToOrgUrlAndSignIn(
+      TestSettings.MultiSessionEmail,
+      TestSettings.AdminAccountPassword
+    );
+
+    await agentChat.goToMyApp(Constants.CustomerServiceWorkspace);
+    await agentChat.waitforTimeout();
+
+    var CaseUserName = Constants.XRMCaseName + rnd;
+    caseNameList = [CaseUserName];
+
+    await macrosAdminPage.createIncidents(agentChat, caseNameList);
+
+    await macrosAdminPage.InitiateSession(
+      CaseUserName,
+      stringFormat(Constants.XRMSpecificCaseLink1, rnd)
+    );
+    await macrosAdminPage.ValidateThePage(Constants.CaseStatusInProgress);
+    await macrosAdminPage.ValidateTimeLine(Constants.CaseCreated);
+
+    // Resolve Case and Validate the Page
+    await macrosAdminPage.ResolvecaseAsInformation(
+      Constants.ResolutionTypeInputField,
+      Constants.AutomationResolutionField
+    );
+    await macrosAdminPage.ValidateThePage(
+      Constants.CaseStatusInformationProvided
+    );
+    await macrosAdminPage.ValidateThePage(Constants.CaseResolved);
+    await macrosAdminPage.ValidateTimeLine(Constants.CaseClosed);
+    await macrosAdminPage.ValidateThePage(Constants.FormISReadonly);
+    await macrosAdminPage.GoToMoreCommands();
+    await macrosAdminPage.ValidateNotPresent(Constants.ResolveCaseBtn);
+    await macrosAdminPage.ValidateNotPresent(Constants.CancleCaseBtn);
+
+    // Reactivate Case and Validate it
+    await macrosAdminPage.ReactivateCase();
+    await macrosAdminPage.ValidateThePage(Constants.CaseStatusInProgress);
+    await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase);
+    await macrosAdminPage.GoToMoreCommands();
+    await macrosAdminPage.ValidateNotPresent(Constants.ReactivateBtn);
+
+    // Cancel Case and validate it
+    await macrosAdminPage.CancelCase();
+    await macrosAdminPage.ValidateThePage(Constants.CaseStatusCancelled);
+    await macrosAdminPage.ValidateTimeLine(Constants.CaseClosed);
+    await macrosAdminPage.ValidateThePage(Constants.FormISReadonly);
+    await macrosAdminPage.GoToMoreCommands();
+    await macrosAdminPage.ValidateNotPresent(Constants.ResolveCaseBtn);
+    await macrosAdminPage.ValidateNotPresent(Constants.CancleCaseBtn);
+
+    // Reactivate Case and validate it
+    await macrosAdminPage.ReactivateCase();
+    await macrosAdminPage.ValidateThePage(Constants.CaseStatusInProgress);
+    await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase);
+    await macrosAdminPage.GoToMoreCommands();
+    await macrosAdminPage.ValidateNotPresent(Constants.ReactivateBtn);
+
+    // Initiate Existing Session
+    await macrosAdminPage.GoToHome();
+    await macrosAdminPage.InitiateSession(
+      CaseUserName,
+      stringFormat(Constants.XRMSpecificCaseLink1, rnd)
+    );
+    await macrosAdminPage.ValidateThePage(Constants.CaseStatusInProgress);
+    await macrosAdminPage.ValidateTimeLine(Constants.CaseCreated);
+
+    // Resolve Case and validate it
+    await macrosAdminPage.ResolvecaseAsInformation(
+      Constants.ResolutionTypeInputField,
+      Constants.AutomationResolutionField
+    );
+    await macrosAdminPage.ValidateThePage(
+      Constants.CaseStatusInformationProvided
+    );
+    await macrosAdminPage.ValidateThePage(Constants.CaseResolved);
+    await macrosAdminPage.ValidateTimeLine(Constants.CaseClosed);
+    await macrosAdminPage.ValidateThePage(Constants.FormISReadonly);
+    await macrosAdminPage.GoToMoreCommands();
+    await macrosAdminPage.ValidateNotPresent(Constants.ResolveCaseBtn);
+    await macrosAdminPage.ValidateNotPresent(Constants.CancleCaseBtn);
+
+    // Reactivate case and validate it
+    await macrosAdminPage.ReactivateCase();
+    await macrosAdminPage.ValidateThePage(Constants.CaseStatusInProgress);
+    await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase);
+    await macrosAdminPage.GoToMoreCommands();
+    await macrosAdminPage.ValidateNotPresent(Constants.ReactivateBtn);
+
+    // Cancel case and validate it
+    await macrosAdminPage.CancelCase();
+    await macrosAdminPage.ValidateThePage(Constants.CaseStatusCancelled);
+    await macrosAdminPage.ValidateTimeLine(Constants.CaseClosed);
+    await macrosAdminPage.ValidateThePage(Constants.FormISReadonly);
+    await macrosAdminPage.GoToMoreCommands();
+    await macrosAdminPage.ValidateNotPresent(Constants.ResolveCaseBtn);
+    await macrosAdminPage.ValidateNotPresent(Constants.CancleCaseBtn);
+
+    // Reactivate case and validate it
+    await macrosAdminPage.ReactivateCase();
+    await macrosAdminPage.ValidateThePage(Constants.CaseStatusInProgress);
+    await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase);
+    await macrosAdminPage.GoToMoreCommands();
+    await macrosAdminPage.ValidateNotPresent(Constants.ReactivateBtn);
   });
 
   ///<summary>

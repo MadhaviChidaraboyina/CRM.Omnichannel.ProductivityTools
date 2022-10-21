@@ -1,13 +1,13 @@
 import { IFrameConstants, IFrameHelper } from "../../Utility/IFrameHelper";
 import { AgentChat } from "../../pages/AgentChat";
 import { Page } from "playwright";
-import { Constants } from "../common/constants";
+import { Constants, EntityAttributes, EntityNames } from "../common/constants";
 import { OrgDynamicsCrmStartPage } from "../../pages/org-dynamics-crm-start.page";
 import { TestSettings } from "../../configuration/test-settings";
-import { AgentChatConstants, stringFormat } from "Utility/Constants";
-import { Util } from "Utility/Util";
-import { LogChatDetails } from "helpers/log-helper";
-import { BasePage } from "pages/BasePage";
+import { AgentChatConstants, stringFormat } from "../../Utility/Constants";
+import { Util } from "../../Utility/Util";
+import { LogChatDetails } from "../../helpers/log-helper";
+import { BasePage } from "../../pages/BasePage";
 import { MacrosConstants } from "pages/Macros";
 
 export class Macros extends BasePage {
@@ -1719,10 +1719,10 @@ export class Macros extends BasePage {
   public async InitiateSession(InitiateOne: string, Click: string) {
     await this.adminPage.click(Constants.SearchOption, { timeout: 50000 });
     await this.adminPage.fill(Constants.SearchOption, InitiateOne);
-    await this.adminPage.waitForTimeout(3000);
+    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);
     await this.adminPage.click(Constants.SearchTheView);
     await this.adminPage.click(Click);
-    await this.adminPage.waitForTimeout(8000);
+    await this.adminPage.waitForTimeout(Constants.MaxTimeout);
   }
 
   public async InitiateNandGSession(InitiateOne: string, Click: string) {
@@ -1850,22 +1850,22 @@ export class Macros extends BasePage {
   public async GoToHome() {
     await this.adminPage.waitForSelector(Constants.Home);
     await this.adminPage.click(Constants.Home);
-    await this.adminPage.waitForTimeout(2000);
+    await this.adminPage.waitForTimeout(Constants.DefaultTimeout);
   }
 
   public async ClickProductivityPaneTool(OpenTool: string) {
     await this.adminPage.click(OpenTool);
-    await this.adminPage.waitForTimeout(2000);
+    await this.adminPage.waitForTimeout(Constants.DefaultTimeout);
   }
 
   public async InitiateTab(InitiateOne: string, ClickTab: string) {
     await this.adminPage.click(Constants.SearchOption, { timeout: 50000 });
     await this.adminPage.fill(Constants.SearchOption, InitiateOne);
-    await this.adminPage.waitForTimeout(3000);
+    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);
     await this.adminPage.click(Constants.SearchTheView);
-    await this.adminPage.waitForTimeout(3000);
+    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);
     await this.adminPage.click(ClickTab, { modifiers: ["Control"] });
-    await this.adminPage.waitForTimeout(2000);
+    await this.adminPage.waitForTimeout(Constants.DefaultTimeout);
   }
 
   public async InitiateNandGTab(InitiateOne: string, ClickTab: string) {
@@ -1888,7 +1888,7 @@ export class Macros extends BasePage {
   public async CollapseExpandPane() {
     await this.adminPage.click(Constants.SAtool);
     await this.adminPage.click(Constants.SAtool);
-    await this.adminPage.waitForTimeout(3000);
+    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);
   }
 
   public async OpenSuggestionLink(ClickTool: string) {
@@ -1907,7 +1907,7 @@ export class Macros extends BasePage {
 
   public async SwitchBackToPreviousSession(PreviousSession: string) {
     await this.adminPage.click(PreviousSession);
-    await this.adminPage.waitForTimeout(5000);
+    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);
   }
 
   public async LinkAndUnlinkCase(ClickLinkBtn: string) {
@@ -1950,29 +1950,26 @@ export class Macros extends BasePage {
   }
 
   public async CreateTask(TaskName: string) {
-    await this.adminPage.click(Constants.TaskNewTab);
-    await this.adminPage.click(Constants.Activities);
-    //Time delay to load page
-    await this.adminPage.waitForSelector(Constants.Taskbtn, { timeout: 10000 });
-    await this.adminPage.click(Constants.Taskbtn);
+    await this.adminPage.click(Constants.TimelineAddButton);
+    await this.adminPage.click(Constants.TimelineTaskButton);
+    await this.adminPage.waitForSelector(Constants.TaskSubjectField);
     await this.adminPage.fill(Constants.TaskSubjectField, TaskName);
-    await this.adminPage.click(Constants.SaveTask);
+    await this.adminPage.click(Constants.AgentscriptStepSaveAndclose);
     //Time delay to save the task page
-    await this.adminPage.waitForTimeout(3000);
+    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);
   }
 
   public async ConvertTaskToCase() {
+    await this.adminPage.click(Constants.OpenRecordInTask);
     await this.adminPage.click(Constants.MoreOptionInTask);
     await this.adminPage.click(Constants.ConvertTo);
     await this.adminPage.click(Constants.ToCase);
     //Time delay to convert case
-    await this.adminPage.waitForSelector(Constants.LookupCustomerField, {
-      timeout: 10000,
-    });
+    await this.adminPage.waitForSelector(Constants.LookupCustomerField);
     await this.adminPage.click(Constants.LookupCustomerField);
     await this.adminPage.click(Constants.TaskCustomer);
     await this.adminPage.click(Constants.Convert);
-    await this.adminPage.waitForTimeout(3000);
+    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);
   }
 
   public async ResolveCase(ResolutionName: String) {
@@ -1984,31 +1981,31 @@ export class Macros extends BasePage {
     });
     await this.adminPage.fill(Constants.Resolution, ResolutionName);
     await this.adminPage.click(Constants.SaveResolveCase);
-    await this.adminPage.waitForTimeout(3000);
+    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);
   }
 
   public async ReactivateCase() {
     await this.adminPage.click(Constants.ReactivateCase);
     await this.adminPage.click(Constants.ConfirmReactivate);
-    await this.adminPage.waitForTimeout(3000);
+    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);
   }
 
   public async CancelCase() {
     await this.adminPage.click(Constants.MoreOptionInCase);
-    await this.adminPage.click(Constants.CancleCase);
+    await this.adminPage.click(Constants.CancelCase);
     //Time delay to load cancel page
-    await this.adminPage.waitForSelector(Constants.ConfirmCancleCase, {
-      timeout: 10000,
+    await this.adminPage.waitForSelector(Constants.ConfirmCancelCase, {
+      timeout: Constants.OpenWsWaitTimeout,
     });
-    await this.adminPage.click(Constants.ConfirmCancleCase);
-    await this.adminPage.waitForTimeout(3000);
+    await this.adminPage.click(Constants.ConfirmCancelCase);
+    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);
   }
 
   public async DeleteCase() {
     await this.adminPage.click(Constants.MoreOptionInCase);
     await this.adminPage.click(Constants.DeleteCase);
     await this.adminPage.click(Constants.ConfirmDeleteCase);
-    await this.adminPage.waitForTimeout(3000);
+    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);
   }
 
   public async CreateCaseInCSW(CaseName: any) {
@@ -2528,7 +2525,7 @@ export class Macros extends BasePage {
   }
 
   public async ValidateTimeLine(Status: string) {
-    await this.adminPage.waitForTimeout(2000);
+    await this.adminPage.waitForTimeout(Constants.DefaultTimeout);
     await this.adminPage.click(Constants.FirstAutoPost);
     //Time delay to perform the action
     await this.adminPage.waitForSelector(Status, { timeout: 4000 });
@@ -2537,17 +2534,17 @@ export class Macros extends BasePage {
   }
 
   public async ResolvecaseAsInformation(
-    SelecetResolutionType: string,
+    SelectResolutionType: string,
     Resolution: string
   ) {
     await this.adminPage.click(Constants.MoreCommands);
     await this.adminPage.click(Constants.ResolveCaseButton);
-    await this.adminPage.click(SelecetResolutionType);
+    await this.adminPage.click(SelectResolutionType);
     await this.adminPage.keyboard.press("ArrowDown");
     await this.adminPage.keyboard.press("Enter");
     await this.adminPage.fill(Constants.ResolutionInputField, Resolution);
     await this.adminPage.click(Constants.ResolveBtn);
-    await this.adminPage.waitForTimeout(2000);
+    await this.adminPage.waitForTimeout(Constants.DefaultTimeout);
   }
 
   public async GoToMoreCommands() {
@@ -4880,5 +4877,51 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.SelectFirstCheck);
     await this.adminPage.click(Constants.DeleteButton);
     await this.adminPage.click(Constants.ConfirmDeleteButton);
+  }
+
+  public async closeTaskTab() {
+    await this.adminPage.click(Constants.CloseTaskTab);
+  }
+
+  public async createIncidents(agentChat: any, caseNameList: string[]) {
+    let contact = await agentChat.createContactRecord(Constants.XRMContact);
+    var count = caseNameList.length;
+    for (let i = 0; i < count; i++) {
+      await agentChat.createIncidentRecord(caseNameList[i], contact[EntityAttributes.Id], EntityNames.Contact);
+    }
+  }
+
+  public async enableLayoutImprovements(adminPage) {
+    await adminPage.evaluate(
+      async () => {
+        await (window as any).Xrm.Utility.getGlobalContext().saveSettingValue(
+          "msdyn_MultiSessionLayoutImprovements",
+          true
+        );
+        const ctrl = await (
+          window as any
+        ).Xrm.Utility.getGlobalContext().getCurrentAppSettings()[
+          "msdyn_MultiSessionLayoutImprovements"
+        ];
+        return ctrl;
+      }
+    );
+  }
+
+  public async disableLayoutImprovements(adminPage) {
+    await adminPage.evaluate(
+      async () => {
+        await (window as any).Xrm.Utility.getGlobalContext().saveSettingValue(
+          "msdyn_MultiSessionLayoutImprovements",
+          false
+        );
+        const ctrl = await (
+          window as any
+        ).Xrm.Utility.getGlobalContext().getCurrentAppSettings()[
+          "msdyn_MultiSessionLayoutImprovements"
+        ];
+        return ctrl;
+      }
+    );
   }
 }

@@ -571,9 +571,9 @@ export class Constants {
   static ConvertTo = `//*[text()="Convert To"]`;
   static ToCase = `//*[text()="To Case"]`;
   static LookupCustomerField = `[aria-label="Search records for Customer, Lookup field"]`;
-  static TaskCustomer = '[aria-label="A. Datum Corporation (sample), 555-0158"]';
+  static TaskCustomer = '(//span[text()="A. Datum Corporation (sample)"]/following-sibling::span)';
   static Convert = `[aria-label="Convert"]`;
-  static TaskToCaseValidation = "//*[contains(text(),'Case: Created by')]";
+  static TaskToCaseValidation = "//*[contains(text(),'created by')]";
   static ResolveCaseBtn = `[aria-label="Resolve Case"]`;
   static Resolution = `[aria-label="Resolution"]`;
   static ResolutionName = `Case Resolution`;
@@ -581,10 +581,10 @@ export class Constants {
   static ValidateResolveCase = `(//*[contains(@aria-label,'Case resolved by ')])[1]`;
   static ReactivateCase = `[aria-label="Reactivate Case"]`;
   static ConfirmReactivate = `[aria-label="Reactivate"]`;
-  static ValidateReactivateCase = `//*[text()="Case: Reactivated by "]`;
+  static ValidateReactivateCase = `//div[text()='Case re-activated by ']`;
   static MoreOptionInCase = `[aria-label="More commands for Case"]`;
-  static CancleCase = `(//span[contains(.,'Cancel Case')])[2]`;
-  static ConfirmCancleCase = `[aria-label="Confirm"]`;
+  static CancelCase = `(//span[contains(.,'Cancel Case')])[2]`;
+  static ConfirmCancelCase = `[aria-label="Confirm"]`;
   static ValidateCloseCase = `//*[text()="Case: Closed by "]`;
   static DeleteCase = `//*[text()="Delete"]`;
   static ConfirmDeleteCase = `//*[@data-id="confirmButton"]`;
@@ -786,12 +786,12 @@ export class Constants {
   static EmailContent = `[aria-label="Email Content"]`;
   static CopyURL = `[aria-label="Copy URL"]`;
   static ProperMsgForCopyURL = `//label[contains(.,'URL was copied to the clipboard.')]`;
-  static CaseStatusInProgress = `//*[@title="In Progress"]/span[text()="In Progress"]`;
-  static CaseStatusInformationProvided = `//*[@title="Information Provided"]/span[text()="Information Provided"]`;
-  static FirstAutoPost = `(//*[text()="Auto-post on"])[1]`;
-  static CaseResolved = `//*[text()="Case resolved by"]`;
-  static CaseCreated = `//*[text()="Case: Created by "]`;
-  static CaseClosed = `//*[text()="Case: Closed by "]`;
+  static CaseStatusInProgress = `//*[text()="In Progress"]`;
+  static CaseStatusInformationProvided = `//*[text()="Information Provided"]`;
+  static FirstAutoPost = `(//*[text()="Auto-post:"])[1]`;
+  static CaseResolved = `//label[text()='Case Resolution']`;
+  static CaseCreated = `//div[text()=' created by ']`;
+  static CaseClosed = `//div[text()=' closed by ']`;
   static ResolveCaseButton = `(//span[contains(.,'Resolve Case')])[1]`;
   static CancleCaseBtn = `[aria-label="Cancel Case"]`;
   static ResolutionTypeInputField = `[aria-label="Resolution Type"]`;
@@ -801,7 +801,7 @@ export class Constants {
   static ReactivateBtn = `//*[@aria-label="Reactivate Case"]`;
   static ConfirmReactivateBtn = `(//*[@aria-label="Reactivate"])/span[text()="Reactivate"]`;
   static ConfirmCancleBtn = `//*[@data-id="ok_id"]`;
-  static CaseStatusCancelled = `(//*[@aria-label="Case Status"])/span[text()="Cancelled"]`;
+  static CaseStatusCancelled = `//*[text()="Cancelled"]`;
   static NewCaseTitle = `Shipping time information (sample)`;
   static NewCaseLink = `//*[text()="Shipping time information (sample)"]`;
   static Delete = `(//*[@aria-label="Delete this post"][@type="button"])[1]`;
@@ -1356,4 +1356,48 @@ export class Constants {
   static KnowledgeBaseRString = `KnowledgeBase`;
   static SearchPhraseLabelField = `[aria-label="Tab Label"]`;
   static KBArticlelinkTitle = `(//span[contains(.,'msdyn_kbsearchpagehost.html')])`;
+  static XRMSpecificCaseLink1 = `//*[text()="AutomationCase{0}"]`;
+  static XRMSpecificCaseLink2 = `//*[text()="CaseForAutomation{0}"]`;
+  static SpecificCaseTitleNameVal = `[aria-label="{0} . Press the DELETE Key to close the session"]`;
+  static SpecificCaseTitleName2Val = `[aria-label="{0}. Press the DELETE Key to close the tab"]`;
+  static TitleTag = `[title="{0}"]`;
+  static XRMCaseName = 'AutomationCase';
+  static XRMCaseName2 = 'CaseForAutomation';
+  static XRMContact = 'MYContact';
+  static TimelineAddButton = `//span[contains(@class,'symbolFont Plus-symbol')]`;
+  static TimelineTaskButton = `//li[@data-id='notescontrol-createNewRecord_flyoutMenuItem_task']`;
+  static OpenRecordInTask = `//span[contains(@class,'symbolFont OpenEntityRecord-symbol')]`;
+  static CloseTaskTab = `//div[@title='Close the tab']`;
+  static AutomationContact = `AutomationContact`;
+  static ThreeThousandsMiliSeconds = 3000;
+}
+
+export enum EntityNames {
+  Account = "account",
+  Contact = "contact",
+  Incident = "incident",
+  SystemUser = "systemuser",
+  Queue = "queue",
+  Msdyn_CapacityProfile = "msdyn_capacityprofile",
+  Msdyn_OCPhoneNumber = "msdyn_ocphonenumber",
+  Msdyn_OCVoiceChannelSetting = "msdyn_ocvoicechannelsetting",
+  LiveWorkStream = "msdyn_liveworkstream",
+}
+
+export enum EntityAttributes {
+  Id = "id",
+  Name = "name",
+  Lastname = "lastname",
+  Title = "title",
+  IncidentAccountBindAttribute = "customerid_account@odata.bind",
+  IncidentContactBindAttribute = "customerid_contact@odata.bind",
+  Msdyn_channel = "msdyn_channel",
+  Msdyn_Title = "msdyn_title",
+  Msdyn_ActiveagenId = "msdyn_activeagentid",
+  Msdyn_OCLiveWorkItemId = "msdyn_ocliveworkitemid",
+  QueueId = "queueid",
+  Msdyn_CapacityProfileId = "msdyn_capacityprofileid",
+  Msdyn_OCPhoneNumberId = "msdyn_ocphonenumberid",
+  Msdyn_PhoneNumber = "msdyn_phonenumber",
+  LiveWorkStreamId = "msdyn_liveworkstreamid",
 }
