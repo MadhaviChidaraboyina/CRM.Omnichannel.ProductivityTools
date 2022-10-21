@@ -142,10 +142,9 @@
     </Compile>
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
-  <!--<Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />-->
+  <!-- Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" / -->
   <Import Project="..\..\..\build\include\TypeScriptCommonTypes.targets" />
-  <Import Project="..\..\..\packages\Microsoft.TypeScript.MSBuild.2.1.5\tools\Microsoft.TypeScript.targets" />
-  <!--<Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />-->
+  <!--Import Project="..\..\..\packages\Microsoft.TypeScript.MSBuild.2.1.5\tools\Microsoft.TypeScript.targets" / -->
   <PropertyGroup>
     <!-- File with mtime of last successful npm install -->
     <NpmInstallStampFile>$(MSBuildProjectDirectory)\node_modules\.install-stamp</NpmInstallStampFile>

@@ -51,11 +51,9 @@ powershell -ExecutionPolicy Bypass -Command %WSRoot%\init.ps1
 set PATH=%WSRoot%\.tools;%WSRoot%\.tools\VSS.NuGet.AuthHelper;%PATH%
 
 echo Package directory is: %WSRoot%\packages
-if not defined CDP_BUILD_TYPE (
-	nuget restore %WSRoot%\build\config\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
-) else (
-	nuget restore %WSRoot%\build\config\packages.config -PackagesDirectory %WSRoot%\packages
-)
+
+nuget restore %WSRoot%\build\config\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
+
 REM nuget restore %WSRoot%\solutions\CIFramework\CRM.Solutions.ChannelApiFramework.Test\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
 REM nuget restore %WSRoot%\solutions\CIFramework\Microsoft.OmniChannel.Test\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
 REM nuget restore %WSRoot%\solutions\CIFramework\CRM.Solutions.ChannelApiFrameworkV2.Test\packages.config -ConfigFile %WSRoot%\build\config\nuget.config -PackagesDirectory %WSRoot%\packages
@@ -298,6 +296,17 @@ if exist ./Tests/UnitTests/package.json (
 	cd ../..
 )
 @echo.
+
+echo Install npm dependencies for FlowDesigner
+==========================================================
+if exist ./src/Designer/FlowDesigner/package.json (
+	cd ./src/Designer/FlowDesigner
+	call npm install --registry https://registry.npmjs.org
+	cd /
+)
+@echo.
+
+
 
 :eof
 echo Done!

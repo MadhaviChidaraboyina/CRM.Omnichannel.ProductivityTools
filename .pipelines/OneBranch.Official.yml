@@ -183,10 +183,9 @@ extends:
           - template: .pipelines\templates\retry.yaml@ocYaml
             parameters:
               step:
-                task: CmdLine@2
-                displayName: ♻ Nuget restore
-                inputs:
-                   command: 'init.cmd'
+                  task: CmdLine@2
+                  inputs:
+                   script: 'init.cmd'
                 # task: NuGetCommand@2
                 # displayName: ♻ Nuget restore
                 # inputs:
@@ -324,7 +323,9 @@ extends:
           - task: CopyFiles@2
             inputs:
                 SourceFolder: 'drop\retail\AnyCPU\Blobs'
-                Contents: '**'
+                Contents: |
+                 **/*
+                 !**/LogicApps/**
                 TargetFolder: '$(OutputRoot)\build\Designer'
           - task: CopyFiles@2
             displayName: 📂 Copy packages
