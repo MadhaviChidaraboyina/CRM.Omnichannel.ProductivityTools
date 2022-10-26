@@ -2772,6 +2772,7 @@ export enum Constants {
   SMSWorkStreamName = 'SMSWorkstream',
   RulesetName = 'SMSRuleSet',
   CustomerServiceWorkspace = 'Customer Service workspace',
+  AgentScriptName1 = "AutomationTestAgentScript1"
 }
 
 export enum channels {
@@ -2980,6 +2981,10 @@ export enum EntityNames {
   Incident = 'incident',
   SystemUser = 'systemuser',
   LiveWorkStream = 'msdyn_liveworkstream',
+  AgentScript = 'msdyn_productivityagentscript',
+  AgentScriptStep = `msdyn_productivityagentscriptstep`,
+  EmailTemplate = `template`,
+  Macros = `workflow`
 }
 
 export enum EntityAttributes {
@@ -2994,6 +2999,23 @@ export enum EntityAttributes {
   Msdyn_ActiveagenId = 'msdyn_activeagentid',
   Msdyn_OCLiveWorkItemId = 'msdyn_ocliveworkitemid',
   LiveWorkStreamId = 'msdyn_liveworkstreamid',
+   //Agent script attributes
+   AgentscriptName = 'msdyn_name',
+   AgentscriptUniqueName = 'msdyn_uniquename',
+   //Agent script step attributes
+   AgentscriptStepName = 'msdyn_name',
+   AgentscriptStepUniqueName = 'msdyn_uniquename',
+   AgentscriptStepOrder = 'msdyn_order',
+   AgentscriptStepActionType = 'msdyn_actiontype',
+   AgentscriptidBindAttribute = 'msdyn_agentscriptid@odata.bind',
+   AgentscriptNameBindAttribute = 'msdyn_agentscriptid@OData.Community.Display.V1.FormattedValue',
+   ActionTypeMacroValue = 192350001,
+   ActionTypeScriptValue = 192350002,
+   ActionTypeTextValue = 192350000,
+   ActionTypeMacro = 'Macro',
+   ActionTypeScript = 'Script',
+   ActionTypeText = 'Text',
+   MacroActionID = "msdyn_macroactionid@OData.Community.Display.V1.FormattedValue"
 }
 
 export enum AgentCustomerLongMessageConstants {

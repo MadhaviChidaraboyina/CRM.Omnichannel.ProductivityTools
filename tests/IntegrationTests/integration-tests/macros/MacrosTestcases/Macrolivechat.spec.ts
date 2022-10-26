@@ -8,6 +8,7 @@ import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
 import { AgentScript } from "../../agentScript/pages/agentScriptAdmin";
 import { MacrosPage } from "../../../pages/Macros";
+import { EntityNames } from "Utility/Constants";
 
 describe("Live Chat - ", () => {
     let adminContext: BrowserContext;
@@ -17,7 +18,10 @@ describe("Live Chat - ", () => {
     let agentContext: BrowserContext;
     let liveChatContext: BrowserContext;
     let liveChatPage: LiveChatPage;
+    let agentChat: AgentChat;
     let macrosAdminPage: Macros;
+    const agentScriptAdminPage = new AgentScript(adminPage);
+    var caseNameList: string[] = [];
 
     beforeEach(async () => {
         adminContext = await browser.newContext({
@@ -38,6 +42,7 @@ describe("Live Chat - ", () => {
         adminPage = await adminContext.newPage();
         adminStartPage = new OrgDynamicsCrmStartPage(adminPage);
         macrosAdminPage = new Macros(adminPage);
+        agentChat = new AgentChat(adminPage);
     });
     afterEach(async () => {
         TestHelper.dispose(adminContext);
@@ -51,8 +56,8 @@ describe("Live Chat - ", () => {
     ///</summary>
     it("Test Case 2253513: [Macros] Verify dashboard application template is opened in new tab using 'Open application tab' action in macros", async () => {
         agentPage = await agentContext.newPage();
+        const rnd = agentScriptAdminPage.RandomNumber();
         liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-        try {
             //Login as 'Admin automated' and redirected to OrgUrl
             await adminStartPage.navigateToOrgUrlAndSignIn(
                 TestSettings.MacrosAgentEmail,
@@ -68,20 +73,31 @@ describe("Live Chat - ", () => {
                 Constants.DashboardMacro,
                 urlId
             );
-            await macrosAdminPage.createAgentScript(
-                Constants.DascboardAgentScriptName,
-                Constants.TitleUniqueName,
-                Constants.DashboardMacro
-            );
             await macrosAdminPage.waitForTimeout();
-            await macrosAdminPage.addAgentScripttoDefaultChatSessionbyParameterization(Constants.DascboardAgentScriptName);
+            const workflowID = await macrosAdminPage.getLatestMacro(agentChat, Constants.DashboardMacro);
+            const agentScript = await agentChat.createAgentScriptbyXRMAPI(
+                Constants.DascboardAgentScriptName,
+                Constants.TitleUniqueName + rnd);
+      
+            const agentScriptStep = await agentChat.createAgentScriptStepbyXRMAPI(
+                Constants.DascboardAgentScriptName,
+                Constants.TitleUniqueName + rnd + rnd,
+                Constants.AgentscriptStepOrder,
+                Constants.MacroAgentScriptStep,
+                agentScript.id,
+                Constants.ThirdPartyWebsiteMacroName,
+                workflowID);
+      
+            await macrosAdminPage.OpenAgentScriptandSave(Constants.DascboardAgentScriptName);
+
+            await macrosAdminPage.waitForTimeout();
+            await macrosAdminPage.addAgentScripttoDefaultChatSessionWithParameter(Constants.DascboardAgentScriptName);
             //Run Macro
-            await macrosAdminPage.waitForTimeout();// it is mandatory to load UI elements
             await macrosAdminPage.openAppLandingPage(adminPage);
             await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
             await macrosAdminPage.waitForTimeout();
-            //await macrosAdminPage.skipCSWBug();
-            await macrosAdminPage.CreateCaseInCSW(Constants.CaseTitleName);
+            caseNameList = [Constants.CaseTitleName];
+            await macrosAdminPage.createIncidents(agentChat, caseNameList);
             await macrosAdminPage.InitiateSession(
                 Constants.CaseTitleName,
                 Constants.CaseLink1
@@ -93,17 +109,9 @@ describe("Live Chat - ", () => {
                 );
             expect(openEntityRecordTabUsingMacro).toBeTruthy();
 
-        } finally {
-            await macrosAdminPage.deleteAgentScriptnNew(adminPage, adminStartPage, Constants.DascboardAgentScriptName);
-
-            await macrosAdminPage.deleteInactiveAgentScript(Constants.DascboardAgentScriptName);
-            await macrosAdminPage.deleteApplicationTabusingOmnichannelAdminCenter(
-                Constants.DashboardName
-            );
-            await macrosAdminPage.deleteMacroFromOmnichannelAdminCenterApp(
-                Constants.DashboardMacro
-            );
-        }
+            await agentChat.deleteRecordbyXRM( EntityNames.AgentScriptStep, agentScriptStep.id);
+            await agentChat.deleteRecordbyXRM( EntityNames.AgentScript, agentScript.id);
+            await agentChat.deleteRecordbyXRM(EntityNames.Macros, workflowID);
     });
 
     ///<summary>

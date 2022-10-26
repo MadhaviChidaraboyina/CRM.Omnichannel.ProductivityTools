@@ -4031,8 +4031,10 @@ export class Macros extends BasePage {
     );
 
     await this.adminPage.waitForTimeout(4000);
+    await this.adminPage.waitForSelector(Constants.MacroRunButton);
     await this.adminPage.click(Constants.MacroRunButton);
     await this.adminPage.waitForTimeout(4000);
+    await this.adminPage.waitForSelector(entitylisttitle);
     const MacroValidate = await this.adminPage.isVisible(entitylisttitle);
     return MacroValidate;
   }
@@ -4524,14 +4526,18 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.CaseEntitySession);
     await this.adminPage.waitForSelector(Constants.AgentScriptsTab);
     await this.adminPage.click(Constants.AgentScriptsTab);
-    await this.adminPage.click(Constants.MoreCommandsForAgentScript);
-    await this.adminPage.click(Constants.AddExistingAgentScriptsBtn);
-    await this.adminPage.click(Constants.LookForRecordsField);
-    await this.adminPage.fill(Constants.LookForRecordsField, agentScriptName);
+    await this.adminPage.locator(Constants.MoreCommandsForAgentScript).click();
+    await this.adminPage.locator(Constants.AddExistingAgentScriptsBtn).click();
+    await this.adminPage.locator(Constants.LookForRecordsField).click();
+    await this.adminPage.locator(Constants.LookForRecordsField).fill(agentScriptName);
+    await this.adminPage.waitForTimeout(2000); // we are using keyboard commands 2seconds wait is needed.
     await this.adminPage.keyboard.press("ArrowDown");
+    await this.adminPage.waitForTimeout(2000); // we are using keyboard commands 2seconds wait is needed.
     await this.adminPage.keyboard.press("Enter");
+    await this.adminPage.waitForTimeout(2000); // we are using keyboard commands 2seconds wait is needed.
     await this.adminPage.waitForSelector(Constants.AddBtn);
     await this.adminPage.click(Constants.AddBtn);
+    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);//Needed to add agent script
   }
 
   public async removeAgentScripttoDefaultCaseSession() {
@@ -4924,4 +4930,75 @@ export class Macros extends BasePage {
       }
     );
   }
+
+  public async getLatestMacro(agentChat: any, macroName: string) {
+    const getMacro = await agentChat.getLatestMacro(macroName);
+    var workflowid = getMacro[0].workflowid
+    return workflowid;
+  }
+
+  public async OpenAgentScriptandSave(
+    AgentScriptName: string,
+  ) {
+    await this.adminPage.waitForSelector(Constants.AgentExperience);
+    await this.adminPage.click(Constants.AgentExperience);
+    await this.adminPage.waitForSelector(Constants.ManagedAgentScript);
+    await this.adminPage.click(Constants.ManagedAgentScript);
+    await this.adminPage.locator(Constants.SearchBox).fill(AgentScriptName);
+    await this.adminPage.locator(Constants.SearchBox).press('Enter');
+    let selctor = "//*[text()='" + AgentScriptName + "']";
+    await this.adminPage.waitForSelector(selctor)
+    await this.adminPage.click(selctor);
+    await this.adminPage.click(Constants.SaveAndCloseButton);
+  }
+
+  
+  public async executeScript(script: string) {
+    return await this.Page.evaluate((scr) => {
+      return eval(scr);
+    }, script);
+  }
+
+  public async createRecord(entityLogicalName: string, data: any) {
+    return await this.executeScript(
+      `Xrm.WebApi.createRecord('${entityLogicalName}', ${JSON.stringify(data)})`
+    );
+  }
+
+  public async createContactRecord(lastName: string) {
+    return await this.createRecord(EntityNames.Contact, {
+      [EntityAttributes.Lastname]: lastName,
+    });
+  }
+
+  public async createCaseWithAPI(CaseName: string) {
+    let rnd = this.getRandomNumber();
+    await this.adminPage.waitForSelector(Constants.Home);
+    await this.waitForDomContentLoaded();
+    // Start case creation using API
+    const CaseTitleName = CaseName + rnd;
+    const userNamePrefix = Constants.AutomationContact + rnd;
+    let contact = await this.createContactRecord(userNamePrefix);
+    await this.createIncidentRecord(CaseTitleName, contact[EntityAttributes.Id], EntityNames.Contact);
+    return (CaseName + rnd);
+    // End of case creation using API
+  }
+
+  public async createIncidentRecord(
+    title: string,
+    customerRecordId: string,
+    customerEntityType: string
+  ) {
+    let createRequestObj = {};
+    createRequestObj[EntityAttributes.Title] = title;
+    if (customerEntityType === EntityNames.Account) {
+      createRequestObj[EntityAttributes.IncidentAccountBindAttribute] =
+        "/accounts(" + customerRecordId.toUpperCase() + ")";
+    } else if (customerEntityType === EntityNames.Contact) {
+      createRequestObj[EntityAttributes.IncidentContactBindAttribute] =
+        "/contacts(" + customerRecordId.toUpperCase() + ")";
+    }
+    return await this.createRecord(EntityNames.Incident, createRequestObj);
+  }
+
 }

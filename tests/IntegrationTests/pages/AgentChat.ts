@@ -15007,4 +15007,68 @@ export class AgentChat extends AgentPage {
     const status = await (await presence.getProperty("title")).jsonValue();
     return status;
   }
+  public async deleteRecordbyXRM(entityLogicalName: string, recordID: string) {
+    return await this.executeScript(
+      `Xrm.WebApi.deleteRecord('${entityLogicalName}', '${recordID}')`
+    );
+  }
+
+  public async updateRecordbyXRM(entityLogicalName: string, recordID: string, data: any) {
+    return await this.executeScript(
+      `Xrm.WebApi.updateRecord('${entityLogicalName}', '${recordID}','${JSON.stringify(data)}')`
+    );
+  }
+
+  public async getLatestMacro(macroName: string) {
+    let query: string =
+      "?$filter=name eq '" + macroName + "'&$orderby=createdon desc &$top=1";
+    const result = await this.retrieveMultipleRecords("workflow", query);
+    return result
+  }
+
+  public async createAgentScriptbyXRMAPI(name: string, uniqueName: string) {
+    const record = await this.createRecord(EntityNames.AgentScript, {
+      [EntityAttributes.AgentscriptName]: name,
+      [EntityAttributes.AgentscriptUniqueName]: uniqueName
+    });
+    return record;
+  }
+
+  public async createAgentScriptStepbyXRMAPI(
+    name: string,
+    uniqueName: string,
+    order: string,
+    actionType: string,
+    recordID: string,
+    macroName: string,
+    worklfowid: string
+  ) {
+    let createRequestObj = {};
+    createRequestObj[EntityAttributes.AgentscriptStepName] = name + "Step"; // agentscript Name and step
+    createRequestObj[EntityAttributes.AgentscriptStepUniqueName] = uniqueName + "Step", // agentscript unique Name and step
+      createRequestObj[EntityAttributes.AgentscriptStepOrder] = order;
+    createRequestObj[EntityAttributes.AgentscriptNameBindAttribute] = name;
+    createRequestObj[EntityAttributes.AgentscriptidBindAttribute] = "/msdyn_productivityagentscripts(" + recordID + ")";
+    if (actionType === EntityAttributes.ActionTypeMacro) {
+      createRequestObj[EntityAttributes.AgentscriptStepActionType] = EntityAttributes.ActionTypeMacroValue;
+      createRequestObj[EntityAttributes.MacroActionID] = macroName;
+      createRequestObj["msdyn_macroactionid@odata.bind"] = "/workflows(" + worklfowid + ")";
+    }
+    else if (actionType === EntityAttributes.ActionTypeScript) {
+      createRequestObj[EntityAttributes.AgentscriptStepActionType] = EntityAttributes.ActionTypeScriptValue;
+      createRequestObj["msdyn_routeactionid@odata.bind"] = "/msdyn_productivityagentscripts(" + recordID + ")";
+      createRequestObj["msdyn_routeactionid@OData.Community.Display.V1.FormattedValue"] = Constants.AgentScriptName1;// agentscript Name
+    } else {
+      createRequestObj["msdyn_textinstruction"] = name,
+        createRequestObj[EntityAttributes.AgentscriptStepActionType] = EntityAttributes.ActionTypeTextValue;
+    }
+    return await this.createRecord(EntityNames.AgentScriptStep, createRequestObj);
+  }
+
+  public async getDefaultCasesessionID(caseSessionName: string) {
+    let query: string =
+      "?$filter=msdyn_name eq '" + caseSessionName + "'";
+    const result = await this.retrieveMultipleRecords("msdyn_sessiontemplate", query);
+    return result
+  }
 }
