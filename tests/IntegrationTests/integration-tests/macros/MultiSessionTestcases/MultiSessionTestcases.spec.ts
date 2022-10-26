@@ -213,25 +213,23 @@ describe("Multi Session - ", () => {
   ///<summary>
   it("Test Case 1946046: [Multi Session] Verify Case Assoication action from Case Grid", async () => {
     agentPage = await agentContext.newPage();
-    try {
       //Login as crmadmin
       await adminStartPage.navigateToOrgUrlAndSignIn(
         TestSettings.MultiSessionEmail,
         TestSettings.AdminAccountPassword
       );
-      //Create four child Cases and three parent cases
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-      await macrosAdminPage.createCase(Constants.Case1_Child1);
-      await macrosAdminPage.createCase(Constants.Case1_Child2);
-      await macrosAdminPage.createCase(Constants.Case2_Child1);
-      await macrosAdminPage.createCase(Constants.Case2_Child2);
-      await macrosAdminPage.createCase(Constants.Case1);
-      await macrosAdminPage.createCase(Constants.Case2);
-      await macrosAdminPage.createCase(Constants.Case3);
-      //Open Cases grid and Associate them
-      await macrosAdminPage.openAppLandingPage(adminPage);
       await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-      //await adminStartPage.waitForAgentStatusIcon();
+      await agentChat.waitforTimeout();
+      const Case1_Child1 = Constants.Case1_Child1
+      const Case1_Child2 = Constants.Case1_Child2
+      const Case2_Child1 = Constants.Case2_Child1
+      const Case2_Child2 = Constants.Case2_Child2
+      const Case1 = Constants.Case1
+      const Case2 = Constants.Case2
+      const Case3 = Constants.Case3
+
+      caseNameList = [Case1_Child1, Case1_Child2, Case2_Child1, Case2_Child2, Case1, Case2, Case3];
+      await macrosAdminPage.createIncidents(agentChat, caseNameList);
       await macrosAdminPage.GoToCases();
       //Associate two child cases with one parent case and Valiadte
       await macrosAdminPage.AssociateCases(
@@ -248,23 +246,6 @@ describe("Multi Session - ", () => {
         Constants.AssociateCase3,
         Constants.ErrorDialog
       );
-    } finally {
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.Case1
-      );
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.Case2
-      );
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.Case3
-      );
-    }
   });
 
   ///<summary>
