@@ -49,6 +49,22 @@ module MscrmControls.ProductivityPanel.TPBot
 		}
 
 		/**
+		 * Logs telemetry event
+		 * @param parentComponent parent component
+		 * @param subComponentName sub-component
+		 * @param parameterList parameter list
+		 */
+		public logEvent(
+			parentComponent: string,
+			subComponentName: string,
+			parameterList: EventParameters
+		) {
+			let componentName = this.baseComponent + this.separator + parentComponent + this.separator + subComponentName;
+			let eventParameters = parameterList.getEventParams();
+			this.context.reporting.reportEvent({ eventName: componentName, eventParameters });
+		}
+
+		/**
 		 * Logs error telemetry
 		 * @param parentComponent parent component
 		 * @param subComponent sub-component

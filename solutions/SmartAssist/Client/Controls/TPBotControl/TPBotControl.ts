@@ -12,7 +12,7 @@ module MscrmControls.ProductivityPanel {
         private TPBotContainer: HTMLDivElement = null;
         public static _context: Mscrm.ControlData<IInputBag> = null;
         public static isRTL: boolean = false;
-        private telemetryReporter: TPBot.TelemetryLogger;
+        public static telemetryReporter: TPBot.TelemetryLogger;
 		/**
 		 * Empty constructor.
 		 */
@@ -31,7 +31,7 @@ module MscrmControls.ProductivityPanel {
                         
             let methodName = "init";
             // Initialize Telemetry Repoter
-            this.telemetryReporter = new TPBot.TelemetryLogger(context);
+            TPBotControl.telemetryReporter = new TPBot.TelemetryLogger(context);
 
             // Listen for session close
             let handlerId;
@@ -64,7 +64,7 @@ module MscrmControls.ProductivityPanel {
                 let eventParameters = new TPBot.EventParameters();
                 eventParameters.addParameter("handlerId", handlerId);
                 let error = { name: "Smart Assist Control Init error", message: "Error while initializing smart assist control" };
-                this.telemetryReporter.logError(logConstants.MainComponent, methodName, "", eventParameters);
+                TPBotControl.telemetryReporter.logError(logConstants.MainComponent, methodName, "", eventParameters);
             }
         }
 

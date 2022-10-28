@@ -28,12 +28,12 @@ module MscrmControls.ProductivityPanel.TPBot {
 			return TPBotManager.instance;
 		}
 
-		public RenderTPBotCard(conversationId, card) {
+		public async RenderTPBotCard(conversationId, card) {
 			let conversationState = ConversationStateManager.GetConversationState(conversationId);
 			//Get an ID for the card by saving it. Set the state of the card
 			let cardId = conversationState.PersistCard(card);
 
-			let currentConversationId = ConversationStateManager.GetCurrentConversation();
+			let currentConversationId = await ConversationStateManager.GetCurrentConversation();
 
 			if (conversationId == currentConversationId) {
 				// Render the card
@@ -45,16 +45,16 @@ module MscrmControls.ProductivityPanel.TPBot {
 			}
 		}
 
-        public ReRenderCards(isRTL: boolean) {
+		public async ReRenderCards(isRTL: boolean) {
 
-            this.ResetTPBotControl(isRTL);
-            this.RenderTitle(TPBotControl.getString(TPBot.LocalizedStrings.TPBotControlHeader));
+			this.ResetTPBotControl(isRTL);
+			this.RenderTitle(TPBotControl.getString(TPBot.LocalizedStrings.TPBotControlHeader));
 
-            let conversationId = ConversationStateManager.GetCurrentConversation();
-            if (conversationId) {
+			let conversationId = await ConversationStateManager.GetCurrentConversation();
+			if (conversationId) {
 				let conversationState = ConversationStateManager.GetConversationState(conversationId);
-                let cards = conversationState.GetAllCards();
-                for (var key in cards) {
+				let cards = conversationState.GetAllCards();
+				for (var key in cards) {
 					let cardId = parseInt(key);
 					let card = cards[key];
 					this.renderCard(card, cardId, conversationId);
@@ -118,7 +118,7 @@ module MscrmControls.ProductivityPanel.TPBot {
 						break;
 				}
 			}
-        }
+		}
 
 		/*
 		* Runs Custom action which can be OOB custom action or custom customaction
@@ -162,9 +162,9 @@ module MscrmControls.ProductivityPanel.TPBot {
 			}
 		}
 
-		private BindOnExecuteAction() {
+		private async BindOnExecuteAction() {
 			let self = this;
-			let conversationId = ConversationStateManager.GetCurrentConversation();
+			let conversationId = await ConversationStateManager.GetCurrentConversation();
 			let eventParameters = new EventParameters();
 			eventParameters.addParameter("LiveWorkitemId", conversationId);
 
@@ -218,18 +218,18 @@ module MscrmControls.ProductivityPanel.TPBot {
 			}
 		}
 
-        private BindDismissActionForCard(conversationId: string, cardId: number) {
+		private BindDismissActionForCard(conversationId: string, cardId: number) {
 			$('#' + Constants.TPBotDismissCardButtonId + cardId).on(Constants.eventClick, () => {
 				let id = Constants.TPBotCardContainerIdPrefix + cardId;
 				$("#" + id).remove();
-                ConversationStateManager.GetConversationState(conversationId).RemoveCard(cardId);              
+				ConversationStateManager.GetConversationState(conversationId).RemoveCard(cardId);
 			});
 			$('#' + TPBot.Constants.TPBotDismissCardButtonId + cardId).on(Constants.eventKeyPress, function (args) {
 				let id = TPBot.Constants.TPBotDismissCardButtonId + cardId;
 				if (args.keyCode == Constants.EnterKeyCode) {
 					$("#" + id).click();
 				}
-            });
+			});
 		}
 
 	}

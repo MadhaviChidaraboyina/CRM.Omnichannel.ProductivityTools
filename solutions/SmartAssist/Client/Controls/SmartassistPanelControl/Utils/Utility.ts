@@ -105,9 +105,9 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         /**Get live work stream id */
-        public static getLiveWorkStreamId(): string {
-            let eventParameters = new TelemetryLogger.EventParameters();
-            let workStreamId: string = null;
+        public static async getLiveWorkStreamId(): Promise<string | null> {
+            const eventParameters = new TelemetryLogger.EventParameters();
+            let workStreamId: string | null = null;
             try {
                 let cifUtil = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
                 let templateParams = cifUtil.getSessionTemplateParams();
@@ -116,8 +116,25 @@ module MscrmControls.SmartassistPanelControl {
                 workStreamId = data.ocContext.config.sessionParams.LiveWorkStreamId;
             } catch (error) {
                 eventParameters.addParameter("Exception Details", error.message);
-                SmartassistPanelControl._telemetryReporter.logError("Main Component", "GetLiveWorkStreamId", "Failed to retrieve Live WorkStream id from form param", eventParameters);
+                eventParameters.addParameter("Message", "Failed to retrieve Live WorkStream id from form param");
+                SmartassistPanelControl._telemetryReporter.logEvent("Main Component", "GetLiveWorkStreamId", eventParameters);
             }
+
+            // Fallback to APM to get the workstream ID.
+            if (workStreamId == null) {
+                eventParameters.addParameter("Message", "Falling back to APM to retrieve the Live WorkStream id");
+                SmartassistPanelControl._telemetryReporter.logEvent("Main Component", "GetLiveWorkStreamId", eventParameters);
+                try {
+                    const context = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
+                    let data: any = context.parameters["data"];
+                    if (typeof data === "string") data = JSON.parse(data);
+                    workStreamId = data.ocContext.config.sessionParams.LiveWorkStreamId;
+                } catch (error) {
+                    eventParameters.addParameter("Exception Details", error.message);
+                    SmartassistPanelControl._telemetryReporter.logError("Main Component", "GetLiveWorkStreamId", "Failed to retrieve Live WorkStream id from APM", eventParameters);        
+                }
+            }
+
             return workStreamId;
         }
 

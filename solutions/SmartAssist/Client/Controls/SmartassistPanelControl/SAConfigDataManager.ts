@@ -224,7 +224,7 @@ module MscrmControls.SmartassistPanelControl {
 
         /**Check if Smart assist is added in OC WS */
         public async isSmartbotAvailable(telemetryHelper: TelemetryHelper) {
-            var liveworkStreamItem = Utility.getLiveWorkStreamId();
+            var liveworkStreamItem = await Utility.getLiveWorkStreamId();
             if (Utility.isNullOrEmptyString(liveworkStreamItem)) {
                 telemetryHelper.logTelemetryError(TelemetryEventTypes.LiveWorkStreamIdNotFound, new Error("LiveWorkStreamIdNotFound"), null);
                 return false;
