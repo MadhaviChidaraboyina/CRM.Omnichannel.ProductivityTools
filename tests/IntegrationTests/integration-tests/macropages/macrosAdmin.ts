@@ -5001,4 +5001,9 @@ export class Macros extends BasePage {
     return await this.createRecord(EntityNames.Incident, createRequestObj);
   }
 
+  public async isElementVisible(Element: string) {
+    await this.adminPage.waitForSelector(Element);
+    const PageValidate = await this.adminPage.isVisible(Element);
+    expect(PageValidate).toBeTruthy();
+  }
 }

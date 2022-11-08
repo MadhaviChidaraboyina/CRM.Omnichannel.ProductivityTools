@@ -369,12 +369,10 @@ describe("Multi Session - ", () => {
       TestSettings.AdminAccountEmail,
       TestSettings.AdminAccountPassword
     );
-
-    await agentChat.goToMyApp(Constants.CustomerServiceWorkspace);
+    await adminStartPage.goToCustomerServiceWorkspace();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage)
     await agentChat.waitforTimeout();
-
-    //To enable new layout improvements
-    await macrosAdminPage.enableLayoutImprovements(adminPage);
 
     var CaseUserName = Constants.XRMCaseName + rnd;
     var CaseUserName2 = Constants.XRMCaseName2 + rnd;
@@ -395,10 +393,9 @@ describe("Multi Session - ", () => {
       stringFormat(Constants.XRMSpecificCaseLink2, rnd)
     );
     await macrosAdminPage.SwitchBackToPreviousSession(stringFormat(Constants.XRMSpecificCaseLink1, rnd));
-    await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
+    await macrosAdminPage.isElementVisible(Constants.ProductivityPaneEnable);
     await macrosAdminPage.SwitchBackToPreviousSession(stringFormat(Constants.XRMSpecificCaseLink2, rnd));
-    await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
-    await macrosAdminPage.disableLayoutImprovements(adminPage);
+    await macrosAdminPage.isElementVisible(Constants.ProductivityPaneEnable);
   });
 
   ///<summary>
