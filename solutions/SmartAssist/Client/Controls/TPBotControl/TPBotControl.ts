@@ -13,6 +13,11 @@ module MscrmControls.ProductivityPanel {
         public static _context: Mscrm.ControlData<IInputBag> = null;
         public static isRTL: boolean = false;
         public static telemetryReporter: TPBot.TelemetryLogger;
+
+        private conversationId: string | null;
+        private sessionId: string;
+        private handlerId: string;
+
 		/**
 		 * Empty constructor.
 		 */
@@ -27,42 +32,55 @@ module MscrmControls.ProductivityPanel {
 		 * @params state The user state for this control set from setState in the last session
 		 * @params container The div element to draw this control in
 		 */
-        public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary, container: HTMLDivElement): void {
+        public async init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary, container: HTMLDivElement): Promise<void> {
                         
             let methodName = "init";
             // Initialize Telemetry Repoter
             TPBotControl.telemetryReporter = new TPBot.TelemetryLogger(context);
 
-            // Listen for session close
-            let handlerId;
-
             try {
-                handlerId = Xrm.App.sessions.addOnAfterSessionClose(this.handleSessionClose);
-                if (!context.utils.isNullOrUndefined(handlerId) &&
-                    !context.utils.isNullOrEmptyString(handlerId)) {
+                // Get conversation and session IDs for the current session.
+                this.conversationId = await TPBot.ConversationStateManager.GetCurrentConversation();
+                this.sessionId = Xrm.App.sessions.getFocusedSession().sessionId;
 
-                    localStorage.setItem(TPBot.Constants.SessionCloseHandlerId, handlerId);
+                if (this.conversationId) {
+                    // Determine if this session already has an existing handler for session close. If not, create one.
+                    const existingHandlerId = sessionStorage.getItem(`${TPBot.Constants.SessionCloseHandlerStorageKey}-${this.conversationId}`);
+                    if (existingHandlerId == null) this.handlerId = Xrm.App.sessions.addOnAfterSessionClose(this.handleSessionClose.bind(this));
+                    else this.handlerId = existingHandlerId;
+                    sessionStorage.setItem(`${TPBot.Constants.SessionCloseHandlerStorageKey}-${this.conversationId}`, this.handlerId);
+
+                    // Create the logger, set it on the bot manager.
                     let logger = new TPBot.TelemetryLogger(context);
                     TPBot.TPBotManager.Instance.SetLogger(logger);
                     if (context.client.isRTL) {
                         TPBotControl.isRTL = true;
                     }
                     TPBotControl._context = context;
+
+                    // Build outer container for TPBot.
                     this.TPBotContainer = container;
                     var el: HTMLDivElement = document.createElement("div");
                     el.id = TPBot.Constants.TPBotOuterContainer;
                     this.TPBotContainer.appendChild(el);
 
-                    Xrm.WebApi.retrieveMultipleRecords(TPBot.Constants.ServiceEndpointEntity, TPBot.Constants.CDNEndpointFilter).then((data: any) => {
+                    // Retrieve Conversation Control Origin from the service endpoint, register message event listener for handling
+                    // third-party bot messages.
+                    await Xrm.WebApi.retrieveMultipleRecords(TPBot.Constants.ServiceEndpointEntity, TPBot.Constants.CDNEndpointFilter).then((data: any) => {
                         window[TPBot.Constants.ConversatonControlOrigin] = data.entities[0].path;
-                        window.top.addEventListener("message", this.receiveMessage, false);
+                        window.top.addEventListener("message", TPBotControl.receiveMessage, false);
                     });
+
+                    // Render the cards for the first time.
+                    await TPBot.TPBotManager.Instance.ReRenderCards(this.conversationId, TPBotControl.isRTL);
                 }
             } catch (Error) {
 
                 let logConstants = TPBot.TelemetryComponents;
                 let eventParameters = new TPBot.EventParameters();
-                eventParameters.addParameter("handlerId", handlerId);
+                eventParameters.addParameter("handlerId", this.handlerId);
+                eventParameters.addParameter("conversationId", this.conversationId);
+                eventParameters.addParameter("sessionId", this.sessionId);
                 let error = { name: "Smart Assist Control Init error", message: "Error while initializing smart assist control" };
                 TPBotControl.telemetryReporter.logError(logConstants.MainComponent, methodName, "", eventParameters);
             }
@@ -78,7 +96,7 @@ module MscrmControls.ProductivityPanel {
             TPBotControl._context = context;
 
             // If coming from a session switch, re-render cards from storage
-            TPBot.TPBotManager.Instance.ReRenderCards(TPBotControl.isRTL);
+            TPBot.TPBotManager.Instance.ReRenderCards(this.conversationId, TPBotControl.isRTL);
         }
 
 		/** 
@@ -111,7 +129,7 @@ module MscrmControls.ProductivityPanel {
             return TPBotControl._context.resources.getString(resourceName);
         }
 
-        private receiveMessage(event: any): void {
+        private static receiveMessage(event: any): void {
             //TODO: Uncomment
             //if (window[TPBot.Constants.ConversatonControlOrigin].indexOf(event.origin) == -1)
             //    return;
@@ -133,12 +151,17 @@ module MscrmControls.ProductivityPanel {
         }
 
         private handleSessionClose(context: XrmClientApi.EventContext) {
-            // Remove listener on session close
-            window.top.removeEventListener("message", this.receiveMessage, false);
+            // Get the session ID (session-id-X) that's being closed. Ignore if none found.
+            const sessionId = (context.getEventArgs() as any).getInputArguments().sessionId;
+            if (sessionId == null) return; // Telemetry?
 
-            let eventArgs: any = context.getEventArgs();
-            let handlerId = localStorage.getItem(TPBot.Constants.SessionCloseHandlerId);
-            Xrm.App.sessions.removeOnAfterSessionClose(handlerId);
+            if (sessionId === this.sessionId) {
+                // Tear down this TPBotControl instance.
+                Xrm.App.sessions.removeOnAfterSessionClose(this.handlerId);
+                sessionStorage.removeItem(`${TPBot.Constants.SessionCloseHandlerStorageKey}-${this.conversationId}`);
+
+                // TODO(dawolff): delete everything in browser storage for this conversation.
+            }
         }
     }
 }

@@ -54,7 +54,7 @@ module TelemetryLogger
 		 * @param subComponentName sub-component
 		 * @param parameterList parameter list
 		 */
-		 public logEvent(
+		public logEvent(
 			parentComponent: string,
 			subComponentName: string,
 			parameterList: EventParameters

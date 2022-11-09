@@ -45,13 +45,13 @@ module MscrmControls.ProductivityPanel.TPBot {
 			}
 		}
 
-		public async ReRenderCards(isRTL: boolean) {
-
+		public async ReRenderCards(conversationId: string, isRTL: boolean) {
 			this.ResetTPBotControl(isRTL);
 			this.RenderTitle(TPBotControl.getString(TPBot.LocalizedStrings.TPBotControlHeader));
 
-			let conversationId = await ConversationStateManager.GetCurrentConversation();
-			if (conversationId) {
+			// Render the cards in this conversation if we're currently focused on this conversation.
+			const currentConversationId = await ConversationStateManager.GetCurrentConversation();
+			if (currentConversationId === conversationId) {
 				let conversationState = ConversationStateManager.GetConversationState(conversationId);
 				let cards = conversationState.GetAllCards();
 				for (var key in cards) {

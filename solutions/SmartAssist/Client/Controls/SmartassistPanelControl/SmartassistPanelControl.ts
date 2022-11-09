@@ -145,7 +145,6 @@ module MscrmControls.SmartassistPanelControl {
             var callback=() =>{
                 try {
                     var sessionId = Utility.getCurrentSessionId();
-                    SmartassistPanelControl._context = null;
                     SAConfigDataManager.Instance.clearSuggestionsSetting(sessionId);
                 } catch(error) {
                     this.telemetryHelper.logTelemetryError(TelemetryEventTypes.ErrorInCloseSessionHandler, error, null);

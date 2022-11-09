@@ -24,7 +24,7 @@ module MscrmControls.ProductivityPanel.TPBot {
 			setTimeout(() => {
 				if (this.getState(conversationId, cardId) !== CardStates.Applied && this.getState(conversationId, cardId) !== CardStates.Applied) {
 					self.SetState(conversationId, cardId, CardStates.Default);
-					TPBotManager.Instance.ReRenderCards(TPBotControl.isRTL);
+					TPBotManager.Instance.ReRenderCards(conversationId, TPBotControl.isRTL);
 				}
 			}, 5000);
 		}

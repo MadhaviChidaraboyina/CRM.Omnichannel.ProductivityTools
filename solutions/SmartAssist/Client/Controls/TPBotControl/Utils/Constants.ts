@@ -46,7 +46,7 @@ module MscrmControls.ProductivityPanel.TPBot {
         public static TPBotDismissCardButtonId = "dismissCard";
         public static TPBotSuccessMessageClass = "tpbot-success";
         public static TPBotFailureClass = "tpbot-failure";
-        public static SessionCloseHandlerId = "SessionCloseHandlerId";
+        public static SessionCloseHandlerStorageKey = "TPBot-OnSessionCloseHandler-";
 
         public static CardNewClass = "card-new";
         public static CardAppliedClass = "card-applied";
