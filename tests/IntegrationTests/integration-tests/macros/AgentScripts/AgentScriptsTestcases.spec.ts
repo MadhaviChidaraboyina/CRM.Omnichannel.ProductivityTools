@@ -4,6 +4,7 @@ import { Macros } from "../../macropages/macrosAdmin";
 import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.page";
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
+import { AgentChat } from "pages/AgentChat";
 
 describe("Agent Scripts - ", () => {
   let adminContext: BrowserContext;
@@ -12,6 +13,8 @@ describe("Agent Scripts - ", () => {
   let agentPage: Page;
   let agentContext: BrowserContext;
   let macrosAdminPage: Macros;
+  let agentChat: AgentChat;
+  let rnd: any;
 
   beforeEach(async () => {
     adminContext = await browser.newContext({
@@ -28,7 +31,9 @@ describe("Agent Scripts - ", () => {
     adminPage = await adminContext.newPage();
     adminStartPage = new OrgDynamicsCrmStartPage(adminPage);
     macrosAdminPage = new Macros(adminPage);
+    agentChat = new AgentChat(adminPage);
   });
+
   afterEach(async () => {
     TestHelper.dispose(adminContext);
     TestHelper.dispose(agentContext);
@@ -83,34 +88,28 @@ describe("Agent Scripts - ", () => {
   ///</summary>
   it("Test Case 1593399: Verify Admin is able to associate agent scripts to session template", async () => {
     agentPage = await agentContext.newPage();
-    try {
-      //Login as admin automated and redirected to OrgUrl
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.AgentScriptEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
-      await macrosAdminPage.createResolveSessionMacro(
-        Constants.RefreshSessionContextTitle,
-        Constants.IncidentID
-      );
-      // Create AgentScript and Add Macro to it's agentScript step
-      await macrosAdminPage.AgentScriptInCSAdminCenter(
-        Constants.AgentScriptName,
-        Constants.AgentScriptUniqueName
-      );
-      // Create Session and Add agentscript to it
-      await macrosAdminPage.SessionInCSAdminCenter(
-        Constants.SessionTemplateName,
-        Constants.SessionTemplateUniqueName
-      );
-      await macrosAdminPage.AddAgentScriptToSession(Constants.AgentScriptName);
-    } finally {
-      await macrosAdminPage.DeleteSession(
-        adminPage,
-        adminStartPage,
-        Constants.SessionTemplateName
-      );
-    }
+
+    //Login as admin automated and redirected to OrgUrl
+    await adminStartPage.navigateToOrgUrlAndSignIn(
+      TestSettings.MacroAccountEmail,
+      TestSettings.AdminAccountPassword
+    );
+    await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
+
+    await macrosAdminPage.createResolveSessionMacro(
+      Constants.RefreshSessionContextTitle,
+      Constants.IncidentID
+    );
+
+    // Create AgentScript and Add Macro to it's agentScript step
+    await agentChat.createAgentScriptbyXRMAPI(Constants.AgentScriptName,
+      Constants.AgentScriptUniqueName + rnd);
+
+    // Create Session and Add agentscript to it
+    await macrosAdminPage.SessionInCSAdminCenter(
+      Constants.SessionTemplateName,
+      Constants.SessionTemplateUniqueName
+    );
+    await macrosAdminPage.AddAgentScriptToSession(Constants.AgentScriptName);
   });
 });

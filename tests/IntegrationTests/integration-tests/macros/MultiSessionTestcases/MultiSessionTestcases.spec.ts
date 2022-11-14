@@ -511,7 +511,8 @@ describe("Multi Session - ", () => {
     );
 
     await agentChat.goToMyApp(Constants.CustomerServiceWorkspace);
-    await agentChat.waitforTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
 
     var CaseUserName = Constants.XRMCaseName + rnd;
     var CaseUserName2 = Constants.XRMCaseName2 + rnd;
