@@ -4,6 +4,7 @@ import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.p
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
 import { Macros } from "integration-tests/macropages/macrosAdmin";
+import { AgentChat } from "../../../pages/AgentChat";
 
 describe("P.Tool Migration - ", () => {
   let adminContext: BrowserContext;
@@ -13,7 +14,8 @@ describe("P.Tool Migration - ", () => {
   let agentContext: BrowserContext;
   let liveChatContext: BrowserContext;
   let macrosAdminPage: Macros;
-
+  let agentChat: AgentChat;
+  var caseNameList: string[] = [];
 
   beforeEach(async () => {
     adminContext = await browser.newContext({
@@ -36,7 +38,9 @@ describe("P.Tool Migration - ", () => {
     adminPage = await adminContext.newPage();
     adminStartPage = new OrgDynamicsCrmStartPage(adminPage);
     macrosAdminPage = new Macros(adminPage);
+    agentChat = new AgentChat(adminPage)
   });
+
   afterEach(async () => {
     TestHelper.dispose(adminContext);
     TestHelper.dispose(liveChatContext);
@@ -144,7 +148,7 @@ describe("P.Tool Migration - ", () => {
     } finally {
       console.log("Test Case Executed Successfully");
     }
-  }); 
+  });
 
   ///<summary>
   ///Test Case 2268077: [P.Tool Migration] Ensure state persistence for app side panes state (collapsed/expanded) in each session
@@ -416,36 +420,32 @@ describe("P.Tool Migration - ", () => {
       );
     }
   });
- 
+
   ///<summary>
   ///Test Case 2271691: [P.Tool Migration] Teams control integration: Teams is not hidden on home session where its collapsed/expanded state respects APM pane mode.
   /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2271691
   ///</summary>
   it("Test Case 2271691: [P.Tool Migration] Teams control integration: Teams is not hidden on home session where its collapsed/expanded state respects APM pane mode.", async () => {
     agentPage = await agentContext.newPage();
-    try {
-      //Login as 'Admin automated' and redirected to OrgUrl
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.AdminAccountEmail3,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-      await macrosAdminPage.createCase(Constants.CaseTitleName);
-      //Create app profile and Add Users and Session
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToCustomerServiceWorkspace();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await macrosAdminPage.ValidateThePage(Constants.MSTeamstool);
-    } finally {
-      await macrosAdminPage.DisableMSTeamChat(adminPage, adminStartPage);
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName
-      );
-    }
+    //Login as 'Admin automated' and redirected to OrgUrl
+    await adminStartPage.navigateToOrgUrlAndSignIn(
+      TestSettings.AdminAccountEmail3,
+      TestSettings.AdminAccountPassword
+    );
+    await adminStartPage.goToCustomerServiceWorkspace();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage)
+
+    var CaseTitleName = Constants.CaseTitleName;
+    caseNameList = [CaseTitleName];
+    await macrosAdminPage.createIncidents(agentChat, caseNameList);
+
+    await macrosAdminPage.InitiateSession(
+      Constants.CaseTitleName,
+      Constants.CaseLink1
+    );
+
+    //Validate Teams is not hidden
+    await macrosAdminPage.ValidateThePage(Constants.MSTeamstool);
   });
 });
