@@ -1277,7 +1277,7 @@ export class Constants {
   static EntitySearchTitle = `(//span[contains(.,'Automation Case')])`;
   static ControlAgentScriptName = `ControlAgentScript`;
   static ControlMacroName = `ControlMacro`;
-  static ControlTitle = `(//span[contains(.,'Automation Case')])`;
+  static ControlTitle = `//span[contains(.,'ControlApplicationTab')]`;
   static ConfirmButton = "//button[@data-id='confirmButton']";
   static ConfirmaDialog = "//div[@data-id='confirmdialog']";
   static WebResourceAgentScriptName = `WebResourceAgentScript`;
@@ -1371,6 +1371,12 @@ export class Constants {
   static CloseTaskTab = `//div[@title='Close the tab']`;
   static AutomationContact = `AutomationContact`;
   static ThreeThousandsMiliSeconds = 3000;
+  static Enter = `Enter`;
+  static CloneRecordAgentScriptName = `CloneRecordAgentScript`;
+  static CloneRecordMacroName = `CloneRecordMacro`;
+  static CloneRecordTitle = `//span[contains(.,'New Case')]`;
+  static LinkStart = `//*[text()="`;
+  static LinkEnd = `"]`;  
 }
 
 export enum EntityNames {

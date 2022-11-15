@@ -18,10 +18,9 @@ export class Macros extends BasePage {
   }
 
   public async createMacro(macroName: string, ...params: any[]) {
+    await this.adminPage.waitForSelector(Constants.ProductivitySiteMap);
     await this.adminPage.click(Constants.ProductivitySiteMap);
-    await this.adminPage.waitForSelector(Constants.ManageMacros, {
-      timeout: 10000,
-    });
+    await this.adminPage.waitForSelector(Constants.ManageMacros);
     await this.adminPage.click(Constants.ManageMacros);
     await this.adminPage.click(Constants.NewButton);
     await this.adminPage.fill(Constants.NameField, macroName);
@@ -248,11 +247,13 @@ export class Macros extends BasePage {
         break;
 
       case Constants.AutoFillFieldsWithData:
+        await iframeChild.waitForSelector(Constants.OpenNewForm);  
         await iframeChild.click(Constants.OpenNewForm);
         await iframeChild.fill(
           Constants.EntityLogicalNameField,
           Constants.EntityLogicalNameAccount
         );
+        await iframeChild.waitForSelector(Constants.NewStepBtn);
         await iframeChild.click(Constants.NewStepBtn);
         await iframeChild.click(Constants.AutofillDataForm);
         await iframeChild.fill(
@@ -339,9 +340,28 @@ export class Macros extends BasePage {
         );
         await iframeChild.fill(Constants.EntityRecordIdInput, params[0]);
         break;
+      case Constants.ControlMacroName:
+        await iframeChild.click(Constants.OpenApplicationTab);
+        await iframeChild.fill(Constants.PageTypeInputField, Constants.Control);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(
+          Constants.ApplicationTemplateIdInputField,
+          params[0]
+        );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.click(Constants.ShowAdvancedOptions);
+        await iframeChild.fill(
+          Constants.AttributeName1InputField,
+          Constants.AttributeNameControl
+        );
+        await iframeChild.fill(
+          Constants.AttributeValue1InputField,
+          Constants.AttributeValueControl
+        );
+        break;
     }
     await iframeParent.click(Constants.SaveAndCloseButton2);
-    await this.adminPage.waitForTimeout(3000);
+    await this.adminPage.waitForTimeout(Constants.ThreeThousandsMiliSeconds);// To change from Daft state to Activate state it is required
   }
 
   public async deleteMacro(startPage: any, macroName: string) {
@@ -919,8 +939,8 @@ export class Macros extends BasePage {
     macroName: string,
     ...params: any[]
   ) {
-    await this.adminPage.waitForSelector(Constants.AgentExperience);
-    await this.adminPage.click(Constants.AgentExperience);
+    await this.adminPage.waitForSelector(Constants.ProductivitySiteMap);
+    await this.adminPage.click(Constants.ProductivitySiteMap);
     await this.adminPage.waitForSelector(Constants.ManageMacros);
     await this.adminPage.click(Constants.ManageMacros);
     await this.adminPage.click(Constants.NewButton);
@@ -964,7 +984,7 @@ export class Macros extends BasePage {
           params[0]
         );
         break;
-      case Constants.ControlMacro:
+      case Constants.ControlMacroName:
         await iframeChild.click(Constants.OpenApplicationTab);
         await iframeChild.fill(Constants.PageTypeInputField, Constants.Control);
         await this.checkAndCloseDynamicContentPopUp(iframeChild);
@@ -3762,8 +3782,8 @@ export class Macros extends BasePage {
   }
 
   public async CreateCloneCurrentMacro(macroName: string, ...params: any[]) {
-    await this.adminPage.waitForSelector(Constants.AgentExperience);
-    await this.adminPage.click(Constants.AgentExperience);
+    await this.adminPage.waitForSelector(Constants.ProductivitySiteMap);
+    await this.adminPage.click(Constants.ProductivitySiteMap);
     await this.adminPage.waitForSelector(Constants.ManageMacros);
     await this.adminPage.click(Constants.ManageMacros);
     await this.adminPage.click(Constants.NewButton);
@@ -3778,14 +3798,14 @@ export class Macros extends BasePage {
     await iframeChild.click(Constants.NewStepBtn);
     await iframeChild.click(Constants.CurrentRecord);
     // Time Delay to load the page
-    await iframeChild.waitForSelector(Constants.RecordTitle, { timeout: 4000 });
+    await iframeChild.waitForSelector(Constants.RecordTitle);
     await iframeChild.click(Constants.RecordTitle);
-    await this.adminPage.keyboard.press("Enter");
+    await this.adminPage.keyboard.press(Constants.Enter);
     await iframeChild.fill(Constants.RecordTitle, params[0]);
     await iframeParent.click(Constants.SaveAndCloseButton2);
-    // Time Delay to load the page
-    await this.adminPage.waitForTimeout(4000);
+    await this.waitForDomContentLoaded();
   }
+
 
   public async SiteMapInAppDesigner() {
     let contexts = await browser.contexts();
@@ -4019,22 +4039,16 @@ export class Macros extends BasePage {
 
   public async runMacroInSessionAndValidate(agentScriptName: string, entitylisttitle: string) {
     //Time Delay for Loading Productivity Pane
-    await this.adminPage.waitForSelector(Constants.NavigateToAgentScript, {
-      setTimeout: 10000,
-    });
-    await this.adminPage.waitForTimeout(4000);
+    await this.adminPage.waitForSelector(Constants.NavigateToAgentScript);
     await this.adminPage.click(Constants.NavigateToAgentScript);
-    await this.adminPage.waitForTimeout(4000);
-
+    await this.adminPage.waitForSelector(Constants.AgentScriptDropDown);
     await this.adminPage.selectOption(
       Constants.AgentScriptDropDown, { label: agentScriptName }
     );
-
-    await this.adminPage.waitForTimeout(4000);
     await this.adminPage.waitForSelector(Constants.MacroRunButton);
     await this.adminPage.click(Constants.MacroRunButton);
-    await this.adminPage.waitForTimeout(4000);
-    await this.adminPage.waitForSelector(entitylisttitle);
+    await this.waitForDomContentLoaded();
+    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);// It is needed to run Macro
     const MacroValidate = await this.adminPage.isVisible(entitylisttitle);
     return MacroValidate;
   }
@@ -4940,8 +4954,8 @@ export class Macros extends BasePage {
   public async OpenAgentScriptandSave(
     AgentScriptName: string,
   ) {
-    await this.adminPage.waitForSelector(Constants.AgentExperience);
-    await this.adminPage.click(Constants.AgentExperience);
+    await this.adminPage.waitForSelector(Constants.ProductivitySiteMap);
+    await this.adminPage.click(Constants.ProductivitySiteMap);
     await this.adminPage.waitForSelector(Constants.ManagedAgentScript);
     await this.adminPage.click(Constants.ManagedAgentScript);
     await this.adminPage.locator(Constants.SearchBox).fill(AgentScriptName);
@@ -5005,5 +5019,13 @@ export class Macros extends BasePage {
     await this.adminPage.waitForSelector(Element);
     const PageValidate = await this.adminPage.isVisible(Element);
     expect(PageValidate).toBeTruthy();
+  }
+
+  public async deleteAgentScriptByXRM(agentChat: any, entityName: string, id: string) {
+    await agentChat.deleteRecordbyXRM(entityName, id);
+  }
+
+  public async deletAgentScriptStepByXRM(agentChat: any, entityName: string, id: string) {
+    await agentChat.deleteRecordbyXRM(entityName, id);
   }
 }
