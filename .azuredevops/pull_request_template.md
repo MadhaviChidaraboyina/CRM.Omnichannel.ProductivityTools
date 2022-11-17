@@ -18,3 +18,4 @@ _< Please provide screenshots / screen recordings of your changes, as appropriat
 - [ ] Choose squash commit when completing the PR
 - [ ] Added / Removed any associated unit test
 - [ ] Added / Removed any associated test case from test plan
+- [ ] Updated control manifest versions of all controls modified
