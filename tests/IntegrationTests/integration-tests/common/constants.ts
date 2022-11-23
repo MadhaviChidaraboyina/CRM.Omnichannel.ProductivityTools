@@ -62,9 +62,9 @@ export class Constants {
   static AgentScriptSearchResult =
     `(//span[contains(.,"` + Constants.AgentScriptName + `")])[1]`;
   static AgentOneSearchResult =
-    `//*[contains(@aria-label,"` + Constants.AgentScriptName + `")]`;
+    `//*[contains(@aria-label,"{0}")]`;
   static AgentTwoSearchResult =
-    `//*[contains(@aria-label,"` + Constants.AgentscriptName2 + `")]`;
+    `//*[contains(@aria-label,"{0}")]`;
   static DisableExpressionBuilderRadioBtnSelector =
     "//*[@aria-label='Enable build expression: No']";
   static ExpressionBuilderEnable = `//*[@data-id="msdyn_enablebuildexpression.fieldControl_container"]`;
@@ -508,7 +508,7 @@ export class Constants {
   static Firstcase = `[title="Automation Case"]`;
   static Secondcase = `[title="Case For Automation"]`;
   static CloseSession1 =
-    '[aria-label="Automation Case . Press the DELETE Key to close the session"]';
+    '//*[@title="Close the session"]';
   static CloseSession2 =
     '[aria-label="Case For Automation . Press the DELETE Key to close the session"]';
   static ClickCloseSession =
@@ -519,7 +519,7 @@ export class Constants {
   static ProductivityPaneEnable =
     '//*[@data-id="pane-container-AppSidePane_MscrmControls.SmartassistPanelControl.SmartassistPanelControl"]';
   static CloseTab =
-    '[aria-label="Press Enter to close the tab Automation Case"]';
+  '[aria-label="Press Enter to close the tab Automation Case{0}"]';
   static ClickCloseTab = '//*[@data-id="close-tab-tab-id-2"]';
   static SuggestionCards = `//*[contains(@class,'SmartassistPanelControl.SmartassistPanelControl MscrmControls.SmartassistPanelControl.SmartassistPanelControl')]`;
   static ClickingCard1 = `[data-id="create-new-tab-button"]`;
@@ -635,8 +635,8 @@ export class Constants {
   static Secound = `Secound`;
   static StartSearch = '[aria-label="Start search"]';
   static SelectAll = `(//button[contains(@title,'Select All')])[1]|(//*[contains(@class,'select-all')]/following::span[@role='checkbox'])[1]`;
-  static SelectAllCheck = `(//*[contains(@data-icon-name,'StatusCircleCheckmark')])[1]`;
-  static SelectFirstCheck = `(//*[contains(@data-icon-name,'StatusCircleCheckmark')])[2]`;
+  static SelectAllCheck = `(//*[contains(@data-icon-name,'CheckMark')])[1]`;
+  static SelectFirstCheck = `(//*[contains(@data-icon-name,'StatusCircleCheckmark')])[1]`;
   static ClickAssociateBtn = `[aria-label="Associate Child Cases"]`;
   static SelectRelation = `(//*[@class="wj-cell data-selectable"])[1]`;
   static SetBtn = `[aria-label="Set"]`;
@@ -1371,6 +1371,7 @@ export class Constants {
   static CloseTaskTab = `//div[@title='Close the tab']`;
   static AutomationContact = `AutomationContact`;
   static ThreeThousandsMiliSeconds = 3000;
+  static CloseSessionPopUp = `[data-id="dialogTitleText"]`;
   static Enter = `Enter`;
   static CloneRecordAgentScriptName = `CloneRecordAgentScript`;
   static CloneRecordMacroName = `CloneRecordMacro`;
