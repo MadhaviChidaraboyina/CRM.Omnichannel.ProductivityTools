@@ -5011,6 +5011,41 @@ export class Macros extends BasePage {
     return await this.createRecord(EntityNames.Incident, createRequestObj);
   }
 
+  public async verifyViewTabRecord(caselink:string) {
+    await this.adminPage.waitForSelector(Constants.ViewRecordLocator);
+    await this.adminPage.click(Constants.ViewRecordLocator);
+    try {
+      await this.adminPage.waitForSelector(caselink);
+      return true
+    } catch {
+      return false
+    }
+  }
+
+  public async createAppointmentinTimeline() {
+    await this.adminPage.locator(Constants.TimelineAddButton).click();
+    await this.adminPage.waitForSelector(AgentChatConstants.CreateNewAppointmentRecord);
+    await this.adminPage.locator(AgentChatConstants.CreateNewAppointmentRecord).click();
+    await this.adminPage.waitForSelector(AgentChatConstants.SubjectSelector);
+    await this.adminPage.fill(
+      AgentChatConstants.SubjectSelector,
+      AgentChatConstants.AppointmentActivity
+    );
+    await this.adminPage.locator(AgentChatConstants.SaveAndCloseRecord).click();
+  }
+
+  public async createPhoneCallinTimeline() {
+    await this.adminPage.locator(Constants.TimelineAddButton).click();
+    await this.adminPage.waitForSelector(Constants.PhoneCall);
+    await this.adminPage.locator(Constants.PhoneCall).click();
+    await this.adminPage.waitForSelector(AgentChatConstants.SubjectSelector);
+    await this.adminPage.fill(
+      AgentChatConstants.SubjectSelector,
+      AgentChatConstants.PhoneCallActivity
+    );
+    await this.adminPage.locator(AgentChatConstants.SaveAndCloseRecord).click();
+  }
+
   public async switchToCustomerServiceAgentDashboard() {
     await this.adminPage.waitForSelector(Constants.ValidateServiceAgentDashboard);
     await this.adminPage.click(Constants.ValidateServiceAgentDashboard);

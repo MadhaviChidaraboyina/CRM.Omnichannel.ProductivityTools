@@ -375,4 +375,10 @@ export class OrgDynamicsCrmStartPage extends BasePage {
     await this.Page.click(MacrosConstants.AgentScriptOverview);
     await this.waitForDomContentLoaded();
   }
+
+  public async navigateToURL(appendUrl:string){
+    const url=await this._page.url();
+    await this._page.goto(url+appendUrl);
+    await this._page.waitForLoadState("domcontentloaded");
+  }
 }

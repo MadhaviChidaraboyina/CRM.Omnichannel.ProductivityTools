@@ -1372,6 +1372,11 @@ export class Constants {
   static AutomationContact = `AutomationContact`;
   static ThreeThousandsMiliSeconds = 3000;
   static CloseSessionPopUp = `[data-id="dialogTitleText"]`;
+  static NewUI = `&flags=FCB.MultiSessionLayoutImprovements%3dtrue`;
+  static ValidateTab = `//div[@id='session-id-1']`;
+  static ViewRecordLocator = `//div[@role='button']//p[text()='View Record']`;
+  static TaskLink = `//div[@title= '{0}']`;
+  static PhoneCall = `//li[contains(@id,'phonecall')]`;
   static Enter = `Enter`;
   static CloneRecordAgentScriptName = `CloneRecordAgentScript`;
   static CloneRecordMacroName = `CloneRecordMacro`;

@@ -1626,6 +1626,7 @@ export enum AgentChatConstants {
   TaskActivityRecordSelector = "//*[text()='TaskActivity']",
   CreateNewAppointmentRecord = "//*[text()='Appointment']",
   AppointmentActivity = 'AppointmentActivity',
+  PhoneCallActivity = 'AppointmentActivity',
   CustomMessaging = 'Custom Messaging',
   AppointmentActivityRecordSelector = "//*[text()='AppointmentActivity']",
   CustomerConversationTitle = "h1[data-id='header_title']",
