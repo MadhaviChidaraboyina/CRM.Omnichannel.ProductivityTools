@@ -56,7 +56,7 @@
                             <VisualizationId />
                             <IsUserChart>false</IsUserChart>
                             <EnableChartPicker>true</EnableChartPicker>
-                            <RecordsPerPage>4</RecordsPerPage>
+                            <RecordsPerPage>10</RecordsPerPage>
                             <HeaderColorCode>#F3F3F3</HeaderColorCode>
                             <RelationshipRoleOrdinal>2</RelationshipRoleOrdinal>
                           </parameters>
