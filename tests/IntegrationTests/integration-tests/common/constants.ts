@@ -491,7 +491,7 @@ export class Constants {
   static SaveTheBtn = `//*[text()="Save"]`;
   static CaseSaveBtn = `[data-id="incident|NoRelationship|Form|Mscrm.Form.incident.Save"]`;
   static RefreshTheBtn = `[aria-label="Refresh"]`;
-  static SearchOption =  `//*[contains(@data-id,"quickFind_text")]`;
+  static SearchOption = `//*[contains(@data-id,"quickFind_text")]`;
   static CaseLink1 = `//*[text()="Automation Case"]`;
   static CaseLink2 = `//*[text()="Case For Automation"]`;
   static ViewTheSelector = `//*[contains(@data-id,"ViewSelector")]`;
@@ -1313,7 +1313,7 @@ export class Constants {
   static ExpressionBuilderParentIframe = `#designer_id`;
   static ExpressionBuilderChildIframe = `#designerIframe`;
   static ExpressionBuilderConditionButton = `//div[contains(text(),'Condition')]`;
-  static ExpressionBuilderConditionField1 =`(//div[@class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"])[1]`;
+  static ExpressionBuilderConditionField1 = `(//div[@class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"])[1]`;
   static ExpressionBuilderConditionFiled2 = `(//div[@class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"])[2]`;
   static ExpressionBuilderSaveAndClose = `[id="saveButton"]`;
   static ExpressionBuilderDialogText = `[data-id="dialogMessageText"]`;
@@ -1325,16 +1325,46 @@ export class Constants {
   static PanelApp = `//div[@title="App"][contains(@class,"itemLabel")]`
   static CSWMoreOptions = `[data-lp-id="msdyn_CustomerServiceWorkspace0-options"]`;
   static OpenAppDesigner = `[aria-label="Open in App Designer"]`;
-  static settingsinAppDesigner = `[data-icon-name="Settings"]`;
   static ApplandingIframe = `[title="AppLandingPage"]`;
+  static Getstarted = `//span[text()='Get started']`;
+  static CaseInDesignerPage = `[aria-label="Case"]`;
+  static Moreoptions = `[aria-label="Case"] [data-icon-name="More"]`;
+  static EditCommandBar = `//span[text()='Edit command bar']`;
+  static MainForm = `//span[text()='Main form']`;
+  static EditOption = `//span[text()='Edit']`;
+  static NewButtonForCommand = `(//i[@data-icon-name="Add"])[2]`;
+  static CommandOption = `//span[text()='Command']`;
+  static JavascriptOption = `//span[text()='JavaScript']`;
+  static Continue = `//span[text()='Continue']`;
+  static LabelField = `[aria-label="Label"]`;
+  static AddLibrary = `//span[text()='Add library']`;
+  static NewWebResource = `//span[text()='New web resource']`;
+  static ChooseFileOption = `//span[text()='Choose file']`;
+  static DisplayName = `[aria-label="Display name"]`;
+  static NameFieldForWR = `(//input[@aria-label="Name"])[2]`;
+  static ChevronForType = `(//i[contains(@class,"ms-Dropdown-caretDown caretDown")])[6]`;
+  static TypeJS = `//span[text()='JavaScript (JS)']`;
+  static SaveandPublish = `//span[text()='Save and publish']`;
+  static WebResourceSearch = `(//input[contains(@id,"SearchBox")])[2]`;
+  static SelectWR = `(//i[@data-icon-name="StatusCircleCheckmark"])[1]`;
+  static Addoption = `//span[text()='Add']`;
+  static FunctionName = `[placeholder="Function name"]`;//`[id="functionName"]`;
+  static Saveandcontinue = `//span[text()='Save and continue']`;
+  static UnsavedChangesPopup = `//div[text()='Your app has unsaved changes']`;
+  static PublishCommandBar = `//span[text()='Save and Publish']`;
+  static PlayButton = `[data-icon-name="Play"]`;
+  static searchCase = `(//input[contains(@data-id,"quickFind_text")])[1]`;
+  static caseRow = `//a[@title='{0}']`;
+  static NavigateButton = `[aria-label="{0}"]`
+  static CaseHeader = `//h1[@title="{0}"]`
+  static labelName = `NavigateCase`;
+  static settingsinAppDesigner = `[data-icon-name="Settings"]`;
   static FeaturesButton = `//span[contains(text(),'Features')]`;
   static InAppNotification = `[aria-label="Value of In-app notifications"]`;
   static PublishInAppDesigner = `[title="Save and Publish"]`;
   static NotificationEnabled = `//div[contains(@class,"ms-Toggle is-checked is-enabled root")]`;
   static CloseSettings = `[aria-label="Close"]`;
-  static PlayButton = `[data-icon-name="Play"]`;
   static WelcomePopUp = `[id="ModalFocusTrapZone1"]`;
-  static Getstarted = `//span[text()='Get started']`;
   static InappNotificationEnabled = `[aria-checked="true"]`;
   static NotificationButton = `[aria-label="Notifications"]`;
   static OpenRecord = `(//p[contains(text(),'Open record')])[1]`;

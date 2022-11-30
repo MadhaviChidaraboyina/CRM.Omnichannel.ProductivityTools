@@ -4571,16 +4571,6 @@ export class Macros extends BasePage {
     }
   }
 
-  public async CSWAppDesignerPage() {
-    await this.adminPage.click(Constants.LandingPage);
-    const selector = await this.adminPage.waitForSelector(Constants.ApplandingIframe);
-    const iframe = await selector.contentFrame();
-    await iframe.waitForSelector(Constants.CSWMoreOptions);
-    await iframe.click(Constants.CSWMoreOptions);
-    await iframe.waitForSelector(Constants.OpenAppDesigner);
-    await iframe.click(Constants.OpenAppDesigner);
-  }
-
   public async enableInAppNotificatiosAndValidate(title: string) {
     const [page1] = await Promise.all([
       await this.adminPage.waitForEvent('popup'),
@@ -4655,6 +4645,106 @@ export class Macros extends BasePage {
     );
   }
 
+  public async CSWAppDesignerPage() {
+    await this.waitUntilSelectorIsVisible(Constants.LandingPage, Constants.Five, this.adminPage);
+    await this.adminPage.click(Constants.LandingPage);
+    const selector = await this.adminPage.waitForSelector(Constants.ApplandingIframe);
+    const iframe = await selector.contentFrame();
+    await iframe.waitForSelector(Constants.CSWMoreOptions);
+    await iframe.click(Constants.CSWMoreOptions);
+    await iframe.waitForSelector(Constants.OpenAppDesigner);
+    await iframe.click(Constants.OpenAppDesigner);
+  }
+
+  public async editCommandBar(name: string, casename: string, casename1: string, attachment?: any) {
+    const [page1] = await Promise.all([
+      await this.adminPage.waitForEvent('popup'),
+    ]);
+    const welcomePoupup = await this.waitUntilSelectorIsVisible(Constants.Getstarted, Constants.Five, page1);
+    if (welcomePoupup) {
+      await page1.click(Constants.Getstarted);
+    }
+    await this.waitUntilSelectorIsVisible(Constants.CaseInDesignerPage, Constants.Five, page1);
+    await page1.hover(Constants.CaseInDesignerPage);
+    await page1.click(Constants.Moreoptions);
+    await page1.click(Constants.EditCommandBar);
+    const UnsavedChanges = await this.waitUntilSelectorIsVisible(Constants.UnsavedChangesPopup, Constants.Two, page1);
+    if (UnsavedChanges) {
+      await page1.click(Constants.Saveandcontinue);
+    }
+    const [page2] = await Promise.all([
+      page1.waitForEvent('popup'),
+    ]);
+    await this.waitUntilSelectorIsVisible(Constants.MainForm, Constants.Five, page2);
+    await page2.click(Constants.MainForm);
+    await this.waitUntilSelectorIsVisible(Constants.EditOption, Constants.Five, page2);
+    await page2.click(Constants.EditOption);
+    await this.waitUntilSelectorIsVisible(Constants.NewButtonForCommand, Constants.Five, page2);
+    await page2.click(Constants.NewButtonForCommand);
+    await this.waitUntilSelectorIsVisible(Constants.CommandOption, Constants.Five, page2);
+    await page2.click(Constants.CommandOption);
+    await this.waitUntilSelectorIsVisible(Constants.JavascriptOption, Constants.Five, page2);
+    await page2.click(Constants.JavascriptOption);
+    await this.waitUntilSelectorIsVisible(Constants.Continue, Constants.Five, page2);
+    await page2.click(Constants.Continue);
+    await this.waitUntilSelectorIsVisible(Constants.LabelField, Constants.Five, page2);
+    await page2.click(Constants.LabelField);
+    await page2.fill(Constants.LabelField, '');
+    await page2.fill(Constants.LabelField, name);
+    await this.waitUntilSelectorIsVisible(Constants.AddLibrary, Constants.Five, page2);
+    await page2.click(Constants.AddLibrary);
+    await this.waitUntilSelectorIsVisible(Constants.NewWebResource, Constants.Five, page2);
+    await page2.click(Constants.NewWebResource);
+    // Add attachment
+    if (attachment !== null && attachment !== undefined) {
+      const [fileChooser] = await Promise.all([
+        page2.waitForEvent("filechooser"),
+        await page2.click(Constants.ChooseFileOption),
+      ]);
+      await fileChooser.setFiles(attachment);
+    }
+    await page2.setViewportSize({ width: 1300, height: 600 }) //viewport is changed due to locator is not visible
+    await this.waitUntilSelectorIsVisible(Constants.NameFieldForWR, Constants.Five, page2);
+    await page2.click(Constants.NameFieldForWR);
+    await page2.fill(Constants.NameFieldForWR, name);
+    await page2.click(Constants.DisplayName);
+    await page2.fill(Constants.DisplayName, name);
+    await page2.click(Constants.SaveandPublish);
+    await this.waitUntilSelectorIsVisible(Constants.WebResourceSearch, Constants.Five, page2);
+    await page2.click(Constants.WebResourceSearch);
+    await page2.fill(Constants.WebResourceSearch, name);
+    await page2.keyboard.press("Enter");
+    await page2.click(Constants.SelectWR);
+    await page2.click(Constants.Addoption);
+    await this.waitUntilSelectorIsVisible(Constants.FunctionName, Constants.Five, page2);
+    await page2.click(Constants.FunctionName);
+    await page2.fill(Constants.FunctionName, 'navigateCase');
+    await this.waitUntilSelectorIsVisible(Constants.PublishCommandBar, Constants.Five, page2);
+    await page2.click(Constants.PublishCommandBar);
+    await page2.waitForSelector(Constants.PlayButton);
+    await page2.click(Constants.PlayButton);
+    await this.verifyingCreatedCommand(page2, casename, name, casename1)
+  }
+
+  public async verifyingCreatedCommand(page: Page, casetitle: string, navigateButtonName: string, casename1: string) {
+    const [page1] = await Promise.all([
+      await page.waitForEvent('popup'),
+    ]);
+    await this.waitUntilSelectorIsVisible(Constants.searchCase, Constants.Five, page1);
+    await page1.click(Constants.searchCase);
+    await page1.fill(Constants.searchCase, casetitle)
+    await page1.keyboard.press("Enter");
+    await this.waitUntilSelectorIsVisible(stringFormat(Constants.searchCase, casetitle), Constants.Five, page1);
+    await page1.click(stringFormat(Constants.searchCase, casetitle));
+    await this.waitUntilSelectorIsVisible(stringFormat(Constants.caseRow, casetitle), Constants.Five, page1);
+    await page1.click(stringFormat(Constants.caseRow, casetitle));
+    await this.waitUntilSelectorIsVisible(Constants.MoreOptionInCase, Constants.Five, page1);
+    await page1.click(Constants.MoreOptionInCase);
+    await this.waitUntilSelectorIsVisible(stringFormat(Constants.NavigateButton, navigateButtonName), Constants.Five, page1);
+    await page1.click(stringFormat(Constants.NavigateButton, navigateButtonName));
+    expect(await this.waitUntilSelectorIsVisible(stringFormat(Constants.CaseHeader, casename1), Constants.Five, page1)).toBeTruthy();
+  }
+  
   public async enableNotificationText() {
     await this.adminPage.evaluate(
       async () => {
@@ -4673,7 +4763,7 @@ export class Macros extends BasePage {
     );
   }
 
-  public async enableNotificationIcon(userId: string,IncidentId: string) {
+  public async enableNotificationIcon(userId: string, IncidentId: string) {
     await this.adminPage.evaluate(
       async ([userid, incidentid]) => {
         var systemuserid = userid;
@@ -4725,6 +4815,7 @@ export class Macros extends BasePage {
     );
   }
 
+
   public async createUpdateMacro(macroName: string, passingStr: string) {
     await this.adminPage.waitForSelector(Constants.ProductivitySiteMap);
     await this.adminPage.click(Constants.ProductivitySiteMap);
@@ -4744,12 +4835,12 @@ export class Macros extends BasePage {
     await iframeChild.click(Constants.NewStepBtn);
     await iframeChild.click(Constants.SearchPhraseForPopulatedPhraseMacro);
     await iframeChild.fill(
-    Constants.SearchPhraseLabelField,
-    passingStr
+      Constants.SearchPhraseLabelField,
+      passingStr
     );
     await iframeChild.fill(
-    Constants.SearchPhraseStringField,
-    Constants.SearchPhraseValue
+      Constants.SearchPhraseStringField,
+      Constants.SearchPhraseValue
     );
     await iframeParent.click(Constants.SaveAndCloseButton2);
     await this.adminPage.waitForTimeout(3000);
@@ -4773,9 +4864,9 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.AnchorTabSearchResult);
     await this.adminPage.click(Constants.SaveAndCloseButton);
     const UnsavedChanges = await this.waitUntilSelectorIsVisible(Constants.ConfirmaDialog, Constants.Two, this.adminPage);
-        if (UnsavedChanges) {
-            await this.adminPage.click(Constants.ConfirmButton);
-        }
+    if (UnsavedChanges) {
+      await this.adminPage.click(Constants.ConfirmButton);
+    }
   }
 
   public async createAgentScriptFromCSA(
@@ -4787,16 +4878,16 @@ export class Macros extends BasePage {
     await this.adminPage.waitForSelector(Constants.AgentScriptInOverview);
     await this.adminPage.click(Constants.AgentScriptInOverview);
     await this.adminPage.click(Constants.NewButton);
-      await this.adminPage.fill(Constants.NameField, AgentScriptName);
-      await this.adminPage.fill(
-        Constants.UniqueNameField,
-        AgentScriptUniqueName + rnd
-      );
-      await this.adminPage.click(Constants.SaveAndCloseButton);
-      const UnsavedChanges = await this.waitUntilSelectorIsVisible(Constants.ConfirmaDialog, Constants.Two, this.adminPage);
-        if (UnsavedChanges) {
-            await this.adminPage.click(Constants.ConfirmButton);
-        }
+    await this.adminPage.fill(Constants.NameField, AgentScriptName);
+    await this.adminPage.fill(
+      Constants.UniqueNameField,
+      AgentScriptUniqueName + rnd
+    );
+    await this.adminPage.click(Constants.SaveAndCloseButton);
+    const UnsavedChanges = await this.waitUntilSelectorIsVisible(Constants.ConfirmaDialog, Constants.Two, this.adminPage);
+    if (UnsavedChanges) {
+      await this.adminPage.click(Constants.ConfirmButton);
+    }
   }
 
   public async addTwoAgentScriptToSesssionTemplateFromCSA(AgentScriptName: any, AgentScriptName2: any, SessionName: any) {
@@ -4804,10 +4895,10 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.SessionTemplateInOverview);
     await this.adminPage.waitForSelector(Constants.SessionSearchThisView);
     await this.adminPage.click(Constants.SessionSearchThisView);
-    await this.adminPage.fill(Constants.SessionSearchThisView,SessionName);
+    await this.adminPage.fill(Constants.SessionSearchThisView, Constants.SessionTemplateName);
     await this.adminPage.keyboard.press("Enter");
-    await this.adminPage.waitForSelector(stringFormat(Constants.AriaLabel,SessionName));
-    await this.adminPage.click(stringFormat(Constants.AriaLabel,SessionName));
+    await this.adminPage.waitForSelector(stringFormat(Constants.AriaLabel, Constants.SessionTemplateName));
+    await this.adminPage.click(stringFormat(Constants.AriaLabel, Constants.SessionTemplateName));
     await this.adminPage.waitForSelector(Constants.AgentScriptsTab);
     await this.adminPage.click(Constants.AgentScriptsTab);
     await this.adminPage.click(Constants.MoreCommandsForAgentScript);
@@ -4858,10 +4949,10 @@ export class Macros extends BasePage {
     await childIframe.waitForSelector(Constants.ExpressionBuilderConditionButton);
     await childIframe.click(Constants.ExpressionBuilderConditionButton);
     await childIframe.click(Constants.ExpressionBuilderConditionField1);
-    await childIframe.fill(Constants.ExpressionBuilderConditionField1,"{$odata.incident.prioritycode.?$filter=incidentid eq '{caseId}'&$select=prioritycode}");
+    await childIframe.fill(Constants.ExpressionBuilderConditionField1, "{$odata.incident.prioritycode.?$filter=incidentid eq '{caseId}'&$select=prioritycode}");
     await childIframe.click(Constants.ExpressionBuilderConditionFiled2);
-    await childIframe.fill(Constants.ExpressionBuilderConditionFiled2,"last name");
-    await  parentIframe.click(Constants.ExpressionBuilderSaveAndClose);
+    await childIframe.fill(Constants.ExpressionBuilderConditionFiled2, "last name");
+    await parentIframe.click(Constants.ExpressionBuilderSaveAndClose);
     const text = await this.adminPage.waitForSelector(Constants.ExpressionBuilderDialogText);
     expect(await text.textContent()).toContain('Unable to create macro definition');
     await this.waitUntilSelectorIsVisible(Constants.AlertPopUp, Constants.Five, this.adminPage, Constants.MaxTimeout);
@@ -4873,7 +4964,7 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.SessionTemplateInOverview);
     await this.adminPage.waitForSelector(Constants.SessionSearchThisView);
     await this.adminPage.click(Constants.SessionSearchThisView);
-    await this.adminPage.fill(Constants.SessionSearchThisView,sessionName);
+    await this.adminPage.fill(Constants.SessionSearchThisView, Constants.SessionTemplateName);
     await this.adminPage.keyboard.press("Enter");
     await this.adminPage.keyboard.press("Escape");
     await this.adminPage.click(Constants.SelectAllCheck);
@@ -4886,10 +4977,10 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.AgentScriptInOverview);
     await this.adminPage.waitForSelector(Constants.AgentScriptSearch);
     await this.adminPage.click(Constants.AgentScriptSearch);
-    await this.adminPage.fill(Constants.AgentScriptSearch,AgentScript);
+    await this.adminPage.fill(Constants.AgentScriptSearch, AgentScript);
     await this.adminPage.keyboard.press("Enter");
     await this.adminPage.keyboard.press("Escape");
-    await this.adminPage.hover(stringFormat(Constants.AriaLabel,AgentScript));
+    await this.adminPage.hover(stringFormat(Constants.AriaLabel, AgentScript));
     await this.adminPage.click(Constants.SelectFirstCheck);
     await this.adminPage.click(Constants.DeleteButton);
     await this.adminPage.click(Constants.ConfirmDeleteButton);
