@@ -17,6 +17,7 @@ export const URLConstants = {
 	UserUrl: `${TestSettings.OrgUrl}/api/data/v9.0/systemusers(${OCUserId})`,
 	AddUserAppConfig: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_appconfigurations(AppConfigId)/msdyn_appconfiguration_systemuser/$ref`,
 	Authority: `https://login.microsoftonline.com/${TestSettings.TenantId}/oauth2/authorize`,
+	OrgUrl: `${TestSettings.OrgUrl}/api/data/v9.0/organizations(${TestSettings.OrgId})`,
 };
 
 const ExecutePostRequest = async (postUrl: string, requestBody: any) => {
@@ -152,4 +153,29 @@ export const getGUID = async (UserUrl: string) => {
 		}
 	}
 	return uguid;
+};
+
+export const getGlobalSearchEnable = async (OrgUrl: string) => {
+	const response = await ExecuteGetRequest(
+		OrgUrl
+	);
+	const data = response && response.data ? JSON.parse(JSON.stringify(response.data)) : null;
+	expect(data).toBeTruthy();
+	let newsearchexperience: boolean = false;
+	if (data) {
+		newsearchexperience = data.newsearchexperienceenabled;
+	}
+	return newsearchexperience;
+};
+
+export const enableGlobalSearch = async () => {
+	const isenable = await getGlobalSearchEnable(URLConstants.OrgUrl);
+	if (!isenable) {
+		const globalsearchbody = {
+			"isexternalsearchindexenabled": true,
+			"newsearchexperienceenabled": true
+		};
+		const finalEndpoint = URLConstants.OrgUrl
+		await ExecutePatchRequest(finalEndpoint, globalsearchbody);
+	}
 };
