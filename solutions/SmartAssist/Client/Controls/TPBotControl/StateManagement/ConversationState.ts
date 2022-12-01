@@ -23,10 +23,10 @@ module MscrmControls.ProductivityPanel.TPBot {
 		}
 
 		public GetAllCards(): any {
-			if (localStorage.getItem(this.conversationId + Constants.ConversationCardsSuffix)) {
-				let cards = JSON.parse(localStorage.getItem(this.conversationId + Constants.ConversationCardsSuffix));
-				return cards;
-			}
+			let cards = {} as any;
+			const store = localStorage.getItem(this.conversationId + Constants.ConversationCardsSuffix);
+			if (store) cards = JSON.parse(store);
+			return cards;
 		}
 
 		public RemoveCard(cardId: number) {

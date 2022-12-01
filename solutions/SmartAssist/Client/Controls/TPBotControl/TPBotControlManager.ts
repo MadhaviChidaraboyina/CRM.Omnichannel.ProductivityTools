@@ -9,14 +9,9 @@ module MscrmControls.ProductivityPanel.TPBot {
 	export class TPBotManager {
 		private static instance: TPBotManager = null;
 		private adaptiveCard: AdaptiveCards.AdaptiveCard = null;
-		private logger: TelemetryLogger;
 
 		private constructor() {
 			this.TPBotCards = {};
-		}
-
-		public SetLogger(logger: TelemetryLogger) {
-			this.logger = logger;
 		}
 
 		public TPBotCards: any;
@@ -28,24 +23,52 @@ module MscrmControls.ProductivityPanel.TPBot {
 			return TPBotManager.instance;
 		}
 
-		public async RenderTPBotCard(conversationId, card) {
-			let conversationState = ConversationStateManager.GetConversationState(conversationId);
-			//Get an ID for the card by saving it. Set the state of the card
-			let cardId = conversationState.PersistCard(card);
+		public async RenderTPBotCard(message: SmartAssist.Common.Message) {
+			// Create telemetry timer to record the execution time for this function.
+			const timer = TPBotControl.telemetryReporter.startTimer("RenderTPBotCard");
+			const params = new TelemetryLogger.EventParameters();
+			params.addParameter("MessageId", message.id);
+			params.addParameter("SessionId", message.uiSessionId);
+			params.addParameter("Type", message.type);
 
-			let currentConversationId = await ConversationStateManager.GetCurrentConversation();
+			try {
+				const card = ProductivityPanel.TPBot.AdaptiveCardHelper.GetCardFromMessageContent(message.content!).content;
+				const conversationId = message.conversationId;
+				params.addParameter("ConversationId", conversationId);
 
-			if (conversationId == currentConversationId) {
-				// Render the card
-				this.renderCard(card, cardId, conversationId);
-				CardStateManager.SetState(conversationId, cardId, CardStates.New, true);
-			}
-			else {
-				CardStateManager.SetState(conversationId, cardId, CardStates.New, false);
+				let conversationState = ConversationStateManager.GetConversationState(conversationId);
+				//Get an ID for the card by saving it. Set the state of the card
+				let cardId = conversationState.PersistCard(card);
+
+				let currentConversationId = await ConversationStateManager.GetCurrentConversation();
+				
+				if (currentConversationId === conversationId) {
+					// Render the card
+					this.renderCard(card, cardId, conversationId);
+					CardStateManager.SetState(conversationId, cardId, CardStates.New, true);
+				}
+				else {
+					CardStateManager.SetState(conversationId, cardId, CardStates.New, false);
+				}
+
+				params.addParameter("Rendered", currentConversationId === conversationId);
+				timer.stop(params);
+			} catch (error) {
+				params.addParameter("ExceptionDetails", error);
+				timer.fail("Failure occurred while rendering third-party bot card", params);
+
+				// Propagate error up to caller.
+				throw error;
 			}
 		}
 
-		public async ReRenderCards(conversationId: string, isRTL: boolean) {
+		public async ReRenderCards(conversationId: string, isRTL: boolean, reason: "init" | "update-view" | "update-state") {
+			// Create telemetry timer to record the execution time for this function.
+			const timer = TPBotControl.telemetryReporter.startTimer("ReRenderCards");
+			const params = new TelemetryLogger.EventParameters();
+			params.addParameter("ConversationId", conversationId);
+			params.addParameter("Reason", reason);
+
 			this.ResetTPBotControl(isRTL);
 			this.RenderTitle(TPBotControl.getString(TPBot.LocalizedStrings.TPBotControlHeader));
 
@@ -59,7 +82,13 @@ module MscrmControls.ProductivityPanel.TPBot {
 					let card = cards[key];
 					this.renderCard(card, cardId, conversationId);
 				}
+				params.addParameter("NumCardsRendered", cards.length);
+			} else {
+				params.addParameter("NumCardsRendered", 0);
 			}
+			
+			params.addParameter("IsCurrentConversation", currentConversationId === conversationId);
+			timer.stop(params);
 		}
 
 		private ResetTPBotControl(isRTL: boolean) {
@@ -125,7 +154,7 @@ module MscrmControls.ProductivityPanel.TPBot {
 		* @params actionData Required parameters to run custom action
 		*/
 		private RunCustomAction(actionData: any): any {
-			let eventParameters = new TPBot.EventParameters();
+			let eventParameters = new TelemetryLogger.EventParameters();
 			eventParameters.addParameter("Message", "Running Custom Action");
 			eventParameters.addParameter("actionData", actionData);
 
@@ -133,7 +162,7 @@ module MscrmControls.ProductivityPanel.TPBot {
 				try {
 					let customAction: CustomActionManager = new CustomActionManager(actionData);
 					if (!customAction.isValidAction) {
-						this.logger.logError(this.logger.baseComponent, "RunCustomAction", "Invalid CustomAction", eventParameters);
+						TPBotControl.telemetryReporter.logError("RunCustomAction", "Invalid CustomAction", eventParameters);
 						return Promise.resolve();
 					} else {
 						switch (customAction.Name) {
@@ -151,13 +180,13 @@ module MscrmControls.ProductivityPanel.TPBot {
 								customAction.CustomActionCreateEntity();
 								break;
 							default:
-								this.logger.logSuccess(this.logger.baseComponent, "Running Custom CustomAction", eventParameters);
+								TPBotControl.telemetryReporter.logSuccess("Running Custom CustomAction", eventParameters);
 								return window.top[customAction.Name](customAction.Parameters);
 						}
 					}
 				} catch (Error) {
-					eventParameters.addParameter("Exception Details", Error);
-					this.logger.logError(this.logger.baseComponent, "RunCustomAction", "Error occurred while running custom action", eventParameters);
+					eventParameters.addParameter("ExceptionDetails", Error);
+					TPBotControl.telemetryReporter.logError("RunCustomAction", "Error occurred while running custom action", eventParameters);
 				}
 			}
 		}
@@ -165,10 +194,13 @@ module MscrmControls.ProductivityPanel.TPBot {
 		private async BindOnExecuteAction() {
 			let self = this;
 			let conversationId = await ConversationStateManager.GetCurrentConversation();
-			let eventParameters = new EventParameters();
+			let eventParameters = new TelemetryLogger.EventParameters();
 			eventParameters.addParameter("LiveWorkitemId", conversationId);
 
 			this.adaptiveCard.onExecuteAction = function (action: AdaptiveCards.SubmitAction) {
+
+				const timer = TPBotControl.telemetryReporter.startTimer("onExecuteAction");
+
 				let cardContainer = $(action.renderedElement).parents('.' + Constants.TPBotCardContainerClass);
 				let cardId = cardContainer[0].id.substr(Constants.TPBotCardContainerIdPrefix.length);
 
@@ -177,7 +209,6 @@ module MscrmControls.ProductivityPanel.TPBot {
 
 				let successMessage = ViewTemplates.SuccessMessageTemplate.Format(TPBotControl.getString(LocalizedStrings.TPBotSuccessMessage));
 				let errorMessage = ViewTemplates.FailureMessageTemplates.Format(TPBotControl.getString(LocalizedStrings.TPBotFailureMessage));;
-
 
 				let actionData = JSON.parse(JSON.stringify(action.data));
 				let actionPromise = null;
@@ -190,31 +221,33 @@ module MscrmControls.ProductivityPanel.TPBot {
 					actionPromise = new MacroUtil().executeMacro(actionData.MacroName, actionData.MacroParameters);
 				}
 				else {
-					self.logger.logError(TelemetryComponents.MainComponent, TelemetryComponents.MainComponent, "Action does not exist", eventParameters);
+					timer.fail("Action does not exist", eventParameters);
 				}
-				actionPromise.then((value) => {
-					// Set success if macro doesn't throw an error
-					eventParameters.addParameter("MacroRun", "Success");
-					self.logger.logSuccess(TelemetryComponents.MainComponent, TelemetryComponents.MainComponent, eventParameters);
-					cardContainer.after(successMessage);
 
-					setTimeout(() => {
-						$('.' + Constants.TPBotSuccessMessageClass).remove();
-					}, 5000);
-				}, (error) => {
-					// Set failure if macro throws an error
-					eventParameters.addParameter("MacroRun", "Failure");
-					self.logger.logSuccess(TelemetryComponents.MainComponent, TelemetryComponents.MainComponent, eventParameters);
-					cardContainer.after(errorMessage);
+				if (actionPromise != null) 
+					actionPromise.then((value) => {
+						// Set success if macro doesn't throw an error
+						eventParameters.addParameter("MacroRun", "Success");
+						timer.stop(eventParameters);
+						cardContainer.after(successMessage);
 
-					CardStateManager.SetState(conversationId, cardId, CardStates.Error);
-					self.RenderCardState(conversationId, cardId, cardContainer);
-					cardContainer.removeClass(Constants.CardAppliedClass);
+						setTimeout(() => {
+							$('.' + Constants.TPBotSuccessMessageClass).remove();
+						}, 5000);
+					}, (error) => {
+						// Set failure if macro throws an error
+						eventParameters.addParameter("MacroRun", "Failure");
+						timer.stop(eventParameters);
+						cardContainer.after(errorMessage);
 
-					setTimeout(() => {
-						$('.' + Constants.TPBotFailureClass).remove();
-					}, 5000)
-				});
+						CardStateManager.SetState(conversationId, cardId, CardStates.Error);
+						self.RenderCardState(conversationId, cardId, cardContainer);
+						cardContainer.removeClass(Constants.CardAppliedClass);
+
+						setTimeout(() => {
+							$('.' + Constants.TPBotFailureClass).remove();
+						}, 5000)
+					});
 			}
 		}
 

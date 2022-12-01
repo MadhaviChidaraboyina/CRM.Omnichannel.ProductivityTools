@@ -5,7 +5,6 @@
 
 module MscrmControls.ProductivityPanel.TPBot {
 
-
 	export class CustomActionManager {
 
 		public Name: string = "";
@@ -18,17 +17,12 @@ module MscrmControls.ProductivityPanel.TPBot {
 		 **/
 		public Parameters: any = {};
 		public isValidAction: boolean = false;
-		private logger: TelemetryLogger;
 
 		/* 
 		 * Constructor
 		 * @params ActionData Action data to be set to invoke Custom action on Action.Submit
 		 */
 		public constructor(ActionData: any) {
-
-			// Initialize Telemetry Repoter
-			this.logger = new TPBot.TelemetryLogger(TPBotControl._context);
-
 			if (!TPBotControl._context.utils.isNullOrUndefined(ActionData)) {
 				if (ActionData.CustomAction) {
 					this.Name = ActionData.CustomAction;
@@ -147,7 +141,7 @@ module MscrmControls.ProductivityPanel.TPBot {
 		 **/
 		public CustomActionOpenForm() {
 
-			let eventParameters = new TPBot.EventParameters();
+			let eventParameters = new TelemetryLogger.EventParameters();
 			eventParameters.addParameter("Message", "Running Custom Action - OpenForm");
 			eventParameters.addParameter("Entity", this.Parameters.entityName);
 			eventParameters.addParameter("RecordId", this.Parameters.recordId);
@@ -168,13 +162,13 @@ module MscrmControls.ProductivityPanel.TPBot {
 
 				if (this.CreateTab(tabInput)) {
 					eventParameters.addParameter("Message", "CustomAction OpenForm Succeeded");
-					this.logger.logSuccess(this.logger.baseComponent, "CustomActionOpenForm", eventParameters);
+					TPBotControl.telemetryReporter.logSuccess("CustomActionOpenForm", eventParameters);
 					return Promise.resolve();
 				}
 
 			} catch (Error) {
-				eventParameters.addParameter("Exception Details", Error);
-				this.logger.logError(this.logger.baseComponent, "CustomActionOpenForm", "Error occurred while running custom action - OpenForm", eventParameters);
+				eventParameters.addParameter("ExceptionDetails", Error);
+				TPBotControl.telemetryReporter.logError("CustomActionOpenForm", "Error occurred while running custom action - OpenForm", eventParameters);
 				return Promise.reject("Failed while executing custom action to open Form");
 			}
 		}
@@ -198,7 +192,7 @@ module MscrmControls.ProductivityPanel.TPBot {
 		 **/
 		public CustomActionCreateEntity() {
 
-			let eventParameters = new TPBot.EventParameters();
+			let eventParameters = new TelemetryLogger.EventParameters();
 			eventParameters.addParameter("Message", "Running Custom Action - CloneCase");
 			eventParameters.addParameter("Entity", this.Parameters.entityName);
 			eventParameters.addParameter("Data", this.Parameters.data);
@@ -216,13 +210,13 @@ module MscrmControls.ProductivityPanel.TPBot {
 				};
 				if (this.CreateTab(tabInput)) {
 					eventParameters.addParameter("Message", "CustomAction CreateEntity Succeeded");
-					this.logger.logSuccess(this.logger.baseComponent, "CustomActionCreateEntity", eventParameters);
+					TPBotControl.telemetryReporter.logSuccess("CustomActionCreateEntity", eventParameters);
 					return Promise.resolve();
 				}
 
 			} catch (Error) {
-				eventParameters.addParameter("Exception Details", Error);
-				this.logger.logError(this.logger.baseComponent, "CustomActionCreateEntity", "Error occurred while running custom action - CreateEntity", eventParameters);
+				eventParameters.addParameter("ExceptionDetails", Error);
+				TPBotControl.telemetryReporter.logError("CustomActionCreateEntity", "Error occurred while running custom action - CreateEntity", eventParameters);
 				return Promise.reject("Failed while executing custom action to create entity");
 			}
 		}

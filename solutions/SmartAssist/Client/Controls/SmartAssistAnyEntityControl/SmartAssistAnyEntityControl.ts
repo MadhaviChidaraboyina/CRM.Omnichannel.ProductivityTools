@@ -16,6 +16,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
         private saConfig: SAConfig = null;
         private locString: { [key: string]: string };
         private AnyEntityContainerState: AnyEntityContainerState = AnyEntityContainerState.Enabled;
+        private entityName: string;
         private recordId: string;
         private anyEntityDataManager: AnyEntityDataManager = null;
         private parentDivId: string = "";
@@ -49,17 +50,28 @@ module MscrmControls.SmartAssistAnyEntityControl {
 		 * @params state The user state for this control set from setState in the last session
 		 * @params container The div element to draw this control in
 		 */
-        public init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary, container: HTMLDivElement): void {
+        public async init(context: Mscrm.ControlData<IInputBag>, notifyOutputChanged: () => void, state: Mscrm.Dictionary, container: HTMLDivElement): Promise<void> {
+            SmartAssistAnyEntityControl._context = context;
+            SmartAssistAnyEntityControl._context.reporting.reportSuccess(TelemetryEventTypes.InitStarted);
+            SmartAssistAnyEntityControl._telemetryReporter = new TelemetryLogger.TelemetryLogger(context, "MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl")
+            
+            const timer = SmartAssistAnyEntityControl._telemetryReporter.startTimer("init");
+            const params = new TelemetryLogger.EventParameters();
+            params.addParameter("InitAlreadyCompleted", this.initCompleted);
+            
             try {
                 if (this.initCompleted == false) {
-                    SmartAssistAnyEntityControl._context = context;
-                    SmartAssistAnyEntityControl._context.reporting.reportSuccess(TelemetryEventTypes.InitStarted);
-                    SmartAssistAnyEntityControl._telemetryReporter = new TelemetryLogger.TelemetryLogger(context, "MscrmControls.SmartAssistAnyEntityControl.SmartAssistAnyEntityControl")
                     this.anyEntityContainer = container;
                     this.validateParameters(context);
+                    this.entityName = context.parameters.EntityName.raw;
                     this.recordId = context.parameters.RecordId.raw;
                     this.saConfig = context.parameters.SAConfig.raw as any;
                     this.AnyEntityContainerState = context.parameters.AnyEntityContainerState.raw as any;
+
+                    params.addParameter("EntityName", this.entityName);
+                    params.addParameter("RecordId", this.recordId);
+                    params.addParameter("SAConfig", this.saConfig);
+                    params.addParameter("AnyEntityContainerState", AnyEntityContainerState[this.AnyEntityContainerState]);
 
                     // Anyentity Main Container
                     this.parentDivId = StringConstants.AnyEntityContainer + this.saConfig.SmartassistConfigurationId;
@@ -72,15 +84,18 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     // inner container
                     this.constructAnyEntityInnerContainers();
 
-                    this.registerBotEventHandler();
+                    await this.registerBotEventHandler();
                     this.initCompleted = true;
                 }
 
-                this.InitiateSuggestionControl();
+                await this.InitiateSuggestionControl();
+                timer.stop(params);
             }
             catch (error) {
                 this.hideLoader();
-                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.InitFailed, error, null);
+                params.addParameter("ExceptionDetails", error);
+                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.InitFailed, "Failed to initialize the SmartAssistAnyEntityControl", params.getEventParams());
+                timer.fail("Failed to initialize the SmartAssistAnyEntityControl", params);
             }
         }
 
@@ -130,103 +145,136 @@ module MscrmControls.SmartAssistAnyEntityControl {
          */
         public async InitiateSuggestionControl(isFPBot = false): Promise<void> {
 
-            // logging initialization . ControlInitializationStarted
-            this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ControlInitializationStarted, null);
+            const timer = SmartAssistAnyEntityControl._telemetryReporter.startTimer("InitiateSuggestionControl");
+            const params = new TelemetryLogger.EventParameters();
 
-            // Get Current context
-            await this.getCurrentContext();
+            try {
+                // logging initialization . ControlInitializationStarted
+                this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ControlInitializationStarted, null);
 
-            await Utility.checkAndTurnOnSuggestionModeling(this.telemetryHelper);
-            
-            if (this.saConfig.SuggestionType == SuggestionType.BotSuggestion && this.AnyEntityContainerState == AnyEntityContainerState.Enabled) {
-                this.showLoader();
-                //TODO: add telemetry for all the scenarios
-                this.appendTitle();
-                const componentId = "TPBot";
-                let properties: any =
-                {
-                    parameters: {},
-                    key: componentId,
-                    id: componentId,
-                };
-                var divElement = document.createElement("div");
-                divElement.id = "Component_TPBot";
+                // Get Current context
+                await this.getCurrentContext();
 
-                //Initiate Suggestion Control
-                let suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.ProductivityPanel.TPBotControl", componentId, properties);
-                SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
-                $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
-            }
-            else {
-                //TODO: add telemetry for all the scenarios
+                await Utility.checkAndTurnOnSuggestionModeling(this.telemetryHelper);
 
-                // Turn off AI suggestions for non-english user if multi-lingual FCB is off
-                let englishOrgAndEnglishUser = true;
-                if (SmartAssistAnyEntityControl._context.orgSettings && SmartAssistAnyEntityControl._context.userSettings) {
-                    englishOrgAndEnglishUser = SmartAssistAnyEntityControl._context.orgSettings.languageId == 1033 && SmartAssistAnyEntityControl._context.userSettings.languageId == 1033;
-                }
-
-                var data;
-                if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled || (!SmartAssistAnyEntityControl._context.utils.isFeatureEnabled("SmartAssistMultilingualSupport") && !englishOrgAndEnglishUser)) {
+                params.addParameter("SuggestionType", SuggestionType[this.saConfig.SuggestionType]);
+                params.addParameter("AnyEntityContainerState", AnyEntityContainerState[this.AnyEntityContainerState]);
+                params.addParameter("AnchorEntityName", this.entityName);
+                params.addParameter("AnchorEntityId", this.recordId);
+                
+                if (this.saConfig.SuggestionType == SuggestionType.BotSuggestion && this.AnyEntityContainerState == AnyEntityContainerState.Enabled) {
                     this.showLoader();
-                    if (!SmartAssistAnyEntityControl._context.utils.isFeatureEnabled("SmartAssistMultilingualSupport") && !englishOrgAndEnglishUser) {
-                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionsNotSupportedForNonEnglishUser, null);
-                    }
-                    else {
-                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ContainerStateIsDisabled, null);
-                    }
+                    //TODO: add telemetry for all the scenarios
                     this.appendTitle();
-                    var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
-                    if (!noSuggestionElm) {
-                        var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
-                        $("#" + this.parentDivId).append(emptyRecordElm);
-                    }
+                    const componentId = "TPBot";
+                    let properties: any =
+                    {
+                        parameters: {},
+                        key: componentId,
+                        id: componentId,
+                    };
+                    var divElement = document.createElement("div");
+                    divElement.id = "Component_TPBot";
+
+                    //Initiate Suggestion Control
+                    let suggestionControl = SmartAssistAnyEntityControl._context.factory.createComponent("MscrmControls.ProductivityPanel.TPBotControl", componentId, properties);
+                    SmartAssistAnyEntityControl._context.utils.bindDOMElement(suggestionControl, divElement);
+                    $("#" + StringConstants.AnyEntityInnerDiv + this.saConfig.SmartassistConfigurationId).append(divElement);
+
+                    params.addParameter("RenderedControl", "TPBotControl");
+                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.RenderedTPBotControl, []);
                 }
-                else if (this.saConfig.IsEnabled) {
-                    this.showLoader();
-                    this.appendTitle();
-
-                    // Get Suggestions data records for provided saConfig
-                    if (isFPBot == true) {
-                        data = await this.anyEntityDataManager.getSuggestionsDataFromAPI(this.saConfig, this.recordId) as { [key: string]: any };
+                else {
+                    // Turn off AI suggestions for non-english user if multi-lingual FCB is off
+                    let englishOrgAndEnglishUser = true;
+                    if (SmartAssistAnyEntityControl._context.orgSettings && SmartAssistAnyEntityControl._context.userSettings) {
+                        englishOrgAndEnglishUser = SmartAssistAnyEntityControl._context.orgSettings.languageId == 1033 && SmartAssistAnyEntityControl._context.userSettings.languageId == 1033;
                     }
-                    else {
-                        this.locString = await this.anyEntityDataManager.getLocalizationData(this.saConfig);
-                        data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId);
-                    }
-
-                    // display backend error message
-                    if (typeof data === 'string') {
+                    const userLanguageIsValid = SmartAssistAnyEntityControl._context.utils.isFeatureEnabled("SmartAssistMultilingualSupport") || englishOrgAndEnglishUser;
+                    
+                    // Log telemetry for each scenario.
+                    if (!userLanguageIsValid) this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionsNotSupportedForNonEnglishUser, []);
+                    if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled) this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ContainerStateIsDisabled, []);
+                    if (!this.saConfig.IsEnabled) this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SAConfigIsDisabled, []);
+                    
+                    if (this.AnyEntityContainerState != AnyEntityContainerState.Enabled || !userLanguageIsValid) {
+                        this.showLoader();
+                        this.appendTitle();
                         var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                         if (!noSuggestionElm) {
-                            var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, undefined, data);
+                            var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
                             $("#" + this.parentDivId).append(emptyRecordElm);
                         }
-                    } else {
-                        var dataLength = 0;
-                        if (data && data[this.saConfig.SmartassistConfigurationId]) {
-                            dataLength = data[this.saConfig.SmartassistConfigurationId].length;
+                        
+                        params.addParameter("RenderedControl", "None");
+                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoSuggestionsRendered, [{ name: "Reason", value: "disabled" }]);
+                    }
+                    else if (this.saConfig.IsEnabled) {
+                        this.showLoader();
+                        this.appendTitle();
+
+                        let data;
+
+                        // Get Suggestions data records for provided saConfig
+                        if (isFPBot == true) {
+                            data = await this.anyEntityDataManager.getSuggestionsDataFromAPI(this.saConfig, this.recordId) as { [key: string]: any };
+                        }
+                        else {
+                            this.locString = await this.anyEntityDataManager.getLocalizationData(this.saConfig);
+                            data = await this.anyEntityDataManager.getSuggestionsData(this.saConfig, this.recordId);
                         }
 
-                        if (dataLength < 1) {
-                            this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoDataFound, null);
+                        // display backend error message
+                        if (typeof data === 'string') {
                             var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
                             if (!noSuggestionElm) {
-                                var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
+                                var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, undefined, data);
                                 $("#" + this.parentDivId).append(emptyRecordElm);
                             }
-                        }
-                        for (let i = 0; i <= (dataLength - 1); i++) {
-                            var record = data[this.saConfig.SmartassistConfigurationId][i];
-                            //Initiate Suggestion Control
-                            const suggestionControl = this.createAndBindRecommendationControl(record);
+                            params.addParameter("RenderedControl", "None");
+                            this.telemetryHelper.logTelemetryError(TelemetryEventTypes.NoSuggestionsRendered, data, [{ name: "Reason", value: "error" }]);
+                        } else {
+                            var dataLength = 0;
+                            if (data && data[this.saConfig.SmartassistConfigurationId]) {
+                                dataLength = data[this.saConfig.SmartassistConfigurationId].length;
+                            }
+
+                            if (dataLength < 1) {
+                                var noSuggestionElm = document.getElementById(StringConstants.NoSugegstionsDivId + this.saConfig.SmartassistConfigurationId);
+                                if (!noSuggestionElm) {
+                                    var emptyRecordElm = ViewTemplates.getSuggestionTemplate(this.saConfig, this.AnyEntityContainerState);
+                                    $("#" + this.parentDivId).append(emptyRecordElm);
+                                }
+                                params.addParameter("RenderedControl", "None");
+                                this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoSuggestionsRendered, [{ name: "Reason", value: "no-suggestions-in-data" }]);
+                            } else {
+                                for (let i = 0; i <= (dataLength - 1); i++) {
+                                    var record = data[this.saConfig.SmartassistConfigurationId][i];
+                                    this.createAndBindRecommendationControl(record);
+                                }
+
+                                params.addParameter("RenderedControl", "RecommendationControl");
+                                this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.RenderedRecommendationControl, []);
+                            }
                         }
                     }
+                    else {
+                        this.telemetryHelper.logTelemetryError(TelemetryEventTypes.NothingRenderedForSAConfig, "An SAConfig was assigned an AnyEntity control but didn't render anything.", [])
+                    }
                 }
+
+                setTimeout(() => {
+                    this.hideLoader();
+                }, StringConstants.LoaderTimeout);
+                
+                timer.stop(params);
+            } catch (error) {
+                params.addParameter("ExceptionDetails", error);
+                timer.fail("Failed to execute InitiateSuggestionControl", params);
+
+                // Propagate this error up so the caller can handle the error as well.
+                throw error;
             }
-            setTimeout(() => {
-                this.hideLoader();
-            }, StringConstants.LoaderTimeout);
         }
 
         private createAndBindRecommendationControl(record: any, display: string = "block"): string {
@@ -298,7 +346,11 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 window.sessionStorage.setItem(Utility.getCurrentSessionId(), JSON.stringify([]));
                 this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.DismissPreviousSuggestion, null);
             } catch (error) {
-                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToDismissPreviousSuggestion, error, null);
+                this.telemetryHelper.logTelemetryError(
+                    TelemetryEventTypes.FailedToDismissPreviousSuggestion,
+                    "Failed to dismiss previous suggestions",
+                    [{ name: "ExceptionDetails", value: error }]
+                );
             }
             $("#" + StringConstants.AnyEntityContainer + this.saConfig.SmartassistConfigurationId).empty();
         }
@@ -451,10 +503,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
             } catch (error) {
                 //Log error
                 let eventParameters = new TelemetryLogger.EventParameters();
-                eventParameters.addParameter("Exception Details", error.message);
-                eventParameters.addParameter("suggestionId", suggestionId)
+                eventParameters.addParameter("ExceptionDetails", error.message);
+                eventParameters.addParameter("SuggestionId", suggestionId)
                 let message = "Smart Assist Any Entity Control handleDismissEvent error.";
-                SmartAssistAnyEntityControl._telemetryReporter.logError("MainComponent", "handleDismissEvent", message, eventParameters);
+                SmartAssistAnyEntityControl._telemetryReporter.logError("handleDismissEvent", message, eventParameters);
             }
         }
 
@@ -526,7 +578,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
          * Conversation message listner
          * @param event: event payload
          */
-        private receiveMessage(event: any): void {
+        private async receiveMessage(event: any): Promise<void> {
             // TODO: uncomment
             //if (window[Constants.ConversatonControlOrigin].indexOf(event.origin) == -1)
             //  return;
@@ -535,42 +587,53 @@ module MscrmControls.SmartAssistAnyEntityControl {
             }
             if (event.data && event.data.messageData.get("notificationUXObject")) {
                 let messageMap = event.data.messageData.get("notificationUXObject");
-                let conversationId = messageMap.get("conversationId");
-                let uiSessionId = messageMap.get("uiSessionId");
-                let tags = messageMap.get("tags");
-                if (conversationId && uiSessionId
-                    && tags.indexOf(StringConstants.FPBTag) != -1
-                    && this.saConfig.UniqueName != StringConstants.TPBotUniqueName) {
-                    try {
-                        if (this.recordId == conversationId) {
+                
+                const timer = SmartAssistAnyEntityControl._telemetryReporter.startTimer("receiveMessage");
+                const params = new TelemetryLogger.EventParameters();
+                params.addParameter("Type", "first-party");
+                params.addParameter("AnchorEntityName", this.entityName);
+                params.addParameter("AnchorEntityId", this.recordId);
+
+                try {
+                    const message = new SmartAssist.Common.Message(messageMap);
+                    params.addParameter("ConversationId", message.conversationId);
+
+                    if (message.isValid && message.type === "first-party" && this.saConfig.UniqueName != StringConstants.TPBotUniqueName) {                    
+                        if (this.recordId === message.conversationId) {
+                            params.addParameter("Operation", "render");
                             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.FPBEventReceived, null);
+
                             // remove previous suggestions
                             this.dismissPreviousSuggestions();
                             this.constructAnyEntityInnerContainers();
 
                             // re-initialize suggestions
-                            this.InitiateSuggestionControl(true);
+                            await this.InitiateSuggestionControl(true);
                         } else {
-                            // Remove old cached data from conversation than current seesion
-                            Utility.getCurrentSessionContextById(uiSessionId).then((context) => {
-                                const cacheData = window.sessionStorage.getItem(uiSessionId)
-                                if (cacheData) {
-                                    const suggestionIds = JSON.parse(cacheData) as Array<string>;
-                                    suggestionIds.forEach(id => this._sessionStorageManager.deleteRecord(id));
-                                    window.sessionStorage.removeItem(uiSessionId);
-                                }
-                                SessionStateManager.Instance.deleteAllRecords(context, conversationId);
-                            });
+                            params.addParameter("Operation", "clear-cache");
 
-                            this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ClearedCacheOnFPBEvent,
-                                [
-                                    { name: "OtherSessionId", value: uiSessionId },
-                                    { name: "OtherRecordId", value: conversationId }
-                                ]);
+                            // Remove old cached data from conversation than current seesion
+                            const context = await Utility.getCurrentSessionContextById(message.uiSessionId)
+                            const cacheData = window.sessionStorage.getItem(message.uiSessionId)
+                            if (cacheData) {
+                                const suggestionIds = JSON.parse(cacheData) as Array<string>;
+                                suggestionIds.forEach(id => this._sessionStorageManager.deleteRecord(id));
+                                window.sessionStorage.removeItem(message.uiSessionId);
+                            }
+                            SessionStateManager.Instance.deleteAllRecords(context, message.conversationId);
+                        
+                            this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ClearedCacheOnFPBEvent, [
+                                { name: "OtherSessionId", value: message.uiSessionId },
+                                { name: "OtherRecordId", value: message.conversationId }
+                            ]);
                         }
-                    } catch (error) {
-                        this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToRenderFPBSuggestion, error, null);
+
+                        // We only need to stop this timer in the successful scenario if this was a FPB message.
+                        timer.stop(params);
                     }
+                } catch (error) {
+                    params.addParameter("ExceptionDetails", error);
+                    timer.fail("Failed to receive, parse, or render notificationUXObject message", params);
                 }
             }
         }

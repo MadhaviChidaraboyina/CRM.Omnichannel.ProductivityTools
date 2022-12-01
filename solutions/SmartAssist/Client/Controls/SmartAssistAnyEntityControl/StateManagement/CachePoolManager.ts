@@ -53,7 +53,11 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     }
                 }
             } catch (error) {
-                telemetryHelper.logTelemetryError(TelemetryEventTypes.CachePoolAddOrUpdateFailed, error, null);
+                telemetryHelper.logTelemetryError(
+                    TelemetryEventTypes.CachePoolAddOrUpdateFailed,
+                    "Failed to add or update the cache pool",
+                    [{ name: "ExceptionDetails", value: error }]
+                );
             }
         }
 
@@ -89,10 +93,14 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     }
                 }
                 else {
-                    telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchDataFromCachePool, new Error("CachePool not found"), null);
+                    telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchDataFromCachePool, "CachePool not found", []);
                 }
             } catch (error) {
-                telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToFetchDataFromCachePool, error, null);
+                telemetryHelper.logTelemetryError(
+                    TelemetryEventTypes.FailedToFetchDataFromCachePool,
+                    "Failed to find CachePool",
+                    [{ name: "ExceptionDetails", value: error }]
+                );
             }
             return null;
         }

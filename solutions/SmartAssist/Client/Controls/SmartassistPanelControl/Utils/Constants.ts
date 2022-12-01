@@ -205,13 +205,6 @@ module MscrmControls.SmartassistPanelControl {
         public static SAPanelControlDivCss = "overflow:auto;max-height:100%;width:100%;background-color:white;";
     }
 
-	/**
-	 * Telemetry main component names
-	 */
-    export class TelemetryComponents {
-        public static MainComponent = "MainComponent";
-    }
-
     /**SA config suggestion rendering control type  */
     export enum SuggestionControlType {
         AdaptiveCard = 192360000

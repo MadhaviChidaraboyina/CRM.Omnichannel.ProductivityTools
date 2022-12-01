@@ -22,46 +22,16 @@ module TelemetryLogger
 		}
 
 		/**
-		 * Reports error event
-		 * @param subComponent Sub-Component name
-		 * @param errorObject error objectss
-		 * @param eventParameters Event parameter dictionary
-		 */
-		private reportErrorEvent(subComponent: string, errorObject: Error, eventParameters: Mscrm.EventParameter[])
-		{
-			let componentName = this.baseComponent + this.separator + subComponent;
-			let suggestedMitigation: string = "";
-
-			this.context.reporting.reportFailure(componentName, errorObject, suggestedMitigation, eventParameters);
-		}
-
-		/**
 		 * Logs success telemetry
-		 * @param parentComponent parent component
-		 * @param subComponentName sub-component
+		 * @param component name of the component logging telemetry
 		 * @param parameterList parameter list
 		 */
-		public logSuccess(parentComponent: string, subComponentName: string, parameterList: EventParameters)
+		public logSuccess(component: string, parameterList: EventParameters)
 		{
-			let componentName = this.baseComponent + this.separator + parentComponent + this.separator + subComponentName;
+			let componentName = this.baseComponent + this.separator + component;
+			parameterList.addParameter("IsError", false);
 			let eventParameters = parameterList.getEventParams();
 			this.context.reporting.reportSuccess(componentName, eventParameters);
-		}
-
-		/**
-		 * Logs telemetry event
-		 * @param parentComponent parent component
-		 * @param subComponentName sub-component
-		 * @param parameterList parameter list
-		 */
-		public logEvent(
-			parentComponent: string,
-			subComponentName: string,
-			parameterList: EventParameters
-		) {
-			let componentName = this.baseComponent + this.separator + parentComponent + this.separator + subComponentName;
-			let eventParameters = parameterList.getEventParams();
-			this.context.reporting.reportEvent({ eventName: componentName, eventParameters });
 		}
 
 		/**
@@ -72,10 +42,9 @@ module TelemetryLogger
 		 * @param parameterList parameter list
 		 * @param errorResponse error response 
 		 */
-		public logError(parentComponent: string, subComponent: string, errorMessage: string, parameterList: EventParameters,
-			errorResponse?: Mscrm.ErrorResponse): void
+		public logError(component: string, errorMessage: string, parameterList: EventParameters, errorResponse?: Mscrm.ErrorResponse): void
 		{
-			let currentComponentName = parentComponent + this.separator + subComponent;
+			parameterList.addParameter("IsError", true);
 			let errorString: string = errorMessage;
 
 			if (!this.context.utils.isNullOrUndefined(errorResponse))
@@ -85,10 +54,42 @@ module TelemetryLogger
 
 			let errorObject = new Error(errorString);
 			let eventParameters = parameterList.getEventParams();
-			this.reportErrorEvent(currentComponentName, errorObject, eventParameters);
+			
+			let componentName = this.baseComponent + this.separator + component;
+			let suggestedMitigation: string = "";
+
+			this.context.reporting.reportFailure(componentName, errorObject, suggestedMitigation, eventParameters);
+		}
+
+		/**
+		 * Creates a Timer starting at the time of the function call. A Timer can be used to log telemetry on how long
+		 * an operation takes.
+		 * @param component name of the component logging telemetry
+		 * @returns A Timer object.
+		 */
+		public startTimer(component: string): Timer {
+			const start = Date.now();
+			const self = this;
+			const timer = {
+				start,
+				stop: (params: EventParameters) => {
+					params.addParameter("DurationInMs", Date.now() - start);
+					self.logSuccess(component, params);
+				},
+				fail: (error: string, params: EventParameters, errorResponse?: Mscrm.ErrorResponse) => {
+					params.addParameter("DurationInMs", Date.now() - start);
+					self.logError(component, error, params, errorResponse);
+				}
+			}
+			return timer;
 		}
 	}
 
+	interface Timer {
+		start: number;
+		stop: (params: EventParameters) => void;
+		fail: (error: string, params: EventParameters, errorResponse?: Mscrm.ErrorResponse) => void;
+	}
 
 	/**
 	 * Helper class for constructing event parameters
@@ -108,19 +109,12 @@ module TelemetryLogger
 		 * @param paramKey parameter key
 		 * @param paramValue parameter value
 		 */
-		public addParameter(paramKey: string, paramValue: string)
+		public addParameter(paramKey: string, paramValue?: string | number | Date | Mscrm.Guid)
 		{
-			if (EventParameters.IsNullOrUndefined(paramKey) || EventParameters.IsNullOrUndefined(paramValue))
-			{
-				return;
-			}
-
-			let eventParam: Mscrm.EventParameter =
-			{
+			if (paramKey == null || paramValue == null) return;
+			this.eventParamList.push({
 				name: paramKey, value: paramValue
-			};
-
-			this.eventParamList.push(eventParam);
+			});
 		}
 
 		/**
@@ -129,16 +123,6 @@ module TelemetryLogger
 		public getEventParams(): Mscrm.EventParameter[]
 		{
 			return this.eventParamList;
-		}
-
-		/**
-		 * Return true if input is null or undefined
-		 * Note: Use context.utils.isNullOrUndefined wherever possible
-		 * @param object input param
-		 */
-		public static IsNullOrUndefined(object: any): boolean
-		{
-			return typeof (object) == "undefined" || object == null;
 		}
 	}
 }

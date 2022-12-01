@@ -96,14 +96,24 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 return;
             }
 
+            const params = new TelemetryLogger.EventParameters();
+            params.addParameter("Type", "first-party");
+            params.addParameter("IncreaseBy", notificationNumber);
+
             const pane = Xrm.App.sidePanes.getPane(StringConstants.SmartAssistPaneId);
             // If app side pane ID does not exist, getPane() returns undefined. 
             if (pane) {
+                params.addParameter("CountBefore", pane.badge === false ? "none" : pane.badge);
+                
                 const badge = pane.badge && typeof(pane.badge) == 'number'
                     ? pane.badge + notificationNumber
                     : notificationNumber;
                 pane.badge = badge <= 0 ? false : badge;
+
+                params.addParameter("CountAfter", pane.badge);
             }
+
+            SmartAssistAnyEntityControl._telemetryReporter.logSuccess("updateBadge", params);
         }
 
         /**Get live work stream id */
@@ -116,8 +126,8 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 let data = templateParams.data;
                 workStreamId = data.ocContext.config.sessionParams.LiveWorkStreamId;
             } catch (error) {
-                eventParameters.addParameter("Exception Details", error.message);
-                SmartAssistAnyEntityControl._telemetryReporter.logError("Main Component", "GetLiveWorkStreamId", "Failed to retrieve Live WorkStream id from form param", eventParameters);
+                eventParameters.addParameter("ExceptionDetails", error.message);
+                SmartAssistAnyEntityControl._telemetryReporter.logError("GetLiveWorkStreamId", "Failed to retrieve Live WorkStream id from form param", eventParameters);
             }
             return workStreamId;
         }
@@ -159,7 +169,11 @@ module MscrmControls.SmartAssistAnyEntityControl {
                         }
                     } 
                 } catch (error) {
-                    telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToAutoEnableAISuggestion, error, null);
+                    telemetryHelper.logTelemetryError(
+                        TelemetryEventTypes.FailedToAutoEnableAISuggestion,
+                        "An error occurred when checking/turning on suggestion modeling",
+                        [{ name: "ExceptionDetails", value: error }]
+                    );
                 }  
                 localStorage.setItem(StringConstants.SuggestionsModelingStatusKey, "true");
             }     
@@ -187,13 +201,15 @@ module MscrmControls.SmartAssistAnyEntityControl {
             context.webAPI.execute(msdyn_InitializeAnalyticsRequest)
                 .then(function (response) {
                     if (response.status === 204 || response.status === 200) {
-                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionEnabled,  null);
-                    } else {
-                        this.telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToTriggerAISuggestionModeling, response.status, null);
-                    }
+                        telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionEnabled,  null);
+                    } else throw response;
                 })
                 .catch((error) => {
-                    telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToTriggerAISuggestionModeling, error, null);
+                    telemetryHelper.logTelemetryError(
+                        TelemetryEventTypes.FailedToTriggerAISuggestionModeling,
+                        "An error occurred when enabling suggestions for Case/KB (initializing analytics request)",
+                        [{ name: "ExceptionDetails", value: error }]
+                    );
                 });
         }
 
@@ -221,7 +237,10 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     isNotEnabled = !featureRecords.entities[0].msdyn_analyticschecksum && !featureRecords.entities[1].msdyn_analyticschecksum;
                 }
             } catch(error) {
-                telemetryHelper.logTelemetryError(TelemetryEventTypes.FailedToAutoEnableAISuggestion, error, null);
+                telemetryHelper.logTelemetryError(
+                    TelemetryEventTypes.FailedToAutoEnableAISuggestion,
+                    "Failed to determine if Case/KB suggestions are enabled",
+                    [{ name: "ExceptionDetails", value: error }]);
             }
 
             return isNotEnabled;

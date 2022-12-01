@@ -12,9 +12,9 @@ module MscrmControls.ProductivityPanel {
         private TPBotContainer: HTMLDivElement = null;
         public static _context: Mscrm.ControlData<IInputBag> = null;
         public static isRTL: boolean = false;
-        public static telemetryReporter: TPBot.TelemetryLogger;
+        public static telemetryReporter: TelemetryLogger.TelemetryLogger;
 
-        private conversationId: string | null;
+        private conversationId: string | undefined;
         private sessionId: string;
         private handlerId: string;
 
@@ -36,12 +36,19 @@ module MscrmControls.ProductivityPanel {
                         
             let methodName = "init";
             // Initialize Telemetry Repoter
-            TPBotControl.telemetryReporter = new TPBot.TelemetryLogger(context);
+            TPBotControl.telemetryReporter = new TelemetryLogger.TelemetryLogger(context, TPBot.Constants.ControlId);
+
+            const timer = TPBotControl.telemetryReporter.startTimer(methodName);
+            const params = new TelemetryLogger.EventParameters();
 
             try {
+
                 // Get conversation and session IDs for the current session.
                 this.conversationId = await TPBot.ConversationStateManager.GetCurrentConversation();
                 this.sessionId = Xrm.App.sessions.getFocusedSession().sessionId;
+                
+                params.addParameter("ConversationId", this.conversationId);
+                params.addParameter("SessionId", this.sessionId);
 
                 if (this.conversationId) {
                     // Determine if this session already has an existing handler for session close. If not, create one.
@@ -49,10 +56,9 @@ module MscrmControls.ProductivityPanel {
                     if (existingHandlerId == null) this.handlerId = Xrm.App.sessions.addOnAfterSessionClose(this.handleSessionClose.bind(this));
                     else this.handlerId = existingHandlerId;
                     sessionStorage.setItem(`${TPBot.Constants.SessionCloseHandlerStorageKey}-${this.conversationId}`, this.handlerId);
+                    
+                    params.addParameter("HandlerId", this.handlerId);
 
-                    // Create the logger, set it on the bot manager.
-                    let logger = new TPBot.TelemetryLogger(context);
-                    TPBot.TPBotManager.Instance.SetLogger(logger);
                     if (context.client.isRTL) {
                         TPBotControl.isRTL = true;
                     }
@@ -72,17 +78,14 @@ module MscrmControls.ProductivityPanel {
                     });
 
                     // Render the cards for the first time.
-                    await TPBot.TPBotManager.Instance.ReRenderCards(this.conversationId, TPBotControl.isRTL);
+                    await TPBot.TPBotManager.Instance.ReRenderCards(this.conversationId, TPBotControl.isRTL, "init");
                 }
-            } catch (Error) {
-
-                let logConstants = TPBot.TelemetryComponents;
-                let eventParameters = new TPBot.EventParameters();
-                eventParameters.addParameter("handlerId", this.handlerId);
-                eventParameters.addParameter("conversationId", this.conversationId);
-                eventParameters.addParameter("sessionId", this.sessionId);
-                let error = { name: "Smart Assist Control Init error", message: "Error while initializing smart assist control" };
-                TPBotControl.telemetryReporter.logError(logConstants.MainComponent, methodName, "", eventParameters);
+                
+                timer.stop(params);
+            } catch (error) {
+                params.addParameter("ExceptionDetails", error);
+                timer.fail("An error occurred while initializing the TPBotControl", params);
+                TPBotControl.telemetryReporter.logError(methodName, "An error occurred while initializing the TPBotControl", params);
             }
         }
 
@@ -96,7 +99,7 @@ module MscrmControls.ProductivityPanel {
             TPBotControl._context = context;
 
             // If coming from a session switch, re-render cards from storage
-            TPBot.TPBotManager.Instance.ReRenderCards(this.conversationId, TPBotControl.isRTL);
+            TPBot.TPBotManager.Instance.ReRenderCards(this.conversationId, TPBotControl.isRTL, "update-view");
         }
 
 		/** 
@@ -129,7 +132,7 @@ module MscrmControls.ProductivityPanel {
             return TPBotControl._context.resources.getString(resourceName);
         }
 
-        private static receiveMessage(event: any): void {
+        private static async receiveMessage(event: any): Promise<void> {
             //TODO: Uncomment
             //if (window[TPBot.Constants.ConversatonControlOrigin].indexOf(event.origin) == -1)
             //    return;
@@ -137,15 +140,26 @@ module MscrmControls.ProductivityPanel {
                 return;
             }
             if (event.data && event.data.messageData.get("notificationUXObject")) {
-                let messageMap = event.data.messageData.get("notificationUXObject");
-                let content = messageMap.get("content");
-                let conversationId = messageMap.get("conversationId");
-                let uiSessionId = messageMap.get("uiSessionId");
-                let card = TPBot.AdaptiveCardHelper.GetCardFromMessageContent(content);
-                let tags = messageMap.get("tags");
-                if (conversationId && uiSessionId && tags.indexOf(TPBot.Constants.FPBTag) == -1) {
-                    TPBot.TPBotManager.Instance.RenderTPBotCard(conversationId, card.content);
-                    TPBot.Utility.updateBadge(1);
+                const messageMap = event.data.messageData.get("notificationUXObject");
+
+                const timer = TPBotControl.telemetryReporter.startTimer("receiveMessage");
+                const params = new TelemetryLogger.EventParameters();
+                params.addParameter("Type", "third-party");
+                
+                try {
+                    const message = new SmartAssist.Common.Message(messageMap);
+                    params.addParameter("ConversationId", message.conversationId);
+
+                    if (message.isValid && message.type === "third-party") {
+                        await TPBot.TPBotManager.Instance.RenderTPBotCard(message);
+                        TPBot.Utility.updateBadge(1);
+
+                        // We only need to stop this timer in the successful scenario if this was a TPB message.
+                        timer.stop(params);
+                    }
+                } catch (error) {
+                    params.addParameter("ExceptionDetails", error);
+                    timer.fail("Failed to receive, parse, or render notificationUXObject message", params);
                 }
             }
         }
@@ -155,7 +169,14 @@ module MscrmControls.ProductivityPanel {
             const sessionId = (context.getEventArgs() as any).getInputArguments().sessionId;
             if (sessionId == null) return; // Telemetry?
 
+            const params = new TelemetryLogger.EventParameters();
+            params.addParameter("ContextSessionId", sessionId);
+            params.addParameter("ThisSessionId", this.sessionId);
+            params.addParameter("TearingDown", sessionId === this.sessionId);
+            TPBotControl.telemetryReporter.logSuccess("handleSessionClose", params);
+
             if (sessionId === this.sessionId) {
+
                 // Tear down this TPBotControl instance.
                 Xrm.App.sessions.removeOnAfterSessionClose(this.handlerId);
                 sessionStorage.removeItem(`${TPBot.Constants.SessionCloseHandlerStorageKey}-${this.conversationId}`);

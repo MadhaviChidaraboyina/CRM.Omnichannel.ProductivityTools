@@ -61,7 +61,6 @@ module MscrmControls.Smartassist.Suggestion {
 	 * Telemetry main component names
 	 */
 	export class TelemetryComponents {
-		public static MainComponent = "MainComponent";
 		public static AdaptiveCardHelper = "AdaptiveCardHelper";
 	}
 

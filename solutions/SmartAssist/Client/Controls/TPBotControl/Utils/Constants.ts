@@ -30,6 +30,7 @@ module MscrmControls.ProductivityPanel.TPBot {
 	 * Constants
 	 */
     export class Constants {
+        public static ControlId = "MscrmControls.TPBotControl.TPBotControl";      
         public static EmptyString = "";
         public static UninitializedString = "UNINITIALIZED";
         
@@ -84,7 +85,6 @@ module MscrmControls.ProductivityPanel.TPBot {
 	 * Telemetry main component names
 	 */
     export class TelemetryComponents {
-        public static MainComponent = "MainComponent";
         public static ConversationStateManager = "ConversationStateManager";
         public static AdaptiveCardHelper = "AdaptiveCardHelper";
     }

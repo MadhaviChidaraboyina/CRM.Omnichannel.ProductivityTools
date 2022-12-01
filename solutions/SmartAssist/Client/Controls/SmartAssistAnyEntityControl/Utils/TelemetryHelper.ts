@@ -16,7 +16,7 @@
 		 * @param additionalParameter
 		 */
         public logTelemetryError(eventType: string, error: any, additionalParameter: Mscrm.EventParameter[]) {
-            const params = this.getTelemetryParameter(additionalParameter,)
+            const params = this.getTelemetryParameter(true, additionalParameter)
             SmartAssistAnyEntityControl._context.reporting.reportFailure(eventType, error, "TSG-TODO", params);
         }
 
@@ -26,7 +26,7 @@
 		 * @param additionalParameter
 		 */
 		public logTelemetrySuccess(eventType: string, additionalParameter: Mscrm.EventParameter[]) {
-			const params = this.getTelemetryParameter(additionalParameter);
+			const params = this.getTelemetryParameter(false, additionalParameter);
 			SmartAssistAnyEntityControl._context.reporting.reportSuccess(eventType, params);
 		}
 
@@ -34,7 +34,7 @@
 		 * Get Telemetry event parameter
 		 * @param additionalParameters
 		 */
-        public getTelemetryParameter(additionalParameters: Mscrm.EventParameter[]): Mscrm.EventParameter[] {
+        public getTelemetryParameter(isError: boolean, additionalParameters: Mscrm.EventParameter[]): Mscrm.EventParameter[] {
             var params: Mscrm.EventParameter[] = [
                 { name: "SuggestionForEntityId", value: this.recordId },
                 { name: "SuggestedForEntityLogicalName", value: this.saconfig.SourceEntityName },
@@ -42,7 +42,8 @@
                 { name: "SuggestionType", value: this.saconfig.SuggestionType },
                 { name: "IsEnabled", value: `${this.saconfig.IsEnabled}` },
                 { name: "IsDefault", value: `${this.saconfig.IsDefault}` },
-                { name: "Session-Id", value: Utility.getCurrentSessionId() }
+                { name: "Session-Id", value: Utility.getCurrentSessionId() },
+                { name: "IsError", value: isError }
             ]
             if (additionalParameters) {
                 params = params.concat(additionalParameters);
@@ -92,5 +93,10 @@
         public static FailedToAutoEnableAISuggestion = TelemetryEventTypes.componentName + "FailedToAutoEnableAISuggestion";
         public static FailedToTriggerAISuggestionModeling = TelemetryEventTypes.componentName + "FailedToTriggerAISuggestionModeling";
         public static AISuggestionEnabled = TelemetryEventTypes.componentName + "AISuggestionEnabled";
+        public static NoSuggestionsRendered = TelemetryEventTypes.componentName + "NoSuggestionRendered";
+        public static SAConfigIsDisabled = TelemetryEventTypes.componentName + "SAConfigIsDisabled";
+        public static NothingRenderedForSAConfig = TelemetryEventTypes.componentName + "NothingRenderedForSAConfig";
+        public static RenderedTPBotControl = TelemetryEventTypes.componentName + "RenderedTPBotControl";
+        public static RenderedRecommendationControl = TelemetryEventTypes.componentName + "RenderedRecommendationControl";
     }
 }

@@ -7,6 +7,7 @@
 
 module MscrmControls.SmartAssistAnyEntityControl {
 	export interface IInputBag {
+		EntityName: Mscrm.SingleLineProperty;
 		RecordId: Mscrm.SingleLineProperty;
 		SAConfig: Mscrm.StringProperty;
 		AnyEntityContainerState?: Mscrm.StringProperty;

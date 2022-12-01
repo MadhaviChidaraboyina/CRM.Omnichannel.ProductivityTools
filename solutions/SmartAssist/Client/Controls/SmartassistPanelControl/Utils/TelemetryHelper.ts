@@ -26,7 +26,7 @@
 		 * @param additionalParameter
 		 */
         public logTelemetryError(eventType: string, error: any, additionalParameter: Mscrm.EventParameter[]) {
-            const params = this.getTelemetryParameter(additionalParameter,)
+            const params = this.getTelemetryParameter(true, additionalParameter)
             SmartassistPanelControl._context.reporting.reportFailure(eventType, error, "TSG-TODO", params);
         }
 
@@ -36,7 +36,7 @@
 		 * @param additionalParameter
 		 */
 		public logTelemetrySuccess(eventType: string, additionalParameter: Mscrm.EventParameter[]) {
-			const params = this.getTelemetryParameter(additionalParameter);
+			const params = this.getTelemetryParameter(false, additionalParameter);
 			SmartassistPanelControl._context.reporting.reportSuccess(eventType, params);
 		}
 
@@ -44,11 +44,12 @@
 		 * Get Telemetry event parameter
 		 * @param additionalParameters
 		 */
-        public getTelemetryParameter(additionalParameters: Mscrm.EventParameter[]): Mscrm.EventParameter[] {
+        public getTelemetryParameter(isError: boolean, additionalParameters: Mscrm.EventParameter[]): Mscrm.EventParameter[] {
             var params: Mscrm.EventParameter[] = [
                 { name: "SuggestionForEntityId", value: this.recordId },
                 { name: "SuggestedForEntityLogicalName", value: this.anchorTabEntityLogicalName },
-                { name: "Session-Id", value: Utility.getCurrentSessionId() }
+                { name: "Session-Id", value: Utility.getCurrentSessionId() },
+                { name: "IsError", value: isError }
             ]
             if (additionalParameters) {
                 params = params.concat(additionalParameters);
@@ -70,7 +71,6 @@
         public static RenderSuggestionStarted = TelemetryEventTypes.componentName + "RenderSuggestionStarted";
         public static ConfigNotFound = TelemetryEventTypes.componentName + "ConfigNotFound";
         public static AllConfigsDisabled = TelemetryEventTypes.componentName + "AllConfigsDisabled";
-        public static DIAPackageNotInstalled = TelemetryEventTypes.componentName + "DIAPackageNotInstalled";
         public static CaseSettingDisabled = TelemetryEventTypes.componentName + "CaseSettingIsDisabled";
         public static KBSettingDisabled = TelemetryEventTypes.componentName + "KBSettingIsDisabled";
         public static ThirdPartyBotDisabled = TelemetryEventTypes.componentName + "ThirdPartyBotIsDisabled";
@@ -88,6 +88,7 @@
         public static FetchingSuggestionSettingsFromCache = TelemetryEventTypes.componentName + "FetchingSuggestionSettingsFromCache";
         public static FetchingSuggestionSettingsFromAPI = TelemetryEventTypes.componentName + "FetchingSuggestionSettingsFromAPI";
         public static SuggestionSettingsNotFound = TelemetryEventTypes.componentName + "SuggestionSettingsNotFound";
+        public static SuggestionSettingsFailed = TelemetryEventTypes.componentName + "SuggestionSettingsFailed";
         public static ExceptionInSuggestionSettings = TelemetryEventTypes.componentName + "ExceptionInSuggestionSettings";
         public static SessionSwitchDetected = TelemetryEventTypes.componentName + "SessionSwitchDetected";
         public static UnbindingOldSAAnyEntityControl = TelemetryEventTypes.componentName + "UnbindingOldSAAnyEntityControl";
@@ -97,5 +98,7 @@
         public static RenderingSmartAssistAnyEntityControl = TelemetryEventTypes.componentName + "RenderingSmartAssistAnyEntityControl";
         public static ErrorInCheckEmptyStatus = TelemetryEventTypes.componentName + "ErrorInCheckEmptyStatus";
         public static ErrorInCloseSessionHandler = TelemetryEventTypes.componentName + "ErrorInCloseSessionHandler";
+        public static EmptyStatusNotEnabled = TelemetryEventTypes.componentName + "EmptyStatusNotEnabled";
+        public static NoSuggestionSettings = TelemetryEventTypes.componentName + "NoSuggestionSettings";
     }
 }

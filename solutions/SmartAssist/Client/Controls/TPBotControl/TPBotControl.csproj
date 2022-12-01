@@ -41,7 +41,6 @@
     <TypeScriptCompile Include="Utils\StringHelper.ts" />
     <TypeScriptCompile Include="Utils\MacroHelper.ts" />
     <TypeScriptCompile Include="Utils\Constants.ts" />
-    <TypeScriptCompile Include="Utils\TelemetryLogger.ts" />
     <TypeScriptCompile Include="Utils\Utility.ts" />
     <TypeScriptCompile Include="$(PKG_TYPESCRIPT_MSBUILD)\tools\tsc\lib.es6.d.ts" />
     <TypeScriptCompile Include="Views\ViewTemplates.ts" />
@@ -54,6 +53,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="libs\" />
     <Folder Include="Typings\" />
   </ItemGroup>
   <ItemGroup>

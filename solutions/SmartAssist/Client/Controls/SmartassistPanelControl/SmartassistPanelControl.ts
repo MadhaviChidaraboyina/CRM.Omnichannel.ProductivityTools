@@ -48,9 +48,6 @@ module MscrmControls.SmartassistPanelControl {
                 this.smartAssistContainer = container;
                 this.smartAssistContainer.setAttribute("style", Constants.SAPanelControlDivCss);
                 this.telemetryHelper = new TelemetryHelper("", "");
-                if (!this.telemetryHelper) {
-                    throw 'telemetry is not successfully initialized';
-                }
 
                 if (!this.tabSwitchHandlerId) {
                     //Listen to the CEC context change API
@@ -100,6 +97,10 @@ module MscrmControls.SmartassistPanelControl {
         }
 
         private async updateViewInternal(): Promise<void> {
+            const timer = SmartassistPanelControl._telemetryReporter.startTimer("updateViewInternal");
+            const params = new TelemetryLogger.EventParameters();
+            params.addParameter("NewInstance", this.newInstance);
+
             await this.updateAnchorTabContext();
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.UpdateViewStarted, null);
 
@@ -132,9 +133,11 @@ module MscrmControls.SmartassistPanelControl {
                 if (this.AnchorTabContext) {
                     this.renderSuggestions(false, this.AnchorTabContext.entityName, Utility.FormatGuid(recordId));
                 }
-
+                
                 this.newInstance = false;
             }
+
+            timer.stop(params);
         }
 
 		/**
@@ -147,7 +150,11 @@ module MscrmControls.SmartassistPanelControl {
                     var sessionId = Utility.getCurrentSessionId();
                     SAConfigDataManager.Instance.clearSuggestionsSetting(sessionId);
                 } catch(error) {
-                    this.telemetryHelper.logTelemetryError(TelemetryEventTypes.ErrorInCloseSessionHandler, error, null);
+                    this.telemetryHelper.logTelemetryError(
+                        TelemetryEventTypes.ErrorInCloseSessionHandler,
+                        "Failed to add session close handler",
+                        [{ name: "ExceptionDetails", value: error }]
+                    );
                 }
             }
             Microsoft.AppRuntime.Sessions.addOnAfterSessionClose(callback);
@@ -190,8 +197,9 @@ module MscrmControls.SmartassistPanelControl {
          */
         public loadWebresourceAndRenderSmartassistAnyEntity(
             saConfig: SAConfig,
-            callback: (config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean) => void,
+            callback: (config: SAConfig, emptyStatus: AnyEntityContainerState, entityName: string, recordId: string, update: boolean) => void,
             emptyStatus: AnyEntityContainerState,
+            entityName: string,
             recordId: string,
             update: boolean,
             telemetryHelper: TelemetryHelper): void {
@@ -199,14 +207,18 @@ module MscrmControls.SmartassistPanelControl {
             //SuggestionWebResourceUrl is empty for TPBot
             if (!document.getElementById(src) && !Utility.isNullOrEmptyString(saConfig.SuggestionWebResourceUrl)) {
                 let script = document.createElement("script");
-                script.onerror = function (event: ErrorEvent) {
+                script.onerror = function (error: ErrorEvent) {
                     document.getElementsByTagName("head")[0].removeChild(script);
-                    telemetryHelper.logTelemetryError(TelemetryEventTypes.WebresourceLoadingFailed, new Error("Webresource loading failed"), null);
-                    callback(saConfig, emptyStatus, recordId, update);
+                    telemetryHelper.logTelemetryError(
+                        TelemetryEventTypes.WebresourceLoadingFailed,
+                        "Webresource loading failed",
+                        [{ name: "ExceptionDetails", value: error }]
+                    );
+                    callback(saConfig, emptyStatus, entityName, recordId, update);
                 };
                 script.onload = function () {
                     telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.WebresourceLoadedSuccessfully, null);
-                    callback(saConfig, emptyStatus, recordId, update);
+                    callback(saConfig, emptyStatus, entityName, recordId, update);
                 };
 
                 script.src = src;
@@ -214,11 +226,11 @@ module MscrmControls.SmartassistPanelControl {
                 script.type = "text/javascript";
                 document.getElementsByTagName("head")[0].appendChild(script);
             } else {
-                callback(saConfig, emptyStatus, recordId, update);
+                callback(saConfig, emptyStatus, entityName, recordId, update);
             }
         }
 
-        public renderSmartassistAnyEntityControl(config: SAConfig, emptyStatus: AnyEntityContainerState, recordId: string, update: boolean): void {
+        public renderSmartassistAnyEntityControl(config: SAConfig, emptyStatus: AnyEntityContainerState, entityName: string, recordId: string, update: boolean): void {
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.RenderingSmartAssistAnyEntityControl, null);
             const componentId = Constants.SAAnyEntityControlContainerId + config.SmartassistConfigurationId;
             let properties: any =
@@ -230,6 +242,13 @@ module MscrmControls.SmartassistPanelControl {
                         Static: true,
                         Usage: 1, // input
                         Value: config
+                    },
+                    EntityName: {
+                        Type: "SingleLine.Text",
+                        Primary: false,
+                        Static: true,
+                        Usage: 1, // input
+                        Value: entityName
                     },
                     RecordId: {
                         Type: "SingleLine.Text",
@@ -272,26 +291,43 @@ module MscrmControls.SmartassistPanelControl {
          * @param recordId: Anchor tab Entity id from PP control
          */
         public async renderSuggestions(update: boolean, entityName: string, recordId: string = null): Promise<void> {
+
+            const timer = SmartassistPanelControl._telemetryReporter.startTimer("renderSuggestions");
+            const params = new TelemetryLogger.EventParameters();
+            params.addParameter("EntityName", entityName);
+            params.addParameter("RecordId", recordId);            
+
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.UpdateViewStarted, null);
             this.showLoader();
             
             // Get Configs to display suggestions
-            var configs: SAConfig[] = await SAConfigDataManager.Instance.getFilteredSAConfig(entityName, this.telemetryHelper);  
-            
-            if(configs.length < 1){
+            var configs: SAConfig[] = await SAConfigDataManager.Instance.getFilteredSAConfig(entityName, this.telemetryHelper);
+            params.addParameter("NumConfigs", configs.length);
+
+            if (configs.length < 1) {
                 this.showNoPermission();
-                return;
+                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.ConfigNotFound, "No SA configs found", []);
+                params.addParameter("SuggestionsRendered", false);
             }
-            var emptyStatus: AnyEntityContainerState = await this.checkEmptyStatus(entityName, recordId, configs);
-            if (configs.length < 1 || emptyStatus != AnyEntityContainerState.Enabled) {            
-                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.ConfigNotFound, new Error("SA config not found Or AI settings are disabled"), null);  
+            else {
+                var emptyStatus: AnyEntityContainerState = await this.checkEmptyStatus(entityName, recordId, configs);
+                params.addParameter("EmptyStatus", AnyEntityContainerState[emptyStatus]);
+
+                if (emptyStatus != AnyEntityContainerState.Enabled) {
+                    this.telemetryHelper.logTelemetryError(TelemetryEventTypes.EmptyStatusNotEnabled, "The AnyEntityContainerState is not enabled", params.getEventParams());
+                }
+
+                // Render SmartAssistAnyEntity control for each config.
+                configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
+                for (let i = 0; i <= (configs.length - 1); i++) {
+                    this.addDivForSmartAssistConfig(configs[i]);
+                    this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), emptyStatus, entityName, recordId, update, this.telemetryHelper);
+                }
+                this.hideLoader();
+                params.addParameter("SuggestionsRendered", true);
             }
-            configs = configs.sort((a, b) => (a.Order < b.Order) ? -1 : 1);
-            for (let i = 0; i <= (configs.length - 1); i++) {
-                this.addDivForSmartAssistConfig(configs[i]);
-                this.loadWebresourceAndRenderSmartassistAnyEntity(configs[i], this.renderSmartassistAnyEntityControl.bind(this), emptyStatus, recordId, update, this.telemetryHelper);
-            }                     
-            this.hideLoader();
+
+            timer.stop(params);
         }
 
         private addDivForSmartAssistConfig(config: SAConfig) {
@@ -308,38 +344,48 @@ module MscrmControls.SmartassistPanelControl {
          * @param event: Current tab opened context, or SessionRefresh eventType
          */
         public async listenCECContextChangeAPI(event: any) {
-            var sessionId = Utility.getCurrentSessionId()
+            var sessionId = Utility.getCurrentSessionId();
+
+            const timer = SmartassistPanelControl._telemetryReporter.startTimer("listenCECContextChangeAPI");
+            const params = new TelemetryLogger.EventParameters();
+            params.addParameter("EventType", event.eventType);
+            params.addParameter("SessionId", sessionId);
+            params.addParameter("IsSameSession", this.isSameSession(sessionId));
 
             //Get anchor context
             await this.updateAnchorTabContext();
 
             // update recordId and entityName in telemetry helper;
             this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SessionSwitchCECEventReceived, null);
-            if (!this.isSameSession(sessionId) || event.eventType == "SessionRefresh") {
-                if (this.AnchorTabContext) {
-                    var configs = await SAConfigDataManager.Instance.getSAConfigurations(this.telemetryHelper) as SmartassistPanelControl.SAConfig[];
-                    //Unbind all configs- in OC both(lwi and case) configs could be present 
-                    this.unbindSAConfigs(configs);
+            if ((!this.isSameSession(sessionId) || event.eventType == "SessionRefresh") && this.AnchorTabContext) {
+                var configs = await SAConfigDataManager.Instance.getSAConfigurations(this.telemetryHelper) as SmartassistPanelControl.SAConfig[];
+                //Unbind all configs- in OC both(lwi and case) configs could be present 
+                this.unbindSAConfigs(configs);
 
-                    // to handle the ordering when settings updated
-                    $("#" + Constants.SuggestionOuterContainer).empty();
-                    let entityId = this.getEntityRecordId(this.AnchorTabContext);
-                    this.anchorTabEntityId = Utility.FormatGuid(entityId);
-                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SessionSwitchDetected,
-                        [
-                            { name: "PrevSessionId", value: this.previousSessionId },
-                            { name: "CurrentSessionId", value: sessionId }
-                        ]);
+                // to handle the ordering when settings updated
+                $("#" + Constants.SuggestionOuterContainer).empty();
+                let entityId = this.getEntityRecordId(this.AnchorTabContext);
+                this.anchorTabEntityId = Utility.FormatGuid(entityId);
+                this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.SessionSwitchDetected,
+                    [
+                        { name: "PrevSessionId", value: this.previousSessionId },
+                        { name: "CurrentSessionId", value: sessionId }
+                    ]);
 
-                    // This is to handle the inbox session, when item switching happens, badge will be cleared and
-                    // anyEntityControl will reset the badge number after it retrieves the suggestions again from API.
-                    if (event.eventType === "SessionRefresh") {
-                        SmartassistPanelControl.clearBadge();
-                    }
-                    this.renderSuggestions(true, this.AnchorTabContext.entityName, this.anchorTabEntityId);
+                // This is to handle the inbox session, when item switching happens, badge will be cleared and
+                // anyEntityControl will reset the badge number after it retrieves the suggestions again from API.
+                if (event.eventType === "SessionRefresh") {
+                    SmartassistPanelControl.clearBadge();
                 }
+                this.renderSuggestions(true, this.AnchorTabContext.entityName, this.anchorTabEntityId);
+                params.addParameter("Rerendered", true);
+            } else {
+                params.addParameter("Rerendered", false);
             }
+
             this.previousSessionId = sessionId;
+
+            timer.stop(params);
         }
 
         /**Clear smart assist badge */
@@ -421,38 +467,51 @@ module MscrmControls.SmartassistPanelControl {
          * @param entityId
          */
         private async checkEmptyStatus(entityName: string, entityId: string, configs: SAConfig[]) {
+            const timer = SmartassistPanelControl._telemetryReporter.startTimer("checkEmptyStatus");
+            const params = new TelemetryLogger.EventParameters();
+            params.addParameter("EntityName", entityName);
+            params.addParameter("EntityId", entityId);
+
+            let result = AnyEntityContainerState.Enabled;;
             try {
                 if (!Utility.isValidSourceEntityName(entityName) || Utility.isNullOrEmptyString(entityId)) {
-                    return AnyEntityContainerState.NoSuggestions;
-                }
-                var currentSession = Utility.getCurrentSessionId();
-                var settings = await SAConfigDataManager.Instance.getSuggestionsSetting(currentSession, this.telemetryHelper);
-                var botConfig = configs.find(i => i.SuggestionType == SuggestionType.BotSuggestion);
-                if (!botConfig) {
-                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ThirdPartyBotDisabled, null);
-                }
-                if (!settings) {
-                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.DIAPackageNotInstalled, null);
-                    if (!botConfig) {
-                        return AnyEntityContainerState.Disabled;
+                    result = AnyEntityContainerState.NoSuggestions;
+                } else {
+                    var currentSession = Utility.getCurrentSessionId();
+                    var settings = await SAConfigDataManager.Instance.getSuggestionsSetting(currentSession, this.telemetryHelper);
+                    
+                    var botConfig = configs.find(i => i.SuggestionType == SuggestionType.BotSuggestion);
+                    if (!botConfig) this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ThirdPartyBotDisabled, params.getEventParams());
+                    
+                    params.addParameter("FoundBotConfig", botConfig != null);
+                    params.addParameter("FoundSuggestionSettings", settings != null);
+
+                    if (!settings) {
+                        this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.NoSuggestionSettings, params.getEventParams());
+                        if (!botConfig) result = AnyEntityContainerState.Disabled;
+                        else result = AnyEntityContainerState.Enabled;
+                    } else {
+                        if (!settings.CaseIsEnabled) this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.CaseSettingDisabled, params.getEventParams());
+                        if (!settings.KbIsEnable) this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.KBSettingDisabled, params.getEventParams());
+
+                        params.addParameter("CaseEnabled", settings.CaseIsEnabled === true);
+                        params.addParameter("KBIsEnabled", settings.KBIsEnable === true);
+
+                        if (!settings.CaseIsEnabled && !settings.KbIsEnable && !botConfig) {
+                            this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AllConfigsDisabled, params.getEventParams());
+                            result = AnyEntityContainerState.Disabled;
+                        }
                     }
-                    return AnyEntityContainerState.Enabled;
                 }
-                if (!settings.CaseIsEnabled) {
-                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.CaseSettingDisabled, null);
-                }
-                if (!settings.KbIsEnable) {
-                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.KBSettingDisabled, null);
-                }
-                if (!settings.CaseIsEnabled && !settings.KbIsEnable && !botConfig) {
-                    this.telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AllConfigsDisabled, null);
-                    return AnyEntityContainerState.Disabled;
-                }
-                return AnyEntityContainerState.Enabled;
+                params.addParameter("Result", AnyEntityContainerState[result]);
+                timer.stop(params);
             } catch (error) {
-                this.telemetryHelper.logTelemetryError(TelemetryEventTypes.ErrorInCheckEmptyStatus, error, null);
-                return AnyEntityContainerState.Enabled;
+                result = AnyEntityContainerState.Enabled;
+                params.addParameter("Result", AnyEntityContainerState[result]);
+                params.addParameter("ExceptionDetails", error);
+                timer.fail("An error occurred when determining the checkEmptyStatus result", params);
             }
+            return result;
         }
 
         /**

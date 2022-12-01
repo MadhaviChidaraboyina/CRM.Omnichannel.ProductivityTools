@@ -17,14 +17,24 @@ module MscrmControls.ProductivityPanel.TPBot {
                 return;
             }
 
+            const params = new TelemetryLogger.EventParameters();
+            params.addParameter("Type", "third-party");
+            params.addParameter("IncreaseBy", notificationNumber);
+
             const pane = Xrm.App.sidePanes.getPane(Constants.SmartAssistPaneId);
             // If app side pane ID does not exist, getPane() returns undefined. 
             if (pane) {
+                params.addParameter("CountBefore", pane.badge === false ? "none" : pane.badge);
+                
                 const badge = pane.badge && typeof(pane.badge) == 'number'
                     ? pane.badge + notificationNumber
                     : notificationNumber;
                 pane.badge = badge <= 0 ? false : badge;
+
+                params.addParameter("CountAfter", pane.badge);
             }
+
+            TPBotControl.telemetryReporter.logSuccess("updateBadge", params);
         }
     }
 }

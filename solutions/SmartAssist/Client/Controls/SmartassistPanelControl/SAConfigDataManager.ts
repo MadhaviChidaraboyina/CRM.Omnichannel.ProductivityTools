@@ -26,12 +26,20 @@ module MscrmControls.SmartassistPanelControl {
 
         /**Gets SA configuration from memory if available otherwise from cds */
         public async getSAConfigurations(telemetryHelper: TelemetryHelper) {
+            const timer = SmartassistPanelControl._telemetryReporter.startTimer("getSAConfigurations");
+            const params = new TelemetryLogger.EventParameters();
+
             let environmentData = await Utility.getAppRuntimeEnvironment();
             this.getSAConfigurationFromCache(environmentData.AppConfigName, telemetryHelper);
             if ((this.saConfig.length < 1)) {
+                params.addParameter("Source", "api");
                 await this.fetchSAConfigurationsData(environmentData.AppConfigName, telemetryHelper);
+            } else {
+                params.addParameter("Source", "cache");
             }
 
+            params.addParameter("NumSAConfigsFound", this.saConfig.length);
+            timer.stop(params);
             return this.saConfig;
         }
 
@@ -47,9 +55,16 @@ module MscrmControls.SmartassistPanelControl {
         * @param saConfig: All active SA config
         */
         public async getFilteredSAConfig(sourceEntity: string, telemetryHelper: TelemetryHelper) {
+            const timer = SmartassistPanelControl._telemetryReporter.startTimer("getFilteredSAConfig");
+            const params = new TelemetryLogger.EventParameters();
+            params.addParameter("SourceEntity", sourceEntity);
+
             let sessionId = Utility.getCurrentSessionId();
             await this.getSuggestionsSetting(sessionId, telemetryHelper);
             let configs = await this.getSAConfigurations(telemetryHelper);
+
+            params.addParameter("SessionId", sessionId);
+            params.addParameter("NumUnfilteredConfigs", configs.length);
 
             let isSmartbotAvailable = false;
             let botConfig = configs.find(i => i.SuggestionType == SuggestionType.BotSuggestion);
@@ -57,6 +72,8 @@ module MscrmControls.SmartassistPanelControl {
                 isSmartbotAvailable = await this.isSmartbotAvailable(telemetryHelper) as any;
             }
 
+            params.addParameter("TPBotConfigFound", botConfig != null);
+            params.addParameter("IsSmartbotAvailable", isSmartbotAvailable);
             if (!isSmartbotAvailable) {
                 telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.ThirdPartyBotNotFoundInWorkStream, null);
             }
@@ -105,11 +122,16 @@ module MscrmControls.SmartassistPanelControl {
                         return true;
                 }
             });
+
+            params.addParameter("IsDefaultCaseAdded", isDefaultCaseAdded);
+            params.addParameter("IsDefaultKMAdded", isDefaultKMAdded);
+            params.addParameter("NumFilteredConfigs", result.length);
+            timer.stop(params);
+
             return result;
         }
 
         private getSAConfigurationFromCache(appConfigName: string, telemetryHelper: TelemetryHelper) {
-            let eventParameters = new TelemetryLogger.EventParameters();
             try {
                 var data = window.sessionStorage.getItem(Constants.SAConfigCacheKey);
                 if (data) {
@@ -121,22 +143,37 @@ module MscrmControls.SmartassistPanelControl {
                 }
             }
             catch (error) {
-                telemetryHelper.logTelemetryError(TelemetryEventTypes.ExceptionInFetchingSAConfigFromCache, error, null);
+                telemetryHelper.logTelemetryError(
+                    TelemetryEventTypes.ExceptionInFetchingSAConfigFromCache,
+                    "Failed to get SA config data from the cache",
+                    [{ name: "ExceptionDetails", value: error }]
+                );
             }
         };
 
         /**Fetch SA config from cds */
         private async fetchSAConfigurationsData(appConfigName: string, telemetryHelper: TelemetryHelper) {
-            let eventParameters = new TelemetryLogger.EventParameters();
+            const timer = SmartassistPanelControl._telemetryReporter.startTimer("fetchSAConfigurationsData");
+            const params = new TelemetryLogger.EventParameters();
+
             try {
                 let fetchXml = this.getXmlQueryForSAConfig(appConfigName)
                 var result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.saConfigSchema.EntityName, fetchXml) as any;
+                
+                if (!result || !result.entities) throw `an error occurred when recieving SA Config records from CDS: ${JSON.stringify(result)}`;
+                params.addParameter("NumSAConfigsFound", result.entities.length);
+
                 if (result.entities.length < 1) {
                     telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AppProfileAssociationNotFound, null);
                     telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.FetchingDefaultSAConfig, null);
+                    
                     let defaultConfigFetchXml = this.getFetchXmlForDefaultSAConfig();
                     result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.saConfigSchema.EntityName, defaultConfigFetchXml) as any;
-                    if (result && result.entities && result.entities.length < 1) {
+                    
+                    if (!result || !result.entities) throw `an error occurred when recieving default SA Config records from CDS: ${JSON.stringify(result)}`;
+                    params.addParameter("NumDefaultSAConfigsFound", result.entities.length);
+                    
+                    if (result.entities.length < 1) {
                         telemetryHelper.logTelemetryError(TelemetryEventTypes.DefaultSAConfigNotFound, new Error("Default SAConfig not found"), null);
                     }
                 }
@@ -148,8 +185,11 @@ module MscrmControls.SmartassistPanelControl {
                     telemetryHelper.logTelemetryError(TelemetryEventTypes.NoSAConfigFound, new Error("No SAConfig record found"), null);
                 }
                 window.sessionStorage.setItem(Constants.SAConfigCacheKey, JSON.stringify(this.saConfig));
+                timer.stop(params);
             } catch (error) {
-                telemetryHelper.logTelemetryError(TelemetryEventTypes.ExceptionInFetchingSAConfigData, error, null);
+                params.addParameter("ExceptionDetails", error);
+                timer.fail("failed to fetch SmartAssist config data", params);
+                telemetryHelper.logTelemetryError(TelemetryEventTypes.ExceptionInFetchingSAConfigData, "Failed to fetch SA config data", params.getEventParams());
             }
         }
 
@@ -190,71 +230,106 @@ module MscrmControls.SmartassistPanelControl {
 
         /**Get Session Sttings */
         public async getSuggestionsSetting(sessionId: string, telemetryHelper: TelemetryHelper) {
-            if (this.suggestionsSetting[sessionId] && !Utility.isNullOrEmptyString(this.suggestionsSetting[sessionId].SuggestionsSettingId)) {
-                telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.FetchingSuggestionSettingsFromCache, null);
-                return this.suggestionsSetting[sessionId];
-            }
-            return this.getSuggestionsSettingFromAPI(telemetryHelper);
+            const timer = SmartassistPanelControl._telemetryReporter.startTimer("getSuggestionsSetting");
+            const params = new TelemetryLogger.EventParameters();
+
+            if (this.suggestionsSetting[sessionId] == null || this.suggestionsSetting[sessionId].SuggestionsSettingId == null) {
+                await this.getSuggestionsSettingFromAPI(telemetryHelper);
+                params.addParameter("Source", "api");
+            } else params.addParameter("Source", "cache");
+
+            timer.stop(params);
+            return this.suggestionsSetting[sessionId];
         }
 
         /**Gets Admin settings for KM and Case suggestions */
         private async getSuggestionsSettingFromAPI(telemetryHelper: TelemetryHelper) {
+            const timer = SmartassistPanelControl._telemetryReporter.startTimer("getSuggestionSettingFromAPI");
+            const params = new TelemetryLogger.EventParameters();
+            
             telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.FetchingSuggestionSettingsFromAPI, null);
-            let eventParameters = new TelemetryLogger.EventParameters();
-            var currentSessionId = Utility.getCurrentSessionId();
+            
             try {
+                var currentSessionId = Utility.getCurrentSessionId();
                 var result = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(this.suggestionsSettingSchema.EntityName, `?$filter=${this.suggestionsSettingSchema.StatusCode} eq ${SuggestionsSettingState.Active}`) as any;
                 if (result && result.entities && result.entities.length > 0) {
                     var data = new SuggestionsSetting(result.entities[0])
                     this.suggestionsSetting[currentSessionId] = data;
                 }
-                else {
-                    telemetryHelper.logTelemetryError(TelemetryEventTypes.SuggestionSettingsNotFound, new Error("No suggestion settings record found"), null);
-                    data = new SuggestionsSetting(null);
-                    this.suggestionsSetting[currentSessionId] = data;
-                }
+                else throw "no suggestion settings record found";
+
+                timer.stop(params);
             }
             catch (error) {
                 data = new SuggestionsSetting(null);
                 this.suggestionsSetting[currentSessionId] = data;
-                telemetryHelper.logTelemetryError(TelemetryEventTypes.DIAPackageNotInstalled, error, null);
+                
+                params.addParameter("ExceptionDetails", error);
+                timer.fail("failed to retrieve Suggestion Settings", params);
+                telemetryHelper.logTelemetryError(TelemetryEventTypes.SuggestionSettingsFailed, error, params.getEventParams());
             }
             return this.suggestionsSetting[currentSessionId];
         }
 
         /**Check if Smart assist is added in OC WS */
         public async isSmartbotAvailable(telemetryHelper: TelemetryHelper) {
+            const timer = SmartassistPanelControl._telemetryReporter.startTimer("isSmartbotAvailable");
+            const params = new TelemetryLogger.EventParameters();
+
             var liveworkStreamItem = await Utility.getLiveWorkStreamId();
             if (Utility.isNullOrEmptyString(liveworkStreamItem)) {
-                telemetryHelper.logTelemetryError(TelemetryEventTypes.LiveWorkStreamIdNotFound, new Error("LiveWorkStreamIdNotFound"), null);
+                params.addParameter("IsSmartbotAvailable", false);
+                telemetryHelper.logTelemetryError(TelemetryEventTypes.LiveWorkStreamIdNotFound, new Error("LiveWorkStreamIdNotFound"), params.getEventParams());
+                timer.fail("live workstream ID not found", params);
                 return false;
             }
-            var sessionId = Utility.getCurrentSessionId();
-            if (this.smartbotConfig[sessionId + liveworkStreamItem] != undefined) {
-                return this.smartbotConfig[sessionId + liveworkStreamItem];
-            }
-            await this.FetchSmartAssistBotRecordAndSetCriteria(liveworkStreamItem, sessionId, telemetryHelper);
-            return this.smartbotConfig[sessionId + liveworkStreamItem];
+            params.addParameter("LiveWorkstreamId", liveworkStreamItem);
+            
+            const result = await this.FetchSmartAssistBotRecordAndSetCriteria(liveworkStreamItem, telemetryHelper);
+            params.addParameter("IsSmartbotAvailable", result);
+
+            timer.stop(params);
+            return result;
         }
 
         /**
          * Fet sa bots set SA rendering criteria
          * @param liveWorkStreamId: Work Stream Unique identifier
          */
-        private async FetchSmartAssistBotRecordAndSetCriteria(liveWorkStreamId: string, sessionId: string, telemetryHelper: TelemetryHelper) {
-            let eventParameters = new TelemetryLogger.EventParameters();
+        private async FetchSmartAssistBotRecordAndSetCriteria(liveWorkStreamId: string, telemetryHelper: TelemetryHelper) {
+            const timer = SmartassistPanelControl._telemetryReporter.startTimer("FetchSmartAssistBotRecordAndSetCriteria");
+            const params = new TelemetryLogger.EventParameters();
+            params.addParameter("LiveWorkstreamId", liveWorkStreamId);
+
             try {
-                //fetch smart assist bots
-                let fetchXml = this.getSmartAssistFetchXml(liveWorkStreamId);
-                let fetchXmlQuery = Constants.FetchOperator + encodeURIComponent(fetchXml);
-                let dataResponse = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(Constants.UserEntityName, fetchXmlQuery) as any;
-                let entityRecords: WebApi.Entity[] = dataResponse.entities;
-                this.smartbotConfig[sessionId + liveWorkStreamId] = entityRecords.length > 0;
+                var sessionId = Utility.getCurrentSessionId();
+                params.addParameter("SessionId", sessionId);
+
+                // Check if this value is already in the cache. If so, use it.
+                if (this.smartbotConfig[sessionId + liveWorkStreamId] != null) {
+                    params.addParameter("Source", "cache");
+                } else {
+                    params.addParameter("Source", "api");
+
+                    //fetch smart assist bots
+                    let fetchXml = this.getSmartAssistFetchXml(liveWorkStreamId);
+                    let fetchXmlQuery = Constants.FetchOperator + encodeURIComponent(fetchXml);
+                    let dataResponse = await SmartassistPanelControl._context.webAPI.retrieveMultipleRecords(Constants.UserEntityName, fetchXmlQuery) as any;
+                    let entityRecords: WebApi.Entity[] = dataResponse.entities;
+                    this.smartbotConfig[sessionId + liveWorkStreamId] = entityRecords.length > 0;
+                }
+
+                params.addParameter("Result", this.smartbotConfig[sessionId + liveWorkStreamId]);
+                timer.stop(params);
             }
             catch (error) {
                 this.smartbotConfig = {};
-                telemetryHelper.logTelemetryError(TelemetryEventTypes.ExceptionInFetchingTPBDetails, error, null);
+                telemetryHelper.logTelemetryError(TelemetryEventTypes.ExceptionInFetchingTPBDetails, error, []);
+                params.addParameter("ExceptionDetails", error);
+                timer.fail("failed to fetch SmartBot users", params);
             }
+
+            return this.smartbotConfig[sessionId + liveWorkStreamId];
         }
 
         /**
