@@ -8,6 +8,7 @@ import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
 import { AgentScript } from "../../agentScript/pages/agentScriptAdmin";
 import { MacrosPage } from "../../../pages/Macros";
+import { AppProfileHelper } from "helpers/appprofile-helper";
 import { EntityNames } from "Utility/Constants";
 
 describe("Live Chat - ", () => {
@@ -22,6 +23,10 @@ describe("Live Chat - ", () => {
     let macrosAdminPage: Macros;
     const agentScriptAdminPage = new AgentScript(adminPage);
     var caseNameList: string[] = [];
+
+    beforeAll(async () => {
+        await AppProfileHelper.getInstance().CreateAppProfile();
+    })
 
     beforeEach(async () => {
         adminContext = await browser.newContext({

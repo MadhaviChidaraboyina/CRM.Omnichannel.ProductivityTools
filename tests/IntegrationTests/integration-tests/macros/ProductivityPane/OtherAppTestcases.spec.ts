@@ -6,6 +6,11 @@ import { Macros } from "../../macropages/macrosAdmin";
 import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.page";
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
+import { AppProfileHelper } from "helpers/appprofile-helper";
+
+beforeAll(async () => {
+  await AppProfileHelper.getInstance().CreateAppProfile();
+})
 
 describe("Live Chat - ", () => {
   let adminContext: BrowserContext;

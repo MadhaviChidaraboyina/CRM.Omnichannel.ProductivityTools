@@ -8,6 +8,7 @@ import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
 import { AgentScript } from "../../agentScript/pages/agentScriptAdmin";
 import { MacrosPage } from "../../../pages/Macros";
+import { AppProfileHelper } from "helpers/appprofile-helper";
 
 describe("Live Chat - ", () => {
     let adminContext: BrowserContext;
@@ -18,6 +19,10 @@ describe("Live Chat - ", () => {
     let liveChatContext: BrowserContext;
     let liveChatPage: LiveChatPage;
     let macrosAdminPage: Macros;
+
+    beforeAll(async () => {
+        await AppProfileHelper.getInstance().CreateAppProfile();
+    })
 
     beforeEach(async () => {
         adminContext = await browser.newContext({
@@ -36,6 +41,7 @@ describe("Live Chat - ", () => {
         adminPage = await adminContext.newPage();
         adminStartPage = new OrgDynamicsCrmStartPage(adminPage);
         macrosAdminPage = new Macros(adminPage);
+        await AppProfileHelper.getInstance().CreateAppProfile();
     });
     afterEach(async () => {
         TestHelper.dispose(adminContext);

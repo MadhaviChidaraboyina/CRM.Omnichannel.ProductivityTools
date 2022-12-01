@@ -7,6 +7,7 @@ import { OrgDynamicsCrmStartPage } from '../../../pages/org-dynamics-crm-start.p
 import { TestHelper } from '../../../helpers/test-helper'
 import { TestSettings } from '../../../configuration/test-settings'
 import { AgentScript } from 'integration-tests/agentScript/pages/agentScriptAdmin';
+import { AppProfileHelper } from 'helpers/appprofile-helper';
 import { EntityAttributes, EntityNames, stringFormat } from 'Utility/Constants';
 
 describe("App Profile - ", () => {
@@ -19,8 +20,13 @@ describe("App Profile - ", () => {
   let liveChatPage: LiveChatPage;
   let macrosAdminPage: Macros;
   let agentChat: AgentChat;
-  var caseNameList: string[] = [];
   let agentScriptAdminPage = new AgentScript(adminPage);
+
+  beforeAll(async () => {
+    await AppProfileHelper.getInstance().CreateAppProfile();
+  })
+  var caseNameList: string[] = [];
+
 
   beforeEach(async () => {
     adminContext = await browser.newContext({
@@ -43,6 +49,7 @@ describe("App Profile - ", () => {
     adminPage = await adminContext.newPage();
     adminStartPage = new OrgDynamicsCrmStartPage(adminPage);
     macrosAdminPage = new Macros(adminPage);
+    agentScriptAdminPage = new AgentScript(adminPage);
     agentChat = new AgentChat(adminPage);
   });
   afterEach(async () => {
@@ -58,35 +65,54 @@ describe("App Profile - ", () => {
   it("Test Case 2045214: [App Profile Manager] : Verify Shift click, control click, actions with admin with Default App Profile", async () => {
     agentPage = await agentContext.newPage();
     const rnd = agentScriptAdminPage.RandomNumber();
-    //Login as admin and create case
-    await adminStartPage.navigateToOrgUrlAndSignIn(
-      TestSettings.AdminAccountEmail,
-      TestSettings.AdminAccountPassword
-    );
-    await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-    //Create Case through XRM WebAPI
-    await adminStartPage.waitForDomContentLoaded();
-    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
-    var CaseTitleName = Constants.CaseTitleName + rnd;
-    caseNameList = [CaseTitleName];
-    await macrosAdminPage.createIncidents(agentChat, caseNameList);
-    await macrosAdminPage.InitiateSession(
-      CaseTitleName,
-      stringFormat(Constants.SpecificCaseLink1, rnd)
-    );
-    await macrosAdminPage.ValidateThePage(Constants.CloseSession1);
-    await macrosAdminPage.ValidateThePage(Constants.Smartassist);
-    await macrosAdminPage.ClickProductivityPaneTool(Constants.AStool);
-    //Validate page
-    await macrosAdminPage.ValidateThePage(Constants.Agentscripts);
-    await macrosAdminPage.ClickProductivityPaneTool(Constants.KStool);
-    await macrosAdminPage.ValidateThePage(Constants.Knowledgesearch);
-    await macrosAdminPage.CloseSession(Constants.CloseSession1);
-    await macrosAdminPage.InitiateTab(
-      CaseTitleName,
-      stringFormat(Constants.SpecificCaseLink1, rnd)
-    );
-    await macrosAdminPage.ValidateThePage(stringFormat(Constants.CloseTab,rnd));
+    try {
+      //Login as admin and create case
+      await adminStartPage.navigateToOrgUrlAndSignIn(
+        TestSettings.AdminAccountEmail,
+        TestSettings.AdminAccountPassword
+      );
+      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+      await adminStartPage.waitForDomContentLoaded();
+      await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage)
+      const CaseTitleName = Constants.CaseTitleName + rnd
+      const userNamePrefix = Constants.AutomationContact + rnd
+      let contact = await agentChat.createContactRecord(userNamePrefix);
+      await agentChat.createIncidentRecord(CaseTitleName, contact[EntityAttributes.Id], EntityNames.Contact);
+
+      //Initiate session and validate
+      await macrosAdminPage.InitiateSession(
+        Constants.CaseTitleName,
+        Constants.CaseLink1
+      );
+      await macrosAdminPage.ValidateThePage(Constants.CloseSession1);
+      await macrosAdminPage.ValidateThePage(Constants.Smartassist);
+      await macrosAdminPage.ClickProductivityPaneTool(Constants.AStool);
+      //Validate page
+      await macrosAdminPage.ValidateThePage(Constants.Agentscripts);
+      await macrosAdminPage.ClickProductivityPaneTool(Constants.KStool);
+      await macrosAdminPage.ValidateThePage(Constants.Knowledgesearch);
+      await macrosAdminPage.CloseSession(Constants.CloseSession1);
+      await macrosAdminPage.InitiateTab(
+        Constants.CaseTitleName,
+        Constants.CaseLink1
+      );
+      await macrosAdminPage.ValidateThePage(Constants.TabNoProdu);
+      await macrosAdminPage.CloseTab(Constants.CloseTab);
+      //Initiate Session and validate page
+      await macrosAdminPage.InitiateSession(
+        Constants.CaseTitleName,
+        Constants.CaseLink1
+      );
+      await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
+      await macrosAdminPage.ValidateThePage(Constants.ValidateSuggestion);
+      //Open Agent Script tool and validate
+      await macrosAdminPage.ClickProductivityPaneTool(Constants.AStool);
+      await macrosAdminPage.ValidateThePage(Constants.AStool);
+      //Open Knowledge search tool and validate
+      await macrosAdminPage.ClickProductivityPaneTool(Constants.KStool);
+      await macrosAdminPage.ValidateThePage(Constants.ValidateKSResults);
+    } finally {
+    }
   });
 
   ///<summary>
@@ -96,38 +122,40 @@ describe("App Profile - ", () => {
   it("Test Case 2045219: [App Profile Manager] : Verify Shift click, control click, actions with csm(roles csr manager, app access, productivity tool user) with Default App Profile", async () => {
     agentPage = await agentContext.newPage();
     const rnd = agentScriptAdminPage.RandomNumber();
-    //Login as admin and create case
-    await adminStartPage.navigateToOrgUrlAndSignIn(
-      TestSettings.AdminAccountEmail,
-      TestSettings.AdminAccountPassword
-    );
-    await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-    await adminStartPage.waitForDomContentLoaded();
-    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage)
-    const CaseTitleName = Constants.CaseTitleName + rnd
-    const userNamePrefix = Constants.AutomationContact + rnd
-    let contact = await agentChat.createContactRecord(userNamePrefix);
-    await agentChat.createIncidentRecord(CaseTitleName, contact[EntityAttributes.Id], EntityNames.Contact);
-    await macrosAdminPage.InitiateTab(
-      CaseTitleName,
-      stringFormat(Constants.SpecificCaseLink1, rnd)
-    );
-    await macrosAdminPage.ValidateThePage(Constants.TabNoProdu);
-    await macrosAdminPage.CloseTab(stringFormat(Constants.CloseTab,rnd));
-    await macrosAdminPage.switchToCustomerServiceAgentDashboard();
-    //Initiate Session and validate page
-    await macrosAdminPage.InitiateSession(
-      CaseTitleName,
-      stringFormat(Constants.SpecificCaseLink1, rnd)
-    );
-    await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
-    await macrosAdminPage.ValidateThePage(Constants.ValidateSuggestion);
-    //Open Agent Script tool and validate
-    await macrosAdminPage.ClickProductivityPaneTool(Constants.AStool);
-    await macrosAdminPage.ValidateThePage(Constants.AStool);
-    //Open Knowledge search tool and validate
-    await macrosAdminPage.ClickProductivityPaneTool(Constants.KStool);
-    await macrosAdminPage.ValidateThePage(Constants.ValidateKSResults);
+    try {
+      //Login as admin and create case
+      await adminStartPage.navigateToOrgUrlAndSignIn(
+        TestSettings.AdminAccountEmail,
+        TestSettings.AdminAccountPassword
+      );
+      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+      await adminStartPage.waitForDomContentLoaded();
+      await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage)
+      const CaseTitleName = Constants.CaseTitleName + rnd
+      const userNamePrefix = Constants.AutomationContact + rnd
+      let contact = await agentChat.createContactRecord(userNamePrefix);
+      await agentChat.createIncidentRecord(CaseTitleName, contact[EntityAttributes.Id], EntityNames.Contact);
+      await macrosAdminPage.InitiateTab(
+        Constants.CaseTitleName,
+        Constants.CaseLink1
+      );
+      await macrosAdminPage.ValidateThePage(Constants.TabNoProdu);
+      await macrosAdminPage.CloseTab(Constants.CloseTab);
+      //Initiate Session and validate page
+      await macrosAdminPage.InitiateSession(
+        Constants.CaseTitleName,
+        Constants.CaseLink1
+      );
+      await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
+      await macrosAdminPage.ValidateThePage(Constants.ValidateSuggestion);
+      //Open Agent Script tool and validate
+      await macrosAdminPage.ClickProductivityPaneTool(Constants.AStool);
+      await macrosAdminPage.ValidateThePage(Constants.AStool);
+      //Open Knowledge search tool and validate
+      await macrosAdminPage.ClickProductivityPaneTool(Constants.KStool);
+      await macrosAdminPage.ValidateThePage(Constants.ValidateKSResults);
+    } finally {
+    }
   });
 
   ///<summary>

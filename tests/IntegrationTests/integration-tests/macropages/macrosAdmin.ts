@@ -1,13 +1,13 @@
 import { IFrameConstants, IFrameHelper } from "../../Utility/IFrameHelper";
 import { AgentChat } from "../../pages/AgentChat";
 import { Page } from "playwright";
-import { Constants, EntityAttributes, EntityNames } from "../common/constants";
+import { Constants } from "../common/constants";
 import { OrgDynamicsCrmStartPage } from "../../pages/org-dynamics-crm-start.page";
 import { TestSettings } from "../../configuration/test-settings";
-import { AgentChatConstants, stringFormat } from "../../Utility/Constants";
-import { Util } from "../../Utility/Util";
-import { LogChatDetails } from "../../helpers/log-helper";
-import { BasePage } from "../../pages/BasePage";
+import { AgentChatConstants, EntityAttributes, EntityNames, stringFormat } from "Utility/Constants";
+import { Util } from "Utility/Util";
+import { LogChatDetails } from "helpers/log-helper";
+import { BasePage } from "pages/BasePage";
 import { MacrosConstants } from "pages/Macros";
 
 export class Macros extends BasePage {
@@ -1692,12 +1692,14 @@ export class Macros extends BasePage {
   public async EnableMSTeamChat() {
     await this.adminPage.waitForSelector(Constants.MSTeamChatSitemabtn);
     await this.adminPage.click(Constants.MSTeamChatSitemabtn);
-    const IsEnable1 = await this.adminPage.isVisible(
-      Constants.IsDisableMSTeamChat
-    );
-    if (IsEnable1) {
+    await this.waitForTimeout(); // to load the screen we need timeout 
+    try {
+      await this.adminPage.waitForSelector(Constants.IsDisableMSTeamChat);
       await this.adminPage.click(Constants.DisableMSTeamChat);
       await this.adminPage.click(Constants.MSTeamChatSave);
+    } catch {
+      await this.adminPage.waitForSelector(Constants.EnableMSTeamChat);
+      console.log("already enabled")
     }
   }
 
@@ -4554,6 +4556,28 @@ export class Macros extends BasePage {
     await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);//Needed to add agent script
   }
 
+  public async OpenappProfile(profilename: string) {
+    await this.adminPage.click(Constants.WorkspaceSiteMap);
+    await this.adminPage.waitForSelector(Constants.ManageAgentExperienceProfile);
+    await this.adminPage.click(Constants.ManageAgentExperienceProfile);
+    await this.adminPage.waitForSelector(Constants.SearchAppProfile, {
+      timeout: 30000,
+    });
+    await this.adminPage.waitForSelector(Constants.SearchAppProfile);
+    await this.adminPage.fill(Constants.SearchAppProfile, profilename);
+    await this.adminPage.locator(Constants.appProfilelink.replace("{0}", profilename)).click()
+  }
+
+  public async validatePane() {
+    await this.adminPage.waitForSelector(Constants.RefreshBtn);
+    try {
+      await this.adminPage.waitForSelector(Constants.TurnOn)
+      return true
+    } catch {
+      return false
+    }
+  }
+
   public async removeAgentScripttoDefaultCaseSession() {
     await this.adminPage.click(Constants.WorkspaceSiteMap);
     await this.adminPage.waitForTimeout(4000);
@@ -4568,6 +4592,14 @@ export class Macros extends BasePage {
       await this.adminPage.click(Constants.SelectAllCheck);
       await this.adminPage.click(Constants.MoreCommandsForAgentScript);
       await this.adminPage.click(Constants.RemoveAll);
+    }
+  }
+
+  public async createIncidents(agentChat: any, caseNameList: string[]) {
+    let contact = await agentChat.createContactRecord(Constants.XRMContact);
+    var count = caseNameList.length;
+    for (let i = 0; i < count; i++) {
+      await agentChat.createIncidentRecord(caseNameList[i], contact[EntityAttributes.Id], EntityNames.Contact);
     }
   }
 
@@ -4988,14 +5020,6 @@ export class Macros extends BasePage {
 
   public async closeTaskTab() {
     await this.adminPage.click(Constants.CloseTaskTab);
-  }
-
-  public async createIncidents(agentChat: any, caseNameList: string[]) {
-    let contact = await agentChat.createContactRecord(Constants.XRMContact);
-    var count = caseNameList.length;
-    for (let i = 0; i < count; i++) {
-      await agentChat.createIncidentRecord(caseNameList[i], contact[EntityAttributes.Id], EntityNames.Contact);
-    }
   }
 
   public async enableLayoutImprovements(adminPage) {

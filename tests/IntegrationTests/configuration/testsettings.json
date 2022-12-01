@@ -1,12 +1,12 @@
 {
   "ADClientId": "",
   "TenantId": "",
-  "InboxUser":"CustomerService Web Staging",
-  "InboxUser1":"ocautopw livechatagent",
-  "InboxUser2":"Automated User4",
-  "InboxUser3":"Admin Automated",
-  "InboxUser4":"ocautopw livechat123",
-  "InboxUser5":"ocautopw livechatuser1",  
+  "InboxUser": "CustomerService Web Staging",
+  "InboxUser1": "ocautopw livechatagent",
+  "InboxUser2": "Automated User4",
+  "InboxUser3": "Admin Automated",
+  "InboxUser4": "ocautopw livechat123",
+  "InboxUser5": "ocautopw livechatuser1",
   "TwitterAttachmentsSourceURL": "",
   "BlobURL": "",
   "KeyVaultURL": "",
@@ -61,7 +61,7 @@
   "ConsultAndTransferVerificationBlob": "",
   "LcwPWPickUrl": "",
   "SDKLiveChatBlobURL": "",
-  "ChatSDKBlobURL":"",
+  "ChatSDKBlobURL": "",
   "SBRExactMatchLcwUrl": "",
   "UaUserMail": "",
   "UaUserPassword": "",
@@ -70,8 +70,8 @@
   "LcwPickEnglishUrl": "",
   "LcwPickSpanishUrl": "",
   "ReconnectExhaustedLcwUrl": "",
-  "RoutingRulesQueueUrl":"",
-  "PVAPreChatSDKBlobUrl":"",
+  "RoutingRulesQueueUrl": "",
+  "PVAPreChatSDKBlobUrl": "",
   "PesistentChatUrl": "",
   "PesistentChatNonOperationHoursUrl": "",
   "PickChatSpanishUrl": "",
@@ -85,6 +85,7 @@
   "AdminAccountEmail3": "adminautomated@csweb1.onmicrosoft.com",
   "AdminAccountEmail4": "ocautopwlivechat123@csweb1.onmicrosoft.com",
   "AdminAccountEmail5": "ocautopwlivechatuser1@csweb1.onmicrosoft.com",
+  "AdminAccountEmail6": "AutomatedUser5@csweb1.onmicrosoft.com",
   "AdminAccountPassword": "",
   "OfflineOHUrl": "",
   "OfflineOHSpanishUrl": "",
@@ -139,7 +140,7 @@
     }
   },
   "AppleMessagesForBusiness": {
-    "AppleBusinessAccountId":""
+    "AppleBusinessAccountId": ""
   },
   "LiveChat": {
     "AgentEmail": "",
@@ -435,7 +436,7 @@
     "AuthReconnectPopoutSurveyQuestionBlobURL": "",
     "AuthReconnectPopoutSurveyQuestionWithOutRedirectionBlobURL": "",
     "AuthReconnectWithOutRedirectionURL": "",
-    "PVAContextVariableAuthURL":"",
+    "PVAContextVariableAuthURL": "",
     "LiveChatAttachments": {
       "LiveChatAttachmentsYYBloburl": "",
       "LiveChatAttachmentsYNBloburl": "",
@@ -462,7 +463,7 @@
     "PVAVerticalBlobUrl": "",
     "LiveChatAWTBlobUrl": "",
     "LiveChatPrechatTranscriptBlobUrl": "",
-    "LiveChatAutomatedQueueTransfer":"",
+    "LiveChatAutomatedQueueTransfer": "",
     "LiveChatProfileBasedCapacityWSBlobUrl": ""
   },
   "LiveChatPickMode": {
@@ -544,7 +545,7 @@
       "Channels": {
         "Default": {
           "appleBusinessAccountId": "",
-          "mspId":""
+          "mspId": ""
         }
       },
       "AgentIndex": {
@@ -729,7 +730,7 @@
         "Push": {
           "bcrAppId": ""
         },
-        "Inbox":{
+        "Inbox": {
           "bcrAppId": ""
         },
         "Pick": {
@@ -1026,7 +1027,6 @@
       }
     }
   },
-
   "ProductivityPane": {
     "AdminAccountEmail": "",
     "LiveChatPTEAccountEmail": "ocautopwlivechat123@ocautositpw1.onmicrosoft.com",
@@ -1037,16 +1037,14 @@
     "MacroBloburl": "https://dailymblobstorage.blob.core.windows.net/ocdailympwccautomation/LivechatMacroSecondAgentWS.html",
     "AgentScriptEmail": "",
     "ApplicationSetupEmail": "",
-    "MacrosAgentEmail": "",
-    "MultiSessionEmail": ""
+    "MacrosAgentEmail": "AutomatedUser3@csweb1.onmicrosoft.com",
+    "MultiSessionEmail": "AutomatedUser4@csweb1.onmicrosoft.com"
   },
   "ModernAdmin": {
     "ModernAdminEmail": "",
     "ModernAdminPassword": "",
     "ModernAdminUrl": ""
   },
-
-
   "browsers": [
     "chromium"
   ],

@@ -4,6 +4,7 @@ import { Macros } from "../../macropages/macrosAdmin";
 import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.page";
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
+import { AppProfileHelper } from "helpers/appprofile-helper";
 import { AgentChat } from "pages/AgentChat";
 
 describe("Agent Scripts - ", () => {
@@ -15,6 +16,10 @@ describe("Agent Scripts - ", () => {
   let macrosAdminPage: Macros;
   let agentChat: AgentChat;
   let rnd: any;
+
+  beforeAll(async () => {
+    await AppProfileHelper.getInstance().CreateAppProfile();
+  })
 
   beforeEach(async () => {
     adminContext = await browser.newContext({

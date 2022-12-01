@@ -6,6 +6,7 @@ import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.p
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
 import { AgentChatConstants } from "Utility/Constants";
+import { AppProfileHelper } from "helpers/appprofile-helper";
 
 describe("Navigation and Gestures - ", () => {
     let adminContext: BrowserContext;
@@ -16,6 +17,10 @@ describe("Navigation and Gestures - ", () => {
     let liveChatContext: BrowserContext;
     let liveChatPage: LiveChatPage;
     let macrosAdminPage: Macros;
+
+    beforeAll(async () => {
+        await AppProfileHelper.getInstance().CreateAppProfile();
+    })
 
     beforeEach(async () => {
         adminContext = await browser.newContext({
@@ -42,7 +47,7 @@ describe("Navigation and Gestures - ", () => {
         TestHelper.dispose(liveChatContext);
         TestHelper.dispose(agentContext);
     });
-    
+
     ///<summary>
     ///Test Case 2045186: [Navigation and Gestures] : Verify if records can be opened as sessions from case views
     ///Test Case Link  https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2045186
@@ -117,7 +122,6 @@ describe("Navigation and Gestures - ", () => {
                 AgentChatConstants.Five, adminStartPage.Page, Constants.FourThousandsMiliSeconds);
             await macrosAdminPage.casesLinkedToQueue(Constants.QueueTitleText);
             await macrosAdminPage.ValidateTheQueueTitle(Constants.QueueNameText);
-            //await macrosAdminPage.ValidateNandGThePage(Constants.CaseLink1);
         }
         finally {
             await macrosAdminPage.deleteCase(adminPage, adminStartPage, casetitle);

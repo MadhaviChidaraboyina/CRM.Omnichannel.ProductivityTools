@@ -485,6 +485,7 @@ export class Constants {
   static CaseSitemapBtn = `[aria-label="Cases"]`;
   static CaseTitleName = `Automation Case`;
   static CaseTitleName2 = `Case For Automation`;
+  static AutomationContact = "AutomationContact";
   static CutomerNameSearchIcon = `[aria-label="Search records for Customer, Lookup field"]`;
   static CustomerNameLooupResult = `[data-id="customerid.fieldControl-LookupResultsDropdown_customerid_resultsContainer"]`;
   static CSWCasePriority = `//select[contains(@aria-label,'Priority')]`;
@@ -867,6 +868,7 @@ export class Constants {
   static NewAppProfile = `[data-test-id="appprofile-list-new-appprofile"]`;
   static CreateAppProfile = `//*[text()="Create"]`;
   static SearchAppProfile = `[placeholder="Search profiles"]`;
+  static appProfilelink = "//button[text()='{0}']";
   static OpenAppProfile = `[data-icon-name="StatusCircleCheckmark"]`;
   static AddUsers = `//*[text()="Add users"]`;
   static OKbutton = `(//*[text()="OK"])[2]`;
@@ -1322,6 +1324,7 @@ export class Constants {
   static RandomCaseLink = `//*[text()="Automation Case{0}"]`;
   static SpecificCaseLink1 = `//*[text()="Automation Case{0}"]`;
   static SpecificCaseLink2 = `//*[text()="Case For Automation{0}"]`;
+  static XRMContact = 'MyContact';
   static PanelApp = `//div[@title="App"][contains(@class,"itemLabel")]`
   static CSWMoreOptions = `[data-lp-id="msdyn_CustomerServiceWorkspace0-options"]`;
   static OpenAppDesigner = `[aria-label="Open in App Designer"]`;
@@ -1394,12 +1397,10 @@ export class Constants {
   static TitleTag = `[title="{0}"]`;
   static XRMCaseName = 'AutomationCase';
   static XRMCaseName2 = 'CaseForAutomation';
-  static XRMContact = 'MYContact';
   static TimelineAddButton = `//span[contains(@class,'symbolFont Plus-symbol')]`;
   static TimelineTaskButton = `//li[@data-id='notescontrol-createNewRecord_flyoutMenuItem_task']`;
   static OpenRecordInTask = `//span[contains(@class,'symbolFont OpenEntityRecord-symbol')]`;
   static CloseTaskTab = `//div[@title='Close the tab']`;
-  static AutomationContact = `AutomationContact`;
   static ThreeThousandsMiliSeconds = 3000;
   static CloseSessionPopUp = `[data-id="dialogTitleText"]`;
   static NewUI = `&flags=FCB.MultiSessionLayoutImprovements%3dtrue`;

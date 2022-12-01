@@ -4,6 +4,8 @@ import { Macros } from "../../macropages/macrosAdmin";
 import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.page";
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
+import { AppProfileHelper, appProfileNames } from "helpers/appprofile-helper";
+import { AgentChat } from "pages/AgentChat";
 import { AgentScript } from "integration-tests/agentScript/pages/agentScriptAdmin";
 
 describe("Live Chat - ", () => {
@@ -12,7 +14,13 @@ describe("Live Chat - ", () => {
     let adminStartPage: OrgDynamicsCrmStartPage;
     let agentPage: Page;
     let agentContext: BrowserContext;
+    let agentChat: AgentChat;
     let macrosAdminPage: Macros;
+    var caseNameList: string[] = [];
+
+    beforeAll(async () => {
+        await AppProfileHelper.getInstance().CreateAppProfile();
+    })
     let rnd: any;
     const agentScriptAdminPage = new AgentScript(adminPage);
 
@@ -30,6 +38,7 @@ describe("Live Chat - ", () => {
         adminPage = await adminContext.newPage();
         adminStartPage = new OrgDynamicsCrmStartPage(adminPage);
         macrosAdminPage = new Macros(adminPage);
+        agentChat = new AgentChat(adminPage);
     });
     afterEach(async () => {
         TestHelper.dispose(adminContext);
@@ -56,7 +65,6 @@ describe("Live Chat - ", () => {
             await macrosAdminPage.ValidateThePage(Constants.Knowledgesearch);
         }
         finally {
-            await macrosAdminPage.deleteCase(adminPage, adminStartPage, Constants.CaseTitleName);
         }
     });
 
@@ -67,23 +75,39 @@ describe("Live Chat - ", () => {
     it("Test Case 2040740: Verify If KB search is disabled on productivity pane from app profiler, it should not appear for agent", async () => {
         agentPage = await agentContext.newPage();
         try {
-            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.MacrosAgentEmail, TestSettings.AdminAccountPassword);
+            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.AdminAccountEmail5, TestSettings.AdminAccountPassword);
             await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
-
-            //Creating App Profile
-            await macrosAdminPage.createAppProfile();
-            await macrosAdminPage.AddUsers(TestSettings.InboxUser);
-            await macrosAdminPage.EnableTwoAppsInProductivityPane();
-            await macrosAdminPage.openAppLandingPage(adminPage);
-            await adminStartPage.goToCustomerServiceWorkspace();
-            await macrosAdminPage.CreateCaseInCSW(Constants.CaseTitleName);
-            await macrosAdminPage.InitiateSession(Constants.CaseTitleName, Constants.CaseLink1);
-            await macrosAdminPage.ValidateNotPresent(Constants.KStool);
+            const appProfileTest5 = appProfileNames.appProfileTest5;
+            await macrosAdminPage.OpenappProfile(appProfileTest5);
+            const booleanvalue = await macrosAdminPage.validatePane();
+            if (booleanvalue) {
+                await macrosAdminPage.EnableTwoAppsInProductivityPane();
+                await macrosAdminPage.openAppLandingPage(adminPage);
+                await adminStartPage.goToCustomerServiceWorkspace();
+                await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+                var CaseUserName = Constants.CaseTitleName
+                caseNameList = [CaseUserName];
+                await macrosAdminPage.createIncidents(agentChat, caseNameList);
+                await macrosAdminPage.InitiateSession(
+                    Constants.CaseTitleName,
+                    Constants.CaseLink1
+                );
+                await macrosAdminPage.ValidateThePage(Constants.SAtool);
+                await macrosAdminPage.ValidateThePage(Constants.AStool);
+            } else {
+                console.log("pane is already enabled")
+                await macrosAdminPage.openAppLandingPage(adminPage);
+                await adminStartPage.goToCustomerServiceWorkspace();
+                await macrosAdminPage.CreateCaseInCSW(Constants.CaseTitleName);
+                await macrosAdminPage.InitiateSession(
+                    Constants.CaseTitleName,
+                    Constants.CaseLink1
+                );
+                await macrosAdminPage.ValidateThePage(Constants.SAtool);
+                await macrosAdminPage.ValidateThePage(Constants.AStool);
+            }
         }
         finally {
-            await adminPage.reload();
-            await macrosAdminPage.deleteAppProfile(adminPage, adminStartPage);
-            await macrosAdminPage.deleteCase(adminPage, adminStartPage, Constants.CaseTitleName);
         }
     });
 
@@ -339,7 +363,7 @@ describe("Live Chat - ", () => {
             await macrosAdminPage.deleteCase(adminPage, adminStartPage, Constants.Case11);
             await macrosAdminPage.DeleteQueue(adminPage, adminStartPage, Constants.QueueName);
         }
-    });  
+    });
 });
 
 

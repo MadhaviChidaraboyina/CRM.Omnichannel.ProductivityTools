@@ -5,6 +5,7 @@ import { Macros } from "../../macropages/macrosAdmin";
 import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.page";
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
+import { AppProfileHelper } from "helpers/appprofile-helper";
 import { stringFormat } from "../../../Utility/Constants";
 import { AgentScript } from "../../../integration-tests/agentScript/pages/agentScriptAdmin";
 import { AgentChat } from "../../../pages/AgentChat";
@@ -22,6 +23,10 @@ describe("Multi Session - ", () => {
   let rnd: any;
   const agentScriptAdminPage = new AgentScript(adminPage);
   var caseNameList: string[] = [];
+
+  beforeAll(async () => {
+    await AppProfileHelper.getInstance().CreateAppProfile();
+})
 
   beforeEach(async () => {
     adminContext = await browser.newContext({

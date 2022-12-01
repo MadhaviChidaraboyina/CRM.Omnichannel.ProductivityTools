@@ -86,6 +86,10 @@ export class TestSettings {
         return process.env.AdminAccountEmail5 || testData.AdminAccountEmail5;
     }
 
+    public static get AdminAccountEmail6(): string {
+        return process.env.AdminAccountEmail6 || testData.AdminAccountEmail6;
+    }
+
     public static get AdminAccountPassword(): string {
         return process.env.AdminAccountPassword || testData.AdminAccountPassword;
     }

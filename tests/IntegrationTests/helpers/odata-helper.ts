@@ -2,25 +2,23 @@ import * as axios from "axios";
 import { AuthenticationContext } from "adal-node";
 import { TestSettings } from "../configuration/test-settings";
 
-
 const axiosDefault = axios.default;
 //TO DO --- Move config id and presence id to test settings
 const OCConfigId = "d4d91600-6f21-467b-81fe-6757a2791fa1";
-const OCPresenceId = "a89ee9cf-453a-4b52-8d7a-ad647feecd5d";
-const OCUserId = "<>";
 
 export const URLConstants = {
 	CreateCaseUrl: `${TestSettings.OrgUrl}/api/data/v9.0/incidents`,
-	UpdateOCConfig: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_omnichannelconfigurations(${OCConfigId})`,
+	TurnOnMissedNotificationsURL: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_omnichannelconfigurations(${OCConfigId})`,
 	AppConfigUrl: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_appconfigurations`,
 	PanelConfigUrl: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_paneconfigurations`,
-	UserUrl: `${TestSettings.OrgUrl}/api/data/v9.0/systemusers(${OCUserId})`,
+	UsersUrl: `${TestSettings.OrgUrl}/api/data/v9.0/systemusers`,
+	UserUrl1: `${TestSettings.OrgUrl}/api/data/V9.2/systemusers?$filter=domainname eq '${TestSettings.AdminAccountEmail4}'`,
 	AddUserAppConfig: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_appconfigurations(AppConfigId)/msdyn_appconfiguration_systemuser/$ref`,
 	Authority: `https://login.microsoftonline.com/${TestSettings.TenantId}/oauth2/authorize`,
 	OrgUrl: `${TestSettings.OrgUrl}/api/data/v9.0/organizations(${TestSettings.OrgId})`,
 };
 
-const ExecutePostRequest = async (postUrl: string, requestBody: any) => {
+export const ExecutePostRequest = async (postUrl: string, requestBody: any) => {
 	const token = await getAuthToken(
 		TestSettings.AdminAccountEmail,
 		TestSettings.AdminAccountPassword
@@ -29,6 +27,7 @@ const ExecutePostRequest = async (postUrl: string, requestBody: any) => {
 		headers: {
 			Authorization: `Bearer ${token}`,
 			"Content-Type": "application/json",
+			"OrganizationId": TestSettings.OrgId
 		},
 	});
 };
@@ -42,6 +41,19 @@ const ExecutePatchRequest = async (
 		TestSettings.AdminAccountPassword
 	);
 	return await axiosDefault.patch(patchUrl, JSON.stringify(requestBody), {
+		headers: {
+			Authorization: `Bearer ${token}`,
+			"Content-Type": "application/json",
+		},
+	});
+};
+
+export const ExecuteGetRequest = async (getUrl: string) => {
+	const token = await getAuthToken(
+		TestSettings.AdminAccountEmail,
+		TestSettings.AdminAccountPassword
+	);
+	return await axiosDefault.get(getUrl, {
 		headers: {
 			Authorization: `Bearer ${token}`,
 			"Content-Type": "application/json",
@@ -86,39 +98,14 @@ const getAuthToken = async (
 	});
 };
 
-// Turn on Missed Notifications
-export const CreateAppProfile_AddUser = async () => {
-	const requestBodyAppConfig = {
-		msdyn_appmoduleuniquename: "CustomerServiceApps",
-		msdyn_description: "ds odata",
-		msdyn_name: "profile 1odata",
-		msdyn_uniquename: "msdyn_uniqueprofileodata"
-	};
-
-	const responseAppConfig = await ExecutePostRequest(URLConstants.AppConfigUrl, requestBodyAppConfig);
-
-	const requestBodyPanelConfig = {
-		msdyn_name: "profile 1odata prod pane",
-		msdyn_panemode: false,
-		msdyn_panestate: false,
-		msdyn_uniquename: "msdyn_uniqueprofileodata"
-	};
-
-	const responsePanelConfig = await ExecutePostRequest(URLConstants.AppConfigUrl, requestBodyPanelConfig);
-
+export const addUserToAppProfile = async (responseAppConfig: any, userUrl: string) => {
+	const guiduser = await getGUID(userUrl);
 	const requestBodyAddUser = {
-		"@odata.id": URLConstants.UserUrl
+		"@odata.id": URLConstants.UsersUrl + "(" + guiduser + ")"
 	};
-	URLConstants.AddUserAppConfig = URLConstants.AddUserAppConfig.replace("AppConfigId", responseAppConfig && responseAppConfig.headers["odata-entityid"])
-	const responseAdduser = await ExecutePostRequest(URLConstants.AddUserAppConfig, requestBodyAddUser);
-	//let ourTuple: [string, string, string];
-	return [responseAppConfig, responsePanelConfig, responseAdduser];
-};
-
-export const DeleteAppProfile = async (deleteApp, deletePanel) => {
-	await ExecuteDeleteRequest(deleteApp);
-	await ExecuteDeleteRequest(deletePanel);
-};
+	const finalEndpoint = responseAppConfig.headers["odata-entityid"] + "/msdyn_appconfiguration_systemuser/$ref"
+	await ExecutePostRequest(finalEndpoint, requestBodyAddUser);
+}
 
 // Turn on Missed Notifications
 export const TurnOnMissedNotifications = async () => {
@@ -126,21 +113,8 @@ export const TurnOnMissedNotifications = async () => {
 		msdyn_enable_missed_notifications: true,
 		"msdyn_inactive_presence_lookup@odata.bind": "/msdyn_presences(a89ee9cf-453a-4b52-8d7a-ad647feecd5d)"
 	};
-	return await ExecutePatchRequest(URLConstants.UpdateOCConfig, requestBody);
+	return await ExecutePatchRequest(URLConstants.TurnOnMissedNotificationsURL, requestBody);
 };
-
-export const ExecuteGetRequest = async (getUrl: string) => {
-	const token = await getAuthToken(
-		TestSettings.AdminAccountEmail1,
-		TestSettings.AdminAccountPassword
-	);
-	return await axiosDefault.get(getUrl, {
-		headers: {
-			Authorization: `Bearer ${token}`,
-			"Content-Type": "application/json",
-		},
-	});
-}
 
 export const getGUID = async (UserUrl: string) => {
 	const response = await ExecuteGetRequest(UserUrl);

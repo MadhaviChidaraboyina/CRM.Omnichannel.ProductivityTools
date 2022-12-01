@@ -7,6 +7,7 @@ import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.p
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
 import { AgentScript } from "../../agentScript/pages/agentScriptAdmin";
+import { AppProfileHelper } from "helpers/appprofile-helper";
 import { EntityNames, stringFormat } from "Utility/Constants";
 
 describe("Macro testcases - ", () => {
@@ -22,6 +23,10 @@ describe("Macro testcases - ", () => {
   let agentChat: AgentChat;
   const agentScriptAdminPage = new AgentScript(adminPage);
   var caseNameList: string[] = [];
+
+  beforeAll(async () => {
+    await AppProfileHelper.getInstance().CreateAppProfile();
+  })
 
   beforeEach(async () => {
     adminContext = await browser.newContext({

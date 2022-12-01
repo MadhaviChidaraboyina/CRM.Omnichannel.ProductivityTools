@@ -4,6 +4,7 @@ import { Macros } from "../../macropages/macrosAdmin";
 import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.page";
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
+import { AppProfileHelper } from "helpers/appprofile-helper";
 
 describe("Application Setup - ", () => {
   let adminContext: BrowserContext;
@@ -12,6 +13,10 @@ describe("Application Setup - ", () => {
   let agentPage: Page;
   let agentContext: BrowserContext;
   let macrosAdminPage: Macros;
+
+  beforeAll(async () => {
+    await AppProfileHelper.getInstance().CreateAppProfile();
+  })
 
   beforeEach(async () => {
     adminContext = await browser.newContext({

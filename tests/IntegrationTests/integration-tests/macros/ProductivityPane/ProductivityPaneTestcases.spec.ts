@@ -6,7 +6,7 @@ import { Macros } from "../../macropages/macrosAdmin";
 import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.page";
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
-import { AgentScript } from "../../agentScript/pages/agentScriptAdmin";
+import { AppProfileHelper, appProfileNames } from "helpers/appprofile-helper";
 
 describe("Productivity Pane Testcases - ", () => {
   let adminContext: BrowserContext;
@@ -17,6 +17,10 @@ describe("Productivity Pane Testcases - ", () => {
   let liveChatContext: BrowserContext;
   let liveChatPage: LiveChatPage;
   let macrosAdminPage: Macros;
+
+  beforeAll(async () => {
+    await AppProfileHelper.getInstance().CreateAppProfile();
+  })
 
   beforeEach(async () => {
     adminContext = await browser.newContext({
@@ -44,7 +48,7 @@ describe("Productivity Pane Testcases - ", () => {
     TestHelper.dispose(adminContext);
     TestHelper.dispose(liveChatContext);
     TestHelper.dispose(agentContext);
-  }); 
+  });
 
   ///<summary>
   ///Test Case 2045304: [Productivity Pane: Agent Guidance] : Validate if knowledge search control turn off in APM, it will disappear in PP.
@@ -55,51 +59,41 @@ describe("Productivity Pane Testcases - ", () => {
     try {
       //Login as admin and create case
       await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.AdminAccountEmail,
+        TestSettings.AdminAccountEmail5,
         TestSettings.AdminAccountPassword
       );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-      await macrosAdminPage.createCase(Constants.CaseTitleName);
-      //Initiate session and validate
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToCustomerServiceWorkspace();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await macrosAdminPage.ValidateThePage(Constants.KStool);
-      //Create Profile and disable KB search
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToCustomerServiceAdmincenter();
-      await macrosAdminPage.createAppProfile();
-      await macrosAdminPage.AddUsers(TestSettings.InboxUser);
-      await macrosAdminPage.EnableTwoAppsInProductivityPane();
-      //Initiate session and validate
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToCustomerServiceWorkspace();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      const NoKSTool = await macrosAdminPage.verifyOpenedTab(
-        agentPage,
-        Constants.KStool
-      );
-      expect(NoKSTool).toBeFalsy();
+      await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
+      const appProfileTest5 = appProfileNames.appProfileTest5;
+      await macrosAdminPage.OpenappProfile(appProfileTest5);
+      const booleanvalue = await macrosAdminPage.validatePane();
+      if (booleanvalue) {
+        await macrosAdminPage.EnableTwoAppsInProductivityPane();
+        await macrosAdminPage.openAppLandingPage(adminPage);
+        await adminStartPage.goToCustomerServiceWorkspace();
+        await macrosAdminPage.CreateCaseInCSW(Constants.CaseTitleName);
+        await macrosAdminPage.InitiateSession(
+          Constants.CaseTitleName,
+          Constants.CaseLink1
+        );
+        await macrosAdminPage.ValidateThePage(Constants.KStool);
+      } else {
+        console.log("pane is already enabled")
+        await macrosAdminPage.openAppLandingPage(adminPage);
+        await adminStartPage.goToCustomerServiceWorkspace();
+        await macrosAdminPage.CreateCaseInCSW(Constants.CaseTitleName);
+        await macrosAdminPage.InitiateSession(
+          Constants.CaseTitleName,
+          Constants.CaseLink1
+        );
+        const NoKSTool = await macrosAdminPage.verifyOpenedTab(
+          agentPage,
+          Constants.KStool
+        );
+        expect(NoKSTool).toBeFalsy();
+      }
     } finally {
-      await macrosAdminPage.maximizeDeleteAppProfile(
-        adminPage,
-        adminStartPage,
-        Constants.AppProfileName1,
-        Constants.AppProfileNameLink1
-      );
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName
-      );
     }
-  });  
+  });
 
   ///<summary>
   ///Test Case 2045296: [Productivity Pane: Knowledge Search] : Verify if knowledge search is available with default configuration
@@ -131,5 +125,5 @@ describe("Productivity Pane Testcases - ", () => {
         Constants.CaseTitleName
       );
     }
-  });  
+  });
 });

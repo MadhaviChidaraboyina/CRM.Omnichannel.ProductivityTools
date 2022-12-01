@@ -4,7 +4,10 @@ import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.p
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
 import { Macros } from "integration-tests/macropages/macrosAdmin";
-import { AgentChat } from "../../../pages/AgentChat";
+import { AppProfileHelper, appProfileNames } from "helpers/appprofile-helper";
+import { AgentScript } from "integration-tests/agentScript/pages/agentScriptAdmin";
+import { AgentChat } from "pages/AgentChat";
+import { EntityAttributes, EntityNames } from "Utility/Constants";
 
 describe("P.Tool Migration - ", () => {
   let adminContext: BrowserContext;
@@ -14,12 +17,19 @@ describe("P.Tool Migration - ", () => {
   let agentContext: BrowserContext;
   let liveChatContext: BrowserContext;
   let macrosAdminPage: Macros;
+  let agentScriptAdminPage: AgentScript;
   let agentChat: AgentChat;
+  let rnd;
   var caseNameList: string[] = [];
 
+  beforeAll(async () => {
+   await AppProfileHelper.getInstance().CreateAppProfile();
+  })
+  
   beforeEach(async () => {
     adminContext = await browser.newContext({
-      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+      viewport: TestSettings.Viewport,
+      extraHTTPHeaders: {
         origin: "",
       },
     });
@@ -38,7 +48,8 @@ describe("P.Tool Migration - ", () => {
     adminPage = await adminContext.newPage();
     adminStartPage = new OrgDynamicsCrmStartPage(adminPage);
     macrosAdminPage = new Macros(adminPage);
-    agentChat = new AgentChat(adminPage)
+    agentScriptAdminPage = new AgentScript(adminPage);
+    agentChat = new AgentChat(adminPage);
   });
 
   afterEach(async () => {
@@ -60,6 +71,11 @@ describe("P.Tool Migration - ", () => {
         TestSettings.AdminAccountPassword
       );
       await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+      await adminStartPage.waitForDomContentLoaded();
+      await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+      var CaseUserName = Constants.CaseTitleName
+      caseNameList = [CaseUserName];
+      await macrosAdminPage.createIncidents(agentChat, caseNameList);
       await macrosAdminPage.InitiateSession(
         Constants.CaseTitleName,
         Constants.CaseLink1
@@ -75,8 +91,9 @@ describe("P.Tool Migration - ", () => {
   ///Test Case 2242816: [P.Tool Migration] Ensure state persistence for tool selection in each session.
   /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2242816
   ///</summary>
-  it.skip("Test Case 2242816: [P.Tool Migration] Ensure state persistence for tool selection in each session.", async () => {
+  it("Test Case 2242816: [P.Tool Migration] Ensure state persistence for tool selection in each session.", async () => {
     agentPage = await agentContext.newPage();
+    const rnd = agentScriptAdminPage.RandomNumber();
     try {
       //Login as 'Admin automated' and redirected to OrgUrl
       await adminStartPage.navigateToOrgUrlAndSignIn(
@@ -84,6 +101,12 @@ describe("P.Tool Migration - ", () => {
         TestSettings.AdminAccountPassword
       );
       await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+      await adminStartPage.waitForDomContentLoaded();
+      await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+      const userNamePrefix = Constants.AutomationContact + rnd
+      let contact = await agentChat.createContactRecord(userNamePrefix);
+      await agentChat.createIncidentRecord(Constants.CaseTitleName, contact[EntityAttributes.Id], EntityNames.Contact);
+      await agentChat.createIncidentRecord(Constants.CaseTitleName2, contact[EntityAttributes.Id], EntityNames.Contact);
       await macrosAdminPage.InitiateSession(
         Constants.CaseTitleName,
         Constants.CaseLink1
@@ -217,30 +240,7 @@ describe("P.Tool Migration - ", () => {
   ///Test Case 2241720: [P.Tool Migration] Initial panes state respects APM config pane mode and initial pane selection is the first enabled tool. Respect user behaviors once any app side panes are loaded.
   /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2241720
   ///</summary>
-  it.skip("Test Case 2241720: [P.Tool Migration] Initial panes state respects APM config pane mode and initial pane selection is the first enabled tool. Respect user behaviors once any app side panes are loaded.", async () => {
-    agentPage = await agentContext.newPage();
-    try {
-      //Login as 'Admin automated' and redirected to OrgUrl
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.AdminAccountEmail2,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await macrosAdminPage.ValidateThePage(Constants.AStool);
-    } finally {
-      console.log("Test Case Executed Successfully");
-    }
-  });
-
-  ///<summary>
-  ///Test Case 2245437: [P.Tool Migration] Ensure the specific productivity tools that are disabled in APM are not displayed in CSW app.
-  /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2245437
-  ///</summary>
-  it.skip("Test Case 2245437: [P.Tool Migration] Ensure the specific productivity tools that are disabled in APM are not displayed in CSW app.", async () => {
+  it("Test Case 2241720: [P.Tool Migration] Initial panes state respects APM config pane mode and initial pane selection is the first enabled tool. Respect user behaviors once any app side panes are loaded.", async () => {
     agentPage = await agentContext.newPage();
     try {
       //Login as 'Admin automated' and redirected to OrgUrl
@@ -248,16 +248,23 @@ describe("P.Tool Migration - ", () => {
         TestSettings.AdminAccountEmail3,
         TestSettings.AdminAccountPassword
       );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-      await macrosAdminPage.createCase(Constants.CaseTitleName);
-      //Create app profile and Add Users and Session
+      await adminStartPage.goToCustomerServiceAdmincenter();
+      // AppProfile with OneApps ProductivityPane
+      const appProfileTest3 = appProfileNames.appProfileTest3;
+      await macrosAdminPage.OpenappProfile(appProfileTest3)
+      const booleanvalue = await macrosAdminPage.validatePane();
+      if (booleanvalue) {
+        await macrosAdminPage.EnableOneAppsInProductivityPane();
+      } else {
+        console.log("pane is already enabled")
+      }
       await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToCustomerServiceWorkspace();
+      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+      await macrosAdminPage.CreateCaseInCSW(Constants.CaseTitleName);
       await macrosAdminPage.InitiateSession(
         Constants.CaseTitleName,
         Constants.CaseLink1
       );
-      await macrosAdminPage.ValidateThePage(Constants.SAtool);
       await macrosAdminPage.ValidateThePage(Constants.AStool);
     } finally {
       console.log("Test Case Executed Successfully");
@@ -268,14 +275,25 @@ describe("P.Tool Migration - ", () => {
   ///Test Case 2245445: [P.Tool Migration] Ensure app side pane rail is still rendered even if there is only one pane loaded.
   /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2245445
   ///</summary>
-  it.skip("Test Case 2245445: [P.Tool Migration] Ensure app side pane rail is still rendered even if there is only one pane loaded.", async () => {
+  it("Test Case 2245445: [P.Tool Migration] Ensure app side pane rail is still rendered even if there is only one pane loaded.", async () => {
     agentPage = await agentContext.newPage();
     try {
       //Login as 'Admin automated' and redirected to OrgUrl
       await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.AdminAccountEmail2,
+        TestSettings.AdminAccountEmail3,
         TestSettings.AdminAccountPassword
       );
+      await adminStartPage.goToCustomerServiceAdmincenter();
+      // AppProfile with OneApps ProductivityPane
+      const appProfileTest3 = appProfileNames.appProfileTest3
+      await macrosAdminPage.OpenappProfile(appProfileTest3)
+      const booleanvalue = await macrosAdminPage.validatePane();
+      if (booleanvalue) {
+        await macrosAdminPage.EnableOneAppsInProductivityPane();
+      } else {
+        console.log("pane is already enabled")
+      }
+      await macrosAdminPage.openAppLandingPage(adminPage);
       await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
       await macrosAdminPage.InitiateSession(
         Constants.CaseTitleName,
@@ -361,63 +379,47 @@ describe("P.Tool Migration - ", () => {
     try {
       //Login as 'Admin automated' and redirected to OrgUrl
       await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.AdminAccountEmail5,
+        TestSettings.AdminAccountEmail6,
         TestSettings.AdminAccountPassword
       );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-      await macrosAdminPage.createCase(Constants.CaseTitleName);
-      //Create app profile and Add Users and Session
-      await macrosAdminPage.openAppLandingPage(adminPage);
       await adminStartPage.goToCustomerServiceAdmincenter();
-      await macrosAdminPage.createAppProfile();
-      await macrosAdminPage.AddUsers(TestSettings.InboxUser5);
-      await macrosAdminPage.AddEntitySession(
-        Constants.SessionTemplateinPowerApps
-      );
-      await macrosAdminPage.EnableProductivityPane();
-      //Initiate session and validate
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToCustomerServiceWorkspace();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
-      await macrosAdminPage.ClickProductivityPaneTool(Constants.AStool);
-      await macrosAdminPage.ValidateThePage(Constants.AStool);
-      await macrosAdminPage.ClickProductivityPaneTool(Constants.SAtool);
-      await macrosAdminPage.ValidateThePage(Constants.SAtool);
-      //delete app profile
-      await macrosAdminPage.deleteAppProfile(adminPage, adminStartPage);
-      //Create new app profile
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToCustomerServiceAdmincenter();
-      await macrosAdminPage.createAppProfile();
-      await macrosAdminPage.AddUsers(TestSettings.InboxUser5);
-      await macrosAdminPage.AddEntitySession(
-        Constants.SessionTemplateinPowerApps
-      );
-      await macrosAdminPage.EnableOneAppsInProductivityPane();
-      //Initiate session and validate
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToCustomerServiceWorkspace();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await macrosAdminPage.ValidateThePage(Constants.AStool);
+      const appProfileTest6 = appProfileNames.appProfileTest6
+      await macrosAdminPage.OpenappProfile(appProfileTest6)
+      const booleanvalue = await macrosAdminPage.validatePane();
+      if (booleanvalue) {
+        await macrosAdminPage.AddEntitySession(
+          Constants.SessionTemplateinPowerApps
+        );
+        await macrosAdminPage.EnableProductivityPane();
+        //Initiate session and validate
+        await macrosAdminPage.openAppLandingPage(adminPage);
+        await adminStartPage.goToCustomerServiceWorkspace();
+        await macrosAdminPage.CreateCaseInCSW(Constants.CaseTitleName);
+        await macrosAdminPage.InitiateSession(
+          Constants.CaseTitleName,
+          Constants.CaseLink1
+        );
+        await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
+        await macrosAdminPage.ClickProductivityPaneTool(Constants.AStool);
+        await macrosAdminPage.ValidateThePage(Constants.AStool);
+        await macrosAdminPage.ClickProductivityPaneTool(Constants.SAtool);
+        await macrosAdminPage.ValidateThePage(Constants.SAtool);
+      } else {
+        console.log("pane is already enabled")
+        await macrosAdminPage.openAppLandingPage(adminPage);
+        await adminStartPage.goToCustomerServiceWorkspace();
+        await macrosAdminPage.CreateCaseInCSW(Constants.CaseTitleName);
+        await macrosAdminPage.InitiateSession(
+          Constants.CaseTitleName,
+          Constants.CaseLink1
+        );
+        await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
+        await macrosAdminPage.ClickProductivityPaneTool(Constants.AStool);
+        await macrosAdminPage.ValidateThePage(Constants.AStool);
+        await macrosAdminPage.ClickProductivityPaneTool(Constants.SAtool);
+        await macrosAdminPage.ValidateThePage(Constants.SAtool);
+      }
     } finally {
-      await macrosAdminPage.maximizeDeleteAppProfile(
-        adminPage,
-        adminStartPage,
-        Constants.AppProfileName1,
-        Constants.AppProfileNameLink1
-      );
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName
-      );
     }
   });
 
@@ -447,5 +449,60 @@ describe("P.Tool Migration - ", () => {
 
     //Validate Teams is not hidden
     await macrosAdminPage.ValidateThePage(Constants.MSTeamstool);
+  });
+
+  ///<summary>
+  ///Test Case 2245437: [P.Tool Migration] Ensure the specific productivity tools that are disabled in APM are not displayed in CSW app.
+  /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2245437
+  ///</summary>
+  it("Test Case 2245437: [P.Tool Migration] Ensure the specific productivity tools that are disabled in APM are not displayed in CSW app.", async () => {
+    agentPage = await agentContext.newPage();
+    rnd = agentScriptAdminPage.RandomNumber();
+    try {
+      //Login as 'Admin automated' and redirected to OrgUrl
+      await adminStartPage.navigateToOrgUrlAndSignIn(
+        TestSettings.AdminAccountEmail5,
+        TestSettings.AdminAccountPassword
+      );
+      await adminStartPage.goToCustomerServiceAdmincenter();
+      const appProfileTest5 = appProfileNames.appProfileTest5;
+      await macrosAdminPage.OpenappProfile(appProfileTest5);
+      const booleanvalue = await macrosAdminPage.validatePane();
+      if (booleanvalue) {
+        await macrosAdminPage.EnableTwoAppsInProductivityPane();
+        await macrosAdminPage.openAppLandingPage(adminPage);
+        await adminStartPage.goToCustomerServiceWorkspace();
+        await adminStartPage.waitForDomContentLoaded();
+        await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+        await macrosAdminPage.waitForTimeout();// to load the page completely
+        var CaseUserName = Constants.CaseTitleName
+        caseNameList = [CaseUserName];
+        await macrosAdminPage.createIncidents(agentChat, caseNameList);
+        await macrosAdminPage.InitiateSession(
+          Constants.CaseTitleName,
+          Constants.CaseLink1
+        );
+        await macrosAdminPage.ValidateThePage(Constants.SAtool);
+        await macrosAdminPage.ValidateThePage(Constants.AStool);
+      } else {
+        console.log("pane is already enabled")
+        await macrosAdminPage.openAppLandingPage(adminPage);
+        await adminStartPage.goToCustomerServiceWorkspace();
+        await adminStartPage.waitForDomContentLoaded();
+        await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+        await macrosAdminPage.waitForTimeout();// to load the page completely
+        var CaseUserName = Constants.CaseTitleName
+        caseNameList = [CaseUserName];
+        await macrosAdminPage.createIncidents(agentChat, caseNameList);
+        await macrosAdminPage.InitiateSession(
+          Constants.CaseTitleName,
+          Constants.CaseLink1
+        );
+        await macrosAdminPage.ValidateThePage(Constants.SAtool);
+        await macrosAdminPage.ValidateThePage(Constants.AStool);
+      }
+    } finally {
+      console.log("Test Case Executed Successfully");
+    }
   });
 });
