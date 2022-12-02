@@ -4669,6 +4669,8 @@ export class Macros extends BasePage {
   }
 
   public async enableNewLayout() {
+    await this.adminPage.waitForLoadState();
+    await this.adminPage.waitForFunction(() => (window as any).UCWorkBlockTracker?.isAppIdle());
     await this.adminPage.evaluate(
       async () => {
         var context = await (window as any).Xrm.Utility.getGlobalContext().saveSettingValue("msdyn_MultiSessionLayoutImprovements", true);
@@ -4839,6 +4841,8 @@ export class Macros extends BasePage {
   }
 
   public async disableNewLayout() {
+    await this.adminPage.waitForLoadState();
+    await this.adminPage.waitForFunction(() => (window as any).UCWorkBlockTracker?.isAppIdle());
     await this.adminPage.evaluate(
       async () => {
         var context = await (window as any).Xrm.Utility.getGlobalContext().saveSettingValue("msdyn_MultiSessionLayoutImprovements", false);

@@ -574,7 +574,7 @@ export class Constants {
   static LookupCustomerField = `[aria-label="Search records for Customer, Lookup field"]`;
   static TaskCustomer = '(//span[text()="A. Datum Corporation (sample)"]/following-sibling::span)';
   static Convert = `[aria-label="Convert"]`;
-  static TaskToCaseValidation = "//*[contains(text(),'created by')]";
+  static TaskToCaseValidation = `[title="Completed Task"]`;
   static ResolveCaseBtn = `[aria-label="Resolve Case"]`;
   static Resolution = `[aria-label="Resolution"]`;
   static ResolutionName = `Case Resolution`;
@@ -791,7 +791,7 @@ export class Constants {
   static CaseStatusInformationProvided = `//*[text()="Information Provided"]`;
   static FirstAutoPost = `(//*[text()="Auto-post:"])[1]`;
   static CaseResolved = `//label[text()='Case Resolution']`;
-  static CaseCreated = `//div[text()=' created by ']`;
+  static CaseCreated = `//div[text()=' for contact ']`;
   static CaseClosed = `//div[text()=' closed by ']`;
   static ResolveCaseButton = `(//span[contains(.,'Resolve Case')])[1]`;
   static CancleCaseBtn = `[aria-label="Cancel Case"]`;
@@ -1402,6 +1402,7 @@ export class Constants {
   static OpenRecordInTask = `//span[contains(@class,'symbolFont OpenEntityRecord-symbol')]`;
   static CloseTaskTab = `//div[@title='Close the tab']`;
   static ThreeThousandsMiliSeconds = 3000;
+  static CanceledCase = `//*[contains(text(),"Canceled Case Resolution")]`;
   static CloseSessionPopUp = `[data-id="dialogTitleText"]`;
   static NewUI = `&flags=FCB.MultiSessionLayoutImprovements%3dtrue`;
   static ValidateTab = `//div[@id='session-id-1']`;

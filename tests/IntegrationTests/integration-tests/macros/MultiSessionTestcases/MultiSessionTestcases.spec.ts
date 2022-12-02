@@ -315,7 +315,7 @@ describe("Multi Session - ", () => {
 
     //Cancel case and validate
     await macrosAdminPage.CancelCase();
-    await macrosAdminPage.ValidateTimeLine(Constants.CaseClosed);
+    await macrosAdminPage.ValidateTimeLine(Constants.CanceledCase);
     await macrosAdminPage.ReactivateCase();
   });
 
@@ -326,7 +326,7 @@ describe("Multi Session - ", () => {
   it("Test Case 1942194: [Multi Session][Productivity Pane] Productivity pane maintains collapsed state during session switch events", async () => {
     rnd = agentScriptAdminPage.RandomNumber();
     await agentChat.navigateToOrgUrlAndSignIn(
-      TestSettings.AdminAccountEmail,
+      TestSettings.MultiSessionEmail,
       TestSettings.AdminAccountPassword
     );
 
@@ -334,7 +334,7 @@ describe("Multi Session - ", () => {
     await agentChat.waitforTimeout();
 
     //To enable new layout improvements
-    await macrosAdminPage.enableLayoutImprovements(adminPage);
+    await macrosAdminPage.enableNewLayout();
 
     var CaseUserName = Constants.XRMCaseName + rnd;
     var CaseUserName2 = Constants.XRMCaseName2 + rnd;
@@ -359,7 +359,7 @@ describe("Multi Session - ", () => {
     //Validate that Productivity pane maintains collapsed state during session switch events
     await macrosAdminPage.SwitchBackToPreviousSession(stringFormat(Constants.XRMSpecificCaseLink1, rnd));
     await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
-    await macrosAdminPage.disableLayoutImprovements(adminPage);
+    await macrosAdminPage.disableNewLayout();
   });
 
   ///<summary>
