@@ -1409,6 +1409,16 @@ export class Constants {
   static ViewRecordLocator = `//div[@role='button']//p[text()='View Record']`;
   static TaskLink = `//div[@title= '{0}']`;
   static PhoneCall = `//li[contains(@id,'phonecall')]`;
+  static GlobalSearchBox = `//input[@id='GlobalSearchBox']`;
+  static ValidationOfRecord = `//button[@title='Case For Automation']`;
+  //Quick create Case
+  static quickCreatelauncher = `[id= 'quickCreateLauncher_buttoncrm_header_global$button']`;
+  static QuickCreateCaseButton = `//button[contains(@data-id,'quickCreateMenuButton_incident')]`;
+  static CustomerAccountLookup = `//input[contains(@id,'customerid.fieldControl-LookupResultsDropdown_customerid')]`;
+  static CustomerSearchIcon = `(//button[@aria-label='Search records for Customer, Lookup field'])[2]`;
+  static CustomerLookupResults = `//ul[@aria-label='Lookup results']/li[1]`;
+  static QuickCaseTitle = `(//input[@aria-label='Case Title'])[2]`;
+  static TimelineTile = `//h3[@id='action_bar_header_titlenotescontrol']`;
   static Enter = `Enter`;
   static CloneRecordAgentScriptName = `CloneRecordAgentScript`;
   static CloneRecordMacroName = `CloneRecordMacro`;

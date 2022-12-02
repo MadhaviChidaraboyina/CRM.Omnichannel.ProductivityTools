@@ -5060,6 +5060,54 @@ export class Macros extends BasePage {
     );
   }
 
+  public async verifyRecordInGlobalSearch(GlobalCaseTitleName: string) {
+    await this.adminPage.fill(Constants.GlobalSearchBox, GlobalCaseTitleName);
+    await this.adminPage.locator(Constants.GlobalSearchBox).press('Enter');
+    await this.adminPage.waitForSelector(Constants.ValidationOfRecord);
+    await this.adminPage.click(Constants.ValidationOfRecord);
+    await this.adminPage.waitForSelector(Constants.ValidateTab, {
+      timeout: Constants.FourThousandsMiliSeconds,
+    });
+    const PageValidate = await this.adminPage.isVisible(Constants.ValidateTab);
+    expect(PageValidate).toBeTruthy();
+  }
+
+  public async verifyViewRecord() {
+    await this.adminPage.waitForSelector(Constants.ViewRecordLocator);
+    await this.adminPage.click(Constants.ViewRecordLocator);
+    try {
+      await this.adminPage.waitForSelector(Constants.ValidateTab);
+      return true
+    } catch {
+      return false
+    }
+  }
+
+  public async quickCreateCaseInCSW(CaseName: any) {
+    await this.adminPage.waitForSelector(Constants.quickCreatelauncher)
+    await this.adminPage.locator(Constants.quickCreatelauncher).click();
+    await this.adminPage.locator(Constants.QuickCreateCaseButton).click();
+    await this.adminPage.locator(Constants.CustomerAccountLookup).click();
+    await this.adminPage.locator(Constants.CustomerSearchIcon).click();
+    await this.adminPage.locator(Constants.CustomerLookupResults).click();
+    await this.adminPage.waitForSelector(Constants.QuickCaseTitle, {
+      timeout: 10000,
+    });
+    await this.adminPage.fill(Constants.QuickCaseTitle, CaseName);
+    await this.adminPage.click(Constants.SaveAndClose);
+  }
+
+  public async verifyViewTabRecord(caselink: string) {
+    await this.adminPage.waitForSelector(Constants.ViewRecordLocator);
+    await this.adminPage.click(Constants.ViewRecordLocator);
+    try {
+      await this.adminPage.waitForSelector(caselink);
+      return true
+    } catch {
+      return false
+    }
+  }
+
   public async getLatestMacro(agentChat: any, macroName: string) {
     const getMacro = await agentChat.getLatestMacro(macroName);
     var workflowid = getMacro[0].workflowid
@@ -5081,7 +5129,7 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.SaveAndCloseButton);
   }
 
-  
+
   public async executeScript(script: string) {
     return await this.Page.evaluate((scr) => {
       return eval(scr);
