@@ -1287,7 +1287,7 @@ export class Constants {
   static WebResourceTitle = `(//span[contains(.,'Automation Case')])`;
   static ExistingRecordAgentScriptName = `ExistingRecordAgentScript`;
   static ExistingRecordMacroName = `ExistingRecordMacro`;
-  static ExistingRecordTitle = `(//span[contains(.,'Automation Case')])`;
+  static ExistingRecordTitle = `//span[contains(.,'TestAccount')]`;
   static DraftEmailAgentScriptName = `DraftEmailAgentScript`;
   static DraftEmailMacroName = `DraftEmailMacro`;
   static DraftEmailTitle = `(//span[contains(.,'Automation Case')])`;
@@ -1299,7 +1299,7 @@ export class Constants {
   static OpenNewFormTitle = `(//span[contains(.,'Automation Case')])`;
   static OpenKBSearchAgentScriptName = `OpenKBSearchAgentScript`;
   static OpenKBSearchMacroName = `OpenKBSearchMacro`;
-  static OpenKBSearchTitle = `(//span[contains(.,'Automation Case')])`;
+  static OpenKBSearchTitle = `//span[contains(.,'msdyn_kbsearchpagehost.html')]`;
   static OpenExistingFormAgentScriptName = `OpenExistingFormAgentScript`;
   static OpenExistingFormMacroName = `OpenExistingFormMacro`;
   static OpenExistingFormTitle = `(//span[contains(.,'Automation Case')])`;
@@ -1425,6 +1425,17 @@ export class Constants {
   static CloneRecordTitle = `//span[contains(.,'New Case')]`;
   static LinkStart = `//*[text()="`;
   static LinkEnd = `"]`;  
+  static EntityListAgentScriptName = `EntityListAgentScript`;
+  static EntityListMacroName = `EntityListMacro`;
+  static EntityListTitle = `//span[contains(.,'EntityListApplicationTab')]`;
+  static EntityListName = `//span[text()='entityName']/following::div[contains(@role,'gridcell')]`;
+  static EntityListText = `//input[contains(@class,'wj-grid-editor wj-form-control')]`;
+  static EntityListValue = `account`;
+  static WebResourceData = `(//span[text()='data']/following::div[contains(@role,'gridcell')])[1]`;
+  static WebResourceText = `//input[contains(@class,'wj-grid-editor wj-form-control')]`;
+  static WebResourceDataValue = `contoso`;
+  static EntityViewText = `//input[contains(@class,'wj-grid-editor wj-form-control')]`;
+  static EntityViewName = `//span[text()='searchText']/following::div[contains(@role,'gridcell')]`;
 }
 
 export enum EntityNames {

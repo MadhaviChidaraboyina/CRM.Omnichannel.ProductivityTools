@@ -173,54 +173,6 @@ describe("Live Chat - ", () => {
         }
     });
 
-    ///<summary>
-    ///Test Case 2366971: [Macros] Verify existing record is opened  using 'Open an existing record' action in the Productivity Automation.
-    /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_testPlans/execute?planId=2532163&opId=3593&suiteId=2532167
-    ///</summary>
-    it("Test Case 2366971: [Macros] Verify existing record is opened using 'Open an existing record' action in the Productivity Automation.", async () => {
-        agentPage = await agentContext.newPage();
-        const agentStartPage = new OrgDynamicsCrmStartPage(agentPage);
-        liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-        const agentChat = new AgentChat(agentPage);
-        try {
-            //Login as admin and create macro
-            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.MacrosAgentEmail, TestSettings.AdminAccountPassword);
-            await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-            const accountId = await macrosAdminPage.createAccountAndGetId(Constants.AccountName);
-            await macrosAdminPage.openAppLandingPage(adminPage);
-            await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
-            await macrosAdminPage.createMacro(Constants.ExistingRecord, accountId);
-
-            //Initiate live chat with agent
-            await macrosAdminPage.initiateLiveChatWithAgent(liveChatPage);
-
-            //Login as agent and accept chat
-            await macrosAdminPage.loginAsAgentAndOpenOmnichannelForCS(TestSettings.MacrosAgentEmail, agentStartPage, agentChat);
-            await macrosAdminPage.acceptLiveChatAsAgent(liveChatPage, agentChat);
-
-            //Check API response through console
-            const result = await agentPage.evaluate(async () => {
-                const ctrl = await (window as any).Microsoft.ProductivityMacros.runMacro("Open an existing record");
-                return ctrl;
-            });
-            expect(result).toBe(Constants.ActionPerformedSuccessfully);
-
-            //Check API result on UI
-            const openEntityListResult = await macrosAdminPage.verifyOpenedTab(agentPage, Constants.EntityRecordTab);
-            expect(openEntityListResult).toBeTruthy();
-
-            //End live chat
-
-            await agentChat.closeUnusedChat();
-            await liveChatPage.closeChat();
-        }
-        finally {
-            await macrosAdminPage.deleteMacro(adminStartPage, Constants.ExistingRecord);
-            await macrosAdminPage.deleteAccount(adminPage, adminStartPage, Constants.AccountName);
-        }
-    });
-
-
     /// <summary>
     /// TC 1580682:- Verify DraftEmail macro action
     /// </summary>

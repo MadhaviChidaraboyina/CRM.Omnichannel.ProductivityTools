@@ -81,7 +81,7 @@ export class Macros extends BasePage {
         );
         break;
 
-      case Constants.OpenKBSearch:
+      case Constants.OpenKBSearchMacroName:
         await iframeChild.click(Constants.SearchKnowledgeArticleBasedOnPhrase);
         await iframeChild.fill(
           Constants.SearchStringField,
@@ -94,7 +94,7 @@ export class Macros extends BasePage {
         await iframeChild.fill(Constants.EntityRecordIdField, params[0]);
         break;
 
-      case Constants.OpenNewAccount:
+      case Constants.OpenNewFormMacroName:
         await iframeChild.click(Constants.OpenNewForm);
         await iframeChild.fill(
           Constants.EntityLogicalNameField,
@@ -154,7 +154,7 @@ export class Macros extends BasePage {
         );
         break;
 
-      case Constants.OpenWebResource:
+      case Constants.WebResourceMacroName:
         await iframeChild.click(Constants.OpenApplicationTab);
         await iframeChild.fill(
           Constants.PageTypeInputField,
@@ -225,7 +225,7 @@ export class Macros extends BasePage {
         );
         break;
 
-      case Constants.ExistingRecord:
+      case Constants.ExistingRecordMacroName:
         await iframeChild.click(Constants.OpenExistingRecordForm);
         await iframeChild.fill(Constants.EntityLogicalName, Constants.Account);
         await this.checkAndCloseDynamicContentPopUp(iframeChild);
@@ -357,6 +357,18 @@ export class Macros extends BasePage {
         await iframeChild.fill(
           Constants.AttributeValue1InputField,
           Constants.AttributeValueControl
+        );
+        break;
+      case Constants.EntityListMacroName:
+        await iframeChild.click(Constants.OpenApplicationTab);
+        await iframeChild.fill(
+          Constants.PageTypeInputField,
+          Constants.EntityList
+        );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(
+          Constants.ApplicationTemplateIdInputField,
+          params[0]
         );
         break;
     }
@@ -707,13 +719,18 @@ export class Macros extends BasePage {
   }
 
   public async createAccountAndGetId(name: string) {
+    await this.adminPage.waitForSelector(Constants.AccountsSitemapBtn);
     await this.adminPage.click(Constants.AccountsSitemapBtn);
     await this.adminPage.click(Constants.NewButton);
     await this.adminPage.click(Constants.AccountFieldName);
     await this.adminPage.fill(Constants.AccountFieldName, name);
     await this.adminPage.keyboard.press("Tab");
+    await this.adminPage.waitForSelector(Constants.SaveButton);
     await this.adminPage.click(Constants.SaveButton);
-    return this.getAppIdFromUrl(await this.adminPage.url());
+    await this.adminPage.click(Constants.ThreeDots);
+    await this.adminPage.waitForSelector(Constants.RefreshBtn);
+    await this.adminPage.click(Constants.RefreshBtn);
+    return this.getIdFromUrl(await this.adminPage.url());
   }
 
   public async createApplicationTabAndGetId(
@@ -724,7 +741,7 @@ export class Macros extends BasePage {
     let rnd: any;
     rnd = this.getRandomNumber();
     await this.adminPage.click(Constants.WorkspaceSiteMap);
-    await this.adminPage.waitForTimeout(4000);
+    await this.adminPage.waitForSelector(Constants.ManageApplicationTab);
     await this.adminPage.click(Constants.ManageApplicationTab);
     await this.adminPage.click(Constants.NewButton);
     await this.adminPage.fill(Constants.NameField, name);
@@ -736,7 +753,39 @@ export class Macros extends BasePage {
     );
     await this.adminPage.keyboard.press("Tab");
     await this.adminPage.click(Constants.SaveButton);
+    // Fill the value of entityName in Entity List
+    switch (name) {
+      case Constants.EntityListApplicationTab:
+        await this.adminPage.waitForSelector(Constants.EntityListName);
+        await this.adminPage.click(Constants.EntityListName);
+        await this.adminPage.waitForSelector(Constants.EntityListText);
+        await this.adminPage.fill(
+          Constants.EntityListText,
+          Constants.EntityListValue
+        );
+        break;
+      case Constants.WebResourceApplicationTab:
+        await this.adminPage.waitForSelector(Constants.WebResourceData);
+        await this.adminPage.click(Constants.WebResourceData);
+        await this.adminPage.waitForSelector(Constants.WebResourceText);
+        await this.adminPage.fill(
+          Constants.WebResourceText,
+          Constants.WebResourceDataValue
+        );
+        break;
+      case Constants.EntitySearchApplicationTab:
+        await this.adminPage.waitForSelector(Constants.EntityViewName);
+        await this.adminPage.click(Constants.EntityViewName);
+        await this.adminPage.waitForSelector(Constants.EntityViewText);
+        await this.adminPage.fill(
+          Constants.EntityViewText,
+          Constants.SearchTextValue
+        );
+        break;
+    }
+    await this.adminPage.click(Constants.SaveButton);
     await this.adminPage.click(Constants.RefreshBtn);
+    await this.waitForDomContentLoaded();
     return this.getIdFromUrl(await this.adminPage.url());
   }
 
@@ -4050,8 +4099,10 @@ export class Macros extends BasePage {
     await this.adminPage.waitForSelector(Constants.MacroRunButton);
     await this.adminPage.click(Constants.MacroRunButton);
     await this.waitForDomContentLoaded();
-    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);// It is needed to run Macro
+    // Added constants.five as of now to wait for selector to load
+    await this.waitUntilSelectorIsVisible(entitylisttitle, Constants.Five, this.adminPage);
     const MacroValidate = await this.adminPage.isVisible(entitylisttitle);
+    expect(MacroValidate).toBeTruthy();
     return MacroValidate;
   }
 
