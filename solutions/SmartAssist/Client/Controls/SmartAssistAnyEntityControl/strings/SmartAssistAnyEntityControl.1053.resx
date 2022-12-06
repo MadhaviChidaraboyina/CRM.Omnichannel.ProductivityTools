@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>Post-ID</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>Entitetsnamn</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>Konfiguration av Smart hjälp</value>
   </data>

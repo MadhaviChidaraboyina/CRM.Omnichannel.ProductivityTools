@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>Идентификатор записи</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>Имя сущности</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>Конфигурация интеллектуальной помощи</value>
   </data>

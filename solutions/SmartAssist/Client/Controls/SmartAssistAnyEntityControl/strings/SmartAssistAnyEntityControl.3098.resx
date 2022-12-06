@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>ID записа</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>Име ентитета</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>SA конфигурација</value>
   </data>

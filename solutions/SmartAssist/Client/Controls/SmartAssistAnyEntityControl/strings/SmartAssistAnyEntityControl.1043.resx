@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>Record-id</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>Naam van entiteit</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>SA-configuratie</value>
   </data>

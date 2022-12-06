@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>ID d’enregistrement</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>Nom de l’entité</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>Configuration Assistance intelligente</value>
   </data>

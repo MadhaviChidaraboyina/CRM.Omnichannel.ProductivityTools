@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>Ідентифікатор запису</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>Ім’я сутності</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>Конфігурація інтелектуальної підтримки</value>
   </data>

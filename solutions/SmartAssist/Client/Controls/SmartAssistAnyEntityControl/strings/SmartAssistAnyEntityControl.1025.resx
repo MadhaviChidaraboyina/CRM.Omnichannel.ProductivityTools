@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>معرّف السجل</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>اسم الكيان</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>تكوين SA</value>
   </data>

@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>ID bản ghi</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>Tên thực thể</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>Cấu hình Hỗ trợ thông minh</value>
   </data>

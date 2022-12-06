@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>ID Rekaman</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>Nama Entitas</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>Konfigurasi SA</value>
   </data>

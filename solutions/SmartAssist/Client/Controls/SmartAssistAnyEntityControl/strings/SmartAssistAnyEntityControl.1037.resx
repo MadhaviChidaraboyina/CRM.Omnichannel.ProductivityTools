@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>מזהה רשומה</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>שם ישות</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>תצורת SA</value>
   </data>

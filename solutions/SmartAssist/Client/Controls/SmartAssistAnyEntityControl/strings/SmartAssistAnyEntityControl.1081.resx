@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>रिकॉर्ड Id</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>निकाय का नाम</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>SA कॉन्फ़िगरेशन</value>
   </data>

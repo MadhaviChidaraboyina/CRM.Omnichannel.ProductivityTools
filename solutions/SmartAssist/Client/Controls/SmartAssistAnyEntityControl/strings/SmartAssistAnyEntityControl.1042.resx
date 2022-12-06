@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>레코드 ID</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>엔터티 이름</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>SA 구성</value>
   </data>

@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>Įrašo ID</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>Objekto pavadinimas</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>SA konfigūracija</value>
   </data>

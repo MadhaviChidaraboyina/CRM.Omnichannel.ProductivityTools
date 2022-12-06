@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>Жазбаның идентификаторы</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>Нысан аты</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>SA конфигурациясы</value>
   </data>

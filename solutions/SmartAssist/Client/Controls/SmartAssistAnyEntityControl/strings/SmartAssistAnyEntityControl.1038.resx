@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>Rekordazonosító</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>Entitás neve</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>SA-konfiguráció</value>
   </data>

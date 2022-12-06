@@ -126,6 +126,9 @@
   <data name="CC_RecordId" xml:space="preserve">
     <value>รหัสเรกคอร์ด</value>
   </data>
+  <data name="CC_EntityName" xml:space="preserve">
+    <value>ชื่อเอนทิตี</value>
+  </data>
   <data name="CC_SAConfig" xml:space="preserve">
     <value>การกำหนดค่า SA</value>
   </data>
