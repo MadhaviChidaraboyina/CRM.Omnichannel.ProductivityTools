@@ -165,8 +165,7 @@ describe("Macro testcases - ", () => {
       Constants.MacroAgentScriptStep,
       agentScript.id,
       Constants.ControlMacroName,
-      workflowID
-    );
+          workflowID);
 
     await macrosAdminPage.OpenAgentScriptandSave(
       Constants.ControlAgentScriptName
@@ -236,8 +235,7 @@ describe("Macro testcases - ", () => {
       Constants.MacroAgentScriptStep,
       agentScript.id,
       Constants.ThirdPartyWebsiteMacroName,
-      workflowID
-    );
+          workflowID);
 
     await macrosAdminPage.OpenAgentScriptandSave(
       Constants.ThirdPartyWebsiteAgentScriptName

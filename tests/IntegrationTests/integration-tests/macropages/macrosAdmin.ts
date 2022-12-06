@@ -5229,17 +5229,6 @@ export class Macros extends BasePage {
     return await this.createRecord(EntityNames.Incident, createRequestObj);
   }
 
-  public async verifyViewTabRecord(caselink:string) {
-    await this.adminPage.waitForSelector(Constants.ViewRecordLocator);
-    await this.adminPage.click(Constants.ViewRecordLocator);
-    try {
-      await this.adminPage.waitForSelector(caselink);
-      return true
-    } catch {
-      return false
-    }
-  }
-
   public async createAppointmentinTimeline() {
     await this.adminPage.locator(Constants.TimelineAddButton).click();
     await this.adminPage.waitForSelector(AgentChatConstants.CreateNewAppointmentRecord);
@@ -5281,5 +5270,20 @@ export class Macros extends BasePage {
 
   public async deletAgentScriptStepByXRM(agentChat: any, entityName: string, id: string) {
     await agentChat.deleteRecordbyXRM(entityName, id);
+  }
+
+  public async verifyEmailOpenedInNewAppTab() {
+    await this.adminPage.waitForSelector(Constants.AddButton);
+    await this.adminPage.click(Constants.AddButton);
+    await this.adminPage.waitForSelector(Constants.EmailActivity);
+    await this.adminPage.click(Constants.EmailActivity);
+
+    //Validating tab title to ensure email is opened in new app tab
+    await this.adminPage.waitForSelector(Constants.NewMail);
+    const PageValidate = await this.adminPage.isVisible(Constants.NewMail);
+    await this.adminPage.waitForSelector(Constants.EmailSubject);
+    await this.adminPage.fill(Constants.EmailSubject, Constants.GreetingsSubject);
+    await this.adminPage.click(Constants.SaveEmailBtn);
+    return PageValidate;
   }
 }

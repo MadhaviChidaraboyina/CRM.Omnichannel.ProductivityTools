@@ -1436,6 +1436,9 @@ export class Constants {
   static WebResourceDataValue = `contoso`;
   static EntityViewText = `//input[contains(@class,'wj-grid-editor wj-form-control')]`;
   static EntityViewName = `//span[text()='searchText']/following::div[contains(@role,'gridcell')]`;
+  static EmailActivity = `//li[@aria-label="Email Activity"]`;
+  static EmailSubject =`//input[@aria-label="Subject"]`;
+  static GreetingsSubject = "Greetings";
 }
 
 export enum EntityNames {
