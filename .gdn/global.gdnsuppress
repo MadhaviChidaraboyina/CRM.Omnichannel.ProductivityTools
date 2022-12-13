@@ -13704,35 +13704,35 @@
       "expirationDate": null,
       "type": null
     },
-    "a617e5a15e98277e207209553343667bd1641853cd46d5b2ac02735613f29fe9": {
-      "signature": "a617e5a15e98277e207209553343667bd1641853cd46d5b2ac02735613f29fe9",
+    "2379ac01ff7c95c8136a88f076db08ad29d2f336134ca8045ba1a8bd4960a092": {
+      "signature": "2379ac01ff7c95c8136a88f076db08ad29d2f336134ca8045ba1a8bd4960a092",
       "alternativeSignatures": [
-        "85f94e658ca18ea1a67ec5b019a0d56bf18ebcb0a412a8dbc72c70beebba1065"
+        "e5308b6e4ed539ffc6fe9d6929ad7bfd68a5aa7f00d76cf3a40edb7d956c3213"
       ],
-      "target": "packages/Microsoft.Dynamics.XrmSolutions.Tools.1.1.1126/tools/PackageScopeQuery/System.IdentityModel.Tokens.Jwt.dll",
+      "target": "packages/Microsoft.Dynamics.XrmSolutions.Tools.1.1.1127/tools/PackageScopeQuery/System.IdentityModel.Tokens.Jwt.dll",
       "memberOf": [
         "default"
       ],
       "tool": "binskim",
       "ruleId": "BA2004",
       "justification": null,
-      "createdDate": "2022-12-07 00:42:40Z",
+      "createdDate": "2022-12-12 21:26:16Z",
       "expirationDate": null,
       "type": null
     },
-    "5426c2a4dc29bc9185c6f892c72de6aca8ddf3f3453e062de65e0b2de5b20842": {
-      "signature": "5426c2a4dc29bc9185c6f892c72de6aca8ddf3f3453e062de65e0b2de5b20842",
+    "32c271a196814efae96b62dd936b6ca738f940d7d4a8157bc0da49636a2d5f42": {
+      "signature": "32c271a196814efae96b62dd936b6ca738f940d7d4a8157bc0da49636a2d5f42",
       "alternativeSignatures": [
-        "467e46bfc06d368d3c06bd273325f027b19fbfab5ab8eda26dea7a909e0e321d"
+        "4473de10d6ae53675eae2d38e325d4b0a76bc48dbb9aa2d6eed62570489505f6"
       ],
-      "target": "packages/Microsoft.Dynamics.XrmSolutions.Tools.1.1.1126/tools/PackageScopeQuery/System.IdentityModel.Tokens.Jwt.dll",
+      "target": "packages/Microsoft.Dynamics.XrmSolutions.Tools.1.1.1127/tools/PackageScopeQuery/System.IdentityModel.Tokens.Jwt.dll",
       "memberOf": [
         "default"
       ],
       "tool": "binskim",
       "ruleId": "BA2022",
       "justification": null,
-      "createdDate": "2022-12-07 00:42:40Z",
+      "createdDate": "2022-12-12 21:26:16Z",
       "expirationDate": null,
       "type": null
     },
