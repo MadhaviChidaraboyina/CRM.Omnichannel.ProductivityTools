@@ -87,6 +87,7 @@ export enum SelectorConstants {
   SignInNextButton = '#idSIButton9',
   SignInPasswordInput = '#i0118',
   SignInSignInButton = '#idSIButton9',
+  StaySignedInPopup = `[data-bind="text: str['STR_Kmsi_Title']"]`,
   SignInNoSaveButton = "input[id='idBtn_Back']",
   ModernAdminHome = '#sitemap-entity-NewSubArea_ebcf6d76',
   ApplicationShell = '#ApplicationShell',
@@ -765,6 +766,8 @@ export enum SelectorConstants {
   PushPickBasedStreamSelector = "//div[contains(@data-id,'msdyn_enableselectingfrompushbasedworkstreams.fieldControl_container')]//a[@class='ui-flipswitch-on ui-btn ui-shadow ui-btn-inherit']",
   SurveyStartChatButton = `//*[@id="oclcw-survey-placeholder"]//*[@class="ac-actionSet"]/button`,
   OperatingHourEntityrecordQueue = 'EarlyOHQUeue',
+  GetstartedPopup = `//*[contains(text(),'Get started with our live demos!')]`,
+  CancelGetstarted = `[data-icon-name="Cancel"]`,
 
   // Automated Messages
   ContinueConversation = "//*[contains(@aria-label,'Continue conversation')]",
@@ -2326,6 +2329,7 @@ export enum AgentCosultConversationPageConstants {
   ConsultPopup = "//*[@id='ccmessagebody']/div[2]/div",
 }
 
+
 export enum Constants {
   HomePageText = 'Dynamics 365',
   LiveChat = 'LiveChat',
@@ -2339,6 +2343,7 @@ export enum Constants {
   Gmt530Timezone = '(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi',
   Gmt600Timezone = '(GMT-06:00) Central Time (US & Canada)',
   DomContentLoaded = 'domcontentloaded',
+  Networkidle = `"networkidle`,
   InboxCloseChat = "button.close-button",
   OrgUrl = 'OrgUrl',
   ChatIndex = "//ul[@id='session-list-id']/li[{0}]",
@@ -2473,7 +2478,7 @@ export enum Constants {
   FirstContactSelect = "label[id='MscrmControls.Containers.RelevanceSearchControl-ResultLine0-0']>label",
   LinkConversation = "span[aria-label='Link to Conversation']",
   RejectTitle = 'Reject',
-  HomeButton = "li[id*='sessionContainer-session-id'] span[title='Home']",
+  HomeButton = '[aria-label="Home"]',
   PlusSymbol = "img[src*='middle%22%20fill%3D%22%23FFF%22%3E%2B%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E']",
   OpenedActiveChat = "li[id*='sessionContainer-session-id'] img",
   AgentChatDataMasking = "//div[@class='webchat__send-box-text-box__text-area-box']/preceding::div[@class='webchat__bubble__content'][1]/div/div[1]/following::div[1]",
@@ -2985,7 +2990,9 @@ export enum EntityNames {
   AgentScript = 'msdyn_productivityagentscript',
   AgentScriptStep = `msdyn_productivityagentscriptstep`,
   EmailTemplate = `template`,
-  Macros = `workflow`
+  Macros = `workflow`,
+  ApplicationTabTemplate = `msdyn_applicationtabtemplate`,
+  Session = `msdyn_sessiontemplate`,
 }
 
 export enum EntityAttributes {
@@ -3076,6 +3083,51 @@ export enum Queues {
   WeChatPWQueue = 'WeChatPWQueue',
   DirectLineQueue = 'AutomationPlaywrightDirectLineQueue',
   LiveChatPWOOOHQueue = 'LiveChatPWOOOHQueue',
+}
+
+export enum ExpressionBuilderProperties {
+  MsdynName = 'msdyn_name',
+  MsdynUniquename = 'msdyn_uniquename',
+  MsdynEntity = 'msdyn_entity',
+  MsdynExpression = 'msdyn_enablebuildexpression',
+  MsdynExpressiondata = 'msdyn_expressiondata',
+  
+  Definition = 'definition',
+  Schema = 'schema',
+  SchemaDolar = '$schema',
+  SchemaValue = 'schema',
+  Actions = 'actions',
+  ACTIONS = 'ACTIONS',
+  Condition = 'Condition',
+  Type = 'type',
+  If = 'If',
+  Expression = 'expression',
+  And = 'and',
+  Equals = 'equals',
+  Set_default_agent_script = "Set_default_agent_script",
+  Setcallscript  = 'setcallscript',
+  Kind = 'kind',
+  Inputs = "inputs",
+  CallscriptId = "callscriptId",
+  RunAfter = "runAfter",
+  Else = 'else',
+  Set_default_agent_script_2 = 'Set_default_agent_script_2',
+  Parameters = 'parameters',
+  Authentication = '$authentication',
+  defaultValue = 'defaultValue',
+  SecureObject = 'SecureObject',
+  Start_evaluating_expression  = 'Start evaluating expression',
+  Triggers = "triggers",
+  Start  = 'start',
+  Object_ = 'object',
+  Required = "required",
+  Properties = "properties",
+  Recurrence = "recurrence",
+  Interval = 'interval',
+  Frequency = "frequency",
+  Hour = "Hour",
+  ContentVersion = "contentVersion",
+  ContentVersionValue = "1.0.0.0",
 }
 
 export const stringFormat = (str: string, ...args: any[]) =>

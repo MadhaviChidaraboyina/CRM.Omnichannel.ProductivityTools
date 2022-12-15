@@ -15,18 +15,18 @@ describe("Multi Session - ", () => {
   let adminPage: Page;
   let adminStartPage: OrgDynamicsCrmStartPage;
   let agentPage: Page;
+  let agentChat: AgentChat;
   let agentContext: BrowserContext;
   let liveChatContext: BrowserContext;
   let liveChatPage: LiveChatPage;
   let macrosAdminPage: Macros;
-  let agentChat: AgentChat;
   let rnd: any;
   const agentScriptAdminPage = new AgentScript(adminPage);
   var caseNameList: string[] = [];
 
   beforeAll(async () => {
     await AppProfileHelper.getInstance().CreateAppProfile();
-})
+  });
 
   beforeEach(async () => {
     adminContext = await browser.newContext({
@@ -64,21 +64,18 @@ describe("Multi Session - ", () => {
   it("Test Case 1942189: [Multi Session] Open Customer Service workspace as a Customer Service Manager", async () => {
     agentPage = await agentContext.newPage();
     liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-    try {
-      //Login as admin and create cases
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.MultiSessionEmail,
-        TestSettings.AdminAccountPassword
-      );
-      //Validating Customer Service
-      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-      //await adminStartPage.waitForAgentStatusIcon();
-      await macrosAdminPage.ValidateDashboard(
-        Constants.CustomerServiceManagerDashBoard
-      );
-    } finally {
-      console.log("validation Successfully");
-    }
+
+    //Login as admin
+    await adminStartPage.navigateToOrgUrlAndSignIn(
+      TestSettings.MultiSessionEmail,
+      TestSettings.AdminAccountPassword
+    );
+
+    //Validating Customer Service Dashboard
+    await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+    await macrosAdminPage.ValidateDashboard(
+      Constants.CustomerServiceManagerDashBoard
+    );
   });
 
   ///<summary>
@@ -86,51 +83,44 @@ describe("Multi Session - ", () => {
   ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1945844
   ///</summary>
   it("Test Case 1945844: [Multi Session] Verify the Subject functionality", async () => {
-    agentPage = await agentContext.newPage();
-    liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-    try {
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.MultiSessionEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-      await macrosAdminPage.GoToServiceManagement();
-      await macrosAdminPage.CreateSubjectsFromHub(
-        Constants.SubjectName,
-        Constants.SubjectName2,
-        Constants.SubjectName3
-      );
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-      // await adminStartPage.waitForAgentStatusIcon();
-      //Creating Subjects
-      await macrosAdminPage.CreateCaseForSubjectsInCSW(
-        Constants.CaseTitleName2,
-        Constants.SubjectName
-      );
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName2,
-        Constants.CaseLink2
-      );
-      //validating subject field
-      await macrosAdminPage.ValidateThePage(Constants.CWSSubjectInputField);
-      await macrosAdminPage.ValidateSubjectField();
-      await macrosAdminPage.GoToHome();
-      await macrosAdminPage.InitiateTab(
-        Constants.CaseTitleName2,
-        Constants.CaseLink2
-      );
-      //validating subject field
-      await macrosAdminPage.ValidateThePage(Constants.CWSSubjectInputField);
-      await macrosAdminPage.ValidateSubjectField();
-    } finally {
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName2
-      );
-      await macrosAdminPage.DeleteSubject(adminPage, adminStartPage);
-    }
+    rnd = agentScriptAdminPage.RandomNumber();
+    await adminStartPage.navigateToOrgUrlAndSignIn(
+      TestSettings.MultiSessionEmail,
+      TestSettings.AdminAccountPassword
+    );
+    await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
+
+    await macrosAdminPage.CreateSubjectsFromHub(
+      Constants.SubjectName,
+      Constants.SubjectName2,
+      Constants.SubjectName3
+    );
+    await macrosAdminPage.openAppLandingPage(adminPage);
+    await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+    await adminStartPage.waitForAgentStatusIcon();
+
+    //Creating case
+    await macrosAdminPage.CreateCaseForSubjectsInCSW(
+      Constants.CaseTitleName2 + rnd,
+      Constants.SubjectName
+    );
+    await macrosAdminPage.InitiateSession(
+      Constants.CaseTitleName2 + rnd,
+      stringFormat(Constants.SpecificCaseLink2, rnd)
+    );
+
+    //Validating subject field
+    await macrosAdminPage.ValidateThePage(Constants.CWSSubjectInputField);
+    await macrosAdminPage.ValidateSubjectField();
+
+    await macrosAdminPage.GoToHome();
+    await macrosAdminPage.InitiateTab(
+      Constants.CaseTitleName2 + rnd,
+      stringFormat(Constants.SpecificCaseLink2, rnd)
+    );
+
+    //Validating subject field
+    await macrosAdminPage.ValidateThePage(Constants.CWSSubjectInputField);
   });
 
   ///<summary>
@@ -148,12 +138,12 @@ describe("Multi Session - ", () => {
     await adminStartPage.goToCustomerServiceWorkspace();
     await adminStartPage.waitForDomContentLoaded();
     await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage)
+    await agentChat.waitforTimeout();
 
     var CaseTitleName = Constants.CaseTitleName + rnd
     var CaseTitleName2 = Constants.CaseTitleName2 + rnd
 
     caseNameList = [CaseTitleName, CaseTitleName2];
-
     await macrosAdminPage.createIncidents(agentChat, caseNameList);
 
     //Initiate session and validate
@@ -193,7 +183,8 @@ describe("Multi Session - ", () => {
     );
 
     await agentChat.goToMyApp(Constants.CustomerServiceWorkspace);
-    await agentChat.waitforTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage)
 
     var CaseUserName = Constants.XRMCaseName + rnd;
     caseNameList = [CaseUserName];
@@ -218,39 +209,45 @@ describe("Multi Session - ", () => {
   ///<summary>
   it("Test Case 1946046: [Multi Session] Verify Case Assoication action from Case Grid", async () => {
     agentPage = await agentContext.newPage();
-      //Login as crmadmin
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.MultiSessionEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-      await agentChat.waitforTimeout();
-      const Case1_Child1 = Constants.Case1_Child1
-      const Case1_Child2 = Constants.Case1_Child2
-      const Case2_Child1 = Constants.Case2_Child1
-      const Case2_Child2 = Constants.Case2_Child2
-      const Case1 = Constants.Case1
-      const Case2 = Constants.Case2
-      const Case3 = Constants.Case3
 
-      caseNameList = [Case1_Child1, Case1_Child2, Case2_Child1, Case2_Child2, Case1, Case2, Case3];
-      await macrosAdminPage.createIncidents(agentChat, caseNameList);
-      await macrosAdminPage.GoToCases();
-      //Associate two child cases with one parent case and Valiadte
-      await macrosAdminPage.AssociateCases(
-        Constants.Case1,
-        Constants.DialogText
-      );
-      //Associate two child cases with one parent case and validate
-      await macrosAdminPage.AssociateCases(
-        Constants.Case2,
-        Constants.DialogText
-      );
-      //Associate two child cases with one parent case and validate
-      await macrosAdminPage.AssociateCases(
-        Constants.AssociateCase3,
-        Constants.ErrorDialog
-      );
+    //Login as crmadmin
+    await adminStartPage.navigateToOrgUrlAndSignIn(
+      TestSettings.MultiSessionEmail,
+      TestSettings.AdminAccountPassword
+    );
+    await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage)
+    await agentChat.waitforTimeout();
+
+    const Case1_Child1 = Constants.Case1_Child1
+    const Case1_Child2 = Constants.Case1_Child2
+    const Case2_Child1 = Constants.Case2_Child1
+    const Case2_Child2 = Constants.Case2_Child2
+    const Case1 = Constants.Case1
+    const Case2 = Constants.Case2
+    const Case3 = Constants.Case3
+
+    caseNameList = [Case1_Child1, Case1_Child2, Case2_Child1, Case2_Child2, Case1, Case2, Case3];
+    await macrosAdminPage.createIncidents(agentChat, caseNameList);
+
+    //Associate two child cases with one parent case and Valiadte
+    await macrosAdminPage.AssociateCases(
+      Constants.Case1,
+      Constants.DialogText
+    );
+
+    //Associate two child cases with one parent case and validate
+    await macrosAdminPage.AssociateCases(
+      Constants.Case2,
+      Constants.DialogText
+    );
+
+    //Associate two child cases with one parent case and validate
+    await macrosAdminPage.AssociateCases(
+      Constants.AssociateCase3,
+      Constants.ErrorDialog
+    );
   });
 
   ///<summary>
@@ -266,7 +263,8 @@ describe("Multi Session - ", () => {
     );
 
     await agentChat.goToMyApp(Constants.CustomerServiceWorkspace);
-    await agentChat.waitforTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
 
     var CaseUserName = Constants.XRMCaseName + rnd;
     caseNameList = [CaseUserName];
@@ -285,15 +283,15 @@ describe("Multi Session - ", () => {
 
     //Resolve case and validate
     await macrosAdminPage.ResolveCase(Constants.ResolutionName);
-    await macrosAdminPage.ValidateTimeLine(Constants.ValidateResolveCase);
+    await macrosAdminPage.ValidateThePage(Constants.ResolveStatemant);
 
     //Reactivate case and Validate
     await macrosAdminPage.ReactivateCase();
-    await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase);
+    await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase1);
 
     //Cancel case and validate
     await macrosAdminPage.CancelCase();
-    await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase);
+    await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase1);
 
     //Reactivate case and delete
     await macrosAdminPage.ReactivateCase();
@@ -307,7 +305,7 @@ describe("Multi Session - ", () => {
       stringFormat(Constants.XRMSpecificCaseLink1, rnd)
     );
     await macrosAdminPage.ResolveCase(Constants.ResolutionName);
-    await macrosAdminPage.ValidateTimeLine(Constants.ValidateResolveCase);
+    await macrosAdminPage.ValidateTimeLine(Constants.CaseResolved);
 
     //Reactivate case and Validate
     await macrosAdminPage.ReactivateCase();
@@ -331,16 +329,12 @@ describe("Multi Session - ", () => {
     );
 
     await agentChat.goToMyApp(Constants.CustomerServiceWorkspace);
-    await agentChat.waitforTimeout();
-
-    //To enable new layout improvements
-    await macrosAdminPage.enableNewLayout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
 
     var CaseUserName = Constants.XRMCaseName + rnd;
     var CaseUserName2 = Constants.XRMCaseName2 + rnd;
-
     caseNameList = [CaseUserName, CaseUserName2];
-
     await macrosAdminPage.createIncidents(agentChat, caseNameList);
 
     //Navigate to CSW and intitiate sessions
@@ -359,7 +353,6 @@ describe("Multi Session - ", () => {
     //Validate that Productivity pane maintains collapsed state during session switch events
     await macrosAdminPage.SwitchBackToPreviousSession(stringFormat(Constants.XRMSpecificCaseLink1, rnd));
     await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
-    await macrosAdminPage.disableNewLayout();
   });
 
   ///<summary>
@@ -371,7 +364,7 @@ describe("Multi Session - ", () => {
 
     //Login as admin and create cases
     await agentChat.navigateToOrgUrlAndSignIn(
-      TestSettings.AdminAccountEmail,
+      TestSettings.MultiSessionEmail,
       TestSettings.AdminAccountPassword
     );
     await adminStartPage.goToCustomerServiceWorkspace();
@@ -410,26 +403,23 @@ describe("Multi Session - ", () => {
   it("Test Case 1942192: [Multi Session] View CSM dashboards", async () => {
     agentPage = await agentContext.newPage();
     liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-    try {
-      //Login as crmadmin
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.MultiSessionEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-      //   await adminStartPage.waitForAgentStatusIcon();
-      await macrosAdminPage.ClickDropDown(Constants.DashboardSelector);
-      //Validate page
-      await macrosAdminPage.ValidateThePage(Constants.ServiceManagerDashboard);
-      await macrosAdminPage.ValidateThePage(
-        Constants.ServiceOperationsDashboard
-      );
-      await macrosAdminPage.ValidateThePage(
-        Constants.ServicePerformanceDashboard
-      );
-    } finally {
-      await macrosAdminPage.CloseDropDown(Constants.DashboardSelector);
-    }
+    //Login as crmadmin
+    await adminStartPage.navigateToOrgUrlAndSignIn(
+      TestSettings.MultiSessionEmail,
+      TestSettings.AdminAccountPassword
+    );
+    await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    await macrosAdminPage.ClickDropDown(Constants.DashboardSelector);
+    //Validate page
+    await macrosAdminPage.ValidateThePage(Constants.ServiceManagerDashboard);
+    await macrosAdminPage.ValidateThePage(
+      Constants.ServiceOperationsDashboard
+    );
+    await macrosAdminPage.ValidateThePage(
+      Constants.ServicePerformanceDashboard
+    );
   });
 
   ///<summary>
@@ -437,46 +427,39 @@ describe("Multi Session - ", () => {
   /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1942183
   ///</summary>
   it("Test Case 1942183: [Multi Session] Email state persistence in multisession", async () => {
-    agentPage = await agentContext.newPage();
-    try {
-      //Login as admin and create
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.MultiSessionEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-      await macrosAdminPage.createCase(Constants.CaseTitleName);
-      await macrosAdminPage.createCase(Constants.CaseTitleName2);
-      //Initiate session
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToCustomerServiceWorkspace();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      //Open Email Editor and fill data
-      await macrosAdminPage.EmailEditor();
-      //Initiate session
-      await macrosAdminPage.GoToHome();
-      await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName2,
-        Constants.CaseLink2
-      );
-      //switch to previous session and validate
-      await macrosAdminPage.SwitchBackToPreviousSession(Constants.Firstcase);
-      await macrosAdminPage.ValidateThePage(Constants.FocusOnEmailTab);
-    } finally {
-      await macrosAdminPage.deleteCaseInCSH(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName
-      );
-      await macrosAdminPage.deleteCaseInCSH(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName2
-      );
-    }
+    rnd = agentScriptAdminPage.RandomNumber();
+    await agentChat.navigateToOrgUrlAndSignIn(
+      TestSettings.MultiSessionEmail,
+      TestSettings.AdminAccountPassword
+    );
+
+    await agentChat.goToMyApp(Constants.CustomerServiceWorkspace);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+
+    var CaseUserName = Constants.XRMCaseName + rnd;
+    var CaseUserName2 = Constants.XRMCaseName2 + rnd;
+    caseNameList = [CaseUserName, CaseUserName2];
+
+    await macrosAdminPage.createIncidents(agentChat, caseNameList);
+    await macrosAdminPage.InitiateSession(
+      CaseUserName,
+      stringFormat(Constants.XRMSpecificCaseLink1, rnd)
+    );
+
+    //Open Email Editor and fill data
+    await macrosAdminPage.EmailEditor();
+
+    //Initiate session
+    await macrosAdminPage.GoToHome();
+    await macrosAdminPage.InitiateSession(
+      CaseUserName2,
+      stringFormat(Constants.XRMSpecificCaseLink2, rnd)
+    );
+
+    //switch to previous session and validate
+    await macrosAdminPage.SwitchBackToPreviousSession(stringFormat(Constants.SpecificCaseTitleNameVal, CaseUserName));
+    await macrosAdminPage.ValidateThePage(Constants.FocusOnEmailTab);
   });
 
   ///<summary>
@@ -484,22 +467,21 @@ describe("Multi Session - ", () => {
   ///Test Case Link  https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1942180
   ///<summary>
   it("Test Case 1942180: [Multi Session] Open Customer Service workspace as an agent", async () => {
-    agentPage = await agentContext.newPage();
     liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-    try {
-      //Login as crmadmin
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.MultiSessionEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-      // await adminStartPage.waitForAgentStatusIcon();
-      //validate page
-      await macrosAdminPage.ValidateDashboard(
-        Constants.ValidateServiceAgentDashboard
-      );
-    } finally {
-    }
+
+    //Login as crmadmin
+    await adminStartPage.navigateToOrgUrlAndSignIn(
+      TestSettings.MultiSessionEmail,
+      TestSettings.AdminAccountPassword
+    );
+    await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+
+    //Validate page
+    await macrosAdminPage.ValidateDashboard(
+      Constants.ValidateServiceAgentDashboard
+    );
   });
 
   ///<summary>
@@ -547,122 +529,89 @@ describe("Multi Session - ", () => {
   ///Test Case Link  https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1945916
   ///<summary>
   it("Test Case 1945916: [Multi Session] Verify Merge Operation on multiple cases from Case grid page and activities getting tied to primary case after merge.", async () => {
-    agentPage = await agentContext.newPage();
-    try {
-      //Login as crmadmin
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.MultiSessionEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminPage.setViewportSize({ width: 1300, height: 600 }) //viewport is changed due to validations
-      //Create two child Cases and one parent case
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-      await macrosAdminPage.createCase(Constants.FCase1);
-      await macrosAdminPage.createCase(Constants.FCase2);
-      await macrosAdminPage.createCase(Constants.FParent1);
-      //Initiate first child case and add Note in it
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-      //   await adminStartPage.waitForAgentStatusIcon();
-      await macrosAdminPage.InitiateSession(
-        Constants.FCase1,
-        Constants.ChildCaseLink1
-      );
-      await macrosAdminPage.AddNote(Constants.AddButton, Constants.Note);
-      //Initiate secound child case and add post in it
-      await macrosAdminPage.GoToHome();
-      await macrosAdminPage.InitiateSession(
-        Constants.FCase2,
-        Constants.ChildCaseLink2
-      );
-      await macrosAdminPage.AddPost(Constants.AddButton, Constants.Post);
-      //Go to cases grid and merge two child cases with one parent case
-      await macrosAdminPage.GoToHome();
-      await macrosAdminPage.GoToCases();
-      await macrosAdminPage.MergeCases(Constants.First);
-      //Open parent case and verify details
-      await macrosAdminPage.ParentCaseDetails(Constants.First);
-      await macrosAdminPage.VerifyParentCase();
-    } finally {
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.FCase1
-      );
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.FCase2
-      );
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.FParent1
-      );
-    }
+    await agentChat.navigateToOrgUrlAndSignIn(
+      TestSettings.MultiSessionEmail,
+      TestSettings.AdminAccountPassword
+    );
+    await adminPage.setViewportSize({ width: 1300, height: 850 });// viewport changed due to UI validation
+    await agentChat.goToMyApp(Constants.CustomerServiceWorkspace);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage)
+
+    var CaseUserName = Constants.FParent1
+    var CaseUserName2 = Constants.FCase1;
+    var CaseUserName3 = Constants.FCase2;
+
+    caseNameList = [CaseUserName, CaseUserName2, CaseUserName3];
+
+    //Create two child cases and one parent case
+    await macrosAdminPage.createIncidents(agentChat, caseNameList);
+
+    await macrosAdminPage.InitiateSession(
+      Constants.FCase1,
+      Constants.ChildCaseLink1
+    );
+    await macrosAdminPage.AddNote(Constants.AddButton, Constants.Note);
+
+    //Initiate secound child case and add post in it
+    await macrosAdminPage.GoToHome();
+    await macrosAdminPage.InitiateSession(
+      Constants.FCase2,
+      Constants.ChildCaseLink2
+    );
+    await macrosAdminPage.AddPost(Constants.AddButton, Constants.Post);
+
+    //Go to cases grid and merge two child cases with one parent case
+    await macrosAdminPage.GoToHome();
+    await macrosAdminPage.MergeCasesIntoParent(Constants.First);
+
+    //Open parent case and verify details
+    await macrosAdminPage.ParentCaseDetails(Constants.First);
+    await macrosAdminPage.VerifyParentCase();
   });
 
   ///<summary>
   ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1945661
   ///<summary>
   it("Test Case 1945661: [Multi Session] Verify Routing Rule on Case Form.", async () => {
-    agentPage = await agentContext.newPage();
-    liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-    try {
-      //Login as Admin and create public queue and routing rule
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.MultiSessionEmail,
-        TestSettings.AdminAccountPassword
-      );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-      await macrosAdminPage.GoToServiceManagement();
-      await macrosAdminPage.CreatePublicQueue(Constants.QueueTitle);
-      await macrosAdminPage.CreateRoutingRole(
-        Constants.RuleName,
-        Constants.RuleItemName,
-        Constants.QueueTitle
-      );
-      await adminPage.waitForTimeout(2000);
+    rnd = agentScriptAdminPage.RandomNumber();
+    await agentChat.navigateToOrgUrlAndSignIn(
+      TestSettings.MultiSessionEmail,
+      TestSettings.AdminAccountPassword
+    );
+    await agentChat.goToMyApp(Constants.CustomerServiceHub);
+    await macrosAdminPage.GoToServiceManagement();
+    await macrosAdminPage.CreatePublicQueue(Constants.UserQueue + rnd);
+    await macrosAdminPage.CreateRoutingRule(
+      Constants.RuleName,
+      Constants.RuleItemName,
+      Constants.UserQueue + rnd,
+      rnd
+    );
+    await adminPage.waitForTimeout(2000);
 
-      // Navigate to CSW and create case
-      await macrosAdminPage.openAppLandingPage(adminPage);
-      await adminStartPage.goToCustomerServiceWorkspace();
-      await macrosAdminPage.createCaseFromCSWSiteMap(Constants.CaseTitleName);
-      await adminPage.waitForTimeout(2000);
-      await macrosAdminPage.AddPriorityToCase();
+    await macrosAdminPage.openAppLandingPage(adminPage);
+    await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+    await macrosAdminPage.createCaseFromCSWSiteMap(Constants.CaseTitleName + rnd);
 
-      // Save and Route the case and validate it
-      await macrosAdminPage.SaveAndRoute(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await adminPage.waitForTimeout(2000);
-      await macrosAdminPage.ValidateTimeLine(Constants.QueueLinkTitle);
-      await macrosAdminPage.GoToHome();
-      await macrosAdminPage.InitiateTab(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
-      );
-      await macrosAdminPage.ValidateTimeLine(Constants.QueueLinkTitle);
-      await macrosAdminPage.SaveAndRouteInTab();
-      await macrosAdminPage.ValidateTimeLine(Constants.QueueLinkTitle);
-    } finally {
-      await macrosAdminPage.deleteRoutingRule(
-        adminPage,
-        adminStartPage,
-        Constants.RuleName
-      );
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName
-      );
-      await macrosAdminPage.deleteQueue(
-        adminPage,
-        adminStartPage,
-        Constants.QueueTitle
-      );
-    }
+    await macrosAdminPage.AddPriorityToCase();
+
+    // Save and Route the case and validate it
+    await macrosAdminPage.SaveAndRoute(
+      Constants.CaseTitleName + rnd,
+      stringFormat(Constants.SpecificCaseLink1, rnd)
+    );
+    await adminPage.waitForTimeout(2000);
+    await macrosAdminPage.ValidateTimeLine(stringFormat(Constants.TextTag, Constants.UserQueue + rnd));
+
+    await macrosAdminPage.GoToHome();
+    await macrosAdminPage.InitiateTab(
+      Constants.CaseTitleName + rnd,
+      stringFormat(Constants.SpecificCaseLink1, rnd)
+    );
+    await macrosAdminPage.ValidateTimeLine(stringFormat(Constants.TextTag, Constants.UserQueue + rnd));
+    await macrosAdminPage.SaveAndRouteInTab(rnd);
+    await macrosAdminPage.ValidateTimeLine(stringFormat(Constants.TextTag, Constants.UserQueue + rnd));
   });
 
   ///<summary>
@@ -693,7 +642,7 @@ describe("Multi Session - ", () => {
     await macrosAdminPage.ValidateTimeLine(Constants.CaseCreated);
 
     // Resolve Case and Validate the Page
-    await macrosAdminPage.ResolvecaseAsInformation(
+    await macrosAdminPage.ResolveCaseAsInformation(
       Constants.ResolutionTypeInputField,
       Constants.AutomationResolutionField
     );
@@ -701,7 +650,6 @@ describe("Multi Session - ", () => {
       Constants.CaseStatusInformationProvided
     );
     await macrosAdminPage.ValidateThePage(Constants.CaseResolved);
-    await macrosAdminPage.ValidateTimeLine(Constants.CaseClosed);
     await macrosAdminPage.ValidateThePage(Constants.FormISReadonly);
     await macrosAdminPage.GoToMoreCommands();
     await macrosAdminPage.ValidateNotPresent(Constants.ResolveCaseBtn);
@@ -717,7 +665,6 @@ describe("Multi Session - ", () => {
     // Cancel Case and validate it
     await macrosAdminPage.CancelCase();
     await macrosAdminPage.ValidateThePage(Constants.CaseStatusCancelled);
-    await macrosAdminPage.ValidateTimeLine(Constants.CaseClosed);
     await macrosAdminPage.ValidateThePage(Constants.FormISReadonly);
     await macrosAdminPage.GoToMoreCommands();
     await macrosAdminPage.ValidateNotPresent(Constants.ResolveCaseBtn);
@@ -740,7 +687,7 @@ describe("Multi Session - ", () => {
     await macrosAdminPage.ValidateTimeLine(Constants.CaseCreated);
 
     // Resolve Case and validate it
-    await macrosAdminPage.ResolvecaseAsInformation(
+    await macrosAdminPage.ResolveCaseAsInformation(
       Constants.ResolutionTypeInputField,
       Constants.AutomationResolutionField
     );
@@ -748,7 +695,6 @@ describe("Multi Session - ", () => {
       Constants.CaseStatusInformationProvided
     );
     await macrosAdminPage.ValidateThePage(Constants.CaseResolved);
-    await macrosAdminPage.ValidateTimeLine(Constants.CaseClosed);
     await macrosAdminPage.ValidateThePage(Constants.FormISReadonly);
     await macrosAdminPage.GoToMoreCommands();
     await macrosAdminPage.ValidateNotPresent(Constants.ResolveCaseBtn);
@@ -764,7 +710,6 @@ describe("Multi Session - ", () => {
     // Cancel case and validate it
     await macrosAdminPage.CancelCase();
     await macrosAdminPage.ValidateThePage(Constants.CaseStatusCancelled);
-    await macrosAdminPage.ValidateTimeLine(Constants.CaseClosed);
     await macrosAdminPage.ValidateThePage(Constants.FormISReadonly);
     await macrosAdminPage.GoToMoreCommands();
     await macrosAdminPage.ValidateNotPresent(Constants.ResolveCaseBtn);
@@ -780,11 +725,13 @@ describe("Multi Session - ", () => {
 
   ///<summary>
   ///Test Case 1945864: [Multi Session] Creation of Queue and able to add case/activities to queue and perform Queue operation(Route/ pick/Release/remove) with users (CSR & CSM)
-  ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1945864s
+  ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1945864
   ///<summary>
   it("Test Case 1945864: [Multi Session] Creation of Queue and able to add case/activities to queue and perform Queue operation(Route/ pick/Release/remove) with users (CSR & CSM)", async () => {
     agentPage = await agentContext.newPage();
+    rnd = agentScriptAdminPage.RandomNumber();
     liveChatPage = new LiveChatPage(await liveChatContext.newPage());
+    const CaseTitleName = Constants.CaseTitleName + rnd;
     try {
       // //Login as Admin
       await adminStartPage.navigateToOrgUrlAndSignIn(
@@ -792,30 +739,30 @@ describe("Multi Session - ", () => {
         TestSettings.AdminAccountPassword
       );
       await adminPage.setViewportSize({ width: 1300, height: 600 });
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-
-      //Create Private Queues
-      await macrosAdminPage.GoToServiceManagement();
+      await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
+      await adminStartPage.waitForDomContentLoaded();
+      await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+      // Create a Private Queue
+      await macrosAdminPage.navigateToBasicQueues();
       await macrosAdminPage.CreatePrivateQueue(Constants.QueueTitle);
       await macrosAdminPage.CreatePrivateQueue(Constants.QueueTitle2);
 
       // navigate to CSW, add private queue and Validate it
       await macrosAdminPage.openAppLandingPage(adminPage);
       await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-      await macrosAdminPage.CreateCaseInCSW(Constants.CaseTitleName);
+      await macrosAdminPage.CreateCaseInCSW(CaseTitleName);
       await macrosAdminPage.InitiateSession(
-        Constants.CaseTitleName,
-        Constants.CaseLink1
+        CaseTitleName,
+        stringFormat(Constants.SpecificCaseLink1, rnd)
       );
       await macrosAdminPage.ValidateThePage(Constants.VerifyCreated);
       await macrosAdminPage.AddCaseToQueue(Constants.QueueTitle);
       await macrosAdminPage.QueueItemDetails();
-      await macrosAdminPage.ValidateThePage(Constants.QueueLinkTitle);
-      await macrosAdminPage.SaveAndClose(Constants.SaveAndCloseQueueItem);
+      await macrosAdminPage.ValidateThePage(Constants.QueueLinkTitle1);
+      await macrosAdminPage.SaveAndClose(Constants.SaveAndCloseQueueItem1);
       await macrosAdminPage.ValidateTimeLine(Constants.QueueLinkTitle);
 
       // Create Task and add private queue to it
-      await macrosAdminPage.GoToHome();
       await macrosAdminPage.CreateTask(Constants.TaskTitle);
       await macrosAdminPage.ValidateThePage(Constants.VerifyCreated);
       await macrosAdminPage.AddTaskToQueue(Constants.QueueTitle2);
@@ -823,8 +770,8 @@ describe("Multi Session - ", () => {
       //Perform Operations on created Case
       await macrosAdminPage.GoToHome();
       await macrosAdminPage.OpenQueuesFromCWS(Constants.AllQueues);
-      await macrosAdminPage.ValidateThePage(Constants.CaseLink1);
-      await macrosAdminPage.SelectRow(Constants.CaseTitleName);
+      await macrosAdminPage.ValidateThePage(stringFormat(Constants.SpecificCaseLinkinQueItem, rnd));
+      await macrosAdminPage.SelectRow(CaseTitleName);
       await macrosAdminPage.ClickRouteOperation(Constants.QueueTitle2);
       await macrosAdminPage.ValidateThePage(Constants.QueueLinkTitle2);
       await macrosAdminPage.ClickOperation(
@@ -841,7 +788,7 @@ describe("Multi Session - ", () => {
         Constants.Remove,
         Constants.ConfirmRemoveOperation
       );
-      await macrosAdminPage.ValidateNotPresent(Constants.CaseTitleName);
+      await macrosAdminPage.ValidateNotPresent(CaseTitleName);
 
       //Perform Operations on Created Task
       await macrosAdminPage.ValidateThePage(Constants.TaskBtn);
@@ -936,46 +883,6 @@ describe("Multi Session - ", () => {
       );
       await macrosAdminPage.ValidateNotPresent(Constants.TaskTitle2);
     } finally {
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName
-      );
-      await macrosAdminPage.deleteCase(
-        adminPage,
-        adminStartPage,
-        Constants.CaseTitleName2
-      );
-      await macrosAdminPage.deleteTask(
-        adminPage,
-        adminStartPage,
-        Constants.TaskTitle
-      );
-      await macrosAdminPage.deleteTask(
-        adminPage,
-        adminStartPage,
-        Constants.TaskTitle2
-      );
-      await macrosAdminPage.deleteQueue(
-        adminPage,
-        adminStartPage,
-        Constants.QueueTitle
-      );
-      await macrosAdminPage.deleteQueue(
-        adminPage,
-        adminStartPage,
-        Constants.QueueTitle2
-      );
-      await macrosAdminPage.deleteQueue(
-        adminPage,
-        adminStartPage,
-        Constants.QueueTitle3
-      );
-      await macrosAdminPage.deleteQueue(
-        adminPage,
-        adminStartPage,
-        Constants.QueueTitle4
-      );
     }
   });
 
@@ -984,83 +891,102 @@ describe("Multi Session - ", () => {
   ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1945833
   ///</summary>
   it("Test Case 1945833: [Multi Session] Verify Case Entitlements", async () => {
+    rnd = agentScriptAdminPage.RandomNumber();
     agentPage = await agentContext.newPage();
     liveChatPage = new LiveChatPage(await liveChatContext.newPage());
     await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.MultiSessionEmail, TestSettings.AdminAccountPassword);
     await adminPage.setViewportSize({ width: 1300, height: 600 });// viewport changed due to UI validation
-    await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-    await macrosAdminPage.GoToServiceManagement();
+    await adminStartPage.goToMyApp(Constants.CustomerServiceAdmincenter);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    const Entitlement1 = Constants.EntName1 + rnd;
+    const Entitlement2 = Constants.EntName2 + rnd;
+    const Entitlement3 = Constants.EntName3 + rnd;
+    const Case1 = Constants.Case1 + rnd;
+    const Case2 = Constants.Case22 + rnd;
+    const Case3 = Constants.AutomationCaseTitle + rnd;
 
     //creating Entitlements
-    await macrosAdminPage.CreateEntitlements(Constants.EntName1);
+    await macrosAdminPage.GoToServiceTerms();
+    await macrosAdminPage.CreateEntitlements(Entitlement1);
     await macrosAdminPage.DecRemainingOnForCaseCreation();
     await macrosAdminPage.Totalterms(Constants.TtermsforEnt);
-    await macrosAdminPage.CreateEntitlements(Constants.EntName2);
+    await macrosAdminPage.CreateEntitlements(Entitlement2);
     await macrosAdminPage.Totalterms(Constants.TtermsforEnt2);
-    await macrosAdminPage.CreateEntitlements(Constants.EntName3);
+    await macrosAdminPage.CreateEntitlements(Entitlement3);
     await macrosAdminPage.DecRemainingOnForCaseCreation();
     await macrosAdminPage.Totalterms(Constants.TtermsforEnt);
 
     //select Entitlements in case and verifying the Entitlement field
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-    await macrosAdminPage.createCaseFromCSWSiteMap(Constants.Case1);
-    await macrosAdminPage.InitiateSession(Constants.Case1, Constants.CaseLink);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    await macrosAdminPage.createCaseFromCSWSiteMap(Case1);
+    await macrosAdminPage.InitiateSession(Case1, stringFormat(Constants.Case1link, rnd));
     await macrosAdminPage.GoToEntField();
-    await macrosAdminPage.ChooseEntitlement(Constants.EntName1, Constants.ChooseEnt1);
+    await macrosAdminPage.ChooseEntitlement(Entitlement1, stringFormat(Constants.ChooseEnt1, rnd));
 
     //verfying Emtitlement Remaining terms is decreased by 1
     await macrosAdminPage.openAppLandingPage(adminPage);
-    await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-    await macrosAdminPage.GoToServiceManagement();
-    await macrosAdminPage.OpenEntitlement(Constants.EntName1, Constants.ChooseEnt1);
+    await adminStartPage.goToMyApp(Constants.CustomerServiceAdmincenter);
+    await macrosAdminPage.GoToServiceTerms();
+    await macrosAdminPage.OpenEntitlement(Entitlement1, stringFormat(Constants.ChooseEnt1, rnd));
     await macrosAdminPage.ValidateThePage(Constants.RemTermsInEnt1);
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-    await macrosAdminPage.InitiateSession(Constants.Case1, Constants.CaseLink);
-    await macrosAdminPage.ChooseEnt1ToEnt2(Constants.ChooseEnt2);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    await macrosAdminPage.InitiateSession(Case1, stringFormat(Constants.Case1link, rnd));
+    await macrosAdminPage.ChooseEnt1ToEnt2(stringFormat(Constants.ChooseEnt2, rnd));
 
     //verifing the case auto saved
     await macrosAdminPage.ValidateThePage(Constants.VerifyCreated);
     await macrosAdminPage.openAppLandingPage(adminPage);
-    await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-    await macrosAdminPage.GoToServiceManagement();
-    await macrosAdminPage.OpenEntitlement(Constants.EntName1, Constants.ChooseEnt1);
+    await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
+    await macrosAdminPage.GoToServiceTerms();
+    await macrosAdminPage.OpenEntitlement(Entitlement1, stringFormat(Constants.ChooseEnt1, rnd));
 
     //verifing the Entitlements remaining terms increased by 1
     await macrosAdminPage.ValidateThePage(Constants.RemTerms2InEnt1);
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-    await macrosAdminPage.InitiateSession(Constants.Case1, Constants.CaseLink);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    await macrosAdminPage.InitiateSession(Case1, stringFormat(Constants.Case1link, rnd));
     await macrosAdminPage.ResolveCase(Constants.ResolutionName);
     await macrosAdminPage.openAppLandingPage(adminPage);
-    await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-    await macrosAdminPage.GoToServiceManagement();
-    await macrosAdminPage.OpenEntitlement(Constants.EntName2, Constants.ChooseEnt2);
+    await adminStartPage.goToMyApp(Constants.CustomerServiceAdmincenter);
+    await macrosAdminPage.GoToServiceTerms();
+    await macrosAdminPage.OpenEntitlement(Entitlement2, stringFormat(Constants.ChooseEnt2, rnd));
 
     //verfying Emtitlement Remaining terms is decreased by 1
     await macrosAdminPage.ValidateThePage(Constants.RemTermsInEnt2);
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     await macrosAdminPage.OpenAllCases();
-    await macrosAdminPage.InitiateSession(Constants.Case1, Constants.CaseLink);
+    await macrosAdminPage.InitiateSession(Case1, stringFormat(Constants.Case1link, rnd));
     await macrosAdminPage.ReactivateCase();
     await macrosAdminPage.openAppLandingPage(adminPage);
-    await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-    await macrosAdminPage.GoToServiceManagement();
-    await macrosAdminPage.OpenEntitlement(Constants.EntName2, Constants.ChooseEnt2);
+    await adminStartPage.goToMyApp(Constants.CustomerServiceAdmincenter);
+    await macrosAdminPage.GoToServiceTerms();
+    await macrosAdminPage.OpenEntitlement(Entitlement2, stringFormat(Constants.ChooseEnt2, rnd));
 
     //verifing the Entitlements remaining terms increased by 1
     await macrosAdminPage.ValidateThePage(Constants.RemTerms2InEnt2);
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-    await macrosAdminPage.InitiateSession(Constants.Case1, Constants.CaseLink);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    await macrosAdminPage.InitiateSession(Case1, stringFormat(Constants.Case1link, rnd));
     await macrosAdminPage.DoNotDecrementEntitlementTerms();
     await macrosAdminPage.ResolveCase(Constants.ResolutionName);
     await macrosAdminPage.openAppLandingPage(adminPage);
-    await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-    await macrosAdminPage.GoToServiceManagement();
-    await macrosAdminPage.OpenEntitlement(Constants.EntName2, Constants.ChooseEnt2);
+    await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
+    await macrosAdminPage.GoToServiceTerms();
+    await macrosAdminPage.OpenEntitlement(Entitlement2, stringFormat(Constants.ChooseEnt2, rnd));
 
     //verifing the Entitlements remaining terms is 10
     await macrosAdminPage.ValidateThePage(Constants.RemTerms2InEnt2);
@@ -1068,49 +994,57 @@ describe("Multi Session - ", () => {
     //create another case and select Entitlement
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-    await macrosAdminPage.createCaseFromCSWSiteMap(Constants.Case22);
-    await macrosAdminPage.InitiateSession(Constants.Case2, Constants.CaseLink22);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    await macrosAdminPage.createCaseFromCSWSiteMap(Case2);
+    await macrosAdminPage.InitiateSession(Case2, stringFormat(Constants.Case2link, rnd));
     await macrosAdminPage.GoToEntField();
-    await macrosAdminPage.ChooseEntitlement(Constants.EntName1, Constants.ChooseEnt1);
+    await macrosAdminPage.ChooseEntitlement(Entitlement1, stringFormat(Constants.ChooseEnt1, rnd));
     await macrosAdminPage.openAppLandingPage(adminPage);
-    await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-    await macrosAdminPage.GoToServiceManagement();
-    await macrosAdminPage.OpenEntitlement(Constants.EntName1, Constants.ChooseEnt1);
+    await adminStartPage.goToMyApp(Constants.CustomerServiceAdmincenter);
+    await macrosAdminPage.GoToServiceTerms();
+    await macrosAdminPage.OpenEntitlement(Entitlement1, stringFormat(Constants.ChooseEnt1, rnd));
 
     //verifing the Entitlements remaining terms decreased by 1
     await macrosAdminPage.ValidateThePage(Constants.RemTermsInEnt1);
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-    await macrosAdminPage.InitiateSession(Constants.Case2, Constants.CaseLink22);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    await macrosAdminPage.InitiateSession(Case2, stringFormat(Constants.Case2link, rnd));
     await macrosAdminPage.DoNotDecrementEntitlementTerms();
     await macrosAdminPage.openAppLandingPage(adminPage);
-    await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-    await macrosAdminPage.GoToServiceManagement();
-    await macrosAdminPage.OpenEntitlement(Constants.EntName1, Constants.ChooseEnt1);
+    await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
+    await macrosAdminPage.GoToServiceTerms();
+    await macrosAdminPage.OpenEntitlement(Entitlement1, stringFormat(Constants.ChooseEnt1, rnd));
 
     //verifing the Entitlements remaining terms count 20
     await macrosAdminPage.ValidateThePage(Constants.RemTerms2InEnt1);
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-    await macrosAdminPage.createCaseFromCSWSiteMap(Constants.AutomationCaseTitle);
-    await macrosAdminPage.InitiateSession(Constants.AutomationCaseTitle, Constants.CaseLink1);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    await macrosAdminPage.createCaseFromCSWSiteMap(Case3);
+    await macrosAdminPage.InitiateSession(Case3, stringFormat(Constants.SpecificCaseLink1, rnd));
     await macrosAdminPage.GoToEntField();
-    await macrosAdminPage.ChooseEntitlement(Constants.EntName3, Constants.ChooseEnt3);
+    await macrosAdminPage.ChooseEntitlement(Entitlement3, stringFormat(Constants.ChooseEnt3, rnd));
     await macrosAdminPage.openAppLandingPage(adminPage);
-    await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-    await macrosAdminPage.GoToServiceManagement();
-    await macrosAdminPage.OpenEntitlement(Constants.EntName3, Constants.ChooseEnt3);
+    await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
+    await macrosAdminPage.GoToServiceTerms();
+    await macrosAdminPage.OpenEntitlement(Entitlement3, stringFormat(Constants.ChooseEnt3, rnd));
 
     //verifing the Entitlements remaining terms decreased by 1
     await macrosAdminPage.ValidateThePage(Constants.RemTermsInEnt3);
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-    await macrosAdminPage.InitiateTab(Constants.AutomationCaseTitle, Constants.CaseLink1);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    await macrosAdminPage.InitiateTab(Case3, stringFormat(Constants.SpecificCaseLink1, rnd));
     await macrosAdminPage.DoNotDecrementEntitlementTerms();
     await macrosAdminPage.openAppLandingPage(adminPage);
-    await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-    await macrosAdminPage.GoToServiceManagement();
-    await macrosAdminPage.OpenEntitlement(Constants.EntName3, Constants.ChooseEnt3);
+    await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
+    await macrosAdminPage.GoToServiceTerms();
+    await macrosAdminPage.OpenEntitlement(Entitlement3, stringFormat(Constants.ChooseEnt3, rnd));
 
     //verifing the Entitlements remaining terms count 20
     await macrosAdminPage.ValidateThePage(Constants.RemTerms2InEnt3);
