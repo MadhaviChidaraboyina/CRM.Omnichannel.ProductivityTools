@@ -342,7 +342,8 @@ module MscrmControls.Callscript {
 				marginLeft: isRTL ? "4px" : "24px",
 				marginRight: isRTL ? "24px" : "4px",
 				wordWrap: "break-word",
-				"whiteSpace": "pre-wrap"
+				"whiteSpace": "pre-wrap",
+				"word-break": "break-all"
 			}
 		}
 
