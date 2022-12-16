@@ -101,6 +101,8 @@ module MscrmControls.ProductivityPanel.TPBot {
 		}
 
 		private renderCard(card, cardId, conversationId: string): void {
+			TPBot.Utility.updateBadge(1);
+			
 			if (!this.adaptiveCard) {
 				this.adaptiveCard = AdaptiveCardHelper.InitializeAdaptiveCardsHostConfig();
 			}

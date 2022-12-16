@@ -248,7 +248,7 @@
                 var saConfigData = this.Suggestions;
                 if (saConfigData && this.Suggestions[saConfig.SmartassistConfigurationId]) {
                     var dataCount = saConfigData[saConfig.SmartassistConfigurationId].length;
-                    Utility.updateBadge(dataCount);
+                    PaneHelper.updateBadge(RecordId, saConfig.SmartassistConfigurationId, dataCount);
                 }
             
                 timer.stop(params);

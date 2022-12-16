@@ -43,6 +43,7 @@
     <TypeScriptCompile Include="SmartAssistAnyEntityControl.ts" />
     <TypeScriptCompile Include="Utils\TelemetryHelper.ts" />
     <TypeScriptCompile Include="Utils\Utility.ts" />
+    <TypeScriptCompile Include="Utils\PaneHelper.ts" />
     <TypeScriptCompile Include="Views\ViewTemplates.ts" />
   </ItemGroup>
   <ItemGroup>

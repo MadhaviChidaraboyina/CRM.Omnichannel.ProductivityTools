@@ -152,7 +152,6 @@ module MscrmControls.ProductivityPanel {
 
                     if (message.isValid && message.type === "third-party") {
                         await TPBot.TPBotManager.Instance.RenderTPBotCard(message);
-                        TPBot.Utility.updateBadge(1);
 
                         // We only need to stop this timer in the successful scenario if this was a TPB message.
                         timer.stop(params);
