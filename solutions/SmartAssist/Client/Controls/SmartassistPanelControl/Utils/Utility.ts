@@ -110,6 +110,8 @@ module MscrmControls.SmartassistPanelControl {
 			const params = new TelemetryLogger.EventParameters();
 			const eventParameters = new TelemetryLogger.EventParameters();
 
+            let errorCIF, errorAPM;
+
             let workStreamId: string | undefined;
             try {
                 let cifUtil = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
@@ -119,7 +121,8 @@ module MscrmControls.SmartassistPanelControl {
                 workStreamId = data.ocContext.config.sessionParams.LiveWorkStreamId;
 				params.addParameter("Source", "CIF");
             } catch (error) {
-                eventParameters.addParameter("ExceptionDetails", error.message);
+                errorCIF = error;
+                eventParameters.addParameter("ExceptionDetails", error);
                 eventParameters.addParameter("Message", "Failed to retrieve Live WorkStream id from form param");
                 SmartassistPanelControl._telemetryReporter.logSuccess("GetLiveWorkStreamIdTrace", eventParameters);
             }
@@ -135,13 +138,18 @@ module MscrmControls.SmartassistPanelControl {
                     workStreamId = data.ocContext.config.sessionParams.LiveWorkStreamId;
                     params.addParameter("Source", "APM");
                 } catch (error) {
-                    eventParameters.addParameter("ExceptionDetails", error.message);
+                    errorAPM = error;
+                    eventParameters.addParameter("ExceptionDetails", error);
                     SmartassistPanelControl._telemetryReporter.logError("GetLiveWorkStreamIdTrace", "Failed to retrieve Live WorkStream id from APM", eventParameters);        
                 }
             }
 
 			// Handle timer telemetry.
 			params.addParameter("WorkstreamId", workStreamId);
+            params.addParameter("ExceptionDetails", JSON.stringify({
+                CIF: errorCIF,
+                APM: errorAPM
+            }));
             if (workStreamId == null) 
 				timer.fail("Failed to find workstreamId", params);
 			else 

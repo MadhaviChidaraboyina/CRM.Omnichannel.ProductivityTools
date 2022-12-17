@@ -85,22 +85,6 @@ module MscrmControls.SmartAssistAnyEntityControl {
             return SmartAssistAnyEntityControl._context.resources.getString(resourceName);
         }
 
-        /**Get live work stream id */
-        public static getLiveWorkStreamId(): string {
-            let eventParameters = new TelemetryLogger.EventParameters();
-            let workStreamId: string = null;
-            try {
-                let cifUtil = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
-                let templateParams = cifUtil.getSessionTemplateParams();
-                let data = templateParams.data;
-                workStreamId = data.ocContext.config.sessionParams.LiveWorkStreamId;
-            } catch (error) {
-                eventParameters.addParameter("ExceptionDetails", error.message);
-                SmartAssistAnyEntityControl._telemetryReporter.logError("GetLiveWorkStreamId", "Failed to retrieve Live WorkStream id from form param", eventParameters);
-            }
-            return workStreamId;
-        }
-
         /**Get Anchor tab context */
         public static async getAnchorContext() {
             let tabcontext = null;

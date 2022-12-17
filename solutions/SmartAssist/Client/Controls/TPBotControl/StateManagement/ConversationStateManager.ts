@@ -11,6 +11,8 @@ module MscrmControls.ProductivityPanel.TPBot {
 			const params = new TelemetryLogger.EventParameters();
 			const eventParameters = new TelemetryLogger.EventParameters();
 
+			let errorCIF, errorAPM;
+
 			let conversationId: string | undefined;
 			try {
 				let cifUtil = new Microsoft.CIFramework.External.CIFExternalUtilityImpl();
@@ -20,6 +22,7 @@ module MscrmControls.ProductivityPanel.TPBot {
 				conversationId = data.ocContext.config.sessionParams.LiveWorkItemId
 				params.addParameter("Source", "CIF");
 			} catch (error) {
+				errorCIF = error;
 				eventParameters.addParameter("ExceptionDetails", error);
 				eventParameters.addParameter("Message", "Failed to retrieve Live Work Item id from form param");
 				TPBotControl.telemetryReporter.logSuccess("GetCurrentConversationTrace", eventParameters);
@@ -34,6 +37,7 @@ module MscrmControls.ProductivityPanel.TPBot {
 					conversationId = context.parameters["LiveWorkItemId"];
 					params.addParameter("Source", "APM");
 				} catch (error) {
+						errorAPM = error;
 						eventParameters.addParameter("ExceptionDetails", error);
 						TPBotControl.telemetryReporter.logError("GetCurrentConversationTrace", "Failed to retrieve Live Item id from APM", eventParameters);        
 				}
@@ -41,6 +45,10 @@ module MscrmControls.ProductivityPanel.TPBot {
 
 			// Handle timer telemetry. If no conversation ID found, propagate error to caller.
 			params.addParameter("ConversationId", conversationId);
+			params.addParameter("ExceptionDetails", JSON.stringify({
+					CIF: errorCIF,
+					APM: errorAPM
+			}));
 			if (conversationId == null) {
 				timer.fail("Failed to find conversationId", params);
 				throw "Failed to find conversationId";
