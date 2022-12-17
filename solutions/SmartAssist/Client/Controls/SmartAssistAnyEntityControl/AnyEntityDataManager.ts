@@ -28,7 +28,7 @@
          * @param saConfig: Smart Assist configuration for suggestion.
          * @param recordId: Record id to find the suggestion upon.
          */
-        public async getSuggestionsData(saConfig: SAConfig, recordId: string): Promise<{[key: string]: any} | string > {
+        public async getSuggestionsData(saConfig: SAConfig, recordId: string): Promise<{[key: string]: any} | string> {
             const timer = SmartAssistAnyEntityControl._telemetryReporter.startTimer("getSuggestionsData");
             const params = new TelemetryLogger.EventParameters();
 
@@ -40,13 +40,15 @@
                     this.getSuggestionsDataFromSessionCache(saConfig, suggestionIdsForSAConfig);
                 }
 
-
                 // call API if the data is not available in cache.
-                let result;
+                let result: string | Record<string, any>;
                 if (!this.Suggestions || fromServer) {
                     params.addParameter("Source", "api");
                     result = await this.getSuggestionsDataFromAPI(saConfig, recordId);
-                } else params.addParameter("Source", "cache");
+                } else {
+                    params.addParameter("Source", "cache");
+                    result = this.Suggestions;
+                }
 
                 timer.stop(params);
                 return result;
