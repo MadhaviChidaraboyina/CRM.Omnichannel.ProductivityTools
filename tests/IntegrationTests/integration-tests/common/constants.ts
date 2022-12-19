@@ -15,10 +15,12 @@ export class Constants {
   static SessionTemplateForSessionBuilder =
     `//*[@title="` + Constants.SessionTemplateName + `"]`;
   static OkId = `//*[@data-id="okButton"]`;
+  static SearchCaseOption = `(//*[contains(@data-id,"quickFind_text")])[1]`;
   static DashboardName = `DashboardApplicationTab`;
   static SessionTemplateUniqueName = "msdyn_AutomationTestSession";
   static AgentScriptName = "AutomationTestAgentScript";
-  static DashboardOpenSourceScriptName2 = "AutomationOpenWebResourceAgentScript";
+  static DashboardOpenSourceScriptName2 =
+    "AutomationOpenWebResourceAgentScript";
   static DascboardAgentScriptName2 = "AutomationDashboardAgentScript";
   static AgentScriptLink = `//*[text()="AutomationTestAgentScript"]`;
   static AgentScriptUniqueName = "msdyn_AutomationTestAgentScript";
@@ -36,9 +38,11 @@ export class Constants {
   static CSWIncidentSaveAndCloseButton = `[data-id='incident|NoRelationship|Form|Mscrm.Form.incident.SaveAndClose']`;
   static SaveAndCloseButton2 = `//*[text()="Save and close"]`;
   static AgentScriptSitemapOCBtn = `[data-text="Agent scripts"]`;
-  static AgentScriptlabel = 'button[data-test-id="overview-subcard-agentscripts"]';
+  static AgentScriptlabel =
+    'button[data-test-id="overview-subcard-agentscripts"]';
   static SessionsSitemapOCBtn = `[data-text="Sessions"]`;
-  static sessionTemplateLable = 'button[data-test-id="overview-subcard-session-template"]';
+  static sessionTemplateLable =
+    'button[data-test-id="overview-subcard-session-template"]';
   static EntityField = `[aria-label="Entity required"]`;
   static NameField = `[aria-label="Name"]`;
   static AccountFieldName = `[aria-label="Account Name"]`;
@@ -47,12 +51,14 @@ export class Constants {
   static AgentScriptsTab = `[data-id="tablist-Agent scripts"]`;
   static AddExistingAgentScriptsBtn = `[aria-label="Add Existing Agent script"]`;
   static LookForRecordsField = `[placeholder="Look for records"]`;
-  static Recordsvisible = "//li[contains(@id,'lookupDialogLookup-MscrmControls.FieldControls.SimpleLookupControl-LookupResults')]";
+  static Recordsvisible =
+    "//li[contains(@id,'lookupDialogLookup-MscrmControls.FieldControls.SimpleLookupControl-LookupResults')]";
   static AddBtn = `[data-id="lookupDialogSaveBtn"]`;
   static AddMoreRecords = `//*[@placeholder="Add more records"]`;
   static MoreCommandsForAgentScript = `[aria-label="More commands for Agent script"]`;
   static RefreshAgentScriptsSubGrid = `[data-id="msdyn_productivityagentscript|NoRelationship|SubGridStandard|Mscrm.SubGrid.msdyn_productivityagentscript.RefreshButton"]`;
-  static SessionTemplate = `//*[text()="` + Constants.SessionTemplateName + `"]`;
+  static SessionTemplate =
+    `//*[text()="` + Constants.SessionTemplateName + `"]`;
   static AgentScript =
     `//span[contains(.,'` + Constants.AgentScriptName + `')]`;
   static DashboardAgentScript =
@@ -62,10 +68,8 @@ export class Constants {
   static AgentScript2 = `//*[@title="` + Constants.AgentscriptName2 + `"]`;
   static AgentScriptSearchResult =
     `(//span[contains(.,"` + Constants.AgentScriptName + `")])[1]`;
-  static AgentOneSearchResult =
-    `//*[contains(@aria-label,"{0}")]`;
-  static AgentTwoSearchResult =
-    `//*[contains(@aria-label,"{0}")]`;
+  static AgentOneSearchResult = `//*[contains(@aria-label,"{0}")]`;
+  static AgentTwoSearchResult = `//*[contains(@aria-label,"{0}")]`;
   static DisableExpressionBuilderRadioBtnSelector =
     "//*[@aria-label='Enable build expression: No']";
   static ExpressionBuilderEnable = `//*[@data-id="msdyn_enablebuildexpression.fieldControl_container"]`;
@@ -126,7 +130,8 @@ export class Constants {
   static ResolvedCasesView = `//*[text()="Resolved Cases"]`;
   static AllCasesView = `//*[text()="All Cases"]`;
   static Agentscriptdropdown = "//*[contains(@id,'ViewSelector_')]/span/i";
-  static Inactiveagentscripvalue = "//span[normalize-space()='Inactive Agent scripts']";
+  static Inactiveagentscripvalue =
+    "//span[normalize-space()='Inactive Agent scripts']";
   static SearchBox = `//*[contains(@data-id,"quickFind_text")]`;
   static AutomationCaseLink = `//*[text()="Automation Case"]`;
   static UpdateAccount = `UpdateAccount`;
@@ -204,8 +209,10 @@ export class Constants {
     `//*[contains(@aria-label,"` + "Chat session - default" + `")]`;
   static OmnichannelAdministration = `//*[@aria-label="Omnichannel Administration"]`;
   static NavigateToAgentScript = `//*[@data-id="sidepane-tab-button-AppSidePane_MscrmControls.Callscript.CallscriptControl"]`;
-  static MacroDropdown = "//select[@id='MscrmControls.Callscript.CallscriptControl-callscriptCombobox']";
-  static MacroDropdownvalue = "//option[text()='AutomationDashboardAgentScript'][last()]";
+  static MacroDropdown =
+    "//select[@id='MscrmControls.Callscript.CallscriptControl-callscriptCombobox']";
+  static MacroDropdownvalue =
+    "//option[text()='AutomationDashboardAgentScript'][last()]";
   static AgentScriptVerification = `//select[@id="MscrmControls.Callscript.CallscriptControl-callscriptCombobox"]//option[@data-selected="true"]`;
   static DashboardsStemapBtn = `[aria-label="Dashboards"]`;
   static OpenDashboard = `OpenDashboard`;
@@ -281,7 +288,8 @@ export class Constants {
     "[data-id='msdyn_textinstruction.fieldControl-text-box-text']";
   static TextInstructionValue = "New Instruction";
   static AgentscriptStepSaveAndclose = "[data-id='quickCreateSaveAndCloseBtn']";
-  static ChatSession = "(//span[contains(.,'Case entity session - default template')])[1]";
+  static ChatSession =
+    "(//span[contains(.,'Case entity session - default template')])[1]";
   static VisitorLabel =
     "//label[starts-with(text(),'Visitor') and contains(@data-id,'MscrmControls.Callscript.CallscriptControl-CallScriptLabel')]";
   static EntitySearchApplicationTab = `EntitySearchApplicationTab`;
@@ -303,10 +311,11 @@ export class Constants {
   static AccountName = `TestAccount`;
   static AccountsSitemapBtn = `[aria-label="Accounts"]`;
   static ExistingRecord = `Open an existing record`;
+  static ExistingRecordTest1 = `Open an existing record Test1`;
   static EntityLogicalName = `[aria-label="Entity logical name"]`;
   static Account = `account`;
   static EntityRecordID = `[aria-label="Entity record ID"]`;
-  static EntityRecordTab = `[title="` + Constants.AccountName + `"]`;
+  static EntityRecordTab = `[title="` + Constants.AccountName + `"]`; 
   static CreateDraftEmail = `CreateDraftEmail`;
   static OpenDraftEmailForm = `//*[text()="Open an email form with predefined template"]`;
   static EmailRecipientsField = `[aria-label="Email recipients"]`;
@@ -581,7 +590,8 @@ export class Constants {
   static ConvertTo = `//*[text()="Convert To"]`;
   static ToCase = `//*[text()="To Case"]`;
   static LookupCustomerField = `[aria-label="Search records for Customer, Lookup field"]`;
-  static TaskCustomer = '(//span[text()="A. Datum Corporation (sample)"]/following-sibling::span)';
+  static TaskCustomer =
+    '(//span[text()="A. Datum Corporation (sample)"]/following-sibling::span)';
   static Convert = `[aria-label="Convert"]`;
   static TaskToCaseValidation = `[title="Completed Task"]`;
   static ResolveCaseBtn = `[aria-label="Resolve Case"]`;
@@ -691,6 +701,7 @@ export class Constants {
   static SubjectName2 = `Child`;
   static SubjectName3 = `SubChild`;
   static SelectSubject2 = `(//div[text()='Child1'])`;
+  static SelectChild = `(//div[text()='Child'])`;
   static CSWSubjectField = `[aria-label="Look for subject"]`;
   static CWSSubjectInputField = `[aria-label="Look for subject"][value="Parent"]`;
   static Parent = `//div[text()='Parent']`;
@@ -851,7 +862,7 @@ export class Constants {
   static ParameterUniqueName =
     Constants.MsdynForUniquename + Constants.ParameterName;
   static ValueAsTrue = `true`;
-  static ParameterAsAlwaysRender = `//*[contains(@title,'alwaysRender')]`;
+  static ParameterAsAlwaysRender = `(//*[contains(@title,'alwaysRender')])[1]`;
   static SaveAndCloseBtn2 = `(//span[contains(.,'Save and close')])[3]`;
   static SaveAndCloseQueueItem = `//span[contains(text(),'Save and close this Queue Item.')]`;
   static SaveAndCloseQueueItem1 = `[data-id="queueitem|NoRelationship|Form|Mscrm.Form.queueitem.SaveAndClose"]`;
@@ -898,6 +909,8 @@ export class Constants {
   static TurnonProductivityPane = `(//*[text()="Off"])[2]`;
   static DefaultMode = `[data-test-id="default-mode"]`;
   static TurnOnAgentScript = `//*[text()="Agent scripts Off"]`;
+  static checkAgentScript =
+    "//*[text()='Agent scripts']/../..//button[contains(@data-test-id, 'productivity-tool-toggle')]";
   static TurnOnKnowledgeSearch = `//*[text()="Knowledge search Off"]`;
   static TurnOnSmartAssist = `//*[text()="Smart assist Off"]`;
   static TurnOnMSTeams = `//*[text()="Microsoft Teams Off"]`;
@@ -1021,6 +1034,7 @@ export class Constants {
   static AddSessionToProfile = `[aria-label="Add button to add entity and its associated session template"]`;
   static ManageAgentExperience = `[aria-label="Manage settings for agent experience profile"]`;
   static SelectProfile = `[aria-label="Select profile"]`;
+  static SiteMap = `(//span[contains(@class,'symbolFont SiteMap-symbol  ')])`;
   static ResolveStatemant = `//*[text()="Read-only  This record’s status: Resolved"]`;
   static CloneCurrentMacro = `CloneCurrentMacro`;
   static CurrentRecord = `//*[text()="Clone current record"]`;
@@ -1064,7 +1078,8 @@ export class Constants {
   static ClickNewContactBtn = '[title="Create new Contact"]';
   static NewContactBtn = `//*[text()="+ New Contact"]`;
   static ContactBtn = `[aria-label="New Contact. Press the DELETE Key to close the tab"]`;
-
+  static popupscreen="[data-id='Modal53']"; 
+  static popupclose="button[aria-label='Close']";
   //Correction
   static AcceptNotification = `[aria-label="New Contact. Press the DELETE Key to close the tab"]`;
   static OpenCloseVisitorChat = `(//img[contains(@title,'Visitor')])[1]`;
@@ -1122,10 +1137,13 @@ export class Constants {
   static SortProfile = `(//span[contains(.,'Created on')])[3]`;
   static DascboardAgentScriptName = "AutomationDashboardAgentScript";
   static DashboardScriptName = "DashboardAgentScript";
-  static CaseEntitySession = "(//span[contains(.,'Case entity session - default template')])[1]";
+  static CaseEntitySession =
+    "(//span[contains(.,'Case entity session - default template')])[1]";
   //static CSWDropDown = "(//*[@aria-label='Omnichannel Agent Dashboard'])[3]";
-  static CSWDropDown = "span[contains(@id,'Dashboard_Selector_')]//span[@role='presentation']";
-  static CSWDropDownSelector = "(//span[contains(.,'Customer Service Agent Dashboard')])[1]";
+  static CSWDropDown =
+    "span[contains(@id,'Dashboard_Selector_')]//span[@role='presentation']";
+  static CSWDropDownSelector =
+    "(//span[contains(.,'Customer Service Agent Dashboard')])[1]";
   static RemoveAll = "(//span[contains(.,'Remove')])[2]";
   static SlugAndSessionConnector = `SlugAndSessionConnector`;
   static CasesGrid = `//*[text()="Cases My Active Cases"]`;
@@ -1159,7 +1177,7 @@ export class Constants {
   static TargetScriptLookUpField = `[aria-label="Target script, Lookup"]`;
   static AgentScriptSearchIcon = `[aria-label="Search records for Target script, Lookup field"]`;
   static Ordervalue1 = `1`;
-  static OpenFocustab = 'FocustabMacro';
+  static OpenFocustab = "FocustabMacro";
   static FiCase1 = `Merge First Case1`;
   static FiCase2 = `Merge First Case2`;
   static FiCase3 = `Merge Secound Case3`;
@@ -1204,7 +1222,9 @@ export class Constants {
   static CustomerSummaryTab = `[text()"Customer Summary"]`;
   static CustomerSummaryConversation = `[aria-label="Customer Summary. Press the DELETE Key to close the tab"]`;
   static OldCustomerSummaryConversation = `[aria-label="Old Customer Summary. Press the DELETE Key to close the tab"]`;
-  static AppTabSearchReasult = `//*[contains(@aria-label,"` + Constants.OldCustomerSummary + `")]`; static AnchorTabLookupResult = `LookupResultsDropdown_msdyn_anchortab_SelectedRecordList"]`;
+  static AppTabSearchReasult =
+    `//*[contains(@aria-label,"` + Constants.OldCustomerSummary + `")]`;
+  static AnchorTabLookupResult = `LookupResultsDropdown_msdyn_anchortab_SelectedRecordList"]`;
   static AnchorTabSearchbtn = `[aria-label="Search records for Anchor Tab, Lookup field"]`;
   static EntityNameOclive = `msdyn_ocliveworkitem`;
   static NextPage = `[aria-label="Next page"][title="Next page"][type=button]`;
@@ -1213,7 +1233,8 @@ export class Constants {
   static FormIdInputvalue = `5fe86453-73ea-4821-b6dd-ddc06e1755a1`;
   static OldCusytomerSummaryTitleSelect = `[role="link"][aria-label="Old Customer Summary"]`;
   static KnowledgearticleSearch = `[aria-label="Knowledge article search"]`;
-  static AnchorTabSearchResult1 = `//*[contains(@aria-label,"` + "Knowledge Search" + `")]`;
+  static AnchorTabSearchResult1 =
+    `//*[contains(@aria-label,"` + "Knowledge Search" + `")]`;
 
   static ManageNotificationBtn = `[aria-label="Manage settings for notification templates"]`;
   static NewNotificationTemplate = `[aria-label="New Notification Template"]`;
@@ -1271,23 +1292,30 @@ export class Constants {
   static User = `Admin Automated`;
 
   static WorkStreamValue = `(//*[@placeholder="--Select--"])[2]`;
-  static SelectWorkStream = `//*[contains(@aria-label,"` + Constants.WorkStreamName + `")]`;
+  static SelectWorkStream =
+    `//*[contains(@aria-label,"` + Constants.WorkStreamName + `")]`;
   static CretaeWithoutCondition = `//*[text()="Create without condition"]`;
   static MoreOptionsInCondition = `(//*[@data-icon-name="More"])[2]`;
   static SelectQueueField = `//*[text()="Select queue"]`;
   static RoutingSiteMap = `[aria-label="Routing"]`;
   static CreatedOn = "//label[text()='Created On']";
   static SortNewerToOlder = "//span[text()='Sort newer to older']";
-  static NewlyCreatedApplicationtab = `//span[text()="` + Constants.EntityListApplicationTab + `"]`;
+  static NewlyCreatedApplicationtab =
+    `//span[text()="` + Constants.EntityListApplicationTab + `"]`;
   static ApplicationTabTemplate = "msdyn_applicationtabtemplate";
   static EnitityNameInApplicationTabTemplate = "(//span[text()='---'])[1]";
-  static EntityNameValueInApplicationTabTemplate = "//div[@role='gridcell']//input[@type='text']";
-  static EntityListApplicationTabTitle = "//span[text()='EntityListApplicationTab']";
+  static EntityNameValueInApplicationTabTemplate =
+    "//div[@role='gridcell']//input[@type='text']";
+  static EntityListApplicationTabTitle =
+    "//span[text()='EntityListApplicationTab']";
   static OpenEntityListAplicationTab = `//*[text()="OpenEntityList"]`;
   static WebResourceScriptName = "WebResourceAgentScript";
-  static MacroErrorPage = "(//div[contains(.,'Something has gone wrong. Check technical details for more details.')])[12]";
-  static AgentScriptDropDown = "//select[@id='MscrmControls.Callscript.CallscriptControl-callscriptCombobox']";
-  static AgentScriptDropDownSelect = "//option[text()='WebResourceAgentScript']";
+  static MacroErrorPage =
+    "(//div[contains(.,'Something has gone wrong. Check technical details for more details.')])[12]";
+  static AgentScriptDropDown =
+    "//select[@id='MscrmControls.Callscript.CallscriptControl-callscriptCombobox']";
+  static AgentScriptDropDownSelect =
+    "//option[text()='WebResourceAgentScript']";
   static ThirdPartyWebsiteAgentScriptName = `ThirdPartyWebsiteAgentScript`;
   static ThirdPartyWebsiteMacroName = `ThirdPartyWebsiteMacro`;
   static ThirdPartyWebsiteTitle = `(//span[contains(.,'ThirdPartyWebsiteApplicationTab')])`;
@@ -1304,7 +1332,7 @@ export class Constants {
   static WebResourceTitle1 = `(//span[contains(.,'Automation Case')])`;
   static ExistingRecordAgentScriptName = `ExistingRecordAgentScript`;
   static ExistingRecordMacroName = `ExistingRecordMacro`;
-  static ExistingRecordTitle = `//span[contains(.,'TestAccount')]`;
+  static ExistingRecordTitle = `//span[contains(.,'Automation Case')]`;
   static DraftEmailAgentScriptName = `DraftEmailAgentScript`;
   static DraftEmailMacroName = `DraftEmailMacro`;
   static DraftEmailTitle = `(//span[contains(.,'Automation Case')])`;
@@ -1380,15 +1408,15 @@ export class Constants {
   static WebResourceSearch = `(//input[contains(@id,"SearchBox")])[2]`;
   static SelectWR = `(//i[@data-icon-name="StatusCircleCheckmark"])[1]`;
   static Addoption = `//span[text()='Add']`;
-  static FunctionName = `[placeholder="Function name"]`;//`[id="functionName"]`;
+  static FunctionName = `[placeholder="Function name"]`; //`[id="functionName"]`;
   static Saveandcontinue = `//span[text()='Save and continue']`;
   static UnsavedChangesPopup = `//div[text()='Your app has unsaved changes']`;
   static PublishCommandBar = `//span[text()='Save and Publish']`;
   static PlayButton = `[data-icon-name="Play"]`;
   static searchCase = `(//input[contains(@data-id,"quickFind_text")])[1]`;
   static caseRow = `//a[@title='{0}']`;
-  static NavigateButton = `[aria-label="{0}"]`
-  static CaseHeader = `//h1[@title="{0}"]`
+  static NavigateButton = `[aria-label="{0}"]`;
+  static CaseHeader = `//h1[@title="{0}"]`;
   static labelName = `NavigateCase`;
   static settingsinAppDesigner = `[data-icon-name="Settings"]`;
   static FeaturesButton = `//span[contains(text(),'Features')]`;
@@ -1591,6 +1619,7 @@ export class Constants {
   static UpdateRecordAgentScriptName = `UpdateRecordAgentScript`;
   static UpdateRecordTitle = `(//span[contains(.,'Home')])`;
   static SelectFirstRow = `(//div[@data-id='cell-0-1'])[2]`;
+  static SelectFirstRow1 = `(//div[@class='wj-cell data-selectable'])[2]`;
   static QueuesSitemap = `//li[@title='Queues']`;
   static BasicQueuesManageBtn = `//button[@aria-label='Manage settings for basic queues']`;
   static UserQueueName = `UserQueue1`;
@@ -1672,6 +1701,11 @@ export class Constants {
   static CreateDraftEmailMacroName = `CreateDraftEmailMacro`;
   static CreateDraftEmailTitle = `//span[contains(.,'Automation Case')]`;
   static CreateEmail = `[aria-label="Create"]`;
+  static UpdateAccountMacroName = `UpdateAccountMacro`;
+  static SimilarCaseMoreOption = `//label[contains(.,'Similar case suggestions')]/following::*[@alt="more options button"][1]`;
+  static KnowledgeArticleMoreOption = `//label[contains(.,'Knowledge article suggestions')]/following::*[@alt="more options button"][1]`;
+  static UpdateAccountAgentScriptName = `UpdateAccountAgentScript`;
+  static UpdateAccountTitle = `//span[contains(.,'Automation Case')]`;
   static EmailTemplateSubjectInput = `[title="Safe HTML of email template subject rich text editor"]`;
 }
 

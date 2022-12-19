@@ -58,6 +58,9 @@ describe("Agent Scripts - ", () => {
         TestSettings.AdminAccountPassword
       );
       await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
+      await adminStartPage.waitForDomContentLoaded();
+      await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+      await macrosAdminPage.validatePopup();
       await macrosAdminPage.createMacro(
         Constants.SearchPhraseForPopulatedPhrase
       );
@@ -100,7 +103,9 @@ describe("Agent Scripts - ", () => {
       TestSettings.AdminAccountPassword
     );
     await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
-
+    await macrosAdminPage.waitForDomContentLoaded();
+    await macrosAdminPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    await macrosAdminPage.validatePopup();
     await macrosAdminPage.createResolveSessionMacro(
       Constants.RefreshSessionContextTitle,
       Constants.IncidentID

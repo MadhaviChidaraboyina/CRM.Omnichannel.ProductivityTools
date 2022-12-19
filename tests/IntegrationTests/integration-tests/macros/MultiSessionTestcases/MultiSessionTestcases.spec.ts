@@ -9,6 +9,8 @@ import { AppProfileHelper } from "helpers/appprofile-helper";
 import { stringFormat } from "../../../Utility/Constants";
 import { AgentScript } from "../../../integration-tests/agentScript/pages/agentScriptAdmin";
 import { AgentChat } from "../../../pages/AgentChat";
+import { ConstantMS } from "../MultiSessionTestcases/msConstants";
+import { FunctionMS } from "../MultiSessionTestcases/msFunction";
 
 describe("Multi Session - ", () => {
   let adminContext: BrowserContext;
@@ -23,6 +25,7 @@ describe("Multi Session - ", () => {
   let rnd: any;
   const agentScriptAdminPage = new AgentScript(adminPage);
   var caseNameList: string[] = [];
+  let msessionAdminPage: FunctionMS;
 
   beforeAll(async () => {
     await AppProfileHelper.getInstance().CreateAppProfile();
@@ -30,18 +33,21 @@ describe("Multi Session - ", () => {
 
   beforeEach(async () => {
     adminContext = await browser.newContext({
-      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+      viewport: TestSettings.Viewport,
+      extraHTTPHeaders: {
         origin: "",
       },
     });
     liveChatContext = await browser.newContext({
-      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+      viewport: TestSettings.Viewport,
+      extraHTTPHeaders: {
         origin: "",
       },
       acceptDownloads: true,
     });
     agentContext = await browser.newContext({
-      viewport: TestSettings.Viewport, extraHTTPHeaders: {
+      viewport: TestSettings.Viewport,
+      extraHTTPHeaders: {
         origin: "",
       },
       acceptDownloads: true,
@@ -49,7 +55,8 @@ describe("Multi Session - ", () => {
     adminPage = await adminContext.newPage();
     adminStartPage = new OrgDynamicsCrmStartPage(adminPage);
     macrosAdminPage = new Macros(adminPage);
-    agentChat = new AgentChat(adminPage)
+    agentChat = new AgentChat(adminPage);
+    msessionAdminPage = new FunctionMS(adminPage);
   });
   afterEach(async () => {
     TestHelper.dispose(adminContext);
@@ -140,8 +147,8 @@ describe("Multi Session - ", () => {
     await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage)
     await agentChat.waitforTimeout();
 
-    var CaseTitleName = Constants.CaseTitleName + rnd
-    var CaseTitleName2 = Constants.CaseTitleName2 + rnd
+    var CaseTitleName = Constants.CaseTitleName + rnd;
+    var CaseTitleName2 = Constants.CaseTitleName2 + rnd;
 
     caseNameList = [CaseTitleName, CaseTitleName2];
     await macrosAdminPage.createIncidents(agentChat, caseNameList);
@@ -199,8 +206,12 @@ describe("Multi Session - ", () => {
     );
 
     //Validate Username & customer
-    await macrosAdminPage.ValidateThePage(stringFormat(Constants.TitleTag, CaseUserName));
-    await macrosAdminPage.ValidateThePage(stringFormat(Constants.TitleTag, Constants.XRMContact));
+    await macrosAdminPage.ValidateThePage(
+      stringFormat(Constants.TitleTag, CaseUserName)
+    );
+    await macrosAdminPage.ValidateThePage(
+      stringFormat(Constants.TitleTag, Constants.XRMContact)
+    );
   });
 
   ///<summary>
@@ -209,7 +220,6 @@ describe("Multi Session - ", () => {
   ///<summary>
   it("Test Case 1946046: [Multi Session] Verify Case Assoication action from Case Grid", async () => {
     agentPage = await agentContext.newPage();
-
     //Login as crmadmin
     await adminStartPage.navigateToOrgUrlAndSignIn(
       TestSettings.MultiSessionEmail,
@@ -256,31 +266,25 @@ describe("Multi Session - ", () => {
   ///</summary>
   it("Test Case 1945859: [Multi Session] Create and Convert Activities (Task, Email, Phone Call, Fax, Letter, Appointment & Custom Activity) to Case.", async () => {
     rnd = agentScriptAdminPage.RandomNumber();
-
     await agentChat.navigateToOrgUrlAndSignIn(
-      TestSettings.MultiSessionEmail,
+      TestSettings.MacroAccountEmail,
       TestSettings.AdminAccountPassword
     );
-
     await agentChat.goToMyApp(Constants.CustomerServiceWorkspace);
     await adminStartPage.waitForDomContentLoaded();
     await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
 
     var CaseUserName = Constants.XRMCaseName + rnd;
     caseNameList = [CaseUserName];
-
     await macrosAdminPage.createIncidents(agentChat, caseNameList);
-
     await macrosAdminPage.InitiateSession(
       CaseUserName,
       stringFormat(Constants.XRMSpecificCaseLink1, rnd)
     );
-
     //Create Task and convert it to case and validate
     await macrosAdminPage.CreateTask(Constants.TaskName + rnd);
     await macrosAdminPage.ConvertTaskToCase();
     await macrosAdminPage.ValidateTimeLine(Constants.TaskToCaseValidation);
-
     //Resolve case and validate
     await macrosAdminPage.ResolveCase(Constants.ResolutionName);
     await macrosAdminPage.ValidateThePage(Constants.ResolveStatemant);
@@ -297,7 +301,6 @@ describe("Multi Session - ", () => {
     await macrosAdminPage.ReactivateCase();
     await macrosAdminPage.DeleteCase();
     await macrosAdminPage.closeTaskTab();
-
     //Initiate session, Resolve it and Validate
     await macrosAdminPage.GoToHome();
     await macrosAdminPage.InitiateSession(
@@ -310,7 +313,6 @@ describe("Multi Session - ", () => {
     //Reactivate case and Validate
     await macrosAdminPage.ReactivateCase();
     await macrosAdminPage.ValidateTimeLine(Constants.ValidateReactivateCase);
-
     //Cancel case and validate
     await macrosAdminPage.CancelCase();
     await macrosAdminPage.ValidateTimeLine(Constants.CanceledCase);
@@ -351,7 +353,9 @@ describe("Multi Session - ", () => {
     await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneDisable);
 
     //Validate that Productivity pane maintains collapsed state during session switch events
-    await macrosAdminPage.SwitchBackToPreviousSession(stringFormat(Constants.XRMSpecificCaseLink1, rnd));
+    await macrosAdminPage.SwitchBackToPreviousSession(
+      stringFormat(Constants.XRMSpecificCaseLink1, rnd)
+    );
     await macrosAdminPage.ValidateThePage(Constants.ProductivityPaneEnable);
   });
 
@@ -369,7 +373,7 @@ describe("Multi Session - ", () => {
     );
     await adminStartPage.goToCustomerServiceWorkspace();
     await adminStartPage.waitForDomContentLoaded();
-    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage)
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     await agentChat.waitforTimeout();
 
     var CaseUserName = Constants.XRMCaseName + rnd;
@@ -390,9 +394,13 @@ describe("Multi Session - ", () => {
       CaseUserName2,
       stringFormat(Constants.XRMSpecificCaseLink2, rnd)
     );
-    await macrosAdminPage.SwitchBackToPreviousSession(stringFormat(Constants.XRMSpecificCaseLink1, rnd));
+    await macrosAdminPage.SwitchBackToPreviousSession(
+      stringFormat(Constants.XRMSpecificCaseLink1, rnd)
+    );
     await macrosAdminPage.isElementVisible(Constants.ProductivityPaneEnable);
-    await macrosAdminPage.SwitchBackToPreviousSession(stringFormat(Constants.XRMSpecificCaseLink2, rnd));
+    await macrosAdminPage.SwitchBackToPreviousSession(
+      stringFormat(Constants.XRMSpecificCaseLink2, rnd)
+    );
     await macrosAdminPage.isElementVisible(Constants.ProductivityPaneEnable);
   });
 
@@ -520,8 +528,12 @@ describe("Multi Session - ", () => {
     );
 
     //Validating title of opened Session and Tab
-    await macrosAdminPage.ValidateThePage(stringFormat(Constants.SpecificCaseTitleNameVal, CaseUserName));
-    await macrosAdminPage.ValidateThePage(stringFormat(Constants.SpecificCaseTitleName2Val, CaseUserName2));
+    await macrosAdminPage.ValidateThePage(
+      stringFormat(Constants.SpecificCaseTitleNameVal, CaseUserName)
+    );
+    await macrosAdminPage.ValidateThePage(
+      stringFormat(Constants.SpecificCaseTitleName2Val, CaseUserName2)
+    );
   });
 
   ///<summary>
@@ -537,6 +549,10 @@ describe("Multi Session - ", () => {
     await agentChat.goToMyApp(Constants.CustomerServiceWorkspace);
     await adminStartPage.waitForDomContentLoaded();
     await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage)
+
+    await agentChat.waitForAgentStatusIcon();
+    await agentChat.waitForAgentStatus();
+    await agentChat.setAgentStatusToAvailable();
 
     var CaseUserName = Constants.FParent1
     var CaseUserName2 = Constants.FCase1;
@@ -778,12 +794,16 @@ describe("Multi Session - ", () => {
         Constants.Pick,
         Constants.ConfirmPickOperation
       );
-      await macrosAdminPage.ValidateThePage(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateThePage(
+        stringFormat(Constants.CSMOwner, TestSettings.InboxUser2)
+      );
       await macrosAdminPage.ClickOperation(
         Constants.Release,
         Constants.ConfirmReleaseOperation
       );
-      await macrosAdminPage.ValidateNotPresent(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateNotPresent(
+        stringFormat(Constants.CSMOwner, TestSettings.InboxUser2)
+      );
       await macrosAdminPage.ClickReleaseOperation(
         Constants.Remove,
         Constants.ConfirmRemoveOperation
@@ -799,12 +819,16 @@ describe("Multi Session - ", () => {
         Constants.Pick,
         Constants.ConfirmPickOperation
       );
-      await macrosAdminPage.ValidateThePage(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateThePage(
+        stringFormat(Constants.CSMOwner, TestSettings.InboxUser2)
+      );
       await macrosAdminPage.ClickOperation(
         Constants.Release,
         Constants.ConfirmReleaseOperation
       );
-      await macrosAdminPage.ValidateNotPresent(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateNotPresent(
+        stringFormat(Constants.CSMOwner, TestSettings.InboxUser2)
+      );
       await macrosAdminPage.ClickReleaseOperation(
         Constants.Remove,
         Constants.ConfirmRemoveOperation
@@ -850,12 +874,16 @@ describe("Multi Session - ", () => {
         Constants.Pick,
         Constants.ConfirmPickOperation
       );
-      await macrosAdminPage.ValidateThePage(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateThePage(
+        stringFormat(Constants.CSMOwner, TestSettings.InboxUser2)
+      );
       await macrosAdminPage.ClickOperation(
         Constants.Release,
         Constants.ConfirmReleaseOperation
       );
-      await macrosAdminPage.ValidateNotPresent(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateNotPresent(
+        stringFormat(Constants.CSMOwner, TestSettings.InboxUser2)
+      );
       await macrosAdminPage.ClickReleaseOperation(
         Constants.Remove,
         Constants.ConfirmRemoveOperation
@@ -871,12 +899,16 @@ describe("Multi Session - ", () => {
         Constants.Pick,
         Constants.ConfirmPickOperation
       );
-      await macrosAdminPage.ValidateThePage(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateThePage(
+        stringFormat(Constants.CSMOwner, TestSettings.InboxUser2)
+      );
       await macrosAdminPage.ClickOperation(
         Constants.Release,
         Constants.ConfirmReleaseOperation
       );
-      await macrosAdminPage.ValidateNotPresent(stringFormat(Constants.CSMOwner, TestSettings.InboxUser2));
+      await macrosAdminPage.ValidateNotPresent(
+        stringFormat(Constants.CSMOwner, TestSettings.InboxUser2)
+      );
       await macrosAdminPage.ClickReleaseOperation(
         Constants.Remove,
         Constants.ConfirmRemoveOperation
@@ -988,8 +1020,8 @@ describe("Multi Session - ", () => {
     await macrosAdminPage.GoToServiceTerms();
     await macrosAdminPage.OpenEntitlement(Entitlement2, stringFormat(Constants.ChooseEnt2, rnd));
 
-    //verifing the Entitlements remaining terms is 10
-    await macrosAdminPage.ValidateThePage(Constants.RemTerms2InEnt2);
+      //verifing the Entitlements remaining terms is 10
+      await macrosAdminPage.ValidateThePage(Constants.RemTerms2InEnt2);
 
     //create another case and select Entitlement
     await macrosAdminPage.openAppLandingPage(adminPage);
@@ -1046,7 +1078,9 @@ describe("Multi Session - ", () => {
     await macrosAdminPage.GoToServiceTerms();
     await macrosAdminPage.OpenEntitlement(Entitlement3, stringFormat(Constants.ChooseEnt3, rnd));
 
-    //verifing the Entitlements remaining terms count 20
-    await macrosAdminPage.ValidateThePage(Constants.RemTerms2InEnt3);
-  });
+      //verifing the Entitlements remaining terms count 20
+      await macrosAdminPage.ValidateThePage(Constants.RemTerms2InEnt3);
+    },
+    60 * 20 * 1000
+  );
 });
