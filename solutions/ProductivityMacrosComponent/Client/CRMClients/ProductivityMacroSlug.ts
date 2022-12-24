@@ -124,11 +124,11 @@ namespace Microsoft.ProductivityMacros.Internal {
 								continue;
 							} 
 							let entityLogicalName: string = splitEntityLogicalName[1];
-							let splitEntityAttributeName= splitQuery[0].split(new RegExp(entityLogicalName + ".", "gi"));
-							if (splitEntityAttributeName == null || splitEntityAttributeName.length < 2) {
+							let startIndexOfEntityLogicalName = splitQuery[0].indexOf(entityLogicalName);
+							if (startIndexOfEntityLogicalName == -1) {
 								continue;
-							} 
-							let entityAttributeName: string = splitEntityAttributeName[1];
+							}
+							let entityAttributeName: string = splitQuery[0].substring(startIndexOfEntityLogicalName + 1 + entityLogicalName.length);
 						let promise: Promise<string | void> = new Promise<string>(
 							function (resolve, reject) {
 								let qPromises: Promise<string>[] = [];
