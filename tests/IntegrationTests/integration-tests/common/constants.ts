@@ -77,7 +77,7 @@ export class Constants {
   static SeleectedAgentScriptSearchResult = `[data-id="MscrmControls.FieldControls.SimpleLookupControl-LookupResultsPopup_falseBoundLookup_selected_tag_text"]`;
   static MacrosSitemapBtn = `[data-text="Macros"]`;
   static StartMacroExecutionBtn = `//*[text()="Start macro execution"]`;
-  static NewStepBtn = `//*[text()="+ New step"]`;
+  static NewStepBtn = `//button[text()="+ New step"]`;
   static OpenRecordGrid = `//*[text()="Open a record grid"]`;
   static EntityLogicalNameField = `[aria-label="Entity logical name"]`;
   static EntityLogicalNameAccount = `account`;
@@ -1707,6 +1707,9 @@ export class Constants {
   static UpdateAccountAgentScriptName = `UpdateAccountAgentScript`;
   static UpdateAccountTitle = `//span[contains(.,'Automation Case')]`;
   static EmailTemplateSubjectInput = `[title="Safe HTML of email template subject rich text editor"]`;
+  static FocustabAgentScriptName = `FocustabAgentScript`;
+  static FocustabMacroName = `FocustabMacro`;
+  static FocustabTitle = `//span[contains(.,'Automation Case')]`;
 }
 
 export enum EntityNames {

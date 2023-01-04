@@ -65,24 +65,24 @@ describe("Macro testcases - ", () => {
     rnd = agentScriptAdminPage.RandomNumber();
     //Login as admin and create cases
     await agentChat.navigateToOrgUrlAndSignIn(
-      TestSettings.MacroAccountEmail,
+      TestSettings.MacrosAgentEmail,
       TestSettings.AdminAccountPassword
     );
     await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
     await adminStartPage.waitForDomContentLoaded();
     await macrosAdminPage.createMacro(Constants.AutoFillMacroName);
-    await agentChat.waitforTimeout();
+    await agentChat.waitForDomContentLoaded();
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.AutoFillMacroName
     );
     const agentScript = await agentChat.createAgentScriptbyXRMAPI(
       Constants.AutoFillAgentScriptName,
-      Constants.TitleUniqueName + rnd
+      Constants.UniqueName + rnd
     );
     const agentScriptStep = await agentChat.createAgentScriptStepbyXRMAPI(
       Constants.AutoFillAgentScriptName,
-      Constants.TitleUniqueName + rnd,
+      Constants.UniqueName + rnd + rnd,
       Constants.AgentscriptStepOrder,
       Constants.MacroAgentScriptStep,
       agentScript.id,
@@ -100,12 +100,12 @@ describe("Macro testcases - ", () => {
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
     await adminStartPage.waitForDomContentLoaded();
     await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
-    var CaseUserName = Constants.XRMCaseName + rnd;
+    var CaseUserName = Constants.CaseTitleName + rnd;
     caseNameList = [CaseUserName];
     await macrosAdminPage.createIncidents(agentChat, caseNameList);
     await macrosAdminPage.InitiateSession(
       CaseUserName,
-      stringFormat(Constants.XRMSpecificCaseLink1, rnd)
+      stringFormat(Constants.SpecificCaseLink1, rnd)
     );
     const runValidateAutoFillMacro =
       await macrosAdminPage.runMacroInSessionAndValidate(
@@ -149,7 +149,8 @@ describe("Macro testcases - ", () => {
       Constants.ControlMacroName,
       applicationTabId
     );
-    await macrosAdminPage.waitForTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.ControlMacroName
@@ -222,7 +223,8 @@ describe("Macro testcases - ", () => {
       Constants.ThirdPartyWebsiteMacroName,
       applicationTabId
     );
-    await macrosAdminPage.waitForTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.ThirdPartyWebsiteMacroName
@@ -253,7 +255,7 @@ describe("Macro testcases - ", () => {
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
     await macrosAdminPage.waitForDomContentLoaded();
     await macrosAdminPage.waitUntilSelectorIsVisible(Constants.LandingPage);
-    await agentChat.waitForAgentStatusIcon();
+    
     await macrosAdminPage.CreateCaseInCSW(Constants.CaseTitleName);
     await macrosAdminPage.InitiateSession(
       Constants.CaseTitleName,
@@ -287,7 +289,8 @@ describe("Macro testcases - ", () => {
     );
     await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
     await macrosAdminPage.createMacro(Constants.OpenNewFormMacroName);
-    await macrosAdminPage.waitForTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.OpenNewFormMacroName
@@ -354,7 +357,8 @@ describe("Macro testcases - ", () => {
     );
     await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
     await macrosAdminPage.createMacro(Constants.OpenKBSearchMacroName);
-    await macrosAdminPage.waitForTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.OpenKBSearchMacroName
@@ -424,7 +428,8 @@ describe("Macro testcases - ", () => {
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
     await macrosAdminPage.createMacro(Constants.OpenExistingFormMacroName,incidentId);
-    await macrosAdminPage.waitForTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.OpenExistingFormMacroName
@@ -495,7 +500,8 @@ describe("Macro testcases - ", () => {
     await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     await macrosAdminPage.createMacro(Constants.OpenGridMacroName);
     //Creation of agentScripts Using XRM API's
-    await macrosAdminPage.waitForTimeout();// to load the page we need to timeout
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(agentChat, Constants.OpenGridMacroName);
     const agentScript = await agentChat.createAgentScriptbyXRMAPI(
       Constants.OpenGridAgentScriptName,
@@ -516,8 +522,7 @@ describe("Macro testcases - ", () => {
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
     await adminStartPage.waitForDomContentLoaded();
-    await agentChat.waitforTimeout();// Default timeout is required to load the page 
-    await agentChat.waitForAgentStatusIcon();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     var CaseUserName = Constants.CaseTitleName;
     caseNameList = [CaseUserName];
     await macrosAdminPage.createIncidents(agentChat, caseNameList);
@@ -553,8 +558,8 @@ describe("Macro testcases - ", () => {
     await adminStartPage.waitForDomContentLoaded();
     await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     await macrosAdminPage.createMacro(Constants.DoRelevanceSearchMacroName);
-
-    await agentChat.waitforTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(agentChat, Constants.DoRelevanceSearchMacroName);
     const agentScript = await agentChat.createAgentScriptbyXRMAPI(
       Constants.DoRelevanceSearchAgentScriptName,
@@ -575,9 +580,8 @@ describe("Macro testcases - ", () => {
     //Run Macro
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-
-    await agentChat.waitforTimeout();
-    await agentChat.waitForAgentStatusIcon();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     var CaseUserName = Constants.CaseTitleName;
     caseNameList = [CaseUserName];
     await macrosAdminPage.createIncidents(agentChat, caseNameList);
@@ -615,7 +619,8 @@ describe("Macro testcases - ", () => {
       Constants.ResolveCaseMacroName,
       Constants.IncidentID
     );
-    await agentChat.waitforTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.ResolveCaseMacroName
@@ -644,7 +649,6 @@ describe("Macro testcases - ", () => {
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
     await adminStartPage.waitForDomContentLoaded();
-    await agentChat.waitforTimeout();
     await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     var CaseUserName = Constants.XRMCaseName + rnd;
     caseNameList = [CaseUserName];
@@ -682,7 +686,7 @@ describe("Macro testcases - ", () => {
     rnd = macrosAdminPage.RandomNumber();
     //Login as admin and create macro
     await agentChat.navigateToOrgUrlAndSignIn(
-      TestSettings.MacroAccountEmail,
+      TestSettings.MacrosAgentEmail,
       TestSettings.AdminAccountPassword
     );
     await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
@@ -692,52 +696,51 @@ describe("Macro testcases - ", () => {
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
     await macrosAdminPage.createMacro(
-      Constants.UpdateRecordMacroName,
+      Constants.UpdateAccountMacroName,
       incidentId
     );
-    await agentChat.waitforTimeout();
+    await adminStartPage.waitForDomContentLoaded();
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
-      Constants.UpdateRecordMacroName
+      Constants.UpdateAccountMacroName
     );
     const agentScript = await macrosAdminPage.createAgentScriptByXRMAPI(
       agentChat,
-      Constants.UpdateRecordAgentScriptName,
+      Constants.UpdateAccountAgentScriptName + rnd,
       Constants.UniqueName + rnd
     );
     const agentScriptStep = await macrosAdminPage.createAgentScriptStepbyXRMAPI(
       agentChat,
-      Constants.UpdateRecordAgentScriptName,
+      Constants.UpdateAccountAgentScriptName + rnd,
       Constants.UniqueName + rnd + rnd,
       Constants.AgentscriptStepOrder,
       Constants.MacroAgentScriptStep,
       agentScript.id,
-      Constants.UpdateRecordMacroName,
+      Constants.UpdateAccountMacroName,
       workflowID
     );
     await macrosAdminPage.OpenAgentScriptandSave(
-      Constants.UpdateRecordAgentScriptName
+      Constants.UpdateAccountAgentScriptName + rnd
     );
     await macrosAdminPage.addAgentScripttoDefaultChatSessionWithParameter(
-      Constants.UpdateRecordAgentScriptName
+      Constants.UpdateAccountAgentScriptName + rnd
     );
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
     await adminStartPage.waitForDomContentLoaded();
-    await agentChat.waitforTimeout();
     await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
-    var CaseUserName = Constants.XRMCaseName + rnd;
+    var CaseUserName = Constants.CaseTitleName + rnd;
     caseNameList = [CaseUserName];
     await macrosAdminPage.createIncidents(agentChat, caseNameList);
     await macrosAdminPage.InitiateSession(
       CaseUserName,
-      stringFormat(Constants.XRMSpecificCaseLink1, rnd)
+      stringFormat(Constants.SpecificCaseLink1, rnd)
     );
     //Run Macro and Validate
     const runAndValidateMacro =
       await macrosAdminPage.runMacroInSessionAndValidate(
-        Constants.UpdateRecordAgentScriptName,
-        Constants.UpdateRecordTitle
+        Constants.UpdateAccountAgentScriptName + rnd,
+        Constants.UpdateAccountTitle
       );
     expect(runAndValidateMacro).toBeTruthy();
     await macrosAdminPage.deletAgentscriptStepbyXRM(
@@ -794,7 +797,8 @@ describe("Macro testcases - ", () => {
       Constants.RefreshSessionMacroName,
       Constants.IncidentID
     );
-    await agentChat.waitforTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.RefreshSessionMacroName
@@ -823,9 +827,7 @@ describe("Macro testcases - ", () => {
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
     await adminStartPage.waitForDomContentLoaded();
-    await agentChat.waitforTimeout();
     await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
-    await agentChat.waitForAgentStatusIcon();
     var CaseUserName = Constants.XRMCaseName + rnd;
     caseNameList = [CaseUserName];
     await macrosAdminPage.createIncidents(agentChat, caseNameList);
@@ -1017,7 +1019,8 @@ describe("Macro testcases - ", () => {
       Constants.EntityListOptionValue
     );
     await macrosAdminPage.createMacro(Constants.EntityListMacroName, urlId);
-    await agentChat.waitforTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.EntityListMacroName
@@ -1099,7 +1102,8 @@ describe("Macro testcases - ", () => {
       applicationTabId
     );
 
-    await agentChat.waitforTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
 
     const workflowID = await macrosAdminPage.getLatestMacro(agentChat, Constants.ThirdPartyWebsiteMacroName);
 
@@ -1126,7 +1130,7 @@ describe("Macro testcases - ", () => {
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
     await adminStartPage.waitForDomContentLoaded();
     await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
-    await agentChat.waitForAgentStatusIcon();
+    
 
     var CaseUserName = Constants.XRMCaseName + rnd;
     caseNameList = [CaseUserName];
@@ -1247,7 +1251,8 @@ describe("Macro testcases - ", () => {
       Constants.WebResourceMacroName,
       urlId
     );
-    await macrosAdminPage.waitForTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.WebResourceMacroName
@@ -1326,7 +1331,8 @@ describe("Macro testcases - ", () => {
       Constants.EntityRecordMacroName,
       applicationTabId
     );
-    await agentChat.waitforTimeout();// Default timeout is required to load the page 
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(agentChat, Constants.EntityRecordMacroName);
     const agentScript = await agentChat.createAgentScriptbyXRMAPI(
       Constants.EntityRecordAgentScriptName,
@@ -1348,7 +1354,7 @@ describe("Macro testcases - ", () => {
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
     await macrosAdminPage.waitForDomContentLoaded();
     await macrosAdminPage.waitUntilSelectorIsVisible(Constants.LandingPage);
-    await agentChat.waitForAgentStatusIcon();
+    
     const CaseTitleName = await macrosAdminPage.createCaseWithAPI(
       Constants.CaseTitleName
     );
@@ -1388,7 +1394,8 @@ describe("Macro testcases - ", () => {
       Constants.OpenKbArticleMacroName,
       kbArticleId
     );
-    await macrosAdminPage.waitForTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.OpenKbArticleMacroName
@@ -1537,7 +1544,8 @@ describe("Macro testcases - ", () => {
     await macrosAdminPage.createMacro(
       Constants.SearchPhraseForPopulatedPhrase
     );
-    await agentChat.waitforTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(agentChat, Constants.SearchPhraseForPopulatedPhrase);
 
     const agentScript = await macrosAdminPage.createAgentScriptByXRMAPI(agentChat,
@@ -1562,7 +1570,7 @@ describe("Macro testcases - ", () => {
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
     await adminStartPage.waitForDomContentLoaded();
     await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
-    await agentChat.waitForAgentStatusIcon();
+    
 
     var CaseUserName = Constants.XRMCaseName + rnd;
     caseNameList = [CaseUserName];
@@ -1623,7 +1631,7 @@ describe("Macro testcases - ", () => {
     await adminStartPage.goToCustomerServiceWorkspace();
     await adminStartPage.waitForDomContentLoaded();
     await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
-    await agentChat.waitForAgentStatusIcon();
+    
 
     var CaseUserName = Constants.XRMCaseName + rnd;
     caseNameList = [CaseUserName];
@@ -1793,7 +1801,8 @@ describe("Macro testcases - ", () => {
       Constants.WebResourcesMacroName,
       applicationTabId
     );
-    await macrosAdminPage.waitForTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.WebResourcesMacroName
@@ -1855,13 +1864,15 @@ describe("Macro testcases - ", () => {
     rnd = agentScriptAdminPage.RandomNumber();
     //Login as admin and create macro
     await adminStartPage.navigateToOrgUrlAndSignIn(
-      TestSettings.MacroAccountEmail,
+      TestSettings.MacrosAgentEmail,
       TestSettings.AdminAccountPassword
     );
     await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
     const incidentId = await macrosAdminPage.createCaseAndGetIncidentId();
+    await macrosAdminPage.waitForDomContentLoaded();
     const incidentEmailTemplateId =
       await macrosAdminPage.CreateEmailTemplateAndGetId();
+    await macrosAdminPage.waitForDomContentLoaded();
     await macrosAdminPage.openAppLandingPage(adminPage);
     await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
     await macrosAdminPage.createMacro(
@@ -1869,18 +1880,18 @@ describe("Macro testcases - ", () => {
       incidentEmailTemplateId,
       incidentId
     );
-    await macrosAdminPage.waitForTimeout();
+    await macrosAdminPage.waitForDomContentLoaded();
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.CreateDraftEmailMacroName
     );
     const agentScript = await agentChat.createAgentScriptbyXRMAPI(
       Constants.CreateDraftEmailAgentScriptName,
-      Constants.TitleUniqueName + rnd
+      Constants.UniqueName + rnd
     );
     const agentScriptStep = await agentChat.createAgentScriptStepbyXRMAPI(
       Constants.CreateDraftEmailAgentScriptName,
-      Constants.TitleUniqueName + rnd + rnd,
+      Constants.UniqueName + rnd + rnd,
       Constants.AgentscriptStepOrder,
       Constants.MacroAgentScriptStep,
       agentScript.id,
@@ -1938,7 +1949,8 @@ describe("Macro testcases - ", () => {
     await macrosAdminPage.createMacro(
       Constants.FailMacroName
     );
-    await macrosAdminPage.waitForTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.FailMacroName
@@ -1994,7 +2006,8 @@ describe("Macro testcases - ", () => {
       Constants.CloneRecordMacroName,
       Constants.RecordName
     );
-    await macrosAdminPage.waitForTimeout();
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.CloneRecordMacroName
@@ -2023,7 +2036,7 @@ describe("Macro testcases - ", () => {
     await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
     await macrosAdminPage.waitForDomContentLoaded();
     await macrosAdminPage.waitUntilSelectorIsVisible(Constants.LandingPage);
-    await agentChat.waitForAgentStatusIcon();
+    
     const caseTitle = await macrosAdminPage.createCaseWithAPI(
       Constants.CaseTitleName
     );
@@ -2059,7 +2072,7 @@ describe("Macro testcases - ", () => {
     rnd = agentScriptAdminPage.RandomNumber();
     //Login as admin and create cases
     await agentChat.navigateToOrgUrlAndSignIn(
-      TestSettings.MacroAccountEmail,
+      TestSettings.MacrosAgentEmail,
       TestSettings.AdminAccountPassword
     );
     await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
@@ -2072,18 +2085,18 @@ describe("Macro testcases - ", () => {
       Constants.EntitySearchMacroName,
       applicationTabId
     );
-
+    await adminStartPage.waitForDomContentLoaded();
     const workflowID = await macrosAdminPage.getLatestMacro(
       agentChat,
       Constants.EntitySearchMacroName
     );
 
     const agentScript = await agentChat.createAgentScriptbyXRMAPI(
-      Constants.EntitySearchAgentScriptName,
+      Constants.EntitySearchAgentScriptName + rnd,
       Constants.TitleUniqueName + rnd
     );
     const agentScriptStep = await agentChat.createAgentScriptStepbyXRMAPI(
-      Constants.EntitySearchAgentScriptName,
+      Constants.EntitySearchAgentScriptName + rnd,
       Constants.TitleUniqueName + rnd,
       Constants.AgentscriptStepOrder,
       Constants.MacroAgentScriptStep,
@@ -2092,10 +2105,10 @@ describe("Macro testcases - ", () => {
       workflowID
     );
     await macrosAdminPage.OpenAgentScriptandSave(
-      Constants.EntitySearchAgentScriptName
+      Constants.EntitySearchAgentScriptName + rnd
     );
     await macrosAdminPage.addAgentScripttoDefaultChatSessionWithParameter(
-      Constants.EntitySearchAgentScriptName
+      Constants.EntitySearchAgentScriptName + rnd
     );
     //Run Macro
     await macrosAdminPage.openAppLandingPage(adminPage);
@@ -2110,7 +2123,7 @@ describe("Macro testcases - ", () => {
     );
     const runValidateEntitySearchMacro =
       await macrosAdminPage.runMacroInSessionAndValidate(
-        Constants.EntitySearchAgentScriptName,
+        Constants.EntitySearchAgentScriptName + rnd,
         Constants.EntitySearchTitle
       );
     expect(runValidateEntitySearchMacro).toBeTruthy();
@@ -2201,5 +2214,83 @@ describe("Macro testcases - ", () => {
       EntityNames.AgentScript,
       agentScript.id
     );
+  });
+
+  ///<summary>
+  ///Test Case 2313873: [Macros] Verify that tab is focused using 'Focus on the tab' action in the macros.
+  /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2313873
+  ///</summary>
+  it("Test Case 2313873: [Macros] Verify that tab is focused using 'Focus on the tab' action in the macros.", async () => {
+    agentPage = await agentContext.newPage();
+    rnd = agentScriptAdminPage.RandomNumber();
+    //Login as admin and create cases
+    await agentChat.navigateToOrgUrlAndSignIn(
+      TestSettings.MacrosAgentEmail,
+      TestSettings.AdminAccountPassword
+    );
+    await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
+    const accountid = await macrosAdminPage.createAccountAndGetAccountId(
+      Constants.AccountName2 + rnd
+    );
+    await macrosAdminPage.openAppLandingPage(adminPage);
+    await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
+    await adminStartPage.waitForDomContentLoaded();
+    await macrosAdminPage.createMacro(
+      Constants.FocustabMacroName,
+      accountid
+    );
+    await adminStartPage.waitForDomContentLoaded();
+    const workflowID = await macrosAdminPage.getLatestMacro(
+      agentChat,
+      Constants.FocustabMacroName
+    );
+
+    const agentScript = await agentChat.createAgentScriptbyXRMAPI(
+      Constants.FocustabAgentScriptName + rnd,
+      Constants.UniqueName + rnd
+    );
+    const agentScriptStep = await agentChat.createAgentScriptStepbyXRMAPI(
+      Constants.FocustabAgentScriptName + rnd,
+      Constants.UniqueName + rnd + rnd,
+      Constants.AgentscriptStepOrder,
+      Constants.MacroAgentScriptStep,
+      agentScript.id,
+      Constants.FocustabMacroName,
+      workflowID
+    );
+    await macrosAdminPage.OpenAgentScriptandSave(
+      Constants.FocustabAgentScriptName + rnd
+    );
+    await macrosAdminPage.addAgentScripttoDefaultChatSessionWithParameter(
+      Constants.FocustabAgentScriptName + rnd
+    );
+    //Run Macro
+    await macrosAdminPage.openAppLandingPage(adminPage);
+    await adminStartPage.goToCustomerServiceWorkspace();
+    await adminStartPage.waitForDomContentLoaded();
+    const caseTitle = await macrosAdminPage.createCaseWithAPI(
+      Constants.CaseTitleName
+    );
+    await macrosAdminPage.InitiateSession(
+      caseTitle,
+      Constants.LinkStart + caseTitle + Constants.LinkEnd
+    );
+    const runValidateFocustabMacro =
+      await macrosAdminPage.runMacroInSessionAndValidate(
+        Constants.FocustabAgentScriptName + rnd,
+        Constants.FocustabTitle
+      );
+    expect(runValidateFocustabMacro).toBeTruthy();
+    await macrosAdminPage.deletAgentScriptStepByXRM(
+      agentChat,
+      EntityNames.AgentScriptStep,
+      agentScriptStep.id
+    );
+    await macrosAdminPage.deleteAgentScriptByXRM(
+      agentChat,
+      EntityNames.AgentScript,
+      agentScript.id
+    );
+    await agentChat.deleteRecordbyXRM(EntityNames.Macros, workflowID);
   });
 });

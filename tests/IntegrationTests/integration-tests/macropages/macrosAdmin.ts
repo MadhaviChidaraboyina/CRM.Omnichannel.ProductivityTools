@@ -315,7 +315,7 @@ export class Macros extends BasePage {
         await iframeChild.fill(Constants.EntityRecordIDField, params[1]);
         await iframeChild.fill(
           Constants.EmailRecipientsField,
-          Constants.EmailID
+          TestSettings.MacrosAgentEmail
         );
         await iframeChild.fill(
           Constants.EntityLogicalNameField,
@@ -550,6 +550,17 @@ export class Macros extends BasePage {
         await this.checkAndCloseDynamicContentPopUp(iframeChild);
         await iframeChild.fill(
           Constants.ApplicationTemplateIdInputField,
+          params[0]
+        );
+        break;
+      case Constants.FocustabMacroName:
+        await iframeChild.waitForSelector(Constants.FocusApplicationTab);
+        await iframeChild.click(Constants.FocusApplicationTab);
+        await iframeChild.waitForSelector(Constants.TabId);
+        await iframeChild.click(Constants.TabId);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(
+          Constants.TabId,
           params[0]
         );
         break;
@@ -989,7 +1000,7 @@ export class Macros extends BasePage {
           Constants.WebResourceDataValue
         );
         break;
-        case Constants.EntityViewApplicationTab:
+      case Constants.EntityViewApplicationTab:
         await this.adminPage.waitForSelector(Constants.EntityViewName);
         await this.adminPage.click(Constants.EntityViewName);
         await this.adminPage.waitForSelector(Constants.EntityViewText);
@@ -998,10 +1009,6 @@ export class Macros extends BasePage {
           Constants.SearchTextValue
         );
         break;
-    }
-    await this.adminPage.click(Constants.SaveButton);
-    // Fill the value of entityName in Entity List
-    switch (name) {
       case Constants.EntityListApplicationTab:
         await this.adminPage.waitForSelector(Constants.EntityListName);
         await this.adminPage.click(Constants.EntityListName);
@@ -4593,22 +4600,25 @@ export class Macros extends BasePage {
     agentScriptName: string,
     entitylisttitle: string
   ) {
-    //Time Delay for Loading Productivity Pane
-    await this.adminPage.waitForSelector(Constants.NavigateToAgentScript);
+    const navigateToAgentScript = await this.adminPage.locator(Constants.NavigateToAgentScript);
+    await navigateToAgentScript.waitFor({ state: "visible" });
     await this.adminPage.click(Constants.NavigateToAgentScript);
-    await this.adminPage.waitForSelector(Constants.AgentScriptDropDown);
+    const agentScriptDropDown = await this.adminPage.locator(Constants.AgentScriptDropDown);
+    await agentScriptDropDown.waitFor({ state: "visible" });
     await this.adminPage.selectOption(Constants.AgentScriptDropDown, {
       label: agentScriptName,
     });
-    await this.adminPage.waitForSelector(Constants.MacroRunButton);
+    const macroRunButtonBtn = await this.adminPage.locator(Constants.MacroRunButton);
+    await macroRunButtonBtn.waitFor({ state: "visible" });
     await this.adminPage.click(Constants.MacroRunButton);
-    await this.waitForDomContentLoaded();
     // Added constants.five as of now to wait for selector to load
     await this.waitUntilSelectorIsVisible(
       entitylisttitle,
       Constants.Five,
       this.adminPage
     );
+    const entitylisttitleBtn = await this.adminPage.locator(entitylisttitle);
+    await entitylisttitleBtn.waitFor({ state: "visible" });
     const PageValidate = await this.adminPage.isVisible(entitylisttitle);
     return PageValidate;
   }

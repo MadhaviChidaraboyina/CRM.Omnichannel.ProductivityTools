@@ -174,54 +174,6 @@ describe("Live Chat - ", () => {
     });
 
     /// <summary>
-    /// TC 1580682:- Verify DraftEmail macro action
-    /// </summary>
-    it.skip("Test Case 1580682: Verify DraftEmail macro action", async () => {
-        agentPage = await agentContext.newPage();
-        const agentStartPage = new OrgDynamicsCrmStartPage(agentPage);
-        liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-        const agentChat = new AgentChat(agentPage);
-        try {
-            //Login as admin and create macro
-            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.MacrosAgentEmail, TestSettings.AdminAccountPassword);
-            await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-            const incidentId = await macrosAdminPage.createCaseAndGetIncidentId();
-            const incidentEmailTemplateId = await macrosAdminPage.CreateEmailTemplateAndGetId();
-            await macrosAdminPage.openAppLandingPage(adminPage);
-            await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
-            await macrosAdminPage.createMacro(Constants.CreateDraftEmail, incidentEmailTemplateId, incidentId);
-
-            //Initiate live chat with agent
-            await macrosAdminPage.initiateLiveChatWithAgent(liveChatPage);
-
-            //Login as agent and accept chat
-            await macrosAdminPage.loginAsAgentAndOpenOmnichannelForCS(TestSettings.MacrosAgentEmail, agentStartPage, agentChat);
-            await macrosAdminPage.acceptLiveChatAsAgent(liveChatPage, agentChat);
-
-            //Check API response through console
-            const result = await agentPage.evaluate(async () => {
-                const ctrl = await (window as any).Microsoft.ProductivityMacros.runMacro("CreateDraftEmail");
-                return ctrl;
-            });
-            expect(result).toBe(Constants.ActionPerformedSuccessfully);
-
-            //Check API result on UI
-            const openDraftEmailResult = await macrosAdminPage.verifyOpenedTab(agentPage, Constants.NewEmailTitle);
-            expect(openDraftEmailResult).toBeTruthy();
-
-            //End live chat
-
-            await agentChat.closeUnusedChat();
-            await liveChatPage.closeChat();
-        }
-        finally {
-            await macrosAdminPage.deleteMacro(adminStartPage, Constants.CreateDraftEmail);
-            await macrosAdminPage.deleteCase(adminPage, adminStartPage, Constants.AutomationCaseTitle);
-            await macrosAdminPage.deleteEmailTemplate(adminPage, adminStartPage, Constants.EmailTemplateName);
-        }
-    });
-
-    /// <summary>
     /// Test Case 2367026: [Macros] Verify record is saved by using 'Save the record' action in the Productivity Automation.
     /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2367026
     /// </summary>
@@ -662,44 +614,6 @@ describe("Live Chat - ", () => {
         finally {
             await macrosAdminPage.deleteMacro(adminStartPage, Constants.EntitySearch);
             await macrosAdminPage.deleteApplicationTab(adminStartPage, Constants.EntitySearchApplicationTab);
-        }
-    });
-
-    ///<summary>
-    ///Test Case 2313873: [Macros] Verify that tab is focused using 'Focus on the tab' action in the macros.
-    ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2313873
-    ///</summary>
-    it.skip("Test Case 2313873: [Macros] Verify that tab is focused using 'Focus on the tab' action in the macros.", async () => {
-        agentPage = await agentContext.newPage();
-        const agentStartPage = new OrgDynamicsCrmStartPage(agentPage);
-        liveChatPage = new LiveChatPage(await liveChatContext.newPage());
-        const agentChat = new AgentChat(agentPage);
-        try {
-            //Login as admin and create macro
-            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.MacrosAgentEmail, TestSettings.AdminAccountPassword);
-            await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
-            await macrosAdminPage.createMacro(Constants.OpenFocustab);
-
-            //Initiate live chat with agent
-            await macrosAdminPage.initiateLiveChatWithAgent(liveChatPage);
-
-            //Login as agent and accept chat
-            await macrosAdminPage.loginAsAgentAndOpenOmnichannelForCS(TestSettings.MacrosAgentEmail, agentStartPage, agentChat);
-            await macrosAdminPage.acceptLiveChatAsAgent(liveChatPage, agentChat);
-
-            //Check API response through console
-            const result = await agentPage.evaluate(async () => {
-                const ctrl = await (window as any).Microsoft.ProductivityMacros.runMacro("FocustabMacro");
-                return ctrl;
-            });
-            expect(result).toBe(Constants.ActionPerformedSuccessfully);
-
-            //End live chat
-            await macrosAdminPage.closeConversation(agentPage, agentChat);
-            await liveChatPage.closeChat();
-        }
-        finally {
-            await macrosAdminPage.deleteMacro(adminStartPage, Constants.OpenFocustab);
         }
     });
 
