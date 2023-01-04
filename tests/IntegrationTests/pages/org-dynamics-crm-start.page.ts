@@ -65,8 +65,15 @@ export class OrgDynamicsCrmStartPage extends BasePage {
     await this.waitUntilSelectorIsVisible(SelectorConstants.SignInSignInButton, Constants.Three, this.Page, Constants.MaxTimeout);
     const signInButton = await this.Page.waitForSelector(SelectorConstants.SignInSignInButton);
     await signInButton.click();
-    await this.navigateToOrgUrl();
-    await this.validateLandingPage();
+    const staysignedin = await this.waitUntilSelectorIsVisible(SelectorConstants.StaySignedInPopup, Constants.Three, this.Page, Constants.MaxTimeout);
+    if(staysignedin){
+      await this.Page.waitForSelector(SelectorConstants.SignInSignInButton);
+      await this.Page.click(SelectorConstants.SignInSignInButton);
+      await this.validateLandingPage();
+    }
+    else{
+      await this.validateLandingPage();
+    }
   }
 
   private async validateLandingPage() {
