@@ -141,10 +141,6 @@
 			<RootComponent type="20" id="{6beb51c1-0eda-e911-a81c-000d3af75d63}" behavior="0" />
 			<RootComponent type="20" id="{4758a2be-ccd8-ea11-a813-000d3a579805}" behavior="0" />
 			<RootComponent type="20" id="{61649654-ced8-ea11-a813-000d3a579805}" behavior="0" />
-			<RootComponent type="20" parentId="{1808b939-dd07-4ca7-aa99-ddd2734378f1}" behavior="0" />
-			<RootComponent type="20" parentId="{ecfd0b44-5720-45e3-ae68-417ddb0fb654}" behavior="0" />
-			<RootComponent type="20" id="{c30bdbfe-7553-e811-8147-000d3aa39708}" behavior="0" />
-			<RootComponent type="20" id="{e4435009-7653-e811-8147-000d3aa39708}" behavior="0" />
 		</RootComponents>
 		<MissingDependencies>
 			<MissingDependency>

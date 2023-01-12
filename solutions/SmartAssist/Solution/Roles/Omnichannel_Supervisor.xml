@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Role id="{e4435009-7653-e811-8147-000d3aa39708}" name="Omnichannel supervisor">
-  <IsCustomizable>0</IsCustomizable>
-  <RolePrivileges>
-    <RolePrivilege name="prvReadmsdyn_adaptivecardconfiguration" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_smartassistconfig" level="Global" />
-    <RolePrivilege name="prvReadmsdyn_suggestionssetting" level="Global" />
-  </RolePrivileges>
-</Role>
