@@ -52,7 +52,7 @@
     </Reference>
     <Reference Include="Microsoft.Xrm.Sdk">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(PKG_XRMSERVER)\lib\net452\Microsoft.Xrm.Sdk.dll</HintPath>
+      <HintPath>$(PKG_CRMSDK_COREASSEMBLIES)\lib\net462\Microsoft.Xrm.Sdk.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.Xrm.Sdk.Deployment">
