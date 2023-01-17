@@ -35,7 +35,7 @@ variables:
   - { name: REPOROOT, value: "$(Build.SourcesDirectory)" }
   - { name: OUTPUTROOT, value: "$(REPOROOT)/out" }
   - { name: NUGET_XMLDOC_MODE, value: none }
-  - { name: WindowsContainerImage, value: "cdpxwin1809.azurecr.io/global/vse2019:latest"} # Docker image which is used to build the project https://aka.ms/obpipelines/containers
+  - { name: WindowsContainerImage, value: "onebranch.azurecr.io/windows/ltsc2019/vse2019:latest"} # Docker image which is used to build the project https://aka.ms/obpipelines/containers
   - { name: solution, value: $(ROOT)\src\Designer\Designer.sln }
 
   - { name: Configuration, value: Release }
