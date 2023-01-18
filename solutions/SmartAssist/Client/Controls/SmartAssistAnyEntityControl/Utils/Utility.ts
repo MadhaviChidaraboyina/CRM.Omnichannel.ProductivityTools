@@ -113,14 +113,19 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     }
 
                     if (enableSuggestionsDefaultOn) {
-                        const shouldEnableCaseKbSuggestion = await this.shouldEnableCaseKbSuggestion(telemetryHelper);
-                        if (shouldEnableCaseKbSuggestion) {
-                            this.enableAISuggestionsForCaseAndKb(SmartAssistAnyEntityControl._context, telemetryHelper);
-                            telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionAutoEnabled, null);
-                        } else {
-                            telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionNotAutoEnabled, null);
+                        let shouldEnableFeatures = await this.shouldEnableCaseKbSuggestion(telemetryHelper);
+                        telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionFeaturesToAutoEnable, 
+                            [{ name: "CaseSuggestion", value: shouldEnableFeatures.enableCaseSuggestion }, { name: "CaseSuggestionFeatureId", value: StringConstants.CaseSuggestionFeatureId },
+                            { name: "KBSuggestion", value: shouldEnableFeatures.enableKBSuggestion }, { name: "KBSuggestionFeatureId", value: StringConstants.KbSuggestionFeatureId }]);
+                        
+                        if (shouldEnableFeatures.enableCaseSuggestion) {
+                            this.enableAISuggestionsViaInitializeAnalytics(SmartAssistAnyEntityControl._context, StringConstants.CaseSuggestionFeatureId, telemetryHelper);
                         }
-                    } 
+
+                        if (shouldEnableFeatures.enableKBSuggestion) {
+                            this.enableAISuggestionsViaInitializeAnalytics(SmartAssistAnyEntityControl._context, StringConstants.KbSuggestionFeatureId, telemetryHelper);
+                        }
+                    }
                 } catch (error) {
                     telemetryHelper.logTelemetryError(
                         TelemetryEventTypes.FailedToAutoEnableAISuggestion,
@@ -132,9 +137,9 @@ module MscrmControls.SmartAssistAnyEntityControl {
             }     
         }
 
-        public static enableAISuggestionsForCaseAndKb(context: Mscrm.ControlData<IInputBag>, telemetryHelper: TelemetryHelper): void {
+        public static enableAISuggestionsViaInitializeAnalytics(context: Mscrm.ControlData<IInputBag>, featureId: string, telemetryHelper: TelemetryHelper): void {
             var msdyn_InitializeAnalyticsRequest = {
-                featureIds: `${StringConstants.CaseSuggestionFeatureId},${StringConstants.KbSuggestionFeatureId}`,
+                featureIds: `${featureId}`,
 
                 getMetadata: function() {
                     return {
@@ -154,21 +159,22 @@ module MscrmControls.SmartAssistAnyEntityControl {
             context.webAPI.execute(msdyn_InitializeAnalyticsRequest)
                 .then(function (response) {
                     if (response.status === 204 || response.status === 200) {
-                        telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AISuggestionEnabled,  null);
+                        telemetryHelper.logTelemetrySuccess(TelemetryEventTypes.AutoEnablingSuggestionAPICallSuccess,  [{ name: "FeatureId", value: featureId }]);
                     } else throw response;
                 })
                 .catch((error) => {
                     telemetryHelper.logTelemetryError(
-                        TelemetryEventTypes.FailedToTriggerAISuggestionModeling,
-                        "An error occurred when enabling suggestions for Case/KB (initializing analytics request)",
-                        [{ name: "ExceptionDetails", value: error }]
+                        TelemetryEventTypes.AutoEnablingSuggestionAPICallFailure,
+                        "An error occurred when enabling suggestions (initializing analytics request)",
+                        [{ name: "ExceptionDetails", value: error }, { name: "FeatureId", value: featureId }]
                     );
                 });
         }
 
-        public static shouldEnableCaseKbSuggestion = async(telemetryHelper): Promise<boolean> => {
+        public static shouldEnableCaseKbSuggestion = async(telemetryHelper): Promise<{enableCaseSuggestion:boolean, enableKBSuggestion:boolean}> => {
             // Check if case suggestion and KB suggestion are enabled
-            let isNotEnabled = false;
+            let enableCaseSuggestion = false;
+            let enableKBSuggestion = false;
             try {
                 const fetchXmlQuery = 
                     "<fetch version='1.0' output-format='xml-platform' mapping='logical'>" + 
@@ -187,7 +193,17 @@ module MscrmControls.SmartAssistAnyEntityControl {
                 ) as any;
 
                 if (featureRecords && featureRecords.entities && featureRecords.entities.length === 2) {
-                    isNotEnabled = !featureRecords.entities[0].msdyn_analyticschecksum && !featureRecords.entities[1].msdyn_analyticschecksum;
+                    let i: number;
+                    for (i = 0; i < 2; i++) {
+                        if (featureRecords.entities[i].msdyn_datainsightsandanalyticsfeatureid == StringConstants.CaseSuggestionFeatureId)
+                        {
+                            enableCaseSuggestion = !featureRecords.entities[i].msdyn_analyticschecksum;
+                        }
+                        else if (featureRecords.entities[i].msdyn_datainsightsandanalyticsfeatureid == StringConstants.KbSuggestionFeatureId)
+                        {
+                            enableKBSuggestion = !featureRecords.entities[i].msdyn_analyticschecksum;
+                        }
+                    }
                 }
             } catch(error) {
                 telemetryHelper.logTelemetryError(
@@ -196,7 +212,7 @@ module MscrmControls.SmartAssistAnyEntityControl {
                     [{ name: "ExceptionDetails", value: error }]);
             }
 
-            return isNotEnabled;
+            return {enableCaseSuggestion, enableKBSuggestion};
         }
     }
 }

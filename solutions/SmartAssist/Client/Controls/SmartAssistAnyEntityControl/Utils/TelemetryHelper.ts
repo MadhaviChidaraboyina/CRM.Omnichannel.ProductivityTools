@@ -88,11 +88,14 @@
         public static InitStarted = TelemetryEventTypes.componentName + "InitStarted";
         public static NoSuggestionsFoundAfterDismiss = TelemetryEventTypes.componentName + "NoSuggestionsFoundAfterDismiss";
         public static AISuggestionsNotSupportedForNonEnglishUser = TelemetryEventTypes.componentName + "AISuggestionsNotSupportedForNonEnglishUser";
+        public static AISuggestionFeaturesToAutoEnable = TelemetryEventTypes.componentName + "AISuggestionFeaturesToAutoEnable";
         public static AISuggestionAutoEnabled = TelemetryEventTypes.componentName + "AISuggestionAutoEnabled";
         public static AISuggestionNotAutoEnabled = TelemetryEventTypes.componentName + "AISuggestionNotAutoEnabled";
         public static FailedToAutoEnableAISuggestion = TelemetryEventTypes.componentName + "FailedToAutoEnableAISuggestion";
         public static FailedToTriggerAISuggestionModeling = TelemetryEventTypes.componentName + "FailedToTriggerAISuggestionModeling";
         public static AISuggestionEnabled = TelemetryEventTypes.componentName + "AISuggestionEnabled";
+        public static AutoEnablingSuggestionAPICallSuccess = TelemetryEventTypes.componentName + "AutoEnablingSuggestionAPICallSuccess";
+        public static AutoEnablingSuggestionAPICallFailure = TelemetryEventTypes.componentName + "AutoEnablingSuggestionAPICallFailure";
         public static NoSuggestionsRendered = TelemetryEventTypes.componentName + "NoSuggestionRendered";
         public static SAConfigIsDisabled = TelemetryEventTypes.componentName + "SAConfigIsDisabled";
         public static NothingRenderedForSAConfig = TelemetryEventTypes.componentName + "NothingRenderedForSAConfig";
