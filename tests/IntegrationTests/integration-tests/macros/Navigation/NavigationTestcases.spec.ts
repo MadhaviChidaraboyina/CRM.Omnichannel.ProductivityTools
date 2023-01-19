@@ -74,7 +74,7 @@ describe("Navigation - ", () => {
       };
       await macrosAdminPage.editCommandBar(Constants.labelName +rnd,Constants.Case2 + rnd,Constants.Case1 + rnd,webresource);
     } finally {
-      await macrosAdminPage.disableNewLayout();
+      //await macrosAdminPage.disableNewLayout();
     }
   });
 });

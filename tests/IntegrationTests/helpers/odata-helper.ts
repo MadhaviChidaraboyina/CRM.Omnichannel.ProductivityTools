@@ -9,8 +9,10 @@ const OCConfigId = "d4d91600-6f21-467b-81fe-6757a2791fa1";
 export const URLConstants = {
 	CreateCaseUrl: `${TestSettings.OrgUrl}/api/data/v9.0/incidents`,
 	TurnOnMissedNotificationsURL: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_omnichannelconfigurations(${OCConfigId})`,
+	UpdateOCConfig: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_omnichannelconfigurations(${OCConfigId})`,
 	AppConfigUrl: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_appconfigurations`,
 	PanelConfigUrl: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_paneconfigurations`,
+	ChannelConfigUrl: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_channelproviders`,
 	UsersUrl: `${TestSettings.OrgUrl}/api/data/v9.0/systemusers`,
 	UserUrl1: `${TestSettings.OrgUrl}/api/data/V9.2/systemusers?$filter=domainname eq '${TestSettings.AdminAccountEmail4}'`,
 	AddUserAppConfig: `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_appconfigurations(AppConfigId)/msdyn_appconfiguration_systemuser/$ref`,
@@ -98,6 +100,23 @@ const getAuthToken = async (
 	});
 };
 
+export const getGUID = async (UserUrl: string) => {
+	const response = await ExecuteGetRequest(
+		UserUrl
+	);
+	const data = response && response.data ? JSON.parse(JSON.stringify(response.data)) : null;
+	let uguid = "";
+	if (data) {
+		const obj = data.value && Array.isArray(data.value) ? data.value : null;
+		if (obj && obj.length > 0) {
+			uguid = obj[0].systemuserid;
+		} else {
+			console.log("user doesnt exist. Please check user in app");
+		}
+	}
+	return uguid;
+};
+
 export const addUserToAppProfile = async (responseAppConfig: any, userUrl: string) => {
 	const guiduser = await getGUID(userUrl);
 	const requestBodyAddUser = {
@@ -113,23 +132,29 @@ export const TurnOnMissedNotifications = async () => {
 		msdyn_enable_missed_notifications: true,
 		"msdyn_inactive_presence_lookup@odata.bind": "/msdyn_presences(a89ee9cf-453a-4b52-8d7a-ad647feecd5d)"
 	};
-	return await ExecutePatchRequest(URLConstants.TurnOnMissedNotificationsURL, requestBody);
+
+	return await ExecutePatchRequest(URLConstants.UpdateOCConfig, requestBody);
 };
 
-export const getGUID = async (UserUrl: string) => {
-	const response = await ExecuteGetRequest(UserUrl);
-	const data = response && response.data ? JSON.parse(JSON.stringify(response.data)) : null;
-	let uguid = "";
-	if (data) {
-		const obj = data.value && Array.isArray(data.value) ? data.value : null;
-		if (obj && obj.length > 0) {
-			uguid = obj[0].systemuserid;
-		}
+export const addAgentScriptToDefaultSession = async (agentScriptid: string, sessionid: string) => {
+	const requestBody = {
+		"@odata.context": TestSettings.OrgUrl + "/api/data/v9.0/$metadata#$ref",
+		"@odata.id": "msdyn_productivityagentscripts(" + agentScriptid + ")"
 	}
-	return uguid;
-};
+	var SessionTemplate = TestSettings.OrgUrl + "/api/data/v9.0/msdyn_sessiontemplates(" + sessionid + ")/msdyn_msdyn_prod_agentscript_msdyn_sessiontemplat/$ref"
+	return await ExecutePostRequest(SessionTemplate, requestBody);
+}
 
-export const getGlobalSearchEnable = async (OrgUrl: string) => {
+export const addagentscriptToDefaultSession = async (agentScriptid: string, sessionid: string) => {
+	const requestBody = {
+		"@odata.context": TestSettings.OrgUrl + "/api/data/v9.0/$metadata#$ref",
+		"@odata.id": "msdyn_productivityagentscripts(" + agentScriptid + ")"
+	}
+	var SessionTemplate = TestSettings.OrgUrl + "/api/data/v9.0/msdyn_sessiontemplates(" + sessionid + ")/msdyn_msdyn_prod_agentscript_msdyn_sessiontemplat/$ref"
+	return await ExecutePostRequest(SessionTemplate, requestBody);
+}
+
+export const getglobalsearchenable = async (OrgUrl: string) => {
 	const response = await ExecuteGetRequest(
 		OrgUrl
 	);
@@ -142,8 +167,8 @@ export const getGlobalSearchEnable = async (OrgUrl: string) => {
 	return newsearchexperience;
 };
 
-export const enableGlobalSearch = async () => {
-	const isenable = await getGlobalSearchEnable(URLConstants.OrgUrl);
+export const enableglobalsearch = async () => {
+	const isenable = await getglobalsearchenable(URLConstants.OrgUrl);
 	if (!isenable) {
 		const globalsearchbody = {
 			"isexternalsearchindexenabled": true,
@@ -152,4 +177,4 @@ export const enableGlobalSearch = async () => {
 		const finalEndpoint = URLConstants.OrgUrl
 		await ExecutePatchRequest(finalEndpoint, globalsearchbody);
 	}
-};
+}

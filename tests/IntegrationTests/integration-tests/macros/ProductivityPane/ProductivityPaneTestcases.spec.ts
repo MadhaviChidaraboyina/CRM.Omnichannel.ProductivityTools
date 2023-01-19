@@ -7,6 +7,7 @@ import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.p
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
 import { AppProfileHelper, appProfileNames } from "helpers/appprofile-helper";
+import { AgentScript } from "integration-tests/agentScript/pages/agentScriptAdmin";
 
 describe("Productivity Pane Testcases - ", () => {
   let adminContext: BrowserContext;
@@ -17,6 +18,14 @@ describe("Productivity Pane Testcases - ", () => {
   let liveChatContext: BrowserContext;
   let liveChatPage: LiveChatPage;
   let macrosAdminPage: Macros;
+  let agentChat: AgentChat;
+  var caseNameList: string[] = [];
+  let rnd: any;
+  const agentScriptAdminPage = new AgentScript(adminPage);
+
+  beforeAll(async () => {
+    await AppProfileHelper.getInstance().CreateAppProfile();
+  })
 
   beforeAll(async () => {
     await AppProfileHelper.getInstance().CreateAppProfile();
@@ -43,6 +52,8 @@ describe("Productivity Pane Testcases - ", () => {
     adminPage = await adminContext.newPage();
     adminStartPage = new OrgDynamicsCrmStartPage(adminPage);
     macrosAdminPage = new Macros(adminPage);
+    agentChat = new AgentChat(adminPage);
+
   });
   afterEach(async () => {
     TestHelper.dispose(adminContext);
@@ -56,6 +67,7 @@ describe("Productivity Pane Testcases - ", () => {
   ///</summary>
   it("Test Case 2045304: [Productivity Pane: Agent Guidance] : Validate if knowledge search control turn off in APM, it will disappear in PP.", async () => {
     agentPage = await agentContext.newPage();
+    rnd = agentScriptAdminPage.RandomNumber();
     try {
       //Login as admin and create case
       await adminStartPage.navigateToOrgUrlAndSignIn(
@@ -107,11 +119,17 @@ describe("Productivity Pane Testcases - ", () => {
         TestSettings.AdminAccountEmail,
         TestSettings.AdminAccountPassword
       );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-      await macrosAdminPage.createCase(Constants.CaseTitleName);
-      //Initiate session
-      await macrosAdminPage.openAppLandingPage(adminPage);
+      // await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
+      // await macrosAdminPage.createCase(Constants.CaseTitleName);
+      // //Initiate session
+      // await macrosAdminPage.openAppLandingPage(adminPage);
       await adminStartPage.goToCustomerServiceWorkspace();
+      //Create Case through XRM WebAPI
+      await agentChat.waitforTimeout();
+      var CaseTitleName = Constants.CaseTitleName
+      caseNameList = [CaseTitleName];
+      await macrosAdminPage.createIncidents(agentChat, caseNameList);
+
       await macrosAdminPage.InitiateSession(
         Constants.CaseTitleName,
         Constants.CaseLink1

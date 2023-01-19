@@ -23,6 +23,7 @@ describe("Live Chat - ", () => {
     })
     let rnd: any;
     const agentScriptAdminPage = new AgentScript(adminPage);
+    var caseNameList: string[] = [];
 
     beforeEach(async () => {
         adminContext = await browser.newContext({
@@ -52,20 +53,23 @@ describe("Live Chat - ", () => {
     it("Test Case 2045306: [Productivity Pane: Agent Guidance] : Verify if knowledge search is available with default configuration", async () => {
         agentPage = await agentContext.newPage();
         rnd = agentScriptAdminPage.RandomNumber();
-        try {
-            //Login as admin and create case
-            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.MacrosAgentEmail, TestSettings.AdminAccountPassword);
-            await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-            await macrosAdminPage.createCase(Constants.CaseTitleName + rnd);
-            //Initiate session
-            await macrosAdminPage.openAppLandingPage(adminPage);
-            await adminStartPage.goToCustomerServiceWorkspace();
-            await macrosAdminPage.InitiateSession(Constants.CaseTitleName + rnd, Constants.RandomCaseLink.replace("{0}", rnd));
-            await macrosAdminPage.ClickProductivityPaneTool(Constants.KStool);
-            await macrosAdminPage.ValidateThePage(Constants.Knowledgesearch);
-        }
-        finally {
-        }
+        //Login as admin and create case
+        await adminStartPage.navigateToOrgUrlAndSignIn(
+            TestSettings.MacrosAgentEmail,
+            TestSettings.AdminAccountPassword
+        );
+        await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+        await macrosAdminPage.waitForDomContentLoaded();
+        await macrosAdminPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+        const caseTitle = await macrosAdminPage.createCaseWithAPI(
+            Constants.CaseTitleName
+          );
+          await macrosAdminPage.InitiateSession(
+            caseTitle,
+            Constants.LinkStart + caseTitle + Constants.LinkEnd
+          );
+        await macrosAdminPage.ClickProductivityPaneTool(Constants.KStool);
+        await macrosAdminPage.ValidateThePage(Constants.Knowledgesearch);
     });
 
     ///<summary>
@@ -75,39 +79,35 @@ describe("Live Chat - ", () => {
     it("Test Case 2040740: Verify If KB search is disabled on productivity pane from app profiler, it should not appear for agent", async () => {
         agentPage = await agentContext.newPage();
         try {
-            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.AdminAccountEmail5, TestSettings.AdminAccountPassword);
+            await adminStartPage.navigateToOrgUrlAndSignIn(
+                TestSettings.MacrosAgentEmail,
+                TestSettings.AdminAccountPassword
+            );
             await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
-            const appProfileTest5 = appProfileNames.appProfileTest5;
-            await macrosAdminPage.OpenappProfile(appProfileTest5);
+            //Creating App Profile
+            const appProfileTest1 = appProfileNames.appProfileTest1;
+            await macrosAdminPage.OpenappProfile(appProfileTest1)
             const booleanvalue = await macrosAdminPage.validatePane();
             if (booleanvalue) {
-                await macrosAdminPage.EnableTwoAppsInProductivityPane();
-                await macrosAdminPage.openAppLandingPage(adminPage);
-                await adminStartPage.goToCustomerServiceWorkspace();
-                await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
-                var CaseUserName = Constants.CaseTitleName
-                caseNameList = [CaseUserName];
-                await macrosAdminPage.createIncidents(agentChat, caseNameList);
-                await macrosAdminPage.InitiateSession(
-                    Constants.CaseTitleName,
-                    Constants.CaseLink1
-                );
-                await macrosAdminPage.ValidateThePage(Constants.SAtool);
-                await macrosAdminPage.ValidateThePage(Constants.AStool);
+                await macrosAdminPage.EnableOneAppsInProductivityPane();
             } else {
-                console.log("pane is already enabled")
-                await macrosAdminPage.openAppLandingPage(adminPage);
-                await adminStartPage.goToCustomerServiceWorkspace();
-                await macrosAdminPage.CreateCaseInCSW(Constants.CaseTitleName);
-                await macrosAdminPage.InitiateSession(
-                    Constants.CaseTitleName,
-                    Constants.CaseLink1
-                );
-                await macrosAdminPage.ValidateThePage(Constants.SAtool);
-                await macrosAdminPage.ValidateThePage(Constants.AStool);
+                console.log("pane is already enabled");
             }
-        }
-        finally {
+            await macrosAdminPage.openAppLandingPage(adminPage);
+            await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+            await macrosAdminPage.waitForDomContentLoaded();
+            await macrosAdminPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+            await agentChat.waitForAgentStatusIcon();
+            var CaseUserName = Constants.CaseTitleName;
+            caseNameList = [CaseUserName];
+            await macrosAdminPage.createIncidents(agentChat, caseNameList);
+            await macrosAdminPage.InitiateSession(
+                Constants.CaseTitleName,
+                Constants.CaseLink1
+            );
+            await macrosAdminPage.ValidateNotPresent(Constants.KStool);
+        } catch (e) {
+            throw e;
         }
     });
 
@@ -131,13 +131,19 @@ describe("Live Chat - ", () => {
             await macrosAdminPage.AddUsers(TestSettings.InboxUser);
             await macrosAdminPage.AddEntitySession(Constants.SessionTemplateinPowerApps);
             await macrosAdminPage.EnableProductivityPane();
-            await macrosAdminPage.openAppLandingPage(adminPage);
-            await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-            await macrosAdminPage.createCase(Constants.CaseTitleName);
+            // await macrosAdminPage.openAppLandingPage(adminPage);
+            // await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
+            // await macrosAdminPage.createCase(Constants.CaseTitleName);
 
             //Validate the App Profile
             await macrosAdminPage.openAppLandingPage(adminPage);
             await adminStartPage.goToCustomerServiceWorkspace();
+
+            //Create Case through XRM WebAPI
+            await agentChat.waitforTimeout();
+            var CaseTitleName = Constants.CaseTitleName
+            caseNameList = [CaseTitleName];
+            await macrosAdminPage.createIncidents(agentChat, caseNameList);
 
             //Validating The Title of Application Tab by running the Macro
             const VisibleResult = await macrosAdminPage.ValidateAppTab(adminPage, Constants.AccountAppTab);
@@ -327,43 +333,40 @@ describe("Live Chat - ", () => {
         }
     });
 
-    ///<summary>
+   ///<summary>
     ///Test Case 2045187: [Navigation and Gestures] : Verify if records can be opened as sessions from queue item views
     ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2045187
     ///</summary>
-    it.skip("Test Case 2045187: [Navigation and Gestures] : Verify if records can be opened as sessions from queue item views", async () => {
+    it("Test Case 2045187: [Navigation and Gestures] : Verify if records can be opened as sessions from queue item views", async () => {
         agentPage = await agentContext.newPage();
-        try {
-            await adminStartPage.navigateToOrgUrlAndSignIn(TestSettings.AdminAccountEmail, TestSettings.AdminAccountPassword);
-            await adminStartPage.goToMyApp(Constants.CustomerServiceHub);
-            await macrosAdminPage.GoToServiceManagement();
-
-            //creating Queue
-            await macrosAdminPage.CreatePublicQueue(Constants.QueueName);
-            await macrosAdminPage.openAppLandingPage(adminPage);
-            await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-            await macrosAdminPage.createCaseFromCSWSiteMap(Constants.Case1);
-            await macrosAdminPage.InitiateSession(Constants.Case1, Constants.CaseLink);
-
-            //add queue to the case
-            await macrosAdminPage.AddCaseToQueue(Constants.QueueName);
-            await macrosAdminPage.openAppLandingPage(adminPage);
-            await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
-            await macrosAdminPage.OpenQueueFromCSWSiteMap();
-
-            //Validating the Queue grid
-            await macrosAdminPage.ValidateThePage(Constants.QueuesGridInCSW);
-            await macrosAdminPage.SelectAllItemsAllQueues();
-            //await macrosAdminPage.OpenQueueItem(Constants.Case1);
-
-            //validating opened session
-            await macrosAdminPage.ValidateThePage(Constants.CaseSession);
-        }
-        finally {
-            await macrosAdminPage.deleteCase(adminPage, adminStartPage, Constants.Case11);
-            await macrosAdminPage.DeleteQueue(adminPage, adminStartPage, Constants.QueueName);
-        }
-    });
-});
+        rnd = agentScriptAdminPage.RandomNumber();
+        //Login as admin automated and redirected to OrgUrl
+        await adminStartPage.navigateToOrgUrlAndSignIn(
+          TestSettings.MacroAccountEmail,
+          TestSettings.AdminAccountPassword
+        );      
+        await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
+        await adminStartPage.waitForDomContentLoaded();
+        await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+        // Create a public Queue
+        await macrosAdminPage.navigateToBasicQueues();
+        var QueueTitle = Constants.QueueTitle + rnd;
+        await macrosAdminPage.CreatePublicQueue(QueueTitle);
+        await macrosAdminPage.openAppLandingPage(adminPage);
+        await adminStartPage.goToCustomerServiceWorkspace();
+        await adminStartPage.waitForDomContentLoaded();
+        await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+        var CaseTitleName = Constants.CaseTitleName + rnd;
+        caseNameList = [CaseTitleName];
+        await macrosAdminPage.createIncidents(agentChat, caseNameList);
+        await macrosAdminPage.addQueueToCase(
+          CaseTitleName,
+          QueueTitle
+        );
+        // Navigating to CSW and validate the linked cases      
+        await macrosAdminPage.casesLinkedToQueue(Constants.QueueTitleTextName);
+        await macrosAdminPage.ValidateThePage(Constants.CaseTitleLink1);
+      });
+  });
 
 

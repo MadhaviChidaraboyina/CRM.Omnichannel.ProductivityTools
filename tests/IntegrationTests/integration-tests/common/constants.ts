@@ -110,6 +110,7 @@ export class Constants {
     "[data-id='msdyn_productivityagentscriptstep|NoRelationship|SubGridStandard|Mscrm.SubGrid.msdyn_productivityagentscriptstep.Delete']";
   static SelectAllRowsBtn = `[data-icon-name="CheckMark"]`;
   static RefreshBtn = `[aria-label="Refresh"]`;
+  static refreshnewbutton="button[data-id='incident|NoRelationship|Form|Mscrm.Form.incident.RefreshModernButton']";
   static ResolveCase = `ResolveCase`;
   static ActionToResolveCase = `//*[text()="Action to resolve case"]`;
   static BillableTimeInputField = `[aria-label="Billable time"]`;
@@ -403,8 +404,8 @@ export class Constants {
   static OpenWebResourceTab = `//*[text()="OpenWebResource"]`;
   static ManagedSession = `//*[@data-test-id="session-templates-manage"]`;
   static TitleUniqueName = `title_uniquename`;
-  static ChangeDashboardTitle = `ChangeDashboard`;
-  static DashboardTitle = `(//span[contains(.,'DashboardApplicationTab')])`;
+  static ChangeDashboardTitle = `ChangeDashboard`;  
+  static DashboardTitle = `//span[contains(.,'Customer Service Agent Dashboard')]`;
   static ChangeDashboardTitleTab = `[title="ChangeDashboard"]`;
   static EntityListSearch = `//span[contains(.,'EntityListApplicationTab')]`;
   static EntityListSearch1 = `(//span[contains(.,'EntityListApplicationTab')])[1]`;
@@ -425,7 +426,7 @@ export class Constants {
   static ControltabTitle = `[title="ChangedControlTitle"]`;
   static SearchControlMacro = `//span[contains(.,'ControlMacro')]`;
   static SearchControlMacro1 = `(//span[contains(.,'ControlMacro')])[1]`;
-  static MacroRunButton = `[title="Run"]`;
+  static MacroRunButton = `//div[contains(@data-id,"MscrmControls.Callscript.CallscriptControl-CallScriptRunActionIcon")]`;
   static ControlPlusAPlusDelete = "Control+A+Delete";
   static Save = `[aria-label="Save (CTRL+S)"]`;
   static AgentScriptNameSearchResult = `//*[text()='AutomationTestAgentScript']`;
@@ -520,7 +521,7 @@ export class Constants {
   static AStool = `//*[@data-id="sidepane-tab-button-AppSidePane_MscrmControls.Callscript.CallscriptControl"]`;
   static KStool = `//*[contains(@data-id,'sidepane-tab-button-AppSidePane_MscrmControls.KnowledgeControl.KnowledgeControl')]`;
   static SAtool = `//*[@data-id="sidepane-tab-button-AppSidePane_MscrmControls.SmartassistPanelControl.SmartassistPanelControl"]`;
-  static Home = `//*[@title="Home"]`;
+  static Home = `//*[@data-id="session-id-0"]`;
   static Firstcase = `//div[@id="session-id-1"] //*[contains(@title,'Automation Case')]`;
   static Secondcase = `//div[@id='session-id-2'] //*[contains(@title,'Case For Automation')]`;
   static CloseSession1 =
@@ -549,7 +550,7 @@ export class Constants {
   static NoBadgeNum = `//*[@data-id="sidepane-tab-button-AppSidePane_MscrmControls.SmartassistPanelControl.SmartassistPanelControl"]`;
   static CaseLink3 = `//*[text()="case1"]`;
   static ToolData = `[title="New Case"]`;
-  static KSToolData = `[aria-label="Automation KnowledgeArticle"]`;
+  static KSToolData = `(//div[contains(@data-id,"MscrmControls.KnowledgeControl.KnowledgeControl-kbSearchResults.contentContainer")])[1]`;
   static AddButton = `[aria-label="Create a timeline record."]`;
   static EmailField = `//*[text()="Email"]`;
   static SubjectField = `[aria-label="Subject"]`;
@@ -569,6 +570,7 @@ export class Constants {
   static CustomerServiceWorkspace = "Customer Service workspace";
   static ProductivityPaneDisable = '(//*[@role="tablist"])[3]';
   static ValidateServiceAgentDashboard = `[title="Customer Service Agent Dashboard"]`;
+  static DashboardLandingTitle='div[id="Dashboard_Selector"] div[aria-label="Customer Service Agent Dashboard"]';
   static DashboardSelector = `[data-lp-id="Dashboard_Selector"]`;
   static ServiceManagerDashboard = `//*[text()="Customer Service Manager Dashboard"]`;
   static ServiceOperationsDashboard = `//*[text()="Customer Service Operations Dashboard"]`;
@@ -631,7 +633,7 @@ export class Constants {
   static ChildCaseLink3 = `//*[text()="Secound Case3"]`;
   static ChildCaseLink4 = `//*[text()="Secound Case4"]`;
   static Note = 'ul[role="menu"] >> text=Note';
-  static NoteTitle = `[aria-label="Title"]`;
+  static NoteTitle = `input[id="create_note_medium_titlenotescontrol"]`;
   static NoteTitleData = `Child Case Note`;
   static NoteText = `[title="Rich text editor"]`;
   static NoteTextData = `This is Child Case One`;
@@ -680,9 +682,10 @@ export class Constants {
   static ClickParent = `//*[text()="First Parent1"]`;
   static DetailsBtn = `[aria-label="Details"]`;
   static CaseCancelled = `//span[text()="Cancelled"]`;
+  static warningMessage='span[data-id="warningNotification"]';
   static FirstCase2 = `[title="First Case2"]`;
   static MergedCases = `[data-id="form-sectionHeader-Case Details"]`;
-  static PostValidate = `(//div[@col-id='ownerid']//*[@aria-label='{0}'])[1]`;
+  static PostValidate = `//div[@id="headerControlsList_12"]//a[@aria-label='{0}']/../../div[2]`;
   static ValidateSuggestion = `//label[contains(text(), 'Knowledge article suggestions')]`;
   static ValidateKSResults = `//*[text()= 'Knowledge Search']`;
   static SearchKSArticle = `[aria-label="Search knowledge articles"]`;
@@ -813,7 +816,7 @@ export class Constants {
   static ProperMsgForCopyURL = `//label[contains(.,'URL was copied to the clipboard.')]`;
   static CaseStatusInProgress = `//*[text()="In Progress"]`;
   static CaseStatusInformationProvided = `//*[text()="Information Provided"]`;
-  static FirstAutoPost = `(//*[text()="Auto-post:"])[1]`;
+  static FirstAutoPost = `(//*[text()="Auto-post on"])[1]`;
   static CaseResolved = `//label[text()='Case Resolution']`;
   static CaseCreated = `//div[text()=' for Contact ']`;
   static CaseClosed = `//div[text()=' closed by ']`;
@@ -899,7 +902,7 @@ export class Constants {
   static AddUsers = `//*[text()="Add users"]`;
   static OKbutton = `(//*[text()="OK"])[2]`;
   static SearchUser = `//*[contains(@data-test-id,'add-users-search')]`;
-  static SelectAllBtn = `[data-icon-name="CheckMark"]`;
+  static SelectAllBtn = `[data-icon-name="CircleRing"]`;
   static AddSession = `//*[text()="Add"]`;
   static AddEntitySessionTemplate = `[aria-label="Add entity session template buttton on no data screen"]`;
   static AddEntitySessionTemplateBox = `//*[@role="searchbox"]`;
@@ -916,6 +919,14 @@ export class Constants {
   static TurnOnMSTeams = `//*[text()="Microsoft Teams Off"]`;
   static MSTeamstool = `//*[@data-id="sidepane-tab-button-AppSidePane_MscrmControls.OfficeProductivity.CollabControl"]`;
   static ChannelsOption = `(//*[@role="tab"])[4]`;
+  static CollaborationSiteMap = `[aria-label="Collaboration"]`;
+  static ManageEmbeddedTeamsChat = `//button[@data-test-id="Embedded-Chat-manage"]`;
+  static IsEnableMsTeams = `(//*[contains(.,'Turn on Microsoft Teams chats inside Dynamics 365')]/following::label[contains(.,'No')])[1]`;
+  static IsDisableTeams = `(//*[contains(.,'Turn on Microsoft Teams chats inside Dynamics 365')]/following::label[contains(.,'Yes')])[1]`;
+  static SaveBtnEnable =`[data-testid="save-button"]`;
+  static TurnOnChannelProvider = `//*[@role="switch"]/../..//*[@aria-checked="false"]`;
+  static TurnOffChannelProvider = `//*[@role="switch"]/../..//*[@aria-checked="true"]`;
+  static TurnOff = `//*[text()="Turn Off"]`;
   static TurnonAllChannels = `//*[@role="switch"]`;
   static OpenSiteMap = "Open site map item in a new tab";
   static ChangeView = `//*[text()="Open popup to change view."]`;
@@ -929,7 +940,7 @@ export class Constants {
   static AutomationCase = `//*[text()="Automation Case"]`;
   static SaveAppProfile = `//*[text()="Save"]`;
   static SessionTemplateinPowerApps = `//*[text()="Case entity session - default template"]`;
-  static ManageAgentExperienceProfile = `[aria-label="Manage settings for agent experience profile"]`;
+  static ManageAgentExperienceProfile = `//button[@data-test-id="Agent-Experience-Profile-manage"]`;
   static SessionTemplateEntity = `[data-test-id="session-template-entity-drop-down"]`;
   static Case = `//*[text()="Case"]`;
   static SessionTemplateDropDown = `[data-test-id="session-template-drop-down"]`;
@@ -1001,16 +1012,21 @@ export class Constants {
   static RuleName = `Rule1`;
   static RuleItemName = `RuleItem1`;
   static RoutingRuleBtn = `[aria-label="Routing Rule Sets"]`;
-  static MoreCommandsForRule = `[aria-label="More commands for Rule Item"]`;
-  static NewRuleItemBtn = `//*[text()="New Rule Item"]`;
-  static RuleItemTitleField = `[value="---"]`;
+  static MoreCommandsForRule = `//button[@data-lp-id="SubGridStandard:routingruleitem-OverflowButton"]`;
+  static NewRuleItemBtn = `//button[@data-lp-id="SubGridStandard:routingruleitem-routingruleitem|NoRelationship|SubGridStandard|Mscrm.SubGrid.routingruleitem.AddNewStandard"]`;
+  static RuleItemTitleField = `(//input[@data-id="name.fieldControl-text-box-text"])[2]`;
   static PlusAddBtn = `//*[text()="Add"]`;
   static AddRow = `//*[text()="Add row"]`;
-  static FieldSelector = `[aria-label="Field selector"]`;
-  static SelectField = `[aria-label="Priority (Case)"]`;
+  static FieldSelector1 = `[placeholder="Select a field"]`;
+  static SelectField1 = `Priority (Case)`;
+  static FieldSelector = `(//input[@placeholder="Select a field"]/following::i[@data-icon-name="ChevronDown"])[1]`;
+  static SelectField = `//*[@title="Priority (Case)"]`;
   static SelectValue = `//*[text()="High"]`;
   static RouteTo = `[aria-label="Route to"]`;
   static AddToQueue = `[aria-label="Add to Queue, Lookup"]`;
+  static AddtoQueueInput = "input[data-id='routedqueueid.fieldControl-LookupResultsDropdown_routedqueueid_textInputBox_with_filter_new']";
+  static AddtoQueueSearch = "button[data-id='routedqueueid.fieldControl-LookupResultsDropdown_routedqueueid_search']";
+  static AddtoQueueValue = "div[data-id='routedqueueid.fieldControl-LookupResultsDropdown_routedqueueid_tabContainer'] li[aria-label*='{0}']";
   static SearchResult = `//*[text()="Q1"]`;
   static ConfirmBtn = `[aria-label="Yes"]`;
   static SaveAndRoute = `[aria-label="Save & Route"]`;
@@ -1054,13 +1070,13 @@ export class Constants {
   static ValCSWDesignerPage = `[title="Customer Service workspace"]`;
   static ValidateCSW = `[aria-label="Customer Service workspace"]`;
   static CustomerServiceAgentDashboard = `(//*[@aria-label="Customer Service Agent Dashboard"])[2]`;
-  static ChannelEditBtn = `[data-test-id="channel-provider-edit-btn"]`;
+  static ChannelEditBtn = `//button[@data-test-id="channel-provider-edit-btn"]`;
   static NameOfChannel = `[aria-label="Name"]`;
   static ChannelName = `automation1`;
   static Label = `[aria-label="Label"]`;
   static LabelNum = `1`;
   static ChannelUrl = `[aria-label="Channel URL"]`;
-  static ChannelOrder = `[aria-label="Channel Order"]`;
+  static ChannelOrder = `//input[@data-id="msdyn_sortorder.fieldControl-whole-number-text-input"]`;
   static ChannelDropdown = `[data-test-id="Channel-provider-third-party-dropdown"]`;
   static CreateChannel = `//*[text()="Create channel providers"]`;
   static Order = `2`;
@@ -1090,11 +1106,11 @@ export class Constants {
   static OpenCasesList = `(//span[contains(.,'Case')])[1]`;
   static SearchMacroBtn = `//*[@title="Start search"]`;
   static OpenCustomerServiceAgentDashboard = `//*[@title="Customer Service Agent Dashboard"]`;
-  static IsEnableSimilarSuggestions = `(//*[contains(.,'Enable similar case suggestions')]/following::label[contains(.,'No')])[1]`;
-  static IsEnableKBSuggestions = `//div[@class='field-col'][contains(.,'Enable similar case suggestions')]/following::label[contains(.,'No')][2]`;
+  static IsEnableSimilarSuggestions = `//label[@id='casetoggle-stateText'][text()='No']`;
+  static IsEnableKBSuggestions = `//label[@id='kbtoggle-stateText'][text()='No']`;
   static KAsuggestion = `//label[contains(text(),'Knowledge article suggestions')]`;
   static SCsuggestion = `//label[contains(text(),'Similar case suggestions')]`;
-  static KAContainer = `//div[@class='ac-container ac-adaptiveCard']`;
+  static KAContainer = `(//div[@class=\'ac-container ac-adaptiveCard\'])[1]`;
   static KArticleName = `TestKArticle1`;
   static KArticleLink =
     `(//p[contains(.,'` + Constants.KArticleName + `')])[1]`;
@@ -1165,6 +1181,7 @@ export class Constants {
   static GenericSessionValue = `[value="0"]`;
   static AnchorTab = `[aria-label="Anchor Tab, Lookup"][value="---"]`;
   static CustomerSummary = `Customer Summary`;
+  static KnowledgeSearch = `Knowledge Search`;
   static FlowIframe = `[title="Microsoft Power Automate IFrame"]`;
   static FlowChildIframe = `[title="Microsoft Flow"]`;
   static RunFlow1 = `[aria-label="Run flow"]`;
@@ -1234,7 +1251,7 @@ export class Constants {
   static OldCusytomerSummaryTitleSelect = `[role="link"][aria-label="Old Customer Summary"]`;
   static KnowledgearticleSearch = `[aria-label="Knowledge article search"]`;
   static AnchorTabSearchResult1 =
-    `//*[contains(@aria-label,"` + "Knowledge Search" + `")]`;
+    `//*[contains(@aria-label,"` + "ControlApplicationTab" + `")]`;
 
   static ManageNotificationBtn = `[aria-label="Manage settings for notification templates"]`;
   static NewNotificationTemplate = `[aria-label="New Notification Template"]`;
@@ -1263,6 +1280,7 @@ export class Constants {
   static TestNotification = `//*[text()="TestNotification"]`;
   static NotificationSaveAndClose = `[data-test-id="notification-save-and-close"]`;
   static SetUpRecordRouting = `[aria-label="Manage settings for setup record routing"]`;
+  static SetUpBasicRoutingRule = `[data-test-id="routing-rule-sets-manage"]`;
   static SeeMoreBasicRoutingButton = `//*[@id="seeMoreBasicRoutingButton"]`;
 
   static ConfirmDeactivation = `//*[text()="Yes"]`;
@@ -1286,7 +1304,7 @@ export class Constants {
   static EmailActivity = `//li[@aria-label="Email Activity"]`;
   static EmailSubject =`//input[@aria-label="Subject"]`;
   static GreetingsSubject = "Greetings";
-  static CreateRoutingRuleSet = `(//*[text()="Create routing rule set"])[2]`;
+  static CreateRoutingRuleSet = `button[id="btnRouteToQueueCreateRuleset"]`;
   static ApplyRoutingRule = `//*[text()="Apply Routing Rule"]`;
   static IntakeRuleName = `Automated Rule`;
   static User = `Admin Automated`;
@@ -1318,12 +1336,12 @@ export class Constants {
     "//option[text()='WebResourceAgentScript']";
   static ThirdPartyWebsiteAgentScriptName = `ThirdPartyWebsiteAgentScript`;
   static ThirdPartyWebsiteMacroName = `ThirdPartyWebsiteMacro`;
-  static ThirdPartyWebsiteTitle = `(//span[contains(.,'ThirdPartyWebsiteApplicationTab')])`;
+  static ThirdPartyWebsiteTitle = `//span[contains(.,'msdyn_CECExternalWebPageContainer.html')]`;
   static EntitySearchAgentScriptName = `EntitySearchAgentScript`;
   static EntitySearchTitle = `(//span[contains(.,'Automation Case')])`;
   static ControlAgentScriptName = `ControlAgentScript`;
   static ControlMacroName = `ControlMacro`;
-  static ControlTitle = `//span[contains(.,'ControlApplicationTab')]`;
+  static ControlTitle = `//span[contains(.,'Dynamics 365')]`;
   static WebResourceAgentScriptName = `WebResourceAgentScript`;
   static WebResourceMacroName = `WebResourceMacro`;
   static WebResourceTitle = `(//span[contains(.,'ThirdPartyWebsiteApplicationTab')])`;
@@ -1436,7 +1454,7 @@ export class Constants {
   static ValidationOfRecord = `//button[@title='Case For Automation']`;
   static ValidationNewRecord = `//button[@title='Case For Automation{0}']`;
   static ViewRecordLocator = `//div[@role='button']//p[text()='View Record']`;
-  static ValidateTab = `//div[@id='session-id-1']`;
+  static ValidateTab = `//div[contains(@id,'session-id-')]`;
   static AddvalidationTab = `//div[contains(@id,'session-id')]`;
   static KnowledgeBasePSBlank = ``;
   static KnowledgeBasePSText = `Plan_Text`;
@@ -1449,11 +1467,11 @@ export class Constants {
   static KnowledgeBasePTextAgentScriptName = `KnowledgeBasePTextAgentScript`;
   static KnowledgeBaseSlugAgentScriptName = `KnowledgeBaseSlugAgentScript`;
   static KnowledgeBaseRndAgentScriptName = `KnowledgeBaseRndAgentScript`;
-  static KBArticlelinkPTextTitle = `(//span[contains(.,'Plan_Text')])`;
-  static KBArticlelinkRndTitle = `(//span[contains(.,'QWERTYUUIO')])`;
+  static KBArticlelinkPTextTitle = `(//span[contains(.,'Automation Case')])`;
+  static KBArticlelinkRndTitle = `(//span[contains(.,'Automation Case')])`;
   static KnowledgeBaseRString = `KnowledgeBase`;
   static SearchPhraseLabelField = `[aria-label="Tab Label"]`;
-  static KBArticlelinkTitle = `(//span[contains(.,'msdyn_kbsearchpagehost.html')])`;
+  static KBArticlelinkTitle = `(//span[contains(.,'Automation Case')])`;
   static ComponentAgentScriptName = `ComponentAgentScript`;
   static ContainerAgentScriptName = `ContainerAgentScript`;
   static SearchPhraseApplicationTab = `SearchPhraseApplicationTab`;
@@ -1632,7 +1650,7 @@ export class Constants {
   static SaveRecordMacroName = `SaveRecordMacro`;
   static CloneRecordAgentScriptName = `CloneRecordAgentScript`;
   static CloneRecordMacroName = `CloneRecordMacro`;
-  static CloneRecordTitle = `//span[contains(.,'New Case')]`;
+  static CloneRecordTitle = `//span[contains(.,'Automation Case')]`;
   static BasicQueue = `//*[@data-test-id='basic-queue-manage']`;
   static NewQBtn = `//*[@data-id='queue|NoRelationship|HomePageGrid|Mscrm.HomepageGrid.queue.NewRecord']`;
   static QueueSitemapBtn = `[aria-label="Queues"]`;
@@ -1647,7 +1665,7 @@ export class Constants {
   static MaxRandamNumber = 9999;
   static BillableTime1 = `//input[@data-id="billabletime_id.fieldControl-duration-combobox-text"]`;
   static BillableTimeLimit1 = "1 minute";
-  static ValidateReactivateCase1 = `//div[text()=' reactivated by ']`;
+  static ValidateReactivateCase1 = `//div[text()='Case re-activated by ']`;
   static FirstCase2CancelledState = `(//div[text()='Cancelled'])[2]`;
   static FirstCase1CancelledState = `(//div[text()='Cancelled'])[1]`;
   static ChooseParentCell = `(//div[@header-row-number='2'])[3]`;
@@ -1666,6 +1684,7 @@ export class Constants {
   static SearchThisViewStartBtnInMacros = `(//button[@aria-label="Start search"])[1]`;
   static DeactivateThisMacro = `(//i[@data-icon-name="CheckMark"])[1]`;
   static TestMacro = "TestMacro";
+  static ExistRecordTitleName = `//span[contains(.,'Automation Case')]`;
   static TestMacroPath = `//span[text()='TestMacro']`;
   static SelectAllInCSW = `(//button[@title="Select All"])[1]`;
   static ExpressionBuilderAgentScript1Validate = `//*[text()="ExpressionBuilderAgentScript1"]`;
@@ -1710,6 +1729,71 @@ export class Constants {
   static FocustabAgentScriptName = `FocustabAgentScript`;
   static FocustabMacroName = `FocustabMacro`;
   static FocustabTitle = `//span[contains(.,'Automation Case')]`;
+  static AppProfileUser = `//span[text()='Add users']`;
+  static AppProfileSession = `//span[text()='Add entity session template']`;
+  static AppProfileSessionValidate = `//div[text()='Entity session templates']`;
+  static AppProfileProductivity = `//span[text()='Turn On']`;
+  static AppProfileProductivityValidate = `//div[text()='Productivity pane']`;
+  static AppProfileInbox = `//span[text()='Inbox']`;
+  static AppProfileChannelValidate = `//div[text()='Channel providers']`;
+  static AppProfileChannel = `//*[text()='Channel providers']/following::*[@data-icon-name="Edit"][1]`;
+  static AppProfileCancel = `//span[text()='Cancel']`;
+  static CaseTitleLink1 = `(//span[contains(text(),'Automation Case')])[1]`;
+  static CaseTitleLink2 = `(//span[contains(text(),'Case For Automation')])[1]`;
+  static CaseTitleLink3 = `(//span[contains(text(),'case1')])[1]`;
+  static CustomerServiceManagerDashBoardName = `(//span[text()="Customer Service Manager Dashboard"])[1]`;
+  static QueueTitleTextName = `(//span[contains(text(),'Q1')])[1]`;
+  static MoreOptionCase = `(//*[@alt="more options button"])[4]`;
+  static SuggestionToogle = `(//label[@id="casetoggle-label"])[1]`;
+  static DashboardValidate = `//*[text()="Customer Service Agent Dashboard"]`;
+  static CaseValidate = `//*[@data-id="title"]`;
+  static PriorityValidate = `//*[@data-id="prioritycode"]`;
+  static CustomerValidate = `//*[@data-id="customerid"]`;
+  static StatusValidate = `//*[@data-id="statuscode"]`;
+  static OpenKBSearchTitleName = `(//span[contains(.,'Automation Case')])`;
+  static MoreOptionInKS = `(//*[contains(@data-id,"MscrmControls.KnowledgeControl.KnowledgeControl-microsoftIcon_menuFlyoutButton")])[1]`;
+  static EntitySessionTemplatesDelete = `//*[@data-icon-name="Delete"]`;
+  static EntitySessionTemplates = `//*[@data-test-id='entity-session-templates']`;
+  static EntitySessionTemplatesEdit = `//*[@data-test-id="entity-session-templates-edit-btn"]`;
+  static EntitySessionTemplatesCheckBox = `//*[@data-icon-name="StatusCircleCheckmark"]`;
+  static EntitySessionTemplatesEditbtn = `//*[@data-test-id="session-template-edit-btn"]`;
+  static SesionSaveAndCloseBtn = `(//*[text()="Save and close"])[2]`;
+  static EntitySessionTemplate = `//*[@data-test-id="no-entity-session-template-screen-header"]`;
+  static SelectAllChecbox = `(//i[@data-icon-name="StatusCircleCheckmark"])[1]`;
+  static SlugConditionTrue = `True`;
+  static SlugConditionFalse = `False`;
+  static SlugsAgentScriptName = `SlugAgentScript`;
+  static SlugsMacroName = `SlugMacro`;
+  static SlugsTitle = `//span[contains(.,'Automation Case')]`;
+  static BuiltIn = `//span[text()="Built-in"]`;
+  static Condition = `//div[text()="Condition"]`;
+  static AddAnAction1 = `(//div[@class="msla-action-button-text"])[1]`;
+  static AddAnAction2 = `(//div[@class="msla-action-button-text"])[2]`;
+  static SearchPhraseForPopulatedPhraseMacro2 = `(//*[text()="Search the knowledge base for the populated phrase"])[2]`;
+  static ExpressionBuilderInvalidValue = `"{$odata.incident.prioritycode.?$filter=incidentid eq '{caseId}'&$select=prioritycode}"`;
+  static ExpressionBuilderPopupMsg = "Unable to load macro definition";
+  static MoreCaseCommand = `//button[@data-lp-id="HomePageGrid:incident-OverflowButton"]`;
+  static RefreshTabTitle = `//span[contains(.,'Automation Case')]`;
+  static ChannelOrderDiv = `//div[@data-lp-id="MscrmControls.FieldControls.WholeNumberControl|msdyn_sortorder.fieldControl|msdyn_channelprovider"]`;
+  static SelectCasePriority = "//select[@data-id='prioritycode.fieldControl-option-set-select']";
+  static High = `High`;
+  static AutomationQueue = `Automation Queue`;
+  static AutomationQueueLink = `//*[contains(text(),"Automation Queue")]`;
+  // Codegen Selectors
+  static Workspaces = `Workspaces`;
+  static AgentExperienceProfileManage = `[data-test-id="Agent-Experience-Profile-manage"]`;
+  static AppprofilelistSearchBox = `[data-test-id="appprofile-list-search-box"]`;
+  static Button = `button`;
+  static Accounts = `Accounts`;
+  static Menubar = `menubar`;
+  static AccountNameText = `Account Name`;
+  static Menuitem = `menuitem`;
+  static New = `New`;
+  static Refresh = `Refresh`;
+  static MoreCommandsForAccount = `More commands for Account`;
+  static AccountCommands = `Account Commands`;
+  static SaveBtton = `Save (CTRL+S)`;
+  static Textbox = `textbox`;
 }
 
 export enum EntityNames {

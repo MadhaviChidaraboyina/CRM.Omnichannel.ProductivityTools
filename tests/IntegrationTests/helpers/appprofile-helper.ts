@@ -97,6 +97,15 @@ export class AppProfileHelper {
 
         // Add user to app profile created above
         await this.addUserToAppProfile(responseAppConfig, appProfileUser);
+
+        // const channelref = responseAppConfig.headers["odata-entityid"] + "/msdyn_appconfig_msdyn_channelprovider/$ref";
+        // const channelconfigref= await this.getchannelproviderID();
+        // const requestBodyChannelConfigref = {
+        //     "@odata.id": URLConstants.ChannelConfigUrl + "(" + channelconfigref + ")"
+        // };
+        // await ExecutePostRequest(channelref, requestBodyChannelConfigref);
+
+        
     }
 
     private async getGUID(userUrl: string) {
@@ -124,4 +133,19 @@ export class AppProfileHelper {
         const finalEndpoint = responseAppConfig.headers["odata-entityid"] + "/msdyn_appconfiguration_systemuser/$ref"
         await ExecutePostRequest(finalEndpoint, requestBodyAddUser);
     }
+
+    private async getchannelproviderID  () {
+        const response = await ExecuteGetRequest(
+        `${TestSettings.OrgUrl}/api/data/v9.0/msdyn_channelproviders?$filter=msdyn_name eq 'omnichannel'`
+    );
+    const data = response && response.data ? JSON.parse(JSON.stringify(response.data)) : null;
+    let ChannelProviderID = "";
+    if (data) {
+        const obj = data.value && Array.isArray(data.value) ? data.value : null;
+        if (obj && obj.length > 0) {
+            ChannelProviderID = obj[0].msdyn_channelproviderid;
+        }
+    }
+    return ChannelProviderID;
+}
 }

@@ -19,6 +19,7 @@ describe("Navigation QuickCreate Case", () => {
   let agentPage: Page;
   let rnd;
   var caseNameList: string[] = [];
+  
 
   beforeEach(async () => {
     adminContext = await browser.newContext({
@@ -64,5 +65,5 @@ describe("Navigation QuickCreate Case", () => {
     await macrosAdminPage.quickCreateCaseInCSW(Constants.CaseTitleName2 + rnd);
     const recordExist = await macrosAdminPage.verifyViewTabRecord(Constants.SpecificCaseLink2.replace("{0}", rnd));
     expect(recordExist).toBeTruthy();
-  });
+    });
 });

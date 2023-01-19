@@ -2332,6 +2332,7 @@ export enum AgentCosultConversationPageConstants {
 
 export enum Constants {
   HomePageText = 'Dynamics 365',
+  MoreOptions = `(//*[@aria-label="More options"])[1]`,
   LiveChat = 'LiveChat',
   Digital = 'Digital',
   QueueName = 'LiveChatPWQueue',
@@ -2429,6 +2430,8 @@ export enum Constants {
   IntradayInsights = 'Intraday Insights',
   OrgLanguage = 'English',
   ApplicationTabs = 'Application Tabs',
+  popupscreen = "[data-id='Modal53']",
+  popupclose = "button[aria-label='Close']",
   WhatsappHandlerName = 'WhatsAppHandler',
   WhatsappWorkStream = 'WhatsApp workstream',
   FourThousandsMiliSeconds = 4000,

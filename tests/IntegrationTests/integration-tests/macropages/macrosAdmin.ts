@@ -20,14 +20,16 @@ export class Macros extends BasePage {
   public async createMacro(macroName: string, ...params: any[]) {
     const productivityBtn = await this.adminPage.locator(Constants.ProductivitySiteMap);
     await productivityBtn.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.ProductivitySiteMap);
+    await this.adminPage.locator(Constants.ProductivitySiteMap).click();
     const macrosBtn = await this.adminPage.locator(Constants.ManageMacros);
     await macrosBtn.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.ManageMacros);
+    await this.adminPage.locator(Constants.ManageMacros).click();
     const newBtn = await this.adminPage.locator(Constants.NewButton);
     await newBtn.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.NewButton);
+    await this.adminPage.locator(Constants.NewButton).click();
+    await this.waitForDomContentLoaded();
     await this.adminPage.fill(Constants.NameField, macroName);
+    await this.waitForDomContentLoaded();
     const iframeParent = await (
       await this.adminPage.waitForSelector(Constants.MacroDesignerIFrame)
     ).contentFrame();
@@ -49,20 +51,12 @@ export class Macros extends BasePage {
 
       case Constants.DoRelevanceSearchMacroName:
         await iframeChild.click(Constants.DoARelevanceSearchBasedOnThePhrase);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
         await iframeChild.fill(
           Constants.SearchStringField,
           Constants.SearchString
         );
-        break;
-
-      case Constants.ResolveCaseMacroName:
-        await iframeChild.click(Constants.ActionToResolveCase);
-        await iframeChild.fill(Constants.BillableTimeInputField, Constants.Ten);
-        await iframeChild.fill(Constants.IncidentIdInputField, params[0]);
-        await iframeChild.fill(
-          Constants.ResolutionInputField,
-          Constants.CaseResolution
-        );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
         break;
 
       case Constants.UpdateAccountMacroName:
@@ -188,6 +182,7 @@ export class Macros extends BasePage {
 
       case Constants.WebResourceMacroName:
         await iframeChild.click(Constants.OpenApplicationTab);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
         await iframeChild.fill(
           Constants.PageTypeInputField,
           Constants.WebResource
@@ -199,14 +194,17 @@ export class Macros extends BasePage {
         );
         await this.checkAndCloseDynamicContentPopUp(iframeChild);
         await iframeChild.click(Constants.ShowAdvancedOptions);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
         await iframeChild.fill(
           Constants.AttributeName1InputField,
           Constants.WebResourceName
         );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
         await iframeChild.fill(
           Constants.AttributeValue1InputField,
           Constants.WebResourceValue
         );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
         break;
 
       case Constants.OpenControl:
@@ -259,57 +257,14 @@ export class Macros extends BasePage {
 
       case Constants.ExistingRecordMacroName:
         await iframeChild.click(Constants.OpenExistingRecordForm);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
         await iframeChild.fill(Constants.EntityLogicalName, Constants.Account);
         await this.checkAndCloseDynamicContentPopUp(iframeChild);
         await iframeChild.fill(Constants.EntityRecordID, params[0]);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
         break;
 
       case Constants.DraftEmailMacroName:
-        await iframeChild.click(Constants.OpenDraftEmailForm);
-        await iframeChild.fill(Constants.CaseEmailTemplateId, params[0]);
-        await iframeChild.fill(Constants.EntityRecordIDField, params[1]);
-        await iframeChild.fill(
-          Constants.EmailRecipientsField,
-          Constants.EmailID
-        );
-        await iframeChild.fill(
-          Constants.EntityLogicalNameField,
-          Constants.EntityLogicalNameIncident
-        );
-        break;
-
-      case Constants.AutoFillMacroName:
-        await iframeChild.click(Constants.OpenNewForm);
-        await iframeChild.fill(
-          Constants.EntityLogicalNameField,
-          Constants.EntityLogicalNameAccount
-        );
-        await iframeChild.waitForSelector(Constants.NewStepBtn);
-        await iframeChild.click(Constants.NewStepBtn);
-        await iframeChild.click(Constants.AutofillDataForm);
-        await iframeChild.fill(
-          Constants.EntityLogicalNameField,
-          Constants.EntityLogicalNameAccount
-        );
-        await iframeChild.click(Constants.ShowAdvancedOptions);
-        await iframeChild.fill(
-          Constants.AttributeName1InputField,
-          Constants.AttributeNameValue
-        );
-        await iframeChild.fill(
-          Constants.AttributeValue1InputField,
-          Constants.AttributeValue
-        );
-        break;
-
-      case Constants.ExistingRecord:
-        await iframeChild.click(Constants.OpenExistingRecordForm);
-        await iframeChild.fill(Constants.EntityLogicalName, Constants.Account);
-        await this.checkAndCloseDynamicContentPopUp(iframeChild);
-        await iframeChild.fill(Constants.EntityRecordID, params[0]);
-        break;
-
-      case Constants.CreateDraftEmailMacroName:
         await iframeChild.click(Constants.OpenDraftEmailForm);
         await iframeChild.fill(Constants.CaseEmailTemplateId, params[0]);
         await iframeChild.fill(Constants.EntityRecordIDField, params[1]);
@@ -319,8 +274,35 @@ export class Macros extends BasePage {
         );
         await iframeChild.fill(
           Constants.EntityLogicalNameField,
+          Constants.EntityLogicalNameIncident
+        );
+        break;
+
+      case Constants.AutoFillMacroName:
+        await iframeChild.click(Constants.OpenNewForm);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(
+          Constants.EntityLogicalNameField,
           Constants.EntityLogicalNameAccount
         );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.waitForSelector(Constants.NewStepBtn);
+        await iframeChild.click(Constants.NewStepBtn);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.click(Constants.AutofillDataForm);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(
+          Constants.EntityLogicalNameField,
+          Constants.EntityLogicalNameAccount
+        );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        break;
+
+      case Constants.ExistingRecord:
+        await iframeChild.click(Constants.OpenExistingRecordForm);
+        await iframeChild.fill(Constants.EntityLogicalName, Constants.Account);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(Constants.EntityRecordID, params[0]);
         break;
 
       case Constants.AutoFillMacroName:
@@ -361,20 +343,6 @@ export class Macros extends BasePage {
         await iframeChild.fill(Constants.EntityLogicalName, Constants.Account);
         await this.checkAndCloseDynamicContentPopUp(iframeChild);
         await iframeChild.fill(Constants.EntityRecordID, params[0]);
-        break;
-
-      case Constants.CreateDraftEmailMacroName:
-        await iframeChild.click(Constants.OpenDraftEmailForm);
-        await iframeChild.fill(Constants.CaseEmailTemplateId, params[0]);
-        await iframeChild.fill(Constants.EntityRecordIDField, params[1]);
-        await iframeChild.fill(
-          Constants.EmailRecipientsField,
-          Constants.EmailID
-        );
-        await iframeChild.fill(
-          Constants.EntityLogicalNameField,
-          Constants.EntityLogicalNameAccount
-        );
         break;
 
       case Constants.AutoFillMacroName:
@@ -427,10 +395,12 @@ export class Macros extends BasePage {
 
       case Constants.SearchPhraseForPopulatedPhrase:
         await iframeChild.click(Constants.SearchPhraseForPopulatedPhraseMacro);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
         await iframeChild.fill(
           Constants.SearchPhraseStringField,
           Constants.SearchPhraseValue
         );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
         break;
 
       case Constants.SearchPhraseMacroName:
@@ -507,14 +477,17 @@ export class Macros extends BasePage {
         );
         await this.checkAndCloseDynamicContentPopUp(iframeChild);
         await iframeChild.click(Constants.ShowAdvancedOptions);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
         await iframeChild.fill(
           Constants.AttributeName1InputField,
           Constants.AttributeNameControl
         );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
         await iframeChild.fill(
           Constants.AttributeValue1InputField,
           Constants.AttributeValueControl
         );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
         break;
         case Constants.TestMacro:
         await iframeChild.click(Constants.SearchKnowledgeArticleBasedOnPhrase);
@@ -556,6 +529,7 @@ export class Macros extends BasePage {
       case Constants.FocustabMacroName:
         await iframeChild.waitForSelector(Constants.FocusApplicationTab);
         await iframeChild.click(Constants.FocusApplicationTab);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
         await iframeChild.waitForSelector(Constants.TabId);
         await iframeChild.click(Constants.TabId);
         await this.checkAndCloseDynamicContentPopUp(iframeChild);
@@ -563,6 +537,118 @@ export class Macros extends BasePage {
           Constants.TabId,
           params[0]
         );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        break;
+      case Constants.SlugsMacroName:
+        await iframeChild.locator(Constants.BuiltIn).click();
+        await iframeChild.locator(Constants.Condition).click();
+        await iframeChild.locator(Constants.ExpressionBuilderConditionField1).fill(Constants.SlugName);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.locator(Constants.ExpressionBuilderConditionFiled2).fill(Constants.SlugName);
+        await this.adminPage.keyboard.press(Constants.Tab);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.waitForSelector(Constants.AddAnAction1);
+        await iframeChild.locator(Constants.AddAnAction1).click();
+        await iframeChild.locator(Constants.SearchPhraseForPopulatedPhraseMacro).click();
+        await iframeChild.locator(Constants.SearchPhraseStringField).fill(Constants.SlugConditionTrue);
+        await iframeChild.locator(Constants.AddAnAction2).click();
+        await iframeChild.locator(Constants.SearchPhraseForPopulatedPhraseMacro2).click();
+        await iframeChild.locator(Constants.SearchPhraseStringField).fill(Constants.SlugConditionFalse);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        break;
+      case Constants.SearchMacroName:
+        await iframeChild.click(Constants.OpenApplicationTab);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(Constants.PageTypeInputField, Constants.Search);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(
+          Constants.ApplicationTemplateIdInputField,
+          params[0]
+        );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        break;
+      case Constants.EntityRecordMacroName:
+        await iframeChild.click(Constants.OpenApplicationTab);
+        await iframeChild.fill(
+          Constants.PageTypeInputField,
+          Constants.EntityRecord
+        );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(
+          Constants.ApplicationTemplateIdInputField,
+          params[0]
+        );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        break;
+      case Constants.DashboardMacroName:
+        await iframeChild.click(Constants.OpenApplicationTab);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(
+          Constants.PageTypeInputField,
+          Constants.Dashboard
+        );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(
+          Constants.ApplicationTemplateIdInputField,
+          params[0]
+        );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        break;
+
+      case Constants.RefreshSessionMacroName:
+        await iframeChild.click(Constants.RefreshSessionContext);
+        await iframeChild.click(Constants.NewStepBtn);
+        await iframeChild.click(Constants.ActionToResolveCase);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(Constants.IncidentIdInputField, params[0]);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(Constants.BillableTimeInputField, Constants.Ten);        
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(
+          Constants.ResolutionInputField,
+          Constants.CaseResolution
+        );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.click(Constants.NewStepBtn);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.click(Constants.GetCurrentTab);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.click(Constants.NewStepBtn);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.click(Constants.RefreshTab);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.click(Constants.TabId);
+        // Time Delay to load the page
+        await iframeChild.waitForSelector(Constants.SelectTabId);
+        await iframeChild.click(Constants.SelectTabId);
+        break;
+
+      case Constants.ResolveCaseMacroName:
+        await iframeChild.click(Constants.RefreshSessionContext);
+        await iframeChild.click(Constants.NewStepBtn);
+        await iframeChild.click(Constants.ActionToResolveCase);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(Constants.IncidentIdInputField, params[0]);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(Constants.BillableTimeInputField, Constants.Ten);        
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.fill(
+          Constants.ResolutionInputField,
+          Constants.CaseResolution
+        );
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.click(Constants.NewStepBtn);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.click(Constants.GetCurrentTab);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.click(Constants.NewStepBtn);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.click(Constants.RefreshTab);
+        await this.checkAndCloseDynamicContentPopUp(iframeChild);
+        await iframeChild.click(Constants.TabId);
+        // Time Delay to load the page
+        await iframeChild.waitForSelector(Constants.SelectTabId);
+        await iframeChild.click(Constants.SelectTabId);
         break;
     }
     await iframeParent.click(Constants.SaveAndCloseButton2);
@@ -808,13 +894,13 @@ export class Macros extends BasePage {
 
   public async createAccountAndGetAccountId(accountName: string) {
     await this.adminPage.waitForSelector(Constants.AccountSitemapBtn);
-    await this.adminPage.click(Constants.AccountSitemapBtn);
+    await this.adminPage.locator(Constants.AccountSitemapBtn).click();
     await this.adminPage.waitForSelector(Constants.NewAccountBtn);
-    await this.adminPage.click(Constants.NewAccountBtn);
+    await this.adminPage.locator(Constants.NewAccountBtn).click();
     await this.adminPage.fill(Constants.AccountNameInputField, accountName);
-    await this.adminPage.click(Constants.SaveButton);
-    await this.adminPage.click(Constants.ThreeDots);
-    await this.adminPage.click(Constants.RefreshBtn);
+    await this.adminPage.locator(Constants.SaveButton).click();
+    await this.adminPage.locator(Constants.ThreeDots).click();
+    await this.adminPage.locator(Constants.RefreshBtn).click();
     return this.getIdFromUrl(await this.adminPage.url());
   }
 
@@ -945,17 +1031,13 @@ export class Macros extends BasePage {
   }
 
   public async createAccountAndGetId(name: string) {
-    await this.adminPage.waitForSelector(Constants.AccountsSitemapBtn);
-    await this.adminPage.click(Constants.AccountsSitemapBtn);
-    await this.adminPage.click(Constants.NewButton);
-    await this.adminPage.click(Constants.AccountFieldName);
-    await this.adminPage.fill(Constants.AccountFieldName, name);
-    await this.adminPage.keyboard.press("Tab");
-    await this.adminPage.waitForSelector(Constants.SaveButton);
-    await this.adminPage.click(Constants.SaveButton);
-    await this.adminPage.click(Constants.ThreeDots);
-    await this.adminPage.waitForSelector(Constants.RefreshBtn);
-    await this.adminPage.click(Constants.RefreshBtn);
+    await this.adminPage.getByText(Constants.Accounts).click();
+    await this.adminPage.getByRole(Constants.Menubar, { name: Constants.AccountCommands }).getByRole(Constants.Menuitem, { name: Constants.New }).click(); 
+    await this.adminPage.getByLabel(Constants.AccountNameText).click();
+    await this.adminPage.getByLabel(Constants.AccountNameText).fill(name);
+    await this.adminPage.getByRole(Constants.Menuitem, { name: Constants.SaveBtton }).click();
+    await this.adminPage.getByRole(Constants.Menuitem, { name: Constants.MoreCommandsForAccount }).click();
+    await this.adminPage.getByRole(Constants.Menuitem, { name: Constants.Refresh }).click();
     return this.getIdFromUrl(await this.adminPage.url());
   }
 
@@ -967,10 +1049,10 @@ export class Macros extends BasePage {
     let rnd: any;
     rnd = this.getRandomNumber();
     await this.adminPage.waitForSelector(Constants.WorkspaceSiteMap);
-    await this.adminPage.click(Constants.WorkspaceSiteMap);
+    await this.adminPage.locator(Constants.WorkspaceSiteMap).click();
     await this.adminPage.waitForSelector(Constants.ManageApplicationTab);
-    await this.adminPage.click(Constants.ManageApplicationTab);
-    await this.adminPage.click(Constants.NewButton);
+    await this.adminPage.locator(Constants.ManageApplicationTab).click();
+    await this.adminPage.locator(Constants.NewButton).click();
     await this.adminPage.fill(Constants.NameField, name);
     await this.adminPage.fill(Constants.UniqueNameField, uniqueName + rnd);
     await this.adminPage.fill(Constants.TitleInputField, name);
@@ -1028,6 +1110,15 @@ export class Macros extends BasePage {
         );
         break;
       case Constants.EntitySearchApplicationTab:
+        await this.adminPage.waitForSelector(Constants.EntityViewName);
+        await this.adminPage.click(Constants.EntityViewName);
+        await this.adminPage.waitForSelector(Constants.EntityViewText);
+        await this.adminPage.fill(
+          Constants.EntityViewText,
+          Constants.SearchTextValue
+        );
+        break;
+      case Constants.ThirdPartyWebsiteApplicationTab:
         await this.adminPage.waitForSelector(Constants.EntityViewName);
         await this.adminPage.click(Constants.EntityViewName);
         await this.adminPage.waitForSelector(Constants.EntityViewText);
@@ -1116,7 +1207,8 @@ export class Macros extends BasePage {
     await this.adminPage.fill(Constants.AgentScriptSearch, macroName);
     await this.adminPage.click(Constants.SearchThisViewStartBtnInMacros);
     await this.adminPage.click(Constants.RefreshBtn);
-    await this.adminPage.waitForSelector(Constants.DeactivateThisMacro);
+    const macrosCheckbox = await this.adminPage.locator(Constants.DeactivateThisMacro);
+    await macrosCheckbox.waitFor({ state: "visible" });
     await this.adminPage.click(Constants.DeactivateThisMacro);
     await this.adminPage.locator(Constants.DeactivateBtn).click();
     await this.adminPage.click(Constants.ConfirmDeactivateBtn);
@@ -1259,6 +1351,8 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.ManageMacros);
     await this.adminPage.click(Constants.NewButton);
     await this.adminPage.fill(Constants.NameField, macroName);
+    await this.waitForDomContentLoaded();
+    await this.adminPage.waitUntilSelectorIsVisible(Constants.MacroDesignerIFrame);
     const iframeParent = await (
       await this.adminPage.waitForSelector(Constants.MacroDesignerIFrame)
     ).contentFrame();
@@ -1377,13 +1471,13 @@ export class Macros extends BasePage {
         );
         await this.checkAndCloseDynamicContentPopUp(iframeChild);
         break;
-      case Constants.DraftEmailMacroName:
+      case Constants.CreateDraftEmailMacroName:
         await iframeChild.click(Constants.OpenDraftEmailForm);
         await iframeChild.fill(Constants.CaseEmailTemplateId, params[0]);
         await iframeChild.fill(Constants.EntityRecordIDField, params[1]);
         await iframeChild.fill(
           Constants.EmailRecipientsField,
-          Constants.EmailID
+          TestSettings.MacrosAgentEmail
         );
         await iframeChild.fill(
           Constants.EntityLogicalNameField,
@@ -1716,7 +1810,7 @@ export class Macros extends BasePage {
   }
 
   public async waitForTimeout() {
-    await this.adminPage.waitForTimeout(4000);
+    await this.adminPage.waitForTimeout(5000);
   }
 
   public async addAgentScripttoDefaultChatSession() {
@@ -2029,12 +2123,12 @@ export class Macros extends BasePage {
     }
   }
 
-  public async DisableMSTeamChat(page: Page, startPage) {
-    await this.openAppLandingPage(page);
-    await startPage.goToMyApp(Constants.CustomerServiceHub);
-    await this.adminPage.waitForSelector(Constants.ServiceSiteBtn);
-    await this.adminPage.click(Constants.ServiceSiteBtn);
-    await this.adminPage.click(Constants.ServiceManagementBtn);
+  public async DisableMSTeamChat() {
+    // await this.openAppLandingPage(page);
+    // await startPage.goToMyApp(Constants.CustomerServiceHub);
+    // await this.adminPage.waitForSelector(Constants.ServiceSiteBtn);
+    // await this.adminPage.click(Constants.ServiceSiteBtn);
+    // await this.adminPage.click(Constants.ServiceManagementBtn);
     await this.adminPage.waitForSelector(Constants.MSTeamChatSitemabtn);
     await this.adminPage.click(Constants.MSTeamChatSitemabtn);
     const IsEnable1 = await this.adminPage.isVisible(
@@ -2063,9 +2157,9 @@ export class Macros extends BasePage {
 
   public async InitiateSession(InitiateOne: string, Click: string) {
     await this.waitForDomContentLoaded();
-    await this.adminPage.waitForSelector(Constants.SearchOption);
-    await this.adminPage.click(Constants.SearchOption);
-    await this.adminPage.fill(Constants.SearchOption, InitiateOne);
+    await this.adminPage.waitForSelector(Constants.SearchCaseOption);
+    await this.adminPage.click(Constants.SearchCaseOption);
+    await this.adminPage.fill(Constants.SearchCaseOption, InitiateOne);
     await this.adminPage.waitForSelector(Constants.SearchTheView);
     await this.adminPage.click(Constants.SearchTheView);
     await this.adminPage.waitForSelector(Click);
@@ -2116,6 +2210,17 @@ export class Macros extends BasePage {
     await this.waitUntilSelectorIsVisible(ValidateHome, Constants.Five, this.adminPage);
     const locatorvisible = await this.adminPage.locator(ValidateHome)
     await locatorvisible.waitFor( { state: "visible" });
+    const PageValidate = await this.adminPage.isVisible(ValidateHome);
+    expect(PageValidate).toBeTruthy();
+  }
+
+  public async ValidateSessionPage(ValidateHome: string) {
+    //Time delay to perform the action
+    await this.adminPage.waitForSelector(ValidateHome);
+    // Added constants.five as of now to wait for selector to load
+    await this.waitUntilSelectorIsVisible(ValidateHome, Constants.Five, this.adminPage);
+    //const locatorvisible = await this.adminPage.locator(ValidateHome)
+    //await locatorvisible.waitFor( { state: "visible" });
     const PageValidate = await this.adminPage.isVisible(ValidateHome);
     expect(PageValidate).toBeTruthy();
   }
@@ -2192,22 +2297,23 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.TurnOnSmartAssist);
     await this.adminPage.click(Constants.SaveAndCloseButton2);
   }
-
+  
   public async GoToHome() {
     await this.adminPage.waitForSelector(Constants.Home);
-    await this.adminPage.click(Constants.Home);
+    await this.adminPage.locator(Constants.Home).click();
     await this.waitForDomContentLoaded();
   }
 
   public async ClickProductivityPaneTool(OpenTool: string) {
-    await this.adminPage.click(OpenTool);
-    await this.adminPage.waitForTimeout(Constants.DefaultTimeout);
+    await this.adminPage.waitForSelector(OpenTool);
+    await this.adminPage.locator(OpenTool).click();
+    await this.waitForDomContentLoaded();
   }
 
   public async InitiateTab(InitiateOne: string, ClickTab: string) {
-    await this.adminPage.waitForSelector(Constants.SearchOption);
-    await this.adminPage.click(Constants.SearchOption);
-    await this.adminPage.fill(Constants.SearchOption, InitiateOne);
+    await this.adminPage.waitForSelector(Constants.SearchCaseOption);
+    await this.adminPage.locator(Constants.SearchCaseOption).click();
+    await this.adminPage.fill(Constants.SearchCaseOption, InitiateOne);
     await this.adminPage.waitForSelector(Constants.SearchTheView);
     await this.adminPage.click(Constants.SearchTheView);
     await this.adminPage.click(ClickTab, { modifiers: ["Control"] });
@@ -2238,8 +2344,8 @@ export class Macros extends BasePage {
 
   public async OpenSuggestionLink(ClickTool: string) {
     await this.adminPage.waitForSelector(ClickTool);
-    await this.adminPage.click(ClickTool);
-    await this.adminPage.waitForTimeout(3000);
+    await this.adminPage.locator(ClickTool).click();
+    await this.waitForDomContentLoaded();
   }
 
   public async EmailEditor() {
@@ -2252,19 +2358,24 @@ export class Macros extends BasePage {
   }
 
   public async SwitchBackToPreviousSession(PreviousSession: string) {
-    await this.adminPage.click(PreviousSession);
-    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);
+    await this.adminPage.waitForSelector(PreviousSession);
+    await this.adminPage.locator(PreviousSession).click();
+    await this.waitForDomContentLoaded();
   }
 
   public async LinkAndUnlinkCase(ClickLinkBtn: string) {
-    await this.adminPage.click(ClickLinkBtn);
-    await this.adminPage.waitForTimeout(5000);
+    await this.adminPage.waitForSelector(ClickLinkBtn);
+    await this.adminPage.locator(ClickLinkBtn).click();
+    await this.waitForDomContentLoaded();
   }
 
   public async RelatedPage() {
-    await this.adminPage.click(Constants.Related);
-    await this.adminPage.waitForTimeout(3000);
-    await this.adminPage.click(Constants.Connections);
+    await this.adminPage.waitForSelector(Constants.Related);
+    await this.adminPage.locator(Constants.Related).click();
+    await this.waitForDomContentLoaded();
+    await this.adminPage.waitForSelector(Constants.Connections);
+    await this.adminPage.locator(Constants.Connections).click();
+    await this.waitForDomContentLoaded();
   }
 
   public async ValidateDashboard(ValidateAgentDashboard: string) {
@@ -2284,8 +2395,9 @@ export class Macros extends BasePage {
   }
 
   public async ClickDropDown(Click: string) {
+    await this.adminPage.waitForSelector(Click);
     await this.adminPage.click(Click);
-    await this.adminPage.waitForTimeout(8000);
+    await this.waitForDomContentLoaded();
   }
 
   public async CloseDropDown(Click: string) {
@@ -2299,6 +2411,7 @@ export class Macros extends BasePage {
     await this.adminPage.waitForSelector(Constants.TimelineTaskButton);
     await this.adminPage.click(Constants.TimelineTaskButton);
     await this.adminPage.waitForSelector(Constants.TaskSubjectField);
+    await this.adminPage.click(Constants.TaskSubjectField, { timeout: 4000 });
     await this.adminPage.fill(Constants.TaskSubjectField, TaskName);
     await this.adminPage.click(Constants.AgentscriptStepSaveAndclose);
     //Time delay to save the task page
@@ -2488,6 +2601,66 @@ export class Macros extends BasePage {
     //Time delay to load search content
     await this.adminPage.waitForSelector(Constants.ClickParent);
     await this.adminPage.click(Constants.ClickParent);
+  }
+ 
+  public async GetUserName() {
+    await this.waitUntilSelectorIsVisible(
+      AgentChatConstants.AgentInformation,
+      AgentChatConstants.Two,
+      this.Page,
+      AgentChatConstants.FiveThousandsMiliSecondsWaitTimeout
+    );
+    const agentInfo = await this.Page.waitForSelector(
+      AgentChatConstants.AgentInformation
+    );
+    await agentInfo.click();
+    await this.waitUntilSelectorIsVisible(
+      AgentChatConstants.AgentUserNameSelector,
+      AgentChatConstants.Two,
+      this.Page,
+      AgentChatConstants.FiveThousandsMiliSecondsWaitTimeout
+    );
+    const userNameSelector = await this.Page.waitForSelector(
+      AgentChatConstants.AgentUserNameSelector
+    );
+    const userName = await userNameSelector.textContent();
+    await agentInfo.click();
+    return userName;
+  }
+
+  public async VerifyParentNewCase(name: string) {
+    await this.adminPage.click(Constants.DetailsBtn);
+    const singleRowFieldControl = await this.adminPage.waitForSelector(
+      Constants.MergedCases
+    );
+    const singleRowHeight = await singleRowFieldControl.boundingBox();
+    await this.adminPage.mouse.move(singleRowHeight.x, singleRowHeight.y);
+    await this.adminPage.mouse.wheel(0, 4000);
+    const visible1 = await this.adminPage.locator(stringFormat(Constants.PostValidate, name));
+    await visible1.waitFor({ state: "visible" });
+    expect(visible1).toBeTruthy();
+
+    await this.Page.waitForTimeout(5000);
+
+    //Verify FirstCase1 Cancelled State
+    await this.adminPage.click(Constants.FirstCase1);
+    await this.adminPage.click(Constants.refreshnewbutton); 
+    await this.adminPage.click(Constants.refreshnewbutton);  
+    const visible2 = await this.adminPage.locator(Constants.warningMessage);
+    const currentTitle = await visible2.innerText();
+    await visible2.waitFor({ state: "visible" });
+    await currentTitle.includes("Cancelled");
+    expect(visible2).toBeTruthy();
+
+    //Verify FirstCase2 Cancelled State 
+    await this.adminPage.click(Constants.FirstCase2);
+    await this.adminPage.click(Constants.refreshnewbutton); 
+    await this.adminPage.click(Constants.refreshnewbutton);  
+    const visible3 = await this.adminPage.locator(Constants.warningMessage);
+    const currentTitle2 = await visible2.innerText(); 
+    await visible3.waitFor({ state: "visible" });
+    await currentTitle2.includes("Cancelled"); 
+    expect(visible3).toBeTruthy();
   }
 
   public async VerifyParentCase() {
@@ -2790,30 +2963,26 @@ export class Macros extends BasePage {
   }
 
   public async CreatePublicQueue2(QueueName: string) {
+    const queuenewBtn = await this.adminPage.locator(Constants.NewBtn);
+    await queuenewBtn.waitFor({ state: "visible" });
     await this.adminPage.click(Constants.NewBtn);
     await this.adminPage.fill(Constants.TitleField, QueueName);
-    await this.adminPage.waitForTimeout(3000);
+    const saveandclosebtn = await this.adminPage.locator(Constants.SaveAndCloseButton);
+    await saveandclosebtn.waitFor({ state: "visible" });
     await this.adminPage.click(Constants.SaveAndCloseButton);
-    await this.adminPage.waitForTimeout(3000);
-    const UnsavedChanges = await this.waitUntilSelectorIsVisible(
-      Constants.ConfirmaDialog,
-      Constants.Two,
-      this.adminPage
-    );
+    const UnsavedChanges = await this.waitUntilSelectorIsVisible(Constants.ConfirmaDialog, Constants.Two, this.adminPage);
     if (UnsavedChanges) {
       await this.adminPage.click(Constants.ConfirmButton);
     }
-    await this.waitUntilSelectorIsVisible(
-      Constants.QueueBtn,
-      Constants.Two,
-      this.adminPage
-    );
+    await this.waitUntilSelectorIsVisible(Constants.QueueBtn, Constants.TenThousandsMiliSeconds, this.adminPage);
+    //await this.waitForDomContentLoaded();
   }
 
   public async AddCaseToQueue(Queue: string) {
     await this.waitUntilSelectorIsVisible(Constants.MoreCommandsForCase, Constants.Two, this.adminPage);
     await this.adminPage.click(Constants.MoreCommandsForCase);
     await this.adminPage.click(Constants.AddQueue);
+    await this.adminPage.click(Constants.SearchIcon, { timeout: 4000 });
     await this.adminPage.fill(Constants.SearchIcon, Queue);
     await this.adminPage.waitForTimeout(3000);//Time delay to fill in search content
     await this.adminPage.click(Constants.QueueSearchResult);
@@ -2864,29 +3033,26 @@ export class Macros extends BasePage {
   public async SetupSmartAssist() {
     const InsightsBtn = await this.adminPage.locator(Constants.InsightsSection);
     await InsightsBtn.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.InsightsSection);
+    await this.adminPage.locator(Constants.InsightsSection).click();
     const manageSessionForagents = await this.adminPage.locator(
       Constants.ManageSessionForAgents
     );
     await manageSessionForagents.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.ManageSessionForAgents);
+    await this.adminPage.locator(Constants.ManageSessionForAgents).click();
   }
 
   public async EnableSuggestionsInCSH() {
+    const suggestionToogle = await this.adminPage.locator(Constants.SuggestionToogle);
+    await suggestionToogle.waitFor({ state: "visible" });
     const IsEnable1 = await this.adminPage.isVisible(
       Constants.IsEnableSimilarSuggestions
     );
     if (IsEnable1) {
-      const visibleLandingpage = await this.adminPage.locator(Constants.EnableSimilarSuggestions);
-      await visibleLandingpage.waitFor({ state: "visible" });
+      const visibleLandingpage1 = await this.adminPage.locator(Constants.EnableSimilarSuggestions);
+      await visibleLandingpage1.waitFor({ state: "visible" });
       await this.adminPage.click(Constants.EnableSimilarSuggestions);
-    }
-    const IsEnable2 = await this.adminPage.isVisible(
-      Constants.IsEnableKBSuggestions
-    );
-    if (IsEnable2) {
-      const visibleLandingpage = await this.adminPage.locator(Constants.EnableKBSuggestions);
-      await visibleLandingpage.waitFor({ state: "visible" });
+      const visibleLandingpage2 = await this.adminPage.locator(Constants.EnableKBSuggestions);
+      await visibleLandingpage2.waitFor({ state: "visible" });
       await this.adminPage.click(Constants.EnableKBSuggestions);
     }
     //Time delay to perform action
@@ -2897,12 +3063,13 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.SaveAndCloseButton);
     //Time delay to perform action
     await this.waitForDomContentLoaded();
+    await this.adminPage.waitForTimeout(Constants.EightThousandsMiliSeconds);
   }
 
   public async EmailURL() {
-    const MoreOptionBtn = await this.adminPage.locator(Constants.SimilarCaseMoreOption);
+    const MoreOptionBtn = await this.adminPage.locator(Constants.MoreOption);
     await MoreOptionBtn.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.SimilarCaseMoreOption);
+    await this.adminPage.click(Constants.MoreOption);
     const EMailBtn = await this.adminPage.locator(Constants.EmailURL);
     await EMailBtn.waitFor({ state: "visible" });
     await this.adminPage.click(Constants.EmailURL);
@@ -2918,35 +3085,34 @@ export class Macros extends BasePage {
     expect(PageValidate).toBeTruthy();
   }
 
-  public async TurnOffSuggestions(page: Page, startPage: any) {
-    const InsightsBtn = await this.adminPage.locator(Constants.InsightsSection);
-    await InsightsBtn.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.InsightsSection);
-    const manageSessionForagents = await this.adminPage.locator(
-      Constants.ManageSessionForAgents
-    );
-    await manageSessionForagents.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.ManageSessionForAgents);
-    await this.adminPage.waitForSelector(Constants.SimilarSuggestionsinCSH);
-    await this.adminPage.waitForSelector(Constants.KBSuggestionsinCSH);
+  public async TurnOffSuggestions() {
+    const suggestionToogle = await this.adminPage.locator(Constants.SuggestionToogle);
+    await suggestionToogle.waitFor({ state: "visible" });
     const IsEnable1 = await this.adminPage.isVisible(
       Constants.IsEnableSimilarSuggestions
     );
-    if (IsEnable1) {
-      console.log("already Disable similar suggestions");
-    }else{
-      await page.click(Constants.SimilarSuggestions);
-      await page.click(Constants.KBSuggestions);
-      console.log("Disabled similar suggestions");
+    if (!IsEnable1) {
+      const visibleLandingpage1 = await this.adminPage.locator(Constants.EnableSimilarSuggestions);
+      await visibleLandingpage1.waitFor({ state: "visible" });
+      await this.adminPage.click(Constants.EnableSimilarSuggestions);
+      const visibleLandingpage2 = await this.adminPage.locator(Constants.EnableKBSuggestions);
+      await visibleLandingpage2.waitFor({ state: "visible" });
+      await this.adminPage.click(Constants.EnableKBSuggestions);
     }
-    await page.click(Constants.SaveAndCloseButton);
-    await this.adminPage.waitForSelector(Constants.ManageSessionForAgents);// just added wait to load the page
+    //Time delay to perform action
+    const visibleLandingpage1 = await this.adminPage.locator(
+      Constants.SaveAndCloseButton
+    );
+    await visibleLandingpage1.waitFor({ state: "visible" });
+    await this.adminPage.click(Constants.SaveAndCloseButton);
+    //Time delay to perform action
+    await this.waitForDomContentLoaded();
   }
 
   public async EmailContent() {
-    const MoreOption = await this.adminPage.locator(Constants.KnowledgeArticleMoreOption);
+    const MoreOption = await this.adminPage.locator(Constants.MoreOption);
     await MoreOption.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.KnowledgeArticleMoreOption);
+    await this.adminPage.click(Constants.MoreOption);
     const copyurl = await this.adminPage.locator(Constants.EmailContent);
     await copyurl.waitFor({ state: "visible" });
     await this.adminPage.click(Constants.EmailContent);
@@ -2958,10 +3124,11 @@ export class Macros extends BasePage {
   }
 
   public async ValidateTimeLine(Status: string) {
+    await this.waitUntilSelectorIsVisible(Constants.FirstAutoPost, Constants.Five, this.adminPage);
     await this.adminPage.waitForSelector(Constants.FirstAutoPost);
-    await this.adminPage.click(Constants.FirstAutoPost);
-    // Added constants.five as of now to wait for selector to load
+    await this.adminPage.locator(Constants.FirstAutoPost).click();
     await this.waitUntilSelectorIsVisible(Status, Constants.Five, this.adminPage);
+    await this.waitForTimeout();
     const PageValidate = await this.adminPage.isVisible(Status);
     expect(PageValidate).toBeTruthy();
   }
@@ -3035,6 +3202,7 @@ export class Macros extends BasePage {
 
   public async AddTaskToQueue(Queue: string) {
     await this.adminPage.click(Constants.AddtoQueueInTask);
+    await this.adminPage.click(Constants.SearchIcon, { timeout: 4000 });
     await this.adminPage.fill(Constants.SearchIcon, Queue);
     //Time delay to perform the action
     await this.adminPage.waitForTimeout(1000);
@@ -3073,7 +3241,7 @@ export class Macros extends BasePage {
   }
 
   public async CopyURL() {
-    const MoreOption = await this.adminPage.locator(Constants.SimilarCaseMoreOption);
+    const MoreOption = await this.adminPage.locator(Constants.MoreOption);
     await MoreOption.waitFor({ state: "visible" });
     await this.adminPage.click(Constants.MoreOption);
     await this.adminPage.waitForLoadState()
@@ -3218,7 +3386,7 @@ export class Macros extends BasePage {
   public async ClickRouteOperation(Queue: string) {
     await this.adminPage.click(Constants.RouteBtn);
     //Time delay to perform the action
-    await this.adminPage.waitForTimeout(1000);
+    await this.adminPage.click(Constants.SearchIconforRoute, { timeout: 4000 });
     await this.adminPage.fill(Constants.SearchIconforRoute, Queue);
     //Time delay to perform the action
     await this.adminPage.waitForTimeout(3000);
@@ -3257,28 +3425,25 @@ export class Macros extends BasePage {
 
   public async createAppProfile() {
     let rnd = this.getRandomNumber();
-    await this.adminPage.click(Constants.WorkspaceSiteMap);
-    await this.adminPage.click(Constants.ManageAgentExperienceProfile);
-    await this.adminPage.click(Constants.NewAppProfile);
-    await this.adminPage.fill(Constants.NameBox, Constants.AppProfileName1);
-    await this.adminPage.fill(
-      Constants.UniqueNameBox,
-      Constants.UniqueName + rnd
-    );
-    await this.adminPage.click(Constants.CreateAppProfile);
-    await this.adminPage.waitForTimeout(5000);
+    await this.adminPage.locator(Constants.WorkspaceSiteMap).click();
+    await this.adminPage.locator(Constants.ManageAgentExperienceProfile).click();
+    await this.adminPage.locator(Constants.NewAppProfile).click();
+    await this.adminPage.locator(Constants.NameBox).fill(Constants.AppProfileName1 + rnd);
+    await this.adminPage.locator(Constants.UniqueNameBox).fill(Constants.UniqueName + rnd);
+    await this.adminPage.locator(Constants.CreateAppProfile).click();
+    await this.waitForDomContentLoaded();
   }
 
   public async AddUsers(User: String) {
     await this.adminPage.waitForSelector(Constants.AddUsers);
-    await this.adminPage.click(Constants.AddUsers);
+    await this.adminPage.locator(Constants.AddUsers).click();
     await this.adminPage.waitForSelector(Constants.SearchUser);
     await this.adminPage.click(Constants.SearchUser);
     await this.adminPage.fill(Constants.SearchUser, User);
-    await this.adminPage.waitForSelector(Constants.SelectAllBtn);
-    await this.adminPage.waitForTimeout(3000);
-    await this.adminPage.click(Constants.SelectAllBtn);
-    await this.adminPage.click(Constants.AddUser);
+    await this.adminPage.waitForSelector(Constants.SelectAllChecbox);
+    await this.adminPage.locator(Constants.SelectAllChecbox).click();
+    await this.adminPage.locator(Constants.AddUser).click();
+    await this.waitForDomContentLoaded();
   }
 
   public async AddEntitySession(SessionTemplateName: string) {
@@ -3322,14 +3487,15 @@ export class Macros extends BasePage {
   }
 
   public async EnableProductivityPane() {
-    await this.adminPage.waitForSelector(Constants.TurnOn, { timeout: 10000 });
-    await this.adminPage.click(Constants.TurnOn);
-    await this.adminPage.click(Constants.TurnonProductivityPane);
-    await this.adminPage.click(Constants.DefaultMode);
-    await this.adminPage.click(Constants.TurnOnAgentScript);
-    await this.adminPage.click(Constants.TurnOnKnowledgeSearch);
-    await this.adminPage.click(Constants.TurnOnSmartAssist);
-    await this.adminPage.click(Constants.SaveAndCloseButton2);
+    await this.adminPage.waitForSelector(Constants.TurnOn);
+    await this.adminPage.locator(Constants.TurnOn).click();
+    await this.adminPage.locator(Constants.TurnonProductivityPane).click();
+    await this.adminPage.locator(Constants.DefaultMode).click();
+    await this.adminPage.locator(Constants.TurnOnAgentScript).click();
+    await this.adminPage.locator(Constants.TurnOnKnowledgeSearch).click();
+    await this.adminPage.locator(Constants.TurnOnSmartAssist).click();
+    await this.adminPage.locator(Constants.SaveAndCloseButton2).click();
+    await this.waitForDomContentLoaded();
   }
 
   public async deleteAppProfile(page: Page, startPage) {
@@ -3424,12 +3590,12 @@ export class Macros extends BasePage {
   }
 
   public async EnableMSTeamsAppsInProductivityPane() {
-    await this.adminPage.waitForSelector(Constants.TurnOn, { timeout: 10000 });
-    await this.adminPage.click(Constants.TurnOn);
-    await this.adminPage.click(Constants.TurnonProductivityPane);
+    await this.adminPage.waitForSelector(Constants.EditPPSetting, { timeout: 10000 });
+    await this.adminPage.click(Constants.EditPPSetting); 
     await this.adminPage.click(Constants.DefaultMode);
     await this.adminPage.click(Constants.TurnOnMSTeams);
     await this.adminPage.click(Constants.SaveAndCloseButton2);
+    await this.adminPage.waitForTimeout(10000);
   }
 
   public async ValidateTheStausOwnerTitleConfidenceAndResolution() {
@@ -3487,9 +3653,9 @@ export class Macros extends BasePage {
   }
 
   public async VerifyCopyResolution() {
-    const MoreOption = await this.adminPage.locator(Constants.SimilarCaseMoreOption);
+    const MoreOption = await this.adminPage.locator(Constants.MoreOptionCase);
     await MoreOption.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.SimilarCaseMoreOption);
+    await this.adminPage.click(Constants.MoreOptionCase);
     const copyurl = await this.adminPage.locator(Constants.CopyResolution);
     await copyurl.waitFor({ state: "visible" });
     await this.adminPage.click(Constants.CopyResolution);
@@ -3952,8 +4118,9 @@ export class Macros extends BasePage {
   }
 
   public async MoreActions() {
-    await this.adminPage.click(Constants.MoreActions);
-    await this.adminPage.waitForTimeout(1000);
+    const refreshTimeline = await this.adminPage.locator(Constants.MoreOption);
+    await refreshTimeline.waitFor({ state: "visible" });
+    await this.adminPage.click(Constants.MoreOption);
   }
 
   public async OpenClosedItem(agentChat: any) {
@@ -3977,14 +4144,28 @@ export class Macros extends BasePage {
     await agentChat.setAgentStatusToAvailable();
   }
 
+  public async fillLookupField(inputSelector: string, searchSelector: string, lookupSelector: string, lookupValue: string, timeout = 2000) {
+    try {
+      await this.Page.waitForTimeout(Constants.DefaultTimeout);
+      await this.Page.waitForSelector(inputSelector, { timeout: timeout });
+      await this.fillInputData(inputSelector, lookupValue);
+      await this.Page.click(searchSelector);
+      await this.Page.click(lookupSelector.replace("{0}", lookupValue));
+    } catch { }
+  }
+
+  
   public async CreateRoutingRule(
     RuleName: string,
     RuleItemName: string,
     QueueName: string,
     rnd: number
   ) {
-    await this.adminPage.click(Constants.RoutingRuleBtn);
-    await this.adminPage.click(Constants.NewButton);
+    await this.adminPage.waitForSelector(Constants.RoutingSiteMap);
+    await this.adminPage.locator(Constants.RoutingSiteMap).click();
+    await this.adminPage.click(Constants.SetUpBasicRoutingRule);    
+    //await this.adminPage.click(Constants.RoutingRuleBtn);
+    await this.adminPage.locator(Constants.NewButton).click();
     await this.adminPage.fill(Constants.NameField, RuleName);
     await this.adminPage.click(Constants.Save);
     await this.adminPage.waitForSelector(Constants.MoreCommandsForRule);
@@ -3994,16 +4175,24 @@ export class Macros extends BasePage {
     await this.adminPage.fill(Constants.RuleItemTitleField, RuleItemName);
     await this.adminPage.click(Constants.PlusAddBtn);
     await this.adminPage.click(Constants.AddRow);
+    await this.adminPage.waitForSelector(Constants.FieldSelector);
     await this.adminPage.click(Constants.FieldSelector);
-    await this.adminPage.click(Constants.SelectField);
+    await this.adminPage.keyboard.type(Constants.SelectField1);
+    await this.adminPage.keyboard.press("Tab");
     await this.adminPage.click(Constants.ValueSelector);
-    await this.adminPage.click(Constants.SelectValue);
+    await this.adminPage.waitForSelector(Constants.SelectValue, { timeout : 3000 } );
+  
     await this.adminPage.click(Constants.RouteTo);
+    await this.adminPage.waitForTimeout(2000); // we are using keyboard commands 2seconds wait is needed.
     await this.adminPage.keyboard.press("ArrowDown");
+    await this.adminPage.waitForTimeout(2000); // we are using keyboard commands 2seconds wait is needed.
     await this.adminPage.keyboard.press("Enter");
-    await this.adminPage.fill(Constants.AddToQueue, QueueName);
-    await this.adminPage.waitForSelector(Constants.SearchResult);
-    await this.adminPage.click(Constants.SearchResult);
+    await this.fillLookupField(
+      Constants.AddtoQueueInput,
+      Constants.AddtoQueueSearch,
+      Constants.AddtoQueueValue,
+      QueueName
+    );
     await this.adminPage.click(Constants.SaveAndCloseButton);
     await this.adminPage.waitForSelector(Constants.Activate);
     await this.adminPage.click(Constants.Activate);
@@ -4012,14 +4201,44 @@ export class Macros extends BasePage {
   }
 
   public async AddPriorityToCase() {
-    await this.adminPage.click(Constants.CasePriorityField);
-    await this.adminPage.keyboard.press("ArrowUp");
-    await this.adminPage.keyboard.press("Enter");
-    await this.adminPage.click(Constants.RefreshBtn);
-    await this.adminPage.waitForTimeout(4000);
+    await this.adminPage.waitForSelector(Constants.SelectCasePriority);
+    await this.adminPage.selectOption(
+      Constants.SelectCasePriority, { label: Constants.High }
+    );
+    await this. adminPage.click(Constants.Save);
+    await this.waitForDomContentLoaded();
   }
 
   public async SaveAndRoute(InitiateOne: string, Click: string) {
+    await this.adminPage.click(Constants.SearchCaseOption);
+    await this.adminPage.fill(Constants.SearchCaseOption, InitiateOne);
+    await this.adminPage.waitForSelector(Constants.SearchTheView);
+    await this.adminPage.click(Constants.SearchTheView);
+    await this. adminPage.click(Click);
+    await this.adminPage.waitForSelector(Constants.RefreshBtn);
+    await this.adminPage.click(Constants.RefreshBtn);
+    await this.adminPage.waitForSelector(Constants.SaveAndRoute);
+    await this.adminPage.click(Constants.SaveAndRoute);
+    await this.adminPage.waitForSelector(Constants.ConfirmRoute);
+    await this.adminPage.click(Constants.ConfirmRoute);
+    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);
+    const searchOption = await this.adminPage.locator(Constants.searchCase);
+    await searchOption.waitFor({ state: "visible" });
+    await this.adminPage.waitForSelector(Constants.searchCase);
+    await this.adminPage.click(Constants.searchCase, { timeout: 4000 });
+    await this.adminPage.fill(Constants.searchCase, InitiateOne);
+    await this.adminPage.waitForSelector(Constants.SearchTheView);
+    await this.adminPage.click(Constants.SearchTheView);
+    await this.adminPage.click(Click, { timeout: 4000 });
+    const moreCommand = await this.adminPage.locator(Constants.MoreCommandsInTimeline);
+    await moreCommand.waitFor({ state: "visible" });
+    await this.adminPage.click(Constants.MoreCommandsInTimeline);// Needed to click refresh timeline button for twice
+    const refreshTimeline = await this.adminPage.locator(Constants.RefreshTimeline);
+    await refreshTimeline.waitFor({ state: "visible" });
+    await this.adminPage.click(Constants.RefreshTimeline);
+  }
+
+  public async SaveAndRouteAddQueuetoCase(InitiateOne: string, Click: string, UserQueueOne: string) {
     await this.adminPage.click(Constants.SearchOption, { timeout: 4000 });
     await this.adminPage.fill(Constants.SearchOption, InitiateOne);
     await this.adminPage.waitForSelector(Constants.SearchTheView);
@@ -4032,20 +4251,21 @@ export class Macros extends BasePage {
     await this.adminPage.waitForSelector(Constants.ConfirmRoute);
     await this.adminPage.click(Constants.ConfirmRoute);
     await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds);
-    const searchOption = await this.adminPage.locator(Constants.SearchOption);
+    const searchOption = await this.adminPage.locator(Constants.SearchCaseOption);
     await searchOption.waitFor({ state: "visible" });
-    await this.adminPage.waitForSelector(Constants.SearchOption);
-    await this.adminPage.click(Constants.SearchOption, { timeout: 4000 });
-    await this.adminPage.fill(Constants.SearchOption, InitiateOne);
+    await this.adminPage.waitForSelector(Constants.SearchCaseOption);
+    await this.adminPage.click(Constants.SearchCaseOption);
+    await this.adminPage.fill(Constants.SearchCaseOption, InitiateOne);
     await this.adminPage.waitForSelector(Constants.SearchTheView);
     await this.adminPage.click(Constants.SearchTheView);
-    await this.adminPage.click(Click, { timeout: 4000 });
+    await this.adminPage.click(Click);
     const moreCommand = await this.adminPage.locator(Constants.MoreCommandsInTimeline);
     await moreCommand.waitFor({ state: "visible" });
     await this.adminPage.click(Constants.MoreCommandsInTimeline);// Needed to click refresh timeline button for twice
     const refreshTimeline = await this.adminPage.locator(Constants.RefreshTimeline);
     await refreshTimeline.waitFor({ state: "visible" });
     await this.adminPage.click(Constants.RefreshTimeline);
+    await this.adminPage.addQueueToCase2(InitiateOne, UserQueueOne);
   }
 
   public async SaveAndRouteInTab(rnd: any) {
@@ -4116,11 +4336,11 @@ export class Macros extends BasePage {
     await iframeChild.click(Constants.RefreshTab);
     await iframeChild.click(Constants.TabId);
     // Time Delay to load the page
-    await iframeChild.waitForSelector(Constants.SelectTabId, { timeout: 4000 });
+    await iframeChild.waitForSelector(Constants.SelectTabId);
     await iframeChild.click(Constants.SelectTabId);
     await iframeParent.click(Constants.SaveAndCloseButton2);
-    // Time Delay to load the page
-    await this.adminPage.waitForTimeout(4000);
+    //Time Required to convert Macro from "Draft State" to "Activate State"
+    await this.adminPage.waitForTimeout(3000);
   }
 
   public async AgentScriptInCSAdminCenter(
@@ -4282,9 +4502,13 @@ export class Macros extends BasePage {
     await iframeChild.waitForSelector(Constants.RecordTitle);
     await iframeChild.click(Constants.RecordTitle);
     await this.adminPage.keyboard.press(Constants.Enter);
+    await this.checkAndCloseDynamicContentPopUp(iframeChild);
     await iframeChild.fill(Constants.RecordTitle, params[0]);
+    await this.checkAndCloseDynamicContentPopUp(iframeChild);
     await iframeParent.click(Constants.SaveAndCloseButton2);
     await this.waitForDomContentLoaded();
+    //Time Required to convert Macro from "Draft State" to "Activate State"
+    await this.adminPage.waitForTimeout(3000);
   }
 
   public async SiteMapInAppDesigner() {
@@ -4327,23 +4551,18 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.MoreOptions);
     await this.adminPage.keyboard.press("Enter");
   }
+
   public async createChannel() {
     let rnd = this.getRandomNumber();
-    await this.adminPage.click(Constants.ChannelEditBtn);
-    await this.adminPage.click(Constants.CreateChannel);
-    await this.adminPage.fill(Constants.NameOfChannel, Constants.ChannelName);
-    await this.adminPage.fill(
-      Constants.UniqueNameField,
-      Constants.UniqueName + rnd
-    );
-    await this.adminPage.fill(Constants.Label, Constants.LabelNum);
-    await this.adminPage.fill(
-      Constants.ChannelUrl,
-      Constants.ThirdPartyUrlValue
-    );
-    await this.adminPage.fill(Constants.ChannelOrder, Constants.Order);
-    await this.adminPage.click(Constants.SaveAndCloseButton);
-    await this.adminPage.waitForTimeout(4000);
+    await this.adminPage.locator(Constants.ChannelEditBtn).click();
+    await this.adminPage.locator(Constants.CreateChannel).click();
+    await this.adminPage.locator(Constants.NameOfChannel).fill(Constants.ChannelName);
+    await this.adminPage.locator(Constants.UniqueNameField).fill(Constants.UniqueName + rnd);
+    await this.adminPage.locator(Constants.Label).fill(Constants.LabelNum);
+    await this.adminPage.locator(Constants.ChannelUrl).fill(Constants.ThirdPartyUrlValue);
+    await this.adminPage.locator(Constants.ChannelOrder).fill(Constants.Order);
+    await this.adminPage.locator(Constants.SaveAndCloseButton).click();
+    await this.waitForDomContentLoaded();
   }
 
   public async thirdPartyChannel() {
@@ -4369,6 +4588,74 @@ export class Macros extends BasePage {
       Constants.CustomerServiceworkspacedefaultprofile
     );
     await this.adminPage.click(Constants.EntitySession);
+  }
+
+  public async EnableTeams() {
+    const TeamsBtn = await this.adminPage.locator(Constants.CollaborationSiteMap);
+    await TeamsBtn.waitFor({ state: "visible" });
+    await this.adminPage.click(Constants.CollaborationSiteMap);
+    const EmbeddedTeamsBtn = await this.adminPage.locator(Constants.ManageEmbeddedTeamsChat);
+    await EmbeddedTeamsBtn.waitFor({ state: "visible" });
+    await this.adminPage.click(Constants.ManageEmbeddedTeamsChat);
+    const IsEnable1 = await this.adminPage.isVisible(
+      Constants.IsEnableMsTeams
+    );
+    if (!IsEnable1) {
+      const visibleLandingpage = await this.adminPage.locator(Constants.IsEnableMsTeams);
+      await visibleLandingpage.waitFor({ state: "visible" });
+      await this.adminPage.click(Constants.IsEnableMsTeams);
+    }
+    await this.adminPage.locator(Constants.SaveBtnEnable).click();
+    await this.adminPage.waitForTimeout(10000);
+  }
+
+  public async DisableTeams() {
+    const TeamsBtn = await this.adminPage.locator(Constants.CollaborationSiteMap);
+    await TeamsBtn.waitFor({ state: "visible" });
+    await this.adminPage.click(Constants.CollaborationSiteMap);
+    const EmbeddedTeamsBtn = await this.adminPage.locator(Constants.ManageEmbeddedTeamsChat);
+    await EmbeddedTeamsBtn.waitFor({ state: "visible" });
+    await this.adminPage.click(Constants.ManageEmbeddedTeamsChat);
+
+    const IsDisable1 = await this.adminPage.isVisible(
+      Constants.IsDisableTeams
+    );
+    if (IsDisable1) {
+      const visibleLandingpage = await this.adminPage.locator(Constants.IsDisableTeams);
+      await visibleLandingpage.waitFor({ state: "visible" });
+      await this.adminPage.click(Constants.IsDisableTeams);
+    }
+    await this.adminPage.locator(Constants.TurnOff).click();
+    await this.adminPage.locator(Constants.SaveBtnEnable).click();
+    await this.adminPage.waitForTimeout(10000);
+  }
+
+  public async EnableChannelProvider() {
+    await this.adminPage.locator(Constants.ChannelEditBtn).click();
+    try
+    {
+      await this.adminPage.locator(Constants.TurnOnChannelProvider).click();
+    }
+    catch
+    {
+      await this.adminPage.waitForSelector(Constants.TurnOffChannelProvider).click();
+    }
+    await this.adminPage.locator(Constants.SaveAndCloseButton2).click();
+    await this.waitForDomContentLoaded();
+  }
+
+  public async DisableChannelProvider() {
+    await this.adminPage.locator(Constants.ChannelEditBtn).click();
+    try
+    {
+      await this.adminPage.locator(Constants.TurnOffChannelProvider).click();
+    }
+    catch
+    {
+      await this.adminPage.waitForSelector(Constants.TurnOffChannelProvider).click();
+    }
+    await this.adminPage.locator(Constants.SaveAndCloseButton).click();
+    await this.waitForDomContentLoaded();
   }
 
   public async cswDefaultChannelAppProfile() {
@@ -4415,26 +4702,30 @@ export class Macros extends BasePage {
   }
 
   public async initiateNewContactTab(agentChat: any) {
-    await agentChat.waitForSelector(Constants.quickCreatelauncher);
+    expect(await agentChat.waitForSelector(Constants.quickCreatelauncher)).toBeTruthy();
     await agentChat.locator(Constants.quickCreatelauncher).click();
     await agentChat.click(Constants.QuickCreateContact);
     await agentChat.waitForTimeout(4000);
   }
-
+  
   public async OpenValidateArticle(Click: string) {
     //Time delay to perform the action
-    await this.adminPage.waitForSelector(Constants.KAContainer);
-    await this.adminPage.waitForSelector(Click);
+    const kaContainer = await this.adminPage.locator(Constants.KAContainer);
+    await kaContainer.waitFor({ state: "visible" });    
+    const clickBtn = await this.adminPage.locator(Click);
+    await clickBtn.waitFor({ state: "visible" });
     await this.adminPage.click(Click);
     // Added constants.five as of now to wait for selector to load
     await this.waitUntilSelectorIsVisible(Constants.KArticlePage, Constants.Five, this.adminPage);
+    const karticlePage = await this.adminPage.locator(Constants.KArticlePage);
+    await karticlePage.waitFor({ state: "visible" });
     const PageValidate = await this.adminPage.isVisible(Constants.KArticlePage);
     expect(PageValidate).toBeTruthy();
   }
 
   public async OpenCaseSession(Click: any) {
-    //Time delay to perform the action
-    await this.adminPage.waitForSelector(Click);
+    const clickBtn = await this.adminPage.locator(Click);
+    await clickBtn.waitFor({ state: "visible" });
     await this.adminPage.click(Click);
   }
 
@@ -4602,7 +4893,7 @@ export class Macros extends BasePage {
   ) {
     const navigateToAgentScript = await this.adminPage.locator(Constants.NavigateToAgentScript);
     await navigateToAgentScript.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.NavigateToAgentScript);
+    await this.adminPage.locator(Constants.NavigateToAgentScript).click();
     const agentScriptDropDown = await this.adminPage.locator(Constants.AgentScriptDropDown);
     await agentScriptDropDown.waitFor({ state: "visible" });
     await this.adminPage.selectOption(Constants.AgentScriptDropDown, {
@@ -4610,7 +4901,7 @@ export class Macros extends BasePage {
     });
     const macroRunButtonBtn = await this.adminPage.locator(Constants.MacroRunButton);
     await macroRunButtonBtn.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.MacroRunButton);
+    await this.adminPage.locator(Constants.MacroRunButton).click();
     // Added constants.five as of now to wait for selector to load
     await this.waitUntilSelectorIsVisible(
       entitylisttitle,
@@ -4622,6 +4913,7 @@ export class Macros extends BasePage {
     const PageValidate = await this.adminPage.isVisible(entitylisttitle);
     return PageValidate;
   }
+
 
   public async runDashboardMacroInSessionAndValidate(
     entitylisttitle: string,
@@ -4829,25 +5121,35 @@ export class Macros extends BasePage {
   }
 
   public async createAdvancedQueue(queueName: string) {
+    let rnd = this.RandomNumber();
     await this.adminPage.click(Constants.QueueBtn);
     await this.adminPage.click(Constants.AdvancedQueue);
     await this.adminPage.click(Constants.NewQueue);
-    await this.adminPage.fill(Constants.QueueField, queueName);
+    const queueName1= queueName + rnd;
+    await this.adminPage.fill(Constants.QueueField, queueName1);
     await this.adminPage.click(Constants.SelectQueueType);
     await this.adminPage.click(Constants.SelectRecord);
     await this.adminPage.fill(Constants.GroupNumber, Constants.LabelNum);
     await this.adminPage.click(Constants.CreateQueue);
+    return queueName1;
   }
 
-  public async insertParametersInOldSustumersummary() {
+  public async insertParametersInOldSustumersummary(summaryname: string) {
     await this.adminPage.click(Constants.AgentExperience);
+    await this.adminPage.waitForSelector(Constants.WorkspaceSiteMap);
+    await this.adminPage.click(Constants.WorkspaceSiteMap); 
+    await this.adminPage.waitForSelector(Constants.ManageApplicationTab);
+
     await this.adminPage.click(Constants.ManageApplicationTab);
     await this.adminPage.fill(
       Constants.SearchBox,
-      Constants.OldCustomerSummary
+      summaryname
     );
     await this.adminPage.click(Constants.SearchThisViewStartBtn);
-    await this.adminPage.click(Constants.OldCusytomerSummaryTitleSelect);
+    const selector = `[role="link"][aria-label="{0}"]`;
+    const chatIndexSelector = selector.replace("{0}", summaryname); 
+    
+    await this.adminPage.click(chatIndexSelector);
     await this.adminPage.waitForSelector(Constants.EntityNameBox);
     await this.adminPage.click(Constants.EntityNameBox);
     await this.adminPage.waitForSelector(Constants.EntityNameInputBox);
@@ -4875,24 +5177,33 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.Save);
     await this.adminPage.waitForTimeout(3000);
   }
+
   public async createApplicationTabInOC(
     name: String,
     uniqueName: String,
     pageTypeOptionValue: any
   ) {
-    await this.adminPage.click(Constants.AgentExperience);
+    let rnd: any;
+    rnd = this.getRandomNumber();
+
+    await this.adminPage.waitForSelector(Constants.WorkspaceSiteMap);
+    await this.adminPage.click(Constants.WorkspaceSiteMap); 
     await this.adminPage.waitForSelector(Constants.ManageApplicationTab);
     await this.adminPage.click(Constants.ManageApplicationTab);
     await this.adminPage.click(Constants.NewButton);
-    await this.adminPage.fill(Constants.NameField, name);
-    await this.adminPage.fill(Constants.UniqueNameField, uniqueName);
-    await this.adminPage.fill(Constants.TitleInputField, name);
+    const name1=name + rnd;
+    await this.adminPage.fill(Constants.NameField, name1);
+    await this.adminPage.fill(Constants.UniqueNameField, uniqueName +rnd);
+    await this.adminPage.fill(Constants.TitleInputField, name1);
     await this.adminPage.click(Constants.PageTypeDropdown);
     (await this.adminPage.$(Constants.PageTypeDropdown))?.selectOption(
       pageTypeOptionValue
     );
-    await this.adminPage.keyboard.press("Tab");
+    await this.adminPage.click(Constants.SaveButton);
+    await this.adminPage.waitForTimeout(5000);
     await this.adminPage.click(Constants.SaveAndCloseButton);
+    await this.waitForDomContentLoaded();
+    return name1;
   }
 
   public async closeSearchresult() {
@@ -4976,28 +5287,29 @@ export class Macros extends BasePage {
       label: "Generic",
     });
     await this.adminPage.click(Constants.AnchorTabSearchBox);
-    await this.adminPage.click(Constants.AnchorTabInputBox);
     await this.adminPage.click(Constants.AnchorTabSearchIcon);
+    await this.adminPage.type(Constants.AnchorTabSearchBox, "knowledge search"); 
     await this.adminPage.click(Constants.AnchorTabSearchResult1);
     await this.adminPage.click(Constants.SaveAndCloseButton);
     await this.waitForDomContentLoaded();
   }
 
   public async notification(notificationName: string) {
+    let rnd= this.RandomNumber();
     await this.adminPage.click(Constants.WorkspaceSiteMap);
     await this.adminPage.click(Constants.ManageNotificationBtn);
     await this.adminPage.click(Constants.NewNotificationTemplate);
     await this.adminPage.waitForSelector(Constants.NameField, {
       setTimeout: 2000,
     });
-    await this.adminPage.fill(Constants.NameField, notificationName);
+    await this.adminPage.fill(Constants.NameField , notificationName + rnd);
     await this.adminPage.click(Constants.UniqueNameField);
     await this.adminPage.fill(
-      Constants.UniqueNameField,
-      Constants.NotificationUniqueName
+      Constants.UniqueNameField ,
+      Constants.NotificationUniqueName + rnd
     );
     await this.adminPage.click(Constants.TitleInputField);
-    await this.adminPage.fill(Constants.TitleInputField, notificationName);
+    await this.adminPage.fill(Constants.TitleInputField, notificationName + rnd);
     await this.adminPage.click(Constants.SaveEmailBtn);
     await this.adminPage.click(Constants.MoreCommandsForNotificationField);
     await this.adminPage.click(Constants.AddExistingNotificationField);
@@ -5023,16 +5335,25 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.CretaeWithoutCondition);
   }
 
-  public async createRecordWorkStream(workStreamName: string) {
+  public async createRecordWorkStream(workStreamName: string, queuename: string) {
+    let rnd = this.RandomNumber();
     await this.adminPage.click(Constants.WorkStreamSitemap);
     await this.adminPage.click(Constants.NewWorkStreamBtn);
-    await this.adminPage.fill(Constants.WSNameField, workStreamName);
+    await this.adminPage.fill(Constants.WSNameField, workStreamName + rnd);
+    await this.adminPage.locator(Constants.SelectWorkStreamType);
     await this.adminPage.click(Constants.SelectWorkStreamType);
+    await this.adminPage.locator(Constants.SelectRecord); 
     await this.adminPage.click(Constants.SelectRecord);
+    await this.adminPage.waitForTimeout(2000);
+    await this.adminPage.locator(Constants.QueueChooseExistingDropdown); 
     await this.adminPage.click(Constants.QueueChooseExistingDropdown);
-    await this.adminPage.click(Constants.Queue);
+    const Queue = `//*[text()="{0}"]`;
+    const Queue1 = Queue.replace("{0}", queuename);
+    await this.adminPage.locator(Queue1); 
+    await this.adminPage.click(Queue1);
+    await this.adminPage.waitForTimeout(2000); 
     await this.adminPage.click(Constants.CreateWorkStream);
-    await this.adminPage.waitForTimeout(4000);
+    await this.adminPage.waitForTimeout(5000);
   }
 
   public async addNotificationInWorkStream() {
@@ -5041,8 +5362,11 @@ export class Macros extends BasePage {
     });
     await this.adminPage.click(Constants.ShowAdvancedSettings);
     await this.adminPage.click(Constants.NotificationEditBtn);
+    await this.adminPage.locator(Constants.SelectNotification);
     await this.adminPage.click(Constants.SelectNotification);
+    await this.adminPage.locator(Constants.TestNotification);
     await this.adminPage.click(Constants.TestNotification);
+    await this.adminPage.locator(Constants.NotificationSaveAndClose); 
     await this.adminPage.click(Constants.NotificationSaveAndClose);
   }
 
@@ -5122,6 +5446,7 @@ export class Macros extends BasePage {
     ruleItemName: string,
     queueName: string
   ) {
+    await this.adminPage.locator(Constants.CreateRoutingRuleSet);  
     await this.adminPage.click(Constants.CreateRoutingRuleSet);
     await this.adminPage.fill(Constants.NameField, ruleName);
     await this.adminPage.click(Constants.Save);
@@ -5188,19 +5513,12 @@ export class Macros extends BasePage {
     await this.adminPage.waitForSelector(Constants.WorkspaceSiteMap);
     const siteMap = await this.adminPage.locator(Constants.WorkspaceSiteMap);
     await siteMap.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.WorkspaceSiteMap);
-    await this.adminPage.waitForSelector(Constants.ManagedSession);
-    const ManagedSessionelement = await this.adminPage.locator(Constants.ManagedSession);
-    await ManagedSessionelement.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.ManagedSession);
-    const newBtn = await this.adminPage.locator(Constants.CaseEntitySession);
-    await newBtn.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.CaseEntitySession);
-    await this.adminPage.waitForSelector(Constants.AgentScriptsTab);
-    await this.adminPage.click(Constants.AgentScriptsTab);
-    await this.adminPage.click(Constants.MoreCommandsForAgentScript);
-    await this.adminPage.waitForSelector(Constants.AddExistingAgentScriptsBtn);
-    await this.adminPage.click(Constants.AddExistingAgentScriptsBtn);
+    await this.adminPage.locator(Constants.WorkspaceSiteMap).click();
+    await this.adminPage.locator('[data-test-id="session-templates-manage"]').click();
+    await this.adminPage.getByRole('link', { name: 'Case entity session - default template' }).click();
+    await this.adminPage.getByRole('tab', { name: 'Agent scripts' }).click();
+    await this.adminPage.getByRole('menuitem', { name: 'More commands for Agent script' }).click();
+    await this.adminPage.getByRole('menuitem', { name: 'Add Existing Agent script' }).click();
     const LookForRecordsBtn = await this.adminPage.locator(Constants.LookForRecordsField);
     await LookForRecordsBtn.waitFor({ state: "visible" });
     await this.adminPage.click(Constants.LookForRecordsField);
@@ -5214,24 +5532,16 @@ export class Macros extends BasePage {
     await this.adminPage.waitForTimeout(Constants.DefaultTimeout); // we are using keyboard commands 2seconds wait is needed.
     const AddBtn = await this.adminPage.locator(Constants.AddBtn);
     await AddBtn.waitFor({ state: "visible" });
-    await this.adminPage.click(Constants.AddBtn);
+    await this.adminPage.locator(Constants.AddBtn).click();
     await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds); //Needed to add agent script
   }
 
   public async OpenappProfile(profilename: string) {
-    await this.adminPage.click(Constants.WorkspaceSiteMap);
-    await this.adminPage.waitForSelector(
-      Constants.ManageAgentExperienceProfile
-    );
-    await this.adminPage.click(Constants.ManageAgentExperienceProfile);
-    await this.adminPage.waitForSelector(Constants.SearchAppProfile, {
-      timeout: 30000,
-    });
-    await this.adminPage.waitForSelector(Constants.SearchAppProfile);
-    await this.adminPage.fill(Constants.SearchAppProfile, profilename);
-    await this.adminPage
-      .locator(Constants.appProfilelink.replace("{0}", profilename))
-      .click();
+    await this.adminPage.getByText(Constants.Workspaces).click();
+    await this.adminPage.locator(Constants.AgentExperienceProfileManage).click();
+    await this.adminPage.locator(Constants.AppprofilelistSearchBox).click();
+    await this.adminPage.locator(Constants.AppprofilelistSearchBox).fill(profilename);
+    await this.adminPage.getByRole(Constants.Button, { name: profilename }).click();
   }
 
   public async validatePane() {
@@ -5707,10 +6017,10 @@ export class Macros extends BasePage {
   }
 
   public async createIncidents(agentChat: any, caseNameList: string[]) {
-    let contact = await agentChat.createContactRecord(Constants.XRMContact);
+    let contact = await this.createContactRecord(Constants.XRMContact);
     var count = caseNameList.length;
     for (let i = 0; i < count; i++) {
-      await agentChat.createIncidentRecord(caseNameList[i], contact[EntityAttributes.Id], EntityNames.Contact);
+      await this.createIncidentRecord(caseNameList[i], contact[EntityAttributes.Id], EntityNames.Contact);
     }
   }
 
@@ -5798,16 +6108,17 @@ export class Macros extends BasePage {
   public async OpenAgentScriptandSave(
     AgentScriptName: string,
   ) {
-    await this.adminPage.waitForSelector(Constants.AgentExperience);
-    await this.adminPage.click(Constants.AgentExperience);
+    await this.adminPage.waitForSelector(Constants.ProductivitySiteMap);
+    await this.adminPage.locator(Constants.ProductivitySiteMap).click();
     await this.adminPage.waitForSelector(Constants.ManagedAgentScript);
-    await this.adminPage.click(Constants.ManagedAgentScript);
+    await this.adminPage.locator(Constants.ManagedAgentScript).click();
     await this.adminPage.locator(Constants.SearchBox).fill(AgentScriptName);
     await this.adminPage.click(Constants.SearchThisViewStartBtn);
     let selctor = Constants.LinkStart+AgentScriptName+Constants.LinkEnd;
     await this.adminPage.waitForSelector(selctor)
     await this.adminPage.click(selctor);
-    await this.adminPage.click(Constants.SaveAndCloseButton);
+    await this.adminPage.locator(Constants.SaveAndCloseButton).click();
+    await this.waitForDomContentLoaded();
   }
 
   public async CreateSessionTemplatefromCSA(Name: string, UniqueName: string) {
@@ -6144,6 +6455,19 @@ export class Macros extends BasePage {
   }
 
   public async addQueueToCase(Case: string, Queue: string) {
+    await this.adminPage.locator(Constants.SearchCaseOption).click();
+    await this.adminPage.fill(Constants.SearchCaseOption, Case);
+    await this.adminPage.click(Constants.SearchTheView);
+    await this.adminPage.click(Constants.SelectAllInCSW);
+    await this.adminPage.locator(Constants.MoreCaseCommand).click();
+    await this.adminPage.locator(Constants.AddQueue).click();
+    await this.adminPage.fill(Constants.SearchIcon, Queue);
+    await this.adminPage.click(stringFormat(Constants.SpanPath, Queue));
+    await this.adminPage.waitForSelector(Constants.Add);
+    await this.adminPage.locator(Constants.Add).click();
+  }
+
+  public async addQueueToCase2(Case: string, Queue: string) {
     await this.adminPage.click(Constants.SearchBox);
     await this.adminPage.fill(Constants.SearchBox, Case);
     await this.adminPage.click(Constants.SearchTheView);
@@ -6151,8 +6475,12 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.MoreCommands);
     await this.adminPage.click(Constants.AddQueue);
     await this.adminPage.fill(Constants.SearchIcon, Queue);
-    await this.adminPage.click(stringFormat(Constants.SpanPath, Queue));
-    await this.adminPage.waitForSelector(Constants.Add);
+    //await this.adminPage.waitForSelector(stringFormat(Constants.SpanPath, Queue), { timeout: 8000 });
+   // await this.adminPage.click(stringFormat(Constants.SpanPath, Queue));
+   await this.adminPage.waitForTimeout(3000);
+   await this.adminPage.keyboard.press("ArrowDown");
+   await this.adminPage.keyboard.press("Enter"); 
+   await this.adminPage.waitForSelector(Constants.Add);
     await this.adminPage.click(Constants.Add);
   }
 
@@ -6186,8 +6514,12 @@ export class Macros extends BasePage {
   }
 
   public async quickCreateCaseInCSW(CaseName: any) {
+    const similarCaseMore = await this.adminPage.locator(Constants.SimilarCaseMoreOption);
+    await similarCaseMore.waitFor({ state: "visible" });
+    await this.waitForDomContentLoaded();
     await this.adminPage.waitForSelector(Constants.quickCreatelauncher);
     await this.adminPage.locator(Constants.quickCreatelauncher).click();
+    await this.adminPage.waitForSelector(Constants.QuickCreateCaseButton);
     await this.adminPage.locator(Constants.QuickCreateCaseButton).click();
     await this.adminPage.locator(Constants.CustomerAccountLookup).click();
     await this.adminPage.locator(Constants.CustomerSearchIcon).click();
@@ -6197,6 +6529,7 @@ export class Macros extends BasePage {
     });
     await this.adminPage.fill(Constants.QuickCaseTitle, CaseName);
     await this.adminPage.click(Constants.SaveAndClose);
+    await this.waitForDomContentLoaded();
   }
 
   public async verifyViewTabRecord(caselink: string) {
@@ -6247,9 +6580,11 @@ export class Macros extends BasePage {
   }
 
   public async verifyNewssionTab(GlobalCaseTitleName: string) {
+    await this.waitForDomContentLoaded();
     await this.adminPage.waitForSelector(GlobalCaseTitleName);
     await this.adminPage.click(GlobalCaseTitleName);
     try {
+      await this.waitForDomContentLoaded();
       await this.adminPage.waitForSelector(Constants.SaveAndCloseButton);
       await this.adminPage.waitForSelector(Constants.ValidateTab);
       return true
@@ -6262,6 +6597,7 @@ export class Macros extends BasePage {
     await this.adminPage.click(Constants.GlobalSearchBox);
     await this.adminPage.click(Constants.RecentSearchCases);
     try {
+      await this.waitForDomContentLoaded();
       await this.adminPage.click(Constants.ValidationOfRecord);
       await this.adminPage.waitForSelector(Constants.SaveAndCloseButton);
       await this.adminPage.waitForSelector(Constants.ValidateTab);
@@ -6307,41 +6643,7 @@ export class Macros extends BasePage {
     await parentIframe.click(Constants.ExpressionBuilderSaveAndClose);
   }
 
-  public async addTwoAgentScriptToSesssionTemplateWithParameter(
-    sessionName: string,
-    agentScriptName1: string,
-    agentScriptName2: string
-  ) {
-    await this.adminPage.waitForSelector(Constants.WorkspaceSiteMap);
-    await this.adminPage.click(Constants.WorkspaceSiteMap);
-    await this.adminPage.waitForSelector(Constants.ManagedSession);
-    await this.adminPage.click(Constants.ManagedSession);
-    await this.adminPage.waitForSelector(Constants.SearchOption);
-    await this.adminPage.click(Constants.SearchOption);
-    await this.adminPage.fill(Constants.SearchOption, sessionName);
-    await this.adminPage.click(Constants.SearchTheView);
-    await this.adminPage.click(Constants.LinkStart + sessionName + Constants.LinkEnd);
-    await this.adminPage.waitForSelector(Constants.AgentScriptsTab);
-    await this.adminPage.click(Constants.AgentScriptsTab);
-    await this.adminPage.click(Constants.MoreCommandsForAgentScript);
-    await this.adminPage.click(Constants.AddExistingAgentScriptsBtn);
-    await this.adminPage.click(Constants.LookForRecordsField);
-    await this.adminPage.fill(Constants.LookForRecordsField, agentScriptName1);
-    await this.adminPage.waitForTimeout(2000);// we are using keyboard commands 2seconds wait is needed.
-    await this.adminPage.keyboard.press("ArrowDown");
-    await this.adminPage.waitForTimeout(2000);// we are using keyboard commands 2seconds wait is needed.
-    await this.adminPage.keyboard.press("Enter");
-    await this.adminPage.click(Constants.AddMoreRecordsField);
-    await this.adminPage.fill(Constants.AddMoreRecordsField, agentScriptName2);
-    await this.adminPage.waitForTimeout(2000);// we are using keyboard commands 2seconds wait is needed.
-    await this.adminPage.keyboard.press("ArrowDown");
-    await this.adminPage.waitForTimeout(2000);// we are using keyboard commands 2seconds wait is needed.
-    await this.adminPage.keyboard.press("Enter");
-    await this.adminPage.waitForSelector(Constants.AddBtn);
-    await this.adminPage.click(Constants.AddBtn);
-  }
-
-  public async navigateToBasicQueues() {
+    public async navigateToBasicQueues() {
     await this.adminPage.waitForSelector(Constants.QueuesSitemap);
     await this.adminPage.locator(Constants.QueuesSitemap).click();
     const macrosBtn = await this.adminPage.locator(Constants.BasicQueuesManageBtn);
@@ -6516,33 +6818,102 @@ export class Macros extends BasePage {
     SessionName: string
   ) {
     await this.adminPage.waitForSelector(Constants.WorkspaceSiteMap);
-    await this.adminPage.click(Constants.WorkspaceSiteMap);
+    await this.adminPage.locator(Constants.WorkspaceSiteMap).click();
     await this.adminPage.waitForSelector(
       Constants.ManageAgentExperienceProfile
     );
-    await this.adminPage.click(Constants.ManageAgentExperienceProfile);
-    await this.adminPage.click(Constants.SearchAppProfile);
-    await this.adminPage.fill(Constants.SearchAppProfile, appProfileName);
-    await this.adminPage.click(
+    await this.adminPage.locator(Constants.ManageAgentExperienceProfile).click();
+    await this.adminPage.locator(Constants.SearchAppProfile).click();
+    await this.adminPage.locator(Constants.SearchAppProfile).click();
+    await this.adminPage.locator(Constants.SearchAppProfile).click();
+    await this.adminPage.locator(Constants.SearchAppProfile, appProfileName).click();
+    await this.adminPage.locator(
       Constants.LinkStart + appProfileName + Constants.LinkEnd
+    ).click();
+    await this.waitForDomContentLoaded();
+    // Timeout required to load session
+    await this.adminPage.waitForTimeout(Constants.TenThousandsMiliSeconds); 
+    const isavail = await this. adminPage.isVisible(
+      Constants.EntitySessionTemplate
     );
-    await this.adminPage.waitForSelector(Constants.AddEntitySessionTemplate);
-    await this.adminPage.click(Constants.AddEntitySessionTemplate);
-    await this.adminPage.waitForSelector(Constants.ButtonToAddEntity);
-    await this.adminPage.click(Constants.ButtonToAddEntity);
-    await this.adminPage.click(Constants.EntitySessionField);
-    await this.adminPage.click(Constants.Case);
-    await this.adminPage.click(Constants.SessionTemplateField);
-    await this.adminPage.waitForSelector(
-      Constants.LinkStart + SessionName + Constants.LinkEnd
-    );
-    await this.adminPage.click(
-      Constants.LinkStart + SessionName + Constants.LinkEnd
-    );
-    await this.adminPage.waitForSelector(Constants.AddSessionToProfile);
-    await this.adminPage.click(Constants.AddSessionToProfile);
-    await this.adminPage.waitForSelector(Constants.SaveAndCloseBtn);
-    await this.adminPage.click(Constants.SaveAndCloseBtn);
+    if (isavail) {
+      await this.adminPage.waitForSelector(Constants.AddEntitySessionTemplate);
+      await this.adminPage.locator(Constants.AddEntitySessionTemplate).click();
+      await this.adminPage.waitForSelector(Constants.ButtonToAddEntity);
+      await this.adminPage.locator(Constants.ButtonToAddEntity).click();
+      await this.adminPage.locator(Constants.EntitySessionField).click();
+      await this.adminPage.locator(Constants.Case).click();
+      await this.adminPage.locator(Constants.SessionTemplateField).click();
+      await this.adminPage.waitForSelector(
+        Constants.LinkStart + SessionName + Constants.LinkEnd
+      );
+      await this.adminPage.locator(
+        Constants.LinkStart + SessionName + Constants.LinkEnd
+      ).click();
+      await this.adminPage.waitForSelector(Constants.AddSessionToProfile);
+      await this.adminPage.locator(Constants.AddSessionToProfile).click();
+      await this.adminPage.waitForSelector(Constants.SaveAndCloseBtn);
+      await this.adminPage.click(Constants.SaveAndCloseBtn);
+    } else {
+      await this.adminPage.waitForSelector(
+        Constants.EntitySessionTemplatesEdit
+      );
+      await this.adminPage.locator(Constants.EntitySessionTemplatesEdit).click();
+      await this.adminPage.waitForSelector(
+        Constants.EntitySessionTemplatesCheckBox
+      );
+      await this.adminPage.locator(Constants.EntitySessionTemplatesCheckBox).click();
+      await this.adminPage.waitForSelector(
+        Constants.EntitySessionTemplatesEditbtn
+      );
+      await this. adminPage.locator(Constants.EntitySessionTemplatesEditbtn).click();
+      await this.adminPage.locator(Constants.SessionTemplateField).click();
+      await this. adminPage.waitForSelector(
+        Constants.LinkStart + SessionName + Constants.LinkEnd
+      );
+      await this.adminPage.locator(
+        Constants.LinkStart + SessionName + Constants.LinkEnd
+      ).click();
+      await this.adminPage.waitForSelector(Constants.SesionSaveAndCloseBtn);
+      await this.adminPage.locator(Constants.SesionSaveAndCloseBtn).click();
+      await this.adminPage.waitForSelector(Constants.SaveAndCloseBtn);
+      await this.adminPage.click(Constants.SaveAndCloseBtn);
+    }
+  }
+  
+  public async addTwoAgentScriptToSesssionTemplateWithParameter(
+    sessionName: string,
+    agentScriptName1: string,
+    agentScriptName2: string
+  ) {
+    await this.adminPage.waitForSelector(Constants.WorkspaceSiteMap);
+    await this.adminPage.locator(Constants.WorkspaceSiteMap).click();
+    await this.adminPage.waitForSelector(Constants.ManagedSession);
+    await this.adminPage.locator(Constants.ManagedSession).click();
+    await this.adminPage.waitForSelector(Constants.SearchOption);
+    await this.adminPage.click(Constants.SearchOption);
+    await this.adminPage.fill(Constants.SearchOption, sessionName);
+    await this.adminPage.click(Constants.SearchTheView);
+    await this.adminPage.click(Constants.LinkStart + sessionName + Constants.LinkEnd);
+    await this.adminPage.waitForSelector(Constants.AgentScriptsTab);
+    await this.adminPage.locator(Constants.AgentScriptsTab).click();
+    await this.adminPage.locator(Constants.MoreCommandsForAgentScript).click();
+    await this.adminPage.locator(Constants.AddExistingAgentScriptsBtn).click();
+    await this.adminPage.locator(Constants.LookForRecordsField).click();
+    await this.adminPage.fill(Constants.LookForRecordsField, agentScriptName1);
+    await this.adminPage.waitForTimeout(Constants.TwoThousandsMiliSeconds);// we are using keyboard commands 2seconds wait is needed.
+    await this.adminPage.keyboard.press(Constants.ArrowDown);
+    await this.adminPage.waitForTimeout(Constants.TwoThousandsMiliSeconds);// we are using keyboard commands 2seconds wait is needed.
+    await this.adminPage.keyboard.press(Constants.Enter);
+    await this.adminPage.locator(Constants.AddMoreRecordsField).click();
+    await this.adminPage.fill(Constants.AddMoreRecordsField, agentScriptName2);
+    await this.adminPage.waitForTimeout(Constants.TwoThousandsMiliSeconds);// we are using keyboard commands 2seconds wait is needed.
+    await this.adminPage.keyboard.press(Constants.ArrowDown);
+    await this.adminPage.waitForTimeout(Constants.TwoThousandsMiliSeconds);// we are using keyboard commands 2seconds wait is needed.
+    await this.adminPage.keyboard.press(Constants.Enter);
+    await this.adminPage.waitForSelector(Constants.AddBtn);
+    await this.adminPage.locator(Constants.AddBtn).click();
+    await this.waitForDomContentLoaded();
   }
 
   public async runTrueMacroAndValidate(
@@ -6550,23 +6921,29 @@ export class Macros extends BasePage {
     entitylisttitle1: string,
     entitylisttitle2: string
   ) {
-    //Time Delay for Loading Productivity Pane
-    await this.adminPage.waitForSelector(Constants.NavigateToAgentScript);
-    await this.adminPage.waitForSelector(Constants.MacroRunButton);
+    const navigateToAgentScript = await this.adminPage.locator(Constants.NavigateToAgentScript);
+    await navigateToAgentScript.waitFor({ state: "visible" });    
+    const macroRunButtonTrue = await this.adminPage.locator(Constants.MacroRunButton);
+    await macroRunButtonTrue.waitFor({ state: "visible" });
     await this.adminPage.click(Constants.MacroRunButton);
-    await this.waitForDomContentLoaded();
-    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds); // Timeout required to run macro
-    const MacroValidateTrue = await this.adminPage.isVisible(entitylisttitle1);
-    expect(MacroValidateTrue).toBeTruthy();
+    await this.waitUntilSelectorIsVisible(entitylisttitle1, Constants.Five, this.adminPage);
+    const MacroValidateTrue = await this.adminPage.locator(entitylisttitle1)
+    await MacroValidateTrue.waitFor( { state: "visible" });
+    const PageValidateTrue = await this.adminPage.isVisible(entitylisttitle1);
+    expect(PageValidateTrue).toBeTruthy();
+    const agentScriptDropDown = await this.adminPage.locator(Constants.AgentScriptDropDown)
+    await agentScriptDropDown.waitFor( { state: "visible" });
     await this.adminPage.selectOption(Constants.AgentScriptDropDown, {
       label: agentScriptName,
     });
-    await this.adminPage.waitForSelector(Constants.MacroRunButton);
+    const macroRunButtonFalse = await this.adminPage.locator(Constants.MacroRunButton);
+    await macroRunButtonFalse.waitFor({ state: "visible" });
     await this.adminPage.click(Constants.MacroRunButton);
-    await this.waitForDomContentLoaded();
-    await this.adminPage.waitForTimeout(Constants.FourThousandsMiliSeconds); // Timeout required to run macro
-    const MacroValidateFalse = await this.adminPage.isVisible(entitylisttitle2);
-    expect(MacroValidateFalse).toBeTruthy();
+    await this.waitUntilSelectorIsVisible(entitylisttitle1, Constants.Five, this.adminPage);
+    const MacroValidateFalse = await this.adminPage.locator(entitylisttitle2)
+    await MacroValidateFalse.waitFor( { state: "visible" });
+    const PageValidateFalse = await this.adminPage.isVisible(entitylisttitle2);
+    expect(PageValidateFalse).toBeTruthy();
   }
 
   public async deleteSessionTemplatebyXRM(
@@ -6589,15 +6966,16 @@ export class Macros extends BasePage {
     await this.adminPage.waitForTimeout(2000);
   }
 
+  
   public async ShowBadgeNumber() {
     const isavail = await this.adminPage.isVisible(Constants.MStool);
     if (isavail) {
       await this.adminPage.waitForSelector(Constants.MStool);
-      await this.adminPage.click(Constants.MStool);
+      await this.adminPage.locator(Constants.MStool).click();
       await this.adminPage.waitForTimeout(Constants.FiveThousandsMiliSeconds); // Timeout required to show BadgeNumber
     } else {
       await this.adminPage.waitForSelector(Constants.SAtool);
-      await this.adminPage.click(Constants.SAtool);
+      await this.adminPage.locator(Constants.SAtool).click();
       await this.adminPage.waitForTimeout(Constants.FiveThousandsMiliSeconds); // Timeout required to show BadgeNumber
     }
   }
@@ -6804,5 +7182,169 @@ export class Macros extends BasePage {
     } else {
       console.log("popup not available");
     }
+  }
+
+  public async createRandomChannel(randomNumber : any) {
+    await this.adminPage.locator(Constants.ChannelEditBtn).click();
+    await this.adminPage.locator(Constants.CreateChannel).click();
+    await this.adminPage.locator(Constants.NameOfChannel).fill(Constants.ChannelName+randomNumber);
+    await this.adminPage.locator(Constants.UniqueNameField).fill(Constants.UniqueName + randomNumber);
+    await this.adminPage.locator(Constants.Label).fill(Constants.LabelNum);
+    await this.adminPage.locator(Constants.ChannelUrl).fill(Constants.ThirdPartyUrlValue);
+    await this.adminPage.locator(Constants.ChannelOrderDiv).click();
+    await this.adminPage.locator(Constants.ChannelOrder).fill(Constants.Order);
+    await this.adminPage.locator(Constants.SaveAndCloseButton).click();
+    await this.waitForDomContentLoaded();
+  }
+
+  public async AddChannel(channel : string) {
+    await this.adminPage.locator(Constants.ChannelEditBtn).click();
+    await this.adminPage.locator(Constants.ChannelDropDown).click();
+    await this.adminPage.click(Constants.LinkStart+channel+Constants.LinkEnd);
+    await this.adminPage.locator(Constants.SaveAndCloseBtn2).click();
+    await this.waitForDomContentLoaded();
+  }
+
+  public async ValidateAppProfile() {
+    await this.waitForDomContentLoaded();
+    const locatorvisible = await this.adminPage.locator(
+      Constants.AppProfileUser,
+      Constants.AppProfileSession,
+      Constants.AppProfileProductivity,
+      Constants.AppProfileInbox,
+      Constants.AppProfileChannelValidate
+    );
+    await locatorvisible.waitFor( { state: "visible" });
+    const PageValidate = await this.adminPage.isVisible(
+      Constants.AppProfileUser,
+      Constants.AppProfileSession,
+      Constants.AppProfileProductivity,
+      Constants.AppProfileInbox,
+      Constants.AppProfileChannelValidate
+      );
+    expect(PageValidate).toBeTruthy();
+  }
+
+  public async OpenFunctionAndValidate(Click: string,validatePage: string) {
+    const productivityBtn = await this.adminPage.locator(Click);
+    await productivityBtn.waitFor({ state: "visible" });
+    await this.adminPage.click(Click);
+    const locatorvisible = await this.adminPage.locator(validatePage)
+    await locatorvisible.waitFor( { state: "visible" });
+    const PageValidate = await this.adminPage.isVisible(validatePage);
+    expect(PageValidate).toBeTruthy();
+    const cancelBtn = await this.adminPage.locator(Constants.AppProfileCancel);
+    await cancelBtn.waitFor({ state: "visible" });
+    await this.adminPage.click(Constants.AppProfileCancel);
+  }
+  
+  public async OpenFunction(Click: string) {
+    await this.waitUntilSelectorIsVisible(Click, Constants.Five, this.adminPage);
+    const locatorvisible = await this.adminPage.locator(Click)
+    await locatorvisible.waitFor( { state: "visible" });
+    await this.adminPage.click(Click);
+  }
+  
+  public async MoreActionsKS() {
+    const refreshTimeline = await this.adminPage.locator(Constants.MoreOptionInKS);
+    await refreshTimeline.waitFor({ state: "visible" });
+    await this.adminPage.locator(Constants.MoreOptionInKS).click();
+  }
+  
+  public async createAppProfileByPerameter(randomNumber: any) {
+    await this.adminPage.locator(Constants.WorkspaceSiteMap).click();
+    await this.adminPage.locator(Constants.ManageAgentExperienceProfile).click();
+    await this.adminPage.locator(Constants.NewAppProfile).click();
+    await this.adminPage.locator(Constants.NameBox).fill(Constants.AppProfileName1 + randomNumber);
+    await this.adminPage.locator(Constants.UniqueNameBox).fill(Constants.UniqueName + randomNumber);
+    await this.adminPage.locator(Constants.CreateAppProfile).click();
+    await this.waitForDomContentLoaded();
+  }
+  
+  public async deleteAppProfileWithPerameter(page: Page, startPage, randomNumber : any) {
+    await this.openAppLandingPage(this.adminPage);
+    await startPage.goToMyApp(Constants.CustomerServiceAdmincenter);
+    await this.adminPage.click(Constants.WorkspaceSiteMap);
+    await this.adminPage.click(Constants.ManageAgentExperienceProfile);
+    await this.adminPage.waitForSelector(Constants.SearchAppProfile);
+    await this.adminPage.fill(Constants.SearchAppProfile, Constants.AppProfileName1+randomNumber);
+    await this.adminPage.click(Constants.SortProfile);
+    await this.adminPage.click(Constants.OpenAppProfile);
+    await this.adminPage.click(Constants.DeleteProfile);
+    await this.adminPage.click(Constants.ConfirmDelete);    
+    await this.waitForDomContentLoaded();
+  }
+
+  public async OpenValidateExpressionBuilder(SessionName: string) {
+    await this.adminPage.waitForSelector(Constants.WorkspaceSiteMap);
+    await this.adminPage.locator(Constants.WorkspaceSiteMap).click();
+    await this.adminPage.waitForSelector(Constants.ManagedSession);
+    await this.adminPage.locator(Constants.ManagedSession).click();
+    await this.adminPage.waitForSelector(Constants.SessionSearchThisView);
+    await this.adminPage.click(Constants.SessionSearchThisView);
+    await this.adminPage.fill(Constants.SessionSearchThisView, SessionName);
+    await this.adminPage.waitForSelector(Constants.SearchTheView);
+    await this.adminPage.click(Constants.SearchTheView);
+    await this.adminPage.waitForSelector(stringFormat(Constants.AriaLabel, SessionName));
+    await this.adminPage.click(stringFormat(Constants.AriaLabel, SessionName));
+    await this.adminPage.waitForSelector(Constants.AgentScriptsTab);
+    await this.adminPage.click(Constants.AgentScriptsTab);
+    await this.adminPage.click(MacrosConstants.ExpressionBuilderBtnSelector);
+    const text = await this.adminPage.waitForSelector(
+      Constants.ExpressionBuilderDialogText
+    );
+    expect(await text.textContent()).toContain(
+      Constants.ExpressionBuilderPopupMsg
+    );
+    await this.adminPage.click(Constants.OKButton);
+  }
+  
+  public async addFourAgentScriptToDefaultSesssionTemplateWithParameter(
+    agentScriptName1: string,
+    agentScriptName2: string,
+    agentScriptName3: string,
+    agentScriptName4: string
+  ) {
+    await this.adminPage.waitForSelector(Constants.WorkspaceSiteMap);
+    await this.adminPage.click(Constants.WorkspaceSiteMap);
+    await this.adminPage.waitForSelector(Constants.ManagedSession);
+    await this.adminPage.click(Constants.ManagedSession);
+    const newBtn = await this.adminPage.locator(Constants.CaseEntitySession);
+    await newBtn.waitFor({ state: "visible" });
+    await this.adminPage.click(Constants.CaseEntitySession);
+    await this.adminPage.waitForSelector(Constants.AgentScriptsTab);
+    await this.adminPage.click(Constants.AgentScriptsTab);
+    await this.adminPage.click(Constants.MoreCommandsForAgentScript);
+    await this.adminPage.waitForSelector(Constants.AddExistingAgentScriptsBtn);
+    await this.adminPage.click(Constants.AddExistingAgentScriptsBtn);
+    await this.adminPage.click(Constants.LookForRecordsField);
+    await this.adminPage.fill(Constants.LookForRecordsField, agentScriptName1);
+    await this.adminPage.waitForTimeout(2000);// we are using keyboard commands 2seconds wait is needed.
+    await this.adminPage.keyboard.press("ArrowDown");
+    await this.adminPage.waitForTimeout(2000);// we are using keyboard commands 2seconds wait is needed.
+    await this.adminPage.keyboard.press("Enter");
+    await this.adminPage.waitForTimeout(2000);
+    await this.adminPage.click(Constants.AddMoreRecordsField);
+    await this.adminPage.fill(Constants.AddMoreRecordsField, agentScriptName2);
+    await this.adminPage.waitForTimeout(2000);// we are using keyboard commands 2seconds wait is needed.
+    await this.adminPage.keyboard.press("ArrowDown");
+    await this.adminPage.waitForTimeout(2000);// we are using keyboard commands 2seconds wait is needed.
+    await this.adminPage.keyboard.press("Enter");
+    await this.adminPage.waitForTimeout(2000);
+    await this.adminPage.click(Constants.AddMoreRecordsField);
+    await this.adminPage.fill(Constants.AddMoreRecordsField, agentScriptName3);
+    await this.adminPage.waitForTimeout(2000);// we are using keyboard commands 2seconds wait is needed.
+    await this.adminPage.keyboard.press("ArrowDown");
+    await this.adminPage.waitForTimeout(2000);// we are using keyboard commands 2seconds wait is needed.
+    await this.adminPage.keyboard.press("Enter");
+    await this.adminPage.waitForTimeout(2000);
+    await this.adminPage.click(Constants.AddMoreRecordsField);
+    await this.adminPage.fill(Constants.AddMoreRecordsField, agentScriptName4);
+    await this.adminPage.waitForTimeout(2000);// we are using keyboard commands 2seconds wait is needed.
+    await this.adminPage.keyboard.press("ArrowDown");
+    await this.adminPage.waitForTimeout(2000);// we are using keyboard commands 2seconds wait is needed.
+    await this.adminPage.keyboard.press("Enter");
+    await this.adminPage.waitForSelector(Constants.AddBtn);
+    await this.adminPage.click(Constants.AddBtn);
   }
 }

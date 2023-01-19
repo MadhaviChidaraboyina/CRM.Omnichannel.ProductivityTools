@@ -5,7 +5,9 @@ import { OrgDynamicsCrmStartPage } from "../../../pages/org-dynamics-crm-start.p
 import { TestHelper } from "../../../helpers/test-helper";
 import { TestSettings } from "../../../configuration/test-settings";
 import { AppProfileHelper } from "helpers/appprofile-helper";
+import { EntityNames } from "Utility/Constants";
 import { AgentChat } from "pages/AgentChat";
+import { AgentScript } from "integration-tests/agentScript/pages/agentScriptAdmin";
 
 describe("Agent Scripts - ", () => {
   let adminContext: BrowserContext;
@@ -16,6 +18,7 @@ describe("Agent Scripts - ", () => {
   let macrosAdminPage: Macros;
   let agentChat: AgentChat;
   let rnd: any;
+  const agentScriptAdminPage = new AgentScript(adminPage);
 
   beforeAll(async () => {
     await AppProfileHelper.getInstance().CreateAppProfile();
@@ -45,81 +48,154 @@ describe("Agent Scripts - ", () => {
   });
 
 
-  ///<summary>
+   ///<summary>
   ///Test Case 1577436: Verify Admin is able to configure agent scripts
   /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1577436
   ///</summary>
   it("Test Case 1577436: Verify Admin is able to configure agent scripts", async () => {
     agentPage = await agentContext.newPage();
-    try {
-      //Login as admin automated and redirected to OrgUrl
-      await adminStartPage.navigateToOrgUrlAndSignIn(
-        TestSettings.AgentScriptEmail,
-        TestSettings.AdminAccountPassword
+    rnd = agentScriptAdminPage.RandomNumber();
+    //Login as admin and create macro
+    await adminStartPage.navigateToOrgUrlAndSignIn(
+      TestSettings.MacrosAgentEmail,
+      TestSettings.AdminAccountPassword
+    );
+    await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    await macrosAdminPage.validatePopup();
+    await macrosAdminPage.createMacro(Constants.OpenNewFormMacroName);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    const workflowID = await macrosAdminPage.getLatestMacro(
+      agentChat,
+      Constants.OpenNewFormMacroName
+    );
+    await adminStartPage.waitForDomContentLoaded();
+    const agentScript = await agentChat.createAgentScriptbyXRMAPI(
+      Constants.OpenNewFormAgentScriptName + rnd,
+      Constants.UniqueName + rnd
+    );
+    await adminStartPage.waitForDomContentLoaded();
+    const agentScriptStep = await agentChat.createAgentScriptStepbyXRMAPI(
+      Constants.OpenNewFormAgentScriptName + rnd,
+      Constants.UniqueName + rnd + rnd,
+      Constants.AgentscriptStepOrder,
+      Constants.MacroAgentScriptStep,
+      agentScript.id,
+      Constants.OpenNewFormMacroName,
+      workflowID
+    );
+    await adminStartPage.waitForDomContentLoaded();
+    await macrosAdminPage.OpenAgentScriptandSave(
+      Constants.OpenNewFormAgentScriptName + rnd
+    );
+    await adminStartPage.waitForDomContentLoaded();
+    await macrosAdminPage.addAgentScripttoDefaultChatSessionWithParameter(
+      Constants.OpenNewFormAgentScriptName + rnd
+    );
+    //Run Macro
+    await macrosAdminPage.openAppLandingPage(adminPage);
+    await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    const caseTitle = await macrosAdminPage.createCaseWithAPI(
+      Constants.CaseTitleName
+    );
+    await macrosAdminPage.InitiateSession(
+      caseTitle,
+      Constants.LinkStart + caseTitle + Constants.LinkEnd
+    );
+    const openEntityRecordTabUsingMacro =
+      await macrosAdminPage.runMacroInSessionAndValidate(
+        Constants.OpenNewFormAgentScriptName + rnd,
+        Constants.OpenNewFormTitle
       );
-      await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
-      await adminStartPage.waitForDomContentLoaded();
-      await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
-      await macrosAdminPage.validatePopup();
-      await macrosAdminPage.createMacro(
-        Constants.SearchPhraseForPopulatedPhrase
-      );
-      await macrosAdminPage.createAgentScriptWithoutSteps(
-        Constants.AgentscriptName2,
-        Constants.AgentScriptUniqueName2
-      );
-      await macrosAdminPage.createAgentScriptforMultipleSteps(
-        Constants.AgentScriptName1,
-        Constants.AgentScriptUniqueName1,
-        Constants.SearchPhraseForPopulatedPhrase,
-        Constants.SelectOptionText,
-        Constants.SelectOptionScript
-      );
-      //Validating The Title of Application Tab by running the Macro
-      const VisibleAgentScriptSteps =
-        await macrosAdminPage.ValidateStepsinAgentScript(
-          adminPage,
-          Constants.AgentScriptName1
-        );
-      expect(VisibleAgentScriptSteps).toBeTruthy();
-    } finally {
-      await macrosAdminPage.deleteMacro(
-        adminStartPage,
-        Constants.SearchPhraseForPopulatedPhrase
-      );
-    }
+    expect(openEntityRecordTabUsingMacro).toBeTruthy();
+    await macrosAdminPage.deletAgentScriptStepByXRM(
+      agentChat,
+      EntityNames.AgentScriptStep,
+      agentScriptStep.id
+    );
+    await macrosAdminPage.deleteAgentScriptByXRM(
+      agentChat,
+      EntityNames.AgentScript,
+      agentScript.id
+    );
+    await agentChat.deleteRecordbyXRM(EntityNames.Macros, workflowID);
   });
 
   ///<summary>
   ///Test Case 1593399: Verify Admin is able to associate agent scripts to session template
-  ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_testPlans/execute?planId=2478602&opId=3561&suiteId=2478606
+  /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/1593399
   ///</summary>
   it("Test Case 1593399: Verify Admin is able to associate agent scripts to session template", async () => {
     agentPage = await agentContext.newPage();
-
-    //Login as admin automated and redirected to OrgUrl
-    await adminStartPage.navigateToOrgUrlAndSignIn(
-      TestSettings.MacroAccountEmail,
+    rnd = agentScriptAdminPage.RandomNumber();
+    //Login as admin and create cases
+    await agentChat.navigateToOrgUrlAndSignIn(
+      TestSettings.AgentScriptEmail,
       TestSettings.AdminAccountPassword
     );
     await adminStartPage.goToMyApp(Constants.CustomerServiceAdminCenter);
-    await macrosAdminPage.waitForDomContentLoaded();
-    await macrosAdminPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    await macrosAdminPage.createMacro(Constants.AutoFillMacroName);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
     await macrosAdminPage.validatePopup();
-    await macrosAdminPage.createResolveSessionMacro(
-      Constants.RefreshSessionContextTitle,
-      Constants.IncidentID
-    );
 
-    // Create AgentScript and Add Macro to it's agentScript step
-    await agentChat.createAgentScriptbyXRMAPI(Constants.AgentScriptName,
-      Constants.AgentScriptUniqueName + rnd);
-
-    // Create Session and Add agentscript to it
-    await macrosAdminPage.SessionInCSAdminCenter(
-      Constants.SessionTemplateName,
-      Constants.SessionTemplateUniqueName
+    const workflowID = await macrosAdminPage.getLatestMacro(
+      agentChat,
+      Constants.AutoFillMacroName
     );
-    await macrosAdminPage.AddAgentScriptToSession(Constants.AgentScriptName);
-  });
+    const agentScript = await agentChat.createAgentScriptbyXRMAPI(
+      Constants.AutoFillAgentScriptName + rnd,
+      Constants.UniqueName + rnd
+    );
+    const agentScriptStep = await agentChat.createAgentScriptStepbyXRMAPI(
+      Constants.AutoFillAgentScriptName + rnd,
+      Constants.UniqueName + rnd + rnd,
+      Constants.AgentscriptStepOrder,
+      Constants.MacroAgentScriptStep,
+      agentScript.id,
+      Constants.AutoFillMacroName,
+      workflowID
+    );
+    await macrosAdminPage.OpenAgentScriptandSave(
+      Constants.AutoFillAgentScriptName + rnd
+    );
+    await macrosAdminPage.addAgentScripttoDefaultChatSessionWithParameter(
+      Constants.AutoFillAgentScriptName + rnd
+    );
+    //Run Macro
+    await macrosAdminPage.openAppLandingPage(adminPage);
+    await adminStartPage.goToMyApp(Constants.CustomerServiceWorkspace);
+    await adminStartPage.waitForDomContentLoaded();
+    await adminStartPage.waitUntilSelectorIsVisible(Constants.LandingPage);
+    const caseTitle = await macrosAdminPage.createCaseWithAPI(
+      Constants.CaseTitleName
+    );
+    await macrosAdminPage.InitiateSession(
+      caseTitle,
+      Constants.LinkStart + caseTitle + Constants.LinkEnd
+    );
+    const runValidateAutoFillMacro =
+      await macrosAdminPage.runMacroInSessionAndValidate(
+        Constants.AutoFillAgentScriptName + rnd,
+        Constants.AutoFillTitle
+      );
+    expect(runValidateAutoFillMacro).toBeTruthy();
+    await macrosAdminPage.deletAgentScriptStepByXRM(
+      agentChat,
+      EntityNames.AgentScriptStep,
+      agentScriptStep.id
+    );
+    await macrosAdminPage.deleteAgentScriptByXRM(
+      agentChat,
+      EntityNames.AgentScript,
+      agentScript.id
+    );
+    await agentChat.deleteRecordbyXRM(EntityNames.Macros, workflowID);
+    });
 });

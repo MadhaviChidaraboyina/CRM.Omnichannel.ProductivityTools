@@ -1,0 +1,35 @@
+export class ConstantsEB {
+    static ExpressionBuilderTCondtion = `//*[text()='Set default agent script']`;
+    static ExpressionBuilderFCondtion = `//*[text()='Set default agent script 2']`;
+    static ExpressionBuilderAddTCondtion = `(//*[text()='Add an action'])[1]`;
+    static ExpressionBuilderAddFCondtion = `(//*[text()='Add an action'])[2]`;
+    static ExpressionBuildeerSelectCS = `//span[text()='Customer Service']`;
+    static ExpressionBuilderSelectASC = `//*[@title='Agent script connector']`;
+    static ExpressionBuilderTSelectDAS = `//*[text()='Set default agent script']`;
+    static ExpressionBuilderFSelectDAS = `(//*[text()='Agent script connector'])[2]`;
+    static  ExpressionBuilderTSelectDD = `//*[@title='Select the agent script ']`;
+    static ExpressionBuilderFSelectDD = `(//*[@title='Select the agent script '])[2]`;
+    static ExpressionBuilderSession = "ExpressionBuilderSession";
+    static ExpressionBuilderAgentScript1 = "ExpressionBuilderAgentScript1";
+    static ExpressionBuilderAgentScript2 = "ExpressionBuilderAgentScript2";
+    static AddMoreRecordsField = `[placeholder="Add more records"]`;
+    static SessionTypeSelect = `[data-id="msdyn_entity.fieldControl-entityListcontainerId"]`;
+    static SessionType1 = `Case`;
+    static SessionType2 = `Generic`;
+    static ExpressionBuilderAppProfile = `ExpressionBuilderAppProfile`;
+    static ExpressionBuilderMatchedText = `MatchedText`;
+    static ExpressionBuilderUnMachedText = `UnMachedText`;
+    static AppProfileUser3 = `AppProfileUser3`;
+    static TenThousandsMiliSeconds = 10000;
+    static EntitySessionTemplatesDelete = `//*[@data-icon-name="Delete"]`;
+    static EntitySessionTemplates = `//*[@data-test-id='entity-session-templates']`;
+    static EntitySessionTemplatesEdit = `//*[@data-test-id="entity-session-templates-edit-btn"]`;
+    static EntitySessionTemplatesCheckBox = `//*[@data-icon-name="StatusCircleCheckmark"]`;
+    static EntitySessionTemplatesEditbtn = `//*[@data-test-id="session-template-edit-btn"]`;
+    static SesionSaveAndCloseBtn = `(//*[text()="Save and close"])[2]`;
+    static SearchCaseOption = `(//*[contains(@data-id,"quickFind_text")])[1]`;
+    static EntitySessionTemplate = `//*[@data-test-id="no-entity-session-template-screen-header"]`;  
+    static OpenNewFormTitle = `(//span[contains(.,'Automation Case')])`;
+    static OpenKBSearchTitle = `(//span[contains(.,'Automation Case')])`;
+    static ThirdPartyWebsiteTitle = `(//span[contains(.,'Automation Case')])`;
+}

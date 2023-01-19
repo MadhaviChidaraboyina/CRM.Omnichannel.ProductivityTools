@@ -12,6 +12,7 @@ import {
   SelectorConstants,
   SmartAssistConstants,
   stringFormat,
+  ExpressionBuilderProperties,
 } from "../Utility/Constants";
 import { CustomConstants, ResolutionType } from "../pages/Cases";
 import { IFrameConstants, IFrameHelper } from "../Utility/IFrameHelper";
@@ -67,8 +68,9 @@ export class AgentChat extends AgentPage {
     ContactLastName: "Sheldon",
   };
 
-  public contactRecordName = `${this.ContactData.ContactName
-    }_${new Date().getTime()}`;
+  public contactRecordName = `${
+    this.ContactData.ContactName
+  }_${new Date().getTime()}`;
   private CustomerFullName = "";
   public customerName = "";
   private ConversationTitleName = "";
@@ -393,8 +395,9 @@ export class AgentChat extends AgentPage {
       AgentChatConstants.Three,
       iframeCC
     );
-    await iframeCC.$eval(AgentChatConstants.EndConversationVoiceCallButton, (el) =>
-      (el as HTMLElement).click()
+    await iframeCC.$eval(
+      AgentChatConstants.EndConversationVoiceCallButton,
+      (el) => (el as HTMLElement).click()
     );
     await this._page.$eval(
       AgentChatConstants.RemoveConversationButtonClass,
@@ -514,7 +517,8 @@ export class AgentChat extends AgentPage {
       AgentChatConstants.MessageTextArea
     );
     await messageTextArea.fill("");
-    const searchTxt: string = AgentChatConstants.ConsultQueueCommand + AgentChatConstants.Queue1;
+    const searchTxt: string =
+      AgentChatConstants.ConsultQueueCommand + AgentChatConstants.Queue1;
     await messageTextArea.type(searchTxt, { delay: 200 });
     await messageTextArea.press(AgentChatConstants.SpaceKeyword);
     await iframe.waitForTimeout(Constants.DefaultTimeout);
@@ -552,7 +556,8 @@ export class AgentChat extends AgentPage {
       AgentChatConstants.ConsultMessageTextArea
     );
     await messageTextArea.fill("");
-    const searchTxt: string = AgentChatConstants.ConsultQueueCommand + AgentChatConstants.Queue1;
+    const searchTxt: string =
+      AgentChatConstants.ConsultQueueCommand + AgentChatConstants.Queue1;
     await messageTextArea.type(searchTxt, { delay: 100 });
     await this.waitUntilSelectorIsVisible(
       AgentChatConstants.SelectQueueButton.replace("{0}", queueName),
@@ -1227,7 +1232,9 @@ export class AgentChat extends AgentPage {
 
   public async verifyLinkedRecords(selectedEntity) {
     try {
-      const option = await this._page.innerText(SelectorConstants.SelectedLinkedRecordSelector);
+      const option = await this._page.innerText(
+        SelectorConstants.SelectedLinkedRecordSelector
+      );
       return option == selectedEntity;
     } catch (err) {
       return false;
@@ -1266,7 +1273,9 @@ export class AgentChat extends AgentPage {
         null,
         Constants.MaxTimeout
       );
-      return searchPerson && searchProblem && newConnect && newTicket && newStatement;
+      return (
+        searchPerson && searchProblem && newConnect && newTicket && newStatement
+      );
     } catch {
       return false;
     }
@@ -1275,7 +1284,7 @@ export class AgentChat extends AgentPage {
   public async verifyConversationSummaryCreateAccountPresent() {
     try {
       const accountCreateBtn = await this._page.waitForSelector(
-        SelectorConstants.AccountCreateBtnSelector,
+        SelectorConstants.AccountCreateBtnSelector
       );
       return accountCreateBtn;
     } catch {
@@ -1286,7 +1295,7 @@ export class AgentChat extends AgentPage {
   public async verifyConversationSummaryCreateContactPresent() {
     try {
       const contactCreateBtn = await this._page.waitForSelector(
-        SelectorConstants.ContactCreateBtnSelector,
+        SelectorConstants.ContactCreateBtnSelector
       );
       return contactCreateBtn;
     } catch {
@@ -1368,8 +1377,9 @@ export class AgentChat extends AgentPage {
     } else {
       await this._page.click(AgentChatConstants.NewAccountButtonSelector);
     }
-    const accountName = `${this.AccountData.AccountName
-      }_${new Date().getTime()}`;
+    const accountName = `${
+      this.AccountData.AccountName
+    }_${new Date().getTime()}`;
     await this.waitUntilSelectorIsVisible(
       AgentChatConstants.AccountNameSelector
     );
@@ -2120,10 +2130,11 @@ export class AgentChat extends AgentPage {
         AgentChatConstants.OngoingDashboardDefaultQueue
       );
       const queName = ongoingDashboardDefaultQueue.textContent();
-      await expect((await queName).includes(AgentChatConstants.DefaultMessagingQueue)).toBeTruthy();
+      await expect(
+        (await queName).includes(AgentChatConstants.DefaultMessagingQueue)
+      ).toBeTruthy();
       return true;
-    }
-    catch (error) {
+    } catch (error) {
       return false;
     }
   }
@@ -3209,9 +3220,10 @@ export class AgentChat extends AgentPage {
             }
           }
         }
-      }
-      catch (error) {
-        console.log(`Method waitUntilRecordMovedToClosedWorkStream throwing exception with message: ${error.message}`);
+      } catch (error) {
+        console.log(
+          `Method waitUntilRecordMovedToClosedWorkStream throwing exception with message: ${error.message}`
+        );
       }
       dataCount++;
       //wait time is required before every refresh attempt else all retries will complete in a blink and tests are failing
@@ -3500,7 +3512,9 @@ export class AgentChat extends AgentPage {
           }
         }
       } catch (error) {
-        console.log(`Method waitUntilNewRecordAppearsInOpenWS throwing exception with message: ${error.message}`);
+        console.log(
+          `Method waitUntilNewRecordAppearsInOpenWS throwing exception with message: ${error.message}`
+        );
       }
       dataCount++;
     }
@@ -4151,7 +4165,9 @@ export class AgentChat extends AgentPage {
     });
   }
 
-  public async validatequickrepliesSlugforRedirectionUrl(message: string = "#q1") {
+  public async validatequickrepliesSlugforRedirectionUrl(
+    message: string = "#q1"
+  ) {
     const iframeCC = await TestHelper.GetIframe(
       this._page,
       HTMLConstants.IframeCC
@@ -4201,7 +4217,7 @@ export class AgentChat extends AgentPage {
   public async DisconnectMessage() {
     console.info(
       "Customer Disconnected at: " +
-      (await this.GetCurrentDateAndTime()).toString()
+        (await this.GetCurrentDateAndTime()).toString()
     );
     const iframe: Page = await IFrameHelper.GetIframe(
       this.Page,
@@ -4213,7 +4229,7 @@ export class AgentChat extends AgentPage {
       });
       console.info(
         "(Reconnect) Disconnected Message Appeared at: " +
-        (await this.GetCurrentDateAndTime()).toString()
+          (await this.GetCurrentDateAndTime()).toString()
       );
     } catch (error) {
       throw new Error(
@@ -4334,7 +4350,9 @@ export class AgentChat extends AgentPage {
         Constants.MaxTimeout
       );
     } catch (error) {
-      console.log(`Method waitUntilNewRecordAppearsInOpenWS throwing exception with message: ${error.message}`);
+      console.log(
+        `Method waitUntilNewRecordAppearsInOpenWS throwing exception with message: ${error.message}`
+      );
     }
   }
 
@@ -4371,7 +4389,9 @@ export class AgentChat extends AgentPage {
           Constants.MaxTimeout
         );
       } catch (error) {
-        console.log(`Method RemoveCaseFromConveration throwing exception with message: ${error.message}`);
+        console.log(
+          `Method RemoveCaseFromConveration throwing exception with message: ${error.message}`
+        );
       }
     }
   }
@@ -4913,7 +4933,9 @@ export class AgentChat extends AgentPage {
           }
         }
       } catch (error) {
-        console.log(`Method waitUntilNewRecordAppearsInMyItemsWS throwing exception with message: ${error.message}`);
+        console.log(
+          `Method waitUntilNewRecordAppearsInMyItemsWS throwing exception with message: ${error.message}`
+        );
       }
       dataCount++;
     }
@@ -5276,7 +5298,7 @@ export class AgentChat extends AgentPage {
       AgentChatConstants.CustomControl
     );
     const transcriptmessage = await iFrame3.waitForSelector(
-      AgentChatConstants.TransScriptnewContainertext.replace('{0}', message)
+      AgentChatConstants.TransScriptnewContainertext.replace("{0}", message)
     );
     const value = await transcriptmessage.textContent();
     if (value.includes(message)) {
@@ -5686,7 +5708,9 @@ export class AgentChat extends AgentPage {
           return true;
         }
       } catch (error) {
-        console.log(`Method waitUntilQuickReplyIsVisible throwing exception with message: ${error.message}`);
+        console.log(
+          `Method waitUntilQuickReplyIsVisible throwing exception with message: ${error.message}`
+        );
       }
       dataCount++;
       await element.fill("");
@@ -6089,7 +6113,9 @@ export class AgentChat extends AgentPage {
           }
         }
       } catch (error) {
-        console.log(`Method waitUntilNewRecordDisappearsInOpenWS throwing exception with message: ${error.message}`);
+        console.log(
+          `Method waitUntilNewRecordDisappearsInOpenWS throwing exception with message: ${error.message}`
+        );
       }
       dataCount++;
     }
@@ -6410,7 +6436,9 @@ export class AgentChat extends AgentPage {
         );
         result = true;
       } catch (error) {
-        console.log(`Method VerifyContextualMessageAppeared throwing exception with message: ${error.message}`);
+        console.log(
+          `Method VerifyContextualMessageAppeared throwing exception with message: ${error.message}`
+        );
       }
     } finally {
       return result;
@@ -6657,7 +6685,9 @@ export class AgentChat extends AgentPage {
         );
       }
     } catch (error) {
-      console.log(`Method waitUntilNewRecordAppearsInOpenWS throwing exception with message: ${error.message}`);
+      console.log(
+        `Method waitUntilNewRecordAppearsInOpenWS throwing exception with message: ${error.message}`
+      );
     }
   }
 
@@ -6679,7 +6709,7 @@ export class AgentChat extends AgentPage {
       .waitForSelector(AgentConversationPageConstants.ReconnectBanner, {
         timeout: timeout,
       })
-      .catch(() => { });
+      .catch(() => {});
     return await this._page.$(AgentConversationPageConstants.ReconnectBanner);
   }
 
@@ -7097,9 +7127,17 @@ export class AgentChat extends AgentPage {
   }
 
   public async createRecord(entityLogicalName: string, data: any) {
-    return await this.executeScript(
+    const record = await this.executeScript(
       `Xrm.WebApi.createRecord('${entityLogicalName}', ${JSON.stringify(data)})`
     );
+    return record;
+  }
+
+  public async createRecordByString(entityLogicalName: string, data: any) {
+    const record = await this.executeScript(
+      `Xrm.WebApi.createRecord('${entityLogicalName}', ${data})`
+    );
+    return record;
   }
 
   public async retrieveMultipleRecords(
@@ -7231,7 +7269,9 @@ export class AgentChat extends AgentPage {
           }
         }
       } catch (error) {
-        console.log(`Method closeNotification throwing exception with message: ${error.message}`);
+        console.log(
+          `Method closeNotification throwing exception with message: ${error.message}`
+        );
       }
       tryCount++;
     }
@@ -7346,7 +7386,9 @@ export class AgentChat extends AgentPage {
           }
         }
       } catch (error) {
-        console.log(`Method closeMyWorkItems throwing exception with message: ${error.message}`);
+        console.log(
+          `Method closeMyWorkItems throwing exception with message: ${error.message}`
+        );
       }
       tryCount++;
     }
@@ -7579,7 +7621,9 @@ export class AgentChat extends AgentPage {
   public async getLinkedRecords() {
     //add 5 second wait for automation stability.
     await this.Page.waitForTimeout(5000);
-    return await this.executeScript(`Microsoft.Omnichannel.getLinkedRecords();`);
+    return await this.executeScript(
+      `Microsoft.Omnichannel.getLinkedRecords();`
+    );
   }
 
   public async validateNotificationDetails(
@@ -8370,7 +8414,9 @@ export class AgentChat extends AgentPage {
           }
         }
       } catch (error) {
-        console.log(`Method acceptUniqueInvitationToPickChat throwing exception with message: ${error.message}`);
+        console.log(
+          `Method acceptUniqueInvitationToPickChat throwing exception with message: ${error.message}`
+        );
       }
       tryCount++;
     }
@@ -8415,7 +8461,9 @@ export class AgentChat extends AgentPage {
           }
         }
       } catch (error) {
-        console.log(`Method acceptUniqueInvitationToPushChat throwing exception with message: ${error.message}`);
+        console.log(
+          `Method acceptUniqueInvitationToPushChat throwing exception with message: ${error.message}`
+        );
       }
       tryCount++;
     }
@@ -8466,7 +8514,9 @@ export class AgentChat extends AgentPage {
       });
       await this._page.click(AgentChatConstants.AgentStatusOkButton);
     } catch (error) {
-      console.log(`Method waitUntilNewRecordAppearsInOpenWS throwing exception with message: ${error.message}`);
+      console.log(
+        `Method waitUntilNewRecordAppearsInOpenWS throwing exception with message: ${error.message}`
+      );
     }
   }
 
@@ -8697,7 +8747,9 @@ export class AgentChat extends AgentPage {
         await this._page.waitForTimeout(Constants.DefaultTimeout);
       }
     } catch (error) {
-      console.log(`Method waitUntilNewRecordAppearsInOpenWS throwing exception with message: ${error.message}`);
+      console.log(
+        `Method waitUntilNewRecordAppearsInOpenWS throwing exception with message: ${error.message}`
+      );
     }
   }
 
@@ -8798,7 +8850,9 @@ export class AgentChat extends AgentPage {
         );
         return true;
       } catch (error) {
-        console.log(`Method acceptPushChatByTitleAndMessage throwing exception with message: ${error.message}`);
+        console.log(
+          `Method acceptPushChatByTitleAndMessage throwing exception with message: ${error.message}`
+        );
       }
       return await this.waitUntilFrameSelectorIsVisible(
         AgentChatConstants.ConversationTitle.replace("{0}", conversationTitle),
@@ -8834,7 +8888,9 @@ export class AgentChat extends AgentPage {
             await this.clickActiveChat();
             await this.closeUnusedChat();
           } catch (error) {
-            console.log(`Method waitUntilNewRecordAppearsInOpenWS throwing exception with message: ${error.message}`);
+            console.log(
+              `Method waitUntilNewRecordAppearsInOpenWS throwing exception with message: ${error.message}`
+            );
           }
         }
       }
@@ -8897,7 +8953,9 @@ export class AgentChat extends AgentPage {
         const expectedStatus = await statusLocator.innerText();
         if (expectedStatus === workItemStatus) return true;
       } catch (error) {
-        console.log(`Method waitUntilWorkItemStatusChanged throwing exception with message: ${error.message}`);
+        console.log(
+          `Method waitUntilWorkItemStatusChanged throwing exception with message: ${error.message}`
+        );
       }
       await pageObject.waitForTimeout(timeout); //wait for provided timeout period to recheck condition
       dataCount++;
@@ -8940,7 +8998,9 @@ export class AgentChat extends AgentPage {
           }
         }
       } catch (error) {
-        console.log(`Method acceptOpenWorkItem throwing exception with message: ${error.message}`);
+        console.log(
+          `Method acceptOpenWorkItem throwing exception with message: ${error.message}`
+        );
       }
       tryCount++;
     }
@@ -9240,7 +9300,9 @@ export class AgentChat extends AgentPage {
         await pageObject.waitForSelector(selectorVal, { timeout });
         return true;
       } catch (error) {
-        console.log(`Method waitUntilOpenItemCountIncrease throwing exception with message: ${error.message}`);
+        console.log(
+          `Method waitUntilOpenItemCountIncrease throwing exception with message: ${error.message}`
+        );
       } //This catch statement will handle selector not found error during loop itreation process. This method already return false if selector not found so no need to add logging statements in catch block.
       dataCount++;
       await this.setAgentStatus(AgentChatConstants.Available.toString());
@@ -9268,7 +9330,9 @@ export class AgentChat extends AgentPage {
         await pageObject.waitForSelector(selectorVal, { timeout });
         return true;
       } catch (error) {
-        console.log(`Method waitUntilCloseItemCountIncrease throwing exception with message: ${error.message}`);
+        console.log(
+          `Method waitUntilCloseItemCountIncrease throwing exception with message: ${error.message}`
+        );
       } //This catch statement will handle selector not found error during loop itreation process. This method already return false if selector not found so no need to add logging statements in catch block.
       dataCount++;
     }
@@ -9330,7 +9394,9 @@ export class AgentChat extends AgentPage {
         await this._page.click(AgentChatConstants.AgentStatusOkButton);
       }
     } catch (error) {
-      console.log(`Method waitUntilNewRecordAppearsInOpenWS throwing exception with message: ${error.message}`);
+      console.log(
+        `Method waitUntilNewRecordAppearsInOpenWS throwing exception with message: ${error.message}`
+      );
     }
   }
 
@@ -9358,7 +9424,9 @@ export class AgentChat extends AgentPage {
         );
         return true;
       } catch (error) {
-        console.log(`Method validateSentimentText throwing exception with message: ${error.message}`);
+        console.log(
+          `Method validateSentimentText throwing exception with message: ${error.message}`
+        );
       } //This catch statement will handle selector not found error during loop itreation process. This method already return false if selector not found so no need to add logging statements in catch block.
       dataCount++;
     }
@@ -9415,7 +9483,9 @@ export class AgentChat extends AgentPage {
           await pageObject.waitForTimeout(timeout);
         }
       } catch (error) {
-        console.log(`Method waitForCloseItemCountIncrease throwing exception with message: ${error.message}`);
+        console.log(
+          `Method waitForCloseItemCountIncrease throwing exception with message: ${error.message}`
+        );
       } //This catch statement will handle selector not found error during loop itreation process. This method already return false if selector not found so no need to add logging statements in catch block.
       dataCount++;
       await this.setAgentStatus(AgentChatConstants.Available.toString());
@@ -9459,7 +9529,9 @@ export class AgentChat extends AgentPage {
           await pageObject.waitForTimeout(timeout);
         }
       } catch (error) {
-        console.log(`Method waitForOpenItemCountIncrease throwing exception with message: ${error.message}`);
+        console.log(
+          `Method waitForOpenItemCountIncrease throwing exception with message: ${error.message}`
+        );
       } //This catch statement will handle selector not found error during loop itreation process. This method already return false if selector not found so no need to add logging statements in catch block.
       dataCount++;
       await this.setAgentStatus(AgentChatConstants.Available.toString());
@@ -9512,7 +9584,9 @@ export class AgentChat extends AgentPage {
         await this.closeUnusedChat();
       }
     } catch (error) {
-      console.log(`Method FilterItemsByQueue throwing exception with message: ${error.message}`);
+      console.log(
+        `Method FilterItemsByQueue throwing exception with message: ${error.message}`
+      );
     }
   }
 
@@ -9690,7 +9764,9 @@ export class AgentChat extends AgentPage {
         }
       }
     } catch (error) {
-      console.log(`Method getInitialValueOfConversationStatus throwing exception with message: ${error.message}`);
+      console.log(
+        `Method getInitialValueOfConversationStatus throwing exception with message: ${error.message}`
+      );
     }
     return zeroValue;
   }
@@ -9746,7 +9822,9 @@ export class AgentChat extends AgentPage {
         await pageObject.waitForSelector(selectorVal, { timeout });
         return true;
       } catch (error) {
-        console.log(`Method waitUntilItemVisibleInOngoingDashboard throwing exception with message: ${error.message}`);
+        console.log(
+          `Method waitUntilItemVisibleInOngoingDashboard throwing exception with message: ${error.message}`
+        );
       }
       dataCount++;
     }
@@ -9825,7 +9903,9 @@ export class AgentChat extends AgentPage {
           await pageObject.waitForTimeout(timeout);
         }
       } catch (error) {
-        console.log(`Method waitForMyWorkItemCountIncrease throwing exception with message: ${error.message}`);
+        console.log(
+          `Method waitForMyWorkItemCountIncrease throwing exception with message: ${error.message}`
+        );
       } //This catch statement will handle selector not found error during loop itreation process. This method already return false if selector not found so no need to add logging statements in catch block.
       dataCount++;
       await this.setAgentStatus(AgentChatConstants.Available.toString());
@@ -10040,9 +10120,9 @@ export class AgentChat extends AgentPage {
   }
 
   public async waitForScreenLoad(frame: any) {
-    await frame.waitForLoadState(Constants.DomContentLoaded).catch(() => { });
-    await frame.waitForLoadState("networkidle").catch(() => { });
-    await frame.waitForLoadState("load", { timeout: 5000 }).catch(() => { });
+    await frame.waitForLoadState(Constants.DomContentLoaded).catch(() => {});
+    await frame.waitForLoadState("networkidle").catch(() => {});
+    await frame.waitForLoadState("load", { timeout: 5000 }).catch(() => {});
   }
 
   // Create case/incident
@@ -10594,7 +10674,7 @@ export class AgentChat extends AgentPage {
   public async CustomerDisconnectMessage(timeOut: number) {
     console.info(
       "Customer Disconnected at: " +
-      (await this.GetCurrentDateAndTime()).toString()
+        (await this.GetCurrentDateAndTime()).toString()
     );
     await this._page.waitForTimeout(timeOut);
     const iframe: Page = await IFrameHelper.GetIframe(
@@ -10605,7 +10685,7 @@ export class AgentChat extends AgentPage {
       await iframe.waitForSelector(AgentChatConstants.DisconnectMessage);
       console.info(
         "(Reconnect) Disconnected Message Appeared at: " +
-        (await this.GetCurrentDateAndTime()).toString()
+          (await this.GetCurrentDateAndTime()).toString()
       );
     } catch (error) {
       throw new Error(
@@ -10674,7 +10754,9 @@ export class AgentChat extends AgentPage {
           await pageObject.waitForTimeout(timeout);
         }
       } catch (error) {
-        console.log(`Method waitForOpenDistributionModeItemCountIncrease throwing exception with message: ${error.message}`);
+        console.log(
+          `Method waitForOpenDistributionModeItemCountIncrease throwing exception with message: ${error.message}`
+        );
       } //This catch statement will handle selector not found error during loop itreation process. This method already return false if selector not found so no need to add logging statements in catch block.
       dataCount++;
     }
@@ -11030,7 +11112,9 @@ export class AgentChat extends AgentPage {
         await this._page.waitForTimeout(Constants.DefaultTimeout);
       }
     } catch (error) {
-      console.log(`Method closeConsultChat throwing exception with message: ${error.message}`);
+      console.log(
+        `Method closeConsultChat throwing exception with message: ${error.message}`
+      );
     }
   }
 
@@ -11844,7 +11928,9 @@ export class AgentChat extends AgentPage {
       ? AgentChatConstants.TranscriptControlDownldButton
       : AgentChatConstants.MoreButtonSelector;
 
-    const downloadButton = await this.Page.waitForSelector(downloadButtonSelector);
+    const downloadButton = await this.Page.waitForSelector(
+      downloadButtonSelector
+    );
     if (!isOldForm) {
       await Promise.all([
         this.Page.$eval(AgentChatConstants.MoreButtonSelector, (el) =>
@@ -11852,8 +11938,9 @@ export class AgentChat extends AgentPage {
         ),
       ]);
       await Promise.all([
-        this.Page.$eval(AgentChatConstants.TranscriptControlDownldButton, (el) =>
-          (el as HTMLElement).click()
+        this.Page.$eval(
+          AgentChatConstants.TranscriptControlDownldButton,
+          (el) => (el as HTMLElement).click()
         ),
       ]);
       const [download] = await Promise.all([
@@ -11866,11 +11953,11 @@ export class AgentChat extends AgentPage {
       if (stream !== null) {
         return await this.readStream(stream);
       }
-    }
-    else {
+    } else {
       await Promise.all([
-        this.Page.$eval(AgentChatConstants.TranscriptControlDownldButton, (el) =>
-          (el as HTMLElement).click()
+        this.Page.$eval(
+          AgentChatConstants.TranscriptControlDownldButton,
+          (el) => (el as HTMLElement).click()
         ),
       ]);
       const [download] = await Promise.all([
@@ -12026,7 +12113,10 @@ export class AgentChat extends AgentPage {
     await this.Page.click(AgentChatConstants.SendKBArticles);
     await this.Page.keyboard.press(Constants.EnterKey);
     return await this.waitUntilSelectorIsVisible(
-      AgentChatConstants.ChatMessageSelector.replace("{0}", Constants.KnowledgeArticle),
+      AgentChatConstants.ChatMessageSelector.replace(
+        "{0}",
+        Constants.KnowledgeArticle
+      ),
       AgentChatConstants.Five,
       this.Page,
       AgentChatConstants.TwoThousand
@@ -12126,7 +12216,6 @@ export class AgentChat extends AgentPage {
     maxCount = Constants.Three,
     timeout: number = Constants.TenThousand
   ) {
-
     try {
       await this.waitUntilFrameSelectorIsVisible(
         AgentChatConstants.AgentInsightsAgentSelector,
@@ -12473,7 +12562,10 @@ export class AgentChat extends AgentPage {
     const output = result.innerText();
     return (await output) === Constants.ChatChannelName;
   }
-  public async ValidateAgentStatusAvailble(frame: any, timeout: number = Constants.TenThousand) {
+  public async ValidateAgentStatusAvailble(
+    frame: any,
+    timeout: number = Constants.TenThousand
+  ) {
     await this.waitUntilSelectorIsVisible(
       AgentChatConstants.RefershButtonSelector,
       AgentChatConstants.Two,
@@ -12524,9 +12616,21 @@ export class AgentChat extends AgentPage {
     );
   }
 
-  public async FilterItemsByAgentConversation(frame: any, agentName: string, queueName: string) {
-    await this.FilterRecordsByAgentName(SelectorConstants.QueurDDSelector, frame, agentName);
-    await this.FilterRecordsByQueuesName(SelectorConstants.QueurDDSelector, frame, queueName);
+  public async FilterItemsByAgentConversation(
+    frame: any,
+    agentName: string,
+    queueName: string
+  ) {
+    await this.FilterRecordsByAgentName(
+      SelectorConstants.QueurDDSelector,
+      frame,
+      agentName
+    );
+    await this.FilterRecordsByQueuesName(
+      SelectorConstants.QueurDDSelector,
+      frame,
+      queueName
+    );
   }
   public async validateAgentAvailableCapacity(frame: any) {
     await this.waitUntilSelectorIsVisible(
@@ -12549,171 +12653,388 @@ export class AgentChat extends AgentPage {
     }
   }
 
-  public async ValidateDurationHr(frame: any, timeout: number = Constants.TenThousand) {
-    await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.valueInputSelector, frame, Constants.One, Constants.DefaultTimeout);
-    const valueRange = await frame.waitForSelector(AgentChatConstants.valueInputSelector, { timeout });
+  public async ValidateDurationHr(
+    frame: any,
+    timeout: number = Constants.TenThousand
+  ) {
+    await this.waitUntilFrameSelectorIsVisible(
+      AgentChatConstants.valueInputSelector,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const valueRange = await frame.waitForSelector(
+      AgentChatConstants.valueInputSelector,
+      { timeout }
+    );
     await valueRange.fill("");
     await valueRange.type("8", { delay: 100 });
   }
 
-  public async ValidateDurationMin(frame: any, timeout: number = Constants.TenThousand) {
-    await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.valueInputSelector, frame, Constants.One, Constants.DefaultTimeout);
-    const valueRange = await frame.waitForSelector(AgentChatConstants.valueInputSelector, { timeout });
+  public async ValidateDurationMin(
+    frame: any,
+    timeout: number = Constants.TenThousand
+  ) {
+    await this.waitUntilFrameSelectorIsVisible(
+      AgentChatConstants.valueInputSelector,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const valueRange = await frame.waitForSelector(
+      AgentChatConstants.valueInputSelector,
+      { timeout }
+    );
     await valueRange.fill("");
     await valueRange.type("30", { delay: 100 });
   }
 
-  public async ValidateIntradayHours(selector: any, Iframe: any, timeout: number = Constants.TenThousand) {
+  public async ValidateIntradayHours(
+    selector: any,
+    Iframe: any,
+    timeout: number = Constants.TenThousand
+  ) {
     await this.waitUntilSelectorIsVisible(
       AgentChatConstants.durationHeader,
       AgentChatConstants.Two,
       this.Page,
       AgentChatConstants.FiveThousandsMiliSecondsWaitTimeout
     );
-    const duration1 = await Iframe.waitForSelector(AgentChatConstants.durationHeader, { timeout });
+    const duration1 = await Iframe.waitForSelector(
+      AgentChatConstants.durationHeader,
+      { timeout }
+    );
     await duration1.click();
     await this.waitForScreenLoad(Iframe);
-    await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.selectHrMin, Iframe, Constants.One, Constants.FiveThousand);
-    const duration = await Iframe.waitForSelector(AgentChatConstants.selectHrMin, { timeout });
+    await this.waitUntilFrameSelectorIsVisible(
+      AgentChatConstants.selectHrMin,
+      Iframe,
+      Constants.One,
+      Constants.FiveThousand
+    );
+    const duration = await Iframe.waitForSelector(
+      AgentChatConstants.selectHrMin,
+      { timeout }
+    );
     await duration.click();
-    await this.waitUntilFrameSelectorIsVisible(selector, Iframe, Constants.One, Constants.FiveThousand);
+    await this.waitUntilFrameSelectorIsVisible(
+      selector,
+      Iframe,
+      Constants.One,
+      Constants.FiveThousand
+    );
     const hrSelect = await Iframe.waitForSelector(selector, { timeout });
     await hrSelect.click();
     await this.waitForScreenLoad(Iframe);
-    await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AbandoneRateHeader, Iframe, Constants.One, timeout);
-    const AbandonheadSelector1 = await Iframe.waitForSelector(AgentChatConstants.AbandoneRateHeader, { timeout });
+    await this.waitUntilFrameSelectorIsVisible(
+      AgentChatConstants.AbandoneRateHeader,
+      Iframe,
+      Constants.One,
+      timeout
+    );
+    const AbandonheadSelector1 = await Iframe.waitForSelector(
+      AgentChatConstants.AbandoneRateHeader,
+      { timeout }
+    );
     const entityItemTextAbandon1 = await AbandonheadSelector1.textContent();
-    expect(entityItemTextAbandon1.includes(AgentChatConstants.AbandonHeaderTitle)).toBeTruthy();
+    expect(
+      entityItemTextAbandon1.includes(AgentChatConstants.AbandonHeaderTitle)
+    ).toBeTruthy();
   }
 
-  public async ValidateIntradayMin(selector: any, Iframe: any, timeout: number = Constants.TenThousand) {
+  public async ValidateIntradayMin(
+    selector: any,
+    Iframe: any,
+    timeout: number = Constants.TenThousand
+  ) {
     await this.waitUntilSelectorIsVisible(
       AgentChatConstants.durationHeader,
       AgentChatConstants.Two,
       this.Page,
       AgentChatConstants.FiveThousandsMiliSecondsWaitTimeout
     );
-    const duration1 = await Iframe.waitForSelector(AgentChatConstants.durationHeader, { timeout });
+    const duration1 = await Iframe.waitForSelector(
+      AgentChatConstants.durationHeader,
+      { timeout }
+    );
     await duration1.click();
     await this.waitForScreenLoad(Iframe);
-    await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.selectHrMin, Iframe, Constants.One, Constants.FiveThousand);
-    const duration = await Iframe.waitForSelector(AgentChatConstants.selectHrMin, { timeout });
+    await this.waitUntilFrameSelectorIsVisible(
+      AgentChatConstants.selectHrMin,
+      Iframe,
+      Constants.One,
+      Constants.FiveThousand
+    );
+    const duration = await Iframe.waitForSelector(
+      AgentChatConstants.selectHrMin,
+      { timeout }
+    );
     await duration.click();
-    await this.waitUntilFrameSelectorIsVisible(selector, Iframe, Constants.One, Constants.FiveThousand);
+    await this.waitUntilFrameSelectorIsVisible(
+      selector,
+      Iframe,
+      Constants.One,
+      Constants.FiveThousand
+    );
     const hrSelect = await Iframe.waitForSelector(selector, { timeout });
     await hrSelect.click();
     await this.waitForScreenLoad(Iframe);
-    await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AbandoneRateHeader, Iframe, Constants.One, timeout);
-    const AbandonheadSelector1 = await Iframe.waitForSelector(AgentChatConstants.AbandoneRateHeader, { timeout });
+    await this.waitUntilFrameSelectorIsVisible(
+      AgentChatConstants.AbandoneRateHeader,
+      Iframe,
+      Constants.One,
+      timeout
+    );
+    const AbandonheadSelector1 = await Iframe.waitForSelector(
+      AgentChatConstants.AbandoneRateHeader,
+      { timeout }
+    );
     const entityItemTextAbandon1 = await AbandonheadSelector1.textContent();
-    expect(entityItemTextAbandon1.includes(AgentChatConstants.AbandonHeaderTitle)).toBeTruthy();
+    expect(
+      entityItemTextAbandon1.includes(AgentChatConstants.AbandonHeaderTitle)
+    ).toBeTruthy();
   }
-  public async ValidateResponseTimeAerageTime(frame: any, timeout: number = Constants.TenThousand) {
+  public async ValidateResponseTimeAerageTime(
+    frame: any,
+    timeout: number = Constants.TenThousand
+  ) {
     await this.waitUntilSelectorIsVisible(
-      AgentChatConstants.RefershButtonSelector);
+      AgentChatConstants.RefershButtonSelector
+    );
     await this.Page.click(AgentChatConstants.RefershButtonSelector);
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.SLAFirstResponseTime, frame, Constants.One, Constants.DefaultTimeout);
-    const FirstResponsetime = await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, { timeout });
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.SLAFirstResponseTime,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const FirstResponsetime = await frame.waitForSelector(
+      SelectorConstants.SLAFirstResponseTime,
+      { timeout }
+    );
     await FirstResponsetime.click();
-    expect(await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime)).toBeTruthy();
-    const Responsetime = await frame.waitForSelector(SelectorConstants.SLAResponseTime, { timeout });
+    expect(
+      await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime)
+    ).toBeTruthy();
+    const Responsetime = await frame.waitForSelector(
+      SelectorConstants.SLAResponseTime,
+      { timeout }
+    );
     await Responsetime.click();
-    expect(await frame.waitForSelector(SelectorConstants.SLAResponseTime)).toBeTruthy();
+    expect(
+      await frame.waitForSelector(SelectorConstants.SLAResponseTime)
+    ).toBeTruthy();
     return true;
   }
 
-  public async FilterItemsByDigitalMsg(frame: any, queueName: string, agentName: string) {
-    await this.FilterRecordsByDigitalMessageQueuesName(SelectorConstants.QueurDDSelector, frame, queueName);
-    await this.FilterRecordsByDigitalMessageAgentName(SelectorConstants.QueurDDSelector, frame, agentName);
+  public async FilterItemsByDigitalMsg(
+    frame: any,
+    queueName: string,
+    agentName: string
+  ) {
+    await this.FilterRecordsByDigitalMessageQueuesName(
+      SelectorConstants.QueurDDSelector,
+      frame,
+      queueName
+    );
+    await this.FilterRecordsByDigitalMessageAgentName(
+      SelectorConstants.QueurDDSelector,
+      frame,
+      agentName
+    );
   }
-  public async FilterRecordsByDigitalMessageQueuesName(selectorVal: string, frame: any, queueName: string, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByDigitalMessageQueuesName(
+    selectorVal: string,
+    frame: any,
+    queueName: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.SLAFirstResponseTime, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChanelConversationDigitalMsgSelector = await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.SLAFirstResponseTime,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChanelConversationDigitalMsgSelector =
+        await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, {
+          timeout,
+        });
       await omniChanelConversationDigitalMsgSelector.click();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
 
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.ConversationInsightDigitalMsgQueueSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentConversationInsightQueueName = await frame.waitForSelector(AgentChatConstants.ConversationInsightDigitalMsgQueueSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.ConversationInsightDigitalMsgQueueSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentConversationInsightQueueName = await frame.waitForSelector(
+        AgentChatConstants.ConversationInsightDigitalMsgQueueSelector,
+        { timeout }
+      );
       await agentConversationInsightQueueName.click();
 
       await this.waitForScreenLoad(frame);
 
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const ConversationQueueInput = await frame.waitForSelector(AgentChatConstants.ConversationInsightDigitalMsgQueueInputSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const ConversationQueueInput = await frame.waitForSelector(
+        AgentChatConstants.ConversationInsightDigitalMsgQueueInputSelector,
+        { timeout }
+      );
       await ConversationQueueInput.fill("");
       await ConversationQueueInput.type(queueName, { delay: 100 });
 
       await this.waitForScreenLoad(frame);
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
 
-      const agentInsightsConversationStatusItem = await frame.waitForSelector(AgentChatConstants.DigitalQueueSelector.replace("{0}", queueName), { timeout });
+      const agentInsightsConversationStatusItem = await frame.waitForSelector(
+        AgentChatConstants.DigitalQueueSelector.replace("{0}", queueName),
+        { timeout }
+      );
       await agentInsightsConversationStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationStatusItem.click();
 
       await this.waitForScreenLoad(frame);
       await omniChanelConversationDigitalMsgSelector.click();
-      await this.waitUntilFrameSelectorIsVisible(selectorVal, frame, Constants.One, timeout);
-      const queueSelector = await frame.waitForSelector(selectorVal, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        selectorVal,
+        frame,
+        Constants.One,
+        timeout
+      );
+      const queueSelector = await frame.waitForSelector(selectorVal, {
+        timeout,
+      });
       const entityItemText = await queueSelector.textContent();
       if (entityItemText.startsWith(queueName)) {
         return true;
       }
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByAgentName throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByAgentName throwing exception with message: ${error.message}`
+      );
     }
     return false;
   }
 
-  public async FilterRecordsByDigitalMessageAgentName(selectorVal: string, frame: any, agentName: string, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByDigitalMessageAgentName(
+    selectorVal: string,
+    frame: any,
+    agentName: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.SLAFirstResponseTime, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChanelAgentInsightSelector = await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.SLAFirstResponseTime,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChanelAgentInsightSelector = await frame.waitForSelector(
+        SelectorConstants.SLAFirstResponseTime,
+        { timeout }
+      );
       await omniChanelAgentInsightSelector.click();
       await this._page.waitForTimeout(Constants.DefaultTimeout);
 
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.ConversationInsightDigitalMsgAgentSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightQueuetName = await frame.waitForSelector(AgentChatConstants.ConversationInsightDigitalMsgAgentSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.ConversationInsightDigitalMsgAgentSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightQueuetName = await frame.waitForSelector(
+        AgentChatConstants.ConversationInsightDigitalMsgAgentSelector,
+        { timeout }
+      );
       await agentInsightQueuetName.click();
 
       await this.waitForScreenLoad(frame);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsQueueInput = await frame.waitForSelector(AgentChatConstants.ConversationInsightDigitalMsgAgentInputSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsQueueInput = await frame.waitForSelector(
+        AgentChatConstants.ConversationInsightDigitalMsgAgentInputSelector,
+        { timeout }
+      );
       await agentInsightsQueueInput.fill("");
       await agentInsightsQueueInput.type(agentName, { delay: 100 });
 
       await this.waitForScreenLoad(frame);
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
 
-      const agentInsightsConversationQueueStatusItem = await frame.waitForSelector(AgentChatConstants.DigitalAgentSelector.replace("{0}", agentName), { timeout });
+      const agentInsightsConversationQueueStatusItem =
+        await frame.waitForSelector(
+          AgentChatConstants.DigitalAgentSelector.replace("{0}", agentName),
+          { timeout }
+        );
       await agentInsightsConversationQueueStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationQueueStatusItem.click();
 
       await this.waitForScreenLoad(frame);
 
       await omniChanelAgentInsightSelector.click();
       await this.waitForScreenLoad(frame);
-      const queueSelector = await frame.waitForSelector(selectorVal, { timeout });
+      const queueSelector = await frame.waitForSelector(selectorVal, {
+        timeout,
+      });
       const entityItemText = await queueSelector.textContent();
       if (entityItemText.startsWith(agentName)) {
         return true;
       }
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByQueueName throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByQueueName throwing exception with message: ${error.message}`
+      );
     }
     return false;
   }
 
-  public async ValidateFirstresponsetimeandResponsetime(frame: any, timeout: number = Constants.TenThousand) {
+  public async ValidateFirstresponsetimeandResponsetime(
+    frame: any,
+    timeout: number = Constants.TenThousand
+  ) {
     await this.waitUntilSelectorIsVisible(
       AgentChatConstants.RefershButtonSelector,
       AgentChatConstants.Two,
@@ -12721,8 +13042,16 @@ export class AgentChat extends AgentPage {
       AgentChatConstants.FiveThousandsMiliSecondsWaitTimeout
     );
     await this.Page.click(AgentChatConstants.RefershButtonSelector);
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.SLAFirstResponseTimeAndResponseTime, frame, Constants.One, Constants.DefaultTimeout);
-    const FirstResponsetime = await frame.waitForSelector(SelectorConstants.SLAFirstResponseTimeAndResponseTime, { timeout });
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.SLAFirstResponseTimeAndResponseTime,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const FirstResponsetime = await frame.waitForSelector(
+      SelectorConstants.SLAFirstResponseTimeAndResponseTime,
+      { timeout }
+    );
     //await FirstResponsetime.click();
     return FirstResponsetime;
   }
@@ -12739,136 +13068,306 @@ export class AgentChat extends AgentPage {
   }
 
   public async FilterItemsByChannel(frame: any, Channel: string) {
-    await this.FilterRecordsByChannelName(SelectorConstants.QueurDDSelector, frame, Channel);
+    await this.FilterRecordsByChannelName(
+      SelectorConstants.QueurDDSelector,
+      frame,
+      Channel
+    );
   }
-  public async FilterRecordsByChannelName(selectorVal: string, frame: any, Channel: string, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByChannelName(
+    selectorVal: string,
+    frame: any,
+    Channel: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.SLAFirstResponseTime, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChanelConversationDigitalMsgSelector = await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.SLAFirstResponseTime,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChanelConversationDigitalMsgSelector =
+        await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, {
+          timeout,
+        });
       await omniChanelConversationDigitalMsgSelector.click();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
 
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.DigitalMsgChannelSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentConversationInsightQueueName = await frame.waitForSelector(AgentChatConstants.DigitalMsgChannelSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.DigitalMsgChannelSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentConversationInsightQueueName = await frame.waitForSelector(
+        AgentChatConstants.DigitalMsgChannelSelector,
+        { timeout }
+      );
       await agentConversationInsightQueueName.click();
 
       await this.waitForScreenLoad(frame);
 
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsAgentInput = await frame.waitForSelector(AgentChatConstants.DigitalMsgChannelInputSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsAgentInput = await frame.waitForSelector(
+        AgentChatConstants.DigitalMsgChannelInputSelector,
+        { timeout }
+      );
       await agentInsightsAgentInput.fill("");
       await agentInsightsAgentInput.type(Channel, { delay: 100 });
 
       await this.waitForScreenLoad(frame);
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
 
-      const agentInsightsConversationStatusItem = await frame.waitForSelector(AgentChatConstants.DigitalMessageChannelSelector.replace("{0}", Channel), { timeout });
+      const agentInsightsConversationStatusItem = await frame.waitForSelector(
+        AgentChatConstants.DigitalMessageChannelSelector.replace(
+          "{0}",
+          Channel
+        ),
+        { timeout }
+      );
       await agentInsightsConversationStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationStatusItem.click();
 
       await this.waitForScreenLoad(frame);
       await omniChanelConversationDigitalMsgSelector.click();
-      await this.waitUntilFrameSelectorIsVisible(selectorVal, frame, Constants.One, timeout);
-      const queueSelector = await frame.waitForSelector(selectorVal, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        selectorVal,
+        frame,
+        Constants.One,
+        timeout
+      );
+      const queueSelector = await frame.waitForSelector(selectorVal, {
+        timeout,
+      });
       const entityItemText = await queueSelector.textContent();
       if (entityItemText.startsWith(Channel)) {
         return true;
       }
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByAgentName throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByAgentName throwing exception with message: ${error.message}`
+      );
     }
     return false;
   }
 
-  public async FilterItemsByDigitalMessage(frame: any, queueName: string, agentName: string) {
-    await this.FilterRecordsByDigitalMsgQueuesName(SelectorConstants.QueurDDSelector, frame, queueName);
-    await this.FilterRecordsByDigitalMsgAgentName(SelectorConstants.QueurDDSelector, frame, agentName);
+  public async FilterItemsByDigitalMessage(
+    frame: any,
+    queueName: string,
+    agentName: string
+  ) {
+    await this.FilterRecordsByDigitalMsgQueuesName(
+      SelectorConstants.QueurDDSelector,
+      frame,
+      queueName
+    );
+    await this.FilterRecordsByDigitalMsgAgentName(
+      SelectorConstants.QueurDDSelector,
+      frame,
+      agentName
+    );
   }
-  public async FilterRecordsByDigitalMsgQueuesName(selectorVal: string, frame: any, queueName: string, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByDigitalMsgQueuesName(
+    selectorVal: string,
+    frame: any,
+    queueName: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.SLAFirstResponseTime, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChannelDigitalMsgFirstResponse = await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.SLAFirstResponseTime,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChannelDigitalMsgFirstResponse = await frame.waitForSelector(
+        SelectorConstants.SLAFirstResponseTime,
+        { timeout }
+      );
       await omniChannelDigitalMsgFirstResponse.click();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
 
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.ConversationInsightsQueueSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentConversationInsightAgentName = await frame.waitForSelector(SelectorConstants.ConversationInsightsQueueSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.ConversationInsightsQueueSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentConversationInsightAgentName = await frame.waitForSelector(
+        SelectorConstants.ConversationInsightsQueueSelector,
+        { timeout }
+      );
       await agentConversationInsightAgentName.click();
 
       await this.waitForScreenLoad(frame);
 
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsAgentInput = await frame.waitForSelector(AgentChatConstants.DigitalMessageQueueInputSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsAgentInput = await frame.waitForSelector(
+        AgentChatConstants.DigitalMessageQueueInputSelector,
+        { timeout }
+      );
       await agentInsightsAgentInput.fill("");
       await agentInsightsAgentInput.type(queueName, { delay: 100 });
 
       await this.waitForScreenLoad(frame);
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
 
-      const agentInsightsConversationStatusItem = await frame.waitForSelector(AgentChatConstants.DigitalQueueSelector.replace("{0}", queueName), { timeout });
+      const agentInsightsConversationStatusItem = await frame.waitForSelector(
+        AgentChatConstants.DigitalQueueSelector.replace("{0}", queueName),
+        { timeout }
+      );
       await agentInsightsConversationStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationStatusItem.click();
 
       await this.waitForScreenLoad(frame);
       await omniChannelDigitalMsgFirstResponse.click();
-      await this.waitUntilFrameSelectorIsVisible(selectorVal, frame, Constants.One, timeout);
-      const queueSelector = await frame.waitForSelector(selectorVal, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        selectorVal,
+        frame,
+        Constants.One,
+        timeout
+      );
+      const queueSelector = await frame.waitForSelector(selectorVal, {
+        timeout,
+      });
       const entityItemText = await queueSelector.textContent();
       if (entityItemText.startsWith(queueName)) {
         return true;
       }
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByAgentName throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByAgentName throwing exception with message: ${error.message}`
+      );
     }
     return false;
   }
 
-  public async FilterRecordsByDigitalMsgAgentName(selectorVal: string, frame: any, agentName: string, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByDigitalMsgAgentName(
+    selectorVal: string,
+    frame: any,
+    agentName: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.SLAFirstResponseTime, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChannelDigitalMsgFirstResponse = await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.SLAFirstResponseTime,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChannelDigitalMsgFirstResponse = await frame.waitForSelector(
+        SelectorConstants.SLAFirstResponseTime,
+        { timeout }
+      );
       await omniChannelDigitalMsgFirstResponse.click();
       await this._page.waitForTimeout(Constants.DefaultTimeout);
 
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.ConversationInsightsAgentSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightQueuetName = await frame.waitForSelector(SelectorConstants.ConversationInsightsAgentSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.ConversationInsightsAgentSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightQueuetName = await frame.waitForSelector(
+        SelectorConstants.ConversationInsightsAgentSelector,
+        { timeout }
+      );
       await agentInsightQueuetName.click();
 
       await this.waitForScreenLoad(frame);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
       //await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsQueueInput = await frame.waitForSelector(AgentChatConstants.DigitalMessageAgentInputSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsQueueInput = await frame.waitForSelector(
+        AgentChatConstants.DigitalMessageAgentInputSelector,
+        { timeout }
+      );
       await agentInsightsQueueInput.fill("");
       await agentInsightsQueueInput.type(agentName, { delay: 100 });
 
       await this.waitForScreenLoad(frame);
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
 
-      const agentInsightsConversationQueueStatusItem = await frame.waitForSelector(AgentChatConstants.DigitalAgentSelector.replace("{0}", agentName), { timeout });
+      const agentInsightsConversationQueueStatusItem =
+        await frame.waitForSelector(
+          AgentChatConstants.DigitalAgentSelector.replace("{0}", agentName),
+          { timeout }
+        );
       await agentInsightsConversationQueueStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationQueueStatusItem.click();
 
       await omniChannelDigitalMsgFirstResponse.click();
-      const queueSelector = await frame.waitForSelector(selectorVal, { timeout });
+      const queueSelector = await frame.waitForSelector(selectorVal, {
+        timeout,
+      });
       const entityItemText = await queueSelector.textContent();
       if (entityItemText.startsWith(agentName)) {
         return true;
       }
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByQueueName throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByQueueName throwing exception with message: ${error.message}`
+      );
     }
     return false;
   }
@@ -12889,153 +13388,358 @@ export class AgentChat extends AgentPage {
 
   public async ValidateCloseChat(frame: any) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.CloseChatTitle, frame, Constants.One, Constants.DefaultTimeout);
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatTitle)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatAgent)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatStatus)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatAction)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatWorkStream)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatFirstresponsetime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatAvgresponsetime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatTotalresponsetime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatTotalwaittime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatHandletime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatWraptime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatSentiment)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatIncomingmessages)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatOutgoingresponses)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatTransfers)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatEscalations)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatCreatedon)).toBeTruthy();
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.CloseChatClosedon, frame, Constants.One, Constants.DefaultTimeout);
-      const CloseChatScroll = await frame.waitForSelector(SelectorConstants.CloseChatClosedon);
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.CloseChatTitle,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatTitle)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatAgent)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatStatus)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatAction)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatWorkStream)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.CloseChatFirstresponsetime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatAvgresponsetime)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.CloseChatTotalresponsetime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatTotalwaittime)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatHandletime)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatWraptime)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatSentiment)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatIncomingmessages)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.CloseChatOutgoingresponses
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatTransfers)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatEscalations)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatCreatedon)
+      ).toBeTruthy();
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.CloseChatClosedon,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const CloseChatScroll = await frame.waitForSelector(
+        SelectorConstants.CloseChatClosedon
+      );
       await CloseChatScroll.click();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatClosedon)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatConversationID)).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatClosedon)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatConversationID)
+      ).toBeTruthy();
       return true;
     } catch (error) {
-      console.log(`Method expectedFieldsInConversationForm throwing exception with message: ${error.message}`);
+      console.log(
+        `Method expectedFieldsInConversationForm throwing exception with message: ${error.message}`
+      );
     }
   }
 
-  public async FilterItemsByLiveChatAgent(frame: any, queueName: string, agentName: string) {
-    await this.FilterRecordsByLiveChatQueuesName(SelectorConstants.QueurDDSelector, frame, queueName);
-    await this.FilterRecordsByLiveChatAgentName(SelectorConstants.QueurDDSelector, frame, agentName);
+  public async FilterItemsByLiveChatAgent(
+    frame: any,
+    queueName: string,
+    agentName: string
+  ) {
+    await this.FilterRecordsByLiveChatQueuesName(
+      SelectorConstants.QueurDDSelector,
+      frame,
+      queueName
+    );
+    await this.FilterRecordsByLiveChatAgentName(
+      SelectorConstants.QueurDDSelector,
+      frame,
+      agentName
+    );
   }
-  public async FilterRecordsByLiveChatQueuesName(selectorVal: string, frame: any, queueName: string, maxCount = Constants.Three, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByLiveChatQueuesName(
+    selectorVal: string,
+    frame: any,
+    queueName: string,
+    maxCount = Constants.Three,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.ConversationInsightsQueueSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentConversationInsightAgentName = await frame.waitForSelector(AgentChatConstants.ConversationInsightsQueueSelector, { timeout });
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.ConversationInsightsQueueSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentConversationInsightAgentName = await frame.waitForSelector(
+        AgentChatConstants.ConversationInsightsQueueSelector,
+        { timeout }
+      );
       await agentConversationInsightAgentName.click();
       await this.waitForScreenLoad(frame);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsAgentInput = await frame.waitForSelector(AgentChatConstants.ConversationInsightQueueInputSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsAgentInput = await frame.waitForSelector(
+        AgentChatConstants.ConversationInsightQueueInputSelector,
+        { timeout }
+      );
       await agentInsightsAgentInput.fill("");
       await agentInsightsAgentInput.type(queueName, { delay: 100 });
       await this.waitForScreenLoad(frame);
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
-      const agentInsightsConversationStatusItem = await frame.waitForSelector(AgentChatConstants.FilterSinglevalueSelect.replace("{0}", queueName), { timeout });
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+      const agentInsightsConversationStatusItem = await frame.waitForSelector(
+        AgentChatConstants.FilterSinglevalueSelect.replace("{0}", queueName),
+        { timeout }
+      );
       await agentInsightsConversationStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationStatusItem.click();
       await this.waitForScreenLoad(frame);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.OnGoingChatsSelector, frame, Constants.One, Constants.DefaultTimeout);
-      await this.waitUntilFrameSelectorIsVisible(selectorVal, frame, Constants.One, timeout);
-      const queueSelector = await frame.waitForSelector(selectorVal, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.OnGoingChatsSelector,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        selectorVal,
+        frame,
+        Constants.One,
+        timeout
+      );
+      const queueSelector = await frame.waitForSelector(selectorVal, {
+        timeout,
+      });
       const entityItemText = await queueSelector.textContent();
       if (entityItemText.startsWith(queueName)) {
         return true;
       }
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByAgentName throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByAgentName throwing exception with message: ${error.message}`
+      );
     }
     return false;
   }
 
-  public async FilterItemsByTimezone(frame: any, channel: string, timezone: string, timeout: number = Constants.TenThousand) {
+  public async FilterItemsByTimezone(
+    frame: any,
+    channel: string,
+    timezone: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.ConversationInsightsTimezoneSelector, frame, Constants.One, Constants.DefaultTimeout);
-      const timezoneDropdownSelector = await frame.waitForSelector(AgentChatConstants.ConversationInsightsTimezoneSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.ConversationInsightsTimezoneSelector,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const timezoneDropdownSelector = await frame.waitForSelector(
+        AgentChatConstants.ConversationInsightsTimezoneSelector,
+        { timeout }
+      );
       await timezoneDropdownSelector.click();
       await this._page.waitForTimeout(Constants.DefaultTimeout);
       await this.waitForScreenLoad(frame);
       if (channel == Constants.LiveChat) {
-        const agentInsightsTimezoneInput = await frame.waitForSelector(AgentChatConstants.ConversationInsightTimezoneInputSelector, { timeout });
+        const agentInsightsTimezoneInput = await frame.waitForSelector(
+          AgentChatConstants.ConversationInsightTimezoneInputSelector,
+          { timeout }
+        );
         await agentInsightsTimezoneInput.fill("");
         await agentInsightsTimezoneInput.type(timezone, { delay: 100 });
-      }
-      else if (channel == Constants.Digital) {
-        const agentInsightsTimezoneInput = await frame.waitForSelector(AgentChatConstants.ConversationInsightTimezoneDigitalInputSelector, { timeout });
+      } else if (channel == Constants.Digital) {
+        const agentInsightsTimezoneInput = await frame.waitForSelector(
+          AgentChatConstants.ConversationInsightTimezoneDigitalInputSelector,
+          { timeout }
+        );
         await agentInsightsTimezoneInput.fill("");
         await agentInsightsTimezoneInput.type(timezone, { delay: 100 });
       }
       await this.waitForScreenLoad(frame);
       await this._page.waitForTimeout(Constants.TenThousand);
       if (timezone == Constants.Gmt530Timezone) {
-        const timezoneGmt530TimezoneSelector = await frame.waitForSelector(AgentChatConstants.gmt530Timezone, { timeout });
+        const timezoneGmt530TimezoneSelector = await frame.waitForSelector(
+          AgentChatConstants.gmt530Timezone,
+          { timeout }
+        );
         await timezoneGmt530TimezoneSelector.click();
-      }
-      else if (timezone == Constants.Gmt600Timezone) {
-        const timezoneGmt600TimezoneSelector = await frame.waitForSelector(AgentChatConstants.gmt600Timezone, { timeout });
+      } else if (timezone == Constants.Gmt600Timezone) {
+        const timezoneGmt600TimezoneSelector = await frame.waitForSelector(
+          AgentChatConstants.gmt600Timezone,
+          { timeout }
+        );
         await timezoneGmt600TimezoneSelector.click();
       }
       await this.waitForScreenLoad(frame);
-    }
-    catch (error) {
-      console.log(`Method FilterItemsByTimezone throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method FilterItemsByTimezone throwing exception with message: ${error.message}`
+      );
     }
     return false;
   }
-  public async FilterRecordsByLiveChatAgentName(selectorVal: string, frame: any, agentName: string, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByLiveChatAgentName(
+    selectorVal: string,
+    frame: any,
+    agentName: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
       await this._page.waitForTimeout(Constants.DefaultTimeout);
 
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.ConversationInsightsAgentSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightQueuetName = await frame.waitForSelector(AgentChatConstants.ConversationInsightsAgentSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.ConversationInsightsAgentSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightQueuetName = await frame.waitForSelector(
+        AgentChatConstants.ConversationInsightsAgentSelector,
+        { timeout }
+      );
       await agentInsightQueuetName.click();
 
       await this.waitForScreenLoad(frame);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsQueueInput = await frame.waitForSelector(AgentChatConstants.ConversationInsightAgentInputSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsQueueInput = await frame.waitForSelector(
+        AgentChatConstants.ConversationInsightAgentInputSelector,
+        { timeout }
+      );
       await agentInsightsQueueInput.fill("");
       await agentInsightsQueueInput.type(agentName, { delay: 100 });
 
       await this.waitForScreenLoad(frame);
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
 
-      const agentInsightsConversationQueueStatusItem = await frame.waitForSelector(AgentChatConstants.FilterSinglevalueSelect.replace("{0}", agentName), { timeout });
+      const agentInsightsConversationQueueStatusItem =
+        await frame.waitForSelector(
+          AgentChatConstants.FilterSinglevalueSelect.replace("{0}", agentName),
+          { timeout }
+        );
       await agentInsightsConversationQueueStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationQueueStatusItem.click();
       await this.waitForScreenLoad(frame);
-      const queueSelector = await frame.waitForSelector(selectorVal, { timeout });
+      const queueSelector = await frame.waitForSelector(selectorVal, {
+        timeout,
+      });
       const entityItemText = await queueSelector.textContent();
       if (entityItemText.startsWith(agentName)) {
         return true;
       }
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByQueueName throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByQueueName throwing exception with message: ${error.message}`
+      );
     }
     return false;
   }
 
-  public async validateChatTransferRate(frame: any, timeout: number = Constants.TenThousand) {
-    await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.TransferRateHeader, frame, Constants.One, timeout);
-    const headSelector = await frame.waitForSelector(AgentChatConstants.TransferRateHeader, { timeout });
+  public async validateChatTransferRate(
+    frame: any,
+    timeout: number = Constants.TenThousand
+  ) {
+    await this.waitUntilFrameSelectorIsVisible(
+      AgentChatConstants.TransferRateHeader,
+      frame,
+      Constants.One,
+      timeout
+    );
+    const headSelector = await frame.waitForSelector(
+      AgentChatConstants.TransferRateHeader,
+      { timeout }
+    );
     const entityItemText = await headSelector.textContent();
-    expect(entityItemText.includes(AgentChatConstants.TransferRateHeaderTitle)).toBeTruthy();
+    expect(
+      entityItemText.includes(AgentChatConstants.TransferRateHeaderTitle)
+    ).toBeTruthy();
   }
   public async ValidateOnGoingLiveChatWorkStream(frame: any, WSName: string) {
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.OngoingLiveChatWorkStream1, frame, Constants.Two, Constants.DefaultTimeout);
-    const WorkStreamName1 = await frame.waitForSelector(SelectorConstants.OngoingLiveChatWorkStream1);
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.OngoingLiveChatWorkStream1,
+      frame,
+      Constants.Two,
+      Constants.DefaultTimeout
+    );
+    const WorkStreamName1 = await frame.waitForSelector(
+      SelectorConstants.OngoingLiveChatWorkStream1
+    );
     const WorkStream1 = await WorkStreamName1.textContent();
     if (WorkStream1 == WSName) {
       return true;
@@ -13044,15 +13748,21 @@ export class AgentChat extends AgentPage {
   }
 
   public async ValidateLiveChatWorkStream(frame: any) {
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.CloseLiveChatWorkStream, frame, Constants.One, Constants.DefaultTimeout);
-    const WorkStreamName1 = await frame.waitForSelector(SelectorConstants.CloseLiveChatWorkStream);
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.CloseLiveChatWorkStream,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const WorkStreamName1 = await frame.waitForSelector(
+      SelectorConstants.CloseLiveChatWorkStream
+    );
     const WorkStream1 = await WorkStreamName1.innerText();
     if (WorkStream1 == SelectorConstants.LCWAutomatedWS) {
       return true;
     }
     return false;
   }
-
 
   public async NavigatetoConversationInsightsDigitalDashboard(frame: any) {
     await this.waitUntilSelectorIsVisible(
@@ -13082,24 +13792,33 @@ export class AgentChat extends AgentPage {
     await this.waitForScreenLoad(frame);
   }
 
-  public async ValidateTimezonesForConversationInsights(zone1: any, zone2: any, zone3: any, zone4: any,) {
+  public async ValidateTimezonesForConversationInsights(
+    zone1: any,
+    zone2: any,
+    zone3: any,
+    zone4: any
+  ) {
     if (zone1 === LiveChatConstants.AM) {
       expect(zone3.includes(LiveChatConstants.PM)).toBeTruthy();
-    }
-    else if (zone1 === LiveChatConstants.PM) {
+    } else if (zone1 === LiveChatConstants.PM) {
       expect(zone3.includes(LiveChatConstants.AM)).toBeTruthy();
-    }
-    else if (zone2 === LiveChatConstants.PM) {
+    } else if (zone2 === LiveChatConstants.PM) {
       expect(zone4.includes(LiveChatConstants.AM)).toBeTruthy();
-    }
-    else if (zone2 === LiveChatConstants.PM) {
+    } else if (zone2 === LiveChatConstants.PM) {
       expect(zone4.includes(LiveChatConstants.AM)).toBeTruthy();
     }
   }
 
   public async ValidateLiveChatStatus(frame: any) {
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.CloseLiveChatStatus, frame, Constants.One, Constants.DefaultTimeout);
-    const CloseStatus = await frame.waitForSelector(SelectorConstants.CloseLiveChatStatus);
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.CloseLiveChatStatus,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const CloseStatus = await frame.waitForSelector(
+      SelectorConstants.CloseLiveChatStatus
+    );
     const ChatTitle1 = await CloseStatus.innerText();
     if (ChatTitle1 == SelectorConstants.CloseChatClosed) {
       return true;
@@ -13107,45 +13826,117 @@ export class AgentChat extends AgentPage {
     return false;
   }
   public async VerifyDefaultSortOrder(frame: any) {
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.CloseChatClosedon, frame, Constants.One, Constants.DefaultTimeout);
-    const ClosedOn = await frame.waitForSelector(SelectorConstants.CloseChatClosedon);
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.CloseChatClosedon,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const ClosedOn = await frame.waitForSelector(
+      SelectorConstants.CloseChatClosedon
+    );
     await ClosedOn.click();
-    expect(await frame.waitForSelector(SelectorConstants.SortOrderSelector)).toBeTruthy();
+    expect(
+      await frame.waitForSelector(SelectorConstants.SortOrderSelector)
+    ).toBeTruthy();
     return true;
   }
 
   public async ValidateOngoingChats(frame: any) {
     try {
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatTitle)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatAgent)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatStatus)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatTimeincurrentstatus)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatAction)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatQueue)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatWorkStream)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatFirstresponsetime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatAvgresponsetime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatTotalresponsetime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatTotalwaittime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingCurrentwaittime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatHandletime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatWraptime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatSentiment)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatIncomingmessages)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatOutgoingresponses)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatTransfers)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatEscalations)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatCreatedon)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatConversationID)).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatTitle)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatAgent)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatStatus)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OnGoingChatTimeincurrentstatus
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatAction)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatQueue)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatWorkStream)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OnGoingChatFirstresponsetime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OnGoingChatAvgresponsetime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OnGoingChatTotalresponsetime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatTotalwaittime)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingCurrentwaittime)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatHandletime)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatWraptime)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatSentiment)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OnGoingChatIncomingmessages
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OnGoingChatOutgoingresponses
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatTransfers)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatEscalations)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatCreatedon)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatConversationID)
+      ).toBeTruthy();
       return true;
     } catch (error) {
-      console.log(`Method expectedFieldsInConversationForm throwing exception with message: ${error.message}`);
+      console.log(
+        `Method expectedFieldsInConversationForm throwing exception with message: ${error.message}`
+      );
     }
   }
 
   public async ValidateOnGoingLiveChatStatus(frame: any) {
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.OngoingLiveChatStatus, frame, Constants.One, Constants.DefaultTimeout);
-    const CloseStatus1 = await frame.waitForSelector(SelectorConstants.OngoingLiveChatStatus);
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.OngoingLiveChatStatus,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const CloseStatus1 = await frame.waitForSelector(
+      SelectorConstants.OngoingLiveChatStatus
+    );
     const ChatTitle1 = await CloseStatus1.innerText();
     if (ChatTitle1 == AgentChatConstants.Active) {
       return true;
@@ -13154,91 +13945,224 @@ export class AgentChat extends AgentPage {
   }
 
   public async VerifyDefaultCreateOnSort(frame: any) {
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.OnGoingChatCreatedon, frame, Constants.One, Constants.DefaultTimeout);
-    const ClosedOn = await frame.waitForSelector(SelectorConstants.OnGoingChatCreatedon);
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.OnGoingChatCreatedon,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const ClosedOn = await frame.waitForSelector(
+      SelectorConstants.OnGoingChatCreatedon
+    );
     await ClosedOn.click();
-    expect(await frame.waitForSelector(SelectorConstants.CreateOnSort)).toBeTruthy();
+    expect(
+      await frame.waitForSelector(SelectorConstants.CreateOnSort)
+    ).toBeTruthy();
     return true;
   }
   public async FilterItemsByChannelOverviewPage(frame: any, Channel: string) {
-    await this.FilterRecordsByChannelNameOverviewPage(SelectorConstants.QueurDDSelector, frame, Channel);
+    await this.FilterRecordsByChannelNameOverviewPage(
+      SelectorConstants.QueurDDSelector,
+      frame,
+      Channel
+    );
   }
 
-  public async FilterRecordsByChannelNameOverviewPage(selectorVal: string, frame: any, Channel: string, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByChannelNameOverviewPage(
+    selectorVal: string,
+    frame: any,
+    Channel: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.SLAFirstResponseTime, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChanelConversationDigitalMsgSelector = await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.SLAFirstResponseTime,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChanelConversationDigitalMsgSelector =
+        await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, {
+          timeout,
+        });
       await omniChanelConversationDigitalMsgSelector.click();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.DigitalMsgChannelSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentConversationInsightQueueName = await frame.waitForSelector(AgentChatConstants.DigitalMsgChannelSelector, { timeout });
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.DigitalMsgChannelSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentConversationInsightQueueName = await frame.waitForSelector(
+        AgentChatConstants.DigitalMsgChannelSelector,
+        { timeout }
+      );
       await agentConversationInsightQueueName.click();
       await this.waitForScreenLoad(frame);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsAgentInput = await frame.waitForSelector(AgentChatConstants.IntraDayInsightQueueInputSelectorOverview, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsAgentInput = await frame.waitForSelector(
+        AgentChatConstants.IntraDayInsightQueueInputSelectorOverview,
+        { timeout }
+      );
       await agentInsightsAgentInput.fill("");
       await agentInsightsAgentInput.type(Channel, { delay: 100 });
       await this.waitForScreenLoad(frame);
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
-      const agentInsightsConversationStatusItem = await frame.waitForSelector(AgentChatConstants.DigitalMessageChannelSelector.replace("{0}", Channel), { timeout });
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+      const agentInsightsConversationStatusItem = await frame.waitForSelector(
+        AgentChatConstants.DigitalMessageChannelSelector.replace(
+          "{0}",
+          Channel
+        ),
+        { timeout }
+      );
       await agentInsightsConversationStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationStatusItem.click();
       await this.waitForScreenLoad(frame);
       await omniChanelConversationDigitalMsgSelector.click();
-      await this.waitUntilFrameSelectorIsVisible(selectorVal, frame, Constants.One, timeout);
-      const queueSelector = await frame.waitForSelector(selectorVal, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        selectorVal,
+        frame,
+        Constants.One,
+        timeout
+      );
+      const queueSelector = await frame.waitForSelector(selectorVal, {
+        timeout,
+      });
       const entityItemText = await queueSelector.textContent();
       if (entityItemText.startsWith(Channel)) {
         return true;
       }
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByAgentName throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByAgentName throwing exception with message: ${error.message}`
+      );
     }
     return false;
   }
 
-
-  public async FilterItemsByLiveChatAgentForAvgHandleTime(frame: any, queueName: string) {
-    await this.FilterRecordsByLiveChatQueuesName(SelectorConstants.QueurDDSelector, frame, queueName);
+  public async FilterItemsByLiveChatAgentForAvgHandleTime(
+    frame: any,
+    queueName: string
+  ) {
+    await this.FilterRecordsByLiveChatQueuesName(
+      SelectorConstants.QueurDDSelector,
+      frame,
+      queueName
+    );
   }
 
-  public async FilterItemsByAgentAtAllOverviewPageForAvgHandleTime(frame: any, QueueName: string) {
-    await this.FilterRecordsByConversationOverViewPageLiveChatAvgHandleTime(frame, QueueName);
+  public async FilterItemsByAgentAtAllOverviewPageForAvgHandleTime(
+    frame: any,
+    QueueName: string
+  ) {
+    await this.FilterRecordsByConversationOverViewPageLiveChatAvgHandleTime(
+      frame,
+      QueueName
+    );
   }
-  public async FilterRecordsByConversationOverViewPageLiveChatAvgHandleTime(frame: any, queueName: string, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByConversationOverViewPageLiveChatAvgHandleTime(
+    frame: any,
+    queueName: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.SLAFirstResponseTime, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChanelConversationDigitalMsgSelector = await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.SLAFirstResponseTime,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChanelConversationDigitalMsgSelector =
+        await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, {
+          timeout,
+        });
       await omniChanelConversationDigitalMsgSelector.click();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.ConversationInsightLiveChatQueueSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentConversationInsightQueueName = await frame.waitForSelector(AgentChatConstants.ConversationInsightLiveChatQueueSelector, { timeout });
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.ConversationInsightLiveChatQueueSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentConversationInsightQueueName = await frame.waitForSelector(
+        AgentChatConstants.ConversationInsightLiveChatQueueSelector,
+        { timeout }
+      );
       await agentConversationInsightQueueName.click();
       await this.waitForScreenLoad(frame);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const ConversationQueueInput = await frame.waitForSelector(AgentChatConstants.ConversationInsightLiveChatQueueInputSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const ConversationQueueInput = await frame.waitForSelector(
+        AgentChatConstants.ConversationInsightLiveChatQueueInputSelector,
+        { timeout }
+      );
       await ConversationQueueInput.fill("");
       await ConversationQueueInput.type(queueName, { delay: 100 });
       await this.waitForScreenLoad(frame);
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
-      const agentInsightsConversationStatusItem = await frame.waitForSelector(AgentChatConstants.DigitalQueueSelector.replace("{0}", queueName), { timeout });
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+      const agentInsightsConversationStatusItem = await frame.waitForSelector(
+        AgentChatConstants.DigitalQueueSelector.replace("{0}", queueName),
+        { timeout }
+      );
       await agentInsightsConversationStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationStatusItem.click();
       await this.waitForScreenLoad(frame);
-      const omniChanelConversationDigitalMsgSelector1 = await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, { timeout });
+      const omniChanelConversationDigitalMsgSelector1 =
+        await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, {
+          timeout,
+        });
       await omniChanelConversationDigitalMsgSelector1.click();
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByAgentName throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByAgentName throwing exception with message: ${error.message}`
+      );
     }
     return false;
   }
@@ -13249,7 +14173,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip = await frame.waitForSelector(SelectorConstants.AvgHandleTimeTooltip);
+    const Tooltip = await frame.waitForSelector(
+      SelectorConstants.AvgHandleTimeTooltip
+    );
     await Tooltip.hover();
     return true;
   }
@@ -13260,7 +14186,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip = await frame.waitForSelector(SelectorConstants.LivechatAvgHandleTimeToolTip);
+    const Tooltip = await frame.waitForSelector(
+      SelectorConstants.LivechatAvgHandleTimeToolTip
+    );
     await Tooltip.hover();
     return true;
   }
@@ -13318,59 +14246,169 @@ export class AgentChat extends AgentPage {
 
   public async ValidateLiveChatClosedConversation(frame: any) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.CloseChatTitle, frame, Constants.One, Constants.DefaultTimeout);
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatTitle)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatAgent)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatStatus)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatAction)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatWorkStream)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatFirstresponsetime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatAvgresponsetime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatTotalresponsetime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatHandletime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatWraptime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatSentiment)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatIncomingmessages)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatOutgoingresponses)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatTransfers)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatEscalations)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatCreatedon)).toBeTruthy();
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.CloseChatClosedon, frame, Constants.One, Constants.DefaultTimeout);
-      const CloseChatScroll = await frame.waitForSelector(SelectorConstants.CloseChatClosedon);
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.CloseChatTitle,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatTitle)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatAgent)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatStatus)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatAction)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatWorkStream)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.CloseChatFirstresponsetime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatAvgresponsetime)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.CloseChatTotalresponsetime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatHandletime)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatWraptime)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatSentiment)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatIncomingmessages)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.CloseChatOutgoingresponses
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatTransfers)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatEscalations)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatCreatedon)
+      ).toBeTruthy();
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.CloseChatClosedon,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const CloseChatScroll = await frame.waitForSelector(
+        SelectorConstants.CloseChatClosedon
+      );
       await CloseChatScroll.click();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatClosedon)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.CloseChatConversationID)).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatClosedon)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.CloseChatConversationID)
+      ).toBeTruthy();
       return true;
     } catch (error) {
-      console.log(`Method expectedFieldsInConversationForm throwing exception with message: ${error.message}`);
+      console.log(
+        `Method expectedFieldsInConversationForm throwing exception with message: ${error.message}`
+      );
     }
   }
 
   public async ValidateOngoingChatsLiveChat(frame: any) {
     try {
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatTitle)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatAgent)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatStatus)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatTimeincurrentstatus)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatAction)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatQueue)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatWorkStream)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatFirstresponsetime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatAvgresponsetime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatTotalresponsetime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatTotalwaittime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatHandletime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatWraptime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatSentiment)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatIncomingmessages)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatOutgoingresponses)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatTransfers)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatEscalations)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatCreatedon)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OnGoingChatConversationID)).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatTitle)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatAgent)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatStatus)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OnGoingChatTimeincurrentstatus
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatAction)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatQueue)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatWorkStream)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OnGoingChatFirstresponsetime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OnGoingChatAvgresponsetime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OnGoingChatTotalresponsetime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatTotalwaittime)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatHandletime)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatWraptime)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatSentiment)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OnGoingChatIncomingmessages
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OnGoingChatOutgoingresponses
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatTransfers)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatEscalations)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatCreatedon)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OnGoingChatConversationID)
+      ).toBeTruthy();
       return true;
     } catch (error) {
-      console.log(`Method expectedFieldsInConversationForm throwing exception with message: ${error.message}`);
+      console.log(
+        `Method expectedFieldsInConversationForm throwing exception with message: ${error.message}`
+      );
     }
   }
 
@@ -13402,8 +14440,7 @@ export class AgentChat extends AgentPage {
         AgentChatConstants.DotNotification
       );
       return collapse;
-    }
-    catch (error) {
+    } catch (error) {
       return false;
     }
   }
@@ -13435,13 +14472,13 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.FiveThousand
     );
-    const li = await this.Page
-      .waitForSelector(AgentConversationPageConstants.Visitor2Name)
-      .catch(() => {
-        throw new Error(
-          `Can't verify that ConversationControl window contains Sentiment status at the header.`
-        );
-      });
+    const li = await this.Page.waitForSelector(
+      AgentConversationPageConstants.Visitor2Name
+    ).catch(() => {
+      throw new Error(
+        `Can't verify that ConversationControl window contains Sentiment status at the header.`
+      );
+    });
     const liTitle = await li.textContent();
     const selectTable = await this.Page.waitForSelector(
       SelectorConstants.VisitorSession2.replace("{0}", liTitle)
@@ -13449,94 +14486,234 @@ export class AgentChat extends AgentPage {
     await selectTable.click();
   }
 
-
-  public async FilterItemsByConversationInsigitsOverviewPageLiveChatQueueMetrics(frame: any, queueName: string) {
-    await this.FilterRecordsByConversationOverViewPageLiveChatQueuesNameMetrics(frame, queueName);
+  public async FilterItemsByConversationInsigitsOverviewPageLiveChatQueueMetrics(
+    frame: any,
+    queueName: string
+  ) {
+    await this.FilterRecordsByConversationOverViewPageLiveChatQueuesNameMetrics(
+      frame,
+      queueName
+    );
   }
 
-  public async FilterRecordsByConversationOverViewPageLiveChatQueuesNameMetrics(frame: any, queueName: string, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByConversationOverViewPageLiveChatQueuesNameMetrics(
+    frame: any,
+    queueName: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.SLAFirstResponseTime, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChanelConversationDigitalMsgSelector = await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.SLAFirstResponseTime,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChanelConversationDigitalMsgSelector =
+        await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, {
+          timeout,
+        });
       await omniChanelConversationDigitalMsgSelector.click();
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.ConversationInsightLiveChatQueueSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentConversationInsightQueueName = await frame.waitForSelector(AgentChatConstants.ConversationInsightLiveChatQueueSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.ConversationInsightLiveChatQueueSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentConversationInsightQueueName = await frame.waitForSelector(
+        AgentChatConstants.ConversationInsightLiveChatQueueSelector,
+        { timeout }
+      );
       await agentConversationInsightQueueName.click();
       await this.waitForScreenLoad(frame);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const ConversationQueueInput = await frame.waitForSelector(AgentChatConstants.ConversationInsightLiveChatQueueInputSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const ConversationQueueInput = await frame.waitForSelector(
+        AgentChatConstants.ConversationInsightLiveChatQueueInputSelector,
+        { timeout }
+      );
       await ConversationQueueInput.fill("");
       await ConversationQueueInput.type(queueName, { delay: 100 });
       await this.waitForScreenLoad(frame);
-      const agentInsightsConversationStatusItem = await frame.waitForSelector(AgentChatConstants.DigitalQueueSelector.replace("{0}", queueName), { timeout });
+      const agentInsightsConversationStatusItem = await frame.waitForSelector(
+        AgentChatConstants.DigitalQueueSelector.replace("{0}", queueName),
+        { timeout }
+      );
       await agentInsightsConversationStatusItem.focus();
       await agentInsightsConversationStatusItem.click();
       await this.waitForScreenLoad(frame);
-      const omniChanelConversationDigitalMsgSelector1 = await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, { timeout });
+      const omniChanelConversationDigitalMsgSelector1 =
+        await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, {
+          timeout,
+        });
       await omniChanelConversationDigitalMsgSelector1.click();
-
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByAgentName throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByAgentName throwing exception with message: ${error.message}`
+      );
     }
     return false;
   }
 
   public async FilterItemsByChannelDigitalMsgPage(frame: any, Channel: string) {
-    await this.FilterRecordsByChannelNameDigitalMsgPage(SelectorConstants.QueurDDSelector, frame, Channel);
+    await this.FilterRecordsByChannelNameDigitalMsgPage(
+      SelectorConstants.QueurDDSelector,
+      frame,
+      Channel
+    );
   }
 
-  public async FilterRecordsByChannelNameDigitalMsgPage(selectorVal: string, frame: any, Channel: string, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByChannelNameDigitalMsgPage(
+    selectorVal: string,
+    frame: any,
+    Channel: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.SLAFirstResponseTime, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChanelConversationDigitalMsgSelector = await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.SLAFirstResponseTime,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChanelConversationDigitalMsgSelector =
+        await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, {
+          timeout,
+        });
       await omniChanelConversationDigitalMsgSelector.click();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.DigitalMsgChannelSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentConversationInsightQueueName = await frame.waitForSelector(AgentChatConstants.DigitalMsgChannelSelector, { timeout });
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.DigitalMsgChannelSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentConversationInsightQueueName = await frame.waitForSelector(
+        AgentChatConstants.DigitalMsgChannelSelector,
+        { timeout }
+      );
       await agentConversationInsightQueueName.click();
       await this.waitForScreenLoad(frame);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsAgentInput = await frame.waitForSelector(AgentChatConstants.IntraDayInsightQueueInputSelectorMsg, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsAgentInput = await frame.waitForSelector(
+        AgentChatConstants.IntraDayInsightQueueInputSelectorMsg,
+        { timeout }
+      );
       await agentInsightsAgentInput.fill("");
       await agentInsightsAgentInput.type(Channel, { delay: 100 });
       await this.waitForScreenLoad(frame);
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
-      const agentInsightsConversationStatusItem = await frame.waitForSelector(AgentChatConstants.DigitalMessageChannelSelector.replace("{0}", Channel), { timeout });
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+      const agentInsightsConversationStatusItem = await frame.waitForSelector(
+        AgentChatConstants.DigitalMessageChannelSelector.replace(
+          "{0}",
+          Channel
+        ),
+        { timeout }
+      );
       await agentInsightsConversationStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationStatusItem.click();
       await this.waitForScreenLoad(frame);
       await omniChanelConversationDigitalMsgSelector.click();
-      await this.waitUntilFrameSelectorIsVisible(selectorVal, frame, Constants.One, timeout);
-      const queueSelector = await frame.waitForSelector(selectorVal, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        selectorVal,
+        frame,
+        Constants.One,
+        timeout
+      );
+      const queueSelector = await frame.waitForSelector(selectorVal, {
+        timeout,
+      });
       const entityItemText = await queueSelector.textContent();
       if (entityItemText.startsWith(Channel)) {
         return true;
       }
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByAgentName throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByAgentName throwing exception with message: ${error.message}`
+      );
     }
     return false;
   }
-  public async ValidateSLAResponseTime(frame: any, timeout: number = Constants.TenThousand) {
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.SLAFirstResponseTimeMsg, frame, Constants.One, Constants.DefaultTimeout);
-    expect(await frame.waitForSelector(SelectorConstants.SLAFirstResponseTimeMsg)).toBeTruthy();
-    expect(await frame.waitForSelector(SelectorConstants.SLAResponseTimeMsg)).toBeTruthy();
-    expect(await frame.waitForSelector(SelectorConstants.SLAResponseTimeMsgHeader)).toBeTruthy();
+  public async ValidateSLAResponseTime(
+    frame: any,
+    timeout: number = Constants.TenThousand
+  ) {
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.SLAFirstResponseTimeMsg,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    expect(
+      await frame.waitForSelector(SelectorConstants.SLAFirstResponseTimeMsg)
+    ).toBeTruthy();
+    expect(
+      await frame.waitForSelector(SelectorConstants.SLAResponseTimeMsg)
+    ).toBeTruthy();
+    expect(
+      await frame.waitForSelector(SelectorConstants.SLAResponseTimeMsgHeader)
+    ).toBeTruthy();
     return true;
   }
 
-  public async ValidateAvgResponseTime(frame: any, timeout: number = Constants.TenThousand) {
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.AvgResponseTimeMsgHeader, frame, Constants.One, Constants.DefaultTimeout);
-    expect(await frame.waitForSelector(SelectorConstants.AvgResponseTimeMsgHeader)).toBeTruthy();
+  public async ValidateAvgResponseTime(
+    frame: any,
+    timeout: number = Constants.TenThousand
+  ) {
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.AvgResponseTimeMsgHeader,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    expect(
+      await frame.waitForSelector(SelectorConstants.AvgResponseTimeMsgHeader)
+    ).toBeTruthy();
     return true;
   }
 
@@ -13558,7 +14735,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip = await frame.waitForSelector(SelectorConstants.AvghandletimeOverView);
+    const Tooltip = await frame.waitForSelector(
+      SelectorConstants.AvghandletimeOverView
+    );
     await Tooltip.hover();
     await this.waitUntilFrameSelectorIsVisible(
       SelectorConstants.AvgwaittimeOverView,
@@ -13566,7 +14745,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip1 = await frame.waitForSelector(SelectorConstants.AvgwaittimeOverView);
+    const Tooltip1 = await frame.waitForSelector(
+      SelectorConstants.AvgwaittimeOverView
+    );
     await Tooltip1.hover();
     await this.waitUntilFrameSelectorIsVisible(
       SelectorConstants.ChatabandonrateView,
@@ -13574,7 +14755,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip2 = await frame.waitForSelector(SelectorConstants.ChatabandonrateView);
+    const Tooltip2 = await frame.waitForSelector(
+      SelectorConstants.ChatabandonrateView
+    );
     await Tooltip2.hover();
     return true;
   }
@@ -13586,7 +14769,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip = await frame.waitForSelector(SelectorConstants.AvghandletimeLivechat);
+    const Tooltip = await frame.waitForSelector(
+      SelectorConstants.AvghandletimeLivechat
+    );
     await Tooltip.hover();
     await this.waitUntilFrameSelectorIsVisible(
       SelectorConstants.AvgwaittimeLivechat,
@@ -13594,7 +14779,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip1 = await frame.waitForSelector(SelectorConstants.AvgwaittimeLivechat);
+    const Tooltip1 = await frame.waitForSelector(
+      SelectorConstants.AvgwaittimeLivechat
+    );
     await Tooltip1.hover();
     await this.waitUntilFrameSelectorIsVisible(
       SelectorConstants.AvgwraptimeLivechat,
@@ -13602,7 +14789,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip2 = await frame.waitForSelector(SelectorConstants.AvgwraptimeLivechat);
+    const Tooltip2 = await frame.waitForSelector(
+      SelectorConstants.AvgwraptimeLivechat
+    );
     await Tooltip2.hover();
     await this.waitUntilFrameSelectorIsVisible(
       SelectorConstants.ChatabandonratLivechat,
@@ -13610,7 +14799,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip3 = await frame.waitForSelector(SelectorConstants.ChatabandonratLivechat);
+    const Tooltip3 = await frame.waitForSelector(
+      SelectorConstants.ChatabandonratLivechat
+    );
     await Tooltip3.hover();
     await this.waitUntilFrameSelectorIsVisible(
       SelectorConstants.Transferratebyqueue,
@@ -13618,7 +14809,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip4 = await frame.waitForSelector(SelectorConstants.Transferratebyqueue);
+    const Tooltip4 = await frame.waitForSelector(
+      SelectorConstants.Transferratebyqueue
+    );
     await Tooltip4.hover();
     return true;
   }
@@ -13637,53 +14830,121 @@ export class AgentChat extends AgentPage {
     await this.waitForScreenLoad(frame);
   }
 
-  public async FilterRecordsByLiveChatQueuesNameOverviewPage(selectorVal: string, frame: any, queueName: string, maxCount = Constants.Three, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByLiveChatQueuesNameOverviewPage(
+    selectorVal: string,
+    frame: any,
+    queueName: string,
+    maxCount = Constants.Three,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.OnGoingChatsSelector, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChanelAgentInsightSelector = await frame.waitForSelector(AgentChatConstants.OnGoingChatsSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.OnGoingChatsSelector,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChanelAgentInsightSelector = await frame.waitForSelector(
+        AgentChatConstants.OnGoingChatsSelector,
+        { timeout }
+      );
       await omniChanelAgentInsightSelector.click();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
 
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.ConversationInsightsQueueSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentConversationInsightAgentName = await frame.waitForSelector(AgentChatConstants.ConversationInsightsQueueSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.ConversationInsightsQueueSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentConversationInsightAgentName = await frame.waitForSelector(
+        AgentChatConstants.ConversationInsightsQueueSelector,
+        { timeout }
+      );
       await agentConversationInsightAgentName.click();
 
       await this.waitForScreenLoad(frame);
 
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsAgentInput = await frame.waitForSelector(AgentChatConstants.ConversationInsightQueueInputSelectorOverview, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsAgentInput = await frame.waitForSelector(
+        AgentChatConstants.ConversationInsightQueueInputSelectorOverview,
+        { timeout }
+      );
       await agentInsightsAgentInput.fill("");
       await agentInsightsAgentInput.type(queueName, { delay: 100 });
 
       await this.waitForScreenLoad(frame);
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
 
-      const agentInsightsConversationStatusItem = await frame.waitForSelector(AgentChatConstants.IntraDayInsightConversationStatusQueueSelector, { timeout });
+      const agentInsightsConversationStatusItem = await frame.waitForSelector(
+        AgentChatConstants.IntraDayInsightConversationStatusQueueSelector,
+        { timeout }
+      );
       await agentInsightsConversationStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationStatusItem.click();
 
       await this.waitForScreenLoad(frame);
       await omniChanelAgentInsightSelector.click();
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.OnGoingChatsSelector, frame, Constants.One, Constants.DefaultTimeout);
-      await this.waitUntilFrameSelectorIsVisible(selectorVal, frame, Constants.One, timeout);
-      const queueSelector = await frame.waitForSelector(selectorVal, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.OnGoingChatsSelector,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        selectorVal,
+        frame,
+        Constants.One,
+        timeout
+      );
+      const queueSelector = await frame.waitForSelector(selectorVal, {
+        timeout,
+      });
       const entityItemText = await queueSelector.textContent();
       if (entityItemText.startsWith(queueName)) {
         return true;
       }
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByAgentName throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByAgentName throwing exception with message: ${error.message}`
+      );
     }
     return false;
   }
 
-  public async FilterItemsConversationByLiveChatAgent(frame: any, queueName: string) {
-    await this.FilterRecordsByLiveChatQueuesName(SelectorConstants.QueurDDSelector, frame, queueName)
+  public async FilterItemsConversationByLiveChatAgent(
+    frame: any,
+    queueName: string
+  ) {
+    await this.FilterRecordsByLiveChatQueuesName(
+      SelectorConstants.QueurDDSelector,
+      frame,
+      queueName
+    );
   }
 
   public async ValidateOverViewKeyBoardAccesbility(frame: any) {
@@ -13693,7 +14954,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip1 = await frame.waitForSelector(SelectorConstants.AvghandletimeKeyboard);
+    const Tooltip1 = await frame.waitForSelector(
+      SelectorConstants.AvghandletimeKeyboard
+    );
     await Tooltip1.click();
     await this.Page.keyboard.press("Enter");
     await this.Page.keyboard.press("Tab");
@@ -13703,7 +14966,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip2 = await frame.waitForSelector(SelectorConstants.AvgwaittimeKeyboard);
+    const Tooltip2 = await frame.waitForSelector(
+      SelectorConstants.AvgwaittimeKeyboard
+    );
     await Tooltip2.click();
     await this.Page.keyboard.press("Enter");
     await this.Page.keyboard.press("Tab");
@@ -13713,7 +14978,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip3 = await frame.waitForSelector(SelectorConstants.ChatabandonrateKeyboard);
+    const Tooltip3 = await frame.waitForSelector(
+      SelectorConstants.ChatabandonrateKeyboard
+    );
     await Tooltip3.click();
     await this.Page.keyboard.press("Enter");
     return true;
@@ -13726,7 +14993,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip1 = await frame.waitForSelector(SelectorConstants.AvghandletimeLiveChatKeyboard);
+    const Tooltip1 = await frame.waitForSelector(
+      SelectorConstants.AvghandletimeLiveChatKeyboard
+    );
     await Tooltip1.click();
     await this.Page.keyboard.press("Enter");
     await this.Page.keyboard.press("Tab");
@@ -13736,7 +15005,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip2 = await frame.waitForSelector(SelectorConstants.AvgwaittimeLiveChatKeyboard);
+    const Tooltip2 = await frame.waitForSelector(
+      SelectorConstants.AvgwaittimeLiveChatKeyboard
+    );
     await Tooltip2.click();
     await this.Page.keyboard.press("Enter");
     await this.Page.keyboard.press("Tab");
@@ -13746,7 +15017,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip3 = await frame.waitForSelector(SelectorConstants.AvgwraptimeLiveChatKeyboard);
+    const Tooltip3 = await frame.waitForSelector(
+      SelectorConstants.AvgwraptimeLiveChatKeyboard
+    );
     await Tooltip3.click();
     await this.Page.keyboard.press("Enter");
     await this.Page.keyboard.press("Tab");
@@ -13756,7 +15029,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip4 = await frame.waitForSelector(SelectorConstants.ChatabandonrateLiveChatKeyboard);
+    const Tooltip4 = await frame.waitForSelector(
+      SelectorConstants.ChatabandonrateLiveChatKeyboard
+    );
     await Tooltip4.click();
     await this.Page.keyboard.press("Enter");
     await this.Page.keyboard.press("Tab");
@@ -13766,7 +15041,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.DefaultTimeout
     );
-    const Tooltip5 = await frame.waitForSelector(SelectorConstants.TransferratebyqueueKeyboard);
+    const Tooltip5 = await frame.waitForSelector(
+      SelectorConstants.TransferratebyqueueKeyboard
+    );
     await Tooltip5.click();
     await this.Page.keyboard.press("Enter");
     return true;
@@ -13816,200 +15093,465 @@ export class AgentChat extends AgentPage {
     await this.waitForScreenLoad(frame);
   }
 
-  public async FilterItemsByAgentAtAllOverviewPageForAgent(frame: any, agentName: string) {
+  public async FilterItemsByAgentAtAllOverviewPageForAgent(
+    frame: any,
+    agentName: string
+  ) {
     await this.FilterRecordsByAgentNameOverViewall(frame, agentName);
   }
 
-  public async FilterItemsByAgentAtAllOverviewPageForQueue(frame: any, QueueName: string) {
+  public async FilterItemsByAgentAtAllOverviewPageForQueue(
+    frame: any,
+    QueueName: string
+  ) {
     await this.FilterRecordsByQueuesNameForOverViewPage(frame, QueueName);
   }
 
-  public async FilterItemsByQueueAtAllOverviewPage(frame: any, agentName: string) {
-    await this.FilterRecordsByQueuesName(SelectorConstants.QueurDDSelector, frame, agentName);
+  public async FilterItemsByQueueAtAllOverviewPage(
+    frame: any,
+    agentName: string
+  ) {
+    await this.FilterRecordsByQueuesName(
+      SelectorConstants.QueurDDSelector,
+      frame,
+      agentName
+    );
   }
 
   public async FilterItemsByAgentLiveChatmethod(frame: any, agentName: string) {
-    await this.FilterRecordsByAgentNameLiveChat(SelectorConstants.QueurDDSelector, frame, agentName);
+    await this.FilterRecordsByAgentNameLiveChat(
+      SelectorConstants.QueurDDSelector,
+      frame,
+      agentName
+    );
   }
 
-  public async FilterItemsByQueuetLiveChatmethod(frame: any, QueueName: string) {
+  public async FilterItemsByQueuetLiveChatmethod(
+    frame: any,
+    QueueName: string
+  ) {
     await this.FilterRecordsByQueuesNameLiveChat(frame, QueueName);
   }
 
-  public async FilterItemsByAgentDigitalMsgmethod(frame: any, agentName: string) {
+  public async FilterItemsByAgentDigitalMsgmethod(
+    frame: any,
+    agentName: string
+  ) {
     await this.FilterRecordsByAgentNameDigitalMsg(frame, agentName);
   }
 
-  public async FilterItemsByQueueDigitalMsgmethod(frame: any, QueueName: string) {
+  public async FilterItemsByQueueDigitalMsgmethod(
+    frame: any,
+    QueueName: string
+  ) {
     await this.FilterRecordsByQueuesNameDigitalMsg(frame, QueueName);
   }
 
-  public async FilterRecordsByAgentNameLiveChat(selectorVal: string, frame: any, agentName: string, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByAgentNameLiveChat(
+    selectorVal: string,
+    frame: any,
+    agentName: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.DurationSelector, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChanelAgentInsightSelector = await frame.waitForSelector(AgentChatConstants.DurationSelector, { timeout });
-      await omniChanelAgentInsightSelector.click();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
-
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightsAgentSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsAgentName = await frame.waitForSelector(AgentChatConstants.AgentInsightsAgentSelector, { timeout });
-      await agentInsightsAgentName.click();
-
-      await this.waitForScreenLoad(frame);
-
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsAgentInput = await frame.waitForSelector(AgentChatConstants.AgentInsightAgentInputSelectorLivechat, { timeout });
-      await agentInsightsAgentInput.fill("");
-      await agentInsightsAgentInput.type(agentName, { delay: 100 });
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
-
-      const agentInsightsConversationStatusItem = await frame.waitForSelector(AgentChatConstants.IntraDayInsightConversationStatusQueueSelector, { timeout });
-      await agentInsightsConversationStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
-      await agentInsightsConversationStatusItem.click();
-
-      await this.waitForScreenLoad(frame);
-      await omniChanelAgentInsightSelector.click();
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByAgentNameLiveChat throwing exception with message: ${error.message}`);
-    }
-    return false;
-  }
-
-  public async FilterRecordsByQueuesNameLiveChat(frame: any, queueName: string, timeout: number = Constants.TenThousand) {
-    try {
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightsQueueSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightQueuetName = await frame.waitForSelector(AgentChatConstants.AgentInsightsQueueSelector, { timeout });
-      await agentInsightQueuetName.click();
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueInputSelectorLivechat, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsQueueInput = await frame.waitForSelector(AgentChatConstants.AgentInsightQueueInputSelectorLivechat, { timeout });
-      const agentInsightsConversationQueueStatusItem1 = await frame.waitForSelector(AgentChatConstants.AgentInsightLivechatQueueSelectAllSelector, { timeout });
-      await agentInsightsConversationQueueStatusItem1.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
-      const agentInsightsQueueInput1 = await frame.waitForSelector(AgentChatConstants.AgentInsightQueueInputSelectorLivechat, { timeout });
-      await agentInsightsConversationQueueStatusItem1.click();
-      await agentInsightsQueueInput.fill("");
-      await agentInsightsQueueInput.type(queueName, { delay: 100 });
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
-
-      const agentInsightsConversationQueueStatusItem = await frame.waitForSelector(AgentChatConstants.AgentInsightConversationStatusQueueSelector, { timeout });
-      await agentInsightsConversationQueueStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
-      await agentInsightsConversationQueueStatusItem.click();
-
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.DurationSelector, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChanelAgentInsightSelector = await frame.waitForSelector(AgentChatConstants.DurationSelector, { timeout });
-      await omniChanelAgentInsightSelector.click();
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByQueuesNameLiveChat throwing exception with message: ${error.message}`);
-    }
-    return false;
-  }
-
-  public async FilterRecordsByAgentNameDigitalMsg(frame: any, agentName: string, timeout: number = Constants.TenThousand) {
-    try {
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.DurationSelector, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChanelAgentInsightSelector = await frame.waitForSelector(AgentChatConstants.DurationSelector, { timeout });
-      await omniChanelAgentInsightSelector.click();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
-
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightsAgentSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsAgentName = await frame.waitForSelector(AgentChatConstants.AgentInsightsAgentSelector, { timeout });
-      await agentInsightsAgentName.click();
-
-      await this.waitForScreenLoad(frame);
-
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsAgentInput = await frame.waitForSelector(AgentChatConstants.AgentInsightAgentInputSelectorDigitalmsg, { timeout });
-      await agentInsightsAgentInput.fill("");
-      await agentInsightsAgentInput.type(agentName, { delay: 100 });
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
-
-      const agentInsightsConversationStatusItem = await frame.waitForSelector(AgentChatConstants.IntraDayInsightConversationStatusQueueSelector, { timeout });
-      await agentInsightsConversationStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
-      await agentInsightsConversationStatusItem.click();
-      await omniChanelAgentInsightSelector.click();
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByAgentNameDigitalMsg throwing exception with message: ${error.message}`);
-    }
-    return false;
-  }
-
-  public async FilterRecordsByQueuesNameDigitalMsg(frame: any, queueName: string, timeout: number = Constants.TenThousand) {
-    try {
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightsQueueSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightQueuetName = await frame.waitForSelector(AgentChatConstants.AgentInsightsQueueSelector, { timeout });
-      await agentInsightQueuetName.click();
-
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsQueueInput = await frame.waitForSelector(AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg, { timeout });
-      const agentInsightsConversationQueueStatusItem1 = await frame.waitForSelector(AgentChatConstants.AgentInsightLivechatQueueSelectAllSelector, { timeout });
-      await agentInsightsConversationQueueStatusItem1.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
-      const agentInsightsQueueInput1 = await frame.waitForSelector(AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg, { timeout });
-      await agentInsightsConversationQueueStatusItem1.click();
-      await agentInsightsQueueInput.fill("");
-      await agentInsightsQueueInput.type(queueName, { delay: 100 });
-
-      await this.waitForScreenLoad(frame);
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
-
-      const agentInsightsConversationQueueStatusItem = await frame.waitForSelector(AgentChatConstants.AgentInsightLivechatQueueSelectAllSelector, { timeout });
-      await agentInsightsConversationQueueStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
-      await agentInsightsConversationQueueStatusItem.click();
-
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.DurationSelector, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChanelAgentInsightSelector = await frame.waitForSelector(AgentChatConstants.DurationSelector, { timeout });
-      await omniChanelAgentInsightSelector.click();
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByQueuesNameDigitalMsg throwing exception with message: ${error.message}`);
-    }
-    return false;
-  }
-
-
-  public async FilterRecordsByAgentNameOverViewall(frame: any, agentName: string, timeout: number = Constants.TenThousand) {
-
-    try {
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.DurationSelector, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChanelAgentInsightSelector = await frame.waitForSelector(AgentChatConstants.DurationSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.DurationSelector,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChanelAgentInsightSelector = await frame.waitForSelector(
+        AgentChatConstants.DurationSelector,
+        { timeout }
+      );
       await omniChanelAgentInsightSelector.click();
       await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
 
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightsAgentSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsAgentName = await frame.waitForSelector(AgentChatConstants.AgentInsightsAgentSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightsAgentSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsAgentName = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightsAgentSelector,
+        { timeout }
+      );
       await agentInsightsAgentName.click();
 
       await this.waitForScreenLoad(frame);
 
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsAgentInput = await frame.waitForSelector(AgentChatConstants.AgentInsightAgentInputSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsAgentInput = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightAgentInputSelectorLivechat,
+        { timeout }
+      );
+      await agentInsightsAgentInput.fill("");
+      await agentInsightsAgentInput.type(agentName, { delay: 100 });
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+
+      const agentInsightsConversationStatusItem = await frame.waitForSelector(
+        AgentChatConstants.IntraDayInsightConversationStatusQueueSelector,
+        { timeout }
+      );
+      await agentInsightsConversationStatusItem.focus();
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
+      await agentInsightsConversationStatusItem.click();
+
+      await this.waitForScreenLoad(frame);
+      await omniChanelAgentInsightSelector.click();
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByAgentNameLiveChat throwing exception with message: ${error.message}`
+      );
+    }
+    return false;
+  }
+
+  public async FilterRecordsByQueuesNameLiveChat(
+    frame: any,
+    queueName: string,
+    timeout: number = Constants.TenThousand
+  ) {
+    try {
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightsQueueSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightQueuetName = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightsQueueSelector,
+        { timeout }
+      );
+      await agentInsightQueuetName.click();
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueInputSelectorLivechat,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsQueueInput = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightQueueInputSelectorLivechat,
+        { timeout }
+      );
+      const agentInsightsConversationQueueStatusItem1 =
+        await frame.waitForSelector(
+          AgentChatConstants.AgentInsightLivechatQueueSelectAllSelector,
+          { timeout }
+        );
+      await agentInsightsConversationQueueStatusItem1.focus();
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
+      const agentInsightsQueueInput1 = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightQueueInputSelectorLivechat,
+        { timeout }
+      );
+      await agentInsightsConversationQueueStatusItem1.click();
+      await agentInsightsQueueInput.fill("");
+      await agentInsightsQueueInput.type(queueName, { delay: 100 });
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+
+      const agentInsightsConversationQueueStatusItem =
+        await frame.waitForSelector(
+          AgentChatConstants.AgentInsightConversationStatusQueueSelector,
+          { timeout }
+        );
+      await agentInsightsConversationQueueStatusItem.focus();
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
+      await agentInsightsConversationQueueStatusItem.click();
+
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.DurationSelector,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChanelAgentInsightSelector = await frame.waitForSelector(
+        AgentChatConstants.DurationSelector,
+        { timeout }
+      );
+      await omniChanelAgentInsightSelector.click();
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByQueuesNameLiveChat throwing exception with message: ${error.message}`
+      );
+    }
+    return false;
+  }
+
+  public async FilterRecordsByAgentNameDigitalMsg(
+    frame: any,
+    agentName: string,
+    timeout: number = Constants.TenThousand
+  ) {
+    try {
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.DurationSelector,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChanelAgentInsightSelector = await frame.waitForSelector(
+        AgentChatConstants.DurationSelector,
+        { timeout }
+      );
+      await omniChanelAgentInsightSelector.click();
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
+
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightsAgentSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsAgentName = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightsAgentSelector,
+        { timeout }
+      );
+      await agentInsightsAgentName.click();
+
+      await this.waitForScreenLoad(frame);
+
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsAgentInput = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightAgentInputSelectorDigitalmsg,
+        { timeout }
+      );
+      await agentInsightsAgentInput.fill("");
+      await agentInsightsAgentInput.type(agentName, { delay: 100 });
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+
+      const agentInsightsConversationStatusItem = await frame.waitForSelector(
+        AgentChatConstants.IntraDayInsightConversationStatusQueueSelector,
+        { timeout }
+      );
+      await agentInsightsConversationStatusItem.focus();
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
+      await agentInsightsConversationStatusItem.click();
+      await omniChanelAgentInsightSelector.click();
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByAgentNameDigitalMsg throwing exception with message: ${error.message}`
+      );
+    }
+    return false;
+  }
+
+  public async FilterRecordsByQueuesNameDigitalMsg(
+    frame: any,
+    queueName: string,
+    timeout: number = Constants.TenThousand
+  ) {
+    try {
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightsQueueSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightQueuetName = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightsQueueSelector,
+        { timeout }
+      );
+      await agentInsightQueuetName.click();
+
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsQueueInput = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg,
+        { timeout }
+      );
+      const agentInsightsConversationQueueStatusItem1 =
+        await frame.waitForSelector(
+          AgentChatConstants.AgentInsightLivechatQueueSelectAllSelector,
+          { timeout }
+        );
+      await agentInsightsConversationQueueStatusItem1.focus();
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
+      const agentInsightsQueueInput1 = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg,
+        { timeout }
+      );
+      await agentInsightsConversationQueueStatusItem1.click();
+      await agentInsightsQueueInput.fill("");
+      await agentInsightsQueueInput.type(queueName, { delay: 100 });
+
+      await this.waitForScreenLoad(frame);
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+
+      const agentInsightsConversationQueueStatusItem =
+        await frame.waitForSelector(
+          AgentChatConstants.AgentInsightLivechatQueueSelectAllSelector,
+          { timeout }
+        );
+      await agentInsightsConversationQueueStatusItem.focus();
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
+      await agentInsightsConversationQueueStatusItem.click();
+
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.DurationSelector,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChanelAgentInsightSelector = await frame.waitForSelector(
+        AgentChatConstants.DurationSelector,
+        { timeout }
+      );
+      await omniChanelAgentInsightSelector.click();
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByQueuesNameDigitalMsg throwing exception with message: ${error.message}`
+      );
+    }
+    return false;
+  }
+
+  public async FilterRecordsByAgentNameOverViewall(
+    frame: any,
+    agentName: string,
+    timeout: number = Constants.TenThousand
+  ) {
+    try {
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.DurationSelector,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChanelAgentInsightSelector = await frame.waitForSelector(
+        AgentChatConstants.DurationSelector,
+        { timeout }
+      );
+      await omniChanelAgentInsightSelector.click();
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
+
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightsAgentSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsAgentName = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightsAgentSelector,
+        { timeout }
+      );
+      await agentInsightsAgentName.click();
+
+      await this.waitForScreenLoad(frame);
+
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsAgentInput = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightAgentInputSelector,
+        { timeout }
+      );
       await agentInsightsAgentInput.fill("");
       await agentInsightsAgentInput.type(agentName, { delay: 100 });
 
       await this.waitForScreenLoad(frame);
       await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
 
-      const agentInsightsConversationStatusItem = await frame.waitForSelector(AgentChatConstants.IntraDayInsightConversationStatusQueueSelector, { timeout });
+      const agentInsightsConversationStatusItem = await frame.waitForSelector(
+        AgentChatConstants.IntraDayInsightConversationStatusQueueSelector,
+        { timeout }
+      );
       await agentInsightsConversationStatusItem.focus();
       await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationStatusItem.click();
@@ -14022,26 +15564,66 @@ export class AgentChat extends AgentPage {
     return false;
   }
 
-  public async FilterRecordsByQueuesNameForOverViewPage(frame: any, QueueName: string, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByQueuesNameForOverViewPage(
+    frame: any,
+    QueueName: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightsAgentSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightQueuetName = await frame.waitForSelector(AgentChatConstants.AgentInsightsQueueSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightsAgentSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightQueuetName = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightsQueueSelector,
+        { timeout }
+      );
       await agentInsightQueuetName.click();
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsQueueInput1 = await frame.waitForSelector(AgentChatConstants.AgentInsightQueueInputSelectorLivechat, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsQueueInput1 = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightQueueInputSelectorLivechat,
+        { timeout }
+      );
       await agentInsightsQueueInput1.click();
-      const agentInsightsQueueInput = await frame.waitForSelector(AgentChatConstants.AgentInsightQueueInputSelector, { timeout });
+      const agentInsightsQueueInput = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightQueueInputSelector,
+        { timeout }
+      );
       await agentInsightsQueueInput.fill("");
       await agentInsightsQueueInput.type(QueueName, { delay: 100 });
       await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
-      const agentInsightsConversationQueueStatusItem = await frame.waitForSelector(AgentChatConstants.AgentInsightConversationStatusQueueSelector, { timeout });
+      const agentInsightsConversationQueueStatusItem =
+        await frame.waitForSelector(
+          AgentChatConstants.AgentInsightConversationStatusQueueSelector,
+          { timeout }
+        );
       await agentInsightsConversationQueueStatusItem.focus();
       await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationQueueStatusItem.click();
 
-      const omniChanelAgentInsightSelector = await frame.waitForSelector(AgentChatConstants.DurationSelector, { timeout });
+      const omniChanelAgentInsightSelector = await frame.waitForSelector(
+        AgentChatConstants.DurationSelector,
+        { timeout }
+      );
       await omniChanelAgentInsightSelector.click();
       await this.waitForScreenLoad(frame);
     } catch (error) {
@@ -14056,7 +15638,6 @@ export class AgentChat extends AgentPage {
     frame: any,
     timeout: number = Constants.TenThousand
   ) {
-
     await this.waitUntilFrameSelectorIsVisible(
       SelectorConstants.AgentToolTip,
       frame,
@@ -14070,118 +15651,326 @@ export class AgentChat extends AgentPage {
     return true;
   }
 
-  public async VerifyQueuesMessagingTypeLiveChat(frame: any, queueName: string, timeout: number = Constants.TenThousand) {
+  public async VerifyQueuesMessagingTypeLiveChat(
+    frame: any,
+    queueName: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightsQueueSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightQueuetName = await frame.waitForSelector(AgentChatConstants.AgentInsightsQueueSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightsQueueSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightQueuetName = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightsQueueSelector,
+        { timeout }
+      );
       await agentInsightQueuetName.click();
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueInputSelectorLivechat, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsQueueInput = await frame.waitForSelector(AgentChatConstants.AgentInsightQueueInputSelectorLivechat, { timeout });
-      const agentInsightsConversationQueueStatusItem1 = await frame.waitForSelector(AgentChatConstants.AgentInsightLivechatQueueSelectAllSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueInputSelectorLivechat,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsQueueInput = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightQueueInputSelectorLivechat,
+        { timeout }
+      );
+      const agentInsightsConversationQueueStatusItem1 =
+        await frame.waitForSelector(
+          AgentChatConstants.AgentInsightLivechatQueueSelectAllSelector,
+          { timeout }
+        );
       await agentInsightsConversationQueueStatusItem1.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
-      const agentInsightsQueueInput1 = await frame.waitForSelector(AgentChatConstants.AgentInsightQueueInputSelectorLivechat, { timeout });
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
+      const agentInsightsQueueInput1 = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightQueueInputSelectorLivechat,
+        { timeout }
+      );
       await agentInsightsConversationQueueStatusItem1.click();
       await agentInsightsQueueInput.fill("");
       await agentInsightsQueueInput.type(queueName, { delay: 100 });
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
-      const agentInsightsConversationQueueStatusItem = await frame.waitForSelector(AgentChatConstants.AgentInsightQueueInputSelectorLivechat, { timeout });
-      const agentInsightsConversationQueueItem = await agentInsightsConversationQueueStatusItem.textContent();
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+      const agentInsightsConversationQueueStatusItem =
+        await frame.waitForSelector(
+          AgentChatConstants.AgentInsightQueueInputSelectorLivechat,
+          { timeout }
+        );
+      const agentInsightsConversationQueueItem =
+        await agentInsightsConversationQueueStatusItem.textContent();
       if (agentInsightsConversationQueueItem !== queueName) {
         return false;
       }
-    }
-    catch (error) {
-      console.log(`Method VerifyQueuesMessagingTypeLiveChat throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method VerifyQueuesMessagingTypeLiveChat throwing exception with message: ${error.message}`
+      );
       return true;
     }
   }
 
-  public async VerifyQueuesMessagingTypeDigitalMsg(frame: any, queueName: string, timeout: number = Constants.TenThousand) {
+  public async VerifyQueuesMessagingTypeDigitalMsg(
+    frame: any,
+    queueName: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightsQueueSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightQueuetName = await frame.waitForSelector(AgentChatConstants.AgentInsightsQueueSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightsQueueSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightQueuetName = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightsQueueSelector,
+        { timeout }
+      );
       await agentInsightQueuetName.click();
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsQueueInput = await frame.waitForSelector(AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg, { timeout });
-      const agentInsightsConversationQueueStatusItem1 = await frame.waitForSelector(AgentChatConstants.AgentInsightLivechatQueueSelectAllSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsQueueInput = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg,
+        { timeout }
+      );
+      const agentInsightsConversationQueueStatusItem1 =
+        await frame.waitForSelector(
+          AgentChatConstants.AgentInsightLivechatQueueSelectAllSelector,
+          { timeout }
+        );
       await agentInsightsConversationQueueStatusItem1.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
-      const agentInsightsQueueInput1 = await frame.waitForSelector(AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg, { timeout });
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
+      const agentInsightsQueueInput1 = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg,
+        { timeout }
+      );
       await agentInsightsConversationQueueStatusItem1.click();
       await agentInsightsQueueInput.fill("");
       await agentInsightsQueueInput.type(queueName, { delay: 100 });
-      const agentInsightsConversationQueueStatusItem = await frame.waitForSelector(AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg, { timeout });
-      const agentInsightsConversationQueueItem = await agentInsightsConversationQueueStatusItem.textContent();
+      const agentInsightsConversationQueueStatusItem =
+        await frame.waitForSelector(
+          AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg,
+          { timeout }
+        );
+      const agentInsightsConversationQueueItem =
+        await agentInsightsConversationQueueStatusItem.textContent();
       if (agentInsightsConversationQueueItem !== queueName) {
         return false;
       }
-    }
-    catch (error) {
-      console.log(`Method VerifyQueuesMessagingTypeDigitalMsg throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method VerifyQueuesMessagingTypeDigitalMsg throwing exception with message: ${error.message}`
+      );
       return true;
     }
   }
 
-  public async VerifyQueuesMessagingTypeVoice(frame: any, queueName: string, timeout: number = Constants.TenThousand) {
+  public async VerifyQueuesMessagingTypeVoice(
+    frame: any,
+    queueName: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightsQueueSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightQueuetName = await frame.waitForSelector(AgentChatConstants.AgentInsightsQueueSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightsQueueSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightQueuetName = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightsQueueSelector,
+        { timeout }
+      );
       await agentInsightQueuetName.click();
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsQueueInput = await frame.waitForSelector(AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsQueueInput = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg,
+        { timeout }
+      );
       await agentInsightsQueueInput.click();
-      const agentInsightsQueueInput1 = await frame.waitForSelector(AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg, { timeout });
+      const agentInsightsQueueInput1 = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightQueueInputSelectorDigitalmsg,
+        { timeout }
+      );
       await agentInsightsQueueInput1.fill("");
       await agentInsightsQueueInput.type(queueName, { delay: 100 });
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
-      const agentInsightsConversationQueueStatusItem = await frame.waitForSelector(AgentChatConstants.AgentInsightLivechatQueueSelectAllSelector, { timeout });
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+      const agentInsightsConversationQueueStatusItem =
+        await frame.waitForSelector(
+          AgentChatConstants.AgentInsightLivechatQueueSelectAllSelector,
+          { timeout }
+        );
       await agentInsightsConversationQueueStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationQueueStatusItem.click();
-      const agentInsightsConversationQueueItem = await frame.waitForSelector(AgentChatConstants.AgentInsightLivechatQueueSelectAllSelector, { timeout });
-      const agentInsightsConversationQueueItemvoice = await agentInsightsConversationQueueItem.textContent();
+      const agentInsightsConversationQueueItem = await frame.waitForSelector(
+        AgentChatConstants.AgentInsightLivechatQueueSelectAllSelector,
+        { timeout }
+      );
+      const agentInsightsConversationQueueItemvoice =
+        await agentInsightsConversationQueueItem.textContent();
       if (agentInsightsConversationQueueItemvoice == queueName) {
         return true;
       }
-    }
-    catch (error) {
-      console.log(`Method VerifyQueuesMessagingTypeVoice throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method VerifyQueuesMessagingTypeVoice throwing exception with message: ${error.message}`
+      );
     }
   }
   public async ValidateOngoingMessage(frame: any) {
     try {
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationTitle)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationAgent)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationStatus)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationTimeInCurrentStatus)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationAction)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationQueue)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationChannel)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationWorkStream)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationFirstresponsetime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationAvgresponsetime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationTotalresponsetime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationtotalwaittime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationHandletime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationWraptime)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationSentiment)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationIncomingmessages)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationOutgoingresponses)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationIncomingmessagesOutSideBusinessHours)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationTransfers)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationEscalations)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationCreatedon)).toBeTruthy();
-      expect(await frame.waitForSelector(SelectorConstants.OngoingConversationConversationID)).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OngoingConversationTitle)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OngoingConversationAgent)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OngoingConversationStatus)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationTimeInCurrentStatus
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OngoingConversationAction)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(SelectorConstants.OngoingConversationQueue)
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationChannel
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationWorkStream
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationFirstresponsetime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationAvgresponsetime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationTotalresponsetime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationtotalwaittime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationHandletime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationWraptime
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationSentiment
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationIncomingmessages
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationOutgoingresponses
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationIncomingmessagesOutSideBusinessHours
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationTransfers
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationEscalations
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationCreatedon
+        )
+      ).toBeTruthy();
+      expect(
+        await frame.waitForSelector(
+          SelectorConstants.OngoingConversationConversationID
+        )
+      ).toBeTruthy();
       return true;
     } catch (error) {
-      console.log(`Method expectedFieldsInConversationForm throwing exception with message: ${error.message}`);
+      console.log(
+        `Method expectedFieldsInConversationForm throwing exception with message: ${error.message}`
+      );
     }
   }
 
@@ -14278,104 +16067,259 @@ export class AgentChat extends AgentPage {
 
   public async VerifyAgentInsightsTabOrder(frame: any) {
     try {
-      const AgentInsightsAllTabText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllTab);
+      const AgentInsightsAllTabText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllTab
+      );
       const AgentInsightsAllText = await AgentInsightsAllTabText.textContent();
-      expect(AgentInsightsAllText.includes(SelectorConstants.AgentInsightsAllTabText)).toBeTruthy();
-      const AgentInsightsLiveChatTabText = await frame.waitForSelector(SelectorConstants.AgentInsightsLiveChatTab);
-      const AgentInsightsLiveChatText = await AgentInsightsLiveChatTabText.textContent();
-      expect(AgentInsightsLiveChatText.includes(SelectorConstants.AgentInsightsLiveChatTabText)).toBeTruthy();
-      const AgentInsightsDigitalMessagingTabText = await frame.waitForSelector(SelectorConstants.AgentInsightsDigitalMessagingTab);
-      const AgentInsightsDigitalMessagingText = await AgentInsightsDigitalMessagingTabText.textContent();
-      expect(AgentInsightsDigitalMessagingText.includes(SelectorConstants.AgentInsightsDigitalMessagingTabText)).toBeTruthy();
-      const AgentInsightsVoiceTabText = await frame.waitForSelector(SelectorConstants.AgentInsightsVoiceTab);
-      const AgentInsightsVoiceText = await AgentInsightsVoiceTabText.textContent();
-      expect(AgentInsightsVoiceText.includes(SelectorConstants.AgentInsightsVoiceTabText)).toBeTruthy();
-    }
-    catch (error) {
-      console.log(`Method VerifyAgentInsightsTabOrder throwing exception with message: ${error.message}`);
+      expect(
+        AgentInsightsAllText.includes(SelectorConstants.AgentInsightsAllTabText)
+      ).toBeTruthy();
+      const AgentInsightsLiveChatTabText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsLiveChatTab
+      );
+      const AgentInsightsLiveChatText =
+        await AgentInsightsLiveChatTabText.textContent();
+      expect(
+        AgentInsightsLiveChatText.includes(
+          SelectorConstants.AgentInsightsLiveChatTabText
+        )
+      ).toBeTruthy();
+      const AgentInsightsDigitalMessagingTabText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsDigitalMessagingTab
+      );
+      const AgentInsightsDigitalMessagingText =
+        await AgentInsightsDigitalMessagingTabText.textContent();
+      expect(
+        AgentInsightsDigitalMessagingText.includes(
+          SelectorConstants.AgentInsightsDigitalMessagingTabText
+        )
+      ).toBeTruthy();
+      const AgentInsightsVoiceTabText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsVoiceTab
+      );
+      const AgentInsightsVoiceText =
+        await AgentInsightsVoiceTabText.textContent();
+      expect(
+        AgentInsightsVoiceText.includes(
+          SelectorConstants.AgentInsightsVoiceTabText
+        )
+      ).toBeTruthy();
+    } catch (error) {
+      console.log(
+        `Method VerifyAgentInsightsTabOrder throwing exception with message: ${error.message}`
+      );
     }
   }
 
   public async VerifyAgentInsightsTooltipforALL(frame: any) {
     try {
-      const AgentsloggedinTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentsloggedToolTip);
-      const AgentsloggedinTooltipValue = await AgentsloggedinTooltipText.getAttribute("aria-label");
-      expect(AgentsloggedinTooltipValue.includes(SelectorConstants.AgentInsightsAgentsloggedToolTipText)).toBeTruthy();
-      const AgentsAvailableCapacityTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentsAvailableCapacityToolTip);
-      const AgentsAvailableCapacityTooltipValue = await AgentsAvailableCapacityTooltipText.getAttribute("aria-label");
-      expect(AgentsAvailableCapacityTooltipValue.includes(SelectorConstants.AgentInsightsAgentsAvailableCapacityToolTipText)).toBeTruthy();
-      const AgentsHandleTimeTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentsHandleTimeToolTip);
-      const AgentsHandleTimeTooltipValue = await AgentsHandleTimeTooltipText.getAttribute("aria-label");
-      expect(AgentsHandleTimeTooltipValue.includes(SelectorConstants.AgentInsightsAgentsHandleTimeToolTipText)).toBeTruthy();
-      const AgentSessionTransferTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentSessionTransferToolTip);
-      const AgentSessionTransferTooltipValue = await AgentSessionTransferTooltipText.getAttribute("aria-label");
-      expect(AgentSessionTransferTooltipValue.includes(SelectorConstants.AgentInsightsAgentSessionTransferToolTipText)).toBeTruthy();
-      const AgentSessionRejectTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentSessionRejectToolTip);
-      const AgentSessionRejectTooltipValue = await AgentSessionRejectTooltipText.getAttribute("aria-label");
-      expect(AgentSessionRejectTooltipValue.includes(SelectorConstants.AgentInsightsAgentSessionRejectToolTipText)).toBeTruthy();
-      const AgentSessionTimeoutTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentSessionTimeoutToolTip);
-      const AgentSessionTimeoutTooltipValue = await AgentSessionTimeoutTooltipText.getAttribute("aria-label");
-      expect(AgentSessionTimeoutTooltipValue.includes(SelectorConstants.AgentInsightsAgentSessionTimeoutToolTipText)).toBeTruthy();
+      const AgentsloggedinTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentsloggedToolTip
+      );
+      const AgentsloggedinTooltipValue =
+        await AgentsloggedinTooltipText.getAttribute("aria-label");
+      expect(
+        AgentsloggedinTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentsloggedToolTipText
+        )
+      ).toBeTruthy();
+      const AgentsAvailableCapacityTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentsAvailableCapacityToolTip
+      );
+      const AgentsAvailableCapacityTooltipValue =
+        await AgentsAvailableCapacityTooltipText.getAttribute("aria-label");
+      expect(
+        AgentsAvailableCapacityTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentsAvailableCapacityToolTipText
+        )
+      ).toBeTruthy();
+      const AgentsHandleTimeTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentsHandleTimeToolTip
+      );
+      const AgentsHandleTimeTooltipValue =
+        await AgentsHandleTimeTooltipText.getAttribute("aria-label");
+      expect(
+        AgentsHandleTimeTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentsHandleTimeToolTipText
+        )
+      ).toBeTruthy();
+      const AgentSessionTransferTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentSessionTransferToolTip
+      );
+      const AgentSessionTransferTooltipValue =
+        await AgentSessionTransferTooltipText.getAttribute("aria-label");
+      expect(
+        AgentSessionTransferTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentSessionTransferToolTipText
+        )
+      ).toBeTruthy();
+      const AgentSessionRejectTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentSessionRejectToolTip
+      );
+      const AgentSessionRejectTooltipValue =
+        await AgentSessionRejectTooltipText.getAttribute("aria-label");
+      expect(
+        AgentSessionRejectTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentSessionRejectToolTipText
+        )
+      ).toBeTruthy();
+      const AgentSessionTimeoutTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentSessionTimeoutToolTip
+      );
+      const AgentSessionTimeoutTooltipValue =
+        await AgentSessionTimeoutTooltipText.getAttribute("aria-label");
+      expect(
+        AgentSessionTimeoutTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentSessionTimeoutToolTipText
+        )
+      ).toBeTruthy();
       return true;
-    }
-    catch (error) {
-      console.log(`Method VerifyAgentInsightsTooltipforALL throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method VerifyAgentInsightsTooltipforALL throwing exception with message: ${error.message}`
+      );
       return false;
     }
   }
 
   public async VerifyAgentInsightsTooltipforLiveChat(frame: any) {
     try {
-      const AgentsloggedinTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentsloggedToolTip);
-      const AgentsloggedinTooltipValue = await AgentsloggedinTooltipText.getAttribute("aria-label");
-      expect(AgentsloggedinTooltipValue.includes(SelectorConstants.AgentInsightsAgentsloggedToolTipText)).toBeTruthy();
-      const AgentsAvailableCapacityTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentSessionRejectToolTip);
-      const AgentsAvailableCapacityTooltipValue = await AgentsAvailableCapacityTooltipText.getAttribute("aria-label");
-      expect(AgentsAvailableCapacityTooltipValue.includes(SelectorConstants.AgentInsightsAgentsAvailableCapacityToolTipText)).toBeTruthy();
-      const AgentsHandleTimeTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentSessionTimeoutToolTip);
-      const AgentsHandleTimeTooltipValue = await AgentsHandleTimeTooltipText.getAttribute("aria-label");
-      expect(AgentsHandleTimeTooltipValue.includes(SelectorConstants.AgentInsightsAgentsHandleTimeToolTipText)).toBeTruthy();
-      const AgentSessionTransferTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentsAvailableCapacityToolTip);
-      const AgentSessionTransferTooltipValue = await AgentSessionTransferTooltipText.getAttribute("aria-label");
-      expect(AgentSessionTransferTooltipValue.includes(SelectorConstants.AgentInsightsAgentSessionTransferRateToolTipText)).toBeTruthy();
-      const AgentSessionRejectTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentsHandleTimeToolTip);
-      const AgentSessionRejectTooltipValue = await AgentSessionRejectTooltipText.getAttribute("aria-label");
-      expect(AgentSessionRejectTooltipValue.includes(SelectorConstants.AgentInsightsAgentSessionRejectedToolTipText)).toBeTruthy();
-      const AgentSessionTimeoutTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentSessionTransferToolTip);
-      const AgentSessionTimeoutTooltipValue = await AgentSessionTimeoutTooltipText.getAttribute("aria-label");
-      expect(AgentSessionTimeoutTooltipValue.includes(SelectorConstants.AgentInsightsAgentSessionTimeoutRateToolTipText)).toBeTruthy();
+      const AgentsloggedinTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentsloggedToolTip
+      );
+      const AgentsloggedinTooltipValue =
+        await AgentsloggedinTooltipText.getAttribute("aria-label");
+      expect(
+        AgentsloggedinTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentsloggedToolTipText
+        )
+      ).toBeTruthy();
+      const AgentsAvailableCapacityTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentSessionRejectToolTip
+      );
+      const AgentsAvailableCapacityTooltipValue =
+        await AgentsAvailableCapacityTooltipText.getAttribute("aria-label");
+      expect(
+        AgentsAvailableCapacityTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentsAvailableCapacityToolTipText
+        )
+      ).toBeTruthy();
+      const AgentsHandleTimeTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentSessionTimeoutToolTip
+      );
+      const AgentsHandleTimeTooltipValue =
+        await AgentsHandleTimeTooltipText.getAttribute("aria-label");
+      expect(
+        AgentsHandleTimeTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentsHandleTimeToolTipText
+        )
+      ).toBeTruthy();
+      const AgentSessionTransferTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentsAvailableCapacityToolTip
+      );
+      const AgentSessionTransferTooltipValue =
+        await AgentSessionTransferTooltipText.getAttribute("aria-label");
+      expect(
+        AgentSessionTransferTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentSessionTransferRateToolTipText
+        )
+      ).toBeTruthy();
+      const AgentSessionRejectTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentsHandleTimeToolTip
+      );
+      const AgentSessionRejectTooltipValue =
+        await AgentSessionRejectTooltipText.getAttribute("aria-label");
+      expect(
+        AgentSessionRejectTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentSessionRejectedToolTipText
+        )
+      ).toBeTruthy();
+      const AgentSessionTimeoutTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentSessionTransferToolTip
+      );
+      const AgentSessionTimeoutTooltipValue =
+        await AgentSessionTimeoutTooltipText.getAttribute("aria-label");
+      expect(
+        AgentSessionTimeoutTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentSessionTimeoutRateToolTipText
+        )
+      ).toBeTruthy();
       return true;
-    }
-    catch (error) {
-      console.log(`Method VerifyAgentInsightsTooltipforLiveChat throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method VerifyAgentInsightsTooltipforLiveChat throwing exception with message: ${error.message}`
+      );
       return false;
     }
   }
 
   public async VerifyAgentInsightsTooltipforDigitalMessaging(frame: any) {
     try {
-      const AgentsloggedinTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentsloggedToolTip);
-      const AgentsloggedinTooltipValue = await AgentsloggedinTooltipText.getAttribute("aria-label");
-      expect(AgentsloggedinTooltipValue.includes(SelectorConstants.AgentInsightsAgentsloggedToolTipText)).toBeTruthy();
-      const AgentsAvailableCapacityTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentSessionTransferToolTip);
-      const AgentsAvailableCapacityTooltipValue = await AgentsAvailableCapacityTooltipText.getAttribute("aria-label");
-      expect(AgentsAvailableCapacityTooltipValue.includes(SelectorConstants.AgentInsightsAgentsAvailableCapacityToolTipText)).toBeTruthy();
-      const AgentsHandleTimeTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentsAvailableCapacityToolTip);
-      const AgentsHandleTimeTooltipValue = await AgentsHandleTimeTooltipText.getAttribute("aria-label");
-      expect(AgentsHandleTimeTooltipValue.includes(SelectorConstants.AgentInsightsAgentsHandleTimeToolTipText)).toBeTruthy();
-      const AgentSessionTransferTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentsHandleTimeToolTip);
-      const AgentSessionTransferTooltipValue = await AgentSessionTransferTooltipText.getAttribute("aria-label");
-      expect(AgentSessionTransferTooltipValue.includes(SelectorConstants.AgentInsightsAgentSessionTransferRateToolTipText)).toBeTruthy();
-      const AgentSessionRejectTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentSessionRejectToolTip);
-      const AgentSessionRejectTooltipValue = await AgentSessionRejectTooltipText.getAttribute("aria-label");
-      expect(AgentSessionRejectTooltipValue.includes(SelectorConstants.AgentInsightsAgentSessionRejectedToolTipText)).toBeTruthy();
-      const AgentSessionTimeoutTooltipText = await frame.waitForSelector(SelectorConstants.AgentInsightsAllAgentSessionTimeoutToolTip);
-      const AgentSessionTimeoutTooltipValue = await AgentSessionTimeoutTooltipText.getAttribute("aria-label");
-      expect(AgentSessionTimeoutTooltipValue.includes(SelectorConstants.AgentInsightsAgentSessionTimeoutRateToolTipText)).toBeTruthy();
+      const AgentsloggedinTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentsloggedToolTip
+      );
+      const AgentsloggedinTooltipValue =
+        await AgentsloggedinTooltipText.getAttribute("aria-label");
+      expect(
+        AgentsloggedinTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentsloggedToolTipText
+        )
+      ).toBeTruthy();
+      const AgentsAvailableCapacityTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentSessionTransferToolTip
+      );
+      const AgentsAvailableCapacityTooltipValue =
+        await AgentsAvailableCapacityTooltipText.getAttribute("aria-label");
+      expect(
+        AgentsAvailableCapacityTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentsAvailableCapacityToolTipText
+        )
+      ).toBeTruthy();
+      const AgentsHandleTimeTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentsAvailableCapacityToolTip
+      );
+      const AgentsHandleTimeTooltipValue =
+        await AgentsHandleTimeTooltipText.getAttribute("aria-label");
+      expect(
+        AgentsHandleTimeTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentsHandleTimeToolTipText
+        )
+      ).toBeTruthy();
+      const AgentSessionTransferTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentsHandleTimeToolTip
+      );
+      const AgentSessionTransferTooltipValue =
+        await AgentSessionTransferTooltipText.getAttribute("aria-label");
+      expect(
+        AgentSessionTransferTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentSessionTransferRateToolTipText
+        )
+      ).toBeTruthy();
+      const AgentSessionRejectTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentSessionRejectToolTip
+      );
+      const AgentSessionRejectTooltipValue =
+        await AgentSessionRejectTooltipText.getAttribute("aria-label");
+      expect(
+        AgentSessionRejectTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentSessionRejectedToolTipText
+        )
+      ).toBeTruthy();
+      const AgentSessionTimeoutTooltipText = await frame.waitForSelector(
+        SelectorConstants.AgentInsightsAllAgentSessionTimeoutToolTip
+      );
+      const AgentSessionTimeoutTooltipValue =
+        await AgentSessionTimeoutTooltipText.getAttribute("aria-label");
+      expect(
+        AgentSessionTimeoutTooltipValue.includes(
+          SelectorConstants.AgentInsightsAgentSessionTimeoutRateToolTipText
+        )
+      ).toBeTruthy();
       return true;
-    }
-    catch (error) {
-      console.log(`Method VerifyAgentInsightsTooltipforDigitalMessaging throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method VerifyAgentInsightsTooltipforDigitalMessaging throwing exception with message: ${error.message}`
+      );
       return false;
     }
   }
@@ -14398,7 +16342,10 @@ export class AgentChat extends AgentPage {
   }
 
   public async verifyVideoEnableStatus(locator: string) {
-    const iframeCC = await IFrameHelper.GetIframe(this._page, IFrameConstants.IframeCC);
+    const iframeCC = await IFrameHelper.GetIframe(
+      this._page,
+      IFrameConstants.IframeCC
+    );
     const state = await iframeCC.waitForSelector(locator);
     return state;
   }
@@ -14415,15 +16362,15 @@ export class AgentChat extends AgentPage {
   }
 
   public async resolveandDeleteCase() {
-    await this.Page.waitForSelector(
-      CustomConstants.ResolveCaseClickButton
-    );
+    await this.Page.waitForSelector(CustomConstants.ResolveCaseClickButton);
     await this.Page.click(CustomConstants.ResolveCaseClickButton);
     await this.Page.fill(CustomConstants.ResolutionDesciption, "Case Resolved");
     await this.Page.waitForSelector(CustomConstants.ResolveBtn);
     await this.Page.waitForTimeout(Constants.DefaultTimeout);
     await this.Page.click(CustomConstants.ResolveBtn);
-    const DeleteCaseRecord = await this.Page.waitForSelector(CustomConstants.DeleteCase);
+    const DeleteCaseRecord = await this.Page.waitForSelector(
+      CustomConstants.DeleteCase
+    );
     await DeleteCaseRecord.focus();
     await DeleteCaseRecord.click();
     await this.Page.click(CustomConstants.ConfirmButton);
@@ -14441,8 +16388,15 @@ export class AgentChat extends AgentPage {
   }
 
   public async ValidateDigitalMessaging(frame: any) {
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.OngoingConversationStatus, frame, Constants.One, Constants.DefaultTimeout);
-    const CloseStatus = await frame.waitForSelector(SelectorConstants.OngoingConversationStatus);
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.OngoingConversationStatus,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const CloseStatus = await frame.waitForSelector(
+      SelectorConstants.OngoingConversationStatus
+    );
     const ChatTitle1 = await CloseStatus.innerText();
     if (ChatTitle1 !== AgentChatConstants.Closed) {
       return true;
@@ -14450,7 +16404,9 @@ export class AgentChat extends AgentPage {
     return false;
   }
 
-  public async NavigatetoConversationInsightDigitalmessageDashboard(frame: any) {
+  public async NavigatetoConversationInsightDigitalmessageDashboard(
+    frame: any
+  ) {
     await this.waitUntilSelectorIsVisible(
       SelectorConstants.OmniChannelIntradayInsights,
       AgentChatConstants.Two,
@@ -14463,48 +16419,119 @@ export class AgentChat extends AgentPage {
     await frame.click(SelectorConstants.ConversationInsightsDigitalMessage);
     await this.waitForScreenLoad(frame);
   }
-  public async FilterItemsByConversationInsigitsLivechatPageQueueMetrics(frame: any, queueName: string) {
+  public async FilterItemsByConversationInsigitsLivechatPageQueueMetrics(
+    frame: any,
+    queueName: string
+  ) {
     await this.FilterRecordsByQueuesNameFromLiveChat(frame, queueName);
   }
-  public async FilterItemsByConversationInsigitsDigitalMessagePageQueueMetrics(frame: any, queueName: string) {
+  public async FilterItemsByConversationInsigitsDigitalMessagePageQueueMetrics(
+    frame: any,
+    queueName: string
+  ) {
     await this.FilterRecordsByDigitalMessagePageQueuesName(frame, queueName);
   }
   public async ValidateOverViewPageAvrTimeReponce(frame: any) {
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.AveragefirstresponsetimeOVLiveChat, frame, Constants.One, Constants.DefaultTimeout);
-    const FirstResponsetime = await frame.waitForSelector(SelectorConstants.AveragefirstresponsetimeOVLiveChat);
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.AveragefirstresponsetimeOVLiveChat,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const FirstResponsetime = await frame.waitForSelector(
+      SelectorConstants.AveragefirstresponsetimeOVLiveChat
+    );
     const Averagefirstresponsetime = await FirstResponsetime.innerText();
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.AverageresponsetimeOVLiveChat, frame, Constants.One, Constants.DefaultTimeout);
-    const Responsetime = await frame.waitForSelector(SelectorConstants.AverageresponsetimeOVLiveChat);
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.AverageresponsetimeOVLiveChat,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const Responsetime = await frame.waitForSelector(
+      SelectorConstants.AverageresponsetimeOVLiveChat
+    );
     const Averageresponsetime = await Responsetime.innerText();
     return true;
   }
   public async ValidateLiveChatPageAvrTimeReponce(frame: any) {
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.AveragefirstresponsetimeLiveChat, frame, Constants.One, Constants.DefaultTimeout);
-    const FirstResponsetime = await frame.waitForSelector(SelectorConstants.AveragefirstresponsetimeLiveChat);
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.AveragefirstresponsetimeLiveChat,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const FirstResponsetime = await frame.waitForSelector(
+      SelectorConstants.AveragefirstresponsetimeLiveChat
+    );
     const Averagefirstresponsetime = await FirstResponsetime.innerText();
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.AverageresponsetimeLiveChat, frame, Constants.One, Constants.DefaultTimeout);
-    const Responsetime = await frame.waitForSelector(SelectorConstants.AverageresponsetimeLiveChat);
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.AverageresponsetimeLiveChat,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const Responsetime = await frame.waitForSelector(
+      SelectorConstants.AverageresponsetimeLiveChat
+    );
     const Averageresponsetime = await Responsetime.innerText();
     return true;
   }
-  public async FilterRecordsByQueuesNameFromLiveChat(frame: any, queueName: string, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByQueuesNameFromLiveChat(
+    frame: any,
+    queueName: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.ConversationInsightsQueueSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightQueuetName = await frame.waitForSelector(SelectorConstants.ConversationInsightsQueueSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.ConversationInsightsQueueSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightQueuetName = await frame.waitForSelector(
+        SelectorConstants.ConversationInsightsQueueSelector,
+        { timeout }
+      );
       await agentInsightQueuetName.click();
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentInsightsQueueInput = await frame.waitForSelector(AgentChatConstants.LivechatPageQueueInputselector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.AgentInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentInsightsQueueInput = await frame.waitForSelector(
+        AgentChatConstants.LivechatPageQueueInputselector,
+        { timeout }
+      );
       await agentInsightsQueueInput.fill("");
       await agentInsightsQueueInput.type(queueName, { delay: 100 });
 
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
-      const agentInsightsConversationStatusItem = await frame.waitForSelector(AgentChatConstants.DigitalQueueSelector.replace("{0}", queueName), { timeout });
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+      const agentInsightsConversationStatusItem = await frame.waitForSelector(
+        AgentChatConstants.DigitalQueueSelector.replace("{0}", queueName),
+        { timeout }
+      );
       await agentInsightsConversationStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationStatusItem.click();
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.LivechatPageIdentitySelector, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChanelConversationDigitalMsgSelector1 = await frame.waitForSelector(SelectorConstants.LivechatPageIdentitySelector, { timeout })
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.LivechatPageIdentitySelector,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChanelConversationDigitalMsgSelector1 =
+        await frame.waitForSelector(
+          SelectorConstants.LivechatPageIdentitySelector,
+          { timeout }
+        );
       await omniChanelConversationDigitalMsgSelector1.click();
       await this.waitUntilFrameSelectorIsVisible(
         SelectorConstants.AvgFirstandresponceLiveChatselect,
@@ -14513,41 +16540,92 @@ export class AgentChat extends AgentPage {
         Constants.FiveThousand
       );
       const AvgResponcetime = await frame.waitForSelector(
-        SelectorConstants.AvgFirstandresponceLiveChatselect);
+        SelectorConstants.AvgFirstandresponceLiveChatselect
+      );
       await AvgResponcetime.click({ button: "right" });
       const selectTable = await frame.waitForSelector(
         SelectorConstants.SelectTableSelector
       );
       await selectTable.click();
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByQueueName throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByQueueName throwing exception with message: ${error.message}`
+      );
     }
     return false;
   }
-  public async FilterRecordsByDigitalMessagePageQueuesName(frame: any, queueName: string, timeout: number = Constants.TenThousand) {
+  public async FilterRecordsByDigitalMessagePageQueuesName(
+    frame: any,
+    queueName: string,
+    timeout: number = Constants.TenThousand
+  ) {
     try {
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.SLAFirstResponseTime, frame, Constants.One, Constants.DefaultTimeout);
-      const omniChanelConversationDigitalMsgSelector = await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.SLAFirstResponseTime,
+        frame,
+        Constants.One,
+        Constants.DefaultTimeout
+      );
+      const omniChanelConversationDigitalMsgSelector =
+        await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, {
+          timeout,
+        });
       await omniChanelConversationDigitalMsgSelector.click();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
-      await this.waitUntilFrameSelectorIsVisible(SelectorConstants.ConversationInsightsQueueSelector, frame, Constants.One, Constants.FiveThousand);
-      const agentConversationInsightQueueName = await frame.waitForSelector(SelectorConstants.ConversationInsightsQueueSelector, { timeout });
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that if queue selection popup remains in open state during failed run so before retrying queue filtration it will close
+      await this.waitUntilFrameSelectorIsVisible(
+        SelectorConstants.ConversationInsightsQueueSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const agentConversationInsightQueueName = await frame.waitForSelector(
+        SelectorConstants.ConversationInsightsQueueSelector,
+        { timeout }
+      );
       await agentConversationInsightQueueName.click();
       await this.waitForScreenLoad(frame);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector, frame, Constants.One, Constants.FiveThousand);
-      await this.waitUntilFrameSelectorIsVisible(AgentChatConstants.IntraDayInsightQueueInputSelector, frame, Constants.One, Constants.FiveThousand);
-      const ConversationQueueInput = await frame.waitForSelector(AgentChatConstants.DigitalMessageQueueInputSelector, { timeout });
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueTitleSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueCheckboxSelectionSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      await this.waitUntilFrameSelectorIsVisible(
+        AgentChatConstants.IntraDayInsightQueueInputSelector,
+        frame,
+        Constants.One,
+        Constants.FiveThousand
+      );
+      const ConversationQueueInput = await frame.waitForSelector(
+        AgentChatConstants.DigitalMessageQueueInputSelector,
+        { timeout }
+      );
       await ConversationQueueInput.fill("");
       await ConversationQueueInput.type(queueName, { delay: 100 });
-      await this._page.waitForTimeout(Constants.TenThousand);//This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
-      const agentInsightsConversationStatusItem = await frame.waitForSelector(AgentChatConstants.DigitalQueueSelector.replace("{0}", queueName), { timeout });
+      await this._page.waitForTimeout(Constants.TenThousand); //This static timeout required so that required queue will be populated in intraday insight 'Queue' dropdown
+      const agentInsightsConversationStatusItem = await frame.waitForSelector(
+        AgentChatConstants.DigitalQueueSelector.replace("{0}", queueName),
+        { timeout }
+      );
       await agentInsightsConversationStatusItem.focus();
-      await this._page.waitForTimeout(Constants.DefaultTimeout);//This static timeout required so that queue selection popup will be kept in open state after focus
+      await this._page.waitForTimeout(Constants.DefaultTimeout); //This static timeout required so that queue selection popup will be kept in open state after focus
       await agentInsightsConversationStatusItem.click();
-      const omniChanelConversationDigitalMsgSelector1 = await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, { timeout })
+      const omniChanelConversationDigitalMsgSelector1 =
+        await frame.waitForSelector(SelectorConstants.SLAFirstResponseTime, {
+          timeout,
+        });
       await omniChanelConversationDigitalMsgSelector1.click();
       await this.waitUntilFrameSelectorIsVisible(
         SelectorConstants.AvgFirstandresponceDigitalPageselect,
@@ -14556,24 +16634,40 @@ export class AgentChat extends AgentPage {
         Constants.FiveThousand
       );
       const AvgResponcetime = await frame.waitForSelector(
-        SelectorConstants.AvgFirstandresponceDigitalPageselect);
+        SelectorConstants.AvgFirstandresponceDigitalPageselect
+      );
       await AvgResponcetime.click({ button: "right" });
       const selectTable = await frame.waitForSelector(
         SelectorConstants.SelectTableSelector
       );
       await selectTable.click();
-    }
-    catch (error) {
-      console.log(`Method FilterRecordsByAgentName throwing exception with message: ${error.message}`);
+    } catch (error) {
+      console.log(
+        `Method FilterRecordsByAgentName throwing exception with message: ${error.message}`
+      );
     }
     return false;
   }
   public async ValidateDigitalMsgPageAvrTimeReponce(frame: any) {
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.AveragefirstresponsetimeDigitalMsg, frame, Constants.One, Constants.DefaultTimeout);
-    const FirstResponsetime = await frame.waitForSelector(SelectorConstants.AveragefirstresponsetimeDigitalMsg);
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.AveragefirstresponsetimeDigitalMsg,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const FirstResponsetime = await frame.waitForSelector(
+      SelectorConstants.AveragefirstresponsetimeDigitalMsg
+    );
     const Averagefirstresponsetime = await FirstResponsetime.innerText();
-    await this.waitUntilFrameSelectorIsVisible(SelectorConstants.AverageresponsetimeDigitalMsg, frame, Constants.One, Constants.DefaultTimeout);
-    const Responsetime = await frame.waitForSelector(SelectorConstants.AverageresponsetimeDigitalMsg);
+    await this.waitUntilFrameSelectorIsVisible(
+      SelectorConstants.AverageresponsetimeDigitalMsg,
+      frame,
+      Constants.One,
+      Constants.DefaultTimeout
+    );
+    const Responsetime = await frame.waitForSelector(
+      SelectorConstants.AverageresponsetimeDigitalMsg
+    );
     const Averageresponsetime = await Responsetime.innerText();
     return true;
   }
@@ -14638,7 +16732,9 @@ export class AgentChat extends AgentPage {
       Constants.One,
       Constants.TenThousand
     );
-    const averageHandleTimeSelector = await frame.waitForSelector(SelectorConstants.AverageHandleTimeGridSelector);
+    const averageHandleTimeSelector = await frame.waitForSelector(
+      SelectorConstants.AverageHandleTimeGridSelector
+    );
     let averageHandleTimeValue = await averageHandleTimeSelector.textContent();
     averageHandleTimeValue = averageHandleTimeValue.replace(",", "");
     if (averageHandleTimeValue >= averageHandleTime) {
@@ -14694,7 +16790,10 @@ export class AgentChat extends AgentPage {
 
       const agentInsightsConversationQueueStatusItem =
         await frame.waitForSelector(
-          AgentChatConstants.AgentInsightConversationStatusQueueNameSelector.replace("{0}", queueName),
+          AgentChatConstants.AgentInsightConversationStatusQueueNameSelector.replace(
+            "{0}",
+            queueName
+          ),
           { timeout }
         );
       await agentInsightsConversationQueueStatusItem.focus();
@@ -14738,10 +16837,11 @@ export class AgentChat extends AgentPage {
   }
 
   public async validateAccountCityName(ExpectedCity: string) {
-    await this._page.waitForSelector(
-      AgentChatConstants.UpdatedContactCity
+    await this._page.waitForSelector(AgentChatConstants.UpdatedContactCity);
+    const actualCity = await this._page.$eval(
+      AgentChatConstants.UpdatedContactCity,
+      (el) => (el as HTMLInputElement).value
     );
-    const actualCity = await this._page.$eval(AgentChatConstants.UpdatedContactCity, el => (el as HTMLInputElement).value);
     return actualCity === ExpectedCity;
   }
 
@@ -14773,7 +16873,9 @@ export class AgentChat extends AgentPage {
     await this._page.click(AgentChatConstants.AgentStatusButton);
     let options = [];
     while (options.length < 1) {
-      options = await this._page.$$(AgentChatConstants.SelectStatusElementOptions);
+      options = await this._page.$$(
+        AgentChatConstants.SelectStatusElementOptions
+      );
     }
     for (let option in options) {
       let value = await options[option].innerText();
@@ -14787,44 +16889,60 @@ export class AgentChat extends AgentPage {
   public async validateAgentSkill(skill: string) {
     const message = skill;
     await this.waitForDomContentLoaded();
-    const title = await this.Page.waitForSelector(
-      CustomConstants.CaseSkill
+    const title = await this.Page.waitForSelector(CustomConstants.CaseSkill);
+    const currentName = await this._page.$eval(
+      CustomConstants.CaseSkill,
+      (el) => (el as HTMLInputElement).value
     );
-    const currentName = await this._page.$eval(CustomConstants.CaseSkill, el => (el as HTMLInputElement).value);
     return message === currentName;
   }
 
   public async validateMultipleSkills(skillOne: string, SkillTwo: string) {
     const message = skillOne;
     await this.waitForDomContentLoaded();
-    const title = await this.Page.waitForSelector(
-      CustomConstants.CaseSkill
+    const title = await this.Page.waitForSelector(CustomConstants.CaseSkill);
+    const currentName = await this._page.$eval(
+      CustomConstants.CaseSkill,
+      (el) => (el as HTMLInputElement).value
     );
-    const currentName = await this._page.$eval(CustomConstants.CaseSkill, el => (el as HTMLInputElement).value);
     if (message == currentName) {
       const message1 = SkillTwo;
       const title = await this.Page.waitForSelector(
         CustomConstants.CaseSkillTwo
       );
-      const currentName1 = await this._page.$eval(CustomConstants.CaseSkillTwo, el => (el as HTMLInputElement).value);
+      const currentName1 = await this._page.$eval(
+        CustomConstants.CaseSkillTwo,
+        (el) => (el as HTMLInputElement).value
+      );
       return message1 === currentName1;
-    }
-    else {
+    } else {
       return false;
     }
   }
 
   public async ValidateQuickReplyPreview() {
-    return this.waitUntilSelectorIsVisible(AgentChatConstants.QuickReplyPreview);
+    return this.waitUntilSelectorIsVisible(
+      AgentChatConstants.QuickReplyPreview
+    );
   }
-  
+
   public async refreshInbox() {
     await this.Page.waitForSelector(AgentChatConstants.RefreshInbox);
     await this.Page.click(AgentChatConstants.RefreshInbox);
   }
 
-  public async acceptInboxChat(uniqueMessage: string, FooterNotification: boolean, timeout?: number, shouldwaitForConversationControl: boolean = true) {
-    await this.waitUntilSelectorIsVisible(AgentChatConstants.AcceptButtonId, AgentChatConstants.Four, null, timeout || AgentChatConstants.ThrityFiveThousandMiliSeconds);
+  public async acceptInboxChat(
+    uniqueMessage: string,
+    FooterNotification: boolean,
+    timeout?: number,
+    shouldwaitForConversationControl: boolean = true
+  ) {
+    await this.waitUntilSelectorIsVisible(
+      AgentChatConstants.AcceptButtonId,
+      AgentChatConstants.Four,
+      null,
+      timeout || AgentChatConstants.ThrityFiveThousandMiliSeconds
+    );
     await this._page.click(AgentChatConstants.AcceptButtonId);
     if (FooterNotification) {
       expect(this.VerifyInboxFooterNotification()).toBeTruthy();
@@ -14837,20 +16955,23 @@ export class AgentChat extends AgentPage {
   public async VerifyTransferAgent(AgentName: string) {
     if (AgentName === AgentChatConstants.InboxAgentName) {
       return true;
-    }
-    else {
+    } else {
       return false;
     }
   }
 
-  public async ValidateInboxCardMessages(Messages: string, InboxMessagesSelectors: string) {
+  public async ValidateInboxCardMessages(
+    Messages: string,
+    InboxMessagesSelectors: string
+  ) {
     await this.refreshInbox();
-    const AgentMessage = await this.Page.waitForSelector(InboxMessagesSelectors);
+    const AgentMessage = await this.Page.waitForSelector(
+      InboxMessagesSelectors
+    );
     const InboxCradMeassage = await AgentMessage.textContent();
     if (InboxCradMeassage === Messages) {
       return true;
-    }
-    else {
+    } else {
       return false;
     }
   }
@@ -14879,30 +17000,31 @@ export class AgentChat extends AgentPage {
   }
 
   public async VerifyTransferQueue(QueueName: string) {
-    const Inboxqueue = await this.Page.waitForSelector(AgentChatConstants.InboxTeamsPWDefaultTeamsQueue);
+    const Inboxqueue = await this.Page.waitForSelector(
+      AgentChatConstants.InboxTeamsPWDefaultTeamsQueue
+    );
     const Inboxqueuename = await Inboxqueue.textContent();
     if (Inboxqueuename.includes(QueueName)) {
       return true;
-    }
-    else {
+    } else {
       return false;
     }
   }
 
   public async VerifyInboxFooterNotification() {
-    const FooterNotification = await this.Page.waitForSelector(AgentChatConstants.InboxFooterNotificationSelector);
+    const FooterNotification = await this.Page.waitForSelector(
+      AgentChatConstants.InboxFooterNotificationSelector
+    );
     const InboxNotification = await FooterNotification.textContent();
     if (InboxNotification === AgentChatConstants.InboxchatNotMessage) {
       return true;
-    }
-    else {
+    } else {
       return false;
     }
   }
   public async inboxSection() {
     await this.Page.waitForLoadState("domcontentloaded");
     await this.Page.click(SelectorConstants.InboxLabel);
-
   }
 
   public async HomePageSection() {
@@ -14914,37 +17036,45 @@ export class AgentChat extends AgentPage {
     await this.waitUntilSelectorIsVisible(
       SelectorConstants.ConversationDropdown,
       AgentChatConstants.Four,
-      null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
+      null,
+      AgentChatConstants.ThrityFiveThousandMiliSeconds
+    );
     await this._page.click(SelectorConstants.ConversationDropdown);
 
     await this.waitUntilSelectorIsVisible(
       SelectorConstants.UnassignedConversations,
       AgentChatConstants.Four,
-      null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
+      null,
+      AgentChatConstants.ThrityFiveThousandMiliSeconds
+    );
     await this._page.click(SelectorConstants.UnassignedConversations);
-
   }
 
   public async navigateToCases() {
     await this.waitUntilSelectorIsVisible(
       SelectorConstants.ConversationDropdown,
       AgentChatConstants.Four,
-      null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
+      null,
+      AgentChatConstants.ThrityFiveThousandMiliSeconds
+    );
     await this._page.click(SelectorConstants.ConversationDropdown);
 
     await this.waitUntilSelectorIsVisible(
       SelectorConstants.InboxCases,
       AgentChatConstants.Four,
-      null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
+      null,
+      AgentChatConstants.ThrityFiveThousandMiliSeconds
+    );
     await this._page.click(SelectorConstants.InboxCases);
-
   }
 
   public async navigateToSearch() {
     await this.waitUntilSelectorIsVisible(
       SelectorConstants.InboxSearch,
       AgentChatConstants.Four,
-      null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
+      null,
+      AgentChatConstants.ThrityFiveThousandMiliSeconds
+    );
     await this._page.click(SelectorConstants.InboxSearch);
   }
 
@@ -14952,7 +17082,9 @@ export class AgentChat extends AgentPage {
     await this.waitUntilSelectorIsVisible(
       SelectorConstants.OpenNewSession,
       AgentChatConstants.Four,
-      null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
+      null,
+      AgentChatConstants.ThrityFiveThousandMiliSeconds
+    );
     await this._page.click(SelectorConstants.OpenNewSession);
   }
 
@@ -14967,8 +17099,7 @@ export class AgentChat extends AgentPage {
       IFrameConstants.IframeCC
     );
 
-    await iframe.waitForSelector(
-      SelectorConstants.AssigntoMeLabel);
+    await iframe.waitForSelector(SelectorConstants.AssigntoMeLabel);
 
     await iframe.waitForLoadState("domcontentloaded");
     await this.waitForRecordsave();
@@ -14980,16 +17111,20 @@ export class AgentChat extends AgentPage {
   }
 
   public async navigateToAssignedConversation() {
-    await this._page.click(SelectorConstants.InboxTab)
+    await this._page.click(SelectorConstants.InboxTab);
     await this.waitUntilSelectorIsVisible(
       SelectorConstants.ConversationDropdown,
       AgentChatConstants.Four,
-      null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
+      null,
+      AgentChatConstants.ThrityFiveThousandMiliSeconds
+    );
     await this._page.click(SelectorConstants.ConversationDropdown);
     await this.waitUntilSelectorIsVisible(
       SelectorConstants.AssignedConversations,
       AgentChatConstants.Four,
-      null, AgentChatConstants.ThrityFiveThousandMiliSeconds);
+      null,
+      AgentChatConstants.ThrityFiveThousandMiliSeconds
+    );
     await this._page.click(SelectorConstants.AssignedConversations);
   }
 
@@ -15007,31 +17142,25 @@ export class AgentChat extends AgentPage {
     const status = await (await presence.getProperty("title")).jsonValue();
     return status;
   }
+
   public async deleteRecordbyXRM(entityLogicalName: string, recordID: string) {
     return await this.executeScript(
       `Xrm.WebApi.deleteRecord('${entityLogicalName}', '${recordID}')`
     );
   }
 
+  public async createAgentScriptbyXRMAPI(name: string, uniqueName: string) {
+    const record = await this.createRecord(EntityNames.AgentScript, {
+      [EntityAttributes.AgentscriptName]: name,
+      [EntityAttributes.AgentscriptUniqueName]: uniqueName,
+    });
+    return record;
+  }
+
   public async updateRecordbyXRM(entityLogicalName: string, recordID: string, data: any) {
     return await this.executeScript(
       `Xrm.WebApi.updateRecord('${entityLogicalName}', '${recordID}','${JSON.stringify(data)}')`
     );
-  }
-
-  public async getLatestMacro(macroName: string) {
-    let query: string =
-      "?$filter=name eq '" + macroName + "'&$orderby=createdon desc &$top=1";
-    const result = await this.retrieveMultipleRecords("workflow", query);
-    return result
-  }
-
-  public async createAgentScriptbyXRMAPI(name: string, uniqueName: string) {
-    const record = await this.createRecord(EntityNames.AgentScript, {
-      [EntityAttributes.AgentscriptName]: name,
-      [EntityAttributes.AgentscriptUniqueName]: uniqueName
-    });
-    return record;
   }
 
   public async createAgentScriptStepbyXRMAPI(
@@ -15045,24 +17174,142 @@ export class AgentChat extends AgentPage {
   ) {
     let createRequestObj = {};
     createRequestObj[EntityAttributes.AgentscriptStepName] = name + "Step"; // agentscript Name and step
-    createRequestObj[EntityAttributes.AgentscriptStepUniqueName] = uniqueName + "Step", // agentscript unique Name and step
-      createRequestObj[EntityAttributes.AgentscriptStepOrder] = order;
+    (createRequestObj[EntityAttributes.AgentscriptStepUniqueName] =
+      uniqueName + "Step"), // agentscript unique Name and step
+      (createRequestObj[EntityAttributes.AgentscriptStepOrder] = order);
     createRequestObj[EntityAttributes.AgentscriptNameBindAttribute] = name;
-    createRequestObj[EntityAttributes.AgentscriptidBindAttribute] = "/msdyn_productivityagentscripts(" + recordID + ")";
+    createRequestObj[EntityAttributes.AgentscriptidBindAttribute] =
+      "/msdyn_productivityagentscripts(" + recordID + ")";
     if (actionType === EntityAttributes.ActionTypeMacro) {
-      createRequestObj[EntityAttributes.AgentscriptStepActionType] = EntityAttributes.ActionTypeMacroValue;
+      createRequestObj[EntityAttributes.AgentscriptStepActionType] =
+        EntityAttributes.ActionTypeMacroValue;
       createRequestObj[EntityAttributes.MacroActionID] = macroName;
-      createRequestObj["msdyn_macroactionid@odata.bind"] = "/workflows(" + worklfowid + ")";
-    }
-    else if (actionType === EntityAttributes.ActionTypeScript) {
-      createRequestObj[EntityAttributes.AgentscriptStepActionType] = EntityAttributes.ActionTypeScriptValue;
-      createRequestObj["msdyn_routeactionid@odata.bind"] = "/msdyn_productivityagentscripts(" + recordID + ")";
-      createRequestObj["msdyn_routeactionid@OData.Community.Display.V1.FormattedValue"] = Constants.AgentScriptName1;// agentscript Name
+      createRequestObj["msdyn_macroactionid@odata.bind"] =
+        "/workflows(" + worklfowid + ")";
+    } else if (actionType === EntityAttributes.ActionTypeScript) {
+      createRequestObj[EntityAttributes.AgentscriptStepActionType] =
+        EntityAttributes.ActionTypeScriptValue;
+      createRequestObj["msdyn_routeactionid@odata.bind"] =
+        "/msdyn_productivityagentscripts(" + recordID + ")";
+      createRequestObj[
+        "msdyn_routeactionid@OData.Community.Display.V1.FormattedValue"
+      ] = Constants.AgentScriptName1; // agentscript Name
     } else {
-      createRequestObj["msdyn_textinstruction"] = name,
-        createRequestObj[EntityAttributes.AgentscriptStepActionType] = EntityAttributes.ActionTypeTextValue;
+      (createRequestObj["msdyn_textinstruction"] = name),
+        (createRequestObj[EntityAttributes.AgentscriptStepActionType] =
+          EntityAttributes.ActionTypeTextValue);
     }
-    return await this.createRecord(EntityNames.AgentScriptStep, createRequestObj);
+    return await this.createRecord(
+      EntityNames.AgentScriptStep,
+      createRequestObj
+    );
+  }
+
+  public async getLatestMacro(macroName: string) {
+    let query: string =
+      "?$filter=name eq '" + macroName + "'&$orderby=createdon desc &$top=1";
+    const result = await this.retrieveMultipleRecords("workflow", query);
+    return result;
+  }
+
+  public async createRecordEBuilderXRMAPI(
+    entityLogicalName: string,
+    data: any
+  ) {
+    const record = await this.executeScript(
+      `Xrm.WebApi.createRecord('${entityLogicalName}', ${JSON.stringify(data)})`
+    );
+    return record;
+  }
+
+  public async createParentSesionWithAgentScriptInExpressionBuilderbyXRMAPI1(
+    sessionName: string,
+    sessionUName: string,
+    data: any
+  ) {
+    let crObj = {};
+    crObj[ExpressionBuilderProperties.MsdynName] = sessionName; // agentscript Name and step
+    (crObj[ExpressionBuilderProperties.MsdynUniquename] = sessionUName), // agentscript unique Name and step
+      (crObj[ExpressionBuilderProperties.MsdynEntity] = "incident");
+    crObj[ExpressionBuilderProperties.MsdynExpression] = true;
+    crObj[ExpressionBuilderProperties.MsdynExpressiondata] =
+      JSON.stringify(data);
+    // Exeute Script
+    return await this.Page.evaluate((scr) => {
+      return eval(scr);
+    }, `Xrm.WebApi.createRecord('${EntityNames.Session}', ${JSON.stringify(crObj)})`);
+  }
+
+  public async createChildSesionWithAgentScriptInExpressionBuilderbyXRMAPI1(
+    lhsValue: string,
+    rhsValue: string,
+    sessionName: string,
+    uniqueName: string,
+    agentScriptId1: string,
+    agentScriptId2: string
+  ) {
+    var equals = [];    var End = [];    var runAfter = {};    var expression = {};    var Condition = {};
+    var inputs1 = {};    var inputs2 = {};    var runAfter = {};    var BindAgentcript1 = {};    var BindAgentcript2 = {};
+    var BindDefault = {};    var BindElse = {};    var action2 = {};    var actions = {};    var triggers = {};
+    var required = [];    var prperties = {};    var sEExpression = {};    var inputs = {};    var schema = {};
+    var recurrence = {};    var definition = {};    var childJson = {};    var parameters = {};    var authentication = {};
+    var defaultValue = {};
+    // Compare lhsValue with rhsValue
+    equals.push(lhsValue, rhsValue);
+    End.push({
+      equals,
+    });
+    expression[ExpressionBuilderProperties.And] = End;
+    // True Condition
+    inputs1[ExpressionBuilderProperties.CallscriptId] = agentScriptId1; // New Object
+    inputs2[ExpressionBuilderProperties.CallscriptId] = agentScriptId2;
+    BindAgentcript1[ExpressionBuilderProperties.Type] = ExpressionBuilderProperties.Setcallscript; // New Object
+    BindAgentcript1[ExpressionBuilderProperties.Kind] = ExpressionBuilderProperties.ACTIONS;
+    BindAgentcript1[ExpressionBuilderProperties.Inputs] = inputs1;
+    BindAgentcript1[ExpressionBuilderProperties.RunAfter] = runAfter;
+    BindDefault[ExpressionBuilderProperties.Set_default_agent_script] = BindAgentcript1; // New Object
+    // False Condition
+    BindAgentcript2[ExpressionBuilderProperties.Type] = ExpressionBuilderProperties.Setcallscript; // New Object
+    BindAgentcript2[ExpressionBuilderProperties.Kind] = ExpressionBuilderProperties.ACTIONS;
+    BindAgentcript2[ExpressionBuilderProperties.Inputs] = inputs2;
+    BindAgentcript2[ExpressionBuilderProperties.RunAfter] = runAfter;
+    BindElse[ExpressionBuilderProperties.Set_default_agent_script_2] = BindAgentcript2; // New Object
+    action2[ExpressionBuilderProperties.Actions] = BindElse; // New Object
+    Condition[ExpressionBuilderProperties.Type] = ExpressionBuilderProperties.If; // New Object
+    Condition[ExpressionBuilderProperties.Expression] = expression;
+    Condition[ExpressionBuilderProperties.Actions] = BindDefault;
+    Condition[ExpressionBuilderProperties.RunAfter] = runAfter;
+    Condition[ExpressionBuilderProperties.Else] = action2;
+    actions[ExpressionBuilderProperties.Condition] = Condition; // New Object
+    authentication[ExpressionBuilderProperties.defaultValue] = defaultValue; // New Object
+    authentication[ExpressionBuilderProperties.Type] = ExpressionBuilderProperties.SecureObject;
+    parameters[ExpressionBuilderProperties.Authentication] = authentication; // New Object
+    // Trigger properties
+    schema[ExpressionBuilderProperties.Type] = ExpressionBuilderProperties.Object_; // New Object
+    schema[ExpressionBuilderProperties.Required] = required;
+    schema[ExpressionBuilderProperties.Properties] = prperties;
+    inputs[ExpressionBuilderProperties.Schema] = schema; // New Object
+    recurrence[ExpressionBuilderProperties.Interval] = 1; // New Object
+    recurrence[ExpressionBuilderProperties.Frequency] = ExpressionBuilderProperties.Hour;
+    sEExpression[ExpressionBuilderProperties.Type] = ExpressionBuilderProperties.Start; // New Object
+    sEExpression[ExpressionBuilderProperties.Inputs] = inputs;
+    sEExpression[ExpressionBuilderProperties.Recurrence] = recurrence;
+    triggers[ExpressionBuilderProperties.Start_evaluating_expression] = sEExpression; // New Object
+    // Create json with all objects
+    definition[ExpressionBuilderProperties.SchemaDolar] =
+    ExpressionBuilderProperties.SchemaValue;
+    definition[ExpressionBuilderProperties.Actions] = actions;
+    definition[ExpressionBuilderProperties.Parameters] = parameters;
+    definition[ExpressionBuilderProperties.Triggers] = triggers;
+    definition[ExpressionBuilderProperties.ContentVersion] = ExpressionBuilderProperties.ContentVersionValue;
+    childJson[ExpressionBuilderProperties.Definition] = definition; // New Object
+    const record =
+      await this.createParentSesionWithAgentScriptInExpressionBuilderbyXRMAPI1(
+        sessionName,
+        uniqueName,
+        childJson
+      );
+    return record;
   }
 
   public async getDefaultCasesessionID(caseSessionName: string) {

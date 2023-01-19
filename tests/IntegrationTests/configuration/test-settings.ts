@@ -240,6 +240,10 @@ export class TestSettings {
         return { width: 1900, height: 900 };
     }
 
+    public static get CustomViewport() {
+        return { width: 1400, height: 900 };
+    }
+
     public static get QueueName() {
         return process.env.QueueName || testData.QueueName;
     }
@@ -2146,5 +2150,11 @@ export class TestSettings {
     }
     public static get InboxUser5() {
         return process.env.InboxUser5 || testData.InboxUser5;
+    }
+    public static get MultiSessionEmail2() {
+        return process.env.MultiSessionEmail2 || testData.ProductivityPane.MultiSessionEmail2;
+    }
+    public static get GlobalSearchEmail() {
+        return process.env.GlobalSearchEmail || testData.ProductivityPane.GlobalSearchEmail;
     }
 }

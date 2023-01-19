@@ -84,8 +84,8 @@ export class AgentScript extends BasePage {
   }
 
   public RandomNumber() {
-    var minm = 100;
-    var maxm = 999;
+    var minm = 10000;
+    var maxm = 99999;
     return Math.floor(Math.random() * (maxm - minm + 1)) + minm;
   }
 

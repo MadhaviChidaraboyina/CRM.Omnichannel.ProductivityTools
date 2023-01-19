@@ -1038,24 +1038,20 @@
     "AgentScriptEmail": "",
     "ApplicationSetupEmail": "",
     "MacrosAgentEmail": "AutomatedUser3@csweb1.onmicrosoft.com",
-    "MultiSessionEmail": "AutomatedUser4@csweb1.onmicrosoft.com"
+    "MultiSessionEmail": "AutomatedUser4@csweb1.onmicrosoft.com",
+    "MultiSessionEmail2": "cifautomationuser2@ocprrd.onmicrosoft.com",
+    "GlobalSearchEmail": "presenceuser@ocprrd.onmicrosoft.com"
   },
   "ModernAdmin": {
     "ModernAdminEmail": "",
     "ModernAdminPassword": "",
     "ModernAdminUrl": ""
   },
-  "browsers": [
-    "chromium"
-  ],
+  "browsers": ["chromium"],
   "devices": [],
   "launchBrowserSettings": {
     "headless": true,
     "slowMo": 10,
-    "args": [
-      "--disable-web-security",
-      "--no-sandbox",
-      "--no-zygote"
-    ]
+    "args": [""]
   }
 }

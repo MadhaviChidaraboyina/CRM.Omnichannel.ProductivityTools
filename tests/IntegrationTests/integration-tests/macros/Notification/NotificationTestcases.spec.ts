@@ -67,7 +67,7 @@ describe("Notification - ", () => {
             await macrosAdminPage.CSWAppDesignerPage();
             await macrosAdminPage.enableInAppNotificatiosAndValidate(Constants.Case1 + rnd);
         } finally {
-            await macrosAdminPage.disableNewLayout();
+            //await macrosAdminPage.disableNewLayout();
         }
     });
 });
