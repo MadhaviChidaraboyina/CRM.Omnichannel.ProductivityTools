@@ -7,7 +7,6 @@
 namespace PVSPackage
 {
     using Microsoft.Uii.Common.Entities;
-    using Microsoft.Crm.Sdk.Messages;
     using Microsoft.Xrm.Sdk;
     using Microsoft.Xrm.Sdk.Query;
     using Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase;
@@ -83,19 +82,6 @@ namespace PVSPackage
         /// <returns>Import action object</returns>
         public override UserRequestedImportAction OverrideSolutionImportDecision(string solutionUniqueName, Version organizationVersion, Version packageSolutionVersion, Version inboundSolutionVersion, Version deployedSolutionVersion, ImportAction systemSelectedImportAction)
         {
-            try
-            {
-                if (IsOnpremiseOrganization()) {
-                    PackageLog.Log(string.Format(" Skipping import to onpremise machine for {0}.", solutionUniqueName));
-                    return UserRequestedImportAction.Skip;
-                }
-            }
-            catch(Exception ex)
-            {
-                this.PackageLog.Log($"PackageTemplate::OverrideSolutionImportDecision: Exception occured. Skipping solution {solutionUniqueName}. Exception message is {ex.Message}");
-                return UserRequestedImportAction.Skip;
-            }
-
             // Perform “Update” to the existing solution
             // instead of “Delete And Promote” when a new version
             // of an existing solution is detected.
@@ -160,54 +146,6 @@ namespace PVSPackage
 
             EntityCollection solutions = CrmSvc.RetrieveMultiple(query);
             return solutions != null && solutions.Entities != null && solutions.Entities.Count > 0;
-        }
-
-        /// Function to determine whether org is of type on premise
-		/// </summary>
-		/// <returns>True if org is on premise</returns>
-		public bool IsOnpremiseOrganization()
-		{
-            // Use Geo from RuntimeSetting for New Org provision. 
-            // Runtimesetting will not be available for App update (PDU) so we fall back to Geo from OrganizationRequest
-
-			const string GeoNameSetting = "GeoName";
-			const string OnpremGeo = "ONP";
-
-            string organizationUrl = string.Empty;
-            string organizationGeo = ReadRuntimeSetting(GeoNameSetting);
-            
-            if (string.IsNullOrEmpty(organizationGeo))
-            {
-                var orgDetailInfo = (RetrieveCurrentOrganizationResponse)CrmSvc.ExecuteCrmOrganizationRequest(new RetrieveCurrentOrganizationRequest(), "Getting Organization Data");
-
-                if (orgDetailInfo?.Detail != null)
-                {
-                    organizationGeo = orgDetailInfo.Detail.Geo ?? string.Empty;
-                    PackageLog.Log($"PackageTemplate::RetrieveOrganizationGeo: Retrieved organization details from Crm. Geo: {organizationGeo}");
-                }
-
-                if (string.IsNullOrEmpty(organizationGeo))
-                {
-                    return true;
-                }
-                return organizationGeo.Equals(OnpremGeo, StringComparison.OrdinalIgnoreCase);
-            }
-            else
-            {
-                PackageLog.Log($"PackageTemplate::RetrieveOrganizationGeo: Geo from RuntimeSetting: {organizationGeo}");
-                return organizationGeo.Equals(OnpremGeo, StringComparison.OrdinalIgnoreCase);                
-            } 
-		}
-
-        private string ReadRuntimeSetting(string key)
-        {
-            object runTimeSetting = null;
-            if (this.RuntimeSettings != null && this.RuntimeSettings.ContainsKey(key)
-                && (this.RuntimeSettings.TryGetValue(key, out runTimeSetting)))
-            {
-                return runTimeSetting?.ToString() ?? string.Empty;
-            }
-            return string.Empty;
         }
 
         #endregion
