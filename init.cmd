@@ -302,7 +302,7 @@ echo Install npm dependencies for FlowDesigner
 if exist ./src/Designer/FlowDesigner/package.json (
 	cd ./src/Designer/FlowDesigner
 	call npm install --registry https://registry.npmjs.org
-	cd /
+	cd ../../..
 )
 @echo.
 
