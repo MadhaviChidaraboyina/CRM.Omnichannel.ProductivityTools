@@ -180,6 +180,22 @@ extends:
           #     parameterFileName: ${{ variables.parameterFileName }}
 
           # ♻ Nuget restore
+          - task: npmAuthenticate@0
+            inputs:
+              workingFile: '.npmrc'
+              customEndpoint: 'NPM credentials for dynamicscrm.pkgs.visualstudio.com/_packaging/ResourceSchedule/npm/registry/, CRM.Omnichannel.ProductivityTools-NPM-SC'
+          - task: npmAuthenticate@0
+            inputs:
+              workingFile: 'solutions/.npmrc'
+              customEndpoint: 'NPM credentials for dynamicscrm.pkgs.visualstudio.com/_packaging/ResourceSchedule/npm/registry/, CRM.Omnichannel.ProductivityTools-NPM-SC'
+          - task: npmAuthenticate@0
+            inputs:
+              workingFile: 'src/Designer/FlowDesigner/.npmrc'
+              customEndpoint: 'NPM credentials for dynamicscrm.pkgs.visualstudio.com/_packaging/ResourceSchedule/npm/registry/, CRM.Omnichannel.ProductivityTools-NPM-SC'
+          - task: npmAuthenticate@0
+            inputs:
+              workingFile: 'tests/IntegrationTests/.npmrc'
+              customEndpoint: 'NPM credentials for dynamicscrm.pkgs.visualstudio.com/_packaging/ResourceSchedule/npm/registry/, CRM.Omnichannel.ProductivityTools-NPM-SC'
           - template: .pipelines\templates\retry.yaml@ocYaml
             parameters:
               step:
@@ -206,6 +222,10 @@ extends:
           - task: PowerShell@2
             inputs:
               filePath: 'init.ps1'
+          - task: NodeTool@0
+            inputs:
+              versionSource: 'spec'
+              versionSpec: '16.x'
           # 🏗 Build
           # - task: CmdLine@2
           #   inputs:
