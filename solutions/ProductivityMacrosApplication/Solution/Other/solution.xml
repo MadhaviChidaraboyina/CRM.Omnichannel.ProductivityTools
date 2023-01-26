@@ -106,6 +106,7 @@
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacros_run_flow.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosApplication_focus_tab.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosApplication_get_current_page.svg" behavior="0" />
+      <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosApplication_set_focus.png" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosApplication_open_app_tab.svg" behavior="0" />
       <RootComponent type="61" schemaName="MacroDesigner/msdyn_ProductivityMacrosApplication_refresh_page.svg" behavior="0" />
 	</RootComponents>

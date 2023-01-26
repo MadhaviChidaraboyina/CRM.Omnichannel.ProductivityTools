@@ -25,7 +25,35 @@ declare namespace AppRuntimeClientSdk {
 		/**
 		* Returns the Internal object
 		*/
-		Internal: Internal
+		Internal: Internal;
+	}
+
+	/**
+	 * Event Publisher interface
+	 */
+	 export interface IEventPublisher {
+
+		/**
+		 * Publish data to event.
+		 * @param payload payload to be posted on the channel
+		 */
+		postMessage(payload?: Object, correlationId?: string): void;
+
+		/**
+		 * Close topic and open it up for garbage collection
+		 */
+		close(correlationId?: string): void;
+	}
+
+	/**
+	 * Event Subscriber interface
+	 */
+	export interface IEventSubscriber {
+
+		/**
+		 * Close topic and open it up for garbage collection
+		 */
+		close(correlationId?: string): void;
 	}
 
 	/**
@@ -128,6 +156,28 @@ declare namespace AppRuntimeClientSdk {
 		 * @param input properties of the tab to be created
 		 */
 		createTab(input: XrmClientApi.TabInput): Promise<string>;
+
+		
+		/**
+		 * Create a publisher for a topic.
+		 * @param topicName topic name to which event can be published.
+		 * @param correlationId correlation id for debugging purpose.
+		 */
+		 publishTopic(topicName: string, correlationId?: string): IEventPublisher;
+
+		 /**
+		  * Subscribe to a topic
+		  * @param subscriberName subscriber name.
+		  * @param topicName topic name to listen messages.
+		  * @param callback action to invoke on recieving the message.
+		  * @param correlationId correlation id for debugging purpose.
+		  */
+		 subscribeTopic(subscriberName: string, topicName: string, callback: ()=> void, correlationId?: string): IEventSubscriber;
+ 
+		 /**
+		  * Get APM runtime supported topics.
+		  */
+		 getAPMRuntimeTopics(): Map<string, string>;
 	}
 
 	/**

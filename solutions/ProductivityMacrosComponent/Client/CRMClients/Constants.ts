@@ -26,7 +26,8 @@ namespace Microsoft.ProductivityMacros {
 		public static StatusSucceded = "Succeeded";
 		public static StatusFailed = "Failed";
 		public static StatusSkipped = "Skipped";
-		public static ActionSuccessfull = "Action performed successfully";
+		public static ActionSuccessful = "Action performed successfully";
+        public static ActionUnSuccessful = "Macro Action Failed";
 		public static SplitByDot = ".";
 		public static typeOfExecution = "Microsoft.Logic/workflows/runs";
         public static typeOfDefinition = "Microsoft.Logic/workflows/versions";
@@ -72,8 +73,22 @@ namespace Microsoft.ProductivityMacros {
 		//P2
 		public static OPEN_DASHBOARD = "Open_Dashboard";
         public static LIST_FLOWS = "List_Flows";
-		
     }
+
+    /**
+	 * Broadcasting event constants
+	 */
+	export class BroadcastingConstants {
+		public static SetFocusToAgentScript = "SET_FOCUS_TO_AGENT_SCRIPT";
+        public static BoardcastSetFocusToAgentScriptEvent = "Broadcasted macro action information - setFocusToAgentScript";
+        public static ClosedBoardcastSetFocusToAgentScriptEvent = "Closed Broadcasting publisher and free the object";
+	}
+
+    export enum CallscriptActionType {
+		TextAction,
+		MacroAction,
+		ReRouteAction
+	}
 
     export class Attributes {
         public static commmonAttributes: string[] = ["modifiedby", "createdby", "createdonbehalfby", "createdon", "statuscode", "statecode", "ownerid", "modifiedon", "owningbusinessunit", "FormattedValue", "owninguser"];
@@ -90,7 +105,8 @@ namespace Microsoft.ProductivityMacros {
         public static ActionTemplateEntityName = "msdyn_productivitymacroactiontemplate";
         public static ConnectorEntityName = "msdyn_productivitymacroconnector";
 		public static RunHistoryEntity = "msdyn_macrosession";
-		public static WorkflowEntity = "workflow"
+		public static WorkflowEntity = "workflow";
+        public static Productivityagentscript = "msdyn_productivityagentscript";
     }
 
     export class OpenAppTabType {
@@ -119,6 +135,23 @@ namespace Microsoft.ProductivityMacros {
         public static ThirdPartyWebsite = "webresource"; //ThirdPartyWebsite
         public static Custom = "custom";
 
+    }
+
+    export class setFocusToAgentScriptConstants {
+        public static setFocusToAgentScript = "ProductivityMacrosWrapper - setFocusToAgentScript";
+        public static fetchAgentScript = "ProductivityMacrosWrapper - fetchAgentScript";
+
+        // Error messages
+        public static INVALID_ACTION_INPUTS = "actionInputs is null or undefined";
+        public static INVALID_AGENT_SCRIPT_ID = "Agent script Id is Null or Undefined";
+        public static AGENT_SCRIPT_NOT_FOUND = "No Agent Script is Found";
+        public static FETCH_AGENT_SCRIPT_ERROR = "Failed to fetch any agent script";
+        public static FETCH_AGENT_SCRIPT_SUCCESS = "Fetch the agent script with passed agent script name successfully";
+        public static SET_FOCUS_TO_AGENT_SCRIPT_ERROR = "Failed to set focus to agent script macro";
+    }
+
+    export interface setFocusToAgentScriptActionInputs {
+        AgentScriptUniqueName: string
     }
 
 }

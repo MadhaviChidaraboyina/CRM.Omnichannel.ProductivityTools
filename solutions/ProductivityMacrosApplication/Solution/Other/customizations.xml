@@ -16,6 +16,9 @@
     <msdyn_msdyn_prod_actioninputparameter_msdyn_par msdyn_productivityactioninputparameterid.msdyn_uniquename="msdyn_Resolve_Case_Input_Mandatory" msdyn_productivityparameterdefinitionid.msdyn_uniquename="msdyn_BillableTime">
       <iscustomizable>1</iscustomizable>
     </msdyn_msdyn_prod_actioninputparameter_msdyn_par>
+     <msdyn_msdyn_prod_actioninputparameter_msdyn_par msdyn_productivityactioninputparameterid.msdyn_uniquename="msdyn_Set_AgentScript_focus_params_mandatory" msdyn_productivityparameterdefinitionid.msdyn_uniquename="msdyn_AgentScriptUniqueName">
+      <iscustomizable>1</iscustomizable>
+    </msdyn_msdyn_prod_actioninputparameter_msdyn_par>
     <msdyn_msdyn_prod_actioninputparameter_msdyn_par msdyn_productivityactioninputparameterid.msdyn_uniquename="msdyn_Resolve_Case_Input_Mandatory" msdyn_productivityparameterdefinitionid.msdyn_uniquename="msdyn_IncidentId">
       <iscustomizable>1</iscustomizable>
     </msdyn_msdyn_prod_actioninputparameter_msdyn_par>

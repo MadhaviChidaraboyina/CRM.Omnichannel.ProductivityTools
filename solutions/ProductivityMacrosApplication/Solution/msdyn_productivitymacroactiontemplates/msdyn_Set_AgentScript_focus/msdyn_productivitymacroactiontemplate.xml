@@ -1,0 +1,28 @@
+<msdyn_productivitymacroactiontemplate msdyn_uniquename="msdyn_Set_AgentScript_focus">
+  <iscustomizable>0</iscustomizable>
+  <msdyn_actiondescription default="Set focus to an agent script">
+    <label description="Set focus to an agent script" languagecode="1033" />
+  </msdyn_actiondescription>
+  <msdyn_brandcolor>#2266E3</msdyn_brandcolor>
+  <msdyn_displayname default="Set Agent Script focus">
+    <label description="Set Agent Script focus" languagecode="1033" />
+  </msdyn_displayname>
+  <msdyn_icon>WebResources/MacroDesigner/msdyn_ProductivityMacrosApplication_set_focus.png</msdyn_icon>
+  <msdyn_kind>ACTIONS</msdyn_kind>
+  <msdyn_macroconnector>
+    <msdyn_uniquename>msdyn_ProductivityAutomation</msdyn_uniquename>
+  </msdyn_macroconnector>
+  <msdyn_name>Set_AgentScript_focus</msdyn_name>
+  <msdyn_runtimeapi>Microsoft.ProductivityMacros.Internal.setFocusToAgentScript(actionName,actionInputs)</msdyn_runtimeapi>
+  <msdyn_subtitle default="Productivity automation">
+    <label description="Productivity automation" languagecode="1033" />
+  </msdyn_subtitle>
+  <msdyn_summary default="Set focus to an agent script">
+    <label description="Set focus to an agent script" languagecode="1033" />
+  </msdyn_summary>
+  <msdyn_title default="Set Agent Script focus">
+    <label description="Set Agent Script focus" languagecode="1033" />
+  </msdyn_title>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</msdyn_productivitymacroactiontemplate>

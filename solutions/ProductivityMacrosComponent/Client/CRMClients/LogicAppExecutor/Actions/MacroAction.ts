@@ -26,7 +26,7 @@ namespace Microsoft.LogicAppExecutor {
 			return new Promise((resolve, reject) => {	
 				var executeActionsPromise = this.resolveParamsAndExecuteMacroAction(action.type, action.inputs, action.name, state, runHistoryData);						
 				executeActionsPromise.then(function (success: any) {					
-					resolve(Microsoft.ProductivityMacros.Constants.ActionSuccessfull)
+					resolve(Microsoft.ProductivityMacros.Constants.ActionSuccessful)
 				}.bind(this),
 					function (error: Error) {
 						reject(error);

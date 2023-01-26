@@ -117,5 +117,8 @@ module MscrmControls.Callscript {
             }, stepLabelComponents);
         }
 
+        public static isGuid(value: string): boolean {
+            return !!value?.match(/[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/);
+        }
 	}
 }

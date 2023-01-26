@@ -77,12 +77,31 @@ module MscrmControls.Callscript {
 		public static EVENTSOURCE_MACROS = "Macros";
 	}
 
+	export class RepathAgentScriptLoggerConstants {
+		public static repathAgentScript = "repathAgentScript";
+		public static agentScriptId = "agentScriptId";
+		public static actionType = "actionType";
+		public static actionInputs = "actionInputs";
+
+		public static INVALID_MACRO_ACTION_OR_AGENTSCRIPT_ID = "Either actionType is not macro action or agentScript id is invalid";
+		public static INVALID_PAYLOAD = "payload is null or undefined";
+
+	}
+
+	/**
+	 * Broadcasting event constants
+	 */
+	export class BroadcastingConstants {
+		public static AgentScriptRefocusManager = "AgentScriptRefocusManager";
+		public static SetFocusToAgentScript = "SET_FOCUS_TO_AGENT_SCRIPT";
+	}
+
 	/**
 	 * Ids for localized strings from resx file
 	 */
 	export class LocalizedStrings {
         public static CallscriptHeader = "ControlHeader";
-        public static ControlHeaderInfo = "ControlHeaderInfo";     
+        public static ControlHeaderInfo = "ControlHeaderInfo";
 
 		public static ScriptComboboxEmptyOptionLabel = "ScriptCombobox_EmptyOption";
 

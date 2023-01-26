@@ -24,6 +24,55 @@ module MscrmControls.Callscript {
 			this.telemetryContext = TelemetryComponents.CallscriptStepListitemManager;
 			this.telemetryLogger = logger;
 			this.macroUtil = macro;
+
+			Microsoft.AppRuntime.Internal.subscribeTopic(
+				BroadcastingConstants.AgentScriptRefocusManager,
+				BroadcastingConstants.SetFocusToAgentScript,
+				this.repathAgentScript.bind(this)
+			);
+		}
+
+		private repathAgentScript(payload: any): any {
+			let eventParams = new EventParameters();
+
+			try {
+				if (payload) {
+					const agentScriptId = payload.data?.agentScriptId;
+					const actionType = payload.data?.actionType;
+					const actionInputs = payload.data?.actionInputs;
+					eventParams.addParameter(RepathAgentScriptLoggerConstants.agentScriptId, agentScriptId);
+					eventParams.addParameter(RepathAgentScriptLoggerConstants.actionType, actionType);
+					eventParams.addParameter(RepathAgentScriptLoggerConstants.actionInputs, JSON.stringify(actionInputs));
+					if (actionType === CallscriptActionType.MacroAction &&
+						agentScriptId && Utility.isGuid(agentScriptId)) {
+						this.stateManager.updateCurrentCallScriptByID(agentScriptId);
+						this.setAgentScript();
+						this.context.utils.requestRender();
+						this.telemetryLogger.logSuccess(this.telemetryContext, RepathAgentScriptLoggerConstants.repathAgentScript, eventParams);
+					} else {
+						this.telemetryLogger.logError(
+							this.telemetryContext,
+							RepathAgentScriptLoggerConstants.repathAgentScript,
+							RepathAgentScriptLoggerConstants.INVALID_MACRO_ACTION_OR_AGENTSCRIPT_ID,
+							eventParams
+						);
+					}
+				} else {
+					this.telemetryLogger.logError(
+						this.telemetryContext,
+						RepathAgentScriptLoggerConstants.repathAgentScript,
+						RepathAgentScriptLoggerConstants.INVALID_PAYLOAD,
+						eventParams
+					);
+				}
+			} catch (error) {
+				this.telemetryLogger.logError(
+					this.telemetryContext,
+					RepathAgentScriptLoggerConstants.repathAgentScript,
+					error,
+					eventParams
+				);
+			}
 		}
 
 		private getExecuteActionPromise(step: CallScriptStep) {
@@ -70,12 +119,12 @@ module MscrmControls.Callscript {
 		/**
 		 * Onclick handler for button on step details
 		 * @param step step whose button is clicked
-		 * @param event Jquery event object 
+		 * @param event Jquery event object
 		 */
 		public handleActionButtonClick(step: CallScriptStep, event: JQueryEventObject): void {
 			let methodName = "handleActionButtonClick";
 			if (step.executionStatus != ExecutionStatus.Started) {
-
+				
 				let scripts = this.stateManager.callscriptsForCurrentSession;
 
 				step.executionStatus = ExecutionStatus.Started;
@@ -88,8 +137,7 @@ module MscrmControls.Callscript {
 						step.executionStatus = ExecutionStatus.Completed;
 						step.isExecuted = true;
 						if (step.action.actionType == CallscriptActionType.ReRouteAction) {
-							let comboboxId = this.context.accessibility.getUniqueId("callscriptCombobox");
-							$(document.getElementById(comboboxId)).focus();
+							this.setAgentScript();
 						}
 
 						this.context.utils.requestRender();
@@ -119,6 +167,11 @@ module MscrmControls.Callscript {
 			}
 			this.context.utils.requestRender();
 			event.stopPropagation();
+		}
+
+		private setAgentScript() {
+			var comboboxId = this.context.accessibility.getUniqueId("callscriptCombobox");
+			$(document.getElementById(comboboxId)).focus();
 		}
 
 		/**
@@ -201,7 +254,7 @@ module MscrmControls.Callscript {
 			// This will be changed to return step descrption as per updated UX specs
             let formattedLabel = !this.context.utils.isNullOrUndefined(step.action.getResolvedTextInstruction()) ?
                     Utility.formattedStringDisplay(this.context, step.action.getResolvedTextInstruction(), step.id, true) : Constants.EmptyString;
-            
+
 			return this.context.factory.createElement("CONTAINER", {
 				key: "CallScriptStepDescription-" + step.id + "-Key",
 				id: "CallScriptStepDescription-" + step.id + "-Id",

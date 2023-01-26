@@ -17,9 +17,63 @@ declare namespace AppRuntimeClientSdk {
 		*/
 		Notification: Notification;
 		/**
-		* Returns the Utility object 
+		* Returns the Utility object
 		*/
 		Utility: Utility;
+
+		Internal: Internal;
+	}
+
+	/**
+	 * Event Publisher interface
+	 */
+	export interface IEventPublisher {
+
+		/**
+		 * Publish data to event.
+		 * @param payload payload to be posted on the channel
+		 */
+		postMessage(payload?: Object, correlationId?: string): void;
+
+		/**
+		 * Close topic and open it up for garbage collection
+		 */
+		close(correlationId?: string): void;
+	}
+
+	/**
+	 * Event Subscriber interface
+	 */
+	export interface IEventSubscriber {
+
+		/**
+		 * Close topic and open it up for garbage collection
+		 */
+		close(correlationId?: string): void;
+	}
+
+	export interface Internal {
+
+		/**
+		 * Create a publisher for a topic.
+		 * @param topicName topic name to which event can be published.
+		 * @param correlationId correlation id for debugging purpose.
+		 */
+		 publishTopic(topicName: string, correlationId?: string): IEventPublisher;
+
+		 /**
+		  * Subscribe to a topic
+		  * @param subscriberName subscriber name.
+		  * @param topicName topic name to listen messages.
+		  * @param callback action to invoke on recieving the message.
+		  * @param correlationId correlation id for debugging purpose.
+		  */
+		 subscribeTopic(subscriberName: string, topicName: string, callback: ()=> void, correlationId?: string): IEventSubscriber;
+ 
+		 /**
+		  * Get APM runtime supported topics.
+		  */
+		 getAPMRuntimeTopics(): Map<string, string>;
 	}
 
 	/**
@@ -91,7 +145,7 @@ declare namespace AppRuntimeClientSdk {
 		removeOnAfterSessionSwitch(handlerId: string): void;
 
 		/**
-		 * Add a ContextChange handler. Will be fired when the current page context is changed as a result of a manual or programmatic interaction. 
+		 * Add a ContextChange handler. Will be fired when the current page context is changed as a result of a manual or programmatic interaction.
 		 * Returns @type IContextChangeEvent to the handler passed
 		 * @param handler Handler to fire on context change.
 		 */
@@ -137,7 +191,7 @@ declare namespace AppRuntimeClientSdk {
 	 */
 	export interface Session {
 		/**
-		 * Unique id of the session 
+		 * Unique id of the session
 		 */
 		sessionId: string;
 
@@ -187,7 +241,7 @@ declare namespace AppRuntimeClientSdk {
 		canCreateTab(): boolean;
 
 		/**
-		 * Returns the currently focused tab 
+		 * Returns the currently focused tab
 		 */
 		getFocusedTab(): AppTab;
 
@@ -204,12 +258,12 @@ declare namespace AppRuntimeClientSdk {
 		createTab(input: AppTabInput): Promise<string>;
 
 		/**
-		 * Returns the ids of the tabs currently open in the session	 
+		 * Returns the ids of the tabs currently open in the session
 		 */
 		getAllTabs(): Array<string>;
 
 		/**
-		 * Returns a Promise of SessionContext for this session 
+		 * Returns a Promise of SessionContext for this session
 		 */
 		getContext(): Promise<ISessionContext>;
 
@@ -220,7 +274,7 @@ declare namespace AppRuntimeClientSdk {
 		notifyKpiBreach(show: boolean): Promise<void>;
 
 		/**
-		 * Indicates the count of new updates in the session 
+		 * Indicates the count of new updates in the session
 		 * @param count 0 will render a blue dot, any other positive number will render an equivalent representation
 		 */
 		notifyNewActivity(count: number): Promise<void>;
@@ -232,7 +286,7 @@ declare namespace AppRuntimeClientSdk {
     }
 
 	/**
-	 * An interface that represents the Session Context 
+	 * An interface that represents the Session Context
 	 */
 	export interface ISessionContext {
 		/**
@@ -285,7 +339,7 @@ declare namespace AppRuntimeClientSdk {
 		 */
 		templateName: string;
 		/**
-		 *  
+		 *
 		 */
         appContext: Map<string, string>;
     }
@@ -299,13 +353,13 @@ declare namespace AppRuntimeClientSdk {
 		 */
 		tabId: string;
 
-		/** 
+		/**
 		 * Title of the tab
 		 */
 		title: string;
 
 		/**
-		 * Returns tru if the tab can be closed 
+		 * Returns tru if the tab can be closed
 		 */
 		canClose: boolean;
 
@@ -314,12 +368,12 @@ declare namespace AppRuntimeClientSdk {
 		 */
 		focus(): void;
 
-		/** 
+		/**
 		 * Closes this tab
 		 */
 		close(): Promise<boolean>;
 
-		/** 
+		/**
 		 * Refreshes this tab
 		 */
         refresh(): Promise<void>;
@@ -347,7 +401,7 @@ declare namespace AppRuntimeClientSdk {
 	 */
 	export interface INotificationInput {
 		/**
-		 * Name of the notification template 
+		 * Name of the notification template
 		 */
 		templateName: string
 
@@ -357,37 +411,37 @@ declare namespace AppRuntimeClientSdk {
 		notificationContext?: Map<string, string>;
 
 		/**
-		 * Unique identifier to cancel this notification if requried 
+		 * Unique identifier to cancel this notification if requried
 		 */
         cancellationToken?: string;
     }
 
 	/**
-	 * Interface for Notification Response 
+	 * Interface for Notification Response
 	 */
 	export interface INotificationResponse {
 		/**
-		 * Notification action 
+		 * Notification action
 		 */
 		actionName: NotificationAction;
 
 		/**
-		 * Response reason 
+		 * Response reason
 		 */
 		responseReason: NotificationResponseReason;
 	}
 
 	/**
-	 * enum for Notification Response reason 
+	 * enum for Notification Response reason
 	 */
 	export enum NotificationResponseReason {
 		/**
-		 * Accept button was clicked 
+		 * Accept button was clicked
 		 */
 		Accept = "Accept",
 
 		/**
-		 * Accepted automatically 
+		 * Accepted automatically
 		 */
 		AutoAccept = "AutoAccept",
 
@@ -407,7 +461,7 @@ declare namespace AppRuntimeClientSdk {
 		DisplayTimeout = "DisplayTimeout",
 
 		/**
-		 * Notification queue is full 
+		 * Notification queue is full
 		 */
 		NotificationQueueLimitExceeded = "NotificationQueueLimitExceeded",
 
@@ -417,22 +471,22 @@ declare namespace AppRuntimeClientSdk {
         NotificationQueueTimeLimitExceeded = "NotificationQueueTimeLimitExceeded",
 
 		/**
-		 * Invalid notification template 
+		 * Invalid notification template
 		 */
 		NotificationTemplateNotFoundError = "NotificationTemplateNotFoundError",
 
 		/**
-		 * Invalid inputs 
+		 * Invalid inputs
 		 */
 		NotificationTemplateResolverNotFoundError = "NotificationTemplateResolverNotFoundError",
 
 		/**
-		 * Obsolete 
+		 * Obsolete
 		 */
 		RejectAfterTimeoutNonPlatformTimer = "RejectAfterTimeoutNonPlatformTimer",
 
 		/**
-		 * Rejected due to a client error 
+		 * Rejected due to a client error
 		 */
         RejectAfterClientError = "RejectAfterClientError"
     }
@@ -452,7 +506,7 @@ declare namespace AppRuntimeClientSdk {
 	*/
 	export interface Utility {
 		/**
-		 * Returns the Environment context 
+		 * Returns the Environment context
 		 */
         getEnvironment(): Promise<EnvironmentContext>;
     }
@@ -467,17 +521,17 @@ declare namespace AppRuntimeClientSdk {
 		OrgUniqueName: string;
 
 		/**
-		 * Organization id 
+		 * Organization id
 		 **/
         OrgId: string;
 
 		/**
-		 * Logged in user id 
+		 * Logged in user id
 		 **/
 		UserId: string;
 
 		/**
-		 * Current AppModule unique name 
+		 * Current AppModule unique name
 		 **/
 		AppName: string;
 
@@ -488,7 +542,7 @@ declare namespace AppRuntimeClientSdk {
     }
 
 	/**
-	 * Represents a Page rendered in an Application tab 
+	 * Represents a Page rendered in an Application tab
 	 **/
     export type PageInput =
         | CustomControlPageInput

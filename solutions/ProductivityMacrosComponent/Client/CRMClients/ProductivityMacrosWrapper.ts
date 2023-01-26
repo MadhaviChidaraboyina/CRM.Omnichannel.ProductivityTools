@@ -1463,6 +1463,122 @@ namespace Microsoft.ProductivityMacros.Internal {
         });
     }
 
+    export function setFocusToAgentScript(actionName: string, actionInputs: setFocusToAgentScriptActionInputs): Promise<any> {
+        if (isNullOrUndefined(actionInputs)) {
+            const errorData = generateErrorObject(
+                createErrorMap(setFocusToAgentScriptConstants.INVALID_ACTION_INPUTS),
+                setFocusToAgentScriptConstants.setFocusToAgentScript,
+                errorTypes.InvalidParams
+            );
+            logFailure(setFocusToAgentScriptConstants.setFocusToAgentScript, errorData); 
+            return Promise.reject(setFocusToAgentScriptConstants.INVALID_ACTION_INPUTS);
+        }
+
+        return new Promise<any>((resolve, reject) => {
+            fetchAgentScript(actionInputs.AgentScriptUniqueName).then((agentScriptId: any) => {
+                if (!isNullOrUndefined(agentScriptId)) {
+                    // Broadcasting Macro information
+                    const publisher = Microsoft.AppRuntime.Internal.publishTopic(BroadcastingConstants.SetFocusToAgentScript);
+                    const payload = {
+                        agentScriptId,
+                        actionType: CallscriptActionType.MacroAction,
+                        actionInputs
+                    }
+                    publisher.postMessage(payload);
+                    logSuccess(BroadcastingConstants.BoardcastSetFocusToAgentScriptEvent, agentScriptId, payload);
+                    publisher.close();
+                    logSuccess(BroadcastingConstants.ClosedBoardcastSetFocusToAgentScriptEvent, agentScriptId, payload);
+                    let outputResponse: any = {};
+                    let agentScriptParams: any = {};
+                    agentScriptParams[actionName + ".AgentScriptId"] = agentScriptId;
+                    outputResponse[Constants.OutputResult] = agentScriptParams;
+                    logSuccess(setFocusToAgentScriptConstants.setFocusToAgentScript, agentScriptId, outputResponse);
+                    resolve(outputResponse);
+                } else {
+                    const errorData = generateErrorObject(
+                        createErrorMap(setFocusToAgentScriptConstants.INVALID_AGENT_SCRIPT_ID),
+                        setFocusToAgentScriptConstants.setFocusToAgentScript,
+                        errorTypes.GenericError
+                    );
+                    logFailure(setFocusToAgentScriptConstants.setFocusToAgentScript, errorData);
+                    reject(setFocusToAgentScriptConstants.AGENT_SCRIPT_NOT_FOUND);
+                }
+            },
+            (error) => {
+                const errorData = generateErrorObject(
+                    error,
+                    setFocusToAgentScriptConstants.setFocusToAgentScript,
+                    errorTypes.XrmApiError
+                );
+                logFailure(setFocusToAgentScriptConstants.setFocusToAgentScript, errorData);
+                reject(`${setFocusToAgentScriptConstants}: ${error}`);
+            });
+        });
+    }
+
+    async function fetchAgentScript(agentScriptName: string): Promise<string> {
+        try {
+            const sessionContext = await Microsoft.AppRuntime.Sessions.getFocusedSession().getContext();
+            if (isNullOrUndefined(agentScriptName) || isNullOrUndefined(sessionContext)) {
+                const errorMessage = `Either ${agentScriptName} or ${sessionContext} is null or undefined.`;
+                const errorData = generateErrorObject(
+                    createErrorMap(errorMessage),
+                    setFocusToAgentScriptConstants.fetchAgentScript,
+                    errorTypes.InvalidParams
+                );
+                logFailure(setFocusToAgentScriptConstants.fetchAgentScript, errorData);
+                return Promise.reject(errorMessage);
+            }
+
+            const xml = `<fetch version='1.0' output-format='xml-platform' mapping='logical' returntotalrecordcount='true' page='1' no-lock='false'>
+                            <entity name='msdyn_productivityagentscript'>
+                                <attribute name='msdyn_productivityagentscriptid'/>
+                                <attribute name='msdyn_name'/>
+                                <attribute name='msdyn_uniquename'/>
+                                <order attribute='msdyn_name' descending='false'/>
+                                <filter type='and'>
+                                    <condition attribute='msdyn_language' operator='eq' value='1033' />
+                                    <condition attribute="statecode" operator="eq" value="0" />
+                                </filter>
+                                <link-entity name='msdyn_msdyn_prod_agentscript_msdyn_sessiontempl' intersect='true' visible='false' to='msdyn_productivityagentscriptid' from='msdyn_productivityagentscriptid'>
+                                    <link-entity name='msdyn_sessiontemplate' from='msdyn_sessiontemplateid' to='msdyn_sessiontemplateid' alias='bb'>
+                                        <filter type='and'>
+                                            <condition attribute='msdyn_uniquename' operator='eq' value='${sessionContext.templateName}'/>
+                                        </filter>
+                                    </link-entity>
+                                </link-entity>
+                            </entity>
+                        </fetch>`;
+
+            const response = await Xrm.WebApi.retrieveMultipleRecords(EntityName.Productivityagentscript, `?fetchXml=${xml}`);
+            if (response && response.entities) {
+                let agentScript = response.entities.find(
+                    (agentScript: any) => agentScript.msdyn_uniquename.toLowerCase() == agentScriptName.toLowerCase()) as any;
+                const agentScriptId = agentScript.msdyn_productivityagentscriptid;
+
+                logSuccess(setFocusToAgentScriptConstants.FETCH_AGENT_SCRIPT_SUCCESS, agentScriptId);
+                return Promise.resolve(agentScriptId);
+            } else {
+                const errorMessage = `${setFocusToAgentScriptConstants.FETCH_AGENT_SCRIPT_ERROR} based on the name ${agentScriptName}`;
+                const errorData = generateErrorObject(
+                    createErrorMap(errorMessage),
+                    setFocusToAgentScriptConstants.fetchAgentScript,
+                    errorTypes.GenericError
+                );
+                logFailure(setFocusToAgentScriptConstants.fetchAgentScript, errorData);
+                return Promise.reject(`${setFocusToAgentScriptConstants.FETCH_AGENT_SCRIPT_ERROR} based on the name ${agentScriptName}`);
+            }
+        } catch (error) {
+            const errorData = generateErrorObject(
+                error,
+                setFocusToAgentScriptConstants.fetchAgentScript,
+                errorTypes.GenericError
+            );
+            logFailure(setFocusToAgentScriptConstants.FETCH_AGENT_SCRIPT_ERROR, errorData);
+            return Promise.reject(`${setFocusToAgentScriptConstants.FETCH_AGENT_SCRIPT_ERROR}: ${error}`);
+        };
+    }
+
     export function triggerFlow(actionName: string, actionInputs: any): Promise<string> {
         if (!(isNullOrUndefined(actionInputs))) {
             return new Promise<any>((resolve, reject) => {
@@ -1569,6 +1685,6 @@ namespace Microsoft.ProductivityMacros.Internal {
                     reject(error);
                 });
         })
-    }
 
+    }
 }
