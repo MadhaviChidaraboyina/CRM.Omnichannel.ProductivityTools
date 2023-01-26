@@ -23,6 +23,6 @@
   <msdyn_title default="Set Agent Script focus">
     <label description="Set Agent Script focus" languagecode="1033" />
   </msdyn_title>
-  <statecode>0</statecode>
-  <statuscode>1</statuscode>
+  <statecode>1</statecode>
+  <statuscode>2</statuscode>
 </msdyn_productivitymacroactiontemplate>
