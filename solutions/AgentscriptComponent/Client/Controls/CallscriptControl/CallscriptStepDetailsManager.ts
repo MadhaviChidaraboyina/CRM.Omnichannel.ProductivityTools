@@ -32,7 +32,7 @@ module MscrmControls.Callscript {
 			);
 		}
 
-		private repathAgentScript(payload: any): any {
+		private repathAgentScript(payload: any): void {
 			let eventParams = new EventParameters();
 
 			try {
