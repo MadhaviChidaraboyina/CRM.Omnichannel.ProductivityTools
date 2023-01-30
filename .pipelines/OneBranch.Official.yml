@@ -11,6 +11,7 @@
 name: $(Date:yyyy.MM.dd).$(Build.SourceVersion)-$(SourceBranchName)-$(Cdp_Definition_Build_Count)
 
 trigger: # https://aka.ms/obpipelines/triggers
+  - weekly/*
   - master
   - releases/*
   - one_branch
