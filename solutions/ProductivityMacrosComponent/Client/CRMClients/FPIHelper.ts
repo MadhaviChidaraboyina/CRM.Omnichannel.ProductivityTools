@@ -1,4 +1,4 @@
-/// <reference path="../../TypeDefinitions/msdyn_MacrosDataLayer.d.ts" />
+/// <reference path="../../../../references/internal/TypeDefinitions/msdyn_MacrosDataLayer.d.ts" />
 /// <reference path="../../../../packages/Crm.ClientApiTypings.1.3.2084/clientapi/XrmClientApi.d.ts" />
 /// <reference path="Constants.ts" />
 

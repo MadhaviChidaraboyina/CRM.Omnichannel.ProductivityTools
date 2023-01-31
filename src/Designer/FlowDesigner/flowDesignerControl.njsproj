@@ -108,7 +108,7 @@
     <TypeScriptCompile Include="src\scripts\LogicAppDesigner\Logicapp.tsx">
       <SubType>Code</SubType>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="Typings\msdyn_MacrosDataLayer.d.ts" />
+    <TypeScriptCompile Include="..\..\..\references\internal\TypeDefinitions\msdyn_MacrosDataLayer.d.ts" />
     <TypeScriptCompile Include="Typings\XrmClientApi.d.ts" />
     <TypeScriptCompile Include="Typings\XrmClientApiDeprecated.d.ts" />
     <TypeScriptCompile Include="Typings\XrmClientApiInternal.d.ts" />
@@ -126,7 +126,7 @@
     <Folder Include="src\scripts\LogicAppDesigner\Data\" />
     <Folder Include="src\scripts\LogicAppDesigner\Data\ManifestJson\" />
     <Folder Include="src\scripts\LogicAppDesigner\utilities\" />
-    <Folder Include="Typings\" />
+    <Folder Include="..\..\..\references\internal\TypeDefinitions\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="external\prototype.js" />

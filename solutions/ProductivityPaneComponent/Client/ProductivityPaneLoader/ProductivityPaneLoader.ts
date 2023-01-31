@@ -6,7 +6,7 @@
 /// <reference path="./Utilities/LoadPanesHelper.ts" />
 /// <reference path="./Utilities/Logger.ts" />
 /// <reference path="./Data/APMConfigExtractor.ts" />
-/// <reference path="../TypeDefinitions/AppRuntimeClientSdk.d.ts" />
+/// <reference path="../../../../references/internal/TypeDefinitions/AppRuntimeClientSdk.d.ts" />
 /// <reference path="./Utilities/XrmAppProxy.ts" />
 module ProductivityPaneLoader {
     LoadScripts.loadLogicAppExecutor();

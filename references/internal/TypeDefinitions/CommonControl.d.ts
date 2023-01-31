@@ -1,4 +1,4 @@
-/// <reference path="jquery.d.ts" />
+/// <reference path="../../external/TypeDefinitions/jquery.d.ts" />
 /**
 * @license Copyright (c) Microsoft Corporation. All rights reserved.
 */

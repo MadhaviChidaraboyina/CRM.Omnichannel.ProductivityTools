@@ -453,7 +453,7 @@ declare namespace Microsoft.CIFramework.postMessageNamespace {
          * Collection for promises created on the caller (widget/CI), that represent open requests on the receiver (CI/widget)
          */
         pendingPromises: Map<string, IDeferred>;
-        listWhitelistedDomains: string[];
+        listInclusionListedDomains: string[];
         messageHandlers: Map<string, Set<Handler>>;
         responseTargetWindow: Window;
         /**

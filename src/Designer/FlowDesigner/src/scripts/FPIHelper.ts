@@ -1,4 +1,4 @@
-/// <reference path="../../Typings/msdyn_MacrosDataLayer.d.ts" />
+/// <reference path="../../../../../references/internal/TypeDefinitions/msdyn_MacrosDataLayer.d.ts" />
 import { Constants } from "./../constants/DesignerConstants";
 
 export class FPIHelper {

@@ -39,10 +39,16 @@ declare namespace Microsoft.ProductivityMacros.MacrosDataLayer {
         static ocFPIUrlKey: string;
         static ocDeploymentTypeKey: string;
         static ocEndpointNameKey: string;
+        static ocMsalFCBNamespace: string;
+        static ocMsalFCBKey: string;
         private static readonly publicFPIUrlMap;
         static setPublicFPIUrlMap(): void;
         private static readonly fairfaxFPIUrlMap;
         static setFairfaxFPIUrlMap(): void;
+        private static readonly publicFPI_MSALUrlMap;
+        static setPublicFPI_MSALUrlMap(): void;
+        private static readonly fairfaxFPI_MSALUrlMap;
+        static setFairfaxFPI_MSALUrlMap(): void;
         static getFPIURLMap(cloudType: string): Map<any, any>;
     }
 }

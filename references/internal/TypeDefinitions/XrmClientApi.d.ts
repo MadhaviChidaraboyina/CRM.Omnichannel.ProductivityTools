@@ -4404,6 +4404,50 @@ declare namespace XrmClientApi {
         }
 
         export type ProcessStageStatus = "active" | "inactive";
+
+		/**
+		 * search Type
+		 */
+		const enum SearchType {
+			RelevanceSearch = 0,
+			CategorizedSearch = 1,
+			CustomSearch = 2,
+		}
+		
+		/**
+		 * Enum indicating desired side panel state
+		 */
+		const enum PanelState {
+			/**
+			 * Indicates collapsed state.
+			 */
+			Collapsed = 0,
+
+			/**
+			 *  Indicates expanded state
+			 */
+			Expanded = 1,
+
+			/**
+			 *  Indicates hidden state
+			 */
+			Hidden = 2,
+		}
+
+		/**
+		 * Enum indicating desired side panel position
+		 */
+		const enum PanelPosition {
+			/**
+			 * Indicates left position.
+			 */
+			Left = 1,
+
+			/**
+			 *  Indicates right position
+			 */
+			Right = 2,
+		}
     }
 
 	/**
@@ -4512,6 +4556,707 @@ declare namespace XrmClientApi {
 		 */
         navigationPropertyName: string;
     }
+
+	
+
+	/**
+	 * Interface for Xrm.Panel.
+	 */
+	export interface Panel {
+		/*
+		 * Indicates the panel position.
+		 */
+		position?: XrmClientApi.Constants.PanelPosition;
+
+		/*
+		 * Indicates the initial panel state.
+		 */
+		state?: XrmClientApi.Constants.PanelState;
+
+		/*
+		 * Indicates the initial panel title.
+		 */
+		title?: string;
+
+		/*
+		 * The URL currently loaded in the panel.
+		 */
+		readonly url: string;
+
+		/*
+		 * Width of the side panel in pixels.
+		 */
+		width?: number;
+
+		/**
+		 * Loads the side panel with the provided panel options
+		 * @param options the desired options for the side panel
+		 */
+		loadPanel(options: PanelOptions): Promise<void>;
+
+		/**
+		 * Used to post a message to the Side Panel iFrame.
+		 * @param message Message to send to the Side Panel iFrame.
+		 */
+		postMessage(message: any): void;
+
+		/**
+		 * Add a handler for listening to messages sent to Xrm Panel from the Side Panel iFrame.
+		 * @param handler Handler to invoke when a message is sent to Xrm Panel
+		 */
+		addOnMessageReceived(handler: XrmClientApi.EventHandler): void;
+
+		/**
+		 * Remove a handler for listening to messages sent to Xrm Panel from the Side Panel iFrame.
+		 * @param handler Handler to invoke when a message is sent to Xrm Panel
+		 */
+		removeOnMessageReceived(handler: XrmClientApi.EventHandler): void;
+
+		/**
+		 * Adds a handler to be called when the size of the panel is changed.
+		 * @param handler The handler to add for this event.
+		 */
+		addOnSizeChange(handler: XrmClientApi.EventHandler): void;
+
+		/**
+		 * Removes a handler to be called when the size of the panel is changed.
+		 * @param handler The handler to remove for this event.
+		 */
+		removeOnSizeChange(handler: XrmClientApi.EventHandler): void;
+
+		/**
+		 * Adds a handler to be called when the state of the panel is changed.
+		 * @param handler The handler to add for this event.
+		 */
+		addOnStateChange(handler: XrmClientApi.EventHandler): void;
+
+		/**
+		 * Removes a handler to be called when the state of the panel is changed.
+		 * @param handler The handler to remove for this event.
+		 */
+		removeOnStateChange(handler: XrmClientApi.EventHandler): void;
+	}
+
+	/**
+	 * Interface that represents the options for the side panel
+	 */
+	export interface NewPanelOptions {
+		/*
+		 * Indicates the panel position.
+		 */
+		position?: XrmClientApi.Constants.PanelPosition;
+
+		/*
+		 * Indicates the initial panel state.
+		 */
+		state?: XrmClientApi.Constants.PanelState;
+
+		/*
+		 * Indicates the initial defaultCollapsedBehavior.
+		 */
+		defaultCollapsedBehavior?: boolean;
+
+		/*
+		 * Indicates the initial panel title.
+		 */
+		title?: string;
+
+		/*
+		 * The URL currently loaded in the panel.
+		 */
+		url: string;
+
+		/*
+		 * Width of the side panel in pixels.
+		 */
+		width?: number;
+	}
+
+	/**
+	 * Interface that represents the old options for the side panel.  These are defined in XrmClientApiDeprecated.d.ts.
+	 */
+	export interface _OldPanelOptions {}
+
+	// TODO: Can PanelOptions be better defined so as to not break old code and at the same time work once the old interfaces are removed?  Without allowing the old interface to be used when making the new call?
+	export type PanelOptions = _OldPanelOptions | NewPanelOptions;
+
+	/**
+	 * Interface for a context-sensitive handler that can return a value
+	 */
+	export interface SessionEventHandler {
+		/**
+		 * @param	{EventContext}	context The event context.
+		 */
+		(context?: EventContext): any;
+	}
+
+	/**
+	 * Input parameters for creating a new Session.
+	 */
+	export interface SessionInput {
+		/**
+		 * The input for the initial page to open when the session is created.
+		 */
+		pageInput: PageInput;
+
+		/**
+		 * Additional parameters of the new session.
+		 */
+		options?: SessionOptions;
+	}
+
+	/**
+	 * Input parameters for creating a new tab.
+	 */
+	export interface TabInput {
+		/**
+		 *  The input for the initial page to open when the tab is created.
+		 */
+		pageInput: PageInput;
+
+		/**
+		 * Additional properties of the tab.
+		 */
+		options?: TabOptions;
+	}
+
+	/**
+	 * Additional parameters for new session creation.
+	 */
+	export interface SessionOptions {
+		/**
+		 * Whether or not the session can be closed.
+		 */
+		canBeClosed?: boolean;
+
+		/**
+		 * The title to use for this session.
+		 */
+		title?: string;
+
+		/**
+		 * The icon to use for this session.
+		 */
+		iconPath?: string;
+
+		/**
+		 * will focus after session is created.
+		 */
+		isFocused?: boolean;
+
+		/**
+		 * Update the the UI to indicate to the user that this session requires attention.
+		 */
+		isFocusRequested?: boolean;
+	}
+
+	/**
+	 * Additional parameters for new tab creation.
+	 */
+	export interface TabOptions {
+		/**
+		 * Determines whether or not the tab can be closed.
+		 */
+		canBeClosed?: boolean;
+
+		/**
+		 * The title for the tab.
+		 */
+		title?: string;
+
+		/**
+		 * The icon to display for this tab.
+		 */
+		iconPath?: string;
+
+		/**
+		 * will focus after tab is created
+		 */
+		isFocused?: boolean;
+	}
+
+	/**
+	 * Interface for Xrm App object which contains functionality related to Application Shell.
+	 */
+	export interface App {
+		sessions: AppSessions;
+	}
+
+	/**
+	 * Interface of the XrmAppSessions object.
+	 */
+	export interface AppSessions {
+		/**
+		 * Returns the session corresponding to the id passed in.
+		 * @param id ID of the session to return.
+		 */
+		getSession(id: string): AppSession;
+
+		/**
+		 * Returns the current focused session.
+		 */
+		getFocusedSession(): AppSession;
+
+		/**
+		 * Returns true if another session can be created.
+		 */
+		canCreateSession(): boolean;
+
+		/**
+		 * Create a new session
+		 * @param input Input properties for creating a session
+		 */
+		createSession(input: SessionInput): Promise<string>;
+
+		/**
+		 * Gets the list of sessions currently open.
+		 * @returns Returns array of sessionIds.
+		 */
+		getAll(): Collection.ItemCollection<AppSession>;
+
+		/**
+		 * Add a SessionCreate handler. Will be fired after session is created.
+		 * @param handler handler to fire on session create.
+		 */
+		addOnAfterSessionCreate(handler: SessionEventHandler): string;
+
+		/**
+		 * Remove a SessionCreate handler.
+		 * @param handlerId Identifier of handler to remove
+		 */
+		removeOnAfterSessionCreate(handlerId: string): void;
+
+		/**
+		 * Add a SessionClose handler. Will be fired after session is closed.
+		 * @param handler handler to fire on session close.
+		 */
+		addOnAfterSessionClose(handler: SessionEventHandler): string;
+
+		/**
+		 * Remove a SessionClose handler.
+		 * @param handlerId Identifier of handler to remove
+		 */
+		removeOnAfterSessionClose(handlerId: string): void;
+
+		/**
+		 * Add a SessionSwitch handler. Will be fired after session is switched.
+		 * @param handler handler to fire on session switch.
+		 */
+		addOnAfterSessionSwitch(handler: SessionEventHandler): string;
+
+		/**
+		 * Remove a SessionSwitch handler.
+		 * @param handlerId Identifier of handler to remove
+		 */
+		removeOnAfterSessionSwitch(handlerId: string): void;
+	}
+
+	/**
+	 * Interface of the XrmAppSession object.
+	 */
+	export interface AppSession {
+		/**
+		 * The id of the session.
+		 */
+		sessionId: string;
+
+		/**
+		 * The title of the session.
+		 */
+		title: string;
+
+		/**
+		 * Indicates whether or not this session can be closed.
+		 */
+		canClose: boolean;
+
+		/**
+		 * Indicates whether or not this session is Default/Home session.
+		 */
+		isDefault: boolean;
+
+		/**
+		 * The tabs opened under this session.
+		 */
+		tabs: AppTabs;
+
+		/**
+		 * Sets the focus to this session.
+		 */
+		focus(): Promise<void>;
+
+		/**
+		 * Update the the UI to indicate to the user that this session requires attention.
+		 */
+		requestFocus(): void;
+
+		/**
+		 * Close this session.
+		 */
+		close(): Promise<boolean>;
+	}
+
+	/**
+	 * Interface of the XrmAppTabs object.
+	 */
+	export interface AppTabs {
+		/**
+		 * Returns the tab corresponding to the tabId passed in.
+		 */
+		getTab(tabId: string): AppTab;
+
+		/**
+		 * Returns the focused tab.
+		 */
+		getFocusedTab(): AppTab;
+
+		/**
+		 * Can the user create a new tab
+		 */
+		canCreateTab(): boolean;
+
+		/**
+		 * Create a new tab
+		 * @param input contains parameters for new tab creation
+		 */
+		createTab(input: TabInput): Promise<string>;
+
+		/**
+		 * Gets the list of tabs currently open.
+		 * @returns Returns collection of tabs.
+		 */
+		getAll(): Collection.ItemCollection<AppTab>;
+	}
+
+	/**
+	 * Interface for the XrmAppTab object.
+	 */
+	export interface AppTab {
+		/**
+		 * return the tab id of the tab.
+		 */
+		tabId: string;
+
+		/**
+		 * Returns the title of the tab.
+		 */
+		title: string;
+
+		/**
+		 * Returns whether this tab can be closed.
+		 */
+		canClose: boolean;
+
+		/**
+		 * Returns page url of current active page in tab
+		 */
+		currentUrl: string;
+
+		/**
+		 * Get the navigation history of this tab.
+		 */
+		history: AppTabHistory;
+
+		/**
+		 * Set the focus to this tab
+		 */
+		focus(): void;
+
+		/**
+		 * Close this tab
+		 */
+		close(): Promise<boolean>;
+
+		/**
+		 * Reload the contents of this tab.
+		 */
+		refresh(): Promise<void>;
+
+		/**
+		 * Perform a navigation within this tab.
+		 */
+		navigateTo(input: PageInput): Promise<void>;
+
+		/**
+		 * Return the session ID of the session containing this tab.
+		 */
+		getParentSessionId(): string;
+	}
+
+	/**
+	 * Interface for the XrmAppTabHistory object.
+	 */
+	export interface AppTabHistory {
+		/**
+		 * Navigate back in the history of the tab.
+		 */
+		back(): Promise<void>;
+
+		/**
+		 * Clear the history of the tab.
+		 */
+		clear(): void;
+	}
+
+	/**
+	 * Base interface for the information needed to load the page.
+	 */
+	export type PageInput =
+		| CustomControlPageInput
+		| SearchPageInput
+		| EntityListPageInput
+		| DashboardPageInput
+		| FormPageInput
+		| InlineDialogPageInput
+		| WebResourcePageInput;
+
+	/**
+	 * Interface for the input class for navigating to a webresource page.
+	 */
+	export interface WebResourcePageInput {
+		/**
+		 * The type of page to navigate to.
+		 */
+		pageType: PageType.webresource;
+
+		/**
+		 * Name of the webresource.
+		 */
+		webresourceName: string;
+
+		/**
+		 * Optional data to pass to the webresource.
+		 */
+		data?: string;
+	}
+
+	/**
+	 * Interface for the input class for navigating to a dashboard page.
+	 */
+	export interface DashboardPageInput {
+		/**
+		 * The type of page to navigate to.
+		 */
+		pageType: PageType.dashboard;
+
+		/**
+		 * The navigation path.
+		 */
+		navigationPath?: string;
+
+		/**
+		 * Guid of dashboard
+		 */
+		dashboardId?: string;
+
+		/**
+		 * Entity type of this dashboard.
+		 */
+		entityType?: string;
+
+		/**
+		 * Dashboard type, i.e. system or user.
+		 */
+		type?: DashboardType;
+
+		/**
+		 * Identify if the dashboard can be overriden with Default User Dashboard
+		 */
+		canOverride?: boolean;
+	}
+
+	/**
+	 * Interface for the input class for form page navigation
+	 */
+	export interface FormPageInput {
+		/**
+		 * The type of page to navigate to.
+		 */
+		pageType: PageType.entityRecord;
+
+		/**
+		 * The entity type name of the primary
+		 * entity associated with the form.
+		 */
+		entityName: string;
+
+		/**
+		 * The id of the record to load in the form
+		 */
+		entityId?: string;
+
+		/**
+		 * Indicating the form should be initialized with a parent entity
+		 */
+		createFromEntity?: LookupValue;
+
+		/**
+		 * The optional id of the form to use.
+		 * If unspecified then the default will be used.
+		 */
+		formId?: string;
+
+		/**
+		 * The id of the process to load
+		 */
+
+		processId?: string;
+
+		/**
+		 * The id of the process instance to load
+		 */
+		processInstanceId?: string;
+
+		/**
+		 * The id of the stage selected in the BPF
+		 */
+		selectedStageId?: string;
+
+		/**
+		 * Whether the form is navigated to from a different entity using cross entity BPF
+		 */
+		isCrossEntityNavigate?: boolean;
+
+		/**
+		 * This determines referenced entity in offline scenarios.
+		 */
+		relationship?: XrmClientApi.IRelationship;
+
+		/**
+		 * Indicates if there are any sync error
+		 */
+		isOfflineSyncError?: boolean;
+
+		/**
+		 * The optional data parameter that is specific to set field value/default value for a form
+		 */
+		data: FormParameters;
+	}
+
+	/**
+	 * Interface for the input class for inline dialog navigation
+	 */
+	export interface InlineDialogPageInput {
+		/**
+		 * The type of page to navigate to.
+		 */
+		pageType: PageType.inlineDialog;
+
+		/**
+		 * Identifies the form.
+		 */
+		uniqueName: string;
+
+		/**
+		 * Input parameters for defaulting the dialog fields
+		 */
+		data: DialogParameters;
+	}
+
+	/**
+	 * Interface for the input class for record list page navigation.
+	 */
+	export interface EntityListPageInput {
+		/**
+		 * The type of page to navigate to.
+		 */
+		pageType: PageType.entityList;
+
+		/**
+		 * The logical name of the entity type to load in the list control.
+		 */
+		entityName: string;
+
+		/**
+		 * The ID of the view to load.
+		 */
+		viewId?: string;
+
+		/**
+		 * The type of view to load.
+		 */
+		viewType?: ViewType;
+	}
+
+	/**
+	 * Interface for the input class for custom control page navigation.
+	 */
+	export interface CustomControlPageInput {
+		/**
+		 * The type of page to navigate to.
+		 */
+		pageType: PageType.control;
+
+		/**
+		 * The unique name of the control type to load.
+		 */
+		controlName: string;
+
+		/**
+		 * The json data parameters required for the control.
+		 */
+		data?: string;
+	}
+
+	/**
+	 * Interface for the input class for search page navigation
+	 */
+	export interface SearchPageInput {
+		/**
+		 * The type of page to navigate to.
+		 */
+		pageType: PageType.search;
+
+		/**
+		 * The search text that user types into the search box.
+		 */
+		searchText?: string;
+
+		/**
+		 * Type of the search being performed.
+		 */
+		searchType?: Constants.SearchType;
+
+		/**
+		 * List of Entity for which we need to fetch result
+		 */
+		EntityNames?: string[];
+
+		/**
+		 * Entity Group Name
+		 */
+		EntityGroupName?: string;
+	}
+
+	/**
+	 * Enum for the page type.
+	 * Should match the URL value of page type
+	 */
+	export const enum PageType {
+		control = "control", // OKAY
+		entityList = "entitylist",// OKAY
+		search = "search",// OKAY
+		dashboard = "dashboard",// OKAY
+		entityRecord = "entityrecord",// OKAY
+		inlineDialog = "inlinedialog",// OKAY
+		webresource = "webresource",// OKAY
+	}
+
+	/**
+	 * Enum for dashboard type
+	 */
+	export const enum DashboardType {
+		system = "system",
+		user = "user",
+	}
+
+	/**
+	 * Enum for the view type.
+	 */
+	export const enum ViewType {
+		savedView = "savedview",
+		userView = "userview",
+	}
 
 	/**
 	 * Interface for commanding 

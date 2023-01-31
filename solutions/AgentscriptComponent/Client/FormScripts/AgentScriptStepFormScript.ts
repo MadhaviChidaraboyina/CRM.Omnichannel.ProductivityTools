@@ -3,7 +3,7 @@
 */
 
 ///<reference path="Constants.ts" />
-///<reference path="../TypeDefinitions/XrmClientApi.d.ts" />
+///<reference path="../../../../references/internal/TypeDefinitions/XrmClientApi.d.ts" />
 ///<reference path="../../../../references/external/TypeDefinitions/lib.es6.d.ts" />
 
 module AgentScriptPackage

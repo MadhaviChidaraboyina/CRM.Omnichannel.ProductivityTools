@@ -1,7 +1,7 @@
 /**
  * @license Copyright (c) Microsoft Corporation.  All rights reserved.
  */
-/// <reference path="../../TypeDefinitions/AppRuntimeClientSdk.d.ts" />
+/// <reference path="../../../../../references/internal/TypeDefinitions/AppRuntimeClientSdk.d.ts" />
 
 module ProductivityPaneLoader {
     export class Logger {
