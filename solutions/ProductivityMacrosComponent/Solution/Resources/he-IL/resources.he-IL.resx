@@ -1537,7 +1537,7 @@
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'msdyn_summary' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplatemsdyn_title" xml:space="preserve">
-    <value>תפקיד</value>
+    <value>כותרת</value>
     <comment>'msdyn_productivitymacroactiontemplate' : displayname for Attribute 'msdyn_title' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroactiontemplatemsdyn_UniqueName" xml:space="preserve">
@@ -1657,7 +1657,7 @@
     <comment>'msdyn_productivitymacroconnector' : displayname for OptionSet 'msdyn_productivitymacroconnector_statuscode' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectormsdyn_title" xml:space="preserve">
-    <value>תפקיד</value>
+    <value>כותרת</value>
     <comment>'msdyn_productivitymacroconnector' : displayname for Attribute 'msdyn_title' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivitymacroconnectormsdyn_type" xml:space="preserve">
@@ -1861,7 +1861,7 @@
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'msdyn_description' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionmsdyn_displayname" xml:space="preserve">
-    <value>תפקיד</value>
+    <value>כותרת</value>
     <comment>'msdyn_productivityparameterdefinition' : displayname for Attribute 'msdyn_displayname' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityparameterdefinitionmsdyn_jsonobjectstructure" xml:space="preserve">

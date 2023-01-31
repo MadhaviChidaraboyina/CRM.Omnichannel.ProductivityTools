@@ -633,7 +633,7 @@
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationmsdyn_order" xml:space="preserve">
-    <value>הזמנה</value>
+    <value>סדר</value>
     <comment>'msdyn_panetabconfiguration' : displayname for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetabconfigurationmsdyn_panetabconfigurationid" xml:space="preserve">
@@ -913,7 +913,7 @@
     <comment>'Pane tab configuration' : label for cell in Entity FormXml ID: '{57d6bd83-a84d-ebe8-7904-0785c7bd6a7c}'</comment>
   </data>
   <data name="1:label,Pane tab configuration{71983e13-50ed-b284-d283-0bd5101cc791}" xml:space="preserve">
-    <value>הזמנה</value>
+    <value>סדר</value>
     <comment>'Pane tab configuration' : label for cell in Entity FormXml ID: '{71983e13-50ed-b284-d283-0bd5101cc791}'</comment>
   </data>
   <data name="1:label,Pane tab configuration{88c3af02-9b35-4887-931f-062ef1fcd58a}" xml:space="preserve">

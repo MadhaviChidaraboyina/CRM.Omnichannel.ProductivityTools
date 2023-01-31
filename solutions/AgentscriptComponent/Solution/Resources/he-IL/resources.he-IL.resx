@@ -597,7 +597,7 @@
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_name' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_order" xml:space="preserve">
-    <value>הזמנה</value>
+    <value>סדר</value>
     <comment>'msdyn_productivityagentscriptstep' : displayname for Attribute 'msdyn_order' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_productivityagentscriptstepmsdyn_productivityagentscriptstepId" xml:space="preserve">
@@ -757,7 +757,7 @@
     <comment>'Agent script step' : label for section in Entity FormXml ID: '{44ad0cd7-49a9-4e71-9163-ef6b6a154d70}'</comment>
   </data>
   <data name="1:label,Agent script step{46729a82-11a4-0bd8-aced-946b801902b6}" xml:space="preserve">
-    <value>הזמנה</value>
+    <value>סדר</value>
     <comment>'Agent script step' : label for cell in Entity FormXml ID: '{46729a82-11a4-0bd8-aced-946b801902b6}'</comment>
   </data>
   <data name="1:label,Agent script step{4877817D-BAF0-4347-B5CE-DAF8C0BCF156}" xml:space="preserve">
@@ -765,7 +765,7 @@
     <comment>'Agent script step' : label for section in Entity FormXml ID: '{4877817D-BAF0-4347-B5CE-DAF8C0BCF156}'</comment>
   </data>
   <data name="1:label,Agent script step{4DF0386F-3B14-47C1-BD14-E375CBADEAB0}" xml:space="preserve">
-    <value>הזמנה</value>
+    <value>סדר</value>
     <comment>'Agent script step' : label for cell in Entity FormXml ID: '{4DF0386F-3B14-47C1-BD14-E375CBADEAB0}'</comment>
   </data>
   <data name="1:label,Agent script step{5b9efe00-7849-4450-980e-0215db1f0cb5}" xml:space="preserve">

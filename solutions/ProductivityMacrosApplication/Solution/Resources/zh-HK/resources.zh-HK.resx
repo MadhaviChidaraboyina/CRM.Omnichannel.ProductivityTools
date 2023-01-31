@@ -140,6 +140,10 @@
     <value>此巨集會根據您提供的資訊自動填入表單欄位</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
   </data>
+  <data name="100000:label,01170BD05D9A4C79C0A363C9DE4634DD74CB201274F6B095B9530CA17AA8C8E7" xml:space="preserve">
+    <value>將焦點設定為專員指令碼</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_actiondescription id:</comment>
+  </data>
   <data name="100000:label,01E6E5DDA1C61427416BE4667974C99D02A9A4297E139B51729959856721CCBD" xml:space="preserve">
     <value>開啟新的表單以建立記錄</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
@@ -316,6 +320,10 @@
     <value>屬性</value>
     <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
   </data>
+  <data name="100000:label,477256608108E55C6B23B93D7EF922418B2BFA2E721272BC0F9AC770047C5E31" xml:space="preserve">
+    <value>設定專員指令碼焦點</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_displayname id:</comment>
+  </data>
   <data name="100000:label,480152B032AD11F308CDA6081C62016F459965FCB09A404A1D94D6B8E436ABE7" xml:space="preserve">
     <value>範例 JSON 物件</value>
     <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
@@ -351,6 +359,10 @@
   <data name="100000:label,504F2CFBA967086855D27262BFBD4E69968A89B985452C21F249564402FC2021" xml:space="preserve">
     <value>這會複製指定為巨集輸入的記錄，並在新索引標籤中以新的未儲存記錄開啟</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
+  <data name="100000:label,51B8DF87F6069F6907465E666E5FE48DD595704102167A41EECAE4344368DE3D" xml:space="preserve">
+    <value>生產力自動化</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
   </data>
   <data name="100000:label,5755EFD89F884DDB0891CB2D7A17D94D14E471181FE0130335A9CE6E81173A99" xml:space="preserve">
     <value>生產力自動化</value>
@@ -436,6 +448,10 @@
     <value>應用程式範本識別碼</value>
     <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
   </data>
+  <data name="100000:label,78A16D1C2F9F1FC28AD0577392F0D9FAD70055F742831E293743DB9708993842" xml:space="preserve">
+    <value>設定專員指令碼焦點</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_title id:</comment>
+  </data>
   <data name="100000:label,7C8F1A3E5E16FEA2B6C5025D0CBB53DB6161334F1789BE43D1848540C855BBC9" xml:space="preserve">
     <value>重新整理索引標籤</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
@@ -443,6 +459,10 @@
   <data name="100000:label,7E5E3BE7BD6BA4093579DB03C2BC7F810FFAC9A49BEFD0D251D1A9C0E64B453E" xml:space="preserve">
     <value>自訂名稱值組的陣列</value>
     <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
+  </data>
+  <data name="100000:label,7F7333D3C5D33D36B40A7FCB1C5F63067A86715DEA09B4E51F449F370AC4AC67" xml:space="preserve">
+    <value>專員指令碼唯一名稱</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_displayname id:</comment>
   </data>
   <data name="100000:label,7FB5A722101975989BD1C0FB48000FC27BF25A5C40FBE6D17DE876EF7BDFD45C" xml:space="preserve">
     <value>這會複製目前索引標籤中的記錄，並在新索引標籤中以新的未儲存記錄開啟</value>
@@ -656,6 +676,10 @@
     <value>取得目前索引標籤</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
   </data>
+  <data name="100000:label,DB3A7A90D72647A44623694ED919E03FFAE20857BBBF20C96AC6B2B378E820E7" xml:space="preserve">
+    <value>將焦點設定為專員指令碼</value>
+    <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_summary id:</comment>
+  </data>
   <data name="100000:label,DC23E4138F0BB134493A316362EB357858EDD88A7946A862A56581373FAA1E48" xml:space="preserve">
     <value>電子郵件收件者</value>
     <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
@@ -731,6 +755,10 @@
   <data name="100000:label,F3D748E9CE6376822456FA4476A5F90E31BBBC964D25E83571DE42F7F828E927" xml:space="preserve">
     <value>生產力自動化</value>
     <comment>Relative path in xml: \msdyn_productivitymacroactiontemplate\msdyn_subtitle id:</comment>
+  </data>
+  <data name="100000:label,F5A136D049B575F6BBB162D6A76BB3D5E8E312D6B49C8E914DB8D5B9E2CD6756" xml:space="preserve">
+    <value>專員指令碼唯一名稱</value>
+    <comment>Relative path in xml: \msdyn_productivityparameterdefinition\msdyn_description id:</comment>
   </data>
   <data name="100000:label,F660A762E630BDB7D8444828F0895FB5B304901E53B775ED0FDC359F5DC79D70" xml:space="preserve">
     <value>實體邏輯名稱</value>
