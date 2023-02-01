@@ -7,7 +7,6 @@
 		"name": ""
 	},
 	"devDependencies": {
-		"@types/draft-js": "^0.10.35",
 		"@types/node": "^12.7.0",
 		"@types/webpack-env": "^1.14.0",
 		"clean-webpack-plugin": "^3.0.0",
@@ -25,14 +24,13 @@
 		"webpack-cli": "^3.3.7",
 		"webpack-dev-middleware": "^3.7.0",
 		"webpack-nuget-plugin": "^1.0.3"
-	},
+		},
 	"dependencies": {
 		"@microsoft/load-themed-styles": "1.9.19",
 		"@uifabric/icons": "^7.1.1",
 		"@uifabric/merge-styles": "^7.4.0",
 		"@uifabric/styling": "^7.6.0",
 		"@uifabric/utilities": "^7.0.7",
-		"draft-js": "^0.11.7",
 		"fuse.js": "2.2.0",
 		"immutable": "3.8.1",
 		"localforage": "1.5.0",
