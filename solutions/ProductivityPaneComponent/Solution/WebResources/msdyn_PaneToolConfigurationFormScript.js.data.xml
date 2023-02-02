@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{79b5452b-af83-4136-b04d-cff650bcd87a}</WebResourceId>
+  <Name>msdyn_PaneToolConfigurationFormScript.js</Name>
+  <DisplayName>Pane Tool Configuration Form Script</DisplayName>
+  <Description>Form script for pane tool configuration entity forms</Description>
+  <LanguageCode>1033</LanguageCode>
+  <WebResourceType>3</WebResourceType>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"&gt;&lt;Library name="msdyn_ProductivityPaneComponent.1033.resx" displayName = "" languagecode = "1033" description = "" libraryUniqueId = "{3F282D40-4ABB-455C-B528-3A0CBADEF7E2}"/&gt;&lt;/Dependency&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <IsCustomizable>0</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/msdyn_PaneToolConfigurationFormScriptjs79b5452b-af83-4136-b04d-cff650bcd87a</FileName>
+</WebResource>

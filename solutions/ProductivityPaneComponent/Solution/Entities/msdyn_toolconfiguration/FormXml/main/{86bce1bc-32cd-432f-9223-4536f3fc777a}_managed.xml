@@ -36,11 +36,37 @@
                       </cell>
                     </row>
                     <row>
+                      <cell id="{0e838b49-81e8-4215-96d2-8b3a311935aa}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Type" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_type" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_type" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
                       <cell id="{538d1b01-a834-7849-d641-4e0ec4621024}" showlabel="true" locklevel="0">
                         <labels>
                           <label description="Control Name" languagecode="1033" />
                         </labels>
                         <control id="msdyn_controlname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_controlname" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8b074759-44b2-4532-6bb0-d926bcd888e0}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Icon" languagecode="1033" />
+                        </labels>
+                        <control id="msdyn_icon" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_icon" disabled="false">
+                          <parameters>
+                            <AutoResolve>true</AutoResolve>
+                            <DisableMru>false</DisableMru>
+                            <DisableQuickFind>false</DisableQuickFind>
+                            <DisableViewPicker>false</DisableViewPicker>
+                            <DefaultViewId>{DCAC5DFC-2EFF-42B3-9A0D-AFF1577533EB}</DefaultViewId>
+                            <AvailableViewIds>{DCAC5DFC-2EFF-42B3-9A0D-AFF1577533EB}</AvailableViewIds>
+                            <AllowFilterOff>false</AllowFilterOff>
+                          </parameters>
+                        </control>
                       </cell>
                     </row>
                     <row>
@@ -128,6 +154,21 @@
           </NavBarArea>
         </NavBarAreas>
       </Navigation>
+      <formLibraries>
+        <Library name="msdyn_PaneToolConfigurationFormScript.js" libraryUniqueId="{d02c437b-1857-4c69-a746-7aa0812efc53}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="PaneToolConfigurationPackage.PaneToolConfigurationFormScript.Instance.onFormLoad" libraryName="msdyn_PaneToolConfigurationFormScript.js" handlerUniqueId="{f2d54968-6177-407b-bdd6-a33e47c0fd17}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_type">
+          <Handlers>
+            <Handler functionName="PaneToolConfigurationPackage.PaneToolConfigurationFormScript.Instance.onTypeChange" libraryName="msdyn_PaneToolConfigurationFormScript.js" handlerUniqueId="{82603632-a211-450e-bb6c-ad9e83b657d5}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>							
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>

@@ -4,6 +4,7 @@
 /// <reference path="./XrmAppProxy.ts" />
 /// <reference path="../SessionChangeManager/SessionChangeManager.ts" />
 /// <reference path="./Constants.ts" />
+/// <reference path="./TelemetryData.ts" />
 module ProductivityPaneLoader {
     export class LoadPanesHelper {
         public static afterProductivityToolLoad(productivityPaneMode: boolean, toolList: ToolConfig[]): void {
@@ -42,16 +43,30 @@ module ProductivityPaneLoader {
         /*
          * Load productivity tools via app side panes APIs.
          */
-        public static loadAppSidePanes(toolList: ToolConfig[], productivityPaneMode: boolean): Promise<void> {
+        public static loadAppSidePanes(toolList: ToolConfig[], productivityPaneMode: boolean, inputTelemetryData?: ITelemetryData): Promise<Array<string | null>> {
+            const telemetryData = TelemetryData.generate(ProductivityPaneLoggerConstants.loadPanesHelperloadAppSidePanesPrefix, inputTelemetryData);
+            Logger.start(EventType.APP_SIDE_PANE_LOAD, 
+                ProductivityPaneLoggerConstants.loadPanesHelperloadAppSidePanesPrefix, telemetryData);
             try {
-                return new Promise<void>((resolve, reject) => {
+                return new Promise<Array<string | null>>((resolve, reject) => {
+                    const panePromises = new Array<Promise<string | null>>();
                     toolList.forEach((tool: ToolConfig) => {
-                        XrmAppProxy.getXrmAppApis()
+
+                        // generate new telemetry for each tool
+                        const toolTelemetry = TelemetryData.generate(ProductivityPaneLoggerConstants.loadPanesHelperloadAppSidePanesPrefix, telemetryData);
+                        toolTelemetry.addCustomParameters([
+                            [CustomParameterConstants.PaneId, tool.paneId],
+                            [CustomParameterConstants.ToolUniqueName, tool.uniqueName],
+                            [CustomParameterConstants.ToolType, tool.toolType],
+                            [CustomParameterConstants.ToolControlName, tool.toolControlName]
+                        ]);
+
+                        const panePromise = XrmAppProxy.getXrmAppApis()
                             .sidePanes.createPane({
                                 paneId: tool.paneId,
                                 canClose: false,
                                 isSelected: Utils.isShownOnAllSessions(tool.toolControlName) && productivityPaneMode,
-                                imageSrc: tool.toolIcon,
+                                imageSrc: this.getValidIcon(tool),
                                 title: tool.toolTip,
                                 hideHeader: Utils.hideHeader(tool.toolControlName),
                                 hidden: !Utils.isShownOnAllSessions(tool.toolControlName),
@@ -59,39 +74,74 @@ module ProductivityPaneLoader {
                                 keepBadgeOnSelect: Utils.keepBadgeOnSelect(tool.toolControlName),
                             })
                             .then((pane) => {
-                                pane.navigate({
-                                    pageType: PcfControlConstants.pageType,
-                                    controlName: tool.toolControlName,
-                                    data: PcfControlConstants.PcfControlProps.parameters,
-                                });
+                                const paneInput = this.getPaneInput(tool);
+                                pane.navigate(paneInput);
+                                Logger.logInfo(EventType.APP_SIDE_PANE_LOAD, 
+                                    `${Constants.productivityToolsLogPrefix} Success: app side pane loaded ${pane.paneId}`, toolTelemetry);
                                 return pane.paneId;
-                            })
-                            .then(
-                                (paneId) => {
-                                    Logger.logInfo(
-                                        EventType.APP_SIDE_PANE_LOAD_SUCCESS,
-                                        `${Constants.productivityToolsLogPrefix} Success: app side pane loaded ${paneId}`,
-                                    );
-                                    resolve();
-                                },
-                                (error) => {
-                                    Logger.logError(
-                                        EventType.APP_SIDE_PANE_LOAD_FAILURE,
-                                        `${Constants.productivityToolsLogPrefix} Failed to load app side pane for control ${tool.toolControlName}`,
-                                        error,
-                                    );
-                                    reject(error);
-                                },
-                            );
+                            }).catch(error => {
+                                toolTelemetry.addError(error);
+                                Logger.logError(
+                                    EventType.APP_SIDE_PANE_LOAD_FAILURE,
+                                    `${Constants.productivityToolsLogPrefix} Failed to load app side pane for control ${tool.toolControlName}`,
+                                    toolTelemetry,
+                                );
+                                return null;
+                            });
+                        panePromises.push(panePromise);
+                    });
+
+                    Promise.all(panePromises).then((paneIds: Array<string | null>) => {
+                        const successfulPaneIds = paneIds.filter((paneId) => {
+                            return !Utils.isNullOrUndefined(paneId);
+                        })
+
+                        Logger.success(EventType.APP_SIDE_PANE_LOAD_SUCCESS, 
+                            ProductivityPaneLoggerConstants.loadPanesHelperloadAppSidePanesPrefix, telemetryData)
+                        resolve(successfulPaneIds);
                     });
                 });
             } catch (error) {
+                telemetryData.addError(error)
                 Logger.logError(
                     EventType.APP_SIDE_PANE_LOAD_FAILURE,
                     `${Constants.productivityToolsLogPrefix} Failed to load app side panes`,
-                    error,
+                    telemetryData,
                 );
+                return Promise.reject(error);
             }
+        }
+
+        private static getPaneInput(toolConfig: ToolConfig) {
+            let paneInput = {};    
+
+            switch(toolConfig.toolType) {
+                case ToolType.CUSTOM_PAGE:
+                    paneInput = {
+                        pageType: CustomPageConstants.pageType,
+                        name: toolConfig.toolControlName
+                    };
+                    break;
+                case ToolType.CONTROL:
+                    paneInput = { 
+                        pageType: PcfControlConstants.pageType,
+                        controlName: toolConfig.toolControlName,
+                        data: PcfControlConstants.PcfControlProps.parameters,
+                    };
+                    break;
+                default: // default to control in case tool type missing
+                    paneInput = { 
+                        pageType: PcfControlConstants.pageType,
+                        controlName: toolConfig.toolControlName,
+                        data: PcfControlConstants.PcfControlProps.parameters,
+                    }
+            }
+            return paneInput;
+        }
+
+        private static getValidIcon(toolConfig: ToolConfig): string {
+            return toolConfig.isToolIconValid ? toolConfig.toolIcon 
+            : toolConfig.isDefaultIconValid ? toolConfig.defaultIcon : ""; 
         }
     }
 }

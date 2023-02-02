@@ -33,6 +33,16 @@ module ProductivityPaneLoader {
     export class ToolConfigConstants {
         // Entity constants
         public static entityName = 'msdyn_panetoolconfiguration';
+
+        // Attributes
+        public static msdyn_icon = 'msdyn_icon';
+    }
+
+    export class WebresourceConstants {
+        // Attributes
+        public static webresourceName = 'name';
+
+        public static pathPrefix = 'WebResources/';
     }
 
     export class PcfControlConstants {
@@ -52,6 +62,15 @@ module ProductivityPaneLoader {
                 },
             },
         };
+    }
+
+    export class CustomPageConstants {
+        public static pageType = 'custom';
+    }
+
+    export class LocalizedStringKeys {
+        public static CustomPageNameLabel = 'CustomPage_Name_Label'
+        public static ControlNameLabel = 'Control_Name_Label';
     }
 
     export class Constants {
@@ -78,6 +97,40 @@ module ProductivityPaneLoader {
 
         // Log prefix
         public static productivityToolsLogPrefix = '[ProductivityToolsLog]';
+
+        // Log Constants
+        public static StartingMessage = 'Starting';
+        public static SuccessMessage = 'Success';
+
+        // Error
+        public static Error = 'Error';
+    }
+
+    export class ToolUniqueNames {
+        public static smartAssist = "msdyn_smartassist_tool_config";
+        public static agentScript = "msdyn_callscript_tool_config";
+        public static knowledgeSearch = "msdyn_knowledgesearch_tool_config";
+        public static teamsCollab = "msdyn_teamscollab_tool_config";
+    }
+
+    export class ProductivityPaneLoggerConstants {
+        public static productivityPaneLoaderPrefix = "ProductivityPaneLoader";
+        public static loadPanesHelperloadAppSidePanesPrefix = "LoadPanesHelper_loadAppSidePanes";
+
+    }
+
+    export class CustomParameterConstants {
+        public static EventType = "EventType";
+        public static PaneId = "PaneId";
+        public static ToolUniqueName = "ToolUniqueName";
+        public static ToolControlName = "ToolControlName";
+        public static ToolType = "ToolType";
+        public static ControlToolCount = "ControlToolCount";
+        public static DefaultToolCount = "DefaultToolCount";
+        public static CustomPageToolCount = "CustomPageToolCount";
+        public static CustomToolCount = "CustomToolCount";
+        public static IsCustomTool = "IsCustomTool";
+        public static PaneMode = "PaneMode";
     }
 
     export enum EventType {
@@ -92,5 +145,12 @@ module ProductivityPaneLoader {
         SET_SESSION_STORAGE_FAILURE,
         APM_CONFIG_EXTRACTOR_FAILURE,
         APM_CONFIG_EXTRACTOR_XRM_API_FAILURE,
+        APP_SIDE_PANE_LOAD,
+        PRODUCTIVITY_TOOLS_LOAD
+    }
+
+    export enum ToolType {
+        CONTROL,
+        CUSTOM_PAGE
     }
 }

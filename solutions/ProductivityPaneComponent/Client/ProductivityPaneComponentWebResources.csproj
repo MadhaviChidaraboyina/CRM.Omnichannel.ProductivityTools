@@ -28,6 +28,7 @@
     <TypeScriptCompile Include="Localization\ResourceStringProvider.ts" />
     <TypeScriptCompile Include="ProductivityPaneLoader\Constants.ts" />
     <TypeScriptCompile Include="ProductivityPaneLoader\ProductivityPaneLoader.ts" />
+    <TypeScriptCompile Include="PaneToolConfigurationFormScript\PaneToolConfigurationFormScript.ts" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\tsconfig\tsconfig.base.classicweb.json">
@@ -46,6 +47,7 @@
     <Content Include="Localization\Provider\tsconfig.json" />
     <Content Include="ProductivityPaneLoader\tsconfig.json" />
     <Content Include="ProductivityPaneLoader\Utilities\tsconfig.json" />
+    <Content Include="PaneToolConfigurationFormScript\tsconfig.json" />
   </ItemGroup>
   <Target Name="CopyResource">
     <Copy SourceFiles="Localization\Languages\ProductivityPaneComponent.resx" DestinationFiles="Localization\Languages\ProductivityPaneComponent.1033.resx" SkipUnchangedFiles="True" />

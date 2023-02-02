@@ -9,6 +9,11 @@
 /// <reference path="../../../../references/internal/TypeDefinitions/AppRuntimeClientSdk.d.ts" />
 /// <reference path="./Utilities/XrmAppProxy.ts" />
 module ProductivityPaneLoader {
+
+    const telemetryData = TelemetryData.generate(ProductivityPaneLoggerConstants.productivityPaneLoaderPrefix);
+    Logger.start(EventType.PRODUCTIVITY_TOOLS_LOAD, 
+        ProductivityPaneLoggerConstants.loadPanesHelperloadAppSidePanesPrefix, telemetryData);
+
     LoadScripts.loadLogicAppExecutor();
     LoadScripts.loadMacrosComponentInternal();
     LoadScripts.loadMacrosDataLayer();
@@ -36,23 +41,66 @@ module ProductivityPaneLoader {
                                     // want to expand all productivity tools. true: expand
                                     // all tools by default; false: collapse all tools.
                                     const paneMode = productivityPaneConfig.productivityPaneMode;
-                                    LoadPanesHelper.loadAppSidePanes(toolList, paneMode).then(() => {
-                                        LoadPanesHelper.afterProductivityToolLoad(paneMode, toolList);
-                                        Logger.logInfo(
-                                            EventType.PRODUCTIVITY_TOOLS_LOAD_SUCCESS,
-                                            `${Constants.productivityToolsLogPrefix} Success: productivity tools loaded`,
-                                        );
+                                    telemetryData.addCustomParameter(CustomParameterConstants.PaneMode, paneMode)
+                                    LoadPanesHelper.loadAppSidePanes(toolList, paneMode, telemetryData).then((successfulPaneIds) => {
+                                        const successfulIdSet = new Set(successfulPaneIds);
+                                        const successfulTools = toolList.filter((tool) => {
+                                            return successfulIdSet.has(tool.paneId);
+                                        })
+
+                                        if(successfulTools.length === 0) {
+                                            Logger.logError(
+                                                EventType.PRODUCTIVITY_TOOLS_LOAD_FAILURE,
+                                                `${Constants.productivityToolsLogPrefix} No tools were successfully created and rendered`,
+                                                telemetryData,
+                                            );
+                                            return;
+                                        }
+
+                                        LoadPanesHelper.afterProductivityToolLoad(paneMode, successfulTools);
+
+                                        // Grab information for telemetry
+                                        const defaultToolCount = successfulTools.filter((tool) => Utils.isDefaultTool(tool)).length;
+                                        const customToolCount = successfulTools.filter((tool) => !Utils.isDefaultTool(tool)).length;
+                                        const controlToolCount = successfulTools.filter((tool) => tool.toolType === ToolType.CONTROL 
+                                            || Utils.isNullOrUndefined(tool.toolType)).length;
+                                        const customPageToolCount = successfulTools.filter((tool) => tool.toolType === ToolType.CUSTOM_PAGE).length;
+                                        telemetryData.addCustomParameters([
+                                            [CustomParameterConstants.DefaultToolCount, defaultToolCount],
+                                            [CustomParameterConstants.CustomToolCount, customToolCount],
+                                            [CustomParameterConstants.ControlToolCount, controlToolCount],
+                                            [CustomParameterConstants.CustomPageToolCount, customPageToolCount],
+                                        ]);
+                                        Logger.success(EventType.PRODUCTIVITY_TOOLS_LOAD_SUCCESS, 
+                                            ProductivityPaneLoggerConstants.productivityPaneLoaderPrefix, telemetryData);
                                     });
+                                })
+                                .catch((error) => {
+                                    telemetryData.addError(error);
+                                    Logger.logError(
+                                        EventType.PRODUCTIVITY_TOOLS_LOAD_FAILURE,
+                                        `${Constants.productivityToolsLogPrefix} Failed to load app side panes during tool creation`,
+                                        telemetryData,
+                                    );
                                 });
                         }
+                    })
+                    .catch((error) => {
+                        telemetryData.addError(error);
+                        Logger.logError(
+                            EventType.PRODUCTIVITY_TOOLS_LOAD_FAILURE,
+                            `${Constants.productivityToolsLogPrefix} Failed to load app side panes during or after app config fetch`,
+                            telemetryData,
+                        );
                     });
             }
         });
     } catch (error) {
+        telemetryData.addError(error);
         Logger.logError(
             EventType.PRODUCTIVITY_TOOLS_LOAD_FAILURE,
             `${Constants.productivityToolsLogPrefix} Failed to load app side panes`,
-            error,
+            telemetryData,
         );
     }
 }

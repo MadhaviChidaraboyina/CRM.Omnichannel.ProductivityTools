@@ -151,8 +151,9 @@ module ProductivityPaneLoader {
             return new Promise<ToolConfig[]>((resolve, reject) => {
                 let toolsList: ToolConfig[] = [];
                 let tPromises: Promise<any>[] = [];
+                const expandString = this.getToolConfigurationQueryExpand();
                 tabConfig.forEach((tab) => {
-                    tPromises.push(Xrm.WebApi.retrieveRecord(ToolConfigConstants.entityName, tab._msdyn_toolid_value));
+                    tPromises.push(Xrm.WebApi.retrieveRecord(ToolConfigConstants.entityName, tab._msdyn_toolid_value, expandString));
                 });
                 Promise.all(tPromises).then(
                     (results: any[]) => {
@@ -163,11 +164,13 @@ module ProductivityPaneLoader {
                             ) {
                                 toolsList.push(
                                     new ToolConfig(
+                                        toolConfig.msdyn_uniquename,
                                         toolConfig.msdyn_controlname,
-                                        tabConfig[index].msdyn_iconpath,
+                                        this.getWebResourceIconPath(toolConfig.msdyn_icon) || tabConfig[index].msdyn_iconpath, // Eventually remove tabconfig icon path
                                         tabConfig[index].msdyn_order,
                                         tabConfig[index].msdyn_uniquename,
                                         toolConfig.msdyn_name,
+                                        toolConfig.msdyn_type,
                                         toolConfig.msdyn_data,
                                         toolConfig.msdyn_defaulticon,
                                     ),
@@ -257,6 +260,24 @@ module ProductivityPaneLoader {
                 QueryDataConstants.ExpandOperator,
                 ProductivityPaneConfigConstants.paneTabRelationship,
             );
+        }
+
+        private getToolConfigurationQueryExpand(): string {
+            return String.format(
+                "?{0}{1}({2}{3})",
+                QueryDataConstants.ExpandOperator,
+                ToolConfigConstants.msdyn_icon,
+                QueryDataConstants.SelectOperator,
+                WebresourceConstants.webresourceName
+            )
+        }
+
+        private getWebResourceIconPath(resource: any): string | null {
+            if(Utils.isNullOrUndefined(resource) || Utils.isNullOrUndefined(resource.name)) {
+                return null;
+            }
+
+            return WebresourceConstants.pathPrefix + resource.name;
         }
     }
 }

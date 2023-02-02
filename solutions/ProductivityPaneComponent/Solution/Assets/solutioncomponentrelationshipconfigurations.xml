@@ -23,4 +23,12 @@
     <statecode>0</statecode>
     <statuscode>1</statuscode>
   </solutioncomponentrelationshipconfiguration>
+  <solutioncomponentrelationshipconfiguration entityrelationshipid.schemaname="msdyn_webresource_msdyn_toolconfig_icon">
+		<addrelatedcomponents>1</addrelatedcomponents>
+		<iscustomizable>0</iscustomizable>
+		<primaryentitydependencytype>0</primaryentitydependencytype>
+		<secondaryentitydependencytype>0</secondaryentitydependencytype>
+		<statecode>0</statecode>
+		<statuscode>1</statuscode>
+	</solutioncomponentrelationshipconfiguration>
 </solutioncomponentrelationshipconfigurations>

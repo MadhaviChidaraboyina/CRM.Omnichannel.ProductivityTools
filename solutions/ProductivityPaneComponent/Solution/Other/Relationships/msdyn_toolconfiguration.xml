@@ -9,7 +9,7 @@
     <ReferencedEntityName>msdyn_panetoolconfiguration</ReferencedEntityName>
     <RelationshipBehavior>Append</RelationshipBehavior>
     <CascadeAssign>NoCascade</CascadeAssign>
-    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeDelete>Cascade</CascadeDelete>
     <CascadeReparent>NoCascade</CascadeReparent>
     <CascadeShare>NoCascade</CascadeShare>
     <CascadeUnshare>NoCascade</CascadeUnshare>
@@ -31,6 +31,44 @@
       </EntityRelationshipRole>
       <EntityRelationshipRole>
         <NavigationPropertyName>msdyn_msdyn_toolconfig_msdyn_tabconfig</NavigationPropertyName>
+        <RelationshipRoleType>0</RelationshipRoleType>
+      </EntityRelationshipRole>
+    </EntityRelationshipRoles>
+  </EntityRelationship>
+  <EntityRelationship Name="msdyn_webresource_msdyn_toolconfig_icon">
+    <EntityRelationshipType>OneToMany</EntityRelationshipType>
+    <IsCustomizable>1</IsCustomizable>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <IsHierarchical>0</IsHierarchical>
+    <ReferencingEntityName>msdyn_panetoolconfiguration</ReferencingEntityName>
+    <ReferencedEntityName>WebResource</ReferencedEntityName>
+    <RelationshipBehavior>Append</RelationshipBehavior>
+    <CascadeAssign>NoCascade</CascadeAssign>
+    <CascadeDelete>RemoveLink</CascadeDelete>
+    <CascadeReparent>NoCascade</CascadeReparent>
+    <CascadeShare>NoCascade</CascadeShare>
+    <CascadeUnshare>NoCascade</CascadeUnshare>
+    <CascadeRollupView>NoCascade</CascadeRollupView>
+    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <ReferencingAttributeName>msdyn_icon</ReferencingAttributeName>
+    <RelationshipDescription>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </RelationshipDescription>
+    <EntityRelationshipRoles>
+      <EntityRelationshipRole>
+        <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+        <NavPaneArea>Details</NavPaneArea>
+        <NavPaneOrder>10000</NavPaneOrder>
+        <NavigationPropertyName>msdyn_icon</NavigationPropertyName>
+        <CustomLabels>
+          <CustomLabel description="" languagecode="1033" />
+        </CustomLabels>
+        <RelationshipRoleType>1</RelationshipRoleType>
+      </EntityRelationshipRole>
+      <EntityRelationshipRole>
+        <NavigationPropertyName>msdyn_webresource_msdyn_toolconfig_icon</NavigationPropertyName>
         <RelationshipRoleType>0</RelationshipRoleType>
       </EntityRelationshipRole>
     </EntityRelationshipRoles>

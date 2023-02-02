@@ -5,8 +5,33 @@
 /// <reference path="./Constants.ts" />
 /// <reference path="./XrmAppProxy.ts" />
 /// <reference path="../../../../../references/internal/TypeDefinitions/AppRuntimeClientSdk.d.ts" />
+/// <reference path="./../Models/ProductivityToolsConfig.ts" />
 module ProductivityPaneLoader {
     export class Utils {
+        public static newGuid(): string {
+			//RFC 4122 canonical representation Version-4 xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx where x is any hexadecimal digit and y is one of 8, 9, A, or B
+			let guidPattern = "xx-x-4m-ym-xxx";
+			let newGuid = "";
+			for (let i = 0; i < guidPattern.length; i++) {
+				let randomString = Math.floor(Math.random() * Date.now());
+				switch (guidPattern[i]) {
+					case "x":
+						newGuid += randomString.toString(16).substring(0, 4);
+						break; //get 4 digit
+					case "m":
+						newGuid += randomString.toString(16).substring(0, 3);
+						break; //Get 3 digit
+					case "y":
+						newGuid += (randomString & 0x3 | 0x8).toString(16);
+						break; // To get only one of 8, 9, A, or B
+					default:
+						newGuid += guidPattern[i]; //Default "-" and "4"
+				}
+			}
+
+			return newGuid;
+		}
+
         public static isNullOrUndefined(obj: any) {
             return obj === null || obj === undefined;
         }
@@ -18,6 +43,10 @@ module ProductivityPaneLoader {
         public static isEqual(objOne: any, objTwo: any): boolean {
             return objOne === objTwo;
         }
+
+        public static isIterable(value: any): boolean {
+			return !this.isNullOrUndefined(value) && typeof value[Symbol.iterator] === 'function';
+		}
 
         /**
          * Temporary workaround for disabling app side pane control in chat widget session or voice demo session for early access.
@@ -49,6 +78,19 @@ module ProductivityPaneLoader {
          */
         public static isShownOnAllSessions(controlName: string): boolean {
             return Utils.isEqual(controlName, Constants.teamsCollabControlName) || Utils.isEqual(controlName, Constants.teamsCallsControlName);
+        }
+
+        /**
+         * Returns a boolean if the tool is a default tool
+         * 
+        */
+        public static isDefaultTool(tool: ToolConfig): boolean {
+            return (
+                tool.uniqueName === ToolUniqueNames.agentScript ||
+                tool.uniqueName === ToolUniqueNames.knowledgeSearch ||
+                tool.uniqueName === ToolUniqueNames.smartAssist||
+                tool.uniqueName === ToolUniqueNames.teamsCollab
+            );
         }
 
         /**

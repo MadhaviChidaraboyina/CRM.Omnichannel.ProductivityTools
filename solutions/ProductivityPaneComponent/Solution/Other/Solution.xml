@@ -98,6 +98,7 @@
       <RootComponent type="61" schemaName="msdyn_panel_toggle_expand_icon.svg" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_ProductivityPaneComponent.1033.resx" behavior="0" />
       <RootComponent type="61" schemaName="msdyn_productivitypane_loader.js" behavior="0" />
+      <RootComponent type="61" schemaName="msdyn_PaneToolConfigurationFormScript.js" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
