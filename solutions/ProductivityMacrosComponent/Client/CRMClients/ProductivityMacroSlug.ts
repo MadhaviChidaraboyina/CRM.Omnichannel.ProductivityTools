@@ -109,32 +109,16 @@ namespace Microsoft.ProductivityMacros.Internal {
                     }
 
                     if (paramName.toLowerCase().startsWith("$odata")) {
-							//val is assumed to be of the format $odata.<entityLogicalName>.<entityAttributeName>.<query>
-							//entityLogicalName is between first and second dot as part1, entityAttributeName is between second dot and the dot right before "?". as part2
-							// query is after ? (included) as part 3
-							//{$odata.incident._customerid_value@OData.Community.Display.V1.FormattedValue.?$filter=incidentid eq '6194b723-7e5f-eb11-a812-000d3a1a658a'}
-							//       |-part1--|---------------------part2---------------------------------|-----------------------part3--------------------------------| 
-							let splitQuery = paramName.split(new RegExp("\\.\\?", "gi"));
-							if (splitQuery.length != 2) {
-								continue;
-							}
-							let queryOptions: string  = "?" + splitQuery[1];
-							let splitEntityLogicalName = splitQuery[0].split(new RegExp("\\.", "gi"));
-							if (splitEntityLogicalName == null || splitEntityLogicalName.length < 2) {
-								continue;
-							} 
-							let entityLogicalName: string = splitEntityLogicalName[1];
-							let startIndexOfEntityLogicalName = splitQuery[0].indexOf(entityLogicalName);
-							if (startIndexOfEntityLogicalName == -1) {
-								continue;
-							}
-							let entityAttributeName: string = splitQuery[0].substring(startIndexOfEntityLogicalName + 1 + entityLogicalName.length);
+                        let odataSlugArr: string[] = splitOdataSlug(paramName);
+                        if (odataSlugArr == [] as string[] || odataSlugArr.length != 3) {
+                            continue;
+                        }
 						let promise: Promise<string | void> = new Promise<string>(
 							function (resolve, reject) {
 								let qPromises: Promise<string>[] = [];
-								qPromises.push(resolveTemplateString(entityLogicalName, templateParams, scope));
-								qPromises.push(resolveTemplateString(entityAttributeName, templateParams, scope));
-								qPromises.push(resolveTemplateString(queryOptions, templateParams, scope));
+								qPromises.push(resolveTemplateString(odataSlugArr[0], templateParams, scope));
+								qPromises.push(resolveTemplateString(odataSlugArr[1], templateParams, scope));
+								qPromises.push(resolveTemplateString(odataSlugArr[2], templateParams, scope));
 								Promise.all(qPromises).then(
 									function (results: string[]) {
 										Xrm.WebApi.retrieveMultipleRecords(results[0], results[results.length - 1], 1).then(
@@ -266,5 +250,29 @@ namespace Microsoft.ProductivityMacros.Internal {
         var params = param.split(SlugPrefix.SPLIT_BY_OPENING_BRACKET)[1];
         params = params.substr(0, params.length - 1);
         return params.split(SlugPrefix.SPLIT_BY_COMMA);
+    }
+
+    export function splitOdataSlug(paramName: string):string[] {
+        //paramName is assumed to be of the format $odata.<entityLogicalName>.<entityAttributeName>.<query>
+        //entityLogicalName is between first and second dot as part1, entityAttributeName is between second dot and the dot right before "?". as part2
+        // query is after ? (included) as part 3
+        //{$odata.incident._customerid_value@OData.Community.Display.V1.FormattedValue.?$filter=incidentid eq '6194b723-7e5f-eb11-a812-000d3a1a658a'}
+        //       |-part1--|---------------------part2---------------------------------|-----------------------part3--------------------------------| 
+        let splitQuery = paramName.split(new RegExp("\\.\\?", "gi"));
+        if (splitQuery.length != 2) {
+            return [] as string[];
+        }
+        let queryOptions: string  = "?" + splitQuery[1];
+        let splitEntityLogicalName = splitQuery[0].split(new RegExp("\\.", "gi"));
+        if (splitEntityLogicalName == null || splitEntityLogicalName.length < 2) {
+            return [] as string[];
+        } 
+        let entityLogicalName: string = splitEntityLogicalName[1];
+        let startIndexOfEntityLogicalName = splitQuery[0].indexOf(entityLogicalName);
+        if (startIndexOfEntityLogicalName == -1) {
+            return [] as string[];
+        }
+        let entityAttributeName: string = splitQuery[0].substring(startIndexOfEntityLogicalName + 1 + entityLogicalName.length);
+        return [entityLogicalName, entityAttributeName, queryOptions];
     }
 }
