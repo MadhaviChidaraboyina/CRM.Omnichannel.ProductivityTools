@@ -132,6 +132,10 @@
         bGQJX1JldmlzaW9uAAAAAAgICAgJAAAAAAAAAAAAAAAAAAAACw==
 </value>
   </metadata>
+  <data name="10:CustomLabel,msdyn_webresource_msdyn_toolconfig_icon" xml:space="preserve">
+    <value />
+    <comment>msdyn_panetoolconfiguration CustomLabel for EntityRelationship 'msdyn_webresource_msdyn_toolconfig_icon'</comment>
+  </data>
   <data name="10:Description,lk_msdyn_paneconfiguration_createdby" xml:space="preserve">
     <value>创建记录的用户的唯一标识符。</value>
     <comment>msdyn_paneconfiguration Description for EntityRelationship 'lk_msdyn_paneconfiguration_createdby'</comment>
@@ -163,6 +167,10 @@
   <data name="10:Description,msdyn_msdyn_toolconfig_msdyn_tabconfig" xml:space="preserve">
     <value>与窗格选项卡配置关联的窗格工具配置的唯一标识符。</value>
     <comment>msdyn_panetabconfiguration Description for EntityRelationship 'msdyn_msdyn_toolconfig_msdyn_tabconfig'</comment>
+  </data>
+  <data name="10:Description,msdyn_webresource_msdyn_toolconfig_icon" xml:space="preserve">
+    <value />
+    <comment>msdyn_panetoolconfiguration Description for EntityRelationship 'msdyn_webresource_msdyn_toolconfig_icon'</comment>
   </data>
   <data name="10:Description,organization_msdyn_paneconfiguration" xml:space="preserve">
     <value>组织的唯一标识符</value>
@@ -424,6 +432,10 @@
     <value />
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_description' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_icon" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_icon' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_isConfigurable" xml:space="preserve">
     <value />
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_isConfigurable' on Entity</comment>
@@ -448,6 +460,10 @@
     <value />
     <comment>'msdyn_panetoolconfiguration' : Description for OptionSet 'msdyn_panetoolconfiguration_msdyn_isconfigurable' on Entity</comment>
   </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_type" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetoolconfiguration' : Description for OptionSet 'msdyn_panetoolconfiguration_msdyn_type' on Entity</comment>
+  </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_statecode" xml:space="preserve">
     <value>窗格工具配置的状态</value>
     <comment>'msdyn_panetoolconfiguration' : Description for OptionSet 'msdyn_panetoolconfiguration_statecode' on Entity</comment>
@@ -459,6 +475,10 @@
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_toolConfigurationEntity" xml:space="preserve">
     <value />
     <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_toolConfigurationEntity' on Entity</comment>
+  </data>
+  <data name="1:Description,msdyn_panetoolconfigurationmsdyn_type" xml:space="preserve">
+    <value />
+    <comment>'msdyn_panetoolconfiguration' : Description for Attribute 'msdyn_type' on Entity</comment>
   </data>
   <data name="1:Description,msdyn_panetoolconfigurationmsdyn_UniqueName" xml:space="preserve">
     <value>实体的唯一名称。</value>
@@ -736,6 +756,10 @@
     <value>描述</value>
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_description' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_icon" xml:space="preserve">
+    <value>图标</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_icon' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_isConfigurable" xml:space="preserve">
     <value>可配置</value>
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_isConfigurable' on Entity</comment>
@@ -760,6 +784,10 @@
     <value>可配置</value>
     <comment>'msdyn_panetoolconfiguration' : displayname for OptionSet 'msdyn_panetoolconfiguration_msdyn_isconfigurable' on Entity</comment>
   </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_type" xml:space="preserve">
+    <value>类型</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for OptionSet 'msdyn_panetoolconfiguration_msdyn_type' on Entity</comment>
+  </data>
   <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_statecode" xml:space="preserve">
     <value>状态</value>
     <comment>'msdyn_panetoolconfiguration' : displayname for OptionSet 'msdyn_panetoolconfiguration_statecode' on Entity</comment>
@@ -771,6 +799,10 @@
   <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_toolConfigurationEntity" xml:space="preserve">
     <value>工具配置实体</value>
     <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_toolConfigurationEntity' on Entity</comment>
+  </data>
+  <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_type" xml:space="preserve">
+    <value>类型</value>
+    <comment>'msdyn_panetoolconfiguration' : displayname for Attribute 'msdyn_type' on Entity</comment>
   </data>
   <data name="1:displayname,msdyn_panetoolconfigurationmsdyn_UniqueName" xml:space="preserve">
     <value>唯一名称</value>
@@ -884,6 +916,14 @@
     <value>是</value>
     <comment>'msdyn_panetoolconfiguration' : label for option '1' on Entity</comment>
   </data>
+  <data name="1:label,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_type0" xml:space="preserve">
+    <value>控件</value>
+    <comment>'msdyn_panetoolconfiguration' : label for option '0' on Entity</comment>
+  </data>
+  <data name="1:label,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_msdyn_type1" xml:space="preserve">
+    <value>自定义页面</value>
+    <comment>'msdyn_panetoolconfiguration' : label for option '1' on Entity</comment>
+  </data>
   <data name="1:label,msdyn_panetoolconfigurationmsdyn_panetoolconfiguration_statecode0" xml:space="preserve">
     <value>可用</value>
     <comment>'msdyn_panetoolconfiguration' : label for state '0' on Entity</comment>
@@ -940,6 +980,10 @@
     <value>已启用</value>
     <comment>'Pane tab configuration' : label for cell in Entity FormXml ID: '{d59e9866-a272-3ebe-067c-83ee05d291ea}'</comment>
   </data>
+  <data name="1:label,Pane tool configuration{0e838b49-81e8-4215-96d2-8b3a311935aa}" xml:space="preserve">
+    <value>类型</value>
+    <comment>'Pane tool configuration' : label for cell in Entity FormXml ID: '{0e838b49-81e8-4215-96d2-8b3a311935aa}'</comment>
+  </data>
   <data name="1:label,Pane tool configuration{1a787188-aec0-a916-2d7a-2ea748654162}" xml:space="preserve">
     <value>数据</value>
     <comment>'Pane tool configuration' : label for cell in Entity FormXml ID: '{1a787188-aec0-a916-2d7a-2ea748654162}'</comment>
@@ -963,6 +1007,10 @@
   <data name="1:label,Pane tool configuration{5684cc01-c0c7-4b62-caa0-eb5140801324}" xml:space="preserve">
     <value>工具配置实体</value>
     <comment>'Pane tool configuration' : label for cell in Entity FormXml ID: '{5684cc01-c0c7-4b62-caa0-eb5140801324}'</comment>
+  </data>
+  <data name="1:label,Pane tool configuration{8b074759-44b2-4532-6bb0-d926bcd888e0}" xml:space="preserve">
+    <value>图标</value>
+    <comment>'Pane tool configuration' : label for cell in Entity FormXml ID: '{8b074759-44b2-4532-6bb0-d926bcd888e0}'</comment>
   </data>
   <data name="1:label,Pane tool configuration{8db55fef-2843-4b05-bee8-4e1d598b6436}" xml:space="preserve">
     <value>常规</value>

@@ -124,4 +124,10 @@
   <data name="ProductivityPaneConfig_LearnMore_String" xml:space="preserve">
     <value>Saiba mais.</value>
   </data>
+  <data name="CustomPage_Name_Label" xml:space="preserve">
+    <value>Nome da Página Personalizada</value>
+  </data>
+  <data name="Control_Name_Label" xml:space="preserve">
+    <value>Nome do Controle</value>
+  </data>
 </root>

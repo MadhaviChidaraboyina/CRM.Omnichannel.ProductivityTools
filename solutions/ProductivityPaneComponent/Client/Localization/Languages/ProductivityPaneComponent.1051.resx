@@ -124,4 +124,10 @@
   <data name="ProductivityPaneConfig_LearnMore_String" xml:space="preserve">
     <value>Získajte ďalšie informácie.</value>
   </data>
+  <data name="CustomPage_Name_Label" xml:space="preserve">
+    <value>Názov vlastnej stránky</value>
+  </data>
+  <data name="Control_Name_Label" xml:space="preserve">
+    <value>Názov ovládacieho prvku</value>
+  </data>
 </root>

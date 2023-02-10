@@ -124,4 +124,10 @@
   <data name="ProductivityPaneConfig_LearnMore_String" xml:space="preserve">
     <value>अधिक जानें.</value>
   </data>
+  <data name="CustomPage_Name_Label" xml:space="preserve">
+    <value>कस्टम पृष्ठ का नाम</value>
+  </data>
+  <data name="Control_Name_Label" xml:space="preserve">
+    <value>नियंत्रण का नाम</value>
+  </data>
 </root>

@@ -124,4 +124,10 @@
   <data name="ProductivityPaneConfig_LearnMore_String" xml:space="preserve">
     <value>További információ</value>
   </data>
+  <data name="CustomPage_Name_Label" xml:space="preserve">
+    <value>Egyedi oldalnév</value>
+  </data>
+  <data name="Control_Name_Label" xml:space="preserve">
+    <value>Vezérlő neve</value>
+  </data>
 </root>

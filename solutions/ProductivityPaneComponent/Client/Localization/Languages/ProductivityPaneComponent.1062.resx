@@ -124,4 +124,10 @@
   <data name="ProductivityPaneConfig_LearnMore_String" xml:space="preserve">
     <value>Papildinformācija.</value>
   </data>
+  <data name="CustomPage_Name_Label" xml:space="preserve">
+    <value>Pielāgotas lapas nosaukums</value>
+  </data>
+  <data name="Control_Name_Label" xml:space="preserve">
+    <value>Vadīklas nosaukums</value>
+  </data>
 </root>

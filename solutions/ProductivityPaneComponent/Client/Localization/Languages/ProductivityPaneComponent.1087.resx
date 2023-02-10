@@ -124,4 +124,10 @@
   <data name="ProductivityPaneConfig_LearnMore_String" xml:space="preserve">
     <value>Қосымша ақпарат алыңыз.</value>
   </data>
+  <data name="CustomPage_Name_Label" xml:space="preserve">
+    <value>Реттелмелі бет атауы</value>
+  </data>
+  <data name="Control_Name_Label" xml:space="preserve">
+    <value>Басқару элементінің атауы</value>
+  </data>
 </root>

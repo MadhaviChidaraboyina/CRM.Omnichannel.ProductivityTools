@@ -124,4 +124,10 @@
   <data name="ProductivityPaneConfig_LearnMore_String" xml:space="preserve">
     <value>Дополнительные сведения.</value>
   </data>
+  <data name="CustomPage_Name_Label" xml:space="preserve">
+    <value>Имя пользовательской страницы</value>
+  </data>
+  <data name="Control_Name_Label" xml:space="preserve">
+    <value>Имя элемента управления</value>
+  </data>
 </root>

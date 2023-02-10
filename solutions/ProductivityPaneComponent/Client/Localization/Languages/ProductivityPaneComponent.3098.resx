@@ -124,4 +124,10 @@
   <data name="ProductivityPaneConfig_LearnMore_String" xml:space="preserve">
     <value>Сазнајте више.</value>
   </data>
+  <data name="CustomPage_Name_Label" xml:space="preserve">
+    <value>Назив прилагођене странице</value>
+  </data>
+  <data name="Control_Name_Label" xml:space="preserve">
+    <value>Назив контроле</value>
+  </data>
 </root>

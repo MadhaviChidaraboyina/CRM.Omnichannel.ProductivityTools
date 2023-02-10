@@ -124,4 +124,10 @@
   <data name="ProductivityPaneConfig_LearnMore_String" xml:space="preserve">
     <value>Aflați mai multe.</value>
   </data>
+  <data name="CustomPage_Name_Label" xml:space="preserve">
+    <value>Nume pagină particularizată</value>
+  </data>
+  <data name="Control_Name_Label" xml:space="preserve">
+    <value>Nume control</value>
+  </data>
 </root>

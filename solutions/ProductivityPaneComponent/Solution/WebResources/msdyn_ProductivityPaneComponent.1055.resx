@@ -124,4 +124,10 @@
   <data name="ProductivityPaneConfig_LearnMore_String" xml:space="preserve">
     <value>Daha fazla bilgi edinin.</value>
   </data>
+  <data name="CustomPage_Name_Label" xml:space="preserve">
+    <value>Özel Sayfa Adı</value>
+  </data>
+  <data name="Control_Name_Label" xml:space="preserve">
+    <value>Denetim Adı</value>
+  </data>
 </root>

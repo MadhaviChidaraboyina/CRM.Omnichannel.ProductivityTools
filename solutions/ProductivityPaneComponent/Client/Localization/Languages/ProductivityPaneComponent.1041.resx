@@ -124,4 +124,10 @@
   <data name="ProductivityPaneConfig_LearnMore_String" xml:space="preserve">
     <value>詳細については、こちらを参照してください。</value>
   </data>
+  <data name="CustomPage_Name_Label" xml:space="preserve">
+    <value>カスタム ページ名</value>
+  </data>
+  <data name="Control_Name_Label" xml:space="preserve">
+    <value>コントロール名</value>
+  </data>
 </root>

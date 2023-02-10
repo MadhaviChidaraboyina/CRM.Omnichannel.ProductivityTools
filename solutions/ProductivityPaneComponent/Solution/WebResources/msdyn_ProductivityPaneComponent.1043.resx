@@ -124,4 +124,10 @@
   <data name="ProductivityPaneConfig_LearnMore_String" xml:space="preserve">
     <value>Meer informatie.</value>
   </data>
+  <data name="CustomPage_Name_Label" xml:space="preserve">
+    <value>Naam van aangepaste pagina</value>
+  </data>
+  <data name="Control_Name_Label" xml:space="preserve">
+    <value>Naam besturingselement</value>
+  </data>
 </root>

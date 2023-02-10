@@ -124,4 +124,10 @@
   <data name="ProductivityPaneConfig_LearnMore_String" xml:space="preserve">
     <value>Tìm hiểu thêm.</value>
   </data>
+  <data name="CustomPage_Name_Label" xml:space="preserve">
+    <value>Tên trang tùy chỉnh</value>
+  </data>
+  <data name="Control_Name_Label" xml:space="preserve">
+    <value>Tên chức năng điều khiển</value>
+  </data>
 </root>
