@@ -126,6 +126,9 @@ namespace Microsoft.ProductivityMacros.Internal {
                                                 try {
                                                     if (result.entities.length > 0) {
                                                         paramVals.set(param, result.entities[0][results[1]]);
+                                                        // entityLogicalName:results[0]; entityAttributeName:results[1]; filter:results[results.length - 1]
+                                                        let paramWithResortedSlug = `{$odata.${results[0]}.${results[1]}.${results[results.length - 1]}}`;
+                                                        paramVals.set(paramWithResortedSlug, result.entities[0][results[1]]);
                                                     } else {
                                                         paramVals.set(param, "");
                                                     }
