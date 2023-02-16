@@ -277,4 +277,10 @@ export class PresenseDialog {
   public async verifyEntityRecord() {
     await this.page.getByLabel("Case Title").isVisible();
   }
+
+  public async ValidateKBAndSimilarCases() {
+    await this.page.getByRole('link', { name: 'Automation Case', exact: true }).first().click();
+    await this.page.locator('[id="MscrmControls\\.SmartassistPanelControl\\.SmartassistPanelControl2"]').getByText('AI suggestions not turned on.').isVisible();
+    await this.page.locator('#sa-anyentity-container-0e5e0724-0996-4722-8fee-4abc628ec83c').getByText('AI suggestions not turned on.').isVisible();
+  }
 }

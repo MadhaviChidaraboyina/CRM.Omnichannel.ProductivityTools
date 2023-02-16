@@ -91,4 +91,31 @@ export class CustomProfilePage extends BasePage {
     await this.page.getByLabel(selectors.CommonConstants.Name).fill(queueName);
     await this.page.getByRole("menuitem", { name: selectors.CommonConstants.SaveClose }).click();
   }
+
+  public async TurnOnSuggetions() {
+    await this.page.getByRole('treeitem', { name: 'Insights' }).getByText('Insights').click();
+    await this.page.locator('[data-test-id="Suggestions-for-Agents-manage"]').click();
+    const CaseToggle = await this.page.waitForSelector('[data-testid="suggestions-case-feature-toggle"]');
+    const Kbtoggle = await this.page.waitForSelector('[data-testid="suggestions-kb-feature-toggle"]');
+    const kbToggleEnabled = await Kbtoggle.getAttribute("aria-checked");
+    const CaseToggleEnabled = await CaseToggle.getAttribute("aria-checked");
+    if ((CaseToggleEnabled.toString().toLowerCase() === false.toString()) && (kbToggleEnabled.toString().toLowerCase() === false.toString()))
+    {
+      //if(kb.toString().toLowerCase() === false.toString()){
+      await CaseToggle.click();
+      await Kbtoggle.click();
+      await this.page.getByTestId('suggestions-commandbar-saveclose-btn').click();
+    await this.page.waitForLoadState("load")
+    }
+  }
+  
+  public async TurnOffSuggetions() {
+    await this.page.getByRole('treeitem', { name: 'Insights' }).getByText('Insights').click();
+    await this.page.locator('[data-test-id="Suggestions-for-Agents-manage"]').click();
+    await this.page.getByTestId('suggestions-case-feature-toggle').click();
+    await this.page.getByTestId('suggestions-kb-feature-toggle').click();
+    await this.page.getByTestId('suggestions-commandbar-save-btn').click();
+    await this.page.getByTestId('suggestions-commandbar-saveclose-btn').click();
+    await this.page.waitForLoadState("load")
+  }
 }
