@@ -3,6 +3,7 @@ import { BasePage } from "../../base.page";
 import { WorkSpacesPage } from "../admin/workspace.page";
 import { CustomProfilePage } from "../appprofile/custom.profile.page";
 import { AgentDashboardPage } from "../agent/agent.dashboard.page";
+import { InsightsPage } from "../admin/insights.page";
 
 export class CustomerServiceAdminAppsPage extends BasePage {
   constructor(page: Page) {
@@ -19,5 +20,9 @@ export class CustomerServiceAdminAppsPage extends BasePage {
 
   public get AgentDashboardPage(): AgentDashboardPage {
     return new AgentDashboardPage(this.page);
-  } 
+  }
+  
+  public get InsightsPagePage(): InsightsPage {
+    return new InsightsPage(this.page);
+  }
 }

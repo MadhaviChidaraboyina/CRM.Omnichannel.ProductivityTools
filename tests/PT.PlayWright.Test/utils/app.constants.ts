@@ -153,3 +153,12 @@ export enum EntityNames {
   AgentScript = 'msdyn_productivityagentscript',
   AgentScriptStep = `msdyn_productivityagentscriptstep`
 }
+
+export const enum InsightsConstants {
+  Insights = "Insights",  
+}
+
+export const enum CustomerServiceAgentConstants {
+  CaseTitleName = "Automation Case",
+  Details = "Details",   
+}
