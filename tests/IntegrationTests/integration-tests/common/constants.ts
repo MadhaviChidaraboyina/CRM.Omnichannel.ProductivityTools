@@ -1452,7 +1452,7 @@ export class Constants {
   static NewUI = `&flags=FCB.MultiSessionLayoutImprovements%3dtrue`;
   static GlobalSearchBox = `//input[@id='GlobalSearchBox']`;
   static ValidationOfRecord = `//button[@title='Case For Automation']`;
-  static ValidationNewRecord = `//button[@title='Case For Automation{0}']`;
+  static ValidationNewRecord = `(//button[@title='Case For Automation'])[1]`;
   static ViewRecordLocator = `//div[@role='button']//p[text()='View Record']`;
   static ValidateTab = `//div[contains(@id,'session-id-')]`;
   static AddvalidationTab = `//div[contains(@id,'session-id')]`;
@@ -1779,6 +1779,7 @@ export class Constants {
   static High = `High`;
   static AutomationQueue = `Automation Queue`;
   static AutomationQueueLink = `//*[contains(text(),"Automation Queue")]`;
+  static GlobalCaseTitleName = `Case For Global`;
   // Codegen Selectors
   static Workspaces = `Workspaces`;
   static AgentExperienceProfileManage = `[data-test-id="Agent-Experience-Profile-manage"]`;

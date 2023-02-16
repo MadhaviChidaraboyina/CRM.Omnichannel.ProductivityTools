@@ -2486,7 +2486,6 @@ export class Macros extends BasePage {
     //time delay to load customer
     await this.adminPage.waitForSelector(Constants.CaseTitleField);
     await this.adminPage.fill(Constants.CaseTitleField, CaseName);
-    //await this.adminPage.click(Constants.CasePriorityField, Priority);
     await this.adminPage.click(Constants.SaveAndClose);
     await this.adminPage.waitForSelector(Constants.Home);
     await this.waitForDomContentLoaded();
@@ -6492,8 +6491,8 @@ export class Macros extends BasePage {
   public async verifyRecordInGlobalSearch(GlobalCaseTitleName: string) {
     await this.adminPage.fill(Constants.GlobalSearchBox, GlobalCaseTitleName);
     await this.adminPage.locator(Constants.GlobalSearchBox).press("Enter");
-    await this.adminPage.waitForSelector(Constants.ValidationOfRecord);
-    await this.adminPage.click(Constants.ValidationOfRecord);
+    await this.adminPage.waitForSelector(Constants.ValidationNewRecord);
+    await this.adminPage.click(Constants.ValidationNewRecord);
     try {
       await this.adminPage.waitForSelector(Constants.ValidateTab);
       return true
