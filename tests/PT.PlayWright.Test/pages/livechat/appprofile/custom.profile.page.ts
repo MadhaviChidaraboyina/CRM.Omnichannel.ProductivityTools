@@ -91,4 +91,47 @@ export class CustomProfilePage extends BasePage {
     await this.page.getByLabel(selectors.CommonConstants.Name).fill(queueName);
     await this.page.getByRole("menuitem", { name: selectors.CommonConstants.SaveClose }).click();
   }
+
+  public async createingTheCustomProfileCSAC() {
+    await this.page.getByText(selectors.AppProfilePage.ClickOnWorkspace).click();
+    await this.page.locator(selectors.AppProfilePage.AgentExperienceProfile).click();
+    await this.page.locator(selectors.AppProfilePage.AgentProfilesSearchBox).click();
+    await this.page.locator(selectors.AppProfilePage.AgentProfilesSearchBox).fill(selectors.CommonConstants.AppProfileUser6);
+    await this.page.locator(selectors.AppProfilePage.AgentProfilesSearchBox).press('Enter');
+    await this.page.getByRole('button', { name: selectors.CommonConstants.AppProfileUser6 }).click();
+   }
+
+   public async ValiadatetheProductivitypane() {
+    await this.page.locator(selectors.CommonConstants.EditProductivityPane).click();
+   await this.page.waitForSelector(selectors.CommonConstants.ProductivityPaneToggleBtn);
+   const toggleBtn = await this.page.$$(selectors.CommonConstants.ProductivityPaneToggleBtn);
+   toggleBtn.forEach(async (btn) => {
+     if ((await btn.getAttribute("aria-checked")) === "false") {
+       await toggleBtn[0].click();
+       await toggleBtn[1].click();
+       await toggleBtn[2].click();
+     }
+   });
+    await this.page.locator(selectors.AppProfilePage.SaveAndCloseButtonPP).click()
+  }
+
+  public async checkForSuggestion() {
+    await this.page.getByText(selectors.CommonConstants.Insights, { exact: true }).click();
+    await this.page.locator(selectors.CommonConstants.SuggestionforAgentsManageBtn).click();
+    const isCaseSuggetsionEnabled = await this.page
+      .locator(selectors.AppProfilePage.CaseToggleStateText)
+      .textContent();
+    const isKBSuggetsionEnabled = await this.page
+      .locator(selectors.AppProfilePage.KBToggleStateText)
+      .textContent();
+    if (isCaseSuggetsionEnabled == "No") {
+      await this.page.getByTestId(selectors.AppProfilePage.SuggestionsCaseToggle).click();
+      
+    }
+    if (isKBSuggetsionEnabled == "No") {
+      await this.page.getByTestId(selectors.AppProfilePage.SuggestionsKBToggle).click()
+    }
+   
+}
+  
 }

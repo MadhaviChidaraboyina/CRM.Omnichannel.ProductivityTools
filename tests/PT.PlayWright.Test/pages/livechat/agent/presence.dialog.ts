@@ -277,4 +277,60 @@ export class PresenseDialog {
   public async verifyEntityRecord() {
     await this.page.getByLabel("Case Title").isVisible();
   }
+
+  public async verifyShiftClick(ClickCase: any) {
+    await this.page.getByRole('grid', { name: selectors.CommonConstants.MyActiveCase }).getByRole('link', { name: ClickCase }).first().click({modifiers: ['Shift']});
+    }
+
+  public async verifySmartAssistTabs(){
+      await this.page.locator(selectors.CommonConstants.SmartAssistTab).waitFor();
+        expect(
+          await this.page.isVisible(selectors.CommonConstants.SmartAssistTab)
+        ).toBeTruthy();
+        await this.page.locator(selectors.CommonConstants.AgentScriptTab).waitFor();
+        expect(
+          await this.page.isVisible(selectors.CommonConstants.AgentScriptTab)
+        ).toBeTruthy();
+        await this.page.locator(selectors.CommonConstants.SAKnowledgeSearchTab).waitFor();
+        expect(
+          await this.page.isVisible(selectors.CommonConstants.SAKnowledgeSearchTab)
+        ).toBeTruthy();
+         await this.page.getByRole('tab', { name: 'Home' }).click();
+    }
+
+    public async verifyControlClick(ClickCase: any) {
+      await this.page.getByRole('textbox', { name: selectors.CommonConstants.CaseFilterSearchCWS }).click();
+      await this.page.getByRole('textbox', { name: selectors.CommonConstants.CaseFilterSearchCWS }).press('Enter');
+      await this.page.getByRole('grid', { name: selectors.CommonConstants.MyActiveCase }).getByRole('link', { name: ClickCase }).first().click({modifiers: ['Control']});
+      await this.page.locator(selectors.CommonConstants.FocusedTab).waitFor();
+      await this.page.waitForTimeout(5000);  // Timeout required to load the page
+        const tabTitle = await this.page
+          .locator(selectors.CommonConstants.FocusedTabText)
+          .textContent();
+        expect(tabTitle).toContain("Automation Case");
+     }
+
+     public async LinkAndUnlinkCase(ClickLinkBtn: string) {
+      await this.page.getByRole('link', { name: selectors.CommonConstants.AutomationCase, exact: true }).first().click();
+       await this.page.waitForSelector(ClickLinkBtn);
+       await this.page.locator(ClickLinkBtn).click();
+    }
+
+    public async OpenSuggessionCase() {
+      await this.page.locator(selectors.CommonConstants.RelatedTab).click();
+      await this.page.getByText(selectors.CommonConstants.Connections).click();
+    }
+
+    public async  DeleteAssociatedRecord() {
+      await this.page.getByRole('gridcell', { name: selectors.CommonConstants.SelectTheCase}).click();
+      await this.page.getByRole('gridcell', { name: selectors.CommonConstants.SelectTheCase}).click();
+      await this.page.getByRole('gridcell', { name: selectors.CommonConstants.SelectTheCase}).click();
+      await this.page.getByRole('menuitem', { name: selectors.CommonConstants.MoreOption }).click();
+      await this.page.getByRole('menuitem', { name: selectors.CommonConstants.DeleteTheConnectionBtn}).click();
+      await this.page.locator(selectors.CommonConstants.DeleteBtnConfirmation).click();
+      await this.page.getByRole('menuitem', { name: selectors.CommonConstants.Save}).click();
+      await this.page.getByRole('menubar', { name: selectors.CommonConstants.CommandsofMenubar, exact: true }).getByRole('menuitem', { name: selectors.CommonConstants.RefreshBtnMenu}).click();
+    }
 }
+    
+

@@ -26,7 +26,15 @@
     "DeleteBtn": "[data-id='msdyn_presence|NoRelationship|HomePageGrid|Mscrm.HomepageGrid.msdyn_presence.DeleteMenu']",
     "WarningMessage": "//*[@id='notificationMessageAndButtons']/div[1]/div/span",
     "SelectChannelProvider": "[data-test-id='Channel-provider-third-party-dropdown']",
-    "ChannelProviderContainer": "[data-test-id='channel-provider-body-container'] div button"
+    "ChannelProviderContainer": "[data-test-id='channel-provider-body-container'] div button",
+    "ClickOnWorkspace":"Workspaces",
+    "AgentProfilesSearchBox":"[data-test-id='appprofile-list-search-box']",
+    "SaveAndCloseButtonPP" : "//*[text()='Save and close']",
+    "CaseToggleStateText":"[id='casetoggle-stateText']",
+    "KBToggleStateText":"[id='kbtoggle-stateText']",
+    "SuggestionsCaseToggle":"suggestions-case-feature-toggle",
+    "SuggestionsKBToggle":"suggestions-kb-feature-toggle"
+
   },
   "PresencePage": {
     "SidePanelIFrame": "",
@@ -145,6 +153,28 @@
     "ContrlArticleTitle" : "(//span[contains(.,'(//span[contains(.,'Dynamics 365')])[1]",
     "AutomationCaseRndlink": "//*[text()='Automation Case{0}']",
     "OdataValidationTitle": "(//span[contains(.,'Automation Case')])[1]",
-    "OdataAgentScriptName": "agentscriptwithodata"
+    "OdataAgentScriptName": "agentscriptwithodata",
+    "AppProfileUser6":"AppProfileUser6",
+    "EditProductivityPane":"[data-test-id='productivity-pane-edit-btn']",
+    "ProductivityPaneToggleBtn":"//button[@data-test-id='productivity-tool-toggle' and @aria-disabled='false']",
+    "MyActiveCase":"My Active Cases",
+    "SmartAssistTab":"[data-id='sidepane-tab-button-AppSidePane_MscrmControls.SmartassistPanelControl.SmartassistPanelControl']",
+    "AgentScriptTab" :"[data-id='sidepane-tab-button-AppSidePane_MscrmControls.Callscript.CallscriptControl']",
+    "SAKnowledgeSearchTab":"[data-id='sidepane-tab-button-AppSidePane_MscrmControls.KnowledgeControl.KnowledgeControl']",
+    "CaseFilterSearchCWS":"Case Filter by keyword",
+    "FocusedTab":"(//div[contains(@data-focuszone-id,'FocusZone')])[2]//div[@aria-selected='true']",
+    "FocusedTabText":"((//div[contains(@data-focuszone-id,'FocusZone')])[2]//div[@aria-selected='true']//span)[2]",
+    "Insights":"Insights",
+    "SuggestionforAgentsManageBtn":"[data-test-id='Suggestions-for-Agents-manage']",
+    "ClickLinkCase":"(//img[contains(@class,'ac-image ac-selectable')])[7]",
+    "RelatedTab":"[aria-label='Related']",
+    "Connections":"Connections",
+    "SelectTheCase":"Select row 2",
+    "MoreOption":"More commands for Connection",
+    "DeleteTheConnectionBtn":"Delete Connection",
+    "DeleteBtnConfirmation":"[data-id='confirmButton']",
+    "Save":"Save (CTRL+S)",
+    "CommandsofMenubar":"Commands",
+    "RefreshBtnMenu":"Refresh"
   }
 }
