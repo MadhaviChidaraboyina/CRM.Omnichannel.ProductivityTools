@@ -41,7 +41,7 @@ test.describe.serial("@AppProfile: Custom App Profile Tests", () => {
   ///Test Case 2732761: [App Profile Manager] : Verify Shift click, control click, actions with csr(roles csr, app access, productivity tool user) With Custom App Profile
   ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2732761
   ///<summary>
-  test.only("Test Case 2732761: [App Profile Manager] : Verify Shift click, control click, actions with csr(roles csr, app access, productivity tool user) With Custom App Profile" , async ({}) => {
+  test("Test Case 2732761: [App Profile Manager] : Verify Shift click, control click, actions with csr(roles csr, app access, productivity tool user) With Custom App Profile" , async ({}) => {
     let rnd = RandomNumber();
     await csAdminApps.reload();
     // customer service admin center => workspaces => creating Agent experience profile.

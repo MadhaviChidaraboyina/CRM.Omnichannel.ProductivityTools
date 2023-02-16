@@ -41,7 +41,7 @@ test.describe.serial("@AppProfile: Custom App Profile Tests", () => {
   ///Test Case 2763153: [Productivity Pane: Smart Assist] : Verify Delete similar case from Associated Similar Cases grid, close and reopen case, suggestion should be unlinked and Linked to case label removed
   ///Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2763153
   ///<summary>
-  test.only("Test Case 2763153: [Productivity Pane: Smart Assist] : Verify Delete similar case from Associated Similar Cases grid, close and reopen case, suggestion should be unlinked and Linked to case label removed" , async ({}) => {
+  test("Test Case 2763153: [Productivity Pane: Smart Assist] : Verify Delete similar case from Associated Similar Cases grid, close and reopen case, suggestion should be unlinked and Linked to case label removed" , async ({}) => {
     let rnd = RandomNumber();
     await csAdminApps.reload();
     // customer service admin center => insights
