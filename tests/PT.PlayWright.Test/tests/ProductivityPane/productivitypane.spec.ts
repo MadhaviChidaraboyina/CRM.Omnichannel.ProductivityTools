@@ -53,7 +53,7 @@ test.describe.serial("@Productivity Pane Scenarios ", () => {
     ///Test Case 2762878: [Productivity Pane: Smart Assist] : Verify Link article to case action; save and see added on Associated Knowledge Articles grid
     /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2762878
     ///</summary>
-    test.only("Test Case 2762878: [Productivity Pane: Smart Assist] : Verify Link article to case action; save and see added on Associated Knowledge Articles grid", async ({ }) => {
+    test("Test Case 2762878: [Productivity Pane: Smart Assist] : Verify Link article to case action; save and see added on Associated Knowledge Articles grid", async ({ }) => {
         await csAdminApps.reload();
         //Navigate to Insights -> Suggestions for agents
         await csAdminApps.InsightsPagePage.navigateToSuggestionsForAgents();
