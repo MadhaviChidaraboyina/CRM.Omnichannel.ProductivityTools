@@ -1,0 +1,15 @@
+export const OdataURL = {
+  CreateCaseUrl: `${process.env.OrgUrl}/api/data/v9.0/incidents`,
+  TurnOnMissedNotificationsURL: `${process.env.OrgUrl}/api/data/v9.0/msdyn_omnichannelconfigurations(${process.env.OCConfigId})`,
+  UpdateOCConfig: `${process.env.OrgUrl}/api/data/v9.0/msdyn_omnichannelconfigurations(${process.env.OCConfigId})`,
+  AppConfigUrl: `${process.env.OrgUrl}/api/data/v9.0/msdyn_appconfigurations`,
+  PanelConfigUrl: `${process.env.OrgUrl}/api/data/v9.0/msdyn_paneconfigurations`,
+  ChannelConfigUrl: `${process.env.OrgUrl}/api/data/v9.0/msdyn_channelproviders`,
+  UsersUrl: `${process.env.OrgUrl}/api/data/v9.0/systemusers`,
+  UserUrl1: `${process.env.OrgUrl}/api/data/V9.0/systemusers?$filter=domainname eq '${process.env.OrgAdminUserName}'`,
+  AddUserAppConfig: `${process.env.OrgUrl}/api/data/v9.0/msdyn_appconfigurations(AppConfigId)/msdyn_appconfiguration_systemuser/$ref`,
+  Authority: `https://login.microsoftonline.com/${process.env.TenantId}/oauth2/authorize`,
+  OrgUrl: `${process.env.OrgUrl}/api/data/v9.0/organizations(${process.env.OrgId})`,
+  PtChannelProviderUrl: `${process.env.OrgUrl}/api/data/v9.0/msdyn_ciproviders`,
+  ChannelProvider: `${process.env.OrgUrl}/api/data/v9.0/msdyn_channelproviders`,
+};

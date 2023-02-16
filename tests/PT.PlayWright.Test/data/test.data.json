@@ -1,0 +1,152 @@
+{
+  "Users": {
+    "presence": {
+      "agent": [
+        {
+          "userName": "automateduser12"
+        }
+      ]
+    },
+    "notifications": {
+      "agents": [
+        {
+          "userName": "automateduser10"
+        }
+      ],
+      "livechatwidget": [
+        {
+          "Name": "notification"
+        }
+      ]
+    },
+    "chats": {
+      "agents": [
+        {
+          "userName": "automateduser4"
+        }
+      ],
+      "livechatwidget": [
+        {
+          "Name": "chatblobURL"
+        },
+        {
+          "Name": "chatblob2URL"
+        }
+      ]
+    },
+    "ChannelIntegrations": {
+      "agent": [
+        {
+          "userName": "automateduser3"
+        }
+      ],
+      "admin": [
+        {
+          "userName": "automateduser3"
+        }
+      ]
+    },
+    "AppProfile": {
+      "agent": [
+        {
+          "userName": "automateduser1"
+        }
+      ],
+      "admin": [
+        {
+          "userName": "automateduser1"
+        }
+      ]
+    },
+    "livechat": {
+      "agent": [
+        {
+          "userName": "automateduser8"
+        }
+      ],
+      "agent2": [
+        {
+          "userName": "automateduser8"
+        }
+      ],
+      "admin": [
+        {
+          "userName": "automateduser8"
+        }
+      ],
+      "livechatwidget": {
+        "lcwbloburl": "livechat",
+        "ciflivechatlivechatbloburl": "livechat",
+        "LCWUrl": "livechat"
+      }
+    },
+    "livechattimeout": {
+      "agent2": [
+        {
+          "userName": "automateduser9"
+        }
+      ],
+      "livechatwidget": [
+        {
+          "Name": "livechattimeout"
+        }
+      ]
+    },
+    "ConversationSummary": {
+      "agent": [
+        {
+          "userName": "automateduser6"
+        }
+      ],
+      "admin": [
+        {
+          "userName": "automateduser6"
+        }
+      ],
+      "livechatwidget": [
+        {
+          "Name": "conversationSummary"
+        }
+      ]
+    },
+    "sessionunread": {
+      "agents": [
+        {
+          "userName": "automateduser11"
+        }
+      ],
+      "livechatwidget": [
+        {
+          "Name": "sessionunread"
+        },
+        {
+          "Name": "sessionunread2bloburl"
+        }
+      ]
+    },
+    "entitysession": {
+      "agents": [
+        {
+          "userName": "automateduser14"
+        }
+      ],
+      "livechatwidget": [
+        {
+          "Name": "EntityUrl"
+        }
+      ]
+    },
+    "livechatpick": {
+      "agents": [
+        {
+          "userName": "liveagent"
+        }
+      ],
+      "livechatwidget": [
+        {
+          "Name": "LivechatpickUrl"
+        }
+      ]
+    }  
+  }
+}
