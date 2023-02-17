@@ -114,7 +114,15 @@ export const enum AppProfileConstants {
   dsOData = "ds odata",
   msdyn_uniquename = "msdyn_99",
   Name = "Name",
-  RowGroup = "rowgroup"
+  RowGroup = "rowgroup",
+  TestUser = "Test1",
+  AppProfileName1 = "Automation_App_Profile",
+  AppProfileUniqueName = "msdyn_Automation_App_Profile",
+  AllUsersCheckbox = "Toggle selection for all users",
+  AgentScriptTurnOn = "Agent scripts Give step-by-step instructions to help minimize human error and provide consistent service. Agent scripts learn more link.",
+  KnowledgeSearchTurnOn = "Knowledge search Let users search for relevant knowledge articles. Knowledge search learn more link.",
+  SmartAssistTurnOn = "Smart assist Make intelligent recommendations of knowledge articles, similar cases, and more based on real-time context. Smart assist learn more link."
+
 }
 
 export const enum agentchatconstants {
@@ -152,4 +160,8 @@ export enum EntityNames {
   Macros = `workflow`,
   AgentScript = 'msdyn_productivityagentscript',
   AgentScriptStep = `msdyn_productivityagentscriptstep`
+}
+
+export const enum CustomerServiceAgentConstants {
+  CaseTitleName = "Automation Case",   
 }

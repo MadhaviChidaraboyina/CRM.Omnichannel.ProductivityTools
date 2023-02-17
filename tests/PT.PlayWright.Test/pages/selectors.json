@@ -26,7 +26,14 @@
     "DeleteBtn": "[data-id='msdyn_presence|NoRelationship|HomePageGrid|Mscrm.HomepageGrid.msdyn_presence.DeleteMenu']",
     "WarningMessage": "//*[@id='notificationMessageAndButtons']/div[1]/div/span",
     "SelectChannelProvider": "[data-test-id='Channel-provider-third-party-dropdown']",
-    "ChannelProviderContainer": "[data-test-id='channel-provider-body-container'] div button"
+    "ChannelProviderContainer": "[data-test-id='channel-provider-body-container'] div button",
+    "ProductivityPaneTurnOnButton": "[data-test-id='turn-off-productivity-pane-screen'] [data-test-id='no-entity-session-template-screen-btn']",
+    "ProductivityPaneTurnOnRadioButton": "[data-test-id='productivity-pane'] [data-test-id='productivity-pane-header']",
+    "DefaultMode": "[data-test-id='default-mode']",
+    "WorkspaceSitemap": "//span[text()='Workspaces']",
+    "OpenAppProfile": "[data-icon-name='StatusCircleCheckmark']",
+    "DeleteProfile": "[data-test-id='appprofile-list-delete-appprofile']",
+    "ConfirmDeleteButton": "[data-test-id='appprofile-list-delete-confirm-btn']"
   },
   "PresencePage": {
     "SidePanelIFrame": "",
@@ -146,5 +153,11 @@
     "AutomationCaseRndlink": "//*[text()='Automation Case{0}']",
     "OdataValidationTitle": "(//span[contains(.,'Automation Case')])[1]",
     "OdataAgentScriptName": "agentscriptwithodata"
+  },
+  "CustomerServiceWorkspace": {
+    "CaseTitleLink": "(//a[@title='Automation Case'])[1]",
+    "AStool": "//*[@data-id='sidepane-tab-button-AppSidePane_MscrmControls.Callscript.CallscriptControl']",
+    "KStool": "//*[contains(@data-id,'sidepane-tab-button-AppSidePane_MscrmControls.KnowledgeControl.KnowledgeControl')]",
+    "SAtool": "//*[@data-id='sidepane-tab-button-AppSidePane_MscrmControls.SmartassistPanelControl.SmartassistPanelControl']"
   }
 }

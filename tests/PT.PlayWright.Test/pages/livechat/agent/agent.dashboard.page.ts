@@ -5,7 +5,9 @@ import {
   AppProfileConstants,
   EntityNames,
   EntityAttributes,
+  agentchatconstants
 } from "../../../utils/app.constants";
+import { LoadState } from "../../../utils/test.utils";
 
 export class AgentDashboardPage {
   readonly page: Page;
@@ -144,5 +146,11 @@ export class AgentDashboardPage {
     await this.page.waitForSelector(selectors.CommonConstants.SearchTheView);
     await this.page.click(selectors.CommonConstants.SearchTheView);
     await this.page.locator(Link).click();
+  }
+
+  public async ValidateHome() {
+    await this.page
+      .locator(agentchatconstants.HomeButton).isVisible();
+    await this.page.waitForLoadState(LoadState.DomContentLoaded);   
   }
 }

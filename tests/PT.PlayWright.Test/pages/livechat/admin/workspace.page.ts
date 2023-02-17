@@ -150,4 +150,97 @@ export class WorkSpacesPage {
       .click();
     await this.page.waitForTimeout(2000); // to save properly
   }
+
+  public async createAppProfileByParameter(AppProfileName: string, AppProfileUniqueName: string) {
+    await this.page
+      .getByText(AppProfileConstants.Workspaces)
+      .click();
+    await this.page
+      .locator(selectors.AppProfilePage.AgentExperienceProfile)
+      .click();
+    await this.page
+      .locator(selectors.AppProfilePage.NewAppProfile)
+      .click();
+    await this.page
+      .locator(selectors.AppProfilePage.CreateDialog)
+      .click();
+    await this.page
+      .locator(selectors.AppProfilePage.CreateDialog)
+      .fill(AppProfileName);
+    await this.page
+      .locator(selectors.AppProfilePage.CreateDialogUniqueName)
+      .click();
+    await this.page
+      .locator(selectors.AppProfilePage.CreateDialogUniqueName)
+      .fill(AppProfileUniqueName);
+    await this.page
+      .locator(selectors.AppProfilePage.CreateButton)
+      .click();
+    await this.page.waitForLoadState(LoadState.DomContentLoaded);  
+  }
+
+  public async AddUsers(User: string) {
+    await this.page
+      .locator(selectors.AppProfilePage.AddUserBtn)
+      .click();
+    await this.page
+      .locator(selectors.AppProfilePage.AddUserSearch)
+      .click();
+    await this.page
+      .locator(selectors.AppProfilePage.AddUserSearch)
+      .fill(User);
+    await this.page
+      .getByRole(ElementRoles.Checkbox, { name: AppProfileConstants.AllUsersCheckbox })
+      .click();
+    await this.page
+      .locator(selectors.AppProfilePage.PanelBtn)
+      .click();
+    await this.page.waitForLoadState(LoadState.DomContentLoaded);  
+  }
+
+  public async EnableProductivityPane() {
+    await this.page
+      .locator(selectors.AppProfilePage.ProductivityPaneTurnOnButton)
+      .click();
+    await this.page
+      .locator(selectors.AppProfilePage.ProductivityPaneTurnOnRadioButton)
+      .click();
+    await this.page
+      .locator(selectors.AppProfilePage.DefaultMode)
+      .click();
+    await this.page
+      .getByRole(ElementRoles.Switch, { name: AppProfileConstants.AgentScriptTurnOn })
+      .click();
+    await this.page
+      .getByRole(ElementRoles.Switch, { name: AppProfileConstants.KnowledgeSearchTurnOn })
+      .click();
+    await this.page
+      .getByRole(ElementRoles.Switch, { name: AppProfileConstants.SmartAssistTurnOn })
+      .click();
+    await this.page
+      .locator(selectors.AppProfilePage.SaveAndCloseButton)
+      .click();
+    await this.page.waitForLoadState(LoadState.DomContentLoaded);
+  }
+
+  public async DeleteAppProfileWithParameter(AppProfileName: string) {
+    await this.page
+      .locator(selectors.AppProfilePage.WorkspaceSitemap)
+      .click();
+    await this.page
+      .locator(selectors.AppProfilePage.AgentExperienceProfile)
+      .click();
+    await this.page
+      .locator(selectors.AppProfilePage.SearchBox)
+      .click();
+    await this.page
+    .locator(selectors.AppProfilePage.SearchBox).fill(AppProfileName);
+    await this.page
+    .locator(selectors.AppProfilePage.OpenAppProfile).click();
+    await this.page
+    .locator(selectors.AppProfilePage.DeleteProfile).click();
+    await this.page
+    .locator(selectors.AppProfilePage.ConfirmDeleteButton).click(); 
+    await this.page.waitForLoadState(LoadState.DomContentLoaded);
+  }
 }
