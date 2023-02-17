@@ -40,7 +40,7 @@ test.describe.serial("@Admin Test Scenerios ", () => {
             liveChatWidgetFixture
         );
     });
-  test.only("Test Case 2763116: [Productivity Pane: Smart Assist] : Verify Link similar case to case action; save and see added on Associated Similar Cases grid", async ({}) => {
+  test("Test Case 2763116: [Productivity Pane: Smart Assist] : Verify Link similar case to case action; save and see added on Associated Similar Cases grid", async ({}) => {
     //Turn On the suggestions for similar cases 
     await csAdminApps.CustomProfilePage.TurnOnSuggetions();
     //open the record in CSW
