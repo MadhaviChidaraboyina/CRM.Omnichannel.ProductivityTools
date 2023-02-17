@@ -40,7 +40,7 @@ test.describe.serial("@Admin Test Scenerios ", () => {
             liveChatWidgetFixture
         );
     });
-  test.only("Test Case 2045253: [Productivity Pane: Smart Assist] : Validate if KB and similar case sugestions are turned off from CSH, message is shown on smart assist", async ({}) => {
+  test("Test Case 2045253: [Productivity Pane: Smart Assist] : Validate if KB and similar case sugestions are turned off from CSH, message is shown on smart assist", async ({}) => {
     //turnoff suggestions in insights
     await csAdminApps.CustomProfilePage.TurnOffSuggetions();
     //verify AI suggestions not turned on
