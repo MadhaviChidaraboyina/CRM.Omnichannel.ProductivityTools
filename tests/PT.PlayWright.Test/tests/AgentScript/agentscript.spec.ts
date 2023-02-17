@@ -49,9 +49,7 @@ test.describe.serial("@Agent Script Scenarios ", () => {
         const AppProfileName = AppProfileConstants.AppProfileName1 + rnd;
         const AppProfileUniqueName = AppProfileConstants.AppProfileUniqueName + rnd;
 
-        await cswAppsPage.PresenseDialog.VerifySetAgentPresenseStatus(
-            AgentPresenseStatus.Available
-        );
+        await csAdminApps.reload();
         await cswAppsPage.AgentDashboardPage.ValidateHome();
         var CaseTitleName = CustomerServiceAgentConstants.CaseTitleName;
         caseNameList = [CaseTitleName];
