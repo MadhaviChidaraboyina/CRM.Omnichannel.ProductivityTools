@@ -115,7 +115,7 @@ export const enum AppProfileConstants {
   msdyn_uniquename = "msdyn_99",
   Name = "Name",
   RowGroup = "rowgroup",
-  TestUser = "Test1",
+  TestUser = "Automated User",
   AppProfileName1 = "Automation_App_Profile",
   AppProfileUniqueName = "msdyn_Automation_App_Profile",
   AllUsersCheckbox = "Toggle selection for all users",
