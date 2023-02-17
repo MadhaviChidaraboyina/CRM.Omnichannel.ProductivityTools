@@ -145,6 +145,12 @@
     "ContrlArticleTitle" : "(//span[contains(.,'(//span[contains(.,'Dynamics 365')])[1]",
     "AutomationCaseRndlink": "//*[text()='Automation Case{0}']",
     "OdataValidationTitle": "(//span[contains(.,'Automation Case')])[1]",
-    "OdataAgentScriptName": "agentscriptwithodata"
+    "OdataAgentScriptName": "agentscriptwithodata",
+    "ValidateReceivedAgentSCript":"[aria-label='Select Agent Script']",
+    "abc":"//a[contains(@title,'{0}')]",
+    "linktocase":"(//img[@aria-label='link to case'])[1]",
+    "SimilarcaseRecord":"(//p[contains(.,'Automation Case2')])[1]",
+    "Unlinktocase":"(//img[contains(@aria-label,'unlink case')])[1]",
+    "EmptyRecord":"//span[contains(.,'No data available.')]"
   }
 }
