@@ -43,7 +43,7 @@ test.describe.serial("@Agent Script Scenarios ", () => {
     ///Test Case 2056506: 2042783 Agent script , smart assist, knowledge article icons should load for both custom and default app profiles
     /// Test Case Link https://dynamicscrm.visualstudio.com/OneCRM/_workitems/edit/2056506
     ///</summary>
-    test.only("Test Case 2056506: 2042783 Agent script , smart assist, knowledge article icons should load for both custom and default app profiles", async ({ }) => {
+    test("Test Case 2056506: 2042783 Agent script , smart assist, knowledge article icons should load for both custom and default app profiles", async ({ }) => {
         let rnd = RandomNumber();
 
         const AppProfileName = AppProfileConstants.AppProfileName1 + rnd;
