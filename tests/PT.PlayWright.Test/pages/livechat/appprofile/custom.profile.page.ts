@@ -96,10 +96,10 @@ export class CustomProfilePage extends BasePage {
     await this.page.getByRole('treeitem', { name: 'Insights' }).getByText('Insights').click();
     await this.page.locator('[data-test-id="Suggestions-for-Agents-manage"]').click();
     const CaseToggle = await this.page.waitForSelector('[data-testid="suggestions-case-feature-toggle"]');
-    const Kbtoggle = await this.page.waitForSelector('[data-testid="suggestions-kb-feature-toggle"]');
+    const Kbtoggle = await this.page.locator('[data-testid="suggestions-kb-feature-toggle"]');
     const kbToggleEnabled = await Kbtoggle.getAttribute("aria-checked");
     const CaseToggleEnabled = await CaseToggle.getAttribute("aria-checked");
-    if ((CaseToggleEnabled.toString().toLowerCase() === false.toString()) && (kbToggleEnabled.toString().toLowerCase() === false.toString()))
+    if ((CaseToggleEnabled === "false") && (kbToggleEnabled === "false"))
     {
       //if(kb.toString().toLowerCase() === false.toString()){
       await CaseToggle.click();
@@ -118,4 +118,46 @@ export class CustomProfilePage extends BasePage {
     await this.page.getByTestId('suggestions-commandbar-saveclose-btn').click();
     await this.page.waitForLoadState("load")
   }
+  public async createingTheCustomProfileCSAC() {
+    await this.page.getByText(selectors.AppProfilePage.ClickOnWorkspace).click();
+    await this.page.locator(selectors.AppProfilePage.AgentExperienceProfile).click();
+    await this.page.locator(selectors.AppProfilePage.AgentProfilesSearchBox).click();
+    await this.page.locator(selectors.AppProfilePage.AgentProfilesSearchBox).fill(selectors.CommonConstants.AppProfileUser6);
+    await this.page.locator(selectors.AppProfilePage.AgentProfilesSearchBox).press('Enter');
+    await this.page.getByRole('button', { name: selectors.CommonConstants.AppProfileUser6 }).click();
+   }
+
+   public async ValiadatetheProductivitypane() {
+    await this.page.locator(selectors.CommonConstants.EditProductivityPane).click();
+   await this.page.waitForSelector(selectors.CommonConstants.ProductivityPaneToggleBtn);
+   const toggleBtn = await this.page.$$(selectors.CommonConstants.ProductivityPaneToggleBtn);
+   toggleBtn.forEach(async (btn) => {
+     if ((await btn.getAttribute("aria-checked")) === "false") {
+       await toggleBtn[0].click();
+       await toggleBtn[1].click();
+       await toggleBtn[2].click();
+     }
+   });
+    await this.page.locator(selectors.AppProfilePage.SaveAndCloseButtonPP).click()
+  }
+
+  public async checkForSuggestion() {
+    await this.page.getByText(selectors.CommonConstants.Insights, { exact: true }).click();
+    await this.page.locator(selectors.CommonConstants.SuggestionforAgentsManageBtn).click();
+    const isCaseSuggetsionEnabled = await this.page
+      .locator(selectors.AppProfilePage.CaseToggleStateText)
+      .textContent();
+    const isKBSuggetsionEnabled = await this.page
+      .locator(selectors.AppProfilePage.KBToggleStateText)
+      .textContent();
+    if (isCaseSuggetsionEnabled == "No") {
+      await this.page.getByTestId(selectors.AppProfilePage.SuggestionsCaseToggle).click();
+      
+    }
+    if (isKBSuggetsionEnabled == "No") {
+      await this.page.getByTestId(selectors.AppProfilePage.SuggestionsKBToggle).click()
+    }
+   
+}
+  
 }
