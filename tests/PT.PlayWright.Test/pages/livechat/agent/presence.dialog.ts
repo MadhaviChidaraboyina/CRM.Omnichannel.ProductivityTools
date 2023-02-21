@@ -277,4 +277,42 @@ export class PresenseDialog {
   public async verifyEntityRecord() {
     await this.page.getByLabel("Case Title").isVisible();
   }
+
+  public async ValidateKBAndSimilarCases() {
+    await this.page.getByRole('link', { name: 'Automation Case', exact: true }).first().click();
+    await this.page.locator('[id="MscrmControls\\.SmartassistPanelControl\\.SmartassistPanelControl2"]').getByText('AI suggestions not turned on.').isVisible();
+    await this.page.locator('#sa-anyentity-container-0e5e0724-0996-4722-8fee-4abc628ec83c').getByText('AI suggestions not turned on.').isVisible();
+  }
+
+  public async SelectCase() {
+    await this.page.getByRole('link', { name: 'Automation Case', exact: true }).first().click();
+  }
+  public async Linksimilarcasetocaseaction() {
+    if(await this.page.locator(selectors.CommonConstants.linktocase).isVisible())
+    {
+    await this.page.locator(selectors.CommonConstants.linktocase).click();
+    const CurrentSimilarCase = await this.page.waitForSelector(selectors.CommonConstants.SimilarcaseRecord);
+    const ReceivedCurrentSimilarCase = await CurrentSimilarCase.textContent();
+    return ReceivedCurrentSimilarCase;
+    }
+    else{
+      return true;
+    }
+  }
+  public async VerifyLinksimilarcasetocaseaction(ReceivedCurrentSimilarCase: any) {
+    await this.page.getByRole('tab', { name: 'Details' }).click();
+    await this.page.locator(selectors.CommonConstants.abc.replace("{0}",ReceivedCurrentSimilarCase)).isVisible();
+  }
+  public async UnLinksimilarcasetocaseaction() {
+    if(await this.page.locator(selectors.CommonConstants.Unlinktocase).isVisible())
+    {
+    await this.page.locator(selectors.CommonConstants.Unlinktocase).click();
+    const CurrentSimilarCase = await this.page.waitForSelector(selectors.CommonConstants.SimilarcaseRecord);
+    const ReceivedCurrentSimilarCase = await CurrentSimilarCase.textContent();
+    return ReceivedCurrentSimilarCase;
+    }
+    else{
+      return true;
+    }
+  }
 }

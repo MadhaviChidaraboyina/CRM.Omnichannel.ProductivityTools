@@ -158,6 +158,13 @@
     "CaseTitleLink": "(//a[@title='Automation Case'])[1]",
     "AStool": "//*[@data-id='sidepane-tab-button-AppSidePane_MscrmControls.Callscript.CallscriptControl']",
     "KStool": "//*[contains(@data-id,'sidepane-tab-button-AppSidePane_MscrmControls.KnowledgeControl.KnowledgeControl')]",
-    "SAtool": "//*[@data-id='sidepane-tab-button-AppSidePane_MscrmControls.SmartassistPanelControl.SmartassistPanelControl']"
+    "SAtool": "//*[@data-id='sidepane-tab-button-AppSidePane_MscrmControls.SmartassistPanelControl.SmartassistPanelControl']",
+    "OdataAgentScriptName": "agentscriptwithodata",
+    "ValidateReceivedAgentSCript":"[aria-label='Select Agent Script']",
+    "abc":"//a[contains(@title,'{0}')]",
+    "linktocase":"(//img[@aria-label='link to case'])[1]",
+    "SimilarcaseRecord":"(//p[contains(.,'Automation Case2')])[1]",
+    "Unlinktocase":"(//img[contains(@aria-label,'unlink case')])[1]",
+    "EmptyRecord":"//span[contains(.,'No data available.')]"
   }
 }
