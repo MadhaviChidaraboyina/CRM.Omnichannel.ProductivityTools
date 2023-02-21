@@ -162,6 +162,11 @@ export enum EntityNames {
   AgentScriptStep = `msdyn_productivityagentscriptstep`
 }
 
+export const enum InsightsConstants {
+  Insights = "Insights",  
+}
+
 export const enum CustomerServiceAgentConstants {
-  CaseTitleName = "Automation Case",   
+  CaseTitleName = "Automation Case",
+  Details = "Details",   
 }

@@ -5,6 +5,7 @@ import {
   AppProfileConstants,
   EntityNames,
   EntityAttributes,
+  CustomerServiceAgentConstants,
   agentchatconstants
 } from "../../../utils/app.constants";
 import { LoadState } from "../../../utils/test.utils";
@@ -146,6 +147,27 @@ export class AgentDashboardPage {
     await this.page.waitForSelector(selectors.CommonConstants.SearchTheView);
     await this.page.click(selectors.CommonConstants.SearchTheView);
     await this.page.locator(Link).click();
+  }
+
+  public async LinkAction() {
+    await this.page
+      .locator(selectors.CustomerServiceWorkspace.ClickLinkcase)
+      .click();
+    await this.page.waitForLoadState(LoadState.DomContentLoaded);   
+  }
+
+  public async ClickSaveCase() {
+    await this.page
+      .locator(selectors.CustomerServiceWorkspace.ClickSaveCase)
+      .click();
+    await this.page.waitForLoadState(LoadState.DomContentLoaded);   
+  }
+
+  public async NavigateToDetailsTab() {
+    await this.page
+      .getByRole(ElementRoles.Tab, { name: CustomerServiceAgentConstants.Details })
+      .click();
+    await this.page.waitForLoadState(LoadState.DomContentLoaded);   
   }
 
   public async ValidateHome() {

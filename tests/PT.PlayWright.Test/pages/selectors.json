@@ -189,12 +189,24 @@
     "abc":"//a[contains(@title,'{0}')]" ,
     "OdataAgentScriptName": "agentscriptwithodata"
   },
+  "CustomerServiceAdminPage": {
+    "SuggestionsForAgentsManage": "[data-test-id='Suggestions-for-Agents-manage']",
+    "EnableSimilarCaseSuggestions": "//button[@data-testid='suggestions-case-feature-toggle' and @aria-checked='true']",
+    "EnableKnowledgeArticleSuggestions": "//button[@data-testid='suggestions-kb-feature-toggle' and @aria-checked='true']"  
+  },
   "CustomerServiceWorkspace": {
     "CaseTitleLink": "(//a[@title='Automation Case'])[1]",
     "AStool": "//*[@data-id='sidepane-tab-button-AppSidePane_MscrmControls.Callscript.CallscriptControl']",
     "KStool": "//*[contains(@data-id,'sidepane-tab-button-AppSidePane_MscrmControls.KnowledgeControl.KnowledgeControl')]",
     "SAtool": "//*[@data-id='sidepane-tab-button-AppSidePane_MscrmControls.SmartassistPanelControl.SmartassistPanelControl']",
     "OdataAgentScriptName": "agentscriptwithodata",
-    "ValidateReceivedAgentSCript":"[aria-label='Select Agent Script']"
-  }
+    "ValidateReceivedAgentSCript":"[aria-label='Select Agent Script']",  
+    "SmartAssist": "//h2[contains(.,'Smart assist')]",
+    "KnowledgeArticle": "//label[contains(.,'Knowledge article suggestions')]",
+    "KnowledgeArticleSuggestions": "(//div[contains(@id,'sa-anyentity-inner')])[1]",
+    "ClickLinkcase": "(//*[@aria-label='Link to case'])[1]",
+    "ArticleLinkedMessage": "//span[text()=' Linked to case ']",
+    "ClickSaveCase": "//span[text()='Save']",
+    "LinkedArticleToCase": "(//div[contains(@data-id, 'Associated_KnowledgeArticles-pcf_grid')]//div[contains(@id,'image-details-commands')])[2]"
+  }  
 }
