@@ -60,7 +60,8 @@ export const enum ElementRoles {
   Menubar = "menubar",
   Columnheader = "columnheader",
   Region = "region",
-  Tab = "tab"
+  Tab = "tab",
+  Switch = "switch",
 }
 
 /**
